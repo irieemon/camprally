@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { remark } from "remark";
+import html from "remark-html";
 import { articles } from "@/data/articles";
 import { products } from "@/data/products";
 import { Badge } from "@/components/ui/badge";
@@ -38,27 +40,29 @@ export default async function ArticlePage({ params }: Props) {
     .filter((a) => a.slug !== slug && a.category === article.category)
     .slice(0, 3);
 
-  const headings = article.content.match(/<h2[^>]*>(.*?)<\/h2>/g) || [];
-  const toc = headings.map((h) => {
-    const text = h.replace(/<[^>]+>/g, "");
+  // Convert markdown to HTML
+  const processedContent = await remark()
+    .use(html)
+    .process(article.content);
+  let contentHtml = processedContent.toString();
+
+  // Extract headings from rendered HTML for TOC
+  const headingMatches = contentHtml.matchAll(/<h2[^>]*>(.*?)<\/h2>/g) || [];
+  const toc: { text: string; id: string }[] = [];
+  for (const match of headingMatches) {
+    const fullMatch = match[0];
+    const text = match[1].replace(/<[^>]+>/g, "");
     const id = text
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-|-$/g, "");
-    return { text, id };
-  });
-
-  const contentWithIds = article.content.replace(
-    /<h2([^>]*)>(.*?)<\/h2>/g,
-    (_match, attrs, text) => {
-      const id = text
-        .replace(/<[^>]+>/g, "")
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "");
-      return `<h2${attrs} id="${id}">${text}</h2>`;
-    }
-  );
+    toc.push({ text, id });
+    // Add ID to the heading in the HTML
+    contentHtml = contentHtml.replace(
+      fullMatch,
+      fullMatch.replace("<h2", `<h2 id="${id}"`)
+    );
+  }
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-10">
@@ -113,7 +117,7 @@ export default async function ArticlePage({ params }: Props) {
           {/* Article Body */}
           <div
             className="prose prose-stone max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:mt-8 prose-h2:mb-4 prose-h2:text-2xl prose-h3:mt-6 prose-h3:mb-3 prose-h3:text-xl prose-p:leading-7 prose-a:text-camp-green prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-li:leading-7 [&_h2]:text-foreground [&_h3]:text-foreground [&_p]:text-foreground/85 [&_li]:text-foreground/85 [&_a]:text-camp-green-light"
-            dangerouslySetInnerHTML={{ __html: contentWithIds }}
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </article>
 
