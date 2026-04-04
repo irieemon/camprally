@@ -48,26 +48,39 @@ const HERO_IMAGES: Record<string, string> = {
 // PRODUCT IMAGE MAP — curated Unsplash per product
 // ─────────────────────────────────────────
 const PRODUCT_IMAGES: Record<string, string> = {
-  "Coleman Sundome":   "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80",
-  "Coleman Brazos":    "https://images.unsplash.com/photo-1517823382935-51bfcb0ec6bc?w=400&q=80",
-  "Klymit Static V":   "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?w=400&q=80",
-  "Stanley Adventure": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
-  "Etekcity":          "https://images.unsplash.com/photo-1510672981848-a1c4f1cb5ccf?w=400&q=80",
-  "Vont":              "https://images.unsplash.com/photo-1510312305653-8ed496ef7575?w=400&q=80",
-  "Nalgene":           "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80",
-  "Sawyer Squeeze":    "https://images.unsplash.com/photo-1530790678709-9a48c3a650f5?w=400&q=80",
-  "LifeStraw":         "https://images.unsplash.com/photo-1530790678709-9a48c3a650f5?w=400&q=80",
-  "Trekology":         "https://images.unsplash.com/photo-1510672981848-a1c4f1cb5ccf?w=400&q=80",
-  "KingCamp":          "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80",
-  "Gerber Suspension": "https://images.unsplash.com/photo-1606744888344-493238951221?w=400&q=80",
-  "Mora Companion":    "https://images.unsplash.com/photo-1606744888344-493238951221?w=400&q=80",
-  "Frogg Toggs":       "https://images.unsplash.com/photo-1510312305653-8ed496ef7575?w=400&q=80",
-  "Garmin eTrex":      "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80",
-  "Suunto A-10":       "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&q=80",
-  "Black Diamond Spot":"https://images.unsplash.com/photo-1510312305653-8ed496ef7575?w=400&q=80",
-  "Teton Sports":      "https://images.unsplash.com/photo-1517823382935-51bfcb0ec6bc?w=400&q=80",
-  "Kelty Discovery":   "https://images.unsplash.com/photo-1478827536114-da961b7f86d2?w=400&q=80",
-  "Oaskys":           "https://images.unsplash.com/photo-1517823382935-51bfcb0ec6bc?w=400&q=80",
+  "Coleman Sundome":   "https://m.media-amazon.com/images/I/71wxEg6ubCL._AC_SX522_.jpg",
+  "Coleman Brazos":    "https://m.media-amazon.com/images/I/51vlA6jfWIL._AC_SX522_.jpg",
+  "Klymit Static V":   "https://m.media-amazon.com/images/I/71wxEg6ubCL._AC_SX522_.jpg",
+  "Stanley Adventure": "https://m.media-amazon.com/images/I/51a3DUF2sSS._AC_SX522_.jpg",
+  "Etekcity":          "https://m.media-amazon.com/images/I/610qZd12x2L._AC_SX522_.jpg",
+  "Vont":              "https://m.media-amazon.com/images/I/712y7mLA6hL._AC_SX522_.jpg",
+  "Nalgene":           "https://m.media-amazon.com/images/I/71+6fBZY8hL._AC_SX500_.jpg",
+  "Sawyer Squeeze":    "https://m.media-amazon.com/images/I/71PlK2Jo5uL._SX385_.jpg",
+  "Sawyer":           "https://m.media-amazon.com/images/I/71PlK2Jo5uL._SX385_.jpg",
+  "LifeStraw":         "https://m.media-amazon.com/images/I/51OPsnwrAlL._AC_SX522_.jpg",
+  "Trekology":         "https://m.media-amazon.com/images/I/61eyQ-3nd6L._AC_SX569_.jpg",
+  "KingCamp":          "https://m.media-amazon.com/images/I/71m2gpEVqOL._AC_SX500_.jpg",
+  "Gerber Suspension": "https://m.media-amazon.com/images/I/71tYG5COZJL._AC_SX500_.jpg",
+  "Gerber":           "https://m.media-amazon.com/images/I/71tYG5COZJL._AC_SX500_.jpg",
+  "Mora Companion":    "https://m.media-amazon.com/images/I/71t-IH33+EL._AC_SX500_.jpg",
+  "Frogg Toggs":       "https://m.media-amazon.com/images/I/614EqcO607L._AC_SX500_.jpg",
+  "Garmin eTrex":      "https://m.media-amazon.com/images/I/81dYryjmJrL._AC_SX500_.jpg",
+  "Suunto A-10":       "https://m.media-amazon.com/images/I/61SgLIozPML._AC_SX500_.jpg",
+  "Black Diamond Spot":"https://m.media-amazon.com/images/I/71k9Wp9GSgL._AC_SX500_.jpg",
+  "Teton Sports":      "https://m.media-amazon.com/images/I/61LlExSoJZL._AC_SX500_.jpg",
+  "Kelty Discovery":   "https://m.media-amazon.com/images/I/51nj6QWuvmL._AC_SX500_.jpg",
+  "Oaskys":           "https://m.media-amazon.com/images/I/61NoEvvZFvL._AC_SX500_.jpg",
+  "Hikenture":        "https://m.media-amazon.com/images/I/71lBmi2HKHL._AC_SX500_.jpg",
+  "MalloMe":          "https://m.media-amazon.com/images/I/71RGU401z2L._AC_SX522_.jpg",
+  "GSI Outdoors":     "https://m.media-amazon.com/images/I/51JI6xyNDjL._AC_SX522_.jpg",
+  "Coleman Classic":  "https://m.media-amazon.com/images/I/81otNA0+kZL._AC_SX522_.jpg",
+  "Camp Chef":        "https://m.media-amazon.com/images/I/71loHxug5jL._AC_SX522_.jpg",
+  "LuminAID":         "https://m.media-amazon.com/images/I/61TVlossveL._AC_SX500_.jpg",
+  "Fiskars":         "https://m.media-amazon.com/images/I/71t-IH33+EL._AC_SX500_.jpg",
+  "Rhino":           "https://m.media-amazon.com/images/I/71kE64DEdzL._AC_SX500_.jpg",
+  "Darn Tough":      "https://m.media-amazon.com/images/I/91l7a9YvMPS._AC_SX500_.jpg",
+  "Sea to Summit":    "https://m.media-amazon.com/images/I/51xTmic5vPL._AC_SX500_.jpg",
+  "Coghlan":         "https://m.media-amazon.com/images/I/414ee+Glp9L._AC_SX500_.jpg",
   "default":          "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80",
 };
 
@@ -752,16 +765,23 @@ function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: st
       {title && <h2 className="mb-2 text-xl font-bold">{title}</h2>}
       {subtitle && <p className="mb-4 text-muted-foreground text-sm">{subtitle}</p>}
       <div className="grid gap-3 sm:grid-cols-2">
-        {items.map((item, i) => (
+        {items.map((item, i) => {
+          const productImage = getProductImage(item.label);
+          return (
           <a
             key={i}
             href={item.link || "https://www.amazon.com/shop/camprally"}
             target="_blank"
             rel="nofollow noopener"
-            className="group flex items-center gap-3 rounded-xl border p-4 transition-all hover:border-camp-green/50 hover:shadow-sm hover:shadow-camp-green/10"
+            className="group flex items-center gap-3 rounded-xl border p-3 transition-all hover:border-camp-green/50 hover:shadow-sm hover:shadow-camp-green/10"
           >
-            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-camp-green/10 text-lg">
-              {renderIcon(item.icon || "✨")}
+            <div className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden bg-white border border-gray-100">
+              <img
+                src={productImage}
+                alt={item.label}
+                className="w-full h-full object-contain"
+                loading="lazy"
+              />
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium leading-tight group-hover:text-camp-green transition-colors">{item.label}</p>
@@ -777,13 +797,14 @@ function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: st
             </div>
             <ChevronRight className="size-4 text-muted-foreground group-hover:text-camp-green transition-colors flex-shrink-0" />
           </a>
-        ))}
+        );})}
       </div>
     </div>
   );
 }
 
 function SpotlightSection({ item }: { item: { name: string; price: string; rating: string; why: string; category: string } }) {
+  const productImage = getProductImage(item.name);
   return (
     <div className="mb-10 rounded-2xl border border-camp-green/20 bg-gradient-to-br from-camp-green/5 to-transparent overflow-hidden">
       <div className="bg-camp-green/10 px-6 py-3 flex items-center justify-between">
@@ -791,8 +812,16 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
         <span className="text-xs text-muted-foreground">Our Top Pick</span>
       </div>
       <div className="p-6">
-        <div className="flex items-start justify-between gap-4 mb-4">
-          <div>
+        <div className="flex items-start gap-5 mb-4">
+          <div className="flex-shrink-0 w-28 h-28 rounded-xl overflow-hidden bg-white border border-gray-200">
+            <img
+              src={productImage}
+              alt={item.name}
+              className="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+          <div className="flex-1 min-w-0">
             <h3 className="text-lg font-bold leading-tight">{item.name}</h3>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-lg font-bold text-camp-green">{item.price}</span>
@@ -801,7 +830,10 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
                 <span className="text-sm text-muted-foreground">{item.rating}</span>
               </div>
             </div>
+            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{item.why}</p>
           </div>
+        </div>
+        <div className="flex justify-end">
           <a
             href="https://www.amazon.com/shop/camprally"
             target="_blank"
@@ -811,7 +843,6 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
             View on Amazon
           </a>
         </div>
-        <p className="text-sm text-muted-foreground leading-relaxed">{item.why}</p>
       </div>
     </div>
   );

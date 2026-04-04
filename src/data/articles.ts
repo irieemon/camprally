@@ -21,50 +21,15 @@ export const articles: Article[] = [
     author: "Camp Rally Team",
     readTime: "8 min read",
     content: `
-# Best Budget Tents Under $100 - 2026 Reviews
-
-Camping doesn't have to cost a fortune. A great tent is the foundation of any outdoor adventure, and you don't need to spend $300+ to get a shelter that'll keep you dry and comfortable. After rigorous testing, these are our top picks for budget tents that actually perform.
-
 ## Why Trust Our Reviews?
 
 We spent 200+ nights under canvas (and nylon) to bring you honest assessments. Each tent was set up in wind, rain, and midday sun to test durability, weather resistance, and ease of setup.
-
-## Our Top Pick: Coleman Sundome 2-Person Tent
-
-**Price:** $49.99 | **Rating:** 4.4/5
-
-The Coleman Sundome remains the king of budget tents. Here's why:
-
-- **Setup time:** 10 minutes
-- **Weather resistance:** WeatherTec™ system with inverted seams
-- **Capacity:** Roomy for 2 people, great for solo campers who want extra space
-- **Ventilation:** Ground vent for airflow
-
-At under $50, this tent punches way above its weight class. The dome design sheds wind well, and the rainfly provides solid protection in overnight storms.
-
-## Best for Backpackers: Kelty Discovery Element 4
-
-**Price:** $89.99 | **Rating:** 4.2/5
-
-If you're planning to hike with your shelter, the Kelty Discovery Element 4 weighs just 5 lbs 14 oz and packs down small enough for a weekend backcountry trip. The full-coverage rainfly and internal storage pockets make it surprisingly practical for the price.
-
-## Budget Honorable Mentions
-
-- **Teton Sports Grande 6** ($99.99) - Massive family tent, great for car camping
-- **Core 4-Person Dome** ($79.99) - Excellent ventilation, quick setup
-
-## What to Look for in a Budget Tent
-
-1. **Hydrostatic rating** - Aim for 1500mm+ waterproofing
-2. **Seam sealing** - Taped seams beat stitched every time
-3. **Pole quality** - Fiberglass is standard at this price; aluminum is a bonus
-4. **Interior height** - Check if you can actually sit up inside
 
 ## Final Verdict
 
 For most beginners, the **Coleman Sundome 2-Person at $49.99** is the obvious choice. It's reliable, weather-tested, and backed by Coleman's reputation. Buy it with confidence.
 
-**[Shop Coleman Sundome on Amazon](https://www.amazon.com/dp/B00TEST001?tag=camprally-20)**
+**[Shop Coleman Sundome on Amazon](https://www.amazon.com/shop/camprally)**
 
 ---
 
@@ -166,57 +131,11 @@ Start with the seven items above. Camp twice. Then decide what you actually need
     author: "Camp Rally Team",
     readTime: "7 min read",
     content: `
-# Best Budget Sleeping Bags for Cold Weather
-
-The difference between a miserable night and a restful one is often $20 and the right sleeping bag. Here's how to stay warm without spending a fortune.
-
 ## Understanding Temperature Ratings
 
 ISO standard ratings tell you the lowest temp a bag will keep an average sleeper comfortable. But here's the honest truth: most manufacturers rate conservatively. A "20°F bag" might actually keep you comfortable at 25-30°F.
 
 **Get a bag rated 10-15°F below your expected low** for safety margin.
-
-## Our Top Cold Weather Picks
-
-### Best Overall: Teton Sports Celsius Regular
-
-**Price:** $34.99 | **Rating:** 4.5/5 | **Rating:** 0°F
-
-The Celsius delivers genuine cold-weather performance at a fraction of the price. The mummy design traps heat efficiently, and the internal draft tube keeps wind from sneaking through the zipper.
-
-**What we love:**
-- Snag-free zipper
-- Compression stuff sack included
-- Internal pocket for phone/wallet
-- Lifetime warranty
-
-**Best for:** 3-season camping, shoulder season trips
-
-### Most Affordable: Coleman Brazos 30°F
-
-**Price:** $24.99 | **Rating:** 4.3/5 | **Rating:** 30°F
-
-If you're just starting out, the Brazos is a solid entry point. Rectangular shape gives you room to move, and the ThermoTech insulation holds up better than expected.
-
-**What we love:**
-- Machine washable
-- Full-length zipper for venting
-- Budget-friendly price
-
-**Best for:** Summer and early fall camping
-
-### Ultralight Pick: Oaskys 3-Season
-
-**Price:** $27.99 | **Rating:** 4.1/5 | **Rating:** 45°F
-
-Weighing just 2.5 lbs, the Oaskys is a solid choice for backpacking. The EN13537 rating ensures consistent quality.
-
-**What we love:**
-- Lightweight
-- Water-resistant shell
-- Packs down small
-
-**Best for:** Warm-weather backpacking
 
 ## Cold Weather Tips
 
@@ -227,13 +146,7 @@ Even the best sleeping bag won't help if you don't:
 - **Use a sleeping pad** - Ground steals 80% of your body heat
 - **Put clothes in your bag** - Cold boots in your bag = warm feet (eventually)
 
-## Our Recommendation
-
-For genuine cold weather (20°F and below): **Teton Sports Celsius at $34.99**
-
-For most beginners: **Coleman Brazos at $24.99** handles 3-season camping well.
-
-**[Shop Cold Weather Sleeping Bags](https://www.amazon.com/shop/camprally-sleepingbags)**
+**[Shop Cold Weather Sleeping Bags](https://www.amazon.com/shop/camprally)**
 
 ---
 
@@ -250,49 +163,9 @@ For most beginners: **Coleman Brazos at $24.99** handles 3-season camping well.
     author: "Camp Rally Team",
     readTime: "6 min read",
     content: `
-# Budget Camping Cookware That Actually Works
-
-The camping cookware aisle at REI is intimidating. $200 for a pot? No thanks. Here's what actually works in the real world.
-
 ## The Core Principle: Nested Sets
 
 The best budget cookware comes in nested sets. Everything packs inside everything else, saving space and losing nothing in functionality.
-
-## Our Top Pick: Stanley Adventure Camp Cook Set
-
-**Price:** $29.99 | **Rating:** 4.6/5
-
-This is the set we reach for most often. The 24oz pot, two cups, and lid/pan nest perfectly, and the stainless steel handles don't melt over open flame.
-
-**What you get:**
-- 24oz pot
-- Two 10oz cups  
-- Vented lid (works as a pan)
-- Folding handle on pot
-
-At $30, it's the best value in camping cookware. Period.
-
-## Budget Runner-Up: MalloMe Camping Cookware Mess Kit
-
-**Price:** $22.99 | **Rating:** 4.4/5
-
-Anodized aluminum is lighter than stainless, and the MalloMe's 10-piece set includes plates and utensils most sets skip.
-
-**What you get:**
-- Pot with handle
-- Frying pan with handle
-- Two plates
-- Two bowls
-- Spatula, spoon, fork
-- Storage mesh bag
-
-Great for groups or longer trips where you want proper dishware.
-
-## Simplest Option: GSI Cascadian 1-Person Table Set
-
-**Price:** $18.99 | **Rating:** 4.2/5
-
-If you're solo camping and want minimal gear, the Cascadian delivers just enough. Plate, bowl, and insulated mug for under $20.
 
 ## What About Titanium?
 
@@ -303,11 +176,7 @@ Titanium is lighter, but it's also:
 
 For budget camping, stainless or aluminum is just fine. Save titanium money for experiences.
 
-## Our Recommendation
-
-**Stanley Adventure Camp Cook Set at $29.99** - The benchmark for a reason.
-
-**[Shop Stanley Cookware on Amazon](https://www.amazon.com/dp/B00STK001?tag=camprally-20)**
+**[Shop Cookware on Amazon](https://www.amazon.com/shop/camprally)**
 
 ---
 
@@ -386,12 +255,6 @@ You need almost nothing to camp. People slept outside for millennia before REI e
     author: "Camp Rally Team",
     readTime: "6 min read",
     content: `
-# Best Budget Sleeping Pads Under $50
-
-Here's a fact that surprises beginners: **your sleeping pad is more important than your sleeping bag**.
-
-Why? Because 80% of your body heat escapes through contact with the ground. A $200 sleeping bag on a bare tarp will leave you colder than a $30 bag on a quality pad.
-
 ## Understanding R-Value
 
 R-value measures insulation. Higher numbers = more warmth from the ground.
@@ -402,47 +265,11 @@ R-value measures insulation. Higher numbers = more warmth from the ground.
 
 For most people, an R-value of 2-3 covers 90% of camping scenarios.
 
-## Our Top Pick: Klymit Static V
-
-**Price:** $44.99 | **Rating:** 4.5/5 | **R-value:** 1.3
-
-The Klymit Static V is the gold standard of budget sleeping pads. The V-chamber design limits air movement (and thus heat loss), while the body-mapped shape keeps you centered.
-
-**What we love:**
-- 4.7/5 customer rating across 10,000+ reviews
-- Packs down to water bottle size
-- Lifetime warranty
-- Weighs 15.9 oz - backpacking friendly
-
-**Best for:** 3-season camping, general car camping
-
-## Budget Pick: Hikenture Ultralight Sleeping Pad
-
-**Price:** $35.99 | **Rating:** 4.3/5 | **R-value:** 2.5
-
-Self-inflating pads are more comfortable but heavier. The Hikenture hits a sweet spot with solid R-value at a low price.
-
-**What we love:**
-- Self-inflating (just open the valve)
-- Includes patch kit
-- Non-slip surface
-
-**Best for:** Value-minded campers who want some self-inflation convenience
-
-## Honorable Mentions
-
-- **Thermarest Z Lite Sol** ($54.99) - Classic closed-cell foam pad, higher R-value
-- **Amazon Basics Foam Pad** ($12.99) - No-frills backup pad, surprisingly decent
-
 ## Don't Skip the Patch Kit
 
 Whatever pad you buy, grab a separate patch kit ($5-10). Most pads leak eventually, and a patch kit saves the trip.
 
-## Our Recommendation
-
-**Klymit Static V at $44.99** - The best all-around value in sleeping pads.
-
-**[Shop Klymit Static V on Amazon](https://www.amazon.com/dp/B00TEST006?tag=camprally-20)**
+**[Shop Sleeping Pads on Amazon](https://www.amazon.com/shop/camprally)**
 
 ---
 
@@ -459,10 +286,6 @@ Whatever pad you buy, grab a separate patch kit ($5-10). Most pads leak eventual
     author: "Camp Rally Team",
     readTime: "5 min read",
     content: `
-# Affordable Headlamps for Camping - Top Picks
-
-Why carry a flashlight when you can wear a light? Headlamps are the unsung hero of camping gear.
-
 ## What to Look For
 
 - **Lumens** - 100-300 lumens covers most camping needs
@@ -471,32 +294,6 @@ Why carry a flashlight when you can wear a light? Headlamps are the unsung hero 
 - **Red light mode** - Preserves night vision
 - **Water resistance** - IPX4 or higher for outdoor use
 
-## Our Top Pick: Black Diamond Spot 400
-
-**Price:** $39.99 | **Rating:** 4.5/5 | **Lumens:** 400
-
-The Spot 400 is the benchmark for budget headlamps. 400 lumens handles trail running, camp chores, and reading. The PowerTap technology lets you switch modes instantly.
-
-**What we love:**
-- Red night-vision mode
-- IPX67 waterproof (submersible to 1m)
-- 3 AAA batteries (common everywhere)
-- 200+ hour battery life on low
-
-This is the headlamp we recommend to everyone.
-
-## Budget Pick: Vont 4-Pack LED Camping Lanterns
-
-**Price:** $14.99 (4-pack!) | **Rating:** 4.6/5 | **Lumens:** 100/each
-
-These aren't headlamps, but hear us out. For car camping, grab a 4-pack of Vont lanterns. Hang them in your tent or around camp for ambient light. At $3.75 each, they're essentially disposable.
-
-**What we love:**
-- 30-hour battery life
-- Collapsible design
-- Military-grade durability
-- 4-pack = always have spares
-
 ## Headlamp vs. Lantern
 
 **Headlamp for:** Hiking, cooking, anything mobile
@@ -504,13 +301,7 @@ These aren't headlamps, but hear us out. For car camping, grab a 4-pack of Vont 
 
 Get both. The combo covers every scenario.
 
-## Our Recommendation
-
-**Black Diamond Spot 400 at $39.99** for your primary headlamp.
-
-**Vont 4-Pack Lanterns at $14.99** for camp lighting.
-
-**[Shop Headlamps on Amazon](https://www.amazon.com/shop/camprally-lighting)**
+**[Shop Headlamps on Amazon](https://www.amazon.com/shop/camprally)**
 
 ---
 
@@ -527,10 +318,6 @@ Get both. The combo covers every scenario.
     author: "Camp Rally Team",
     readTime: "5 min read",
     content: `
-# Budget Camp Chairs That Last
-
-After a long hike, you want somewhere to sit that isn't a rock. A good camp chair matters more than most beginners realize.
-
 ## What Makes a Great Budget Camp Chair?
 
 - **300+ lb capacity** - Safety margin matters
@@ -539,39 +326,11 @@ After a long hike, you want somewhere to sit that isn't a rock. A good camp chai
 - **Mesh side pockets** - Small gear storage
 - **Steel frame** - Aluminum bends too easily
 
-## Our Top Pick: KingCamp Low Sling Folding Chair
-
-**Price:** $39.99 | **Rating:** 4.3/5 | **Capacity:** 300 lbs
-
-KingCamp makes surprisingly solid chairs at competitive prices. The Low Sling sits closer to the ground (great for campfires) and the mesh sides provide airflow on warm nights.
-
-**What we love:**
-- Oversized cup holder
-- Storage pocket
-- Padded armrests
-- Folds flat for trunk storage
-
-**Best for:** Car camping, beach camping, any seated camp activity
-
-## Budget Pick: Amazon Basics Folding Camp Chair
-
-**Price:** $24.99 | **Rating:** 4.2/5 | **Capacity:** 300 lbs
-
-If $40 feels too rich, the Amazon Basics chair delivers 80% of the experience at 60% of the price. It's basic but functional.
-
-**What you lose:** Padded armrests, slightly less robust frame
-
-**What you gain:** Budget flexibility
-
 ## Skip These Temptations
 
 - **Ultralight trekking pole chairs** - Uncomfortable for anything over 30 minutes
 - **$10 gas station chairs** - The frame bends the first time you sit down
 - **Hammock chairs** - Great concept, mediocre execution at any price
-
-## Our Recommendation
-
-**KingCamp Low Sling at $39.99** - The best value chair for most car campers.
 
 **[Shop Camp Chairs on Amazon](https://www.amazon.com/shop/camprally)**
 
