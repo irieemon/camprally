@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Framework preset: Next.js (set in Vercel project settings)
+  // config options here
 };
 
 export default nextConfig;
