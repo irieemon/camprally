@@ -1,65 +1,187 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { articles } from "@/data/articles";
+import { Tent, Flame, Mountain, Compass, TreePine, Sun } from "lucide-react";
+
+const featuredSlugs = [
+  "best-budget-tents-under-100",
+  "cheapest-camping-setup-beginners",
+  "best-budget-sleeping-bags-cold-weather",
+  "budget-camping-cookware",
+  "how-to-start-camping-no-gear",
+  "budget-camping-hacks",
+];
+
+const categories = [
+  { name: "Tents & Shelter", icon: Tent, href: "/blog?category=Tents" },
+  { name: "Sleep Systems", icon: Sun, href: "/blog?category=Sleep+Systems" },
+  { name: "Cooking Gear", icon: Flame, href: "/blog?category=Cooking" },
+  { name: "Navigation", icon: Compass, href: "/blog?category=Navigation" },
+  { name: "Tips & Hacks", icon: Mountain, href: "/blog?category=Tips" },
+  { name: "Tools & Gear", icon: TreePine, href: "/blog?category=Tools" },
+];
 
 export default function Home() {
+  const featured = articles.filter((a) => featuredSlugs.includes(a.slug));
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex flex-col">
+      {/* Hero */}
+      <section className="relative bg-camp-green px-4 py-20 text-center md:py-28">
+        <div className="mx-auto max-w-3xl">
+          <Mountain className="mx-auto mb-4 size-12 text-camp-cream opacity-80" />
+          <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+            Smart Camping for Every Budget
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mx-auto mt-4 max-w-xl text-lg text-camp-cream/90">
+            Honest reviews and practical guides to help you get outdoors without
+            breaking the bank. Gear up smart, camp happy.
           </p>
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Link
+              href="/blog"
+              className="inline-flex h-11 items-center rounded-lg bg-white px-6 font-medium text-camp-green transition hover:bg-camp-cream"
+            >
+              Browse All Guides
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex h-11 items-center rounded-lg border border-white/30 px-6 font-medium text-white transition hover:bg-white/10"
+            >
+              Why CampRally?
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* Featured Articles */}
+      <section className="mx-auto w-full max-w-6xl px-4 py-16">
+        <h2 className="mb-2 text-center text-3xl font-bold text-foreground">
+          Top Gear Guides
+        </h2>
+        <p className="mb-10 text-center text-muted-foreground">
+          Our most popular budget camping guides
+        </p>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((article) => (
+            <Link key={article.slug} href={`/blog/${article.slug}`}>
+              <Card className="h-full transition hover:shadow-md hover:-translate-y-0.5">
+                <CardHeader>
+                  <div className="mb-1">
+                    <Badge variant="secondary">{article.category}</Badge>
+                  </div>
+                  <CardTitle className="line-clamp-2 text-lg">
+                    {article.title}
+                  </CardTitle>
+                  <CardDescription className="line-clamp-2">
+                    {article.excerpt}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <span className="text-sm text-muted-foreground">
+                    {new Date(article.date).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Link
+            href="/blog"
+            className="inline-flex h-10 items-center rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground transition hover:bg-primary/90"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            View All Articles
+          </Link>
+        </div>
+      </section>
+
+      {/* Why Camp Lean */}
+      <section className="bg-camp-cream px-4 py-16">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="mb-10 text-center text-3xl font-bold text-foreground">
+            Why Camp Lean?
+          </h2>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "Tested on Real Trails",
+                desc: "Every recommendation comes from actual camping experience. We test gear in real conditions so you don't have to gamble with your money.",
+              },
+              {
+                title: "Budget-First Philosophy",
+                desc: "You don't need $500 tents to enjoy the outdoors. We find the sweet spot between price and quality for every piece of gear.",
+              },
+              {
+                title: "Beginner Friendly",
+                desc: "New to camping? We break down the jargon and tell you exactly what you need — and what you can skip.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="text-center">
+                <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-camp-green/10">
+                  <TreePine className="size-6 text-camp-green" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="mx-auto w-full max-w-6xl px-4 py-16">
+        <h2 className="mb-2 text-center text-3xl font-bold text-foreground">
+          Browse by Category
+        </h2>
+        <p className="mb-10 text-center text-muted-foreground">
+          Find the gear guides you need
+        </p>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+          {categories.map((cat) => (
+            <Link
+              key={cat.name}
+              href={cat.href}
+              className="flex flex-col items-center gap-2 rounded-xl border bg-card p-5 text-center transition hover:shadow-md hover:-translate-y-0.5"
+            >
+              <cat.icon className="size-8 text-camp-green" />
+              <span className="text-sm font-medium">{cat.name}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="bg-camp-brown px-4 py-16 text-center text-white">
+        <div className="mx-auto max-w-lg">
+          <h2 className="mb-3 text-3xl font-bold">Stay Trail-Ready</h2>
+          <p className="mb-6 text-camp-cream/80">
+            Get our best budget gear picks and camping tips delivered to your
+            inbox. No spam, just trail-tested advice.
+          </p>
+          <form
+            className="flex flex-col gap-3 sm:flex-row"
+            action="#"
+          >
+            <input
+              type="email"
+              placeholder="your@email.com"
+              className="h-11 flex-1 rounded-lg border border-white/20 bg-white/10 px-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <button
+              type="submit"
+              className="h-11 rounded-lg bg-camp-orange px-6 font-medium text-white transition hover:bg-camp-orange/90"
+            >
+              Subscribe
+            </button>
+          </form>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
