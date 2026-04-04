@@ -569,16 +569,6 @@ For most US/Canada camping: **a filter is sufficient**.
 
 Not recommended as primary budget option, but worth considering for heavy use.
 
-## Don't: Bleach Method
-
-You can technically purify water with household bleach (8 drops per gallon, let sit 30 minutes), but:
-- Tastes terrible
-- Dosage is imprecise
-- Doesn't filter particulates
-- Easy to get wrong
-
-Just buy a filter.
-
 **[Shop Water Filters on Amazon](https://www.amazon.com/shop/camprally)**
 
 ---
@@ -852,46 +842,6 @@ For casual camping, 2,000-5,000mm handles most storms.
 The small stuff matters. These sub-$20 accessories plug gaps in your kit and make camp life noticeably better.
 
 ## Our Favorite Budget Accessories
-
-### Nalgene Wide Mouth 32oz Water Bottle
-
-**Price:** $14.99 | **Rating:** 4.7/5
-
-The gold standard of outdoor water bottles. Virtually indestructible, BPA-free, and gradated markings let you measure instant meals.
-
-**Best for:** Everyone, every trip, forever.
-
-### Sea to Summit Dry Sack 8L
-
-**Price:** $16.99 | **Rating:** 4.5/5
-
-Keep your sleeping bag dry in any downpour. The roll-top closure seals watertight, and the bright color makes finding gear easier.
-
-**Best for:** Wet environments, river trips, paranoid sleepers.
-
-### Coghlan's 50-Pack Waterproof Matches
-
-**Price:** $10.99 | **Rating:** 4.3/5
-
-Because sometimes your fire-starting situation gets desperate. These matches light when wet and burn for several minutes each.
-
-**Best for:** Emergency fire starting, gifting, peace of mind.
-
-### Bungee Cords (Set of 12)
-
-**Price:** $12.99 | **Rating:** 4.4/5
-
-The most versatile camp items. Secure tents, strap gear, create clotheslines, rig emergency shelters. Keep several sizes.
-
-**Best for:** Everything.
-
-### Travel Bidet
-
-**Price:** $8.99 | **Rating:** 4.2/5
-
-Toilet paper is heavy, bulky, and runs out. A travel bidet solves all three problems. You'll wonder how you camped without one.
-
-**Best for:** Extended trips, lightweight packing, TP-free independence.
 
 ## What $20 Gets You
 
