@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://camprally.co/sitemap.xml
