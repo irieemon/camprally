@@ -46,13 +46,13 @@ export default function RootLayout({
           ⚠️  ACTION REQUIRED: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID.
           Go to https://analytics.google.com to create your GA4 property.
         */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-MQWSB6RTKJ" strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-XXXXXXXXXX');
+            gtag('config', 'G-MQWSB6RTKJ');
           `}
         </Script>
       </body>
