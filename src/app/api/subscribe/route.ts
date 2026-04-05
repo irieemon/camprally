@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFileSync, existsSync, readFileSync, mkdirSync } from "fs";
+import { writeFileSync, existsSync, readFileSync } from "fs";
 import { join } from "path";
 
 export async function POST(req: NextRequest) {
@@ -10,14 +10,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
 
-    // Use a persistent data directory
-    const dataDir = join(process.cwd(), "data");
-    const filePath = join(dataDir, "subscribers.json");
-
-    // Ensure data directory exists
-    if (!existsSync(dataDir)) {
-      mkdirSync(dataDir, { recursive: true });
-    }
+    // Use /tmp for ephemeral storage on Vercel serverless
+    // Note: Data is lost on cold start / new instance
+    const filePath = join("/tmp", "camprally-subscribers.json");
 
     let subscribers: string[] = [];
 
@@ -35,13 +30,7 @@ export async function POST(req: NextRequest) {
     }
 
     subscribers.push(email);
-    
-    try {
-      writeFileSync(filePath, JSON.stringify(subscribers, null, 2));
-    } catch (writeErr) {
-      console.error("Failed to write subscribers file:", writeErr);
-      // Continue anyway - email was still received
-    }
+    writeFileSync(filePath, JSON.stringify(subscribers, null, 2));
 
     return NextResponse.json({ 
       message: "Subscribed!", 
