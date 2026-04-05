@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#ffffff"/>
+  <!-- Mountain + Tent -->
+  <polygon points="120,320 200,200 280,320" fill="#2D5016" opacity="0.3"/>
+  <polygon points="180,320 256,210 332,320" fill="#2D5016" opacity="0.5"/>
+  <!-- Tent body -->
+  <polygon points="170,320 256,195 342,320" fill="#2D5016"/>
+  <!-- Tent door -->
+  <polygon points="226,320 256,245 286,320" fill="#D97706"/>
+  <!-- Campfire -->
+  <ellipse cx="256" cy="365" rx="30" ry="10" fill="#92400E" opacity="0.3"/>
+  <!-- Fire glow -->
+  <ellipse cx="256" cy="355" rx="18" ry="8" fill="#F59E0B" opacity="0.6"/>
+  <!-- Flame -->
+  <path d="M256 330 Q248 345 252 355 Q256 360 256 355 Q256 360 260 355 Q264 345 256 330Z" fill="#EF4444"/>
+  <path d="M256 340 Q251 350 254 358 Q256 362 256 356 Q256 362 258 358 Q261 350 256 340Z" fill="#F59E0B"/>
+  <!-- Text: CampRally -->
+  <text x="256" y="410" font-family="system-ui, -apple-system, sans-serif" fontWeight="700" fontSize="56" fill="#1a1a1a" textAnchor="middle">CampRally</text>
+  <!-- Subtitle -->
+  <text x="256" y="445" font-family="system-ui, -apple-system, sans-serif" fontWeight="400" fontSize="22" fill="#6B7280" textAnchor="middle">Budget camping gear that actually works</text>
+</svg>
