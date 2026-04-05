@@ -495,7 +495,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "Rain Gear Picks",
       items: [
         { label: "Frogg Toggs Ultra-Lite Rain Suit", detail: "$19.99", note: "4.1★", category: "Best Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
-        { label: "Enjoying Waterproof Rain Jacket", detail: "$15.99", note: "4.0★", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "Frogg Toggs Ultra-Lite Rain Suit", detail: "$19.99", note: "4.1★", category: "Budget Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
       ]
     },
     {
