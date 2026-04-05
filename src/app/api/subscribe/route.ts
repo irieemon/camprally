@@ -37,8 +37,9 @@ export async function POST(req: NextRequest) {
       subscribed: true,
       count: subscribers.length 
     });
-  } catch (err) {
-    console.error("Subscribe API error:", err);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    console.error("Subscribe API error:", message);
+    return NextResponse.json({ error: "Server error", detail: message }, { status: 500 });
   }
 }
