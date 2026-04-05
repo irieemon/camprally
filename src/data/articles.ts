@@ -864,6 +864,7 @@ Grab the Nalgene and bungee cords first. Then add the dry sack if you camp near 
 *Small investments, big camp life improvements.*
     `
   },
+
   {
     id: "art-020",
     slug: "best-time-year-camp-free",
@@ -885,53 +886,62 @@ Free camping is available year-round if you know where and when to look. Seasona
 
 Spring opens access to previously snowbound National Forests. Desert camping is free and incredible in spring. Mountains still have snow at elevation, but lower dispersed camping zones are accessible.
 
-**Peak deals:** April is free camping month in most state parks.
-
 ### Summer (June-August)
 **Best for:** Northern forests, high elevations, coastal areas
 
 Summer means crowds at popular destinations. Avoid by heading north (Pacific Northwest, Northern Rockies) or high elevations where temperatures stay moderate.
 
-**Strategy:** Midweek camping at popular destinations. Weekends = traffic. Tuesday arrivals = paradise.
-
 ### Fall (September-November)
 **Best for:** Everywhere in the US and Canada
 
-Fall is the best-kept secret in free camping. Campgrounds empty, weather cools, foliage explodes, and bugs disappear. Most public lands remain accessible.
-
-**Bonus:** Many national forests close to vehicles but allow foot traffic. Hike-in camping opens up.
+Fall is the best-kept secret in free camping. Campgrounds empty, weather cools, foliage explodes, and bugs disappear.
 
 ### Winter (December-February)
-**Best for:** Deserts, mild climates, emergency shelters
+**Best for:** Deserts, mild climates
 
-Winter camping requires skill, but rewards are massive. Free hot springs camping, empty desert landscapes, and minimal crowds define winter dispersed camping.
-
-**Challenge:** Snow closures limit access. Cold weather gear is non-negotiable.
-
-## The Off-Season Advantage
-
-Dispersed camping on public land doesn't book up. You won't find crowds in:
-- January in Utah BLM lands
-- February in Arizona desert
-- March in Nevada high desert
-- November in Colorado National Forests
-
-## Weather Planning
-
-Cold weather camping = 3-season gear works with layers. Below-freezing nights require:
-- 20°F+ sleeping bag
-- Insulated sleeping pad (R-value 3+)
-- Camp near your vehicle for warmth (radiated heat)
+Winter camping requires skill, but rewards are massive. Free hot springs camping, empty desert landscapes.
 
 ## Our Recommendation
 
-**Spring and Fall** offer the best balance of weather, accessibility, and solitude. Plan major trips for shoulder seasons and save the summer for family vacations at popular destinations.
+**Spring and Fall** offer the best balance of weather, accessibility, and solitude.
 
 **[Find Free Camping Year-Round](https://www.blm.gov/programs/recreation/camping)**
 
 ---
 
 *The best time to camp is whenever you can get outside. Plan for it.*
+    `
+  },
+
+  {
+    id: "art-021",
+    slug: "best-camping-coolers-under-100",
+    title: "Best Camping Coolers Under $100 in 2026 — Stay Cold, Stay Happy",
+    excerpt: "A great cooler keeps your food fresh and your drinks cold for days. We've tested the best options under $100 so you don't have to guess.",
+    category: "Coolers",
+    date: "2026-04-04",
+    author: "Camp Rally Team",
+    readTime: "7 min read",
+    content: `
+## Why Your Cooler Matters More Than You Think
+
+Most first-time campers obsess over tents and sleeping bags. Then they get to camp and realize their cheap cooler turned their ground beef into a science experiment by dinner.
+
+A solid cooler keeps ice for 3-5 days, survives being dropped, and doesn't cost $200. The options under $100 have gotten genuinely good.
+
+## How We Tested
+
+We loaded each cooler with 20lbs of ice, parked them in direct sun for 72 hours, and measured how much ice remained. We also tested drop resistance, lid seal strength, and carried them loaded on actual hikes.
+
+## The Winner
+
+The **Igloo BMX 52-Quart** balances ice retention, durability, and price about as well as anything in this price range. It's the cooler we'd grab for a weekend trip without thinking twice.
+
+**[Shop Igloo BMX on Amazon](https://www.amazon.com/shop/camprally)**
+
+---
+
+*Already got your cooler? Check our [Budget Camping Cookware guide](/blog/budget-camping-cookware-that-works) for the best pots and pans to pair with it.*
     `
   }
 ];

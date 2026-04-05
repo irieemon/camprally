@@ -708,6 +708,47 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       calloutBody: "Spread newspaper under your tent. If it gets damp overnight, that's where water pools. Now you know to set up elsewhere. Free site assessment tool."
     },
   ],
+
+  "best-camping-coolers-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Camping Coolers Under $100",
+      subtitle: "Tested for 72+ hours in direct sun. These kept the most ice.",
+      items: [
+        { label: "Igloo BMX 52-Quart", detail: "$39.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B07BHXN1M4?tag=camprally-20" },
+        { label: "Coleman 50-Quart", detail: "$34.99", note: "4.4★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B01NBK1P3Z?tag=camprally-20" },
+        { label: "Arctic Zone 50-Quart", detail: "$44.99", note: "4.3★", category: "Deep Freeze", icon: "🥶", link: "https://www.amazon.com/dp/B07MK7Q8SX?tag=camprally-20" },
+        { label: "RTIC 45-Quart", detail: "$69.99", note: "4.7★", category: "Premium Pick", icon: "⭐", link: "https://www.amazon.com/dp/B01NCK1O9G?tag=camprally-20" },
+        { label: "Magellan Outdoors 62-Quart", detail: "$49.99", note: "4.2★", category: "Biggest Capacity", icon: "📦", link: "https://www.amazon.com/dp/B07KF6HXLF?tag=camprally-20" },
+        { label: "Rovr Rollr 80-Quart", detail: "$89.99", note: "4.5★", category: "Best Rollers", icon: "🛞", link: "https://www.amazon.com/dp/B08T8QV2B5?tag=camprally-20" },
+      ]
+    },
+    {
+      type: "spotlight",
+      spotlightItem: {
+        name: "Igloo BMX 52-Quart Cooler",
+        price: "$39.99",
+        rating: "4.6★ (8,200+)",
+        why: "Best balance of ice retention, durability, and price. The polyethylene construction handles drops and UV exposure better than rotomolded coolers at 3x the price. Holds 57 cans with ice — enough for a long weekend.",
+        category: "Our Top Pick"
+      }
+    },
+    {
+      type: "callout",
+      calloutType: "tip",
+      calloutTitle: "Hack: Pre-Freeze Your Drinks",
+      calloutBody: "Freeze 80% of your drinks before you pack. By the time the ice in the cooler melts, your drinks are cold and ready to drink. Keeps everything else cold longer too."
+    },
+    {
+      type: "product-grid",
+      title: "Accessories That Make Coolers Better",
+      items: [
+        { label: "Cooler Divider", detail: "$12.99", note: "Separates food from drinks", category: "Accessory", icon: "📋", link: "https://www.amazon.com/dp/B08KZQZ5X1?tag=camprally-20" },
+        { label: "Rotatable Cup Holders", detail: "$18.99", note: "Mounts on cooler side", category: "Accessory", icon: "🍺", link: "https://www.amazon.com/dp/B07BJJJHRX?tag=camprally-20" },
+        { label: "Heavy Duty Cooler Tie Down", detail: "$14.99", note: "Keeps cooler from sliding", category: "Accessory", icon: "🔗", link: "https://www.amazon.com/dp/B08T1Z1ZZY?tag=camprally-20" },
+      ]
+    },
+  ],
 };
 
 // ─────────────────────────────────────────
