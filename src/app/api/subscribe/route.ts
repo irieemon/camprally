@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFileSync, existsSync, readFileSync } from "fs";
-import { join } from "path";
 
 export async function POST(req: NextRequest) {
   try {
@@ -10,36 +8,31 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
 
-    // Use /tmp for ephemeral storage on Vercel serverless
-    // Note: Data is lost on cold start / new instance
-    const filePath = join("/tmp", "camprally-subscribers.json");
-
-    let subscribers: string[] = [];
-
-    if (existsSync(filePath)) {
-      try {
-        const data = readFileSync(filePath, "utf-8");
-        subscribers = JSON.parse(data);
-      } catch {
-        subscribers = [];
-      }
-    }
-
-    if (subscribers.includes(email)) {
-      return NextResponse.json({ message: "Already subscribed!", subscribed: true });
-    }
-
-    subscribers.push(email);
-    writeFileSync(filePath, JSON.stringify(subscribers, null, 2));
-
-    return NextResponse.json({ 
-      message: "Subscribed!", 
-      subscribed: true,
-      count: subscribers.length 
+    // Forward to Formspree
+    const formspreeRes = await fetch("https://formspree.io/f/xnjoljgl", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        _subject: "New Camp Rally Lead — Newsletter",
+        source: "camprally.co",
+      }),
     });
+
+    if (formspreeRes.ok) {
+      return NextResponse.json({ message: "Subscribed!", subscribed: true });
+    } else {
+      const data = await formspreeRes.json();
+      return NextResponse.json(
+        { error: data.error || "Failed to subscribe" },
+        { status: 500 }
+      );
+    }
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Unknown error";
     console.error("Subscribe API error:", message);
-    return NextResponse.json({ error: "Server error", detail: message }, { status: 500 });
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
