@@ -723,6 +723,49 @@ function getProductImage(productName: string): string {
   return PRODUCT_IMAGES.default;
 }
 
+const PRODUCT_LINKS: Record<string, string> = {
+  "Coleman Sundome":    "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20",
+  "Coleman Brazos":     "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20",
+  "Klymit Static V":   "https://www.amazon.com/dp/B082429QGK?tag=camprally-20",
+  "Stanley Adventure":  "https://www.amazon.com/dp/B08KWV7X8B?tag=camprally-20",
+  "Etekcity":           "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20",
+  "Vont":               "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20",
+  "Nalgene":            "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20",
+  "Sawyer Squeeze":     "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20",
+  "Sawyer":            "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20",
+  "LifeStraw":          "https://www.amazon.com/dp/B0FDXYKJYF?tag=camprally-20",
+  "Trekology":         "https://www.amazon.com/dp/B0CSD3WQKJ?tag=camprally-20",
+  "KingCamp":           "https://www.amazon.com/dp/B0BF8PRSZL?tag=camprally-20",
+  "Gerber Suspension":  "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20",
+  "Gerber":            "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20",
+  "Mora Companion":     "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20",
+  "Frogg Toggs":       "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20",
+  "Garmin eTrex":       "https://www.amazon.com/dp/B07RTD2PMT?tag=camprally-20",
+  "Suunto A-10":       "https://www.amazon.com/dp/B08PDDPX28?tag=camprally-20",
+  "Black Diamond Spot":"https://www.amazon.com/dp/B08M5H7C1L?tag=camprally-20",
+  "Teton Sports":       "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20",
+  "Kelty Discovery":    "https://www.amazon.com/dp/B0CH3QFY3C?tag=camprally-20",
+  "Oaskys":            "https://www.amazon.com/dp/B0DXK764WP?tag=camprally-20",
+  "Hikenture":         "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20",
+  "MalloMe":           "https://www.amazon.com/dp/B0CGNY9CM3?tag=camprally-20",
+  "GSI Outdoors":      "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20",
+  "Coleman Classic":   "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20",
+  "Core 4-Person":      "https://www.amazon.com/dp/B00VFG6LNI?tag=camprally-20",
+  "Amazon Basics Folding Camp Chair": "https://www.amazon.com/dp/B0CZNY3LR8?tag=camprally-20",
+  "Amazon Basics Multi-Tool": "https://www.amazon.com/dp/B07TQ86781?tag=camprally-20",
+  "Sea to Summit":     "https://www.amazon.com/dp/B002OYGZZ4?tag=camprally-20",
+  "Coghlan":           "https://www.amazon.com/dp/B0000AQLYP?tag=camprally-20",
+  "Jetboil":           "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20",
+};
+
+function getProductLink(productName: string): string {
+  for (const [key, url] of Object.entries(PRODUCT_LINKS)) {
+    if (productName.toLowerCase().includes(key.toLowerCase())) return url;
+  }
+  return "https://www.amazon.com/shop/camprally?tag=camprally-20";
+}
+
+
 function getCustomSections(slug: string): CustomSection[] {
   return ARTICLE_CUSTOM_SECTIONS[slug] || [];
 }
@@ -835,7 +878,7 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
         </div>
         <div className="flex justify-end">
           <a
-            href="https://www.amazon.com/shop/camprally?tag=camprally-20"
+            href={getProductLink(item.name)}
             target="_blank"
             rel="nofollow noopener"
             className="flex-shrink-0 rounded-lg bg-camp-green px-4 py-2 text-sm font-semibold text-white transition hover:bg-camp-green/90"
