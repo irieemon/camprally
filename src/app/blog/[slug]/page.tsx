@@ -7,6 +7,7 @@ import { articles } from "@/data/articles";
 import { products } from "@/data/products";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import NewsletterForm from "@/components/NewsletterForm";
 import {
   ArrowLeft, ExternalLink, Star, Check, TrendingDown,
   Zap, ChevronRight, Compass, Flame
@@ -1184,16 +1185,7 @@ export default async function ArticlePage({ params }: Props) {
               <p className="text-xs text-muted-foreground mb-3">
                 Join 2,847 campers getting our best budget gear recommendations.
               </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="flex-1 rounded-lg border bg-background px-3 py-2 text-sm"
-                />
-                <button className="rounded-lg bg-camp-green px-3 py-2 text-sm font-semibold text-white">
-                  →
-                </button>
-              </div>
+              <NewsletterForm />
             </CardContent>
           </Card>
         </aside>
