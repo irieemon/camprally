@@ -1116,7 +1116,7 @@ export default async function ArticlePage({ params }: Props) {
               We test every piece of gear we recommend. As an Amazon Associate, we earn from qualifying purchases — at no extra cost to you.
             </p>
             <a
-              href="https://www.amazon.com/shop/camprally?tag=camprally-20"
+              href="https://www.amazon.com?tag=camprally-20"
               target="_blank"
               rel="nofollow noopener"
               className="inline-flex items-center gap-2 rounded-lg bg-camp-green px-6 py-3 font-semibold text-white transition hover:bg-camp-green/90"
