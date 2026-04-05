@@ -1,0 +1,109 @@
+{
+  "queue": [
+    {
+      "slug": "best-camping-first-aid-kits-under-50",
+      "title": "Best Camping First Aid Kits Under $50 — Be Prepared Without Overpaying",
+      "category": "Safety",
+      "priority": "high",
+      "keywords": ["camping first aid kit", "best first aid kit for camping", "backcountry first aid kit"],
+      "heroKeyword": "camping first aid kit"
+    },
+    {
+      "slug": "best-hiking-boots-camping-under-100",
+      "title": "Best Hiking Boots for Camping Under $100 — Tested on Real Trails",
+      "category": "Footwear",
+      "priority": "high",
+      "keywords": ["hiking boots under 100", "best hiking boots for beginners", "camping boots"],
+      "heroKeyword": "hiking boots camping"
+    },
+    {
+      "slug": "camping-meal-plans-budget-50",
+      "title": "7 Days of Budget Camping Meals — $50 Total Food Budget",
+      "category": "Cooking",
+      "priority": "high",
+      "keywords": ["budget camping meals", "cheap camping food", "camping meal plan"],
+      "heroKeyword": "camping meals budget"
+    },
+    {
+      "slug": "best-portable-power-station-camping-under-200",
+      "title": "Best Portable Power Stations for Camping Under $200",
+      "category": "Electronics",
+      "priority": "medium",
+      "keywords": ["portable power station camping", "camping battery pack", "best power station under 200"],
+      "heroKeyword": "camping power station"
+    },
+    {
+      "slug": "best-camp-kitchen-organization",
+      "title": "Best Camp Kitchen Organization — Pack, Cook, and Clean Smarter",
+      "category": "Cooking",
+      "priority": "medium",
+      "keywords": ["camp kitchen organization", "camping kitchen gear", "camp cooking storage"],
+      "heroKeyword": "camp kitchen"
+    },
+    {
+      "slug": "camping-with-dogs-checklist",
+      "title": "Complete Camping With Dogs Checklist — What to Bring, What to Skip",
+      "category": "Pets",
+      "priority": "medium",
+      "keywords": ["camping with dogs", "dog camping checklist", "pet camping gear"],
+      "heroKeyword": "camping with dogs"
+    },
+    {
+      "slug": "best-camping-tarp-under-30",
+      "title": "Best Camping Tarps Under $30 — Extra Shelter Without the Price Tag",
+      "category": "Shelter",
+      "priority": "medium",
+      "keywords": ["camping tarp under 30", "budget tarp camping", "outdoor tarp"],
+      "heroKeyword": "camping tarp"
+    },
+    {
+      "slug": "how-to-camp-in-rain",
+      "title": "How to Camp in Rain and Still Have a Great Time",
+      "category": "Tips",
+      "priority": "high",
+      "keywords": ["camping in rain", "how to stay dry camping", "rain camping tips"],
+      "heroKeyword": "camping in rain"
+    },
+    {
+      "slug": "best-budget-trekking-poles",
+      "title": "Best Budget Trekking Poles Under $40 — Worth It or Waste?",
+      "category": "Gear",
+      "priority": "medium",
+      "keywords": ["budget trekking poles", "trekking poles under 40", "hiking poles review"],
+      "heroKeyword": "trekking poles"
+    },
+    {
+      "slug": "camping-fire-starting-guide",
+      "title": "Fire Starting for Campers — What Works, What Doesn't, What Burns",
+      "category": "Skills",
+      "priority": "high",
+      "keywords": ["campfire starting", "camping fire tips", "how to start a fire camping"],
+      "heroKeyword": "starting campfire camping"
+    },
+    {
+      "slug": "best-camping-socks",
+      "title": "The Most Important Gear Most Campers Ignore: A Good Pair of Socks",
+      "category": "Apparel",
+      "priority": "low",
+      "keywords": ["best camping socks", "wool socks camping", "hiking socks review"],
+      "heroKeyword": "camping socks"
+    },
+    {
+      "slug": "dispersed-camping-beginners-guide",
+      "title": "Dispersed Camping for Beginners — How to Camp Free on Public Land",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": ["dispersed camping", "free camping on public land", "how to dispersed camp"],
+      "heroKeyword": "dispersed camping"
+    }
+  ],
+  "published": [
+    {
+      "slug": "best-camping-coolers-under-100",
+      "title": "Best Camping Coolers Under $100 in 2026 — Stay Cold, Stay Happy",
+      "publishedDate": "2026-04-04"
+    }
+  ],
+  "lastPublished": "2026-04-04",
+  "publishIntervalDays": 7
+}

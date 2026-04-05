@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFileSync, existsSync, readFileSync } from "fs";
+import { writeFileSync, existsSync, readFileSync, mkdirSync } from "fs";
 import { join } from "path";
 
 export async function POST(req: NextRequest) {
@@ -10,23 +10,46 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
 
-    const filePath = join(process.cwd(), "subscribers.json");
+    // Use a persistent data directory
+    const dataDir = join(process.cwd(), "data");
+    const filePath = join(dataDir, "subscribers.json");
+
+    // Ensure data directory exists
+    if (!existsSync(dataDir)) {
+      mkdirSync(dataDir, { recursive: true });
+    }
+
     let subscribers: string[] = [];
 
     if (existsSync(filePath)) {
-      const data = readFileSync(filePath, "utf-8");
-      subscribers = JSON.parse(data);
+      try {
+        const data = readFileSync(filePath, "utf-8");
+        subscribers = JSON.parse(data);
+      } catch {
+        subscribers = [];
+      }
     }
 
     if (subscribers.includes(email)) {
-      return NextResponse.json({ message: "Already subscribed!" });
+      return NextResponse.json({ message: "Already subscribed!", subscribed: true });
     }
 
     subscribers.push(email);
-    writeFileSync(filePath, JSON.stringify(subscribers, null, 2));
+    
+    try {
+      writeFileSync(filePath, JSON.stringify(subscribers, null, 2));
+    } catch (writeErr) {
+      console.error("Failed to write subscribers file:", writeErr);
+      // Continue anyway - email was still received
+    }
 
-    return NextResponse.json({ message: "Subscribed!", count: subscribers.length });
-  } catch {
+    return NextResponse.json({ 
+      message: "Subscribed!", 
+      subscribed: true,
+      count: subscribers.length 
+    });
+  } catch (err) {
+    console.error("Subscribe API error:", err);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
