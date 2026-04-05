@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { articles } from "@/data/articles";
 import { Tent, Flame, Mountain, Compass, TreePine, Sun } from "lucide-react";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const featuredSlugs = [
   "best-budget-tents-under-100",
@@ -164,22 +165,7 @@ export default function Home() {
             Get our best budget gear picks and camping tips delivered to your
             inbox. No spam, just trail-tested advice.
           </p>
-          <form
-            className="flex flex-col gap-3 sm:flex-row"
-            action="#"
-          >
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="h-11 flex-1 rounded-lg border border-white/20 bg-white/10 px-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
-            />
-            <button
-              type="submit"
-              className="h-11 rounded-lg bg-camp-orange px-6 font-medium text-white transition hover:bg-camp-orange/90"
-            >
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </section>
     </div>
