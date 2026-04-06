@@ -5,17 +5,12 @@ import { useState } from "react";
 /**
  * Beehiiv Newsletter Subscribe Form — CampRally "Stay Trail-Ready"
  *
- * Uses Beehiiv's public subscribe URL directly from the browser.
- * The publishable key is safe to expose client-side — it only allows
- * creating free subscriptions, nothing else.
- *
- * Setup:
- * 1. Beehiiv publication: https://camp-rally.beehiiv.com
- * 2. Publishable key (pk_live_...) — safe for client use
+ * Uses Beehiiv's API directly from the browser.
+ * The publishable key is safe client-side — only allows creating free subscriptions.
  */
 
-const BEEHIIV_SUBSCRIBE_URL = "https://camp-rally.beehiiv.com/subscribe";
-const BEEHIIV_PUBLISHABLE_KEY = "xDG26YxedOSbEMOEdWV81PC2dirHCLMhFYXnMRPvkGmobnAcP2D3XhfWmOBbS6BK";
+const BEEHIIV_API_KEY = "xDG26YxedOSbEMOEdWV81PC2dirHCLMhFYXnMRPvkGmobnAcP2D3XhfWmOBbS6BK";
+const BEEHIIV_PUB_ID = "pub_f458a1a4-a8f2-475e-815f-c0a1738a19a2";
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -30,24 +25,29 @@ export default function NewsletterForm() {
     setErrorMsg("");
 
     try {
-      // Post directly to Beehiiv's public subscribe endpoint
       const res = await fetch(
-        `${BEEHIIV_SUBSCRIBE_URL}/subscribe/post?mailingId=${BEEHIIV_PUBLISHABLE_KEY}&email=${encodeURIComponent(email)}`,
+        `https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`,
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${BEEHIIV_API_KEY}`,
           },
+          body: JSON.stringify({ email, double_opt_in: false }),
         }
       );
 
-      // Beehiiv returns 200 on success, 400 on already subscribed, etc.
-      if (res.ok || res.redirected) {
+      if (res.ok) {
+        setStatus("success");
+        setEmail("");
+      } else if (res.status === 400) {
+        // Email already subscribed — treat as success
         setStatus("success");
         setEmail("");
       } else {
+        const data = await res.json().catch(() => ({}));
         setStatus("error");
-        setErrorMsg("Something went wrong. Please try again.");
+        setErrorMsg((data as { error?: string }).error || "Something went wrong.");
       }
     } catch {
       setStatus("error");
@@ -58,8 +58,8 @@ export default function NewsletterForm() {
   if (status === "success") {
     return (
       <div className="rounded-lg bg-white/10 border border-white/20 p-4 text-sm text-white">
-        <p className="font-semibold text-white">🎉 You're in!</p>
-        <p className="text-white/70 mt-1">Check your inbox for a welcome email from Beehiiv.</p>
+        <p className="font-semibold text-white">🎉 You&apos;re in!</p>
+        <p className="text-white/70 mt-1">Check your inbox — welcome to CampRally!</p>
       </div>
     );
   }
