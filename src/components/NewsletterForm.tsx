@@ -2,16 +2,6 @@
 
 import { useState } from "react";
 
-/**
- * Beehiiv Newsletter Subscribe Form — CampRally "Stay Trail-Ready"
- *
- * Uses Beehiiv's API directly from the browser.
- * The publishable key is safe client-side — only allows creating free subscriptions.
- */
-
-const BEEHIIV_API_KEY = "xDG26YxedOSbEMOEdWV81PC2dirHCLMhFYXnMRPvkGmobnAcP2D3XhfWmOBbS6BK";
-const BEEHIIV_PUB_ID = "pub_f458a1a4-a8f2-475e-815f-c0a1738a19a2";
-
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -25,29 +15,20 @@ export default function NewsletterForm() {
     setErrorMsg("");
 
     try {
-      const res = await fetch(
-        `https://api.beehiiv.com/v2/publications/${BEEHIIV_PUB_ID}/subscriptions`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${BEEHIIV_API_KEY}`,
-          },
-          body: JSON.stringify({ email, double_opt_in: false }),
-        }
-      );
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
 
       if (res.ok) {
         setStatus("success");
         setEmail("");
-      } else if (res.status === 400) {
-        // Email already subscribed — treat as success
-        setStatus("success");
-        setEmail("");
       } else {
-        const data = await res.json().catch(() => ({}));
         setStatus("error");
-        setErrorMsg((data as { error?: string }).error || "Something went wrong.");
+        setErrorMsg(data.error || "Something went wrong.");
       }
     } catch {
       setStatus("error");
