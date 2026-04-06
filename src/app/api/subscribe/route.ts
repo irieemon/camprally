@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     }
 
     const apiKey = process.env.NEXT_PUBLIC_BEEHIIV_PUBLISHABLE_KEY;
-    const publicationId = process.env.BEECIIV_PUBLICATION_ID;
+    const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
     const subscribeUrl = process.env.NEXT_PUBLIC_BEEHIIV_SUBSCRIBE_URL;
 
     if (!apiKey || !publicationId) {
