@@ -13,9 +13,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
 
-    const apiKey = process.env.NEXT_PUBLIC_BEEHIIV_PUBLISHABLE_KEY;
+    const apiKey = process.env.BEEHIIV_API_KEY;
     const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
-    const subscribeUrl = process.env.NEXT_PUBLIC_BEEHIIV_SUBSCRIBE_URL;
 
     if (!apiKey || !publicationId) {
       console.error("Beehiiv not configured — missing API key or publication ID");
@@ -25,9 +24,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Try Beehiiv API first
     const beehiivRes = await fetch(
-      `https://api.beehiiv.com/v2/publications/${publicationId}/subscribers`,
+      `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
       {
         method: "POST",
         headers: {
@@ -41,18 +39,6 @@ export async function POST(req: NextRequest) {
 
     if (beehiivRes.ok) {
       return NextResponse.json({ message: "Subscribed!", subscribed: true });
-    }
-
-    // If API fails (e.g. email already subscribed), fall back to Beehiiv's hosted subscribe page
-    if (subscribeUrl) {
-      const fallbackRes = await fetch(`${subscribeUrl}?email=${encodeURIComponent(email)}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
-      if (fallbackRes.ok) {
-        return NextResponse.json({ message: "Subscribed!", subscribed: true });
-      }
     }
 
     let errorMessage = "Failed to subscribe";
