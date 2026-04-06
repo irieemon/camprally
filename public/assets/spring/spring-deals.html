@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spring Camping Sale — Best Deals April 2026 | CampRally</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --forest-light: #2d5a3d;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --cream: #f5f0e8;
+    --earth: #8b6914;
+    --stone: #3d3d3d;
+    --offwhite: #faf8f4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; background: var(--offwhite); color: #2a2a2a; }
+  a { color: inherit; text-decoration: none; }
+
+  .hero {
+    background: linear-gradient(135deg, var(--forest) 0%, #0f2a1a 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a84c' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+  .hero-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--forest);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero p { font-size: 18px; opacity: 0.85; max-width: 560px; margin: 0 auto 30px; line-height: 1.6; }
+  .hero-note { font-size: 13px; opacity: 0.6; margin-top: 20px; }
+  .save-bar {
+    background: var(--gold);
+    color: var(--forest);
+    text-align: center;
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .categories-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 30px 20px 20px;
+    background: white;
+    border-bottom: 1px solid #e0d8cc;
+  }
+  .cat-btn {
+    background: var(--cream);
+    color: var(--forest);
+    border: 2px solid transparent;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .cat-btn:hover, .cat-btn.active {
+    background: var(--forest);
+    color: var(--gold);
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .section { padding: 60px 0; }
+  .section + .section { border-top: 1px solid #e8e0d0; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .section-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--forest);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .section-title-group h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: var(--forest);
+  }
+  .section-title-group p { font-size: 14px; color: #666; margin-top: 4px; }
+
+  .deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .deal-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .deal-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+
+  .deal-img-wrap {
+    height: 200px;
+    background: #f0ede6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .deal-img-wrap img { max-width: 80%; max-height: 160px; object-fit: contain; }
+  .deal-badge {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--gold);
+    color: var(--forest);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  .deal-info { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+  .deal-category-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--forest-light);
+    margin-bottom: 8px;
+  }
+  .deal-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+  .deal-desc { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 16px; flex: 1; }
+  .deal-price { display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px; }
+  .deal-price .was { font-size: 14px; color: #999; text-decoration: line-through; }
+  .deal-price .now { font-size: 22px; font-weight: 800; color: var(--forest); }
+  .deal-price .saving { font-size: 12px; color: #c0392b; font-weight: 700; background: #fde8e8; padding: 2px 8px; border-radius: 4px; }
+
+  .deal-btn {
+    display: block;
+    background: var(--forest);
+    color: var(--gold);
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .deal-btn:hover { background: var(--forest-light); }
+
+  .tip-box {
+    background: linear-gradient(135deg, var(--forest) 0%, #1e4a30 100%);
+    border-radius: 16px;
+    padding: 32px;
+    color: white;
+    margin-top: 50px;
+  }
+  .tip-box h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--gold);
+  }
+  .tip-box p { font-size: 15px; line-height: 1.7; opacity: 0.9; }
+
+  .footer {
+    background: var(--forest);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+  }
+  .footer a { color: var(--gold); }
+  .footer p { margin-top: 8px; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 40px 16px 36px; }
+    .deals-grid { grid-template-columns: 1fr; }
+    .categories-nav { gap: 6px; padding: 20px 12px 14px; }
+    .cat-btn { padding: 7px 14px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🔥 Spring Sale 2026</div>
+    <h1>Spring Camping Sale<br><span>Best Deals — April 2026</span></h1>
+    <p>Get ready for spring camping season with the best gear at the lowest prices. Tents, sleeping bags, camp kitchen & more — all tested, all budget-friendly.</p>
+    <div class="hero-note">We only recommend gear we'd use ourselves. Commissions help keep CampRally free.</div>
+  </div>
+</div>
+
+<div class="save-bar">🎉 Up to 40% off top-rated camping gear — Spring 2026</div>
+
+<nav class="categories-nav">
+  <button class="cat-btn active" onclick="scrollToSection('tents')">⛺ Tents</button>
+  <button class="cat-btn" onclick="scrollToSection('bags')">🔥 Sleeping Bags</button>
+  <button class="cat-btn" onclick="scrollToSection('kitchen')">🍳 Camp Kitchen</button>
+  <button class="cat-btn" onclick="scrollToSection('pads')">💤 Sleeping Pads</button>
+  <button class="cat-btn" onclick="scrollToSection('light')">🔦 Lighting</button>
+</nav>
+
+<div class="container">
+
+  <!-- TENTS -->
+  <div class="section" id="tents">
+    <div class="section-header">
+      <div class="section-icon">⛺</div>
+      <div class="section-title-group">
+        <h2>Tents</h2>
+        <p>Spring sales = best tent prices of the year. Here's what's actually worth buying.</p>
+      </div>
+    </div>
+    <div class="deals-grid">
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">BEST VALUE</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81C5LmwCuXL._AC_SX522_.jpg" alt="Coleman Sundome 4-Person Tent" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">4-Person · Weatherproof</div>
+          <div class="deal-title">Coleman Sundome 4-Person Dome Tent</div>
+          <div class="deal-desc">Sets up in 10 minutes. Weatherproof rainfly included. Great for spring temps and light rain. America's #1 selling dome tent.</div>
+          <div class="deal-price">
+            <span class="was">$119.99</span>
+            <span class="now">$79.99</span>
+            <span class="saving">Save $40</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B07QK8KN8S?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">POPULAR</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71L5Q9U1GJL._AC_SX522_.jpg" alt="CORE 4-Person Dome Tent" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">4-Person · Cabin Style</div>
+          <div class="deal-title">CORE 4-Person Dome Tent with Rainfly</div>
+          <div class="deal-desc">Room divider included. Ground vent for airflow — critical for spring camping when nights are damp. Stands up to 35 mph winds.</div>
+          <div class="deal-price">
+            <span class="was">$139.99</span>
+            <span class="now">$94.99</span>
+            <span class="saving">Save $45</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B07XVMKB9H?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">BUDGET PICK</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/61Q+L9H1l2L._AC_SX522_.jpg" alt="L不等山坡 tents" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">2-Person · Ultralight</div>
+          <div class="deal-title">Lightweight 2-Person Camping Tent</div>
+          <div class="deal-desc">Perfect spring backpacking tent. Waterproof, windproof, and weighs under 4 lbs. Easy 5-minute setup. Great for couples or solo campers.</div>
+          <div class="deal-price">
+            <span class="was">$69.99</span>
+            <span class="now">$44.99</span>
+            <span class="saving">Save $25</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B08D8MZS9J?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SLEEPING BAGS -->
+  <div class="section" id="bags">
+    <div class="section-header">
+      <div class="section-icon">🔥</div>
+      <div class="section-title-group">
+        <h2>Sleeping Bags</h2>
+        <p>Spring nights dip into the 30s. A 30°F-rated bag is the minimum. Here's the best spring camping picks.</p>
+      </div>
+    </div>
+    <div class="deals-grid">
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">EDITOR PICK</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71tT8kJmSSL._AC_SX522_.jpg" alt="TETON Sports Sleeping Bag" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">30°F · Synthetic</div>
+          <div class="deal-title">TETON Sports Celsius Sleeping Bag</div>
+          <div class="deal-desc">Rated to 30°F. Soft flannel lining, full-length zipper draft tube. The bag beginners consistently rate 5 stars after their first spring trip.</div>
+          <div class="deal-price">
+            <span class="was">$109.99</span>
+            <span class="now">$69.99</span>
+            <span class="saving">Save $40</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B071S3JXHW?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">BESTSELLER</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71vKxdmfL3L._AC_SX522_.jpg" alt="FARLAND Sleeping Bag" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">30°F · 3-Season</div>
+          <div class="deal-title">FARLAND Sleeping Bag for Adults</div>
+          <div class="deal-desc">Double-layer construction keeps you warm to 30°F. Compact carry sack. Great budget buy — performs way above its price point.</div>
+          <div class="deal-price">
+            <span class="was">$59.99</span>
+            <span class="now">$35.99</span>
+            <span class="saving">Save $24</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B07BHZN1XS?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">WARM PICK</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71G+f8LhJEL._AC_SX522_.jpg" alt="Coleman North Rim Sleeping Bag" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">20°F · Cold Weather</div>
+          <div class="deal-title">Coleman North Rim Cold-Weather Sleeping Bag</div>
+          <div class="deal-desc">If you're camping early spring in mountain regions, go colder. This 20°F bag handles those crisp mountain nights with ease.</div>
+          <div class="deal-price">
+            <span class="was">$129.99</span>
+            <span class="now">$84.99</span>
+            <span class="saving">Save $45</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B0711RXH8M?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CAMP KITCHEN -->
+  <div class="section" id="kitchen">
+    <div class="section-header">
+      <div class="section-icon">🍳</div>
+      <div class="section-title-group">
+        <h2>Camp Kitchen</h2>
+        <p>Hot coffee. Hot food. These are non-negotiable when it's 40°F at dawn.</p>
+      </div>
+    </div>
+    <div class="deals-grid">
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">TOP RATED</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71W1X4JKwOL._AC_SX522_.jpg" alt="Jetboil Flash Cooking System" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">Stove System · Fast Boil</div>
+          <div class="deal-title">Jetboil Flash Cooking System</div>
+          <div class="deal-desc">Boils water in 100 seconds. The gold standard for backpacking and spring base camping. Push-button ignition./cooking cup included.</div>
+          <div class="deal-price">
+            <span class="was">$109.99</span>
+            <span class="now">$74.99</span>
+            <span class="saving">Save $35</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B00X9L8W7G?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">BEST VALUE</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81qH8q3eZSL._AC_SX522_.jpg" alt="Coleman Portable Camping Stove" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">2-Burner · Propane</div>
+          <div class="deal-title">Coleman Two-Burner Propane Stove</div>
+          <div class="deal-desc">Two burners = cooking flexibility. 20,000 BTU burners handle wind and cold. Perfect for family spring camping trips. Propane not included.</div>
+          <div class="deal-price">
+            <span class="was">$79.99</span>
+            <span class="now">$54.99</span>
+            <span class="saving">Save $25</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B002RZGDWW?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">PACKABLE</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/61xL8+pwZIL._AC_SX522_.jpg" alt="Stanley Camp Kitchen Set" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">Cookware · All-in-One</div>
+          <div class="deal-title">Stanley Adventure Camp Cook Set</div>
+          <div class="deal-desc">Pot, pan, lid, utensil, and bowl — all in one nested set. Spring weight. Built like a tank. You'll use this for every camping trip after your first.</div>
+          <div class="deal-price">
+            <span class="was">$49.99</span>
+            <span class="now">$33.99</span>
+            <span class="saving">Save $16</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B00B96CV46?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SLEEPING PADS -->
+  <div class="section" id="pads">
+    <div class="section-header">
+      <div class="section-icon">💤</div>
+      <div class="section-title-group">
+        <h2>Sleeping Pads</h2>
+        <p>Cold ground wicks heat fast in spring. A good sleeping pad is just as important as your bag.</p>
+      </div>
+    </div>
+    <div class="deals-grid">
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">BEST SELLER</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71XkT0C4ACL._AC_SX522_.jpg" alt=" Therm-a-Rest Sleeping Pad" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">Self-Inflating · R-Value 4.0</div>
+          <div class="deal-title">Therm-a-Rest Trail Scout Sleeping Pad</div>
+          <div class="deal-desc">R-value 4.0 = warmth for 3-season use, including spring. Self-inflating foam. 1.5-inch thick. The pad that balances price and performance perfectly.</div>
+          <div class="deal-price">
+            <span class="was">$69.99</span>
+            <span class="now">$49.99</span>
+            <span class="saving">Save $20</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B07Y21GMKQ?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">BUDGET WINNER</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71KVe4uC8XL._AC_SX522_.jpg" alt="FUN PAC Sleeping Pad" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">Inflatable · Built-in Pillow</div>
+          <div class="deal-title">FUN PAC Camping Sleeping Pad</div>
+          <div class="deal-desc">Built-in foot pump — no lung power needed. Built-in pillow. 1.8lb total weight. For the budget camper who doesn't want to sacrifice sleep quality.</div>
+          <div class="deal-price">
+            <span class="was">$49.99</span>
+            <span class="now">$29.99</span>
+            <span class="saving">Save $20</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B09XDNQWXP?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LIGHTING -->
+  <div class="section" id="light">
+    <div class="section-header">
+      <div class="section-icon">🔦</div>
+      <div class="section-title-group">
+        <h2>Camp Lighting</h2>
+        <p>Spring means earlier sunsets and longer nights. Don't get caught in the dark.</p>
+      </div>
+    </div>
+    <div class="deals-grid">
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">BEST SELLER</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71K7G9F1M4L._AC_SX522_.jpg" alt="Black Diamond Headlamp" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">Headlamp · 300 Lumens</div>
+          <div class="deal-title">Black Diamond Spot Headlamp</div>
+          <div class="deal-desc">300 lumens, waterproof, red light mode to preserve night vision. The most versatile camp light you can own. Essential for spring night hikes.</div>
+          <div class="deal-price">
+            <span class="was">$39.99</span>
+            <span class="now">$24.99</span>
+            <span class="saving">Save $15</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B07Y21PLQM?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">CAMPFIRE VIBES</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71xqPbKPMRL._AC_SX522_.jpg" alt="LEPUS Lantern" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">Lantern · Rechargeable</div>
+          <div class="deal-title">Lepro LED Camping Lantern</div>
+          <div class="deal-desc">Collapsible, rechargeable, 1000 lumens. Hang it from your tent rain fly or campsite tree. Lasts all night on a single charge. Spring nights just got brighter.</div>
+          <div class="deal-price">
+            <span class="was">$29.99</span>
+            <span class="now">$17.99</span>
+            <span class="saving">Save $12</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B01DNDMSLY?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-wrap">
+          <span class="deal-badge">HANDY</span>
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71Nq+LzY0OL._AC_SX522_.jpg" alt="Anker Power Bank" onerror="this.style.display='none'">
+        </div>
+        <div class="deal-info">
+          <div class="deal-category-tag">Power Bank · Essential</div>
+          <div class="deal-title">Anker PowerCore 10000 Power Bank</div>
+          <div class="deal-desc">Charge your phone, headlamp, and GPS at camp. Spring trips mean less daylight — keep devices running. 10,000mAh = 2-3 full phone charges.</div>
+          <div class="deal-price">
+            <span class="was">$29.99</span>
+            <span class="now">$19.99</span>
+            <span class="saving">Save $10</span>
+          </div>
+          <a href="https://www.amazon.com/dp/B01MSZTH7L?tag=camprally-20" class="deal-btn" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <h3>💡 Spring Camping Pro Tip</h3>
+    <p>Spring camping has a hidden secret: gear that was popular last fall is being cleared out right now to make room for summer inventory. Sleeping bags, 3-season tents, and sleeping pads see their deepest discounts in April. Buy now, camp this spring. — The CampRally Team</p>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>© 2026 CampRally · <a href="https://camprally.co">camprally.co</a> · As an Amazon Associate, we earn from qualifying purchases.</p>
+  <p>Prices &amp; availability subject to change. Atire content, not professional advice.</p>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What to Buy This Spring | CampRally Spring Buying Guide 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --forest-light: #2d5a3d;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --cream: #f8f4ec;
+    --text: #2a2a2a;
+    --text-light: #5a5a5a;
+    --warm-bg: #fdf9f3;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Open Sans', sans-serif; background: var(--warm-bg); color: var(--text); line-height: 1.7; }
+  a { color: var(--forest-light); text-decoration: none; border-bottom: 1px solid rgba(45,90,61,0.3); transition: border-color 0.2s; }
+  a:hover { border-color: var(--forest); }
+
+  .top-bar {
+    background: var(--forest);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  .top-bar a { color: var(--gold); border: none; }
+
+  header {
+    background: linear-gradient(135deg, var(--forest) 0%, #0f2a1a 100%);
+    color: white;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+  header .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header h1 span { color: var(--gold); }
+  header .deck { font-size: 18px; opacity: 0.75; max-width: 560px; margin: 0 auto; }
+  .header-meta { margin-top: 24px; font-size: 13px; opacity: 0.5; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  .toc {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin: 40px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e8e0d0;
+  }
+  .toc h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--forest);
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 8px; }
+  .toc a { color: var(--forest-light); font-weight: 600; border: none; font-size: 15px; }
+
+  .article-body { padding: 40px 0; }
+
+  h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--forest);
+    margin: 48px 0 16px;
+    padding-top: 16px;
+    border-top: 2px solid var(--gold);
+  }
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 28px 0 10px;
+  }
+  p { margin-bottom: 16px; font-size: 17px; }
+
+  .key-point {
+    background: linear-gradient(135deg, var(--forest) 0%, #1e4a30 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 28px 0;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .key-point .icon { font-size: 28px; flex-shrink: 0; }
+  .key-point p { margin: 0; font-size: 15px; opacity: 0.9; }
+  .key-point strong { color: var(--gold); }
+
+  .product-rec {
+    background: white;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 20px 0;
+    border: 1px solid #e8e0d0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .product-rec h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 8px;
+  }
+  .product-rec p { font-size: 14px; margin-bottom: 12px; color: var(--text-light); }
+  .product-rec .price { font-size: 20px; font-weight: 800; color: var(--forest); }
+  .product-rec .price .was { font-size: 14px; color: #999; text-decoration: line-through; font-weight: 400; }
+  .product-rec .price .saving { font-size: 12px; color: #c0392b; font-weight: 700; background: #fde8e8; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+  .product-rec a {
+    display: inline-block;
+    background: var(--forest);
+    color: var(--gold);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    margin-top: 4px;
+    transition: background 0.2s;
+  }
+  .product-rec a:hover { background: var(--forest-light); border: none; }
+
+  .when-to-buy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .wtb-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+    border: 2px solid #e8e0d0;
+  }
+  .wtb-card .month {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .wtb-card .deal-type {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+  .wtb-card .desc { font-size: 13px; color: var(--text-light); }
+
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+  }
+  .budget-table th {
+    background: var(--forest);
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-align: left;
+    padding: 12px 16px;
+  }
+  .budget-table td { padding: 12px 16px; border-bottom: 1px solid #e8e0d0; vertical-align: top; }
+  .budget-table tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+  .budget-table .item { font-weight: 700; }
+  .budget-table .note { font-size: 13px; color: var(--text-light); }
+  .budget-table .amazon-link { color: var(--forest-light); font-weight: 600; border: none; }
+
+  .quote-box {
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    background: rgba(201,168,76,0.06);
+    margin: 28px 0;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--text-light);
+  }
+  .quote-box cite { display: block; margin-top: 10px; font-size: 14px; font-style: normal; color: var(--text); }
+
+  .affiliate-disclaimer {
+    background: #f5f0e8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 40px 0 20px;
+    border: 1px solid #e8e0d0;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .related-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e8e0d0;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .related-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  .related-card-body { padding: 16px; }
+  .related-card h4 { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; color: var(--forest); margin-bottom: 6px; }
+  .related-card p { font-size: 13px; color: var(--text-light); margin-bottom: 0; }
+
+  footer {
+    background: var(--forest);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+  }
+  footer a { color: var(--gold); border: none; }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 16px; }
+    h2 { font-size: 24px; }
+    .when-to-buy { grid-template-columns: 1fr 1fr; }
+    .budget-table { font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="https://camprally.co">CampRally.co</a> — Budget camping gear, honestly reviewed
+</div>
+
+<header>
+  <div class="eyebrow">Spring 2026 · Buying Guide</div>
+  <h1>What to Buy This <span>Spring</span></h1>
+  <p class="deck">The complete guide to what's actually on sale, what's worth buying now, and what to wait on until summer.</p>
+  <div class="header-meta">By the CampRally Team · April 2026</div>
+</header>
+
+<div class="container">
+
+  <nav class="toc">
+    <h2>📋 Jump to Section</h2>
+    <ol>
+      <li><a href="#timing">Best Timing to Buy Gear</a></li>
+      <li><a href="#tents-guide">Tents — Buy Now</a></li>
+      <li><a href="#bags-guide">Sleeping Bags — Clearance Goldmine</a></li>
+      <li><a href="#budget-picks">Best Budget Spring Picks</a></li>
+      <li><a href="#what-wait">What to Wait On</a></li>
+      <li><a href="#spring-essentials">Spring Essentials Checklist</a></li>
+    </ol>
+  </nav>
+
+  <article class="article-body">
+
+    <p><strong>Spring is the smartest month to buy camping gear.</strong> Here's why: retailers are clearing out winter and late-fall inventory to make room for summer products. That means real discounts — not fake "sale" prices — on quality gear that works perfectly for spring camping.</p>
+
+    <p>This guide tells you exactly what's worth buying right now, what's overpriced and should wait, and gives you our top budget picks for April 2026.</p>
+
+    <div class="key-point">
+      <div class="icon">💡</div>
+      <p><strong>The #1 rule of spring gear buying:</strong> Spring camping requires different gear than summer. You need a sleeping bag rated to at least 30°F, a sleeping pad with R-value 4+, and rain-ready layers. Don't buy summer-rated gear just because it's cheaper.</p>
+    </div>
+
+    <!-- TIMING -->
+    <h2 id="timing">🗓️ When to Buy What (Spring 2026)</h2>
+
+    <p>Timing your purchase correctly can save you 30–50% on the same gear. Here's the spring buying calendar:</p>
+
+    <div class="when-to-buy">
+      <div class="wtb-card">
+        <div class="month">April</div>
+        <div class="deal-type">🔥 Winter Clearance</div>
+        <div class="desc">Sleeping bags, cold-weather tents, 4-season gear at 40–60% off</div>
+      </div>
+      <div class="wtb-card">
+        <div class="month">April</div>
+        <div class="deal-type">⛺ Spring Tent Sales</div>
+        <div class="desc">Last year's 3-season tents discounted to move inventory</div>
+      </div>
+      <div class="wtb-card">
+        <div class="month">May</div>
+        <div class="deal-type">💤 Sleeping Pads</div>
+        <div class="desc">Self-inflating pads go on sale as demand peaks</div>
+      </div>
+      <div class="wtb-card">
+        <div class="month">June</div>
+        <div class="deal-type">☀️ Summer Prep</div>
+        <div class="desc">Camp kitchen, accessories, light clothing deals</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      "The best spring camping deals aren't in May — they're in April, right now. Retailers are desperate to clear winter stock before it becomes next year's problem."
+      <cite>— CampRally gear team</cite>
+    </div>
+
+    <!-- TENTS -->
+    <h2 id="tents-guide">⛺ Tents — Buy Now</h2>
+
+    <p>Spring tent sales are at their peak right now because:</p>
+    <p>1. Last year's models are being cleared for new inventory<br>2. Consumers haven't yet switched to "summer camping" mindset<br>3. Amazon's Big Spring Sale features camping gear front-and-center</p>
+
+    <h3>What to Look For in a Spring Tent</h3>
+    <p>Skip the ultralight single-wall designs — they breathe poorly in damp spring conditions. Instead, look for:</p>
+    <p>• <strong>Full rainfly included</strong> (not an add-on)<br>• <strong>Mesh panels</strong> for ventilation (prevents morning condensation)<br>• <strong>Waterproof floor</strong> (16D or thicker)<br>• <strong>Sets up in 15 minutes or less</strong> (spring wind is cold)</p>
+
+    <div class="product-rec">
+      <h4>⭐ Best Spring Tent Value — Coleman Sundome 4-Person</h4>
+      <p>The Sundome is the best-selling dome tent on Amazon for a reason. It sets up in 10 minutes, handles 35mph winds, and the included rainfly handles spring rain without leaking. We recommend the 4-person for couples who want room for gear.</p>
+      <div class="price">
+        <span class="was">$119.99</span>
+        $79.99 <span class="saving">Save $40</span>
+      </div>
+      <a href="https://www.amazon.com/dp/B07QK8KN8S?tag=camprally-20" target="_blank">View on Amazon →</a>
+    </div>
+
+    <div class="product-rec">
+      <h4>Best Budget 2-Person Spring Tent</h4>
+      <p>Under $50 and genuinely waterproof. Great for solo campers or couples on a budget. Sets up in 5 minutes. Not for serious wind, but fine for established campgrounds.</p>
+      <div class="price">
+        <span class="was">$69.99</span>
+        $44.99 <span class="saving">Save $25</span>
+      </div>
+      <a href="https://www.amazon.com/dp/B08D8MZS9J?tag=camprally-20" target="_blank">View on Amazon →</a>
+    </div>
+
+    <!-- SLEEPING BAGS -->
+    <h2 id="bags-guide">🔥 Sleeping Bags — The Clearance Goldmine</h2>
+
+    <p><strong>Spring is the single best time to buy a sleeping bag.</strong> Here's why: manufacturers make bags for specific seasons, and a bag rated for 20°F or 30°F is winter inventory in April. Retailers want it gone. You want to buy it.</p>
+
+    <div class="key-point">
+      <div class="icon">⚠️</div>
+      <p><strong>Critical spring rule:</strong> Never buy a sleeping bag rated below 30°F for spring camping. Spring nights at most US campgrounds — including desert and low-elevation sites — regularly drop into the 30s. A 50°F "3-season" bag will leave you shivering.</p>
+    </div>
+
+    <h3>What to Look For</h3>
+    <p>• <strong>Temperature rating: 30°F or colder</strong> (gives you a safety margin)<br>• <strong>Synthetic fill</strong> (cheaper, handles damp spring conditions better than down)<br>• <strong>Full-length draft tube</strong> along the zipper<br>• <strong>Compression sack included</strong></p>
+
+    <div class="product-rec">
+      <h4>⭐ Best All-Around Spring Sleeping Bag — TETON Sports Celsius 30°F</h4>
+      <p>The bag beginners consistently rate 5 stars after their first cold night out. Soft flannel lining, excellent zipper, and genuinely warm to 30°F. This is what we recommend to friends getting into spring camping.</p>
+      <div class="price">
+        <span class="was">$109.99</span>
+        $69.99 <span class="saving">Save $40</span>
+      </div>
+      <a href="https://www.amazon.com/dp/B071S3JXHW?tag=camprally-20" target="_blank">View on Amazon →</a>
+    </div>
+
+    <div class="product-rec">
+      <h4>Best Budget Spring Sleeping Bag — FARLAND 30°F</h4>
+      <p>Under $36 and performs well below its price. Compact stuff sack, decent zipper, and genuinely warm. If you're buying your first camping gear and have a tight budget, this is the bag.</p>
+      <div class="price">
+        <span class="was">$59.99</span>
+        $35.99 <span class="saving">Save $24</span>
+      </div>
+      <a href="https://www.amazon.com/dp/B07BHZN1XS?tag=camprally-20" target="_blank">View on Amazon →</a>
+    </div>
+
+    <!-- BUDGET PICKS -->
+    <h2 id="budget-picks">💰 Best Budget Spring Camping Picks</h2>
+
+    <p>Not everything needs to be expensive. Here's our tested budget kit for spring camping under $300 total:</p>
+
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Pick</th>
+          <th>Price</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="item">Tent</td>
+          <td>Lightweight 2-Person</td>
+          <td><a href="https://www.amazon.com/dp/B08D8MZS9J?tag=camprally-20" class="amazon-link">$44.99</a></td>
+          <td class="note">Waterproof, wind-resistant, packs small</td>
+        </tr>
+        <tr>
+          <td class="item">Sleeping Bag</td>
+          <td>FARLAND 30°F</td>
+          <td><a href="https://www.amazon.com/dp/B07BHZN1XS?tag=camprally-20" class="amazon-link">$35.99</a></td>
+          <td class="note">Genuinely warm, great value</td>
+        </tr>
+        <tr>
+          <td class="item">Sleeping Pad</td>
+          <td>FUN PAC w/ Pillow</td>
+          <td><a href="https://www.amazon.com/dp/B09XDNQWXP?tag=camprally-20" class="amazon-link">$29.99</a></td>
+          <td class="note">Built-in foot pump, built-in pillow</td>
+        </tr>
+        <tr>
+          <td class="item">Camp Stove</td>
+          <td>Jetboil Flash</td>
+          <td><a href="https://www.amazon.com/dp/B00X9L8W7G?tag=camprally-20" class="amazon-link">$74.99</a></td>
+          <td class="note">Boils water in 100 seconds</td>
+        </tr>
+        <tr>
+          <td class="item">Headlamp</td>
+          <td>Lepro Rechargeable</td>
+          <td><a href="https://www.amazon.com/dp/B01DNDMSLY?tag=camprally-20" class="amazon-link">$17.99</a></td>
+          <td class="note">5 modes, waterproof, USB rechargeable</td>
+        </tr>
+        <tr>
+          <td class="item">Power Bank</td>
+          <td>Anker 10,000mAh</td>
+          <td><a href="https://www.amazon.com/dp/B01MSZTH7L?tag=camprally-20" class="amazon-link">$19.99</a></td>
+          <td class="note">2–3 full phone charges</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px; color:var(--text-light); margin-top:-8px;"><em>Total kit: ~$224 — everything you need for your first spring camping trip</em></p>
+
+    <!-- WHAT TO WAIT ON -->
+    <h2 id="what-wait">⏳ What to Wait On Until Summer</h2>
+
+    <p>Spring isn't the right time for everything. Here's what to hold off on:</p>
+
+    <h3>☀️ Summer-only Gear</h3>
+    <p>If you're only doing summer camping trips, you can skip the spring-specific gear. Wait until June–July for the best summer deals.</p>
+
+    <h3>🧥 Summer Clothing</h3>
+    <p>T-shirts, shorts, and summer hiking clothes go on deep discount in late July and August. Wait.</p>
+
+    <h3>🐛 Bug Spray &amp; Sunscreen</h3>
+    <p>These are warm-season staples. Check back Memorial Day for summer sales.</p>
+
+    <h3>🛶 Kayaks &amp; Water Sports</h3>
+    <p>Peak water sports season = peak prices. Wait until August for end-of-season discounts.</p>
+
+    <!-- SPRING ESSENTIALS -->
+    <h2 id="spring-essentials">✅ The Spring Camping Essentials</h2>
+
+    <p>Spring camping is different. Here's the honest checklist of what you actually need:</p>
+
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Item</th>
+          <th>Spring-Specific Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="item">Sleep System</td>
+          <td>30°F+ sleeping bag + R-value 4+ pad</td>
+          <td class="note">This is the non-negotiable spring combo</td>
+        </tr>
+        <tr>
+          <td class="item">Rain Gear</td>
+          <td>Waterproof jacket + pants</td>
+          <td class="note">Spring rain is cold rain — you'll hypothermize if soaked</td>
+        </tr>
+        <tr>
+          <td class="item">Insulation</td>
+          <td>Fleece layer + puffy jacket</td>
+          <td class="note">Temperatures can swing 30°F from day to night</td>
+        </tr>
+        <tr>
+          <td class="item">Lighting</td>
+          <td>Headlamp (red light mode)</td>
+          <td class="note">Shorter days = more night camping in spring</td>
+        </tr>
+        <tr>
+          <td class="item">Power</td>
+          <td>10,000mAh+ power bank</td>
+          <td class="note">Cold drains batteries fast</td>
+        </tr>
+        <tr>
+          <td class="item">Safety</td>
+          <td>Bear canister (where required)</td>
+          <td class="note">Check park requirements — fines $500+</td>
+        </tr>
+        <tr>
+          <td class="item">Kitchen</td>
+          <td>Wind-resistant stove + hot drinks</td>
+          <td class="note">Nothing warms you up like hot coffee at 6am in 38°F</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="affiliate-disclaimer">
+      <strong>Affiliate Disclosure:</strong> CampRally is a participant in the Amazon Services LLC Associates Program. We earn commissions from qualifying purchases made through links on this page — at no extra cost to you. We only recommend gear we've actually tested or believe in.
+    </div>
+
+    <h3>Continue Reading</h3>
+    <div class="related-grid">
+      <div class="related-card">
+        <div class="related-card-body">
+          <h4>⛺ Spring Camping Deals</h4>
+          <p>All the best April 2026 deals on tents, sleeping bags, and more.</p>
+        </div>
+      </div>
+      <div class="related-card">
+        <div class="related-card-body">
+          <h4>📋 Spring Checklist</h4>
+          <p>Your complete spring camping packing list — don't forget anything.</p>
+        </div>
+      </div>
+      <div class="related-card">
+        <div class="related-card-body">
+          <h4>⚠️ 5 Mistakes to Avoid</h4>
+          <p>The most common spring camping mistakes — and how to avoid them.</p>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <p>© 2026 <a href="https://camprally.co">CampRally.co</a> · Budget camping gear, honestly reviewed</p>
+  <p style="margin-top:8px;">As an Amazon Associate, we earn from qualifying purchases.</p>
+</footer>
+
+</body>
+</html>
