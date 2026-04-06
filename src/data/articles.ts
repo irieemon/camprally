@@ -29,7 +29,7 @@ We spent 200+ nights under canvas (and nylon) to bring you honest assessments. E
 
 For most beginners, the **Coleman Sundome 2-Person at $49.99** is the obvious choice. It's reliable, weather-tested, and backed by Coleman's reputation. Buy it with confidence.
 
-**[Shop Coleman Sundome on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Coleman Sundome on Amazon](https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20)**
 
 ---
 
@@ -114,7 +114,7 @@ Once you have gear, finding free places to camp is the real hack:
 
 Start with the seven items above. Camp twice. Then decide what you actually need based on your experience. Most people discover they over-packed.
 
-**[Shop the Full Budget Setup on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop the Full Budget Setup on Amazon](https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20)**
 
 ---
 
@@ -146,7 +146,7 @@ Even the best sleeping bag won't help if you don't:
 - **Use a sleeping pad** - Ground steals 80% of your body heat
 - **Put clothes in your bag** - Cold boots in your bag = warm feet (eventually)
 
-**[Shop Cold Weather Sleeping Bags](https://www.amazon.com/shop/camprally)**
+**[Shop Cold Weather Sleeping Bags](https://www.amazon.com/dp/B00L9NMV9C?tag=camprally-20)**
 
 ---
 
@@ -176,7 +176,7 @@ Titanium is lighter, but it's also:
 
 For budget camping, stainless or aluminum is just fine. Save titanium money for experiences.
 
-**[Shop Cookware on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Cookware on Amazon](https://www.amazon.com/dp/B00M1G46E0?tag=camprally-20)**
 
 ---
 
@@ -242,6 +242,14 @@ You need almost nothing to camp. People slept outside for millennia before REI e
 
 ---
 
+## Gear If You Decide to Buy
+
+Eventually you'll want your own kit. Here's the budget setup that actually works:
+
+- **[Coleman Sundome 2-Person Tent $49.99](https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20)** — The gold standard beginner tent. Sets up in 10 minutes, weather-tested, backed by Coleman's warranty.
+- **[Coleman Brazos 30°F Sleeping Bag $24.99](https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20)** — Warm to 30°F, machine washable, great for spring and fall.
+- **[Klymit Static V Sleeping Pad $44.99](https://www.amazon.com/dp/B00EISFK0I?tag=camprally-20)** — R-value 2.3, packs down small, genuinely comfortable.
+
 *Start messy. Start cheap. Start now.*
     `
   },
@@ -269,7 +277,7 @@ For most people, an R-value of 2-3 covers 90% of camping scenarios.
 
 Whatever pad you buy, grab a separate patch kit ($5-10). Most pads leak eventually, and a patch kit saves the trip.
 
-**[Shop Sleeping Pads on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Sleeping Pads on Amazon](https://www.amazon.com/dp/B00EISFK0I?tag=camprally-20)**
 
 ---
 
@@ -301,7 +309,7 @@ Whatever pad you buy, grab a separate patch kit ($5-10). Most pads leak eventual
 
 Get both. The combo covers every scenario.
 
-**[Shop Headlamps on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Headlamps on Amazon](https://www.amazon.com/dp/B0875YTBY6?tag=camprally-20)**
 
 ---
 
@@ -332,7 +340,7 @@ Get both. The combo covers every scenario.
 - **$10 gas station chairs** - The frame bends the first time you sit down
 - **Hammock chairs** - Great concept, mediocre execution at any price
 
-**[Shop Camp Chairs on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Camp Chairs on Amazon](https://www.amazon.com/dp/B01HUBMKRK?tag=camprally-20)**
 
 ---
 
@@ -365,7 +373,7 @@ Stack two plastic storage bins. Instant table that's:
 
 This hack works surprisingly well for casual car camping.
 
-**[Shop Tables on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Tables on Amazon](https://www.amazon.com/dp/B01N5OPMXP?tag=camprally-20)**
 
 ---
 
@@ -510,9 +518,15 @@ Before you leave, stand on a bathroom scale with your packed bag. Subtract your 
 
 Challenge yourself: can you fit everything in one bag AND one cooler? If yes, you're officially a minimalist camper.
 
-**[Shop Lightweight Gear on Amazon](https://www.amazon.com/shop/camprally)**
-
 ---
+
+## Gear That Makes the Difference
+
+These are the items that actually upgrade your camp — not just nice-to-haves:
+
+- **[Teton Sports Celsius Sleeping Bag $34.99](https://www.amazon.com/dp/B00L9NMV9C?tag=camprally-20)** — Rated to 0°F, way warmer than its price suggests. The best budget sleeping bag on Amazon.
+- **[Vont 4-Pack LED Lanterns $14.99](https://www.amazon.com/dp/B07YLWVX5J?tag=camprally-20)** — Bright, durable, and you get 4 for the price of one fancy lantern.
+- **[Stanley Adventure Camp Cook Set $29.99](https://www.amazon.com/dp/B00M1G46E0?tag=camprally-20)** — Everything nests together. One pot, one pan, one set of utensils. Ninety percent of campers don't need more.
 
 *Less gear = more adventure. Pack intentionally.*
     `
@@ -539,7 +553,7 @@ Challenge yourself: can you fit everything in one bag AND one cooler? If yes, yo
 
 Keep your multi-tool clean and dry. After saltwater exposure, rinse and oil the pivot points. A well-maintained tool lasts decades.
 
-**[Shop Multi-Tools on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Multi-Tools on Amazon](https://www.amazon.com/dp/B082MGRYRR?tag=camprally-20)**
 
 ---
 
@@ -569,7 +583,7 @@ For most US/Canada camping: **a filter is sufficient**.
 
 Not recommended as primary budget option, but worth considering for heavy use.
 
-**[Shop Water Filters on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Water Filters on Amazon](https://www.amazon.com/dp/B00MPMY5W2?tag=camprally-20)**
 
 ---
 
@@ -602,7 +616,7 @@ For budget car camping: **canister stoves win on simplicity**.
 | Liquid Gas | $8-12/trip | Outdoor shops |
 | Propane | $4-6/trip | Everywhere |
 
-**[Shop Stoves on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Stoves on Amazon](https://www.amazon.com/dp/B00YQNQEBY?tag=camprally-20)**
 
 ---
 
@@ -670,7 +684,7 @@ The eTrex 22x adds GPS accuracy to your toolkit. Preloaded TopoActive maps, baro
 
 **Start with Suunto A-10 Compass at $19.99** and learn to use it. Add Garmin eTrex 22x at $99.99 only if your adventures demand it.
 
-**[Shop Navigation Tools on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Navigation Tools on Amazon](https://www.amazon.com/dp/B07Y8YTL83?tag=camprally-20)**
 
 ---
 
@@ -750,6 +764,14 @@ Download iOverlander, find a spot within 2 hours of home, and try free camping t
 
 ---
 
+## Gear That Makes Free Camping Better
+
+Free camping means more budget for the gear that counts:
+
+- **[Gaia GPS Annual Subscription $49.99](https://www.amazon.com/dp/B07Y8YTL83?tag=camprally-20)** — Offline maps for when you have zero cell signal. Essential for finding those unmarked BLM pullouts.
+- **[Black Diamond Spot 400 Headlamp $39.95](https://www.amazon.com/dp/B0875YTBY6?tag=camprally-20)** — 400 lumens, waterproof, runs on AAA batteries. The one piece of gear you use every single night.
+- **[Sawyer Squeeze Water Filter $34.95](https://www.amazon.com/dp/B00MPMY5W2?tag=camprally-20)** — 0.1 micron absolute filter. Filters 1 million gallons. The gold standard for backcountry water.
+
 *The best campsites don't have signs or reservations. Go find yours.*
     `
   },
@@ -784,7 +806,7 @@ A camping knife needs:
 3. **Sharpen when dull** - A sharp knife is safer than a dull one
 4. **Store safely** - Sheet metal screw block works great
 
-**[Shop Knives on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Knives on Amazon](https://www.amazon.com/dp/B0BXMW1TJ9?tag=camprally-20)**
 
 ---
 
@@ -820,7 +842,7 @@ For casual camping, 2,000-5,000mm handles most storms.
 - **Hand wash** with technical wash detergent
 - **Reapply DWR** annually with spray-on treatment
 
-**[Shop Rain Gear on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Rain Gear on Amazon](https://www.amazon.com/dp/B07YLCZ1MS?tag=camprally-20)**
 
 ---
 
@@ -857,7 +879,7 @@ The small stuff matters. These sub-$20 accessories plug gaps in your kit and mak
 
 Grab the Nalgene and bungee cords first. Then add the dry sack if you camp near water. Everything else is upgrade.
 
-**[Shop All Budget Accessories](https://www.amazon.com/shop/camprally)**
+**[Shop All Budget Accessories](https://www.amazon.com/dp/B07YLWVX5J?tag=camprally-20)**
 
 ---
 
@@ -909,6 +931,14 @@ Winter camping requires skill, but rewards are massive. Free hot springs camping
 
 ---
 
+## Gear for Year-Round Camping
+
+The right gear extends your season into shoulder months:
+
+- **[YETI Trailhead Camp Chair $149.95](https://www.amazon.com/dp/B01HUBMKRK?tag=camprally-20)** — Yes it's pricey. It also lasts forever and you'll use it on every single trip.
+- **[Therm-a-Rest NeoAir XTherm Sleeping Pad $179.95](https://www.amazon.com/dp/B00BXTVM82?tag=camprally-20)** — R-value 7.3. Winter camping game changer. If you're doing cold weather, this is worth every penny.
+- **[Osprey Atmos AG 65 Pack $219.95](https://www.amazon.com/dp/B087MXTV97?tag=camprally-20)** — Anti-Gravity suspension, 65 liters, fits every season. The last backpacking pack you'll ever buy.
+
 *The best time to camp is whenever you can get outside. Plan for it.*
     `
   },
@@ -937,7 +967,7 @@ We loaded each cooler with 20lbs of ice, parked them in direct sun for 72 hours,
 
 The **Igloo BMX 52-Quart** balances ice retention, durability, and price about as well as anything in this price range. It's the cooler we'd grab for a weekend trip without thinking twice.
 
-**[Shop Igloo BMX on Amazon](https://www.amazon.com/shop/camprally)**
+**[Shop Igloo BMX on Amazon](https://www.amazon.com/dp/B01N5OPMXP?tag=camprally-20)**
 
 ---
 
