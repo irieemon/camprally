@@ -1,6 +1,51 @@
 {
   "queue": [
     {
+      "slug": "memorial-day-camping-checklist-2026",
+      "title": "Memorial Day Camping Checklist 2026 — Your First Trip of the Season",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": ["memorial day camping checklist", "camping checklist", "first camping trip of the season", "camping gear checklist"],
+      "heroKeyword": "camping checklist",
+      "notes": "MEMORIAL DAY: publish May 19-22. Season opener, strong search spike every May. 27 items. Affiliate: cooler, first aid kit, lantern."
+    },
+    {
+      "slug": "how-to-camp-in-hot-weather",
+      "title": "How to Camp in Hot Weather Without Melting — Fan, Hydration, and Shade Strategies",
+      "category": "Tips",
+      "priority": "high",
+      "keywords": ["camping in hot weather", "how to stay cool camping", "hot weather camping tips", "camping fan"],
+      "heroKeyword": "camping in hot weather",
+      "notes": "MEMORIAL DAY: publish May 19-22. Memorial Day weekend often hits 80-90°F. Portable fans, hydration, tarps. Affiliate: O2COOL fan ($15-20), hydration packs."
+    },
+    {
+      "slug": "camping-bug-tick-prevention-spring",
+      "title": "Camping Bug + Tick Prevention for Spring — Permethrin, DEET, and What Actually Works",
+      "category": "Safety",
+      "priority": "medium",
+      "keywords": ["camping tick prevention", "best DEET repellent camping", "permethrin clothing treatment camping", "spring camping bugs"],
+      "heroKeyword": "camping tick prevention",
+      "notes": "MEMORIAL DAY: publish May 12-15 (early). Tick season peaks May-July. Products: Sawyer Permethrin, DEET spray, treated socks. Under $30 affiliate items."
+    },
+    {
+      "slug": "best-portable-camping-fans-under-50",
+      "title": "Best Portable Camping Fans Under $50 — Battery Powered and USB Rechargeable",
+      "category": "Gear",
+      "priority": "medium",
+      "keywords": ["best camping fan", "portable camping fan battery powered", "camping fan USB rechargeable", "best battery operated fan for camping"],
+      "heroKeyword": "camping fan",
+      "notes": "MEMORIAL DAY: publish May 12-15. Products: O2COOL ($15-20), Lasko ($20-30), battery-powered. High volume, all under $50."
+    },
+    {
+      "slug": "best-camping-chairs-tailgating",
+      "title": "Best Camping Chairs Under $50 for Tailgating and Campfires",
+      "category": "Gear",
+      "priority": "medium",
+      "keywords": ["best camping chair", "camping chairs under 50", "camping chair lightweight", "portable camping chair"],
+      "heroKeyword": "camping chair",
+      "notes": "MEMORIAL DAY: publish May 19-22. Camping + tailgating combo. Broad appeal. ALPS King, Coleman, Kijaro. Good affiliate commission."
+    },
+    {
       "slug": "best-camping-first-aid-kits-under-50",
       "title": "Best Camping First Aid Kits Under $50 — Be Prepared Without Overpaying",
       "category": "Safety",
