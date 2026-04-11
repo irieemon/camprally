@@ -760,8 +760,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Adventure Medical Kits UltraLite .5",
-        price: "$34.99",
-        rating: "4.6/5",
+        price: "$31.95",
+        rating: "4.8/5",
         why: "Best organized budget kit. 1.1 lbs, real medical supplies, inner organizer keeps everything in place. Handles the 80% of injuries that actually happen.",
         category: "Our Top Pick"
       }
