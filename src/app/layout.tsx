@@ -55,6 +55,11 @@ export default function RootLayout({
             gtag('config', 'G-MQWSB6RTKJ');
           `}
         </Script>
+        {/* AVANTLINK AFFILIATE APPLICATION VERIFICATION — DELETE AFTER APPROVAL */}
+        <Script
+          src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=20d071dee7649107b0746ce9716f6da2575dd4de"
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   );
