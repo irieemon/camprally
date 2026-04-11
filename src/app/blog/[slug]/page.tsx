@@ -832,6 +832,7 @@ const PRODUCT_LINKS: Record<string, string> = {
   "Sea to Summit":     "https://www.amazon.com/dp/B002OYGZZ4?tag=camprally-20",
   "Coghlan":           "https://www.amazon.com/dp/B0000AQLYP?tag=camprally-20",
   "Jetboil":           "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20",
+  "Adventure Medical Kits UltraLite .5": "https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20",
 };
 
 function getProductLink(productName: string): string {
