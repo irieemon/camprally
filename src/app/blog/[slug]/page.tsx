@@ -833,6 +833,9 @@ const PRODUCT_LINKS: Record<string, string> = {
   "Coghlan":           "https://www.amazon.com/dp/B0000AQLYP?tag=camprally-20",
   "Jetboil":           "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20",
   "Adventure Medical Kits UltraLite .5": "https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20",
+  "Adventure Medical Kits UltraLite .7": "https://www.amazon.com/dp/B0DV6NTJBK?tag=camprally-20",
+  "Coleman 150-Piece First Aid Kit":   "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20",
+  "Spenco":                           "https://www.amazon.com/dp/B0012YMEUW?tag=camprally-20",
 };
 
 function getProductLink(productName: string): string {
