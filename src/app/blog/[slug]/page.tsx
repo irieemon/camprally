@@ -751,6 +751,35 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       ]
     },
   ],
+
+  "best-camping-first-aid-kits-under-50": [
+    {
+      type: "spotlight",
+      spotlightItem: {
+        name: "Adventure Medical Kits UltraLite .5",
+        price: "$34.99",
+        rating: "4.6/5",
+        why: "Best organized budget kit. 1.1 lbs, real medical supplies, inner organizer keeps everything in place. Handles the 80% of injuries that actually happen.",
+        category: "Our Top Pick"
+      }
+    },
+    {
+      type: "callout",
+      calloutType: "tip",
+      calloutTitle: "Don't Forget the Moleskin",
+      calloutBody: "Almost no kit includes enough moleskin. Buy a separate sheet of 9-12 pre-cut 2x2 squares. Apply at the first hot spot — not after the blister forms. This alone saves more trips than any medication."
+    },
+    {
+      type: "product-grid",
+      title: "The Three Kits Under $50",
+      subtitle: "Pick based on how you camp.",
+      items: [
+        { label: "Adventure Medical Kits UltraLite .5", detail: "$34.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20" },
+        { label: "Coleman 150-Piece First Aid Kit", detail: "$19.99", note: "4.4★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20" },
+        { label: "MyMedic MyFAK Lite", detail: "$44.99", note: "4.5★", category: "Premium Pick", icon: "⭐", link: "https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20" },
+      ]
+    },
+  ],
 };
 
 // ─────────────────────────────────────────
