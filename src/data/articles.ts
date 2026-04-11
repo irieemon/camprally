@@ -1017,7 +1017,7 @@ Before we get to the products, let's talk about what you're actually buying. A f
 ## The Kits That Actually Work
 
 ### Best Overall: Adventure Medical Kits UltraLite .5
-**$34.99 | Rating: 4.6★**
+**$31.95 | Rating: 4.8★**
 
 This is the kit we grab for weekend car camping. It weighs just 1.1 lbs and has the best organized interior of any budget kit we've tested. The layout matters — when you're trying to find supplies fast, a disorganized kit is worse than no kit.
 
@@ -1025,36 +1025,33 @@ This is the kit we grab for weekend car camping. It weighs just 1.1 lbs and has 
 What you get: wound care, blister treatment, medications, and a CPR face shield. The only gap is SAM splint material, which most casual campers don't need anyway.
 
 
-**[Buy Adventure Medical Kits UltraLite on Amazon](https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20)**
+**[Buy Adventure Medical Kits UltraLite .5 on Amazon](https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20)**
 
 ### Best Value: Coleman 150-Piece First Aid Kit
-**$19.99 | Rating: 4.4★**
+**$9.99 | Rating: 4.8★**
 
-At under $20, this is the kit you buy and then immediately upgrade 2-3 items. The stock bandages are cheap, but the container is solid and the volume of supplies means you can build a proper kit around it.
+At under $10, this is the kit you buy and then immediately upgrade 2-3 items. The stock bandages are cheap, but the container is solid and the volume of supplies means you can build a proper kit around it.
 
-Pull out the low-quality items, add better butterfly closures and some ibuprofen, and you have a legitimate kit for under $25.
+Pull out the low-quality items, add better butterfly closures and some ibuprofen, and you have a legitimate kit for under $15.
 
-**[Buy Coleman 150-Piece Kit on Amazon](https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20)**
+**[Buy Coleman 150-Piece Kit on Amazon](https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20)**
 
-### Best Premium: MyMedic MyFAK Lite
-**$44.99 | Rating: 4.5★**
+### Best for Groups: Adventure Medical Kits UltraLite .7
+**$44.95 | Rating: 4.7★**
 
+For small groups or longer trips, the UltraLite .7 steps up to a 3-person, 3-day kit. Same quality as the .5 but with more supplies — still compact enough for a weekend pack.
 
-For car camping where weight isn't a factor, the MyFAK Lite is the upgrade worth making. Better quality supplies, more durable container, and a layout that's easy to restock over time.
-
-The inner organizer is the real feature here — supplies stay in place and you can find what you need by feel in the dark.
-
-**[Buy MyMedic MyFAK Lite on Amazon](https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20)**
+**[Buy Adventure Medical Kits UltraLite .7 on Amazon](https://www.amazon.com/dp/B0DV6NTJBK?tag=camprally-20)**
 
 ## The One Item Most Kits Forget
 
 **Moleskin.** Almost no budget kit includes enough moleskin to actually treat a blister. Carry a separate sheet of 9-12 pieces cut into 2x2 squares. Apply at the first hot spot — not after the blister forms. This alone will save more trips than any medication.
 
-**[Buy Moleskin Sheets on Amazon](https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20)**
+**[Buy Moleskin Sheets on Amazon](https://www.amazon.com/dp/B0012YMEUW?tag=camprally-20)**
 
 ## Our Recommendation
 
-For most campers, the **Adventure Medical Kits UltraLite at $34.99** is the sweet spot. It's light enough for trail use, organized enough to actually use under stress, and has real medical quality supplies instead of the junk grade bandages that come in gas station kits.
+For most campers, the **Adventure Medical Kits UltraLite .5 at $31.95** is the sweet spot. It's light enough for trail use, organized enough to actually use under stress, and has real medical quality supplies instead of the junk grade bandages that come in gas station kits.
 
 Buy it, add a sheet of moleskin, and you're set for any car camping trip or shorter backpacking weekend.
 
