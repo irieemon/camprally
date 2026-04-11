@@ -1096,6 +1096,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${article.title} | CampRally`,
     description: article.excerpt,
+    alternates: {
+      canonical: `https://camprally.co/blog/${article.slug}`,
+    },
   };
 }
 
