@@ -43,7 +43,7 @@ const HERO_IMAGES: Record<string, string> = {
   "budget-camping-accessories-under-20":  "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1200&q=80",
   "best-time-year-camp-free":             "https://images.unsplash.com/photo-1445308394109-4ec2920981b1?w=1200&q=80",
   "best-camping-coolers-under-100":      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80",
-  "best-camping-first-aid-kits-under-50": "https://images.unsplash.com/photo-1576671414121-aa2d96d9e6e3?w=1200&q=80",
+  "best-camping-first-aid-kits-under-50": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1200&q=80",
   default: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80",
 };
 
@@ -60,6 +60,9 @@ const PRODUCT_IMAGES: Record<string, string> = {
   "Nalgene":           "https://m.media-amazon.com/images/I/71+6fBZY8hL._AC_SX500_.jpg",
   "Sawyer Squeeze":    "https://m.media-amazon.com/images/I/71PlK2Jo5uL._SX385_.jpg",
   "Sawyer":           "https://m.media-amazon.com/images/I/71PlK2Jo5uL._SX385_.jpg",
+  "Adventure Medical Kits UltraLite .5": "https://m.media-amazon.com/images/I/81Tk3JSPj0L._AC_SX425_.jpg",
+  "Coleman 150-Piece First Aid Kit":   "https://m.media-amazon.com/images/I/51ka5kDixML._AC_SX425_.jpg",
+  "Adventure Medical Kits UltraLite .7": "https://m.media-amazon.com/images/I/81Tk3JSPj0L._AC_SX425_.jpg",
   "LifeStraw":         "https://m.media-amazon.com/images/I/51OPsnwrAlL._AC_SX522_.jpg",
   "Trekology":         "https://m.media-amazon.com/images/I/61eyQ-3nd6L._AC_SX569_.jpg",
   "KingCamp":          "https://m.media-amazon.com/images/I/71m2gpEVqOL._AC_SX500_.jpg",
@@ -774,9 +777,9 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "The Three Kits Under $50",
       subtitle: "Pick based on how you camp.",
       items: [
-        { label: "Adventure Medical Kits UltraLite .5", detail: "$34.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20" },
-        { label: "Coleman 150-Piece First Aid Kit", detail: "$19.99", note: "4.4★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20" },
-        { label: "MyMedic MyFAK Lite", detail: "$44.99", note: "4.5★", category: "Premium Pick", icon: "⭐", link: "https://www.amazon.com/dp/B00NPLUG9C?tag=camprally-20" },
+        { label: "Adventure Medical Kits UltraLite .5", detail: "$31.95", note: "4.8★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20" },
+        { label: "Coleman 150-Piece First Aid Kit", detail: "$9.99", note: "4.8★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20" },
+        { label: "Adventure Medical Kits UltraLite .7", detail: "$44.95", note: "4.7★", category: "Best for Groups", icon: "⭐", link: "https://www.amazon.com/dp/B0DV6NTJBK?tag=camprally-20" },
       ]
     },
   ],
