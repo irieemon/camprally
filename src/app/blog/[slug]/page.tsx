@@ -42,6 +42,8 @@ const HERO_IMAGES: Record<string, string> = {
   "affordable-rain-gear-camping":         "https://images.unsplash.com/photo-1510312305653-8ed496ef7575?w=1200&q=80",
   "budget-camping-accessories-under-20":  "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1200&q=80",
   "best-time-year-camp-free":             "https://images.unsplash.com/photo-1445308394109-4ec2920981b1?w=1200&q=80",
+  "best-camping-coolers-under-100":      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80",
+  "best-camping-first-aid-kits-under-50": "https://images.unsplash.com/photo-1576671414121-aa2d96d9e6e3?w=1200&q=80",
   default: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80",
 };
 
