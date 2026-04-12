@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "affordable outdoor gear",
     "camping on a budget",
   ],
+  other: {
+    "p:domain_verify": "880d0f2204d93164f159ad9581eab664",
+  },
 };
 
 export default function RootLayout({
