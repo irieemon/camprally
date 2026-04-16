@@ -44,6 +44,7 @@ const HERO_IMAGES: Record<string, string> = {
   "best-time-year-camp-free":             "https://images.unsplash.com/photo-1445308394109-4ec2920981b1?w=1200&q=80",
   "best-camping-coolers-under-100":      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80",
   "best-camping-first-aid-kits-under-50": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=1200&q=80",
+  "best-portable-camping-fans":            "https://images.unsplash.com/photo-1478827536114-da961b7f86d2?w=1200&q=80",
   default: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80",
 };
 
@@ -87,6 +88,11 @@ const PRODUCT_IMAGES: Record<string, string> = {
   "Darn Tough":      "https://m.media-amazon.com/images/I/91l7a9YvMPS._AC_SX500_.jpg",
   "Sea to Summit":    "https://m.media-amazon.com/images/I/51xTmic5vPL._AC_SX500_.jpg",
   "Coghlan":         "https://m.media-amazon.com/images/I/414ee+Glp9L._AC_SX500_.jpg",
+  "Rechargeable Camping Fan with LED Lantern":  "https://m.media-amazon.com/images/I/71lk2Ru-DKL._AC_SY450_.jpg",
+  "Featwell 20000mAh Portable Fan":            "https://m.media-amazon.com/images/I/61YpIu2hnBL._AC_SX522_.jpg",
+  "AJVV Camping Fan with Light and Oscillation": "https://m.media-amazon.com/images/I/81yMwCcvOxL._AC_SY450_.jpg",
+  "Camping Fan Rechargeable 20000mAh":         "https://m.media-amazon.com/images/I/71oDT0xruCL._AC_SX522_.jpg",
+  "ATEngeus USB Desk Fan":                     "https://m.media-amazon.com/images/I/71LdtjM6e1L._AC_SY300_SX300_QL70_ML2_.jpg",
   "default":          "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80",
 };
 
@@ -783,6 +789,37 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       ]
     },
   ],
+
+  "best-portable-camping-fans": [
+    {
+      type: "spotlight",
+      spotlightItem: {
+        name: "Rechargeable Camping Fan with LED Lantern",
+        price: "$34.99",
+        rating: "4.6/5",
+        why: "Best balance of features and battery life. 20000mAh runs 40+ hours on low, LED lantern built in, quiet motor, and remote control. The complete package for summer camping.",
+        category: "Our Top Pick"
+      }
+    },
+    {
+      type: "callout",
+      calloutType: "tip",
+      calloutTitle: "Charge Before You Leave",
+      calloutBody: "These fans all have USB-C charging. Top them off the night before your trip. A 2-hour charge from a 20W adapter gets you most of a full charge on most models."
+    },
+    {
+      type: "product-grid",
+      title: "The Best Camping Fans",
+      subtitle: "From best overall to best budget, all under $35.",
+      items: [
+        { label: "Rechargeable Camping Fan with LED Lantern", detail: "$34.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20" },
+        { label: "Featwell 20000mAh Portable Fan", detail: "$29.99", note: "4.5★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20" },
+        { label: "AJVV Camping Fan with Light and Oscillation", detail: "$31.99", note: "4.4★", category: "Best for Groups", icon: "⭐", link: "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20" },
+        { label: "Camping Fan Rechargeable 20000mAh", detail: "$27.99", note: "4.3★", category: "Budget Pick", icon: "💸", link: "https://www.amazon.com/dp/B0FCFCNSZH?tag=camprally-20" },
+        { label: "ATEngeus USB Desk Fan", detail: "$24.99", note: "4.5★", category: "Upgrade Pick", icon: "⬆️", link: "https://www.amazon.com/dp/B09WK86L84?tag=camprally-20" },
+      ]
+    },
+  ],
 };
 
 // ─────────────────────────────────────────
@@ -836,6 +873,11 @@ const PRODUCT_LINKS: Record<string, string> = {
   "Adventure Medical Kits UltraLite .7": "https://www.amazon.com/dp/B0DV6NTJBK?tag=camprally-20",
   "Coleman 150-Piece First Aid Kit":   "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20",
   "Spenco":                           "https://www.amazon.com/dp/B0012YMEUW?tag=camprally-20",
+  "Rechargeable Camping Fan with LED Lantern":  "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20",
+  "Featwell 20000mAh Portable Fan":            "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20",
+  "AJVV Camping Fan with Light and Oscillation": "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20",
+  "Camping Fan Rechargeable 20000mAh":         "https://www.amazon.com/dp/B0FCFCNSZH?tag=camprally-20",
+  "ATEngeus USB Desk Fan":                     "https://www.amazon.com/dp/B09WK86L84?tag=camprally-20",
 };
 
 function getProductLink(productName: string): string {
