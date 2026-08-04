@@ -46,3 +46,9 @@ next-env.d.ts
 # would block on its own logs forever.
 state/cycle.log
 state/cycle.err.log
+
+# Never commit subscriber data. The repo is public. The subscribe route posts
+# straight to Beehiiv and keeps no local list, but this guards against a future
+# implementation quietly writing one here.
+subscribers.json
+subscribers*.json

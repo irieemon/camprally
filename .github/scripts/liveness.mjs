@@ -90,10 +90,49 @@ if (allBlocked) {
   process.exit(0);
 }
 
+// The heartbeat only proves the Mac ran. It says nothing about whether the
+// site is actually serving — a failed deploy, an expired domain, or a DNS
+// change would all leave the heartbeat perfectly healthy.
+//
+// This check exists because on 2026-08-04 a health check reported "site 200"
+// while pointing at camprally.COM, which is a parked HugeDomains listing. The
+// real site is camprally.CO. A green check against the wrong host is worse
+// than no check, so the URL is asserted here, in one place, from outside.
+const SITE = "https://www.camprally.co";
+const MIN_PAGES = 20;
+
+let siteStatus = 0, pageCount = 0;
+try {
+  const res = await fetch(`${SITE}/sitemap.xml`, { signal: AbortSignal.timeout(20_000) });
+  siteStatus = res.status;
+  if (res.ok) pageCount = ((await res.text()).match(/<loc>/g) ?? []).length;
+} catch (err) {
+  siteStatus = `unreachable (${err.name})`;
+}
+
+if (siteStatus !== 200 || pageCount < MIN_PAGES) {
+  emit("status", "site-down");
+  emit(
+    "summary",
+    `**The site is not serving correctly.**\n\n` +
+    `\`${SITE}/sitemap.xml\` returned \`${siteStatus}\` with ${pageCount} page(s) ` +
+    `(expected 200 and at least ${MIN_PAGES}).\n\n` +
+    `The publishing host is fine — last run ${ageDays.toFixed(1)}d ago: \`${last.outcome}\`. ` +
+    `So this is a deploy, DNS, or domain problem, not an agent problem.\n\n` +
+    "Check:\n" +
+    "1. Vercel deployment status for the latest commit\n" +
+    `2. Domain registration and DNS for camprally.co\n` +
+    "3. That the domain has not lapsed — camprally.com is a different, parked domain",
+  );
+  console.log(out.join("\n"));
+  process.exit(0);
+}
+
 emit("status", "ok");
 emit(
   "summary",
   `Healthy. Last run ${ageDays.toFixed(1)}d ago: \`${last.outcome}\`` +
-  (last.slug ? ` (${last.slug})` : ""),
+  (last.slug ? ` (${last.slug})` : "") +
+  ` · site serving ${pageCount} pages.`,
 );
 console.log(out.join("\n"));
