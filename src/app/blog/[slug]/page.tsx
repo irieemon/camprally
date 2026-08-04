@@ -134,7 +134,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
         { label: "Coleman Sundome 2P Tent", detail: "$49.99", note: "4.4★", category: "Shelter", icon: "⛺", link: "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20" },
         { label: "Coleman Brazos 30°F Sleeping Bag", detail: "$24.99", note: "4.3★", category: "Sleeping Bag", icon: "🛏️", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
         { label: "Klymit Static V Sleeping Pad", detail: "$44.99", note: "4.5★", category: "Sleeping Pad", icon: "💤", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
-        { label: "Stanley Adventure Camp Cook Set", detail: "$29.99", note: "4.6★", category: "Cooking", icon: "🍳", link: "https://www.amazon.com/dp/B08KWV7X8B?tag=camprally-20" },
+        { label: "Stanley Adventure Camp Cook Set", detail: "$29.99", note: "4.6★", category: "Cooking", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
         { label: "Etekcity Ultralight Stove", detail: "$12.99", note: "4.4★", category: "Stove", icon: "🔥", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
         { label: "Vont 4-Pack LED Lanterns", detail: "$14.99", note: "4.6★", category: "Lighting", icon: "💡", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
         { label: "Nalgene 32oz Water Bottle", detail: "$14.99", note: "4.7★", category: "Water", icon: "💧", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
@@ -236,7 +236,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       items: [
         { label: "Teton Sports Celsius (0°F)", detail: "$34.99", note: "4.5★", category: "Best Overall", icon: "🥶", link: "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20" },
         { label: "Coleman Brazos 30°F", detail: "$24.99", note: "4.3★", category: "Most Affordable", icon: "💰", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
-        { label: "Oaskys 3-Season", detail: "$27.99", note: "4.1★", category: "Ultralight", icon: "🪶", link: "https://www.amazon.com/dp/B0DXK764WP?tag=camprally-20" },
+        { label: "Oaskys 3-Season", detail: "$27.99", note: "4.1★", category: "Ultralight", icon: "🪶", link: "https://www.amazon.com/s?k=oaskys+3+season+sleeping+bag&tag=camprally-20" },
       ]
     },
     {
@@ -272,8 +272,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Cookware Picks",
       items: [
-        { label: "Stanley Adventure Camp Cook Set", detail: "$29.99", note: "4.6★", category: "Best Pick", icon: "🍳", link: "https://www.amazon.com/dp/B08KWV7X8B?tag=camprally-20" },
-        { label: "MalloMe Camping Cookware Mess Kit", detail: "$22.99", note: "4.4★", category: "Budget Runner-Up", icon: "💰", link: "https://www.amazon.com/dp/B0CGNY9CM3?tag=camprally-20" },
+        { label: "Stanley Adventure Camp Cook Set", detail: "$29.99", note: "4.6★", category: "Best Pick", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
+        { label: "MalloMe Camping Cookware Mess Kit", detail: "$22.99", note: "4.4★", category: "Budget Runner-Up", icon: "💰", link: "https://www.amazon.com/s?k=MalloMe+camping+cookware+mess+kit&tag=camprally-20" },
         { label: "GSI Cascadian 1-Person Table Set", detail: "$18.99", note: "4.2★", category: "Solo", icon: "🎒", link: "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20" },
       ]
     },
@@ -300,7 +300,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Lighting Picks",
       items: [
-        { label: "Black Diamond Spot 400", detail: "$39.99", note: "4.5★", category: "Headlamp", icon: "🔦", link: "https://www.amazon.com/dp/B08M5H7C1L?tag=camprally-20" },
+        { label: "Black Diamond Spot 400", detail: "$39.99", note: "4.5★", category: "Headlamp", icon: "🔦", link: "https://www.amazon.com/dp/B09NQK2581?tag=camprally-20" },
         { label: "Vont 4-Pack LED Lanterns", detail: "$14.99", note: "4.6★", category: "Lantern 4-pack", icon: "🏮", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
       ]
     },
@@ -480,7 +480,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "Knife Picks",
       items: [
         { label: "Mora Companion", detail: "$19.99", note: "4.7★", category: "Best Pick", icon: "🔪", link: "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20" },
-        { label: "OutdoorElement Indus Review Knife", detail: "$8.99", note: "4.3★", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B0869STGVS?tag=camprally-20" },
+        { label: "OutdoorElement Indus Review Knife", detail: "$8.99", note: "4.3★", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/s?k=outdoor+element+camp+knife&tag=camprally-20" },
       ]
     },
     {
@@ -581,7 +581,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
         { label: "Sea to Summit Dry Sack 8L", detail: "$16.99", note: "4.5★", category: "Essential", icon: "🎒", link: "https://www.amazon.com/dp/B002OYGZZ4?tag=camprally-20" },
         { label: "Coghlan's Waterproof Matches (50)", detail: "$10.99", note: "4.3★", category: "Smart", icon: "🔥", link: "https://www.amazon.com/dp/B0000AQLYP?tag=camprally-20" },
         { label: "Bungee Cords (Set of 12)", detail: "$12.99", note: "4.4★", category: "Essential", icon: "🔗", link: "https://www.amazon.com/dp/B07XJ8C8F5?tag=camprally-20" },
-        { label: "Travel Bidet", detail: "$8.99", note: "4.2★", category: "Game-Changer", icon: "🚿", link: "https://www.amazon.com/dp/B00B1OCH56?tag=camprally-20" },
+        { label: "Travel Bidet", detail: "$8.99", note: "4.2★", category: "Game-Changer", icon: "🚿", link: "https://www.amazon.com/s?k=portable+travel+bidet&tag=camprally-20" },
       ]
     },
   ],
@@ -726,12 +726,12 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "Best Camping Coolers Under $100",
       subtitle: "Tested for 72+ hours in direct sun. These kept the most ice.",
       items: [
-        { label: "Igloo BMX 52-Quart", detail: "$39.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B07BHXN1M4?tag=camprally-20" },
-        { label: "Coleman 50-Quart", detail: "$34.99", note: "4.4★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B01NBK1P3Z?tag=camprally-20" },
-        { label: "Arctic Zone 50-Quart", detail: "$44.99", note: "4.3★", category: "Deep Freeze", icon: "🥶", link: "https://www.amazon.com/dp/B07MK7Q8SX?tag=camprally-20" },
-        { label: "RTIC 45-Quart", detail: "$69.99", note: "4.7★", category: "Premium Pick", icon: "⭐", link: "https://www.amazon.com/dp/B01NCK1O9G?tag=camprally-20" },
-        { label: "Magellan Outdoors 62-Quart", detail: "$49.99", note: "4.2★", category: "Biggest Capacity", icon: "📦", link: "https://www.amazon.com/dp/B07KF6HXLF?tag=camprally-20" },
-        { label: "Rovr Rollr 80-Quart", detail: "$89.99", note: "4.5★", category: "Best Rollers", icon: "🛞", link: "https://www.amazon.com/dp/B08T8QV2B5?tag=camprally-20" },
+        { label: "Igloo BMX 52-Quart", detail: "$39.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B01M6XFW5P?tag=camprally-20" },
+        { label: "Coleman 50-Quart", detail: "$34.99", note: "4.4★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/s?k=Coleman+50+quart+cooler&tag=camprally-20" },
+        { label: "Arctic Zone 50-Quart", detail: "$44.99", note: "4.3★", category: "Deep Freeze", icon: "🥶", link: "https://www.amazon.com/s?k=Arctic+Zone+50+quart+cooler&tag=camprally-20" },
+        { label: "RTIC 45-Quart", detail: "$69.99", note: "4.7★", category: "Premium Pick", icon: "⭐", link: "https://www.amazon.com/dp/B01M1OJO3B?tag=camprally-20" },
+        { label: "Magellan Outdoors 62-Quart", detail: "$49.99", note: "4.2★", category: "Biggest Capacity", icon: "📦", link: "https://www.amazon.com/s?k=62+quart+hard+cooler&tag=camprally-20" },
+        { label: "Rovr Rollr 80-Quart", detail: "$89.99", note: "4.5★", category: "Best Rollers", icon: "🛞", link: "https://www.amazon.com/s?k=RovR+RollR+80+cooler&tag=camprally-20" },
       ]
     },
     {
@@ -754,9 +754,9 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Accessories That Make Coolers Better",
       items: [
-        { label: "Cooler Divider", detail: "$12.99", note: "Separates food from drinks", category: "Accessory", icon: "📋", link: "https://www.amazon.com/dp/B08KZQZ5X1?tag=camprally-20" },
-        { label: "Rotatable Cup Holders", detail: "$18.99", note: "Mounts on cooler side", category: "Accessory", icon: "🍺", link: "https://www.amazon.com/dp/B07BJJJHRX?tag=camprally-20" },
-        { label: "Heavy Duty Cooler Tie Down", detail: "$14.99", note: "Keeps cooler from sliding", category: "Accessory", icon: "🔗", link: "https://www.amazon.com/dp/B08T1Z1ZZY?tag=camprally-20" },
+        { label: "Cooler Divider", detail: "$12.99", note: "Separates food from drinks", category: "Accessory", icon: "📋", link: "https://www.amazon.com/s?k=cooler+divider+tray&tag=camprally-20" },
+        { label: "Rotatable Cup Holders", detail: "$18.99", note: "Mounts on cooler side", category: "Accessory", icon: "🍺", link: "https://www.amazon.com/s?k=cooler+cup+holder+attachment&tag=camprally-20" },
+        { label: "Heavy Duty Cooler Tie Down", detail: "$14.99", note: "Keeps cooler from sliding", category: "Accessory", icon: "🔗", link: "https://www.amazon.com/s?k=cooler+tie+down+strap&tag=camprally-20" },
       ]
     },
   ],
@@ -840,7 +840,7 @@ const PRODUCT_LINKS: Record<string, string> = {
   "Coleman Sundome":    "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20",
   "Coleman Brazos":     "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20",
   "Klymit Static V":   "https://www.amazon.com/dp/B082429QGK?tag=camprally-20",
-  "Stanley Adventure":  "https://www.amazon.com/dp/B08KWV7X8B?tag=camprally-20",
+  "Stanley Adventure":  "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20",
   "Etekcity":           "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20",
   "Vont":               "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20",
   "Nalgene":            "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20",
@@ -855,12 +855,12 @@ const PRODUCT_LINKS: Record<string, string> = {
   "Frogg Toggs":       "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20",
   "Garmin eTrex":       "https://www.amazon.com/dp/B07RTD2PMT?tag=camprally-20",
   "Suunto A-10":       "https://www.amazon.com/dp/B08PDDPX28?tag=camprally-20",
-  "Black Diamond Spot":"https://www.amazon.com/dp/B08M5H7C1L?tag=camprally-20",
+  "Black Diamond Spot":"https://www.amazon.com/dp/B09NQK2581?tag=camprally-20",
   "Teton Sports":       "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20",
   "Kelty Discovery":    "https://www.amazon.com/dp/B0CH3QFY3C?tag=camprally-20",
-  "Oaskys":            "https://www.amazon.com/dp/B0DXK764WP?tag=camprally-20",
+  "Oaskys":            "https://www.amazon.com/s?k=oaskys+3+season+sleeping+bag&tag=camprally-20",
   "Hikenture":         "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20",
-  "MalloMe":           "https://www.amazon.com/dp/B0CGNY9CM3?tag=camprally-20",
+  "MalloMe":           "https://www.amazon.com/s?k=MalloMe+camping+cookware+mess+kit&tag=camprally-20",
   "GSI Outdoors":      "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20",
   "Coleman Classic":   "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20",
   "Core 4-Person":      "https://www.amazon.com/dp/B00VFG6LNI?tag=camprally-20",
