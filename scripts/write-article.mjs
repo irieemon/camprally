@@ -69,7 +69,7 @@ async function deriveProductTerm(title) {
       headers: { "content-type": "application/json", "x-api-key": apiKey(), "anthropic-version": "2023-06-01" },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 2000,
+        max_tokens: 8000,
         system: "Reply with ONLY an Amazon product search phrase of 2-4 words. No punctuation, no explanation.",
         messages: [{ role: "user", content:
           `An article titled "${title}" recommends camping gear. ` +
@@ -114,7 +114,11 @@ async function pickFromCache(title, { max, count, cache }) {
       headers: { "content-type": "application/json", "x-api-key": apiKey(), "anthropic-version": "2023-06-01" },
       body: JSON.stringify({
         model: MODEL,
-        max_tokens: 2000,
+        // Reasoning happens inside the same token budget on this endpoint. At
+        // 2000 the model spent the whole allowance thinking about 69 products
+        // and hit max_tokens with zero text emitted — so the fallback looked
+        // like "nothing relevant" when it was actually "never answered".
+        max_tokens: 8000,
         system:
           "You select products for a camping-gear buying guide. Reply with ONLY " +
           "comma-separated ASINs chosen from the provided inventory, best fits first. " +
