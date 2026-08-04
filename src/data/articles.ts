@@ -768,7 +768,7 @@ Download iOverlander, find a spot within 2 hours of home, and try free camping t
 
 Free camping means more budget for the gear that counts:
 
-- **[Gaia GPS Annual Subscription $49.99](https://www.amazon.com/s?k=handheld+hiking+gps&tag=camprally-20)** — Offline maps for when you have zero cell signal. Essential for finding those unmarked BLM pullouts.
+- **[Handheld GPS units on Amazon](https://www.amazon.com/s?k=handheld+hiking+gps&tag=camprally-20)** — Offline maps for when you have zero cell signal. Essential for finding those unmarked BLM pullouts.
 - **[Black Diamond Spot 400 Headlamp $39.95](https://www.amazon.com/dp/B09NQK2581?tag=camprally-20)** — 400 lumens, waterproof, runs on AAA batteries. The one piece of gear you use every single night.
 - **[Sawyer Squeeze Water Filter $34.95](https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20)** — 0.1 micron absolute filter. Filters 1 million gallons. The gold standard for backcountry water.
 
