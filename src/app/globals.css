@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+/* Without this plugin every prose-* class in the article template silently
+   does nothing — article bodies rendered as an unstyled wall of text. */
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 

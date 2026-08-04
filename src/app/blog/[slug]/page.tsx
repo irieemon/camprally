@@ -812,11 +812,15 @@ function getHeroImage(slug: string): string {
   return HERO_IMAGES[slug] || HERO_IMAGES.default;
 }
 
-function getProductImage(productName: string): string {
+/* null when we have no real photo for this product. Callers render a branded
+   icon tile instead — repeating one identical stock photo across "compared"
+   products read as fake and undercut the whole page. */
+function getProductImage(productName: string): string | null {
   for (const [key, url] of Object.entries(PRODUCT_IMAGES)) {
+    if (key === "default") continue;
     if (productName.toLowerCase().includes(key.toLowerCase())) return url;
   }
-  return PRODUCT_IMAGES.default;
+  return null;
 }
 
 const PRODUCT_LINKS: Record<string, string> = {
@@ -940,12 +944,18 @@ function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: st
             className="group flex items-center gap-3 rounded-xl border p-3 transition-all hover:border-camp-green/50 hover:shadow-sm hover:shadow-camp-green/10"
           >
             <div className="flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden bg-white border border-gray-100">
-              <img
-                src={productImage}
-                alt={item.label}
-                className="w-full h-full object-contain"
-                loading="lazy"
-              />
+              {productImage ? (
+                <img
+                  src={productImage}
+                  alt={item.label}
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center bg-camp-green/10 text-2xl" aria-hidden="true">
+                  {item.icon || "🏕️"}
+                </div>
+              )}
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium leading-tight group-hover:text-camp-green transition-colors">{item.label}</p>
@@ -1017,12 +1027,18 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
       <div className="p-6">
         <div className="flex items-start gap-5 mb-4">
           <div className="flex-shrink-0 w-28 h-28 rounded-xl overflow-hidden bg-white border border-gray-200">
-            <img
-              src={productImage}
-              alt={item.name}
-              className="w-full h-full object-contain"
-              loading="lazy"
-            />
+            {productImage ? (
+              <img
+                src={productImage}
+                alt={item.name}
+                className="w-full h-full object-contain"
+                loading="lazy"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center bg-camp-green/10 text-4xl" aria-hidden="true">
+                🏕️
+              </div>
+            )}
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="text-lg font-bold leading-tight">{item.name}</h3>
@@ -1138,6 +1154,45 @@ async function processMarkdown(content: string): Promise<string> {
     .use(html)
     .process(trimmed);
   let htmlContent = processed.toString();
+
+  // The hero banner already renders the title — a body-leading H1 duplicated
+  // it as the first line of every generated article.
+  htmlContent = htmlContent.replace(/^\s*<h1>[\s\S]*?<\/h1>\s*/, "");
+
+  // A paragraph whose sole content is a (possibly bold) Amazon affiliate link
+  // is a buy CTA — the revenue mechanism of the whole page. As plain anchors
+  // they were visually indistinguishable from body text; render them as
+  // buttons instead. Inline links elsewhere in a paragraph are left alone.
+  htmlContent = htmlContent.replace(
+    /<p>(?:<strong>)?<a href="(https:\/\/www\.amazon\.com\/[^"]*?tag=camprally-20[^"]*?)">([\s\S]*?)<\/a>(?:<\/strong>)?<\/p>/g,
+    (_m, href, label) =>
+      `<p class="not-prose my-6"><a href="${href}" target="_blank" rel="nofollow noopener sponsored" ` +
+      `class="inline-flex items-center gap-2 rounded-lg bg-camp-green px-5 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-camp-green/90">` +
+      `${label}<span aria-hidden="true">&nbsp;→</span></a></p>`,
+  );
+
+  // The generated pick headings embed the affiliate link in the heading itself
+  // ("### 2. Check the NAME on Amazon"). A link styled as heading text is not
+  // a visible CTA, and "Check the … on Amazon" is a clumsy heading. Split it:
+  // the heading keeps a clean product name, and an explicit button follows.
+  htmlContent = htmlContent.replace(
+    // before/after segments are [^<]* on purpose: anything more permissive can
+    // lazily cross </h2> boundaries and swallow entire sections into one match.
+    /<h([23])([^>]*)>([^<]*)<a href="(https:\/\/www\.amazon\.com\/[^"]*?tag=camprally-20[^"]*?)">([\s\S]*?)<\/a>([^<]*)<\/h\1>/g,
+    (_m, lvl, attrs, before, href, label, after) => {
+      const name = label
+        .replace(/<[^>]+>/g, "")
+        .replace(/^check\s+(?:the|out)?\s*/i, "")
+        .replace(/[\s,.]*on amazon[\s.]*$/i, "")
+        .trim();
+      return (
+        `<h${lvl}${attrs}>${before}${name}${after}</h${lvl}>` +
+        `<p class="not-prose my-4"><a href="${href}" target="_blank" rel="nofollow noopener sponsored" ` +
+        `class="inline-flex items-center gap-2 rounded-lg bg-camp-green px-5 py-2.5 text-sm font-semibold text-white no-underline transition hover:bg-camp-green/90">` +
+        `Check price on Amazon<span aria-hidden="true">&nbsp;→</span></a></p>`
+      );
+    },
+  );
 
   // Add anchor IDs to h2 headings
   const headingMatches = htmlContent.matchAll(/<h2([^>]*)>(.*?)<\/h2>/g) || [];
