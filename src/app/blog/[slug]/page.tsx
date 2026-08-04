@@ -116,6 +116,20 @@ interface CustomSection {
 }
 
 const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-camp-in-hot-weather": [
+    {
+      type: "product-grid",
+      title: "How to Camp in Hot Weather Without Melting — Fan, Hydration, and Shade Strategies — Quick Comparison",
+      items: [
+        { label: "20000mAh Auto-Oscillating Battery ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20" },
+        { label: "Nalgene Wide Mouth Water Bottle", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
+        { label: "Igloo BMX 52 Quart Cooler - Carbon", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B01M6XFW5P?tag=camprally-20" },
+        { label: "Featwell 20000mAh Portable Fan wit", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20" },
+        { label: "Squeeze Water Filtration System", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
+        { label: "AJVV Camping Fan with Light", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20" },
+      ]
+    },
+  ],
   "budget-camping-accessories-under-20": [
     {
       type: "product-grid",
