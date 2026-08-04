@@ -67,8 +67,8 @@ function finish(outcome, detail, code) {
     // Best-effort heartbeat commit. Never let this failure mask the real
     // outcome — a heartbeat that changes the exit code is worse than none.
     try {
-      sh("git", ["add", "state/"]);
-      if (sh("git", ["status", "--porcelain", "state/"])) {
+      sh("git", ["add", "state/", "src/data/prices.json"]);
+      if (sh("git", ["status", "--porcelain", "state/", "src/data/prices.json"])) {
         sh("git", ["commit", "-m", `chore(heartbeat): ${outcome} — ${detail.reason ?? detail.slug ?? ""}`.trim()]);
         if (PUSH) sh("git", ["push", "origin", "HEAD"]);
       }
@@ -112,6 +112,19 @@ if (refreshCode === EXIT.FAIL) {
   }, EXIT.FAIL);
 }
 // refreshCode === DEFER just means Amazon throttled; publishing from cache is fine.
+
+// ── step 2b: refresh prices ───────────────────────────────────────────────
+// Runs every cycle regardless of whether anything publishes, because stale
+// prices are a problem on their own. src/data/prices.json is committed below,
+// so a refresh alone triggers a Vercel rebuild and the site shows current
+// figures. Failure here is never fatal: pages fall back to the copy already in
+// the article, which is exactly what they did before live pricing existed.
+try {
+  console.log(sh("node", ["scripts/refresh-prices.mjs"]));
+} catch (err) {
+  console.log(err.stdout ?? "");
+  console.log("(price refresh did not complete — pages keep their existing figures)");
+}
 
 // ── step 3: pick the next unpublished queue item ──────────────────────────
 const queueRaw = JSON.parse(readFileSync(`${ROOT}article-queue.json`, "utf8"));
@@ -179,7 +192,7 @@ if (pubCode !== EXIT.OK) {
 }
 
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
-sh("git", ["add", "src/data/articles.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", specPath]);
+sh("git", ["add", "src/data/articles.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/prices.json", specPath]);
 sh("git", ["commit", "-m",
   `Publish ${next.slug}\n\n` +
   `Generated from specs/${next.slug}.json. All affiliate ASINs verified live\n` +

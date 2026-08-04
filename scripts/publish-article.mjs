@@ -174,13 +174,42 @@ const restore = (why) => {
   console.error(`\nROLLED BACK — ${why}`);
 };
 
-try {
-  execFileSync("npm", ["run", "build"], { cwd: ROOT, stdio: "pipe" });
-} catch (err) {
-  const out = `${err.stdout ?? ""}${err.stderr ?? ""}`;
-  restore("build failed");
-  console.error(out.slice(-1800));
-  process.exit(EXIT.FAIL);
+/*
+ * Build, retrying once on a transient failure.
+ *
+ * next/font/google fetches Geist from Google at build time, so a momentary
+ * Google outage fails the build — observed 2026-08-04, where two consecutive
+ * builds failed on "Failed to fetch Geist from Google Fonts" and the third
+ * succeeded with no code change. Without a retry the cycle would roll back a
+ * perfectly good article and report it as broken, which is exactly the kind of
+ * misleading signal this pipeline exists to eliminate.
+ *
+ * A genuine error (type error, bad syntax) fails identically both times, so
+ * the retry costs one build and never masks a real problem.
+ */
+const TRANSIENT = /Failed to fetch .* from Google Fonts|ECONNRESET|ETIMEDOUT|EAI_AGAIN|socket hang up/i;
+
+function tryBuild() {
+  try {
+    execFileSync("npm", ["run", "build"], { cwd: ROOT, stdio: "pipe" });
+    return { ok: true };
+  } catch (err) {
+    return { ok: false, out: `${err.stdout ?? ""}${err.stderr ?? ""}` };
+  }
+}
+
+let build = tryBuild();
+if (!build.ok && TRANSIENT.test(build.out)) {
+  console.log("build hit a transient network error; retrying once...");
+  build = tryBuild();
+}
+if (!build.ok) {
+  const transient = TRANSIENT.test(build.out);
+  restore(transient ? "build failed twice on a network error" : "build failed");
+  console.error(build.out.slice(-1800));
+  // A network failure is not a broken article — defer so the next cycle retries
+  // instead of raising a blocker that needs a human.
+  process.exit(transient ? EXIT.DEFER : EXIT.FAIL);
 }
 
 console.log(`\npublished ${spec.id} — ${spec.slug}`);
