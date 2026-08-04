@@ -2,9 +2,9 @@
   "queue": [
     {
       "slug": "memorial-day-camping-checklist-2026",
-      "title": "Memorial Day Camping Checklist 2026 \u2014 Your First Trip of the Season",
+      "title": "Memorial Day Camping Checklist 2026 — Your First Trip of the Season",
       "category": "Planning",
-      "priority": "high",
+      "priority": "low",
       "keywords": [
         "memorial day camping checklist",
         "camping checklist",
@@ -12,11 +12,11 @@
         "camping gear checklist"
       ],
       "heroKeyword": "camping checklist",
-      "notes": "MEMORIAL DAY: publish May 19-22. Season opener, strong search spike every May. 27 items. Affiliate: cooler, first aid kit, lantern."
+      "notes": "OUT OF SEASON: Memorial Day 2026 has passed. Rewrite as a general season-opener or hold for May 2027."
     },
     {
       "slug": "how-to-camp-in-hot-weather",
-      "title": "How to Camp in Hot Weather Without Melting \u2014 Fan, Hydration, and Shade Strategies",
+      "title": "How to Camp in Hot Weather Without Melting — Fan, Hydration, and Shade Strategies",
       "category": "Tips",
       "priority": "high",
       "keywords": [
@@ -26,13 +26,13 @@
         "camping fan"
       ],
       "heroKeyword": "camping in hot weather",
-      "notes": "MEMORIAL DAY: publish May 19-22. Memorial Day weekend often hits 80-90\u00b0F. Portable fans, hydration, tarps. Affiliate: O2COOL fan ($15-20), hydration packs."
+      "notes": "IN SEASON: August heat peaks now. Fans, hydration, shade."
     },
     {
       "slug": "camping-bug-tick-prevention-spring",
-      "title": "Camping Bug + Tick Prevention for Spring \u2014 Permethrin, DEET, and What Actually Works",
+      "title": "Camping Bug + Tick Prevention for Spring — Permethrin, DEET, and What Actually Works",
       "category": "Safety",
-      "priority": "medium",
+      "priority": "low",
       "keywords": [
         "camping tick prevention",
         "best DEET repellent camping",
@@ -40,13 +40,13 @@
         "spring camping bugs"
       ],
       "heroKeyword": "camping tick prevention",
-      "notes": "MEMORIAL DAY: publish May 12-15 (early). Tick season peaks May-July. Products: Sawyer Permethrin, DEET spray, treated socks. Under $30 affiliate items."
+      "notes": "OUT OF SEASON: tick season peaks May-June. Hold for spring 2027."
     },
     {
       "slug": "best-camping-chairs-tailgating",
       "title": "Best Camping Chairs Under $50 for Tailgating and Campfires",
       "category": "Gear",
-      "priority": "medium",
+      "priority": "high",
       "keywords": [
         "best camping chair",
         "camping chairs under 50",
@@ -54,11 +54,11 @@
         "portable camping chair"
       ],
       "heroKeyword": "camping chair",
-      "notes": "MEMORIAL DAY: publish May 19-22. Camping + tailgating combo. Broad appeal. ALPS King, Coleman, Kijaro. Good affiliate commission."
+      "notes": "IN SEASON: football/tailgating season starts late Aug. Impulse price point."
     },
     {
       "slug": "best-camping-first-aid-kits-under-50",
-      "title": "Best Camping First Aid Kits Under $50 \u2014 Be Prepared Without Overpaying",
+      "title": "Best Camping First Aid Kits Under $50 — Be Prepared Without Overpaying",
       "category": "Safety",
       "priority": "high",
       "keywords": [
@@ -70,7 +70,7 @@
     },
     {
       "slug": "best-hiking-boots-camping-under-100",
-      "title": "Best Hiking Boots for Camping Under $100 \u2014 Tested on Real Trails",
+      "title": "Best Hiking Boots for Camping Under $100 — Tested on Real Trails",
       "category": "Footwear",
       "priority": "high",
       "keywords": [
@@ -78,19 +78,21 @@
         "best hiking boots for beginners",
         "camping boots"
       ],
-      "heroKeyword": "hiking boots camping"
+      "heroKeyword": "hiking boots camping",
+      "notes": "IN SEASON: fall hiking. High intent, good commission."
     },
     {
       "slug": "camping-meal-plans-budget-50",
-      "title": "7 Days of Budget Camping Meals \u2014 $50 Total Food Budget",
+      "title": "7 Days of Budget Camping Meals — $50 Total Food Budget",
       "category": "Cooking",
-      "priority": "high",
+      "priority": "medium",
       "keywords": [
         "budget camping meals",
         "cheap camping food",
         "camping meal plan"
       ],
-      "heroKeyword": "camping meals budget"
+      "heroKeyword": "camping meals budget",
+      "notes": "Evergreen."
     },
     {
       "slug": "best-portable-power-station-camping-under-200",
@@ -102,11 +104,12 @@
         "camping battery pack",
         "best power station under 200"
       ],
-      "heroKeyword": "camping power station"
+      "heroKeyword": "camping power station",
+      "notes": "Evergreen. High ticket, lower conversion rate."
     },
     {
       "slug": "best-camp-kitchen-organization",
-      "title": "Best Camp Kitchen Organization \u2014 Pack, Cook, and Clean Smarter",
+      "title": "Best Camp Kitchen Organization — Pack, Cook, and Clean Smarter",
       "category": "Cooking",
       "priority": "medium",
       "keywords": [
@@ -114,11 +117,12 @@
         "camping kitchen gear",
         "camp cooking storage"
       ],
-      "heroKeyword": "camp kitchen"
+      "heroKeyword": "camp kitchen",
+      "notes": "Evergreen."
     },
     {
       "slug": "camping-with-dogs-checklist",
-      "title": "Complete Camping With Dogs Checklist \u2014 What to Bring, What to Skip",
+      "title": "Complete Camping With Dogs Checklist — What to Bring, What to Skip",
       "category": "Pets",
       "priority": "medium",
       "keywords": [
@@ -126,11 +130,12 @@
         "dog camping checklist",
         "pet camping gear"
       ],
-      "heroKeyword": "camping with dogs"
+      "heroKeyword": "camping with dogs",
+      "notes": "Evergreen."
     },
     {
       "slug": "best-camping-tarp-under-30",
-      "title": "Best Camping Tarps Under $30 \u2014 Extra Shelter Without the Price Tag",
+      "title": "Best Camping Tarps Under $30 — Extra Shelter Without the Price Tag",
       "category": "Shelter",
       "priority": "medium",
       "keywords": [
@@ -138,7 +143,8 @@
         "budget tarp camping",
         "outdoor tarp"
       ],
-      "heroKeyword": "camping tarp"
+      "heroKeyword": "camping tarp",
+      "notes": "Evergreen, pairs with how-to-camp-in-rain."
     },
     {
       "slug": "how-to-camp-in-rain",
@@ -150,11 +156,12 @@
         "how to stay dry camping",
         "rain camping tips"
       ],
-      "heroKeyword": "camping in rain"
+      "heroKeyword": "camping in rain",
+      "notes": "IN SEASON: fall rain, Sept-Nov."
     },
     {
       "slug": "best-budget-trekking-poles",
-      "title": "Best Budget Trekking Poles Under $40 \u2014 Worth It or Waste?",
+      "title": "Best Budget Trekking Poles Under $40 — Worth It or Waste?",
       "category": "Gear",
       "priority": "medium",
       "keywords": [
@@ -162,11 +169,12 @@
         "trekking poles under 40",
         "hiking poles review"
       ],
-      "heroKeyword": "trekking poles"
+      "heroKeyword": "trekking poles",
+      "notes": "IN SEASON: fall hiking."
     },
     {
       "slug": "camping-fire-starting-guide",
-      "title": "Fire Starting for Campers \u2014 What Works, What Doesn't, What Burns",
+      "title": "Fire Starting for Campers — What Works, What Doesn't, What Burns",
       "category": "Skills",
       "priority": "high",
       "keywords": [
@@ -174,7 +182,8 @@
         "camping fire tips",
         "how to start a fire camping"
       ],
-      "heroKeyword": "starting campfire camping"
+      "heroKeyword": "starting campfire camping",
+      "notes": "IN SEASON: fall/winter camping, fire season."
     },
     {
       "slug": "best-camping-socks",
@@ -186,11 +195,12 @@
         "wool socks camping",
         "hiking socks review"
       ],
-      "heroKeyword": "camping socks"
+      "heroKeyword": "camping socks",
+      "notes": "Evergreen, low ticket."
     },
     {
       "slug": "dispersed-camping-beginners-guide",
-      "title": "Dispersed Camping for Beginners \u2014 How to Camp Free on Public Land",
+      "title": "Dispersed Camping for Beginners — How to Camp Free on Public Land",
       "category": "Planning",
       "priority": "high",
       "keywords": [
@@ -198,16 +208,18 @@
         "free camping on public land",
         "how to dispersed camp"
       ],
-      "heroKeyword": "dispersed camping"
+      "heroKeyword": "dispersed camping",
+      "notes": "Evergreen, high search volume."
     }
   ],
   "published": [
     {
       "slug": "best-camping-coolers-under-100",
-      "title": "Best Camping Coolers Under $100 in 2026 \u2014 Stay Cold, Stay Happy",
+      "title": "Best Camping Coolers Under $100 in 2026 — Stay Cold, Stay Happy",
       "publishedDate": "2026-04-04"
     }
   ],
   "lastPublished": "2026-04-04",
-  "publishIntervalDays": 7
+  "publishIntervalDays": 7,
+  "retimedAt": "2026-08-04"
 }
