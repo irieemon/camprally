@@ -4,13 +4,12 @@ import type { Metadata } from "next";
 import { remark } from "remark";
 import html from "remark-html";
 import { articles } from "@/data/articles";
-import { products } from "@/data/products";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import NewsletterForm from "@/components/NewsletterForm";
 import {
   ArrowLeft, ExternalLink, Star, Check, TrendingDown,
-  Zap, ChevronRight, Compass, Flame
+  Zap, ChevronRight
 } from "lucide-react";
 import Image from "next/image";
 
@@ -896,19 +895,6 @@ function getCustomSections(slug: string): CustomSection[] {
 // RENDERERS FOR CUSTOM SECTIONS
 // ─────────────────────────────────────────
 
-function renderIcon(iconName: string) {
-    const icons: Record<string, string> = {
-    "⛺": "⛺",     "🛏️": "🛏️",     "💤": "💤",     "🍳": "🍳",     "🔥": "🔥",
-    "💡": "💡",     "💧": "💧",     "🏆": "🏆",     "🎒": "🎒",     "👨‍👩‍👧": "👨‍👩‍👧",
-    "🚗": "🚗",     "🥶": "🥶",     "💰": "💰",     "🪶": "🪶",     "🔦": "🔦",
-    "🏮": "🏮",     "🎈": "🎈",     "🧱": "🧱",     "🪵": "🪵",     "🧭": "🧭",
-    "📍": "📍",     "🔧": "🔧",     "🔪": "🔪",     "🌧️": "🌧️",     "🪑": "🪑",
-    "🌐": "🌐",     "🏕️": "🏕️",     "🏔️": "🏔️",     "🏜️": "🏜️",     "🌲": "🌲",
-    "🌵": "🌵",     "🌸": "🌸",     "☀️": "☀️",     "🍂": "🍂",     "❄️": "❄️",
-    "🧊": "🧊",     "🧂": "🧂",     "🚿": "🚿",     "🔗": "🔗",     "📱": "📱",
-  };
-  return icons[iconName] || "✨";
-}
 
 function StatsSection({ stats }: { stats: Array<{ value: string; label: string }> }) {
   return (

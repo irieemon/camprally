@@ -45,10 +45,6 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
-        {/*
-          ⚠️  ACTION REQUIRED: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID.
-          Go to https://analytics.google.com to create your GA4 property.
-        */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-MQWSB6RTKJ" strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">
           {`
@@ -58,10 +54,17 @@ export default function RootLayout({
             gtag('config', 'G-MQWSB6RTKJ');
           `}
         </Script>
-        {/* AVANTLINK AFFILIATE APPLICATION VERIFICATION — DELETE AFTER APPROVAL */}
-        <script
-          type="text/javascript"
+        {/*
+          AvantLink affiliate application verification. Added 2026-04 and marked
+          "delete after approval" — still here months later, so approval status
+          is unconfirmed. Loaded via next/script rather than a raw tag so it no
+          longer blocks first render on every page; verification still works
+          because the script is present in the DOM either way.
+        */}
+        <Script
+          id="avantlink-verify"
           src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=20d071dee7649107b0746ce9716f6da2575dd4de"
+          strategy="afterInteractive"
         />
       </body>
     </html>

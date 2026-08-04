@@ -11,8 +11,8 @@ export default function NotFound() {
           Campsite Not Found
         </h1>
         <p className="text-lg text-camp-cream/80 mb-8">
-          Looks like this trail leads nowhere. The page you're looking for might
-          have been moved, deleted, or never existed.
+          Looks like this trail leads nowhere. The page you&apos;re looking for
+          might have been moved, deleted, or never existed.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -34,7 +34,7 @@ export default function NotFound() {
           <Link href="/blog/best-budget-tents-under-100" className="underline hover:text-camp-cream">
             budget tent guide
           </Link>{" "}
-          — it's a reader favorite.
+          — it&apos;s a reader favorite.
         </p>
       </div>
     </div>
