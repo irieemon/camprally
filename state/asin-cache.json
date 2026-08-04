@@ -443,7 +443,13 @@
     "B0FCFCNSZH": {
       "verdict": "LIVE",
       "title": "ZioeYiue Camping Fan Rechargeable, 20000mAh Large Battery Powered Fans, 4 Speed Rechargeable Fan with Remote, Cordless Battery Operated Fans with LED Light and Hanging Hook for Camp Tent Beach Outdoor",
-      "checkedAt": "2026-08-04T19:07:02.955Z"
+      "checkedAt": "2026-08-04T23:00:00.288Z",
+      "price": "$21.99",
+      "priceValue": 21.99,
+      "rating": 4.4,
+      "ratingsTotal": 72300,
+      "priceCheckedAt": "2026-08-04T23:00:00.288Z",
+      "priceSource": "amazon-direct"
     },
     "B09WK86L84": {
       "verdict": "LIVE",
@@ -470,7 +476,13 @@
     "B082MGRYRR": {
       "verdict": "LIVE",
       "title": "Multitool Camping, Anumit 16 in 1 Survival Gear Accessories Tools for Hiking, Fishing, Outdoor, Cool & Unique Gifts for Men Women, Car Kit with Hammer, Axe, Knife, Plier, Bottle Opener, Saw, etc",
-      "checkedAt": "2026-08-04T19:07:02.955Z"
+      "checkedAt": "2026-08-04T23:00:00.288Z",
+      "price": "$18.98",
+      "priceValue": 18.98,
+      "rating": 4.6,
+      "ratingsTotal": 2142,
+      "priceCheckedAt": "2026-08-04T23:00:00.288Z",
+      "priceSource": "amazon-direct"
     },
     "B0BXMW1TJ9": {
       "verdict": "LIVE",
@@ -486,12 +498,24 @@
     "B0BMCTFKH7": {
       "verdict": "LIVE",
       "title": "Therm-a-Rest NeoAir XTherm NXT Ultralight Camping and Backpacking Sleeping Pad, Vapor, Regular",
-      "checkedAt": "2026-08-04T19:07:02.955Z"
+      "checkedAt": "2026-08-04T23:00:00.288Z",
+      "price": "$259.95",
+      "priceValue": 259.95,
+      "rating": 4.5,
+      "ratingsTotal": 940,
+      "priceCheckedAt": "2026-08-04T23:00:00.288Z",
+      "priceSource": "amazon-direct"
     },
     "B09PSNSFQQ": {
       "verdict": "LIVE",
       "title": "Osprey Atmos AG 65 Men's Backpacking Backpack",
-      "checkedAt": "2026-08-04T19:07:02.955Z"
+      "checkedAt": "2026-08-04T23:00:00.288Z",
+      "price": "$179.00",
+      "priceValue": 179,
+      "rating": 4.3,
+      "ratingsTotal": 40,
+      "priceCheckedAt": "2026-08-04T23:00:00.288Z",
+      "priceSource": "amazon-direct"
     },
     "B06XGJTTRY": {
       "verdict": "LIVE",
@@ -799,6 +823,72 @@
       "ratingsTotal": 167,
       "priceCheckedAt": "2026-08-04T19:10:44.151Z",
       "priceSource": "canopy"
+    },
+    "B0CGV7Z4XG": {
+      "verdict": "LIVE",
+      "title": "Yebing Merino Wool Hiking Socks for Womens Thermal Warm Winter Boot Crew Cushion Cozy Thick Work Gift Socks 5 Pairs",
+      "checkedAt": "2026-08-04T20:00:34.583Z",
+      "price": "$7.99",
+      "priceValue": 7.99,
+      "rating": 4.7,
+      "ratingsTotal": 958,
+      "priceCheckedAt": "2026-08-04T20:00:34.583Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CLWBTMBN": {
+      "verdict": "LIVE",
+      "title": "Columbia Newton Ridge Plus II Suede Waterproof",
+      "checkedAt": "2026-08-04T20:00:34.583Z",
+      "price": "$66.00",
+      "priceValue": 66,
+      "rating": 4.6,
+      "ratingsTotal": 4801,
+      "priceCheckedAt": "2026-08-04T20:00:34.583Z",
+      "priceSource": "canopy-search"
+    },
+    "B0987Z4CHV": {
+      "verdict": "LIVE",
+      "title": "Merrell Women's Moab 3 Mid Waterproof Hiking Boots",
+      "checkedAt": "2026-08-04T20:00:34.583Z",
+      "price": "$89.99",
+      "priceValue": 89.99,
+      "rating": 4.6,
+      "ratingsTotal": 3737,
+      "priceCheckedAt": "2026-08-04T20:00:34.583Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CLWLDM39": {
+      "verdict": "LIVE",
+      "title": "Columbia Transverse™ Hike Waterproof",
+      "checkedAt": "2026-08-04T20:00:34.583Z",
+      "price": "$59.49",
+      "priceValue": 59.49,
+      "rating": 4.6,
+      "ratingsTotal": 3069,
+      "priceCheckedAt": "2026-08-04T20:00:34.583Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CLWLBB9P": {
+      "verdict": "LIVE",
+      "title": "Columbia womens Newton Ridge Plus Waterproof Amped",
+      "checkedAt": "2026-08-04T20:00:34.583Z",
+      "price": "$90.23",
+      "priceValue": 90.23,
+      "rating": 4.6,
+      "ratingsTotal": 3065,
+      "priceCheckedAt": "2026-08-04T20:00:34.583Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CLVYVP56": {
+      "verdict": "LIVE",
+      "title": "Columbia Women's Newton Ridge Plus Waterproof Hiking Boots",
+      "checkedAt": "2026-08-04T20:00:34.583Z",
+      "price": "$86.75",
+      "priceValue": 86.75,
+      "rating": 4.6,
+      "ratingsTotal": 1892,
+      "priceCheckedAt": "2026-08-04T20:00:34.583Z",
+      "priceSource": "canopy-search"
     }
   }
 }

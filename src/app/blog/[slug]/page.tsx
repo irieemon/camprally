@@ -116,6 +116,20 @@ interface CustomSection {
 }
 
 const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-hiking-boots-camping-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Hiking Boots for Camping Under $100 — Tested on Real Trails — Quick Comparison",
+      items: [
+        { label: "Yebing Merino Wool Hiking Socks fo", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CGV7Z4XG?tag=camprally-20" },
+        { label: "Columbia Newton Ridge Plus II Sued", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWBTMBN?tag=camprally-20" },
+        { label: "Merrell Women's Moab 3 Mid Waterpr", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0987Z4CHV?tag=camprally-20" },
+        { label: "Columbia Transverse™ Hike Waterpro", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWLDM39?tag=camprally-20" },
+        { label: "Columbia womens Newton Ridge Plus ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWLBB9P?tag=camprally-20" },
+        { label: "Columbia Women's Newton Ridge Plus", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLVYVP56?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-camp-in-hot-weather": [
     {
       type: "product-grid",
