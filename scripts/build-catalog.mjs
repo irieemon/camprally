@@ -23,12 +23,18 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { referencedAsins } from "./lib/referenced-asins.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const AFFILIATE_TAG = "camprally-20";
 
 const cache = JSON.parse(readFileSync(`${ROOT}state/asin-cache.json`, "utf8")).entries ?? {};
 const images = JSON.parse(readFileSync(`${ROOT}src/data/product-images.json`, "utf8")).images ?? {};
+
+/* Only products the site actually points at. The cache also accumulates probe
+ * ASINs and products from retired articles — publishing those would keep them
+ * priced (and billed) forever, and an Echo Dot sat in the catalog this way. */
+const referenced = referencedAsins(ROOT);
 
 /* One photo cannot be two products. The name-keyed map this replaced had the
  * Coleman Sundome's photo attached to a Klymit sleeping pad, so a grid of
@@ -51,6 +57,7 @@ for (const [asin, e] of Object.entries(cache)) {
   // are kept in the cache on purpose (so we stop re-checking them) but must
   // never reach a page.
   if (e.verdict === "DEAD") continue;
+  if (!referenced.has(asin)) continue;
 
   products[asin] = {
     asin,

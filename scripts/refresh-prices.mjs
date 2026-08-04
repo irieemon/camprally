@@ -23,16 +23,13 @@
  * already said, and the page labels it as indicative rather than current.
  */
 
-import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
-import { join, extname } from "node:path";
 import { fetchPrice, canopyKey } from "./lib/price-source.mjs";
 import { sleep, EXIT } from "./lib/amazon.mjs";
 import { loadCache, saveCache } from "./lib/asin-cache.mjs";
+import { referencedAsins } from "./lib/referenced-asins.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const SCAN_DIRS = [`${ROOT}src`, `${ROOT}specs`];
-const EXT = new Set([".ts", ".tsx", ".js", ".jsx", ".json"]);
 
 const args = process.argv.slice(2);
 const ALL = args.includes("--all");
@@ -53,7 +50,17 @@ const LIMIT = Number(args[args.indexOf("--limit") + 1]) || (ALL ? Infinity : 40)
  * falls back to cached products — degraded, not dead. Override with
  * PRICE_STALE_HOURS to trade cost for freshness.
  */
-const STALE_HOURS = Number(process.env.PRICE_STALE_HOURS) || 168;
+/*
+ * 120h (5 days) against the render layer's 10-day display window. The two used
+ * to both be 7 days, which meant a price became undisplayable on exactly the
+ * day it became eligible for refresh — one missed cron and prices blank out
+ * site-wide. Refresh must always run ahead of the display cutoff.
+ *
+ * ~88 tracked ASINs at 5-day staleness is roughly 18 lookups/day, ~530/month,
+ * so ~$4-5/mo against Canopy's 100-free-then-pay-as-you-go pricing. Raise
+ * PRICE_STALE_HOURS to trade freshness for cost.
+ */
+const STALE_HOURS = Number(process.env.PRICE_STALE_HOURS) || 120;
 
 function walk(dir) {
   return readdirSync(dir).flatMap((e) => {
@@ -62,15 +69,7 @@ function walk(dir) {
   });
 }
 
-const asins = new Set();
-for (const dir of SCAN_DIRS) {
-  if (!existsSync(dir)) continue;
-  for (const f of walk(dir)) {
-    const t = readFileSync(f, "utf8");
-    for (const [, a] of t.matchAll(/\/dp\/(B[0-9A-Z]{9})/g)) asins.add(a);
-    for (const [, a] of t.matchAll(/"asin"\s*:\s*"(B[0-9A-Z]{9})"/g)) asins.add(a);
-  }
-}
+const asins = referencedAsins(ROOT);
 
 const cache = loadCache();
 const now = new Date();

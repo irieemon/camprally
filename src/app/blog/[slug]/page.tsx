@@ -845,9 +845,15 @@ const CATALOG = (catalogData as { products: Record<string, CatalogProduct> }).pr
 
 /* Amazon prices move constantly, so a figure we last confirmed weeks ago is not
  * evidence of anything. Past this age we stop asserting a number at all. Pages
- * are statically generated and the publish cycle rebuilds daily, so this is
- * re-evaluated far more often than the window itself. */
-const PRICE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+ * are statically generated and the price cron rebuilds daily, so this is
+ * re-evaluated far more often than the window itself.
+ *
+ * This window must stay comfortably WIDER than the refresh interval in
+ * scripts/refresh-prices.mjs (PRICE_STALE_HOURS, 120h). When the two are equal
+ * every price becomes undisplayable at the exact moment it becomes eligible for
+ * refresh, so any hiccup in the cron blanks prices site-wide. 10 days against a
+ * 5-day refresh leaves a full refresh cycle of slack. */
+const PRICE_MAX_AGE_MS = 10 * 24 * 60 * 60 * 1000;
 
 /** Look up a product by bare ASIN or by any Amazon /dp/ URL. */
 function productFor(ref?: string | null): CatalogProduct | null {
