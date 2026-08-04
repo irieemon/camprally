@@ -87,6 +87,55 @@ async function deriveProductTerm(title) {
   }
 }
 
+/**
+ * Quota fallback: shop from the verified ASIN cache instead of Canopy.
+ *
+ * When the month's Canopy budget is gone, discovery is closed — but the cache
+ * holds ~70 products that were LIVE with real prices when last checked. A new
+ * article built from those is strictly better than a month of "deferred"
+ * receipts. The model's only job is relevance: given the article topic and the
+ * inventory, say which products belong. It cannot invent ASINs because the
+ * result is validated against the candidate list, and everything in that list
+ * already passed the LIVE gate.
+ */
+async function pickFromCache(title, { max, count, cache }) {
+  const candidates = Object.entries(cache.entries)
+    .filter(([, e]) => e.verdict === "LIVE" && typeof e.priceValue === "number" && e.title)
+    .filter(([, e]) => max == null || e.priceValue <= max)
+    .map(([asin, e]) => ({ asin, title: e.title, price: e.price ?? `$${e.priceValue}` }));
+  if (candidates.length < 4) return [];
+
+  const inventory = candidates
+    .map((c) => `${c.asin}  ${c.price}  ${c.title.slice(0, 90)}`)
+    .join("\n");
+  try {
+    const res = await fetch(BASE, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-api-key": apiKey(), "anthropic-version": "2023-06-01" },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 2000,
+        system:
+          "You select products for a camping-gear buying guide. Reply with ONLY " +
+          "comma-separated ASINs chosen from the provided inventory, best fits first. " +
+          "If fewer than 4 products genuinely fit the article topic, reply NONE. " +
+          "No other text.",
+        messages: [{ role: "user", content:
+          `Article: "${title}"\n\nInventory (ASIN, price, product):\n${inventory}\n\n` +
+          `Pick up to ${count} products a reader of this article would actually want to buy.` }],
+      }),
+    });
+    if (!res.ok) return [];
+    const d = await res.json();
+    const txt = (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("");
+    const valid = new Set(candidates.map((c) => c.asin));
+    const picked = [...new Set(txt.match(/B[0-9A-Z]{9}/g) ?? [])].filter((a) => valid.has(a));
+    return picked.slice(0, count);
+  } catch {
+    return [];
+  }
+}
+
 const slug = process.argv[2];
 if (!slug) {
   console.error("usage: write-article.mjs <slug> [--out path] [--products A,B,C]");
@@ -159,17 +208,25 @@ if (!asins.length && dIdx > -1) {
   const count = nIdx > -1 ? Number(process.argv[nIdx + 1]) : 6;
   console.log(`discovering "${term}"${max ? ` under $${max}` : ""}...`);
 
-  let found;
-  try {
-    found = await discover(term, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
-  } catch (err) {
-    if (err?.code === "QUOTA") {
-      console.error(`\nCANOPY QUOTA EXHAUSTED — ${err.message}`);
-      console.error("This is a billing limit, not a content problem. Nothing is broken.");
-      process.exit(EXIT.DEFER);
+  // Any of the discovery attempts below can hit the monthly Canopy limit —
+  // including the retries, which used to let QUOTA escape uncaught and turn a
+  // billing limit into a "spec-generation-failed" blocker. Funnel every
+  // attempt through one wrapper so quota always lands in the same fallback.
+  let quotaHit = false;
+  const tryDiscover = async (t, opts) => {
+    try {
+      return await discover(t, opts);
+    } catch (err) {
+      if (err?.code === "QUOTA") {
+        quotaHit = true;
+        console.error(`  CANOPY QUOTA EXHAUSTED — ${err.message}`);
+        return [];
+      }
+      throw err;
     }
-    throw err;
-  }
+  };
+
+  let found = await tryDiscover(term, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
 
   /*
    * How-to articles name a topic, not a product. "camping in hot weather" is a
@@ -181,38 +238,47 @@ if (!asins.length && dIdx > -1) {
    * topic into something Amazon actually sells. It is a cheap call and it keeps
    * new topics working without anyone editing the queue.
    */
-  if (!found.length) {
+  if (!found.length && !quotaHit) {
     console.log(`  "${term}" returned nothing — deriving a product term...`);
     const derived = await deriveProductTerm(brief.title);
-    if (derived) {
+    if (derived && !quotaHit) {
       console.log(`  trying "${derived}"`);
-      found = await discover(derived, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
+      found = await tryDiscover(derived, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
     }
     // Last resort: the price cap may simply be too tight for this category.
-    if (!found.length && max) {
+    if (!found.length && !quotaHit && max) {
       console.log(`  still nothing — retrying without the $${max} cap`);
-      found = await discover(derived || term, { min: 1, nowIso: new Date().toISOString() });
+      found = await tryDiscover(derived || term, { min: 1, nowIso: new Date().toISOString() });
     }
   }
 
-  if (!found.length) {
+  if (found.length) {
+    const picked = found.slice(0, count);
+    const nowIso = new Date().toISOString();
+    for (const p of picked) {
+      cache.entries[p.asin] = {
+        verdict: "LIVE", title: p.title, checkedAt: nowIso,
+        price: p.price, priceValue: p.priceValue,
+        rating: p.rating, ratingsTotal: p.ratingsTotal,
+        priceCheckedAt: nowIso, priceSource: "canopy-search",
+      };
+    }
+    saveCache(cache);
+    asins = picked.map((p) => p.asin);
+    console.log(`  picked ${picked.length}:`);
+    for (const p of picked) console.log(`    ${p.asin}  ${p.price.padEnd(9)} ${String(p.rating ?? "-").padEnd(4)}★  ${p.title.slice(0, 52)}`);
+  } else if (quotaHit) {
+    console.log("\nquota fallback: selecting from the verified ASIN cache...");
+    asins = await pickFromCache(brief.title, { max, count, cache });
+    if (asins.length < 4) {
+      console.error("cache fallback found fewer than 4 relevant products — deferring until the Canopy quota resets.");
+      process.exit(EXIT.DEFER);
+    }
+    console.log(`  picked from cache: ${asins.join(", ")}`);
+  } else {
     console.error(`discovery found no products for "${term}". Widen the term or raise --max.`);
     process.exit(EXIT.FAIL);
   }
-  const picked = found.slice(0, count);
-  const nowIso = new Date().toISOString();
-  for (const p of picked) {
-    cache.entries[p.asin] = {
-      verdict: "LIVE", title: p.title, checkedAt: nowIso,
-      price: p.price, priceValue: p.priceValue,
-      rating: p.rating, ratingsTotal: p.ratingsTotal,
-      priceCheckedAt: nowIso, priceSource: "canopy-search",
-    };
-  }
-  saveCache(cache);
-  asins = picked.map((p) => p.asin);
-  console.log(`  picked ${picked.length}:`);
-  for (const p of picked) console.log(`    ${p.asin}  ${p.price.padEnd(9)} ${String(p.rating ?? "-").padEnd(4)}★  ${p.title.slice(0, 52)}`);
 }
 
 if (!asins.length) {

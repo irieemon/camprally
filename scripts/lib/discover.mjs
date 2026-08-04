@@ -20,6 +20,7 @@
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { canopyKey } from "./price-source.mjs";
+import { quotaExhausted, markQuotaExhausted } from "./canopy-quota.mjs";
 
 const CACHE = new URL("../../state/discovery-cache.json", import.meta.url).pathname;
 const ENDPOINT = "https://graphql.canopyapi.co/";
@@ -68,6 +69,14 @@ export async function discover(term, { min, max, force = false, nowIso } = {}) {
   const apiKey = canopyKey();
   if (!apiKey) return [];
 
+  // The ledger already knows this month's quota is gone — throw the same
+  // QUOTA error a live 402 would produce, without spending the round-trip.
+  if (quotaExhausted()) {
+    const e = new Error("Canopy plan limit reached (cached) — resets on the 1st");
+    e.code = "QUOTA";
+    throw e;
+  }
+
   try {
     const res = await fetch(ENDPOINT, {
       method: "POST",
@@ -85,6 +94,7 @@ export async function discover(term, { min, max, force = false, nowIso } = {}) {
      * answers 402 / PLAN_LIMIT_EXCEEDED when the plan's requests run out.
      */
     if (res.status === 402 || err?.extensions?.code === "PLAN_LIMIT_EXCEEDED") {
+      markQuotaExhausted();
       const e = new Error("Canopy plan limit reached — add pay-as-you-go or wait for the monthly reset");
       e.code = "QUOTA";
       throw e;

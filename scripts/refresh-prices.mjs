@@ -41,13 +41,18 @@ const LIMIT = Number(args[args.indexOf("--limit") + 1]) || (ALL ? Infinity : 40)
  *
  * Budget maths against Canopy's 100 free requests/month for ~50 ASINs:
  *   every 20h  ~1,440 req/mo  ~$13.40/mo   too eager
- *   weekly       ~215 req/mo   ~$1.15/mo   good balance  <-- default
- *   monthly       ~50 req/mo      free     prices drift badly between runs
+ *   weekly       ~215 req/mo   ~$1.15/mo   needs pay-as-you-go billing
+ *   monthly       ~50 req/mo      free     prices drift between runs  <-- default
  *
- * Weekly is the default because it costs about a dollar a month and keeps
- * figures honest. Override with PRICE_STALE_HOURS to trade cost for freshness.
+ * Weekly was the original default, but it assumed pay-as-you-go billing that
+ * was never enabled — the account is hard-capped at 100/month, so weekly
+ * refreshes ate the whole allowance by the 4th and starved discovery, which is
+ * the call that actually unlocks publishing. Monthly keeps pricing inside the
+ * free tier (~50/mo) and leaves ~50/mo for discovery. The site already labels
+ * figures as indicative, and every product grid carries a price disclaimer.
+ * Override with PRICE_STALE_HOURS if pay-as-you-go is ever enabled.
  */
-const STALE_HOURS = Number(process.env.PRICE_STALE_HOURS) || 168;
+const STALE_HOURS = Number(process.env.PRICE_STALE_HOURS) || 720;
 
 function walk(dir) {
   return readdirSync(dir).flatMap((e) => {

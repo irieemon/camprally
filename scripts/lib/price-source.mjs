@@ -26,6 +26,7 @@
  */
 
 import { verifyAsin, extractTitle, UA } from "./amazon.mjs";
+import { quotaExhausted, markQuotaExhausted } from "./canopy-quota.mjs";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { readFileSync } from "node:fs";
@@ -62,6 +63,7 @@ export function canopyKey() {
 export async function fetchFromCanopy(asin) {
   const key = canopyKey();
   if (!key) return null;
+  if (quotaExhausted()) return null;
 
   const query =
     "query amazonProduct($asin: String!) { amazonProduct(input: {asin: $asin}) " +
@@ -74,8 +76,12 @@ export async function fetchFromCanopy(asin) {
       body: JSON.stringify({ query, variables: { asin } }),
       signal: AbortSignal.timeout(25_000),
     });
-    if (!res.ok) return null;
-    const json = await res.json();
+    const json = await res.json().catch(() => null);
+    if (res.status === 402 || json?.errors?.[0]?.extensions?.code === "PLAN_LIMIT_EXCEEDED") {
+      markQuotaExhausted();
+      return null;
+    }
+    if (!res.ok || !json) return null;
     if (json.errors?.length) return null;
 
     const p = json.data?.amazonProduct;

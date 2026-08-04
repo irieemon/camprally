@@ -150,7 +150,8 @@ const byPriority = (a, b) => {
 // Prefer something already specced; otherwise write one now. Discovery means a
 // spec no longer requires a human to go shopping first, so "no spec" stopped
 // being a reason to stop — it is just the next step.
-let next = pending.filter(hasSpec).sort(byPriority)[0];
+const ready = pending.filter(hasSpec).sort(byPriority);
+let next = ready[0];
 
 if (!next) {
   const target = [...pending].sort(byPriority)[0];
