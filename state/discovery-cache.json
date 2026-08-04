@@ -814,5 +814,237 @@
         "ratingsTotal": 11290
       }
     ]
+  },
+  "hiking boots camping|1|100": {
+    "term": "hiking boots camping",
+    "min": 1,
+    "max": 100,
+    "fetchedAt": "2026-08-04T20:00:28.322Z",
+    "results": [
+      {
+        "asin": "B0CGV7Z4XG",
+        "title": "Yebing Merino Wool Hiking Socks for Womens Thermal Warm Winter Boot Crew Cushion Cozy Thick Work Gift Socks 5 Pairs",
+        "price": "$7.99",
+        "priceValue": 7.99,
+        "rating": 4.7,
+        "ratingsTotal": 958
+      },
+      {
+        "asin": "B0CLWBTMBN",
+        "title": "Columbia Newton Ridge Plus II Suede Waterproof",
+        "price": "$66.00",
+        "priceValue": 66,
+        "rating": 4.6,
+        "ratingsTotal": 4801
+      },
+      {
+        "asin": "B0987Z4CHV",
+        "title": "Merrell Women's Moab 3 Mid Waterproof Hiking Boots",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.6,
+        "ratingsTotal": 3737
+      },
+      {
+        "asin": "B0CLWLDM39",
+        "title": "Columbia Transverse™ Hike Waterproof",
+        "price": "$59.49",
+        "priceValue": 59.49,
+        "rating": 4.6,
+        "ratingsTotal": 3069
+      },
+      {
+        "asin": "B0CLWLBB9P",
+        "title": "Columbia womens Newton Ridge Plus Waterproof Amped",
+        "price": "$90.23",
+        "priceValue": 90.23,
+        "rating": 4.6,
+        "ratingsTotal": 3065
+      },
+      {
+        "asin": "B0CLVYVP56",
+        "title": "Columbia Women's Newton Ridge Plus Waterproof Hiking Boots",
+        "price": "$86.75",
+        "priceValue": 86.75,
+        "rating": 4.6,
+        "ratingsTotal": 1892
+      },
+      {
+        "asin": "B081DY9881",
+        "title": "SEEKWAY Water Shoes Men Women Adult Quick-Dry Aqua Sock Barefoot for Beach Swim River Pool Lake Hiking Kayaking Surfing",
+        "price": "$16.98",
+        "priceValue": 16.98,
+        "rating": 4.5,
+        "ratingsTotal": 17222
+      },
+      {
+        "asin": "B0CHDHDK1D",
+        "title": "NORTIV 8 Women's Waterproof Hiking Boots Trekking",
+        "price": "$57.99",
+        "priceValue": 57.99,
+        "rating": 4.5,
+        "ratingsTotal": 6145
+      },
+      {
+        "asin": "B0CR36DWSG",
+        "title": "NORTIV 8 Men's Waterproof Military Tactical Work Boots",
+        "price": "$52.99",
+        "priceValue": 52.99,
+        "rating": 4.5,
+        "ratingsTotal": 2261
+      },
+      {
+        "asin": "B0BFPV4XHT",
+        "title": "NORTIV 8 Women's Lightweight Ankle Hiking Boots Backpacking",
+        "price": "$43.19",
+        "priceValue": 43.19,
+        "rating": 4.5,
+        "ratingsTotal": 1718
+      },
+      {
+        "asin": "B0CBS4F96J",
+        "title": "SIMIYA 5 Pairs Merino Wool Socks for Men, Super Thick Hiking Thermal Socks for Cold Weather",
+        "price": "$12.99",
+        "priceValue": 12.99,
+        "rating": 4.5,
+        "ratingsTotal": 1419
+      },
+      {
+        "asin": "B0DTHXD39H",
+        "title": "NORTIV 8 Men's Lightweight Breathable Hiking Boots",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.5,
+        "ratingsTotal": 682
+      },
+      {
+        "asin": "B0DK7QGTHX",
+        "title": "Columbia Men's Strata Trail Mid Waterproof Hiking Boot",
+        "price": "$64.19",
+        "priceValue": 64.19,
+        "rating": 4.5,
+        "ratingsTotal": 636
+      },
+      {
+        "asin": "B0D96295XB",
+        "title": "FREE SOLDIER Hiking Work Boots Women's Tactical Boots 6 Inches Lightweight Waterproof Military Boots Outdoors Desert Boots",
+        "price": "$60.99",
+        "priceValue": 60.99,
+        "rating": 4.5,
+        "ratingsTotal": 297
+      },
+      {
+        "asin": "B07L58Z27Z",
+        "title": "NORTIV 8 Men's Ankle High Waterproof Hiking Boots",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.4,
+        "ratingsTotal": 23240
+      },
+      {
+        "asin": "B07PCJK9KG",
+        "title": "NORTIV 8 Men's Mid Top Waterproof Hiking Boots",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.4,
+        "ratingsTotal": 6731
+      },
+      {
+        "asin": "B082WSL5B8",
+        "title": "FREE SOLDIER Men's Durable Work Boots 6 Inches Lightweight Waterproof Hiking Boots Suede Leather Tactical Boots",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.4,
+        "ratingsTotal": 5847
+      },
+      {
+        "asin": "B09L47W128",
+        "title": "Men's Waterproof Hiking Boots Non-Slip Lightweight Mid Top Ankle Boot Breathable Hiker Trekking Shoes",
+        "price": "$42.99",
+        "priceValue": 42.99,
+        "rating": 4.4,
+        "ratingsTotal": 1453
+      },
+      {
+        "asin": "B0F4KLST2C",
+        "title": "Women's Deck Boots, Waterproof Ankle Rain Boots with Anti-Slip Traction, Rubber Garden & Fishing Boots for Boating, Camping, Farming & Outdoor Work",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 1060
+      },
+      {
+        "asin": "B0DZNJSXYG",
+        "title": "NORTIV 8 Women's Hiking Boots Waterproof Lightweight",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.4,
+        "ratingsTotal": 338
+      },
+      {
+        "asin": "B0GD1GMXY3",
+        "title": "Women's Waterproof Hiking Boots Lightweight Comfortable Non-Slip Outdoor Walking Trekking Trails Boot",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.4,
+        "ratingsTotal": 102
+      },
+      {
+        "asin": "B07L5HG22Z",
+        "title": "NORTIV 8 Men's Low Top Waterproof Hiking Shoes",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.2,
+        "ratingsTotal": 7940
+      },
+      {
+        "asin": "B095WFVPWX",
+        "title": "CARENURSE Mens Lightweight Hiking Boots Water Resistant Mid Ankle Work Casual Hiker Trekking Outdoor Boots Anti Slip Hiking Shoes",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.2,
+        "ratingsTotal": 2342
+      },
+      {
+        "asin": "B0FNS63PTD",
+        "title": "Amazon Essentials Men's Waterproof Hiking Boot with Memory Foam Insole",
+        "price": "$31.23",
+        "priceValue": 31.23,
+        "rating": 4.2,
+        "ratingsTotal": 194
+      },
+      {
+        "asin": "B0FNFZX154",
+        "title": "Women's Waterproof Wide Toe Box Hiking Boots",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.2,
+        "ratingsTotal": 86
+      },
+      {
+        "asin": "B0DTHJDTSS",
+        "title": "Women's Lace-Up Work Hiking Combat Ankle Boots",
+        "price": "$34.19",
+        "priceValue": 34.19,
+        "rating": 4,
+        "ratingsTotal": 6265
+      },
+      {
+        "asin": "B09TS1WH9J",
+        "title": "HI-TEC Yosemite Men's Waterproof Hiking Boots - Dark Green, 9 Medium",
+        "price": "$34.95",
+        "priceValue": 34.95,
+        "rating": 3.9,
+        "ratingsTotal": 72
+      },
+      {
+        "asin": "B0FX8J2BP5",
+        "title": "Men's Hiking Boots Waterproof Lightweight Non-Slip Trekking Boot",
+        "price": "$16.14",
+        "priceValue": 16.14,
+        "rating": 3.7,
+        "ratingsTotal": 88
+      }
+    ]
   }
 }
