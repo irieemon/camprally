@@ -50,12 +50,34 @@ function run(args) {
   }
 }
 
+/**
+ * Write the receipt, then commit it together with whatever the run changed.
+ *
+ * Receipt first, commit second, both inside one exit path — the first cut
+ * committed in a separate step before finish() wrote the receipt, so every
+ * receipt landed untracked and the repo never recorded that prices had been
+ * checked. A heartbeat nobody can see is not a heartbeat.
+ */
 function finish(outcome, detail, code = 0) {
   const receipt = { startedAt, finishedAt: new Date().toISOString(), outcome, ...detail };
   if (!DRY) {
     mkdirSync(RUNS, { recursive: true });
     writeFileSync(`${RUNS}/${stamp}.json`, JSON.stringify(receipt, null, 2) + "\n");
     writeFileSync(`${ROOT}state/last-price-run.json`, JSON.stringify(receipt, null, 2) + "\n");
+
+    const paths = ["state/", "src/data/catalog.json"];
+    try {
+      sh("git", ["add", ...paths]);
+      if (sh("git", ["status", "--porcelain", ...paths])) {
+        sh("git", ["commit", "-m",
+          `chore(prices): ${outcome} — ${detail.displayable ?? "?"}/${detail.products ?? "?"} products with a current price`]);
+        receipt.commit = sh("git", ["rev-parse", "--short", "HEAD"]);
+        if (PUSH) sh("git", ["push", "origin", "HEAD"]);
+      }
+    } catch (err) {
+      // Never let a git failure mask the price outcome it was reporting.
+      console.error(`(receipt commit failed, continuing: ${err.message?.slice(0, 160)})`);
+    }
   }
   console.log(`\n=== ${outcome.toUpperCase()} ===`);
   console.log(JSON.stringify(receipt, null, 2));
@@ -91,34 +113,20 @@ if (DRY) {
   finish("current", { reason: "dry-run", products: products.length, priced: priced.length, displayable, priceClaims });
 }
 
-// ── step 3: commit only if something actually moved ───────────────────────
-let committed = null;
-const paths = ["state/asin-cache.json", "src/data/catalog.json", "state/"];
-try {
-  sh("git", ["add", ...paths]);
-  if (sh("git", ["status", "--porcelain", ...paths])) {
-    sh("git", ["commit", "-m",
-      `chore(prices): refresh — ${displayable}/${products.length} products with a current price`]);
-    committed = sh("git", ["rev-parse", "--short", "HEAD"]);
-    if (PUSH) sh("git", ["push", "origin", "HEAD"]);
-  }
-} catch (err) {
-  finish("degraded", {
-    reason: "commit-failed",
-    message: (err.message ?? "").slice(0, 300),
-    products: products.length, displayable, priceClaims,
-  }, 1);
-}
+// ── step 3: record (finish commits the receipt alongside any price changes) ─
+/* Did any price actually move? The receipt itself changes every run, so asking
+ * "was there a commit" would report every run as a refresh and make a stuck
+ * price source indistinguishable from a quiet week. Ask the catalog instead. */
+const catalogChanged = Boolean(sh("git", ["status", "--porcelain", "src/data/catalog.json"]));
 
 finish(
-  degraded ? "degraded" : committed ? "refreshed" : "current",
+  degraded ? "degraded" : catalogChanged ? "refreshed" : "current",
   {
     ...(degraded ? { reason: "price-source-unavailable" } : {}),
     products: products.length,
     priced: priced.length,
     displayable,
     stale: priced.length - displayable,
-    commit: committed,
     priceClaims,
   },
 );
