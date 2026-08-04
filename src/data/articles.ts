@@ -15,7 +15,7 @@ export const articles: Article[] = [
     id: "art-002",
     slug: "cheapest-camping-setup-for-beginners",
     title: "Cheapest Camping Setup for Beginners (Complete Guide)",
-    excerpt: "You can start camping with gear you might already own. This guide shows exactly what to buy and what to skip to camp for under $200 total.",
+    excerpt: "You can start camping with gear you might already own. This guide shows exactly what to buy and what to skip to get a complete setup for a fraction of what a gear shop will sell you.",
     category: "Essentials",
     date: "2026-04-02",
     author: "Camp Rally Team",
@@ -23,9 +23,9 @@ export const articles: Article[] = [
     content: `
 # Cheapest Camping Setup for Beginners (Complete Guide)
 
-The camping industry wants you to think you need $1,000 in gear to sleep outside. You don't. Here's how to camp comfortably for under $200.
+The camping industry wants you to think you need a four-figure gear haul to sleep outside. You don't. Here's a complete setup built from the cheapest gear that actually works — the running total is shown above, priced live.
 
-## The $200 Challenge
+## The Budget Challenge
 
 We believe everyone deserves to experience the outdoors. So we designed this setup to maximize quality while minimizing cost. Every item on this list has been field-tested and delivers genuine value.
 
@@ -777,7 +777,7 @@ A camping knife needs:
 3. **Sharpen when dull** - A sharp knife is safer than a dull one
 4. **Store safely** - Sheet metal screw block works great
 
-**[Shop Knives on Amazon](https://www.amazon.com/dp/B0BXMW1TJ9?tag=camprally-20)**
+**[Check the Mora Companion on Amazon](https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20)**
 
 ---
 

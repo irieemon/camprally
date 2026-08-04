@@ -76,8 +76,8 @@ function finish(outcome, detail, code) {
     // Best-effort heartbeat commit. Never let this failure mask the real
     // outcome — a heartbeat that changes the exit code is worse than none.
     try {
-      sh("git", ["add", "state/", "src/data/prices.json"]);
-      if (sh("git", ["status", "--porcelain", "state/", "src/data/prices.json"])) {
+      sh("git", ["add", "state/", "src/data/catalog.json"]);
+      if (sh("git", ["status", "--porcelain", "state/", "src/data/catalog.json"])) {
         sh("git", ["commit", "-m", `chore(heartbeat): ${outcome} — ${detail.reason ?? detail.slug ?? ""}`.trim()]);
         if (PUSH) sh("git", ["push", "origin", "HEAD"]);
       }
@@ -101,7 +101,7 @@ if (existsSync(PAUSE)) {
 // the price snapshot are all written by cycles (a --dry-run legitimately
 // leaves a spec behind) and are committed by the publish step anyway. Before
 // this exclusion, a dry-run wedged every real cycle that followed it.
-const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/prices.json", ":!public/images/heroes"]);
+const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!public/images/heroes"]);
 if (dirty) {
   finish("blocked", {
     reason: "working-tree-dirty",
@@ -129,7 +129,7 @@ if (refreshCode === EXIT.FAIL) {
 
 // ── step 2b: refresh prices ───────────────────────────────────────────────
 // Runs every cycle regardless of whether anything publishes, because stale
-// prices are a problem on their own. src/data/prices.json is committed below,
+// prices are a problem on their own. src/data/catalog.json is committed below,
 // so a refresh alone triggers a Vercel rebuild and the site shows current
 // figures. Failure here is never fatal: pages fall back to the copy already in
 // the article, which is exactly what they did before live pricing existed.
@@ -257,7 +257,7 @@ if (pubCode !== EXIT.OK) {
 }
 
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
-sh("git", ["add", "src/data/articles.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/prices.json", "public/images/heroes", specPath]);
+sh("git", ["add", "src/data/articles.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "public/images/heroes", specPath]);
 sh("git", ["commit", "-m",
   `Publish ${next.slug}\n\n` +
   `Generated from specs/${next.slug}.json. All affiliate ASINs verified live\n` +

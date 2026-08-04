@@ -12,7 +12,7 @@ import {
   Zap, ChevronRight
 } from "lucide-react";
 import Image from "next/image";
-import priceData from "@/data/prices.json";
+import catalogData from "@/data/catalog.json";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -51,50 +51,6 @@ const HERO_IMAGES: Record<string, string> = {
 // ─────────────────────────────────────────
 // PRODUCT IMAGE MAP — curated Unsplash per product
 // ─────────────────────────────────────────
-const PRODUCT_IMAGES: Record<string, string> = {
-  "Coleman Sundome":   "https://m.media-amazon.com/images/I/71wxEg6ubCL._AC_SX522_.jpg",
-  "Coleman Brazos":    "https://m.media-amazon.com/images/I/51vlA6jfWIL._AC_SX522_.jpg",
-  "Klymit Static V":   "https://m.media-amazon.com/images/I/71wxEg6ubCL._AC_SX522_.jpg",
-  "Stanley Adventure": "https://m.media-amazon.com/images/I/51a3DUF2sSS._AC_SX522_.jpg",
-  "Etekcity":          "https://m.media-amazon.com/images/I/610qZd12x2L._AC_SX522_.jpg",
-  "Vont":              "https://m.media-amazon.com/images/I/712y7mLA6hL._AC_SX522_.jpg",
-  "Nalgene":           "https://m.media-amazon.com/images/I/71+6fBZY8hL._AC_SX500_.jpg",
-  "Sawyer Squeeze":    "https://m.media-amazon.com/images/I/71PlK2Jo5uL._SX385_.jpg",
-  "Sawyer":           "https://m.media-amazon.com/images/I/71PlK2Jo5uL._SX385_.jpg",
-  "Adventure Medical Kits UltraLite .5": "https://m.media-amazon.com/images/I/81Tk3JSPj0L._AC_SX425_.jpg",
-  "Coleman 150-Piece First Aid Kit":   "https://m.media-amazon.com/images/I/51ka5kDixML._AC_SX425_.jpg",
-  "Adventure Medical Kits UltraLite .7": "https://m.media-amazon.com/images/I/81Tk3JSPj0L._AC_SX425_.jpg",
-  "LifeStraw":         "https://m.media-amazon.com/images/I/51OPsnwrAlL._AC_SX522_.jpg",
-  "Trekology":         "https://m.media-amazon.com/images/I/61eyQ-3nd6L._AC_SX569_.jpg",
-  "KingCamp":          "https://m.media-amazon.com/images/I/71m2gpEVqOL._AC_SX500_.jpg",
-  "Gerber Suspension": "https://m.media-amazon.com/images/I/71tYG5COZJL._AC_SX500_.jpg",
-  "Gerber":           "https://m.media-amazon.com/images/I/71tYG5COZJL._AC_SX500_.jpg",
-  "Mora Companion":    "https://m.media-amazon.com/images/I/71t-IH33+EL._AC_SX500_.jpg",
-  "Frogg Toggs":       "https://m.media-amazon.com/images/I/614EqcO607L._AC_SX500_.jpg",
-  "Garmin eTrex":      "https://m.media-amazon.com/images/I/81dYryjmJrL._AC_SX500_.jpg",
-  "Suunto A-10":       "https://m.media-amazon.com/images/I/61SgLIozPML._AC_SX500_.jpg",
-  "Black Diamond Spot":"https://m.media-amazon.com/images/I/71k9Wp9GSgL._AC_SX500_.jpg",
-  "Teton Sports":      "https://m.media-amazon.com/images/I/61LlExSoJZL._AC_SX500_.jpg",
-  "Kelty Discovery":   "https://m.media-amazon.com/images/I/51nj6QWuvmL._AC_SX500_.jpg",
-  "Oaskys":           "https://m.media-amazon.com/images/I/61NoEvvZFvL._AC_SX500_.jpg",
-  "Hikenture":        "https://m.media-amazon.com/images/I/71lBmi2HKHL._AC_SX500_.jpg",
-  "MalloMe":          "https://m.media-amazon.com/images/I/71RGU401z2L._AC_SX522_.jpg",
-  "GSI Outdoors":     "https://m.media-amazon.com/images/I/51JI6xyNDjL._AC_SX522_.jpg",
-  "Coleman Classic":  "https://m.media-amazon.com/images/I/81otNA0+kZL._AC_SX522_.jpg",
-  "Camp Chef":        "https://m.media-amazon.com/images/I/71loHxug5jL._AC_SX522_.jpg",
-  "LuminAID":         "https://m.media-amazon.com/images/I/61TVlossveL._AC_SX500_.jpg",
-  "Fiskars":         "https://m.media-amazon.com/images/I/71t-IH33+EL._AC_SX500_.jpg",
-  "Rhino":           "https://m.media-amazon.com/images/I/71kE64DEdzL._AC_SX500_.jpg",
-  "Darn Tough":      "https://m.media-amazon.com/images/I/91l7a9YvMPS._AC_SX500_.jpg",
-  "Sea to Summit":    "https://m.media-amazon.com/images/I/51xTmic5vPL._AC_SX500_.jpg",
-  "Coghlan":         "https://m.media-amazon.com/images/I/414ee+Glp9L._AC_SX500_.jpg",
-  "Rechargeable Camping Fan with LED Lantern":  "https://m.media-amazon.com/images/I/71lk2Ru-DKL._AC_SY450_.jpg",
-  "Featwell 20000mAh Portable Fan":            "https://m.media-amazon.com/images/I/61YpIu2hnBL._AC_SX522_.jpg",
-  "AJVV Camping Fan with Light and Oscillation": "https://m.media-amazon.com/images/I/81yMwCcvOxL._AC_SY450_.jpg",
-  "Camping Fan Rechargeable 20000mAh":         "https://m.media-amazon.com/images/I/71oDT0xruCL._AC_SX522_.jpg",
-  "ATEngeus USB Desk Fan":                     "https://m.media-amazon.com/images/I/71LdtjM6e1L._AC_SY300_SX300_QL70_ML2_.jpg",
-  "default":          "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=80",
-};
 
 // ─────────────────────────────────────────
 // PER-ARTICLE CUSTOM SECTIONS
@@ -104,13 +60,13 @@ interface CustomSection {
   title?: string;
   subtitle?: string;
   icon?: string;
-  items?: Array<{ label: string; detail?: string; note?: string; link?: string; icon?: string; category?: string }>;
+  items?: Array<{ label: string; link?: string; icon?: string; category?: string; asin?: string }>;
   checkItems?: string[];
   calloutType?: "save" | "splurge" | "tip" | "warning";
   calloutTitle?: string;
   calloutBody?: string;
   stats?: Array<{ value: string; label: string }>;
-  spotlightItem?: { name: string; price: string; rating: string; why: string; category: string };
+  spotlightItem?: { name: string; asin?: string; why: string; category: string };
   tips?: Array<{ title: string; body: string }>;
   rows?: string[][];
 }
@@ -121,12 +77,12 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Best Hiking Boots for Camping Under $100 — Tested on Real Trails — Quick Comparison",
       items: [
-        { label: "Yebing Merino Wool Hiking Socks fo", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CGV7Z4XG?tag=camprally-20" },
-        { label: "Columbia Newton Ridge Plus II Sued", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWBTMBN?tag=camprally-20" },
-        { label: "Merrell Women's Moab 3 Mid Waterpr", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0987Z4CHV?tag=camprally-20" },
-        { label: "Columbia Transverse™ Hike Waterpro", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWLDM39?tag=camprally-20" },
-        { label: "Columbia womens Newton Ridge Plus ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWLBB9P?tag=camprally-20" },
-        { label: "Columbia Women's Newton Ridge Plus", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLVYVP56?tag=camprally-20" },
+        { label: "Yebing Merino Wool Hiking Socks fo", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CGV7Z4XG?tag=camprally-20" },
+        { label: "Columbia Newton Ridge Plus II Sued", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWBTMBN?tag=camprally-20" },
+        { label: "Merrell Women's Moab 3 Mid Waterpr", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0987Z4CHV?tag=camprally-20" },
+        { label: "Columbia Transverse™ Hike Waterpro", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWLDM39?tag=camprally-20" },
+        { label: "Columbia womens Newton Ridge Plus ", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLWLBB9P?tag=camprally-20" },
+        { label: "Columbia Women's Newton Ridge Plus", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CLVYVP56?tag=camprally-20" },
       ]
     },
   ],
@@ -135,12 +91,12 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "How to Camp in Hot Weather Without Melting — Fan, Hydration, and Shade Strategies — Quick Comparison",
       items: [
-        { label: "20000mAh Auto-Oscillating Battery ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20" },
-        { label: "Nalgene Wide Mouth Water Bottle", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
-        { label: "Igloo BMX 52 Quart Cooler - Carbon", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B01M6XFW5P?tag=camprally-20" },
-        { label: "Featwell 20000mAh Portable Fan wit", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20" },
-        { label: "Squeeze Water Filtration System", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
-        { label: "AJVV Camping Fan with Light", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20" },
+        { label: "20000mAh Auto-Oscillating Battery ", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20" },
+        { label: "Nalgene Wide Mouth Water Bottle", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
+        { label: "Igloo BMX 52 Quart Cooler - Carbon", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B01M6XFW5P?tag=camprally-20" },
+        { label: "Featwell 20000mAh Portable Fan wit", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20" },
+        { label: "Squeeze Water Filtration System", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
+        { label: "AJVV Camping Fan with Light", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20" },
       ]
     },
   ],
@@ -149,12 +105,12 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Budget Camping Accessories Under $20 — Quick Comparison",
       items: [
-        { label: "Ayaport Campsite Storage Strap Ten", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DT3X133H?tag=camprally-20" },
-        { label: "LifeStraw Personal — Water Filter ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
-        { label: "QIO CHUANG Emergency Mylar Thermal", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B07GLCYR5S?tag=camprally-20" },
-        { label: "Emergency Blanket Mylar Thermal Sp", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B098KJMMGC?tag=camprally-20" },
-        { label: "SZHLUX Camping Hammock Double & Si", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B09VGNJTPW?tag=camprally-20" },
-        { label: "Outdoor Knot Cards: 22 Knots – Cam", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B07VVT97RB?tag=camprally-20" },
+        { label: "Ayaport Campsite Storage Strap Ten", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DT3X133H?tag=camprally-20" },
+        { label: "LifeStraw Personal — Water Filter ", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "QIO CHUANG Emergency Mylar Thermal", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B07GLCYR5S?tag=camprally-20" },
+        { label: "Emergency Blanket Mylar Thermal Sp", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B098KJMMGC?tag=camprally-20" },
+        { label: "SZHLUX Camping Hammock Double & Si", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B09VGNJTPW?tag=camprally-20" },
+        { label: "Outdoor Knot Cards: 22 Knots – Cam", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B07VVT97RB?tag=camprally-20" },
       ]
     },
   ],
@@ -163,11 +119,11 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Best Budget Tents Under $100 - 2026 Reviews — Quick Comparison",
       items: [
-        { label: "2/4 Person Camping Tent Lightweigh", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B08RBW95BC?tag=camprally-20" },
-        { label: "Amazon Basics Camping Tent", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B077Y8DLSN?tag=camprally-20" },
-        { label: "Forceatt Camping Tent 2/3/4 Person", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B083QX3D3Z?tag=camprally-20" },
-        { label: "Camping Tent 2-4 Person", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CNQPR1CS?tag=camprally-20" },
-        { label: "Coleman Sundome Camping Tent with ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0D7QLQNS5?tag=camprally-20" },
+        { label: "2/4 Person Camping Tent Lightweigh", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B08RBW95BC?tag=camprally-20" },
+        { label: "Amazon Basics Camping Tent", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B077Y8DLSN?tag=camprally-20" },
+        { label: "Forceatt Camping Tent 2/3/4 Person", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B083QX3D3Z?tag=camprally-20" },
+        { label: "Camping Tent 2-4 Person", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CNQPR1CS?tag=camprally-20" },
+        { label: "Coleman Sundome Camping Tent with ", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0D7QLQNS5?tag=camprally-20" },
       ]
     },
   ],
@@ -176,12 +132,12 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Best Camping Chairs Under $50 for Tailgating and Campfires — Quick Comparison",
       items: [
-        { label: "Coleman Portable Camping Chair wit", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0033990ZQ?tag=camprally-20" },
-        { label: "ONETIGRIS Tigerblade Camping Chair", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CQJR8NLW?tag=camprally-20" },
-        { label: "VEVOR Oversized Camping Folding Ch", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0C9MF8L3N?tag=camprally-20" },
-        { label: "EMERIT Camping Chair", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DFPH7K8C?tag=camprally-20" },
-        { label: "Amazon Basics Camping Chair", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B074YRN643?tag=camprally-20" },
-        { label: "Cascade Mountain Tech Folding Camp", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B01EVQ1Y6W?tag=camprally-20" },
+        { label: "Coleman Portable Camping Chair wit", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0033990ZQ?tag=camprally-20" },
+        { label: "ONETIGRIS Tigerblade Camping Chair", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CQJR8NLW?tag=camprally-20" },
+        { label: "VEVOR Oversized Camping Folding Ch", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0C9MF8L3N?tag=camprally-20" },
+        { label: "EMERIT Camping Chair", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DFPH7K8C?tag=camprally-20" },
+        { label: "Amazon Basics Camping Chair", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B074YRN643?tag=camprally-20" },
+        { label: "Cascade Mountain Tech Folding Camp", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B01EVQ1Y6W?tag=camprally-20" },
       ]
     },
   ],
@@ -190,11 +146,11 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Best Camping Coolers Under $100 in 2026 — Stay Cold, Stay Happy — Quick Comparison",
       items: [
-        { label: "Klein Tools 55600 Work Cooler", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B06XGJTTRY?tag=camprally-20" },
-        { label: "ENGEL 13qt Leak-Proof", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B00BD26JMM?tag=camprally-20" },
-        { label: "Igloo Hard Cooler | Profile Series", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0GP2JLJT3?tag=camprally-20" },
-        { label: "Igloo Hard Cooler | Profile Series", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0GP3M7SSR?tag=camprally-20" },
-        { label: "Igloo Tag Along Too Coolers | Insu", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CPM9BMWG?tag=camprally-20" },
+        { label: "Klein Tools 55600 Work Cooler", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B06XGJTTRY?tag=camprally-20" },
+        { label: "ENGEL 13qt Leak-Proof", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B00BD26JMM?tag=camprally-20" },
+        { label: "Igloo Hard Cooler | Profile Series", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0GP2JLJT3?tag=camprally-20" },
+        { label: "Igloo Hard Cooler | Profile Series", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0GP3M7SSR?tag=camprally-20" },
+        { label: "Igloo Tag Along Too Coolers | Insu", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CPM9BMWG?tag=camprally-20" },
       ]
     },
   ],
@@ -213,13 +169,13 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "The Essential 7 Items",
       subtitle: "You genuinely need just seven things to camp. Everything else is optional.",
       items: [
-        { label: "Coleman Sundome 2P Tent", detail: "$49.99", note: "4.4★", category: "Shelter", icon: "⛺", link: "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20" },
-        { label: "Coleman Brazos 30°F Sleeping Bag", detail: "$24.99", note: "4.3★", category: "Sleeping Bag", icon: "🛏️", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
-        { label: "Klymit Static V Sleeping Pad", detail: "$44.99", note: "4.5★", category: "Sleeping Pad", icon: "💤", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
-        { label: "Stanley Adventure Camp Cook Set", detail: "$29.99", note: "4.6★", category: "Cooking", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
-        { label: "Etekcity Ultralight Stove", detail: "$12.99", note: "4.4★", category: "Stove", icon: "🔥", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
-        { label: "Vont 4-Pack LED Lanterns", detail: "$14.99", note: "4.6★", category: "Lighting", icon: "💡", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
-        { label: "Nalgene 32oz Water Bottle", detail: "$14.99", note: "4.7★", category: "Water", icon: "💧", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
+        { label: "Coleman Sundome 2P Tent", category: "Shelter", icon: "⛺", link: "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20" },
+        { label: "Coleman Brazos 30°F Sleeping Bag", category: "Sleeping Bag", icon: "🛏️", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
+        { label: "Klymit Static V Sleeping Pad", category: "Sleeping Pad", icon: "💤", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
+        { label: "Stanley Adventure Camp Cook Set", category: "Cooking", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
+        { label: "Etekcity Ultralight Stove", category: "Stove", icon: "🔥", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
+        { label: "Vont 4-Pack LED Lanterns", category: "Lighting", icon: "💡", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
+        { label: "Nalgene 32oz Water Bottle", category: "Water", icon: "💧", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
       ]
     },
     {
@@ -244,8 +200,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Coleman Sundome 2P",
-        price: "$49.99",
-        rating: "4.4/5",
+        asin: "B014LSDUA8",
         why: "The benchmark budget tent. WeatherTec™ system, 10-minute setup, and genuine 2-person capacity. Backed by Coleman reliability.",
         category: "Tent"
       }
@@ -274,8 +229,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Teton Sports Celsius Regular",
-        price: "$34.99",
-        rating: "4.5/5",
+        asin: "B0D88VH3XN",
         why: "Genuine 0°F cold-weather performance at a fraction of the price. Mummy design traps heat efficiently, snag-free zipper, and lifetime warranty. The obvious choice for cold nights.",
         category: "Sleeping Bag"
       }
@@ -284,9 +238,9 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Cold Weather Picks",
       items: [
-        { label: "Teton Sports Celsius (0°F)", detail: "$34.99", note: "4.5★", category: "Best Overall", icon: "🥶", link: "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20" },
-        { label: "Coleman Brazos 30°F", detail: "$24.99", note: "4.3★", category: "Most Affordable", icon: "💰", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
-        { label: "Oaskys 3-Season", detail: "$27.99", note: "4.1★", category: "Ultralight", icon: "🪶", link: "https://www.amazon.com/s?k=oaskys+3+season+sleeping+bag&tag=camprally-20" },
+        { label: "Teton Sports Celsius (0°F)", category: "Best Overall", icon: "🥶", link: "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20" },
+        { label: "Coleman Brazos 30°F", category: "Most Affordable", icon: "💰", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
+        { label: "Oaskys 3-Season", category: "Ultralight", icon: "🪶", link: "https://www.amazon.com/s?k=oaskys+3+season+sleeping+bag&tag=camprally-20" },
       ]
     },
     {
@@ -312,8 +266,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Stanley Adventure Camp Cook Set",
-        price: "$29.99",
-        rating: "4.6/5",
+        asin: "B0C79G8L6S",
         why: "24oz pot, two cups, and lid/pan nest perfectly. Stainless steel handles don't melt over open flame. The best value in camping cookware. Period.",
         category: "Cookware"
       }
@@ -322,9 +275,9 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Cookware Picks",
       items: [
-        { label: "Stanley Adventure Camp Cook Set", detail: "$29.99", note: "4.6★", category: "Best Pick", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
-        { label: "MalloMe Camping Cookware Mess Kit", detail: "$22.99", note: "4.4★", category: "Budget Runner-Up", icon: "💰", link: "https://www.amazon.com/s?k=MalloMe+camping+cookware+mess+kit&tag=camprally-20" },
-        { label: "GSI Cascadian 1-Person Table Set", detail: "$18.99", note: "4.2★", category: "Solo", icon: "🎒", link: "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20" },
+        { label: "Stanley Adventure Camp Cook Set", category: "Best Pick", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
+        { label: "MalloMe Camping Cookware Mess Kit", category: "Budget Runner-Up", icon: "💰", link: "https://www.amazon.com/s?k=MalloMe+camping+cookware+mess+kit&tag=camprally-20" },
+        { label: "GSI Cascadian 1-Person Table Set", category: "Solo", icon: "🎒", link: "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20" },
       ]
     },
     {
@@ -340,8 +293,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Black Diamond Spot 400",
-        price: "$39.99",
-        rating: "4.5/5",
+        asin: "B09NQK2581",
         why: "400 lumens handles trail running, camp chores, and reading. PowerTap technology switches modes instantly. IPX67 waterproof and 200+ hour battery life on low.",
         category: "Headlamp"
       }
@@ -350,8 +302,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Lighting Picks",
       items: [
-        { label: "Black Diamond Spot 400", detail: "$39.99", note: "4.5★", category: "Headlamp", icon: "🔦", link: "https://www.amazon.com/dp/B09NQK2581?tag=camprally-20" },
-        { label: "Vont 4-Pack LED Lanterns", detail: "$14.99", note: "4.6★", category: "Lantern 4-pack", icon: "🏮", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
+        { label: "Black Diamond Spot 400", category: "Headlamp", icon: "🔦", link: "https://www.amazon.com/dp/B09NQK2581?tag=camprally-20" },
+        { label: "Vont 4-Pack LED Lanterns", category: "Lantern 4-pack", icon: "🏮", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
       ]
     },
     {
@@ -367,8 +319,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Klymit Static V",
-        price: "$44.99",
-        rating: "4.5/5",
+        asin: "B082429QGK",
         why: "V-chamber design limits air movement and heat loss. 4.7/5 rating across 10,000+ reviews. Packs to water bottle size with lifetime warranty. The gold standard of budget pads.",
         category: "Sleeping Pad"
       }
@@ -377,10 +328,10 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Sleeping Pad Picks",
       items: [
-        { label: "Klymit Static V", detail: "$44.99", note: "4.5★", category: "Best Pick", icon: "💤", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
-        { label: "Hikenture Ultralight Sleeping Pad", detail: "$35.99", note: "4.3★", category: "Self-Inflating", icon: "🎈", link: "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20" },
-        { label: "Thermarest Z Lite Sol", detail: "$54.99", note: "4.6★", category: "Foam Classic", icon: "🧱", link: "https://www.amazon.com/dp/B0CN4R2QS2?tag=camprally-20" },
-        { label: "Amazon Basics Foam Pad", detail: "$12.99", note: "3.9★", category: "Backup", icon: "🪵", link: "https://www.amazon.com/dp/B0FD97YGX6?tag=camprally-20" },
+        { label: "Klymit Static V", category: "Best Pick", icon: "💤", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
+        { label: "Hikenture Ultralight Sleeping Pad", category: "Self-Inflating", icon: "🎈", link: "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20" },
+        { label: "Thermarest Z Lite Sol", category: "Foam Classic", icon: "🧱", link: "https://www.amazon.com/dp/B0CN4R2QS2?tag=camprally-20" },
+        { label: "Amazon Basics Foam Pad", category: "Backup", icon: "🪵", link: "https://www.amazon.com/dp/B0FD97YGX6?tag=camprally-20" },
       ]
     },
     {
@@ -396,8 +347,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Etekcity Ultralight Portable Stove",
-        price: "$12.99",
-        rating: "4.4/5",
+        asin: "B07VYNRKCS",
         why: "Piezo ignition means no lighter needed. Adjustable flame gives cooking control. 3.9 oz and folds to pocket size. This stove rivals units many times its price.",
         category: "Stove"
       }
@@ -406,9 +356,9 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Stove Picks",
       items: [
-        { label: "Etekcity Ultralight Portable Stove", detail: "$12.99", note: "4.4★", category: "Best Budget", icon: "🔥", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
-        { label: "Coleman Classic Propane Stove", detail: "$54.99", note: "4.6★", category: "Upgrade Pick", icon: "🍳", link: "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20" },
-        { label: "Jetboil Zip", detail: "$79.99", note: "4.5★", category: "Backpacking", icon: "🎒", link: "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20" },
+        { label: "Etekcity Ultralight Portable Stove", category: "Best Budget", icon: "🔥", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
+        { label: "Coleman Classic Propane Stove", category: "Upgrade Pick", icon: "🍳", link: "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20" },
+        { label: "Jetboil Zip", category: "Backpacking", icon: "🎒", link: "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20" },
       ]
     },
     {
@@ -428,8 +378,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Sawyer Products Squeeze Filter",
-        price: "$37.99",
-        rating: "4.7/5",
+        asin: "B0DVHL8FG4",
         why: "0.1-micron absolute pore size removes 99.99999% of bacteria and 99.9999% of protozoa. 100,000 gallon lifespan = essentially forever. Weighs 3 oz.",
         category: "Water Filter"
       }
@@ -438,8 +387,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Water Filtration Picks",
       items: [
-        { label: "Sawyer Squeeze Filter", detail: "$37.99", note: "4.7★", category: "Best Pick", icon: "💧", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
-        { label: "LifeStraw Personal Water Filter", detail: "$17.99", note: "4.6★", category: "Budget Pick", icon: "🥤", link: "https://www.amazon.com/dp/B0FDXYKJYF?tag=camprally-20" },
+        { label: "Sawyer Squeeze Filter", category: "Best Pick", icon: "💧", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
+        { label: "LifeStraw Personal Water Filter", category: "Budget Pick", icon: "🥤", link: "https://www.amazon.com/dp/B0FDXYKJYF?tag=camprally-20" },
       ]
     },
     {
@@ -455,8 +404,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Suunto A-10 Compass",
-        price: "$19.99",
-        rating: "4.4/5",
+        asin: "B08PDDPX28",
         why: "Liquid-filled needle stabilizes quickly, baseplate markings work with any map. Balanced for northern hemisphere, lifetime warranty. The benchmark for budget compasses.",
         category: "Compass"
       }
@@ -465,8 +413,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Navigation Picks",
       items: [
-        { label: "Suunto A-10 Compass", detail: "$19.99", note: "4.4★", category: "Compass", icon: "🧭", link: "https://www.amazon.com/dp/B08PDDPX28?tag=camprally-20" },
-        { label: "Garmin eTrex 22x", detail: "$99.99", note: "4.3★", category: "GPS", icon: "📍", link: "https://www.amazon.com/dp/B07RTD2PMT?tag=camprally-20" },
+        { label: "Suunto A-10 Compass", category: "Compass", icon: "🧭", link: "https://www.amazon.com/dp/B08PDDPX28?tag=camprally-20" },
+        { label: "Garmin eTrex 22x", category: "GPS", icon: "📍", link: "https://www.amazon.com/dp/B07RTD2PMT?tag=camprally-20" },
       ]
     },
     {
@@ -492,8 +440,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Gerber Suspension-NXT",
-        price: "$34.99",
-        rating: "4.5/5",
+        asin: "B07DD69QN3",
         why: "15 tools cover every camp scenario. Spring-loaded pliers reduce hand fatigue, outside-accessible blades, butterfly opening is smooth. The benchmark budget multi-tool.",
         category: "Multi-Tool"
       }
@@ -502,8 +449,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Multi-Tool Picks",
       items: [
-        { label: "Gerber Suspension-NXT", detail: "$34.99", note: "4.5★", category: "Best Pick", icon: "🔧", link: "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20" },
-        { label: "Amazon Basics Multi-Tool", detail: "$14.99", note: "4.1★", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B07TQ86781?tag=camprally-20" },
+        { label: "Gerber Suspension-NXT", category: "Best Pick", icon: "🔧", link: "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20" },
+        { label: "Amazon Basics Multi-Tool", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B07TQ86781?tag=camprally-20" },
       ]
     },
     {
@@ -519,8 +466,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Mora Companion",
-        price: "$19.99",
-        rating: "4.7/5",
+        asin: "B094D5QJV5",
         why: "Swedish high-carbon steel takes a razor edge and holds it. Rubber handle won't slip, full tang construction is nearly indestructible. Fire striker notch on spine. Buy two.",
         category: "Knife"
       }
@@ -529,8 +475,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Knife Picks",
       items: [
-        { label: "Mora Companion", detail: "$19.99", note: "4.7★", category: "Best Pick", icon: "🔪", link: "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20" },
-        { label: "OutdoorElement Indus Review Knife", detail: "$8.99", note: "4.3★", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/s?k=outdoor+element+camp+knife&tag=camprally-20" },
+        { label: "Mora Companion", category: "Best Pick", icon: "🔪", link: "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20" },
+        { label: "OutdoorElement Indus Review Knife", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/s?k=outdoor+element+camp+knife&tag=camprally-20" },
       ]
     },
     {
@@ -546,8 +492,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Frogg Toggs Ultra-Lite Rain Suit",
-        price: "$19.99",
-        rating: "4.1/5",
+        asin: "B0BZFTL523",
         why: "Two-piece suit (jacket + pants) stuffs into its own pocket and deploys in seconds. 5,000mm waterproofing handles heavy rain. Breathable reduces interior condensation.",
         category: "Rain Gear"
       }
@@ -556,8 +501,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Rain Gear Picks",
       items: [
-        { label: "Frogg Toggs Ultra-Lite Rain Suit", detail: "$19.99", note: "4.1★", category: "Best Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
-        { label: "Frogg Toggs Ultra-Lite Rain Suit", detail: "$19.99", note: "4.1★", category: "Budget Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
+        { label: "Frogg Toggs Ultra-Lite Rain Suit", category: "Best Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
+        { label: "Frogg Toggs Ultra-Lite Rain Suit", category: "Budget Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
       ]
     },
     {
@@ -573,8 +518,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "KingCamp Low Sling Folding Chair",
-        price: "$39.99",
-        rating: "4.3/5",
+        asin: "B0BF8PRSZL",
         why: "Closer to ground (great for campfires), mesh sides provide airflow. Oversized cup holder, padded armrests, storage pocket. Folds flat for trunk storage.",
         category: "Camp Chair"
       }
@@ -583,8 +527,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Chair Picks",
       items: [
-        { label: "KingCamp Low Sling Folding Chair", detail: "$39.99", note: "4.3★", category: "Best Pick", icon: "🪑", link: "https://www.amazon.com/dp/B0BF8PRSZL?tag=camprally-20" },
-        { label: "Amazon Basics Folding Camp Chair", detail: "$24.99", note: "4.2★", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B0CZNY3LR8?tag=camprally-20" },
+        { label: "KingCamp Low Sling Folding Chair", category: "Best Pick", icon: "🪑", link: "https://www.amazon.com/dp/B0BF8PRSZL?tag=camprally-20" },
+        { label: "Amazon Basics Folding Camp Chair", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B0CZNY3LR8?tag=camprally-20" },
       ]
     },
     {
@@ -600,8 +544,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Trekology Ultralight Camping Table",
-        price: "$32.99",
-        rating: "4.4/5",
+        asin: "B0CSD3WQKJ",
         why: "Aluminum surface, sets up in 3 seconds (no assembly). Magnetic legs lock securely. 1.8 lbs, packs to large book size. Carry bag included.",
         category: "Camping Table"
       }
@@ -610,8 +553,8 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Table Picks",
       items: [
-        { label: "Trekology Ultralight Camping Table", detail: "$32.99", note: "4.4★", category: "Best Pick", icon: "🪑", link: "https://www.amazon.com/dp/B0CSD3WQKJ?tag=camprally-20" },
-        { label: "Coleman Portable Camping Table", detail: "$27.99", note: "4.0★", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B0CZDRT3F2?tag=camprally-20" },
+        { label: "Trekology Ultralight Camping Table", category: "Best Pick", icon: "🪑", link: "https://www.amazon.com/dp/B0CSD3WQKJ?tag=camprally-20" },
+        { label: "Coleman Portable Camping Table", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B0CZDRT3F2?tag=camprally-20" },
       ]
     },
     {
@@ -694,19 +637,19 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Best Free Camping Resources",
       items: [
-        { label: "iOverlander App", detail: "Free", note: "5M+ users", category: "App", icon: "📱", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "Campendium", detail: "Free", note: "Crowdsourced", category: "Website", icon: "🌐", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "USDA Forest Service Map", detail: "Free", note: "Maps + info", category: "Official", icon: "🏕️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "iOverlander App", category: "App", icon: "📱", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "Campendium", category: "Website", icon: "🌐", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "USDA Forest Service Map", category: "Official", icon: "🏕️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
       ]
     },
     {
       type: "product-grid",
       title: "Favorite Free Camping Regions",
       items: [
-        { label: "Colorado National Forests", detail: "Millions of acres", note: "Stunning scenery", category: "Mountain", icon: "🏔️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "Utah BLM Lands", detail: "Red rock camping", note: "Rarely crowded", category: "Desert", icon: "🏜️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "California National Forests", detail: "Escape coastal crowds", note: "Year-round", category: "Forest", icon: "🌲", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "New Mexico BLM", detail: "Remote + beautiful", note: "Minimal restrictions", category: "Desert", icon: "🌵", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "Colorado National Forests", category: "Mountain", icon: "🏔️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "Utah BLM Lands", category: "Desert", icon: "🏜️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "California National Forests", category: "Forest", icon: "🌲", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "New Mexico BLM", category: "Desert", icon: "🌵", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
       ]
     },
     {
@@ -722,10 +665,10 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Seasonal Camping Guide",
       items: [
-        { label: "🌸 Spring (Mar-May)", detail: "Desert SW, trailheads", note: "Bloom season", category: "Best: Southwest", icon: "🌸", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "☀️ Summer (Jun-Aug)", detail: "Northern forests, high elevations", note: "Crowds = peak", category: "Best: North", icon: "☀️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🍂 Fall (Sep-Nov)", detail: "Everywhere in US/Canada", note: "Best-kept secret", category: "Best: Everywhere", icon: "🍂", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "❄️ Winter (Dec-Feb)", detail: "Deserts, mild climates", note: "Skills required", category: "Best: Deserts", icon: "❄️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "🌸 Spring (Mar-May)", category: "Best: Southwest", icon: "🌸", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "☀️ Summer (Jun-Aug)", category: "Best: North", icon: "☀️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "🍂 Fall (Sep-Nov)", category: "Best: Everywhere", icon: "🍂", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "❄️ Winter (Dec-Feb)", category: "Best: Deserts", icon: "❄️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
       ]
     },
     {
@@ -741,12 +684,12 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "Field-Tested Hacks",
       items: [
-        { label: "🧊 Freeze Your Food", detail: "Thaws in cooler over 2-3 days", note: "Keeps other food cold too", category: "Cooking", icon: "🧊", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🧊 Pre-Measure Spices", detail: "Mix taco seasoning in ziplocks", note: "No measuring in the wild", category: "Cooking", icon: "🧂", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "💧 Warmed Water Bottle", detail: "Fill Nalgene with hot water", note: "Free foot warmer in sleeping bag", category: "Sleep", icon: "🛏️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🪵 Double Sleeping Pad", detail: "Stack two foam pads", note: "R-value 4+ from two $12 pads", category: "Sleep", icon: "💤", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🔥 Char Cloth Hack", detail: "Altoids tin + cotton balls in fire", note: "Lights with any spark", category: "Fire", icon: "🔥", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🧴 Denture Tablets", detail: "Half tablet cleans Nalgene in 30 min", note: "Emergency water bottle cleaner", category: "Water", icon: "💧", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "🧊 Freeze Your Food", category: "Cooking", icon: "🧊", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "🧊 Pre-Measure Spices", category: "Cooking", icon: "🧂", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "💧 Warmed Water Bottle", category: "Sleep", icon: "🛏️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "🪵 Double Sleeping Pad", category: "Sleep", icon: "💤", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "🔥 Char Cloth Hack", category: "Fire", icon: "🔥", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
+        { label: "🧴 Denture Tablets", category: "Water", icon: "💧", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
       ]
     },
     {
@@ -763,8 +706,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Adventure Medical Kits UltraLite .5",
-        price: "$31.95",
-        rating: "4.8/5",
+        asin: "B0DV6PDY9R",
         why: "Best organized budget kit. 1.1 lbs, real medical supplies, inner organizer keeps everything in place. Handles the 80% of injuries that actually happen.",
         category: "Our Top Pick"
       }
@@ -780,9 +722,9 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "The Three Kits Under $50",
       subtitle: "Pick based on how you camp.",
       items: [
-        { label: "Adventure Medical Kits UltraLite .5", detail: "$31.95", note: "4.8★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20" },
-        { label: "Coleman 150-Piece First Aid Kit", detail: "$9.99", note: "4.8★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20" },
-        { label: "Adventure Medical Kits UltraLite .7", detail: "$44.95", note: "4.7★", category: "Best for Groups", icon: "⭐", link: "https://www.amazon.com/dp/B0DV6NTJBK?tag=camprally-20" },
+        { label: "Adventure Medical Kits UltraLite .5", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20" },
+        { label: "Coleman 150-Piece First Aid Kit", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20" },
+        { label: "Adventure Medical Kits UltraLite .7", category: "Best for Groups", icon: "⭐", link: "https://www.amazon.com/dp/B0DV6NTJBK?tag=camprally-20" },
       ]
     },
   ],
@@ -792,8 +734,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Rechargeable Camping Fan with LED Lantern",
-        price: "$34.99",
-        rating: "4.6/5",
+        asin: "B0BJV7J24Q",
         why: "Best balance of features and battery life. 20000mAh runs 40+ hours on low, LED lantern built in, quiet motor, and remote control. The complete package for summer camping.",
         category: "Our Top Pick"
       }
@@ -809,11 +750,11 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "The Best Camping Fans",
       subtitle: "From best overall to best budget.",
       items: [
-        { label: "Rechargeable Camping Fan with LED Lantern", detail: "$34.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20" },
-        { label: "Featwell 20000mAh Portable Fan", detail: "$29.99", note: "4.5★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20" },
-        { label: "AJVV Camping Fan with Light and Oscillation", detail: "$31.99", note: "4.4★", category: "Best for Groups", icon: "⭐", link: "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20" },
-        { label: "Camping Fan Rechargeable 20000mAh", detail: "$27.99", note: "4.3★", category: "Budget Pick", icon: "💸", link: "https://www.amazon.com/dp/B0FCFCNSZH?tag=camprally-20" },
-        { label: "ATEngeus USB Desk Fan", detail: "$24.99", note: "4.5★", category: "Upgrade Pick", icon: "⬆️", link: "https://www.amazon.com/dp/B09WK86L84?tag=camprally-20" },
+        { label: "Rechargeable Camping Fan with LED Lantern", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20" },
+        { label: "Featwell 20000mAh Portable Fan", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20" },
+        { label: "AJVV Camping Fan with Light and Oscillation", category: "Best for Groups", icon: "⭐", link: "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20" },
+        { label: "Camping Fan Rechargeable 20000mAh", category: "Budget Pick", icon: "💸", link: "https://www.amazon.com/dp/B0FCFCNSZH?tag=camprally-20" },
+        { label: "ATEngeus USB Desk Fan", category: "Upgrade Pick", icon: "⬆️", link: "https://www.amazon.com/dp/B09WK86L84?tag=camprally-20" },
       ]
     },
   ],
@@ -825,69 +766,6 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
 function getHeroImage(slug: string): string {
   return HERO_IMAGES[slug] || HERO_IMAGES.default;
 }
-
-/* null when we have no real photo for this product. Callers render a branded
-   icon tile instead — repeating one identical stock photo across "compared"
-   products read as fake and undercut the whole page. */
-function getProductImage(productName: string): string | null {
-  for (const [key, url] of Object.entries(PRODUCT_IMAGES)) {
-    if (key === "default") continue;
-    if (productName.toLowerCase().includes(key.toLowerCase())) return url;
-  }
-  return null;
-}
-
-const PRODUCT_LINKS: Record<string, string> = {
-  "Coleman Sundome":    "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20",
-  "Coleman Brazos":     "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20",
-  "Klymit Static V":   "https://www.amazon.com/dp/B082429QGK?tag=camprally-20",
-  "Stanley Adventure":  "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20",
-  "Etekcity":           "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20",
-  "Vont":               "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20",
-  "Nalgene":            "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20",
-  "Sawyer Squeeze":     "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20",
-  "Sawyer":            "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20",
-  "LifeStraw":          "https://www.amazon.com/dp/B0FDXYKJYF?tag=camprally-20",
-  "Trekology":         "https://www.amazon.com/dp/B0CSD3WQKJ?tag=camprally-20",
-  "KingCamp":           "https://www.amazon.com/dp/B0BF8PRSZL?tag=camprally-20",
-  "Gerber Suspension":  "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20",
-  "Gerber":            "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20",
-  "Mora Companion":     "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20",
-  "Frogg Toggs":       "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20",
-  "Garmin eTrex":       "https://www.amazon.com/dp/B07RTD2PMT?tag=camprally-20",
-  "Suunto A-10":       "https://www.amazon.com/dp/B08PDDPX28?tag=camprally-20",
-  "Black Diamond Spot":"https://www.amazon.com/dp/B09NQK2581?tag=camprally-20",
-  "Teton Sports":       "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20",
-  "Kelty Discovery":    "https://www.amazon.com/dp/B0CH3QFY3C?tag=camprally-20",
-  "Oaskys":            "https://www.amazon.com/s?k=oaskys+3+season+sleeping+bag&tag=camprally-20",
-  "Hikenture":         "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20",
-  "MalloMe":           "https://www.amazon.com/s?k=MalloMe+camping+cookware+mess+kit&tag=camprally-20",
-  "GSI Outdoors":      "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20",
-  "Coleman Classic":   "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20",
-  "Core 4-Person":      "https://www.amazon.com/dp/B00VFG6LNI?tag=camprally-20",
-  "Amazon Basics Folding Camp Chair": "https://www.amazon.com/dp/B0CZNY3LR8?tag=camprally-20",
-  "Amazon Basics Multi-Tool": "https://www.amazon.com/dp/B07TQ86781?tag=camprally-20",
-  "Sea to Summit":     "https://www.amazon.com/dp/B002OYGZZ4?tag=camprally-20",
-  "Coghlan":           "https://www.amazon.com/dp/B0000AQLYP?tag=camprally-20",
-  "Jetboil":           "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20",
-  "Adventure Medical Kits UltraLite .5": "https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20",
-  "Adventure Medical Kits UltraLite .7": "https://www.amazon.com/dp/B0DV6NTJBK?tag=camprally-20",
-  "Coleman 150-Piece First Aid Kit":   "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20",
-  "Spenco":                           "https://www.amazon.com/dp/B0012YMEUW?tag=camprally-20",
-  "Rechargeable Camping Fan with LED Lantern":  "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20",
-  "Featwell 20000mAh Portable Fan":            "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20",
-  "AJVV Camping Fan with Light and Oscillation": "https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20",
-  "Camping Fan Rechargeable 20000mAh":         "https://www.amazon.com/dp/B0FCFCNSZH?tag=camprally-20",
-  "ATEngeus USB Desk Fan":                     "https://www.amazon.com/dp/B09WK86L84?tag=camprally-20",
-};
-
-function getProductLink(productName: string): string {
-  for (const [key, url] of Object.entries(PRODUCT_LINKS)) {
-    if (productName.toLowerCase().includes(key.toLowerCase())) return url;
-  }
-  return "https://www.amazon.com/shop/camprally?tag=camprally-20";
-}
-
 
 function getCustomSections(slug: string): CustomSection[] {
   return ARTICLE_CUSTOM_SECTIONS[slug] || [];
@@ -922,11 +800,18 @@ function StatsSection({ stats, liveTotal }: { stats: Array<{ value: string; labe
 }
 
 /*
- * Live pricing.
+ * The product catalog.
  *
- * src/data/prices.json is generated by scripts/refresh-prices.mjs and committed,
- * so the statically generated pages pick up current prices on every Vercel
- * rebuild.
+ * src/data/catalog.json is generated by scripts/build-catalog.mjs and committed,
+ * so the statically generated pages pick up current data on every Vercel
+ * rebuild. It is keyed by ASIN and is the ONLY description of a product the
+ * site has — title, photo, affiliate URL, price, rating.
+ *
+ * Products are addressed by ASIN, never by display name. The previous design
+ * matched on name substrings, so getProductLink("Teton Sports Celsius Regular")
+ * resolved by finding the key "Teton Sports" — two products sharing a brand
+ * word collided silently, and editing a heading could repoint a link. An ASIN
+ * either resolves or visibly does not.
  *
  * THE RULE: a price or rating renders ONLY when it comes from this file and is
  * recent. There is no fallback to the figure an article was written with.
@@ -944,8 +829,19 @@ function StatsSection({ stats, liveTotal }: { stats: Array<{ value: string; labe
  * days. Revisit this the moment the account clears that bar — it is the only
  * fully compliant source of Product Advertising Content.
  */
-type LivePrice = { price: string; rating: number | null; ratingsTotal: number | null; asOf: string };
-const LIVE_PRICES = (priceData as { prices: Record<string, LivePrice> }).prices ?? {};
+type CatalogProduct = {
+  asin: string;
+  title: string;
+  url: string;
+  image: string | null;
+  price: string | null;
+  priceValue: number | null;
+  rating: number | null;
+  ratingsTotal: number | null;
+  priceAsOf: string | null;
+  verifiedAt: string | null;
+};
+const CATALOG = (catalogData as { products: Record<string, CatalogProduct> }).products ?? {};
 
 /* Amazon prices move constantly, so a figure we last confirmed weeks ago is not
  * evidence of anything. Past this age we stop asserting a number at all. Pages
@@ -953,37 +849,46 @@ const LIVE_PRICES = (priceData as { prices: Record<string, LivePrice> }).prices 
  * re-evaluated far more often than the window itself. */
 const PRICE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 
-function getLivePrice(link?: string): LivePrice | null {
-  const asin = link?.match(/\/dp\/(B[0-9A-Z]{9})/)?.[1];
-  const live = asin ? (LIVE_PRICES[asin] ?? null) : null;
-  if (!live) return null;
-  return Date.now() - Date.parse(live.asOf) > PRICE_MAX_AGE_MS ? null : live;
+/** Look up a product by bare ASIN or by any Amazon /dp/ URL. */
+function productFor(ref?: string | null): CatalogProduct | null {
+  if (!ref) return null;
+  const asin = /^B[0-9A-Z]{9}$/.test(ref) ? ref : ref.match(/\/dp\/(B[0-9A-Z]{9})/)?.[1];
+  return asin ? (CATALOG[asin] ?? null) : null;
+}
+
+/** The product only when its price is recent enough to quote. */
+function withLivePrice(p: CatalogProduct | null): CatalogProduct | null {
+  if (!p?.price || !p.priceAsOf) return null;
+  return Date.now() - Date.parse(p.priceAsOf) > PRICE_MAX_AGE_MS ? null : p;
 }
 
 /** What to show when we cannot stand behind a number. */
 const CHECK_PRICE = "Check price";
 
-/** Newest asOf among the given links, or null if none are priced. */
-function newestAsOf(links: Array<string | undefined>): string | null {
-  const dates = links.map((l) => getLivePrice(l)?.asOf).filter(Boolean) as string[];
+/** Newest priceAsOf among the given product refs, or null if none are priced. */
+function newestAsOf(refs: Array<string | undefined>): string | null {
+  const dates = refs
+    .map((r) => withLivePrice(productFor(r))?.priceAsOf)
+    .filter(Boolean) as string[];
   return dates.length ? dates.sort().at(-1)! : null;
 }
 
-function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: string; items?: Array<{ label: string; detail?: string; note?: string; category?: string; icon?: string; link?: string }> }) {
+function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: string; items?: Array<{ label: string; category?: string; icon?: string; link?: string; asin?: string }> }) {
   if (!items?.length) return null;
-  const asOf = newestAsOf(items.map((i) => i.link));
+  const asOf = newestAsOf(items.map((i) => i.asin ?? i.link));
   return (
     <div className="mb-10">
       {title && <h2 className="mb-2 text-xl font-bold">{title}</h2>}
       {subtitle && <p className="mb-4 text-muted-foreground text-sm">{subtitle}</p>}
       <div className="grid gap-3 sm:grid-cols-2">
         {items.map((item, i) => {
-          const productImage = getProductImage(item.label);
-          const live = getLivePrice(item.link);
+          const product = productFor(item.asin ?? item.link);
+          const productImage = product?.image ?? null;
+          const live = withLivePrice(product);
           return (
           <a
             key={i}
-            href={item.link || "https://www.amazon.com/shop/camprally?tag=camprally-20"}
+            href={product?.url ?? item.link ?? "https://www.amazon.com/shop/camprally?tag=camprally-20"}
             target="_blank"
             rel="nofollow noopener"
             className="group flex items-center gap-3 rounded-xl border p-3 transition-all hover:border-camp-green/50 hover:shadow-sm hover:shadow-camp-green/10"
@@ -1061,12 +966,10 @@ function PriceDisclaimer({ asOf }: { asOf?: string | null }) {
   );
 }
 
-function SpotlightSection({ item }: { item: { name: string; price: string; rating: string; why: string; category: string } }) {
-  const productImage = getProductImage(item.name);
-  // item.price/item.rating are frozen strings from when the article was written
-  // and are deliberately ignored — this card quoted $34.99 for a bag the grid
-  // below it correctly showed at $94.99. Live data or no number at all.
-  const live = getLivePrice(getProductLink(item.name));
+function SpotlightSection({ item }: { item: { name: string; asin?: string; why: string; category: string } }) {
+  const product = productFor(item.asin);
+  const productImage = product?.image ?? null;
+  const live = withLivePrice(product);
   return (
     <div className="mb-10 rounded-2xl border border-camp-green/20 bg-gradient-to-br from-camp-green/5 to-transparent overflow-hidden">
       <div className="bg-camp-green/10 px-6 py-3 flex items-center justify-between">
@@ -1107,7 +1010,7 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
         </div>
         <div className="flex justify-end">
           <a
-            href={getProductLink(item.name)}
+            href={product?.url ?? "https://www.amazon.com/shop/camprally?tag=camprally-20"}
             target="_blank"
             rel="nofollow noopener"
             className="flex-shrink-0 rounded-lg bg-camp-green px-4 py-2 text-sm font-semibold text-white transition hover:bg-camp-green/90"
@@ -1115,7 +1018,7 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
             View on Amazon
           </a>
         </div>
-        <PriceDisclaimer asOf={live?.asOf} />
+        <PriceDisclaimer asOf={live?.priceAsOf} />
       </div>
     </div>
   );
@@ -1310,9 +1213,9 @@ export default async function ArticlePage({ params }: Props) {
   const liveTotal = (() => {
     const items = customSections.find((s) => s.type === "product-grid")?.items ?? [];
     if (!items.length) return null;
-    const prices = items.map((i) => getLivePrice(i.link));
+    const prices = items.map((i) => withLivePrice(productFor(i.asin ?? i.link)));
     if (prices.some((p) => !p)) return null;
-    const sum = prices.reduce((n, p) => n + Number(p!.price.replace(/[^0-9.]/g, "")), 0);
+    const sum = prices.reduce((n, p) => n + (p!.priceValue ?? 0), 0);
     return Number.isFinite(sum) && sum > 0 ? `$${sum.toFixed(2)}` : null;
   })();
 

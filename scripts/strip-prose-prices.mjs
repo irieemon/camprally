@@ -8,7 +8,7 @@
  *
  * Why this exists: a spotlight card quoted $34.99 for a sleeping bag that was
  * $94.99 on Amazon. The rendered components now read exclusively from
- * src/data/prices.json, but prose written before that rule still asserts
+ * src/data/catalog.json, but prose written before that rule still asserts
  * figures nothing refreshes — "the Etekcity canister stove at $12.99" is a
  * claim the site cannot keep true, and the Associates agreement does not allow
  * presenting non-API prices as current.

@@ -52,23 +52,58 @@ if (editorial.length) {
   for (const t of editorial) console.error(`  "${t.slice(0, 110)}"`);
 }
 
-// ── 2. staleness of the live price file ───────────────────────────────────
-const prices = JSON.parse(readFileSync(`${ROOT}src/data/prices.json`, "utf8")).prices ?? {};
-const entries = Object.entries(prices);
-const stale = entries.filter(([, p]) => Date.now() - Date.parse(p.asOf) > STALE_MS);
+// ── 2. staleness of the catalog's prices ──────────────────────────────────
+// Only priced products can be stale. An unpriced one already renders
+// "Check price", which is the correct outcome rather than a problem.
+const products = JSON.parse(readFileSync(`${ROOT}src/data/catalog.json`, "utf8")).products ?? {};
+const priced = Object.values(products).filter((p) => p.price && p.priceAsOf);
+const stale = priced.filter((p) => Date.now() - Date.parse(p.priceAsOf) > STALE_MS);
 if (stale.length) {
   console.warn(
-    `\nWARNING: ${stale.length}/${entries.length} live prices are older than 7 days ` +
+    `\nWARNING: ${stale.length}/${priced.length} catalog prices are older than 7 days ` +
     `and will render as "Check price" instead of a figure.`,
   );
   console.warn("  cause is usually the Canopy quota — see scripts/lib/canopy-quota.mjs");
 }
 
+// ── 3. "under $N" promises that products have outgrown ───────────────────
+// A title is a claim. "Best Budget Tents Under $100" stops being true the day a
+// featured tent passes $100, and nothing about live pricing fixes that — the
+// grid just starts showing a number that contradicts the headline above it.
+// This is the check that would have caught the camping-fans article claiming
+// "all under $35" while three of its five fans sat at $36.99-$39.99.
+const articlesSrc = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
+const broken = [];
+for (const chunk of articlesSrc.split(/\n\s*\{\s*\n\s*id: "/).slice(1)) {
+  const slug = chunk.match(/slug: "([^"]+)"/)?.[1];
+  const title = chunk.match(/title: "([^"]+)"/)?.[1] ?? "";
+  const excerpt = chunk.match(/excerpt: "([^"]+)"/)?.[1] ?? "";
+  const cap = Number((`${title} ${excerpt}`.match(/under \$(\d[\d,]*)/i) ?? [])[1]?.replace(/,/g, ""));
+  if (!slug || !cap) continue;
+
+  const over = [...new Set([...chunk.matchAll(/\/dp\/(B[0-9A-Z]{9})/g)].map((m) => m[1]))]
+    .map((asin) => products[asin])
+    .filter((p) => p?.priceValue != null && p.priceValue > cap);
+
+  if (over.length) {
+    broken.push({ slug, cap, over });
+  }
+}
+if (broken.length) {
+  console.warn(`\nWARNING: ${broken.length} article(s) promise a price cap their products now exceed:`);
+  for (const b of broken) {
+    console.warn(`  ${b.slug} (claims under $${b.cap}):`);
+    for (const p of b.over) console.warn(`    ${p.price.padEnd(9)} ${p.title.slice(0, 62)}`);
+  }
+  console.warn("  fix: swap the product, or reword the claim — the headline contradicts the grid.");
+}
+
 if (failures) {
-  console.error(`\n${failures} frozen price claim(s). Every displayed price must come from src/data/prices.json.`);
+  console.error(`\n${failures} frozen price claim(s). Every displayed price must come from src/data/catalog.json.`);
   process.exit(1);
 }
 console.log(
   `price claims clean — 0 frozen figures, ` +
-  `${entries.length - stale.length}/${entries.length} live prices fresh`,
+  `${priced.length - stale.length}/${priced.length} catalog prices fresh ` +
+  `(${Object.keys(products).length} products total)`,
 );
