@@ -65,8 +65,23 @@ if (/AMZ_[A-Z_]+/.test(spec.body)) {
 const articlesSrc = readFileSync(ARTICLES, "utf8");
 const pageSrc = readFileSync(PAGE, "utf8");
 
-if (articlesSrc.includes(`slug: "${spec.slug}"`)) {
-  console.error(`slug "${spec.slug}" is already published — nothing to do`);
+/*
+ * --replace regenerates an article that already exists, swapping its body and
+ * product grid in place. Needed because articles rot: live pricing revealed
+ * that several were recommending products well outside the price band their
+ * own title promises, and prose cannot self-correct. Without --replace the
+ * only options are hand-editing or leaving a wrong article up.
+ *
+ * The slug, and therefore the URL and its accumulated SEO age, is preserved.
+ */
+const REPLACE = process.argv.includes("--replace");
+const alreadyPublished = articlesSrc.includes(`slug: "${spec.slug}"`);
+if (alreadyPublished && !REPLACE) {
+  console.error(`slug "${spec.slug}" is already published — pass --replace to regenerate it`);
+  process.exit(EXIT.FAIL);
+}
+if (!alreadyPublished && REPLACE) {
+  console.error(`--replace given but "${spec.slug}" is not published yet`);
   process.exit(EXIT.FAIL);
 }
 
@@ -105,18 +120,58 @@ const entry =
   "    content: `\n" + spec.body + "\n    `\n" +
   "  },\n";
 
+function removeArticleEntry(src, slug) {
+  // Entries are `{ id: ... slug: "x" ... },` — find the object containing the
+  // slug and cut from its opening brace to the matching `},` that closes it.
+  const at = src.indexOf(`slug: "${slug}"`);
+  if (at === -1) return src;
+  const start = src.lastIndexOf("\n  {", at);
+  const end = src.indexOf("\n  },", at);
+  if (start === -1 || end === -1) return src;
+  return src.slice(0, start) + src.slice(end + "\n  },".length);
+}
+
+function removeCustomSections(src, slug) {
+  const key = `  "${slug}": [`;
+  const at = src.indexOf(key);
+  if (at === -1) return src;
+  // Walk brackets to find where this slug's section array closes.
+  let depth = 0;
+  for (let i = at + key.length - 1; i < src.length; i++) {
+    if (src[i] === "[") depth++;
+    else if (src[i] === "]") {
+      depth--;
+      if (depth === 0) {
+        const end = src.indexOf("\n", src.indexOf(",", i));
+        return src.slice(0, at) + src.slice(end + 1);
+      }
+    }
+  }
+  return src;
+}
+
+const baseArticles = REPLACE ? removeArticleEntry(articlesSrc, spec.slug) : articlesSrc;
+if (REPLACE && baseArticles === articlesSrc) {
+  console.error(`could not locate the existing "${spec.slug}" entry to replace`);
+  process.exit(EXIT.FAIL);
+}
+
 let nextArticles;
 {
-  const close = articlesSrc.lastIndexOf("];");
-  const lastBrace = articlesSrc.lastIndexOf("},", close);
+  const close = baseArticles.lastIndexOf("];");
+  const lastBrace = baseArticles.lastIndexOf("},", close);
   if (close === -1 || lastBrace === -1) {
     console.error("could not locate the end of the articles array");
     process.exit(EXIT.FAIL);
   }
-  nextArticles = articlesSrc.slice(0, lastBrace + 2) + "\n\n" + entry + articlesSrc.slice(close);
+  nextArticles = baseArticles.slice(0, lastBrace + 2) + "\n\n" + entry + baseArticles.slice(close);
 }
 
 let nextPage = pageSrc;
+if (REPLACE) {
+  nextPage = removeCustomSections(nextPage, spec.slug);
+  nextPage = nextPage.replace(new RegExp(`^  "${spec.slug}": "[^"]*",\\n`, "m"), "");
+}
 if (spec.hero) {
   const anchor = "  default: ";
   const i = nextPage.indexOf(anchor);

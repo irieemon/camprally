@@ -1,26 +1,10 @@
 {
-  "camping cooler|20|100": {
-    "term": "camping cooler",
-    "min": 20,
-    "max": 100,
-    "fetchedAt": "2026-08-04T19:00:00Z",
+  "folding camping chair|1|50": {
+    "term": "folding camping chair",
+    "min": 1,
+    "max": 50,
+    "fetchedAt": "2026-08-04T19:06:57.634Z",
     "results": [
-      {
-        "asin": "B07XW8Y77J",
-        "title": "Carhartt Camping Cooler, Worksite Lunchbox, Soft Shell Lunch Bag for Construction Sites, Work and Everyday Use, Gray",
-        "price": "$35.16",
-        "priceValue": 35.16,
-        "rating": 4.8,
-        "ratingsTotal": 48359
-      },
-      {
-        "asin": "B0GCBTJJTP",
-        "title": "Stanley Adventure Outdoor Cooler 16 qt | Heavy Duty Outdoor Camping Cooler with Easy Carry Top Handle | BPA-Free | Daffodil",
-        "price": "$80.00",
-        "priceValue": 80,
-        "rating": 4.8,
-        "ratingsTotal": 129
-      },
       {
         "asin": "B0033990ZQ",
         "title": "Coleman Portable Camping Chair with 4-Can Cooler, Cushioned Seat & Back with Side Pockets & Cup Holder, Carry Bag Included, Great for Camping, Tailgating, Firepits, Patio, & More",
@@ -30,412 +14,804 @@
         "ratingsTotal": 61135
       },
       {
-        "asin": "B08GVSXNPG",
-        "title": "Igloo Sports Cooler | Insulated Beverage Dispenser with Spout |Portable Handwashing Station",
+        "asin": "B0CQJR8NLW",
+        "title": "ONETIGRIS Tigerblade Camping Chair, Lightweight Folding Backpacking Hiking Chair, Compact Portable 330 lbs Capacity",
+        "price": "$39.98",
+        "priceValue": 39.98,
+        "rating": 4.6,
+        "ratingsTotal": 1479
+      },
+      {
+        "asin": "B0C9MF8L3N",
+        "title": "VEVOR Oversized Camping Folding Chair, Portable Heavy Duty Outdoor Quad Lumbar Back Padded with Side Pockets, Cup Holder and Cooler Bag for Beach, Lawn, Picnic, Fishing, Backpacking, Black",
+        "price": "$45.90",
+        "priceValue": 45.9,
+        "rating": 4.6,
+        "ratingsTotal": 771
+      },
+      {
+        "asin": "B0DFPH7K8C",
+        "title": "EMERIT Camping Chair, 350LB Heavy Duty Quad Fold Chair with Arms, Collapsible Outdoor Chairs with Lumbar Back & Cup HolderCollapsible for Tailgating, Beach, Fishing",
         "price": "$49.99",
         "priceValue": 49.99,
-        "rating": 4.7,
-        "ratingsTotal": 4914
-      },
-      {
-        "asin": "B0CPM9BMWG",
-        "title": "Igloo Tag Along Too Coolers | Insulated Hard Shell Picnic Style Cooler | Rolling Ice Chest",
-        "price": "$49.99",
-        "priceValue": 49.99,
-        "rating": 4.7,
-        "ratingsTotal": 1815
-      },
-      {
-        "asin": "B0D2D9PRB8",
-        "title": "Lunch Box Cooler Bag - Tactical Insulated Lunchbox for Men - Large Soft Expandable Lunch Pail for Adults Work Outdoor Shifts Trips Black 16L",
-        "price": "$23.71",
-        "priceValue": 23.71,
-        "rating": 4.7,
-        "ratingsTotal": 1505
-      },
-      {
-        "asin": "B0GFGFGGMZ",
-        "title": "Hydro Flask Carryout Cooler - Insulated Portable Soft Cooler - 15 L Capacity in Mermaid Green",
-        "price": "$99.95",
-        "priceValue": 99.95,
-        "rating": 4.7,
-        "ratingsTotal": 1158
-      },
-      {
-        "asin": "B0BLM3MK31",
-        "title": "Titan by Arctic Zone Deep Freeze Cooler - Zipperless Hardbody Cooler - Deep Freeze Insulation, HardBody Liner, and SmartShelf",
-        "price": "$40.50",
-        "priceValue": 40.5,
         "rating": 4.6,
-        "ratingsTotal": 56514
+        "ratingsTotal": 471
       },
       {
-        "asin": "B0F17N36L4",
-        "title": "Titan by Arctic Zone Deep Freeze Cooler - Zipperless Hardbody Cooler - Deep Freeze Insulation, HardBody Liner, and SmartShelf",
-        "price": "$89.99",
-        "priceValue": 89.99,
-        "rating": 4.6,
-        "ratingsTotal": 56514
+        "asin": "B074YRN643",
+        "title": "Amazon Basics Camping Chair",
+        "price": "$41.74",
+        "priceValue": 41.74,
+        "rating": 4.5,
+        "ratingsTotal": 17165
       },
       {
-        "asin": "B0F17M4Q91",
-        "title": "Titan by Arctic Zone Deep Freeze Cooler - Zipperless Hardbody Cooler - Deep Freeze Insulation, HardBody Liner, and SmartShelf",
-        "price": "$69.99",
-        "priceValue": 69.99,
-        "rating": 4.6,
-        "ratingsTotal": 56514
-      },
-      {
-        "asin": "B0GFPPZKGR",
-        "title": "Coleman Chiller 9/16/30/48/60qt Cooler with Ice Retention, Leak Resistant, Great for Camping, Concerts, Sports, and More",
+        "asin": "B01EVQ1Y6W",
+        "title": "Cascade Mountain Tech Folding Camp Chair for Camping, Beach, Picnic, Barbqeues, Sporting Events with Carry Bag",
         "price": "$39.99",
         "priceValue": 39.99,
-        "rating": 4.6,
-        "ratingsTotal": 16466
-      },
-      {
-        "asin": "B09HN34T7H",
-        "title": "Coleman Chiller 9/16/30/48/60qt Cooler with Ice Retention, Leak Resistant, Great for Camping, Concerts, Sports, and More",
-        "price": "$59.99",
-        "priceValue": 59.99,
-        "rating": 4.6,
-        "ratingsTotal": 16466
-      },
-      {
-        "asin": "B0GFPDT9V2",
-        "title": "Coleman Chiller 9/16/30/48/60qt Cooler with Ice Retention, Leak Resistant, Great for Camping, Concerts, Sports, and More",
-        "price": "$25.99",
-        "priceValue": 25.99,
-        "rating": 4.6,
-        "ratingsTotal": 16466
-      },
-      {
-        "asin": "B0GFPNV29K",
-        "title": "Coleman Chiller 9/16/30/48/60qt Cooler with Ice Retention, Leak Resistant, Great for Camping, Concerts, Sports, and More",
-        "price": "$49.99",
-        "priceValue": 49.99,
-        "rating": 4.6,
-        "ratingsTotal": 16466
-      },
-      {
-        "asin": "B000BO5VH2",
-        "title": "Igloo Classic Playmate Coolers | Insulated Hard Shell Cooler Chest",
-        "price": "$24.98",
-        "priceValue": 24.98,
-        "rating": 4.6,
-        "ratingsTotal": 9573
-      },
-      {
-        "asin": "B0DP4F63BV",
-        "title": "Warmco D3 10000mAh Portable Travel Fan 7-inch, Up to 24H Runtime | Ultra-Slim, Quiet Operation, Battery Powered Fan with Digital Display for Sleeping, Camping, Office, Cruise Essentials",
-        "price": "$32.99",
-        "priceValue": 32.99,
-        "rating": 4.6,
-        "ratingsTotal": 3144
-      },
-      {
-        "asin": "B0BBVF7LF7",
-        "title": "Gafetrey Tactical Lunch Box for Men, Insulated Lunch Bag Adult, Thermal Lunchbox Leakproof Waterproof Cooler Bag, Large Lunch Pail for Work Office Camping Travel (Black)",
-        "price": "$25.99",
-        "priceValue": 25.99,
-        "rating": 4.6,
-        "ratingsTotal": 2786
-      },
-      {
-        "asin": "B0D2D15S4X",
-        "title": "TENKIST Tactical Insulated Lunch Box Men Double Deck Heavy Duty Cooler Bag | 8h Thermal retention, leakproof, upright structure,tactical panel, hang buckles for work,picnic,trip (Black, 20 Cans)",
-        "price": "$25.61",
-        "priceValue": 25.61,
-        "rating": 4.6,
-        "ratingsTotal": 1539
-      },
-      {
-        "asin": "B08RLKSTLB",
-        "title": "Igloo Hard Coolers | Profile II Series | Insulated Ice Chests | Roller Cooler with Wheels",
-        "price": "$54.99",
-        "priceValue": 54.99,
-        "rating": 4.6,
-        "ratingsTotal": 1490
-      },
-      {
-        "asin": "B0CPFGZ5PD",
-        "title": "Maelstrom 30/40 Can Soft Cooler Bag, Leakproof Insulated Ice Chest | 24h Cold (With Ice), 5-Layer Insulation, Multi-Pockets ,Lightweight,Perfect For Camping, Beach, Hiking, Kayaking, Road Trips",
-        "price": "$29.99",
-        "priceValue": 29.99,
-        "rating": 4.6,
-        "ratingsTotal": 906
-      },
-      {
-        "asin": "B0CPFGZ5PD",
-        "title": "Maelstrom 30/40 Can Soft Cooler Bag, Leakproof Insulated Ice Chest | 24h Cold (With Ice), 5-Layer Insulation, Multi-Pockets ,Lightweight,Perfect For Camping, Beach, Hiking, Kayaking, Road Trips",
-        "price": "$29.99",
-        "priceValue": 29.99,
-        "rating": 4.6,
-        "ratingsTotal": 906
-      },
-      {
-        "asin": "B0GC83YP2S",
-        "title": "Igloo Trailmate Cooler | Insulated Hard Shell Ice Chest",
-        "price": "$99.99",
-        "priceValue": 99.99,
-        "rating": 4.6,
-        "ratingsTotal": 545
-      },
-      {
-        "asin": "B0CB76L2ZJ",
-        "title": "Coleman Pro Heavy-Duty 9qt Ultra-Light Premium Hard Cooler Lunchbox, Extra-Thick Insulation Keeps Ice for Days",
-        "price": "$79.99",
-        "priceValue": 79.99,
-        "rating": 4.6,
-        "ratingsTotal": 337
-      },
-      {
-        "asin": "B0G1LDW7V9",
-        "title": "MIYCOO Cooler Bag with Expandable Double Deck, 60 Can Leakproof Cooler | Insulated Portable Soft Lunch Cooler, Extra Large Ice Chest Cooler for Beach, Picnic, Camping, Shopping",
-        "price": "$29.99",
-        "priceValue": 29.99,
-        "rating": 4.6,
-        "ratingsTotal": 269
-      },
-      {
-        "asin": "B08TYGMCJ8",
-        "title": "Coleman Marine Cooler with Fully Insulated UV Guard Lid & Body, Keeps Ice for 3+ Days, Great for Boating & Fishing, 52qt/100qt Wheeled/120qt Options",
-        "price": "$65.48",
-        "priceValue": 65.48,
-        "rating": 4.6,
-        "ratingsTotal": 241
-      },
-      {
-        "asin": "B00BYDG3BM",
-        "title": "Coleman Xtreme Rolling Cooler with Wheels, Extra-Walled Insulation Keeps Ice up to 5 Days, Portable Wheeled Hard Chiller",
-        "price": "$64.99",
-        "priceValue": 64.99,
         "rating": 4.5,
-        "ratingsTotal": 20477
+        "ratingsTotal": 7763
       },
       {
-        "asin": "B08VDBW5PW",
-        "title": "SPARTER Backpack Cooler Insulated Leak Proof 33/49 Cans, 2 Insulated Compartments Thermal Bag, Portable Lightweight Beach Travel Camping Lunch Backpack for Men and Women",
-        "price": "$29.99",
-        "priceValue": 29.99,
+        "asin": "B0B5LF4V3C",
+        "title": "MARCHWAY Lightweight Folding Camping Chair, Portable Foldable Compact for Outdoor Camp, Travel, Beach, Picnic, Festival, Hiking, Backpacking, Supports 330Lbs (Blue)",
+        "price": "$36.99",
+        "priceValue": 36.99,
         "rating": 4.5,
-        "ratingsTotal": 10826
+        "ratingsTotal": 1739
       },
       {
-        "asin": "B08PL58LS2",
-        "title": "Coleman Classic Series Insulated Portable Rolling Cooler with Wheels, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days",
-        "price": "$74.99",
-        "priceValue": 74.99,
+        "asin": "B0CTHL69X9",
+        "title": "Nazhura 2 Pack Outdoor Camping Chairs Folding/Foldable/Portable with Cooler Pouch, Mesh Backrest and Cup Holder Pocket (Grey, Metal, 2 Pack)",
+        "price": "$39.94",
+        "priceValue": 39.94,
         "rating": 4.5,
-        "ratingsTotal": 9312
+        "ratingsTotal": 1676
       },
       {
-        "asin": "B0GRWT8M6K",
-        "title": "Coleman Classic Series Insulated Portable Rolling Cooler with Wheels, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days",
-        "price": "$74.99",
-        "priceValue": 74.99,
-        "rating": 4.5,
-        "ratingsTotal": 9312
-      },
-      {
-        "asin": "B0BDGC7JP3",
-        "title": "Coleman Classic Series Insulated Portable Rolling Cooler with Wheels, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days",
-        "price": "$74.99",
-        "priceValue": 74.99,
-        "rating": 4.5,
-        "ratingsTotal": 9312
-      },
-      {
-        "asin": "B08LMLT6B1",
-        "title": "Coleman Classic Series Insulated Portable Rolling Cooler with Wheels, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days",
-        "price": "$74.99",
-        "priceValue": 74.99,
-        "rating": 4.5,
-        "ratingsTotal": 9312
-      },
-      {
-        "asin": "B09P9TYK6Z",
-        "title": "Maelstrom 35/50Can Insulated Cooler Backpack, Leakproof Soft Lunch Ice Bag | 16h Cold,Multi-Pockets,Survival Whistle,Ergonomic Breathable Padding. Perfect For Camping, Hiking, Fishing, Travel, Outdoor",
-        "price": "$30.58",
-        "priceValue": 30.58,
-        "rating": 4.5,
-        "ratingsTotal": 5651
-      },
-      {
-        "asin": "B07X8RGTHK",
-        "title": "Coleman Classic Series Insulated Portable Cooler, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days, 52/70/120/150 Quart",
-        "price": "$74.99",
-        "priceValue": 74.99,
-        "rating": 4.5,
-        "ratingsTotal": 5200
-      },
-      {
-        "asin": "B07XMMB6SG",
-        "title": "Coleman Classic Series Insulated Portable Cooler, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days, 52/70/120/150 Quart",
+        "asin": "B0H415LF2V",
+        "title": "Oversized XXL Padded Camping Chairs for Adults, 1Pcs 500lbs Heavy Duty Support, 500G Ultra-Thick Cushion Sofa-Like Comfort, Folding Lawn Chair with Cooler Bag & Side Pockets, Black",
         "price": "$49.99",
         "priceValue": 49.99,
         "rating": 4.5,
-        "ratingsTotal": 5200
+        "ratingsTotal": 116
       },
       {
-        "asin": "B0BLY5KZTG",
-        "title": "Coleman Classic Series Insulated Portable Cooler, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days, 52/70/120/150 Quart",
-        "price": "$67.99",
-        "priceValue": 67.99,
-        "rating": 4.5,
-        "ratingsTotal": 5200
+        "asin": "B00VTJLSMA",
+        "title": "Coleman Outpost Breeze Folding Camping Chair with Cooling Mesh Back, Portable Outdoor Chair Supports up to 300lbs",
+        "price": "$47.49",
+        "priceValue": 47.49,
+        "rating": 4.4,
+        "ratingsTotal": 3419
       },
       {
-        "asin": "B0GRWPX25W",
-        "title": "Coleman Classic Series Insulated Portable Cooler, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days, 52/70/120/150 Quart",
+        "asin": "B0C8NBJ3QZ",
+        "title": "MARCHWAY Lightweight Folding High Back Camping Chair with Head Support, Stable Portable Compact for Outdoor Camp, Travel, Beach, Picnic, Festival, Hiking, Backpacking (Highback Khaki)",
         "price": "$46.99",
         "priceValue": 46.99,
-        "rating": 4.5,
-        "ratingsTotal": 5200
+        "rating": 4.4,
+        "ratingsTotal": 1167
       },
       {
-        "asin": "B07X8RGTHK",
-        "title": "Coleman Classic Series Insulated Portable Cooler, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days, 52/70/120/150 Quart",
+        "asin": "B0GYRY911V",
+        "title": "Camping Chairs for Adults 2 Pack, Folding Chair with 4-Can Cooler Bag & Cup Holder, Portable Heavy Duty Outdoor Chair with Mesh Back for Camping, Beach, Lawn, Fishing, Blue",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.4,
+        "ratingsTotal": 315
+      },
+      {
+        "asin": "B0GY19GBSV",
+        "title": "Lightweight 2Pcs Camping Chairs for Adults, Folding Lawn Chair with 4-Can Cooler Bag, Cup Holder,Collapsible Portable Outdoor Chair for Tailgating, Beach, Fishing,Black",
+        "price": "$39.98",
+        "priceValue": 39.98,
+        "rating": 4.4,
+        "ratingsTotal": 315
+      },
+      {
+        "asin": "B0C615FRRN",
+        "title": "Joyfair Camping Chairs for Lawn & Beach, Large for Adults, Black | 2 Pack Heavy Duty Steel Folding Chair for Outside, 600D Oxford Fabric, Carry Bag & Cup Holder, X-shape Supports, Portable",
+        "price": "$37.04",
+        "priceValue": 37.04,
+        "rating": 4.4,
+        "ratingsTotal": 257
+      },
+      {
+        "asin": "B0D6RLZD2M",
+        "title": "Folding Camping Collapsible Chairs Heavy Duty Lawn Chair with Cooler Bag, Storage Pocket, Waterproof Bag Outdoor Arm Chair, Supports 225LBS, Blue",
+        "price": "$19.80",
+        "priceValue": 19.8,
+        "rating": 4.4,
+        "ratingsTotal": 112
+      },
+      {
+        "asin": "B0FFGKSFN1",
+        "title": "Folding Camping Chair with Cup Holder, 225lbs Capacity, Portable Foldable Chair with Large Anti-Sink Feet, PE Coated Fabric for Outdoor, Beach, Fishing, Backpacking, Blue 2PCS",
+        "price": "$29.69",
+        "priceValue": 29.69,
+        "rating": 4.4,
+        "ratingsTotal": 89
+      },
+      {
+        "asin": "B0CMQDMN2H",
+        "title": "2 Pack Folding Camping Chairs with High Back, Comfortable Outdoor Chairs 300lbs Capacity Lightweight Portable Chair with Storage Bag for Camping, Fishing, Green",
+        "price": "$35.98",
+        "priceValue": 35.98,
+        "rating": 4.4,
+        "ratingsTotal": 57
+      },
+      {
+        "asin": "B0BY8FXR47",
+        "title": "MOON LENCE Portable Camping Chair Backpacking Chair - The 4th Generation Ultralight Folding Chair - Compact, Lightweight Foldable Chairs for Hiking Mountaineering, Beach (Black-1Pack)",
+        "price": "$31.44",
+        "priceValue": 31.44,
+        "rating": 4.3,
+        "ratingsTotal": 1599
+      },
+      {
+        "asin": "B0CWG543T3",
+        "title": "Naturehike YL08 Ultralight Camping Chair, 2.38 LBS Portable Backpacking Chair with Anti-Sinking Feet, Lightweight Compact Folding Hiking Camp Chair | Portable Lightweight Backpacking Chair, Breathable Side Mesh, Quick-Setup Shock-Cord Foldable Frame to Hiking, Beach & Travel",
+        "price": "$35.98",
+        "priceValue": 35.98,
+        "rating": 4.3,
+        "ratingsTotal": 1268
+      },
+      {
+        "asin": "B0BXBRP9VF",
+        "title": "Portable Folding Double Duo Camping Chair Loveseat | 2 Cup and Wine Glass Holder, Carrying Bag, Supports up to 500lbs, Beach, Tailgating, Fishing, Patio, Hunting, Backyard",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.3,
+        "ratingsTotal": 1122
+      },
+      {
+        "asin": "B0BPMC56MS",
+        "title": "SONGMICS Folding Camping Chairs, 2 Pack, 330 lb Capacity | Folding lawn chairs with cup holder and heavy duty structure, Black, UGCB08BK",
+        "price": "$33.54",
+        "priceValue": 33.54,
+        "rating": 4.3,
+        "ratingsTotal": 779
+      },
+      {
+        "asin": "B0C4NK8HD2",
+        "title": "WEIDIORME 2 Pack Lightweight Camping Chairs for Adults & Teens, 250LBS Capacity Foldable Portable Chairs with Carry Bag, Compact Design for Camping, Beach, Picnics, and Outdoor Events",
+        "price": "$36.99",
+        "priceValue": 36.99,
+        "rating": 4.3,
+        "ratingsTotal": 685
+      },
+      {
+        "asin": "B0DHRPW6SZ",
+        "title": "SONGMICS 2 Pack Breathable Camping Chairs, 330 lb Capacity Foldable Outdoor Chairs, High Back, Adjustable Armrests & Cup Holder, for Sports Garden Backyard, Ink Black UGCB028B02",
+        "price": "$33.56",
+        "priceValue": 33.56,
+        "rating": 4.3,
+        "ratingsTotal": 372
+      },
+      {
+        "asin": "B0GTQBHC8J",
+        "title": "NEWBULIG Zero Gravity Chair, Folding Patio Recliner with Cup Holder Trays | Portable Patio Chairs, Lounge Chair for Outdoor, Indoor, Beach, Pool, Camping, Balcony, Porch, Black",
+        "price": "$44.89",
+        "priceValue": 44.89,
+        "rating": 4.3,
+        "ratingsTotal": 240
+      },
+      {
+        "asin": "B0H29RGH5F",
+        "title": "2-Pack Heavy Duty Camping Chairs, 400 LBS Capacity Folding Outdoor Chair with Cooler Bag & Cup Holder, Oversized Portable Lawn Chair for Camping, Fishing, Tailgating, Beach (Green)",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.3,
+        "ratingsTotal": 73
+      },
+      {
+        "asin": "B0BRMJ1DG9",
+        "title": "Damei century Folding Camping Chairs, for Beach, Lawn, Yard",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.2,
+        "ratingsTotal": 1538
+      },
+      {
+        "asin": "B0FJQXC84Q",
+        "title": "2 Pack Portable Camping Chairs Folding Lawn Chair Outdoor Lightweight Beach Chair with Cup Holder & Carry Bag for Outside Sports, Fishing, Hiking, Travel, Picnic, Backyard (Black-Dark)",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.2,
+        "ratingsTotal": 355
+      },
+      {
+        "asin": "B0BHXR4DLT",
+        "title": "Weather Station Camping Chair, Lightweight and Portable Outdoor Folding Tailgate Quad Chair with Cup Holder and Armrests",
+        "price": "$17.05",
+        "priceValue": 17.05,
+        "rating": 4.1,
+        "ratingsTotal": 244
+      },
+      {
+        "asin": "B0F2ZR886C",
+        "title": "Wind Tour Portable Camping Chair Foldable Outdoor Chair for Hiking Camp Backpacking Lawn Beach Fishing Picnic with Carry Bag (Black)",
+        "price": "$21.99",
+        "priceValue": 21.99,
+        "rating": 3.3,
+        "ratingsTotal": 223
+      }
+    ]
+  },
+  "camping tent 4 person|1|100": {
+    "term": "camping tent 4 person",
+    "min": 1,
+    "max": 100,
+    "fetchedAt": "2026-08-04T19:08:57.625Z",
+    "results": [
+      {
+        "asin": "B08RBW95BC",
+        "title": "2/4 Person Camping Tent Lightweight Waterproof Backpacking Tent | Easy Setup Windproof Two Doors Double Layer with Rainfly Aluminum Pole Compact Outdoor Tent for Family Camping Hunting Hiking",
+        "price": "$90.99",
+        "priceValue": 90.99,
+        "rating": 4.6,
+        "ratingsTotal": 2332
+      },
+      {
+        "asin": "B077Y8DLSN",
+        "title": "Amazon Basics Camping Tent, 3-Season Dome Design with Rainfly",
+        "price": "$60.00",
+        "priceValue": 60,
+        "rating": 4.5,
+        "ratingsTotal": 4084
+      },
+      {
+        "asin": "B083QX3D3Z",
+        "title": "Forceatt Camping Tent 2/3/4 Person, Professional Waterproof & Windproof Lightweight Backpacking Tent Suitable for Outdoor,Hiking,Camping, Mountaineering and Travel",
+        "price": "$92.09",
+        "priceValue": 92.09,
+        "rating": 4.5,
+        "ratingsTotal": 1480
+      },
+      {
+        "asin": "B0CNQPR1CS",
+        "title": "Camping Tent 2-4 Person, Waterproof Windproof Tent with Rainfly Easy Set up-Portable Dome Tents for Camping…",
+        "price": "$56.99",
+        "priceValue": 56.99,
+        "rating": 4.4,
+        "ratingsTotal": 3578
+      },
+      {
+        "asin": "B0D7QLQNS5",
+        "title": "Coleman Sundome Camping Tent with Rainfly, 2/3/4/6 Person Tent Sets Up in 10 Mins, Weatherproof Shelter for Camping, Festivals, Backyard, Sleepovers, & More",
+        "price": "$78.99",
+        "priceValue": 78.99,
+        "rating": 4.4,
+        "ratingsTotal": 167
+      },
+      {
+        "asin": "B08RYX1ZL7",
+        "title": "4 Person Easy Pop Up Tent Waterproof Automatic Setup 2 Doors-Instant Family Tents for Camping Hiking & Traveling",
+        "price": "$84.99",
+        "priceValue": 84.99,
+        "rating": 4.3,
+        "ratingsTotal": 2647
+      },
+      {
+        "asin": "B0GD6Z2HCS",
+        "title": "4 Person Instant Tents for Camping Setup in 50s, Cabin Tent with Rainfly | Waterproof Windproof Camping Tent, Double Layer Portable Instant Tents with Carry Bag for Family Outdoor Camping & Hiking",
+        "price": "$89.98",
+        "priceValue": 89.98,
+        "rating": 4.3,
+        "ratingsTotal": 1848
+      },
+      {
+        "asin": "B0DYJD5PPX",
+        "title": "Camping Tent, Waterproof 2/3/4 Person Tents for Camping, Lightweight Easy Set Up Outdoor Hiking Tent Backpacking Tent with Carry Bag, Backpack Tent Suit for Family Beach Hiking Travel",
+        "price": "$45.99",
+        "priceValue": 45.99,
+        "rating": 4.3,
+        "ratingsTotal": 165
+      },
+      {
+        "asin": "B0GDCX5TDP",
+        "title": "Tent 4 Person Tents for Camping with 2 Doors & Rainfly | Portable Waterproof & Windproof Tents, Large Mesh Ventilation, Easy Setup Family Tent for Camping, Hiking and Backpacking",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.2,
+        "ratingsTotal": 1036
+      },
+      {
+        "asin": "B0CTMCN6BD",
+        "title": "LOYEAHCAMP Tent 4/6 Person Blackout Camping Tent with Rainfly | Waterproof Portable Double Layer Family Dome Tent for Camping for Outdoor Camping&Hiking",
         "price": "$74.99",
         "priceValue": 74.99,
+        "rating": 4.2,
+        "ratingsTotal": 572
+      },
+      {
+        "asin": "B0B49PSNHJ",
+        "title": "ASFANES Tents for Camping 2/4/6 Person Camping Dome Tent, Waterproof,Spacious, Lightweight Portable Backpacking Tent for Outdoor Camping/Hiking",
+        "price": "$51.99",
+        "priceValue": 51.99,
+        "rating": 4.2,
+        "ratingsTotal": 507
+      },
+      {
+        "asin": "B0DHP333DP",
+        "title": "Happy Travel Camping Tent, 4/6 Person Dome Tents for Camping with Rainfly | Waterproof Clip Easy Setup Portable Family Tent with Mesh Windows, 20% More Headroom Backpacking Tents for Camping & Hiking",
+        "price": "$65.99",
+        "priceValue": 65.99,
+        "rating": 4.2,
+        "ratingsTotal": 397
+      },
+      {
+        "asin": "B0F1JT42TP",
+        "title": "LOYEAHCAMP Tents 4 Person Camping Tent with Rainfly | Easy Setup Waterproof Family Tents for Camping, Portable Dome Tent for Outdoor Camping with Carry Bag",
+        "price": "$63.99",
+        "priceValue": 63.99,
+        "rating": 4.2,
+        "ratingsTotal": 152
+      },
+      {
+        "asin": "B0FGNSC5Y5",
+        "title": "XL Camping Tents 4/6 Person Waterproof Double Layer Dome | Tents waterproof,Dome,Easy to set up,4 Person tents for camping,Rain shelter,Double-layer Family tent,1/2/3 person tent",
+        "price": "$60.99",
+        "priceValue": 60.99,
+        "rating": 4.2,
+        "ratingsTotal": 115
+      },
+      {
+        "asin": "B0GLGQFKFF",
+        "title": "Golabs Pop Up Camping Tent for 2/3 Person, Quick Setup by Pre-Attached Pole | 4 Side Mesh, Ventilation, Lightweight, Portable, 2/3/4 Person Instant Tent, Carry Bag, Inner Pocket&Hook, for Park/Outdoor",
+        "price": "$42.99",
+        "priceValue": 42.99,
+        "rating": 4.1,
+        "ratingsTotal": 176
+      },
+      {
+        "asin": "B0GR4S4M1C",
+        "title": "OLIXIS Camping Tent 2 Person, Tent for Camping, Fast Setup, Compact Carry | 2 Person Tent for Camping Backpacking Hiking, Waterproof Windproof Dome Tent with Multi-Directional Ventilation",
+        "price": "$47.44",
+        "priceValue": 47.44,
+        "rating": 4.1,
+        "ratingsTotal": 152
+      },
+      {
+        "asin": "B08DNQKPNP",
+        "title": "EchoSmile Pop Up Camping Tent, 2/4/6 Person Easy Setup, Portable Carry Bag",
+        "price": "$99.99",
+        "priceValue": 99.99,
+        "rating": 4,
+        "ratingsTotal": 1516
+      },
+      {
+        "asin": "B0FT3B992T",
+        "title": "FanttikOutdoor Zeta C2/3/4 Camping Tent, 2/3/4 Person Instant Dome Tent, Easy Setup in 60s, Portable Waterproof Cabin Tent with Pre-Attached Poles & Air Vent, Ideal for Camping, Hiking, Backyard",
+        "price": "$59.98",
+        "priceValue": 59.98,
+        "rating": 4,
+        "ratingsTotal": 60
+      }
+    ]
+  },
+  "camping accessories gear|1|20": {
+    "term": "camping accessories gear",
+    "min": 1,
+    "max": 20,
+    "fetchedAt": "2026-08-04T19:09:55.790Z",
+    "results": [
+      {
+        "asin": "B0DT3X133H",
+        "title": "Ayaport Campsite Storage Strap Tent Camping Tree Hanging Organizer with 4 Carabiner Hooks 6 Stainless Steel S Hooks & 20 Separated Loops, Camping Set Travel & Outdoor Camping Gear",
+        "price": "$18.69",
+        "priceValue": 18.69,
+        "rating": 4.9,
+        "ratingsTotal": 80
+      },
+      {
+        "asin": "B006QF3TW4",
+        "title": "LifeStraw Personal — Water Filter for Hiking, Camping, Travel, and Emergency Preparedness, 1 Pack, Blue",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.8,
+        "ratingsTotal": 99976
+      },
+      {
+        "asin": "B07GLCYR5S",
+        "title": "QIO CHUANG Emergency Mylar Thermal Blankets -Space Blanket Survival kit Camping Blanket (4-Pack). Perfect for Outdoors, Hiking, Survival, Bug Out Bag ，Marathons or First Aid 1",
+        "price": "$6.99",
+        "priceValue": 6.99,
+        "rating": 4.7,
+        "ratingsTotal": 8420
+      },
+      {
+        "asin": "B098KJMMGC",
+        "title": "Emergency Blanket Mylar Thermal Space Survival Gear & Supplies 4-Pack Foil | Cold Weather Power Outage Camping Car Winter Storm Heat Reflective Hiking Backpacking Essentials First Aid Marathon Prepper",
+        "price": "$5.94",
+        "priceValue": 5.94,
+        "rating": 4.7,
+        "ratingsTotal": 5056
+      },
+      {
+        "asin": "B09VGNJTPW",
+        "title": "SZHLUX Camping Hammock Double & Single Portable Hammocks with 2 Tree Straps and Attached Carry Bag,Great for Outdoor,Indoor,Beach,Camping,Light Grey / Sky Blue | With 2 Tree Straps and Attached Carry Bag,Great for Outdoor,Indoor,Beach,Camping",
+        "price": "$15.99",
+        "priceValue": 15.99,
+        "rating": 4.7,
+        "ratingsTotal": 4351
+      },
+      {
+        "asin": "B07VVT97RB",
+        "title": "Outdoor Knot Cards: 22 Knots – Camping, Backpacking, Scouts | Waterproof pocket guide with mini carabiner for camping, backpacking essentials, and safety survival gear & bushcraft",
+        "price": "$8.49",
+        "priceValue": 8.49,
+        "rating": 4.7,
+        "ratingsTotal": 2827
+      },
+      {
+        "asin": "B0BHFG9CQF",
+        "title": "Magic Campfire Fire Color Changing Packets for Fire Pit (4 Pack) Outdoor Fireplaces & Bonfires, Rainbow Colored Flames - Perfect Camping Essential & Accessories - Must Have for Kids & Adults",
+        "price": "$4.95",
+        "priceValue": 4.95,
+        "rating": 4.7,
+        "ratingsTotal": 2746
+      },
+      {
+        "asin": "B0C5J8MVDD",
+        "title": "First Aid Kit 300PCS Car Home Camping Essentials Red 1st Aid | School Supplies,Dorm Room Essentials,Survival Kit,Emergency Kit,Outdoor Adventure,Office Hiking Portable",
+        "price": "$17.49",
+        "priceValue": 17.49,
+        "rating": 4.7,
+        "ratingsTotal": 2530
+      },
+      {
+        "asin": "B0DGGMQ564",
+        "title": "110 PCS Fire Starter, Fire Starter for Campfire, Light Compact Gear | Fire Starters for Fireplace, Charcoal Starter, BBQ, Fire Pit &Chimney, Smoker, Fire Starters for Grill- Camping Accessories",
+        "price": "$17.29",
+        "priceValue": 17.29,
+        "rating": 4.7,
+        "ratingsTotal": 870
+      },
+      {
+        "asin": "B0CZ4N6JYS",
+        "title": "Stanley Wildfare Go 4-Piece Stainless Steel Two Cup Cook Set | 32 oz Pot and Lid with Fold & Lock Handle | 2 Stacking Cups | Camping Essentials for Your Camp Kitchen | BPA-Free | Shale + Charcoal",
+        "price": "$20.00",
+        "priceValue": 20,
+        "rating": 4.7,
+        "ratingsTotal": 547
+      },
+      {
+        "asin": "B0F3HZZNNP",
+        "title": "Camping String Lights, 32.8FT Rechargeable Camping Lights with Quick Storage Reel, 8 Modes Waterproof Hanging LED Camping Lights for Tent, RV Awning, Patio and Outdoor Camping Gear Essentials",
+        "price": "$12.99",
+        "priceValue": 12.99,
+        "rating": 4.7,
+        "ratingsTotal": 244
+      },
+      {
+        "asin": "B07PLZP5LN",
+        "title": "HEETA Dry Bag Waterproof Backpack with Phone Case 5L/10L/20L/30L/40L | Roll Top Lightweight Dry Storage Bag for Women Men, Travel Boating Kayaking Paddle Board Camping Beach Essentials Accessories",
+        "price": "$9.98",
+        "priceValue": 9.98,
+        "rating": 4.6,
+        "ratingsTotal": 36482
+      },
+      {
+        "asin": "B07VDKMGPM",
+        "title": "MalloMe Smores Sticks for Fire Pit Long - Marshmallow Roasting Sticks Smores Kit - Smore Skewers Hot Dog Fork Campfire Cooking Equipment, Camping Essentials S'mores Gear Outdoor Accessories 32\" 5 Pack",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 14268
+      },
+      {
+        "asin": "B0748HGDVD",
+        "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green",
+        "price": "$17.11",
+        "priceValue": 17.11,
+        "rating": 4.6,
+        "ratingsTotal": 13642
+      },
+      {
+        "asin": "B07RNNMZW3",
+        "title": "LuxoGear Emergency Whistles with Lanyard Safety Whistle Survival Shrill Loud Blast for Kayak Life Vest Jacket Boating Fishing Boat Camping Hiking Hunting Rescue Signaling Kids Lifeguard Plastic 2 Pack",
+        "price": "$7.99",
+        "priceValue": 7.99,
+        "rating": 4.6,
+        "ratingsTotal": 13288
+      },
+      {
+        "asin": "B07MKBKN4H",
+        "title": "FLY2SKY Portable LED Gear Camping Lights with Clip Hook Emergency Light | Battery Powered LED Tent Lights Bulbs Outdoor Camping Essentials for Hiking Backpacking Hurricane Power Outage Emergency Gear",
+        "price": "$11.04",
+        "priceValue": 11.04,
+        "rating": 4.6,
+        "ratingsTotal": 8888
+      },
+      {
+        "asin": "B000E3FNAA",
+        "title": "Coghlan's Magnetic Bear Bell with Silencer - Hiking Safety Gear for Wildlife Alert",
+        "price": "$4.99",
+        "priceValue": 4.99,
+        "rating": 4.6,
+        "ratingsTotal": 8626
+      },
+      {
+        "asin": "B08T6LC7SK",
+        "title": "Carabiner Clip - Heavy Duty Carabiners 800lbs-13KN (2922 lbs) Carabeaner D Ring Shape,Key Chain Clip Hook,Keychain Clip,Multipurpose for Camping, Hiking,Backpacking or Other Outdoor Activities.",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.6,
+        "ratingsTotal": 4151
+      },
+      {
+        "asin": "B07B26MHPG",
+        "title": "EverBrite 3-Pack Camping Lights - 3 Lighting Modes, Outdoor Portable LED Bulbs Ideal for Kids' Adventure Activities, Camping, Emergency and More, 3 x AAA Batteries Included",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 3140
+      },
+      {
+        "asin": "B08634S7HC",
+        "title": "HongyiTime 2 Boxs (100 Sheets) Hand Washing Soap Sheets for Outdoor Travel,Portable Camping Hand Soap,Hiking Washing Hand Bath Paper Soap for Travel,BBQ,Party,School,Girls",
+        "price": "$6.29",
+        "priceValue": 6.29,
+        "rating": 4.6,
+        "ratingsTotal": 2877
+      },
+      {
+        "asin": "B0CNSH7KS5",
+        "title": "5 Pcs Marshmallow Roasting Sticks for Fire Pit Long 32Inch, Smores Sticks Skewers, Smores Kit for Fire Pit, Premium Telescoping Hot Dog Roasting Sticks for Campfire Accessories Outside Camping VOPTON",
+        "price": "$6.99",
+        "priceValue": 6.99,
+        "rating": 4.6,
+        "ratingsTotal": 2838
+      },
+      {
+        "asin": "B0C9THKCWY",
+        "title": "MEKER Fire Color Changing Packets - Fire Pit, Campfires, Outdoor Fireplaces, Bonfire - Magic Colorful Changing Fire - Perfect Fire Camping Accessories for Kids & Adults (12 Pack)",
+        "price": "$9.45",
+        "priceValue": 9.45,
+        "rating": 4.6,
+        "ratingsTotal": 2616
+      },
+      {
+        "asin": "B0CLV6H7YN",
+        "title": "Tent Stakes Camping Stakes,AVOFOREST 7.1inch 12PCS Non-Rust Metal Tent Pegs with Storage Bag Ground Stakes Tent Spikes Camping,Garden,Hiking Orange (Orange 12pcs, 7.1IN)",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 2336
+      },
+      {
+        "asin": "B08LC3D4Q9",
+        "title": "10 Pack Aluminum D Ring Key Rings Hiking Clips Locking Carabiner for Hiking Camping Fishing and Outdoor Use，Clips with Screw Gate Multicolored",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 2029
+      },
+      {
+        "asin": "B0FT7DXQX5",
+        "title": "ZAVIT Small Pocket Knife for Women, EDC Box Cutter Gadgets, Gifts for Women Wife Sister, Gifts ldea for Camping Fishing Hiking, Christmas Birthday Gift, Everyday Carry Knife",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 1813
+      },
+      {
+        "asin": "B0DK1FQPQB",
+        "title": "NPQQUAN Sun Hats for Men Women with Neck Flap UPF 50+ UV Protection | Wide Brim Bucket Hat,Water Resistant,Adjustable Size,Detachable Chin Strap,Foldable & Lightweight,Hiking Fishing Hats",
+        "price": "$9.95",
+        "priceValue": 9.95,
+        "rating": 4.6,
+        "ratingsTotal": 1456
+      },
+      {
+        "asin": "B0CYZXN11R",
+        "title": "Fammart Mesh Shower Caddy Portable for College Dorm Room Essentials, Odorless Polyester Large Shower Tote Bag with Dual Handles, 8-Pocket Quick-Dry Toiletry Organizer for Travel, Beach, Camping, Gym",
+        "price": "$6.99",
+        "priceValue": 6.99,
+        "rating": 4.6,
+        "ratingsTotal": 760
+      },
+      {
+        "asin": "B0CGCR8LW3",
+        "title": "Dinosaur Kids Headlamp, T-Rex Dinosaur Led Headlamp Flashlight, Dinosaur Toy Headlamp Flashlight with 4 Lighting Mode for Boys, Girls’ Camping, Hiking, Reading and Party (Green)",
+        "price": "$13.59",
+        "priceValue": 13.59,
+        "rating": 4.6,
+        "ratingsTotal": 369
+      },
+      {
+        "asin": "B0G43YLMDK",
+        "title": "Grill Guru Smores Sticks for Fire Pit - Accessories for Campfire Marshmallow Roasting Sticks Smores Kit Outdoor-Smore Skewers Hot Dog Fork For Outside, Camping Essentials Bonfire Gear Long 32\" 10 Pack",
+        "price": "$11.69",
+        "priceValue": 11.69,
+        "rating": 4.6,
+        "ratingsTotal": 296
+      },
+      {
+        "asin": "B0GGSG3D5P",
+        "title": "BEARCLAW Smores Sticks for Fire Pit - Accessories for Campfire Marshmallow Roasting Sticks Smores Kit Outdoor-Smore Skewers Hot Dog Fork For Outside, Camping Essentials Bonfire Gear Long 32\" 5 Pack",
+        "price": "$8.95",
+        "priceValue": 8.95,
+        "rating": 4.6,
+        "ratingsTotal": 256
+      },
+      {
+        "asin": "B0B4KJ3MWK",
+        "title": "Headlamp Rechargeable, 230° Wide Beam Head Lamp LED with Motion Sensor for Adults - Camping Accessories Gear, Waterproof Head Light Flashlight for Hiking, Running, Repairing, Fishing, Cycling",
+        "price": "$11.89",
+        "priceValue": 11.89,
         "rating": 4.5,
-        "ratingsTotal": 5200
+        "ratingsTotal": 16851
       },
       {
-        "asin": "B08RSKGYPM",
-        "title": "TOURIT Soft Sided Cooler Bag 30/48/60Can, Collapsible & Leakproof Ice Chest | Dry & Wet Insulated Beach Cooler, 12h insulated & waterproof large beach bag, ideal for picnic camping hiking fishing sport",
-        "price": "$29.99",
-        "priceValue": 29.99,
+        "asin": "B0FT6D8FH2",
+        "title": "Coghlan’s Multi-Spice Shakers – Compact 6-in-1 Seasoning Containers for Camping, Travel, BBQ & Everyday Cooking – Lightweight, Portable, Mess-Free Design – Made in USA",
+        "price": "$10.97",
+        "priceValue": 10.97,
         "rating": 4.5,
-        "ratingsTotal": 4701
+        "ratingsTotal": 11364
       },
       {
-        "asin": "B0D5MGDJ2R",
-        "title": "MIYCOO Cooler Backpack - 40 Cans Insulated Backpack Cooler for Men Women | Portable 2 Leak Proof Compartments Coolers Bag for Beach Travel Picnic Lunch Hiking BBQ Camping",
-        "price": "$29.99",
-        "priceValue": 29.99,
+        "asin": "B09YCNTY8B",
+        "title": "FUNBRO Multitool Carabiner with Pocket Knife, Bottle Opener | Stocking Stuffers Gifts for Men, EDC Carabiners with Folding Knives, Window Breaker and Screwdriver, Gear for Camping Hiking",
+        "price": "$9.99",
+        "priceValue": 9.99,
         "rating": 4.5,
-        "ratingsTotal": 2205
+        "ratingsTotal": 3941
       },
       {
-        "asin": "B006H0L5TM",
-        "title": "Igloo Marine Cooler | Insulated Hard Shell Ice Chest |Great for Fishing, Camping, Boating, & More",
-        "price": "$79.99",
-        "priceValue": 79.99,
+        "asin": "B09FPN5DHM",
+        "title": "UNCO- Marshmallow Roasting Sticks, 32”, 5 Pack, Dark Brown | Wooden Handle, Extendable Stainless Steel Smores Sticks for Fire Pit, Smores Skewers, Campfire Cooking Equipment",
+        "price": "$5.39",
+        "priceValue": 5.39,
         "rating": 4.5,
-        "ratingsTotal": 1594
+        "ratingsTotal": 3166
       },
       {
-        "asin": "B0F29DD5T4",
-        "title": "Maelstrom 30 Can Collapsible Soft Cooler Bag with Quick Access Opening | 5-layer Insulation,16h Cold, Leakproof, Waterproof, Multiple Pockets, Bottle Opener, Portable for Beach, Camping, Picnics",
-        "price": "$27.91",
-        "priceValue": 27.91,
+        "asin": "B0GGWHJ8XJ",
+        "title": "MalloMe Camping Lights Lantern Flashlights, Battery Powered Operated Lamp Lanterns for Power Outages, Camping Essentials Solar and Rechargeable Options for Outdoor, Home, Emergency, Hurricane Survival",
+        "price": "$9.99",
+        "priceValue": 9.99,
         "rating": 4.5,
-        "ratingsTotal": 509
+        "ratingsTotal": 2510
       },
       {
-        "asin": "B09PD3D27J",
-        "title": "Maelstrom 24/30/60 Can Soft Cooler Bag, Double Deck Portable Ice Chest | 12H Cold, 5-layer Insulation, Lightweight, Collapsible, Bottle Opener, Multiple Pockets, for Beach, Camping, Travel, Picnics",
-        "price": "$40.88",
-        "priceValue": 40.88,
-        "rating": 4.4,
-        "ratingsTotal": 3403
+        "asin": "B0CHDSB1HB",
+        "title": "HGD (6 Pack) Magic Campfire Fire Color Changing Packets for Fire Pit, Indoor/Outdoor Fireplace, Bonfire - Rainbow Magical Flame, Camping Accessory, Compatible with Wood",
+        "price": "$5.99",
+        "priceValue": 5.99,
+        "rating": 4.5,
+        "ratingsTotal": 2302
       },
       {
-        "asin": "B0DHRMGWYH",
-        "title": "Maelstrom Soft Cooler Bag, 35/55/75 Can Beach Cooler with Flip-top Access | Lightweight, 5-layer Insulation, 12H Cold, Leakproof, Collapsible, Adjustable Strap, Perfect for Camping,Picnics,Work,Travel",
-        "price": "$32.38",
-        "priceValue": 32.38,
-        "rating": 4.4,
-        "ratingsTotal": 2997
-      },
-      {
-        "asin": "B09F733B2M",
-        "title": "Maelstrom Soft Cooler Bag, 35/55/75 Can Beach Cooler with Flip-top Access | Lightweight, 5-layer Insulation, 12H Cold, Leakproof, Collapsible, Adjustable Strap, Perfect for Camping,Picnics,Work,Travel",
-        "price": "$41.67",
-        "priceValue": 41.67,
-        "rating": 4.4,
-        "ratingsTotal": 2997
-      },
-      {
-        "asin": "B0BJ398Z1K",
-        "title": "Pelican 8 Quart Personal Lunch Box Coolers",
-        "price": "$67.98",
-        "priceValue": 67.98,
-        "rating": 4.4,
-        "ratingsTotal": 2318
-      },
-      {
-        "asin": "B0CC93FQN8",
-        "title": "Hulongo Large Waterproof Insulated Cooler Backpack, 30L, 48Cans | Men & Women, Leak Proof, for Camping, Beach, Fishing, Picnic, Travel, Outdoor",
-        "price": "$35.99",
-        "priceValue": 35.99,
-        "rating": 4.4,
+        "asin": "B0CNL3G38V",
+        "title": "Mosquito Bite Itch Relief Bug Bite Patch, Camping Travel Essentials | After Bite Insect Bite Treatment, Anti Itch Cream Alternative, Insect Bite Relief, Cruise, Travel and Camping Essential",
+        "price": "$11.95",
+        "priceValue": 11.95,
+        "rating": 4.5,
         "ratingsTotal": 2162
       },
       {
-        "asin": "B0BRL9S8L9",
-        "title": "Igloo Marine Cooler | Insulated Hard Shell Ice Chest |Great for Fishing, Camping, Boating, & More",
-        "price": "$34.98",
-        "priceValue": 34.98,
+        "asin": "B0DKJMFGX7",
+        "title": "Emergency Mylar Thermal Blankets,Space Blanket Survival kit Camping Blanket, Perfect for Outdoors, Hiking, Survival, Bug Out Bag,Marathons or First Aid",
+        "price": "$1.29",
+        "priceValue": 1.29,
+        "rating": 4.5,
+        "ratingsTotal": 511
+      },
+      {
+        "asin": "B01M31R8B6",
+        "title": "Atomic Bear Paracord Bracelet (2 Pack) - Adjustable - Fire Starter - Loud Whistle - Perfect for Hiking, Camping, Fishing and Hunting - Black & Black+Orange",
+        "price": "$10.99",
+        "priceValue": 10.99,
         "rating": 4.4,
-        "ratingsTotal": 254
+        "ratingsTotal": 16740
       },
       {
-        "asin": "B0H3WGSKDQ",
-        "title": "RTIC 16 QT Road Trip Cooler | Insulated Portable Cooler for Ice, Food, Drinks, Beach, Camping, Picnic, Travel and Sports",
-        "price": "$84.00",
-        "priceValue": 84,
+        "asin": "B09XDHPXFM",
+        "title": "Vinyl Fitted Picnic Table Cover with Bench Covers & Bag 6ft Black Checkered | Rnoony Outdoor Waterproof, Windproof Tablecloth with Elastic Edges. Camping RV Gear Campers Must Have 72x30 Inches",
+        "price": "$17.15",
+        "priceValue": 17.15,
         "rating": 4.4,
-        "ratingsTotal": 215
+        "ratingsTotal": 2881
       },
       {
-        "asin": "B0G5S4Z7N5",
-        "title": "Alphasonik Cooler Backpack 48 Cans Insulated Backpack Cooler for Men & Women, 2 Leak Proof Compartments Coolers Bag for Beach Travel Picnic Hiking BBQ Fishing Outdoor Camping",
-        "price": "$26.95",
-        "priceValue": 26.95,
+        "asin": "B09SQ8F8P4",
+        "title": "Brightz Hammock Lights, 18 Foot Paracord Light Rope | Camping & burning man accessories; paracord light rope for hammocks & campsites; glamping & camping gear",
+        "price": "$19.99",
+        "priceValue": 19.99,
         "rating": 4.4,
-        "ratingsTotal": 56
+        "ratingsTotal": 77
       },
       {
-        "asin": "B0BVTHPXLB",
-        "title": "FRIZCOL 3-in-1 Camping Fan - Portable Fans Rechargeable - 24000mAh Battery Powered Fan with Light & Remote for Indoor, Outdoor, Tent, Travel, Fishing, Jobsite, Gifts for Men Dad Him - Green",
-        "price": "$29.98",
-        "priceValue": 29.98,
+        "asin": "B0DRT47BD3",
+        "title": "6-Pack Elastic Rope Fasteners - Backpack Accessories for Organizing Gear, Trekking Poles, or Camping Equipment (Army Green/Khaki/Orange)",
+        "price": "$9.49",
+        "priceValue": 9.49,
+        "rating": 4.4,
+        "ratingsTotal": 50
+      },
+      {
+        "asin": "B016HM7QRE",
+        "title": "Odoland Portable LED Camping Lantern with Ceiling Fan - Hurricane Emergency",
+        "price": "$15.99",
+        "priceValue": 15.99,
         "rating": 4.3,
-        "ratingsTotal": 3482
+        "ratingsTotal": 47307
       },
       {
-        "asin": "B0DSK924YL",
-        "title": "INSMEER Cooler with Wheels and Handle, 80 Cans/50L Rolling Cooler, Portable Soft Sided Cooler with Wheel, 2-in-1 Collapsible Trolley Cart, Large Coolerbag for Grocery Shopping",
-        "price": "$49.96",
-        "priceValue": 49.96,
+        "asin": "B0B8RWZ1TD",
+        "title": "2 Pack Waterproof Lighter Outdoor Windproof Torch Lighters Dual Arc Butane Electric Lighters USB Rechargeable Lighters Flameless Plasma Lighter Camping Hiking Adventure Survival Tactical Gear",
+        "price": "$12.18",
+        "priceValue": 12.18,
         "rating": 4.3,
-        "ratingsTotal": 477
+        "ratingsTotal": 4109
       },
       {
-        "asin": "B094SK6MBP",
-        "title": "Igloo 60367 Sportsman Latitude 52 Cooler Box, Approx. 11.2 gal (49 L), Sportsman, Latitude, Outdoor, Camping, Leisure, Fishing, Green",
-        "price": "$58.75",
-        "priceValue": 58.75,
+        "asin": "B0BRN7JD86",
+        "title": "Picnic Table Cover Bench Covers Camping Essentials Tablecloth | Waterproof Vinyl for Outdoor, Windproof Elastic Fitted Edges, RV BBQ Accessories Must Haves, Storage Bag Included",
+        "price": "$16.10",
+        "priceValue": 16.1,
         "rating": 4.3,
-        "ratingsTotal": 147
+        "ratingsTotal": 3642
       },
       {
-        "asin": "B0B24P5QV7",
-        "title": "SDLINR Collapsible Cooler with Wheels, Rolling Cooler Bag for Beach Travel | Two-layer Large Capacity, Leakproof Food-grade EVA Liner, Insulated Soft Sided Rolling Coolers, Ice Chest with Wheels",
-        "price": "$54.99",
-        "priceValue": 54.99,
-        "rating": 4.1,
-        "ratingsTotal": 1485
+        "asin": "B08ZN629Q4",
+        "title": "10 Plates Stove Windscreen, Aluminum Stove Windshield with Drawstring Bag | for Camping, Butane Stoves",
+        "price": "$5.99",
+        "priceValue": 5.99,
+        "rating": 4.3,
+        "ratingsTotal": 2385
       },
       {
-        "asin": "B0CT5XKDTM",
-        "title": "Evapolar evaCHILL Portable Air Conditioners - Portable AC Unit - Small Personal Evaporative Air Cooler & Fan for Desk, Office, Car, Camping, Grey",
-        "price": "$69.99",
-        "priceValue": 69.99,
-        "rating": 3.5,
-        "ratingsTotal": 4202
+        "asin": "B0CR6G7GX4",
+        "title": "HGD Fire Starter, Mini Natural Fire Starters for Campfires, BBQ Grill, Charcoal Chimney, Outdoor Pit, Indoor Fireplace, Wood Stove - Water Resistant Firestarter Sticks - Camping Accessories Essentials",
+        "price": "$5.99",
+        "priceValue": 5.99,
+        "rating": 4.3,
+        "ratingsTotal": 1459
+      },
+      {
+        "asin": "B0FTZ5M84W",
+        "title": "Camping Water Container 2 Gallon Collapsible Water Jug with Spout - Reusable Plastic Flasks, Foldable Empty Gallon Jug for Water Storage, Water Bag for Outdoor Hiking Emergency Prep (1 Pack)",
+        "price": "$6.99",
+        "priceValue": 6.99,
+        "rating": 4.3,
+        "ratingsTotal": 859
+      },
+      {
+        "asin": "B0DZCLGQY2",
+        "title": "10.6 Inch Portable Camping Fan with Light, 8000mAh Rechargeable Tent Fan | Battery Operated Ceiling Fan with Remote Control and Hanging Hook,Detachable Fan Blade,for Tent Canopy RV Porch Bedroom",
+        "price": "$18.14",
+        "priceValue": 18.14,
+        "rating": 4.3,
+        "ratingsTotal": 330
+      },
+      {
+        "asin": "B0D5HTW1NB",
+        "title": "Camping String Lights 4 in 1, 32.8FT Quick Storage 8 Modes Protable | Rechargeable Fairy Tent Lights String , Hanging Waterproof LED Lamp for Outdoor Indoor Patio Awning Decor Camping Essentials",
+        "price": "$15.99",
+        "priceValue": 15.99,
+        "rating": 4.2,
+        "ratingsTotal": 2284
+      },
+      {
+        "asin": "B0F638TD71",
+        "title": "Tool Storage Bag for Camping, BBQ & EDC, Multi-Purpose Gear Organizer Pouch with Zipper, for Tent Stakes, Grill Tools, Car Accessories (01camel)",
+        "price": "$3.82",
+        "priceValue": 3.82,
+        "rating": 4.2,
+        "ratingsTotal": 165
+      },
+      {
+        "asin": "B07P6KPQHW",
+        "title": "Solar Shower Bag | 5 Gal/20L Solar Heating Camping Shower Bag | Removable Hose | On-Off Switchable Shower Head | Ducha Portatil | Traveling Shower | Portable Shower for Beach Swimming, Hiking",
+        "price": "$19.95",
+        "priceValue": 19.95,
+        "rating": 4,
+        "ratingsTotal": 11290
       }
     ]
   }

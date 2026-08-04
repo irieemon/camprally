@@ -103,9 +103,32 @@ export async function discover(term, { min, max, force = false, nowIso } = {}) {
       // Best-rated first, with review count breaking ties.
       .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0) || b.ratingsTotal - a.ratingsTotal);
 
-    cache[key] = { term, min, max, fetchedAt: nowIso ?? null, results };
+    // Collapse colour and size variants. Amazon lists each as its own ASIN, so
+    // a raw search for "folding camping chair" returned the same Coleman chair
+    // three times — a "best of" list naming one product repeatedly reads as
+    // filler and wastes the slots. Keep the best-rated variant of each product.
+    const deduped = [];
+    const seen = new Set();
+    for (const p of results) {
+      // Brand plus the first few significant words is a good enough identity:
+      // variants share a prefix and differ only in trailing colour/size text.
+      // Named `identity`, not `key` — `key` is the cache key in this scope and
+      // shadowing it would silently write every search to the wrong cache slot.
+      const identity = p.title
+        .toLowerCase()
+        .replace(/[^a-z0-9 ]/g, " ")
+        .split(/\s+/)
+        .filter(Boolean)
+        .slice(0, 5)
+        .join(" ");
+      if (seen.has(identity)) continue;
+      seen.add(identity);
+      deduped.push(p);
+    }
+
+    cache[key] = { term, min, max, fetchedAt: nowIso ?? null, results: deduped };
     saveCache(cache);
-    return results;
+    return deduped;
   } catch {
     return [];
   }

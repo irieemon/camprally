@@ -116,6 +116,60 @@ interface CustomSection {
 }
 
 const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "budget-camping-accessories-under-20": [
+    {
+      type: "product-grid",
+      title: "Budget Camping Accessories Under $20 — Quick Comparison",
+      items: [
+        { label: "Ayaport Campsite Storage Strap Ten", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DT3X133H?tag=camprally-20" },
+        { label: "LifeStraw Personal — Water Filter ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "QIO CHUANG Emergency Mylar Thermal", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B07GLCYR5S?tag=camprally-20" },
+        { label: "Emergency Blanket Mylar Thermal Sp", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B098KJMMGC?tag=camprally-20" },
+        { label: "SZHLUX Camping Hammock Double & Si", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B09VGNJTPW?tag=camprally-20" },
+        { label: "Outdoor Knot Cards: 22 Knots – Cam", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B07VVT97RB?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-budget-tents-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Budget Tents Under $100 - 2026 Reviews — Quick Comparison",
+      items: [
+        { label: "2/4 Person Camping Tent Lightweigh", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B08RBW95BC?tag=camprally-20" },
+        { label: "Amazon Basics Camping Tent", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B077Y8DLSN?tag=camprally-20" },
+        { label: "Forceatt Camping Tent 2/3/4 Person", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B083QX3D3Z?tag=camprally-20" },
+        { label: "Camping Tent 2-4 Person", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CNQPR1CS?tag=camprally-20" },
+        { label: "Coleman Sundome Camping Tent with ", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0D7QLQNS5?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-camping-chairs-tailgating": [
+    {
+      type: "product-grid",
+      title: "Best Camping Chairs Under $50 for Tailgating and Campfires — Quick Comparison",
+      items: [
+        { label: "Coleman Portable Camping Chair wit", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0033990ZQ?tag=camprally-20" },
+        { label: "ONETIGRIS Tigerblade Camping Chair", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CQJR8NLW?tag=camprally-20" },
+        { label: "VEVOR Oversized Camping Folding Ch", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0C9MF8L3N?tag=camprally-20" },
+        { label: "EMERIT Camping Chair", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0DFPH7K8C?tag=camprally-20" },
+        { label: "Amazon Basics Camping Chair", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B074YRN643?tag=camprally-20" },
+        { label: "Cascade Mountain Tech Folding Camp", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B01EVQ1Y6W?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-camping-coolers-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Camping Coolers Under $100 in 2026 — Stay Cold, Stay Happy — Quick Comparison",
+      items: [
+        { label: "Klein Tools 55600 Work Cooler", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B06XGJTTRY?tag=camprally-20" },
+        { label: "ENGEL 13qt Leak-Proof", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B00BD26JMM?tag=camprally-20" },
+        { label: "Igloo Hard Cooler | Profile Series", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0GP2JLJT3?tag=camprally-20" },
+        { label: "Igloo Hard Cooler | Profile Series", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0GP3M7SSR?tag=camprally-20" },
+        { label: "Igloo Tag Along Too Coolers | Insu", detail: "", note: "", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CPM9BMWG?tag=camprally-20" },
+      ]
+    },
+  ],
   "cheapest-camping-setup-for-beginners": [
     {
       type: "stats",
@@ -186,38 +240,6 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
     },
   ],
 
-  "best-budget-tents-under-100": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Coleman Sundome 2-Person Tent",
-        price: "$49.99",
-        rating: "4.4/5",
-        why: "The king of budget tents. WeatherTec™ system with inverted seams keeps you dry, 10-minute setup, and genuine 2-person capacity. At under $50, nothing else comes close.",
-        category: "Tent"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Top Picks Under $100",
-      items: [
-        { label: "Coleman Sundome 2P", detail: "$49.99", note: "4.4★", category: "Top Pick", icon: "🏆", link: "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20" },
-        { label: "Kelty Discovery Element 4", detail: "$89.99", note: "4.2★", category: "Backpackers", icon: "🎒", link: "https://www.amazon.com/dp/B0CH3QFY3C?tag=camprally-20" },
-        { label: "Teton Sports Grande 6", detail: "$99.99", note: "4.3★", category: "Families", icon: "👨‍👩‍👧", link: "https://www.amazon.com/dp/B08622Y9LV?tag=camprally-20" },
-        { label: "Core 4-Person Dome", detail: "$79.99", note: "4.1★", category: "Car Camping", icon: "🚗", link: "https://www.amazon.com/dp/B00VFG6LNI?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "tips",
-      title: "What to Look for in a Budget Tent",
-      tips: [
-        { title: "Hydrostatic Rating", body: "Aim for 1500mm+ waterproofing. Higher = better rain protection." },
-        { title: "Seam Sealing", body: "Taped seams beat stitched every time. Prevents water wicking through needle holes." },
-        { title: "Pole Quality", body: "Fiberglass is standard at this price; aluminum is a bonus for weight and durability." },
-        { title: "Interior Height", body: "Check if you can actually sit up inside. '2-person' labels are often optimistic." },
-      ]
-    },
-  ],
 
   "best-budget-sleeping-bags-cold-weather": [
     {
@@ -572,19 +594,6 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
     },
   ],
 
-  "budget-camping-accessories-under-20": [
-    {
-      type: "product-grid",
-      title: "Accessories Under $20",
-      items: [
-        { label: "Nalgene Wide Mouth 32oz", detail: "$14.99", note: "4.7★", category: "Essential", icon: "💧", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
-        { label: "Sea to Summit Dry Sack 8L", detail: "$16.99", note: "4.5★", category: "Essential", icon: "🎒", link: "https://www.amazon.com/dp/B002OYGZZ4?tag=camprally-20" },
-        { label: "Coghlan's Waterproof Matches (50)", detail: "$10.99", note: "4.3★", category: "Smart", icon: "🔥", link: "https://www.amazon.com/dp/B0000AQLYP?tag=camprally-20" },
-        { label: "Bungee Cords (Set of 12)", detail: "$12.99", note: "4.4★", category: "Essential", icon: "🔗", link: "https://www.amazon.com/dp/B07XJ8C8F5?tag=camprally-20" },
-        { label: "Travel Bidet", detail: "$8.99", note: "4.2★", category: "Game-Changer", icon: "🚿", link: "https://www.amazon.com/s?k=portable+travel+bidet&tag=camprally-20" },
-      ]
-    },
-  ],
 
   "how-to-start-camping-no-gear": [
     {
@@ -720,46 +729,6 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
     },
   ],
 
-  "best-camping-coolers-under-100": [
-    {
-      type: "product-grid",
-      title: "Best Camping Coolers Under $100",
-      subtitle: "Tested for 72+ hours in direct sun. These kept the most ice.",
-      items: [
-        { label: "Igloo BMX 52-Quart", detail: "$39.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B01M6XFW5P?tag=camprally-20" },
-        { label: "Coleman 50-Quart", detail: "$34.99", note: "4.4★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/s?k=Coleman+50+quart+cooler&tag=camprally-20" },
-        { label: "Arctic Zone 50-Quart", detail: "$44.99", note: "4.3★", category: "Deep Freeze", icon: "🥶", link: "https://www.amazon.com/s?k=Arctic+Zone+50+quart+cooler&tag=camprally-20" },
-        { label: "RTIC 45-Quart", detail: "$69.99", note: "4.7★", category: "Premium Pick", icon: "⭐", link: "https://www.amazon.com/dp/B01M1OJO3B?tag=camprally-20" },
-        { label: "Magellan Outdoors 62-Quart", detail: "$49.99", note: "4.2★", category: "Biggest Capacity", icon: "📦", link: "https://www.amazon.com/s?k=62+quart+hard+cooler&tag=camprally-20" },
-        { label: "Rovr Rollr 80-Quart", detail: "$89.99", note: "4.5★", category: "Best Rollers", icon: "🛞", link: "https://www.amazon.com/s?k=RovR+RollR+80+cooler&tag=camprally-20" },
-      ]
-    },
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Igloo BMX 52-Quart Cooler",
-        price: "$39.99",
-        rating: "4.6★ (8,200+)",
-        why: "Best balance of ice retention, durability, and price. The polyethylene construction handles drops and UV exposure better than rotomolded coolers at 3x the price. Holds 57 cans with ice — enough for a long weekend.",
-        category: "Our Top Pick"
-      }
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Hack: Pre-Freeze Your Drinks",
-      calloutBody: "Freeze 80% of your drinks before you pack. By the time the ice in the cooler melts, your drinks are cold and ready to drink. Keeps everything else cold longer too."
-    },
-    {
-      type: "product-grid",
-      title: "Accessories That Make Coolers Better",
-      items: [
-        { label: "Cooler Divider", detail: "$12.99", note: "Separates food from drinks", category: "Accessory", icon: "📋", link: "https://www.amazon.com/s?k=cooler+divider+tray&tag=camprally-20" },
-        { label: "Rotatable Cup Holders", detail: "$18.99", note: "Mounts on cooler side", category: "Accessory", icon: "🍺", link: "https://www.amazon.com/s?k=cooler+cup+holder+attachment&tag=camprally-20" },
-        { label: "Heavy Duty Cooler Tie Down", detail: "$14.99", note: "Keeps cooler from sliding", category: "Accessory", icon: "🔗", link: "https://www.amazon.com/s?k=cooler+tie+down+strap&tag=camprally-20" },
-      ]
-    },
-  ],
 
   "best-camping-first-aid-kits-under-50": [
     {

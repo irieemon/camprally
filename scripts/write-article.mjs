@@ -26,7 +26,8 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { homedir } from "node:os";
 import { EXIT } from "./lib/amazon.mjs";
-import { loadCache, classify, get } from "./lib/asin-cache.mjs";
+import { loadCache, saveCache, classify, get } from "./lib/asin-cache.mjs";
+import { discover, priceCeiling } from "./lib/discover.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const MODEL = "MiniMax-M2.7";
@@ -45,6 +46,20 @@ function apiKey() {
   process.exit(EXIT.FAIL);
 }
 
+
+/** Reuse an article's existing id when regenerating; otherwise allocate the next. */
+function nextArticleId(slug) {
+  const src = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
+  const at = src.indexOf(`slug: "${slug}"`);
+  if (at > -1) {
+    const existing = src.lastIndexOf('id: "', at);
+    const m = src.slice(existing, at).match(/id: "([^"]+)"/);
+    if (m) return m[1];
+  }
+  const ids = [...src.matchAll(/id: "art-(\d+)"/g)].map((m) => Number(m[1]));
+  return `art-${String(Math.max(0, ...ids) + 1).padStart(3, "0")}`;
+}
+
 const slug = process.argv[2];
 if (!slug) {
   console.error("usage: write-article.mjs <slug> [--out path] [--products A,B,C]");
@@ -56,24 +71,98 @@ const OUT = outIdx > -1 ? process.argv[outIdx + 1] : `${ROOT}specs/${slug}.json`
 // ── the brief ─────────────────────────────────────────────────────────────
 const queue = JSON.parse(readFileSync(`${ROOT}article-queue.json`, "utf8"));
 const items = Array.isArray(queue) ? queue : queue.articles ?? queue.queue ?? queue.items ?? [];
-const brief = items.find((i) => i.slug === slug);
+let brief = items.find((i) => i.slug === slug);
+
+// Fall back to the published article. Regeneration needs this: an article that
+// has already shipped is no longer in the queue, but it is exactly what we want
+// to rewrite when live pricing shows it is recommending products outside the
+// band its own title promises.
 if (!brief) {
-  console.error(`slug "${slug}" not found in article-queue.json`);
+  const published = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
+  const at = published.indexOf(`slug: "${slug}"`);
+  if (at > -1) {
+    const near = published.slice(at, at + 1200);
+    brief = {
+      slug,
+      title: near.match(/title: "([^"]+)"/)?.[1] ?? slug,
+      category: near.match(/category: "([^"]+)"/)?.[1] ?? "Gear",
+      excerpt: near.match(/excerpt: "([^"]+)"/)?.[1],
+      keywords: [],
+      notes: "Regenerating a published article. Keep the same topic and angle.",
+    };
+    console.log(`regenerating published article: ${brief.title}`);
+  }
+}
+if (!brief) {
+  console.error(`slug "${slug}" is neither queued nor published`);
   process.exit(EXIT.FAIL);
 }
 
 // ── products: caller supplies ASINs; all must already be cached LIVE ───────
 const pIdx = process.argv.indexOf("--products");
-const asins = pIdx > -1 ? process.argv[pIdx + 1].split(",").map((s) => s.trim()) : [];
+let asins = pIdx > -1 ? process.argv[pIdx + 1].split(",").map((s) => s.trim()) : [];
+
+/*
+ * --discover is what makes the pipeline hands-off.
+ *
+ * Passing --products by hand means a human goes shopping before every article,
+ * which is precisely the manual step this system exists to remove. With
+ * --discover we search Amazon for real products inside the price band the
+ * article's own title promises, and take the best-rated ones.
+ *
+ * Because discovery returns live prices and ratings, the results are recorded
+ * straight into the ASIN cache as verified. That is sound: a product Canopy
+ * just returned a current price for demonstrably exists, so a separate
+ * verification round-trip against a rate-limited Amazon would add latency and
+ * no information.
+ *
+ * The price ceiling is read from the article title when not given explicitly,
+ * so "Best Camping Chairs Under $50" automatically searches $0-50 and cannot
+ * recommend a $150 chair — the failure that put a $460 tent in a guide titled
+ * "Budget Tents Under $100".
+ */
+const dIdx = process.argv.indexOf("--discover");
+const mIdx = process.argv.indexOf("--max");
+const nIdx = process.argv.indexOf("--count");
+const cache = loadCache();
+
+if (!asins.length && dIdx > -1) {
+  const term = process.argv[dIdx + 1];
+  const max = mIdx > -1 ? Number(process.argv[mIdx + 1]) : priceCeiling(brief.title);
+  const count = nIdx > -1 ? Number(process.argv[nIdx + 1]) : 6;
+  console.log(`discovering "${term}"${max ? ` under $${max}` : ""}...`);
+
+  const found = await discover(term, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
+  if (!found.length) {
+    console.error(`discovery returned nothing for "${term}". Try a broader term or raise --max.`);
+    process.exit(EXIT.FAIL);
+  }
+  const picked = found.slice(0, count);
+  const nowIso = new Date().toISOString();
+  for (const p of picked) {
+    cache.entries[p.asin] = {
+      verdict: "LIVE", title: p.title, checkedAt: nowIso,
+      price: p.price, priceValue: p.priceValue,
+      rating: p.rating, ratingsTotal: p.ratingsTotal,
+      priceCheckedAt: nowIso, priceSource: "canopy-search",
+    };
+  }
+  saveCache(cache);
+  asins = picked.map((p) => p.asin);
+  console.log(`  picked ${picked.length}:`);
+  for (const p of picked) console.log(`    ${p.asin}  ${p.price.padEnd(9)} ${String(p.rating ?? "-").padEnd(4)}★  ${p.title.slice(0, 52)}`);
+}
+
 if (!asins.length) {
   console.error(
-    "no --products given. Verify candidate ASINs first:\n" +
+    "no products. Either discover them:\n" +
+    `  node scripts/write-article.mjs ${slug} --discover "camping chair" --max 50\n` +
+    "or verify and pass ASINs explicitly:\n" +
     "  node scripts/refresh-asins.mjs --all --limit N\n" +
-    "then pass them: --products B014LSDUA8,B0DHJL8CMJ",
+    "  node scripts/write-article.mjs <slug> --products B014LSDUA8,B0DHJL8CMJ",
   );
   process.exit(EXIT.FAIL);
 }
-const cache = loadCache();
 const { dead, unseen } = classify(cache, asins);
 if (dead.length || unseen.length) {
   console.error(`refusing to write against unverified products.`);
@@ -118,33 +207,56 @@ const user = [
 ].filter(Boolean).join("\n");
 
 // ── call ──────────────────────────────────────────────────────────────────
+/*
+ * max_tokens has to cover reasoning AND prose. MiniMax M2.7 emits a `thinking`
+ * block before its answer, and at 8000 it spent the entire budget reasoning and
+ * returned no text at all — a silent-looking failure that produced a valid API
+ * response containing nothing usable. The ceiling is generous because unused
+ * tokens are not billed, and running out is far more expensive than over-asking.
+ */
+async function generate(attempt) {
+  const res = await fetch(BASE, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      "x-api-key": apiKey(),
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 32000,
+      system,
+      messages: [{ role: "user", content: user }],
+    }),
+  });
+  if (!res.ok) {
+    return { error: `MiniMax API ${res.status}: ${(await res.text()).slice(0, 400)}` };
+  }
+  const data = await res.json();
+  const text = (data.content ?? [])
+    .filter((b) => b.type === "text")
+    .map((b) => b.text)
+    .join("")
+    .trim();
+  if (!text) {
+    const kinds = (data.content ?? []).map((b) => b.type).join(",") || "none";
+    return { error: `no text block (got: ${kinds}, stop_reason: ${data.stop_reason ?? "?"})` };
+  }
+  return { text };
+}
+
 console.log(`generating "${brief.title}" with ${MODEL}...`);
-const res = await fetch(BASE, {
-  method: "POST",
-  headers: {
-    "content-type": "application/json",
-    "x-api-key": apiKey(),
-    "anthropic-version": "2023-06-01",
-  },
-  body: JSON.stringify({
-    model: MODEL,
-    max_tokens: 8000,
-    system,
-    messages: [{ role: "user", content: user }],
-  }),
-});
-
-if (!res.ok) {
-  console.error(`MiniMax API ${res.status}: ${(await res.text()).slice(0, 500)}`);
+let gen = await generate(1);
+if (gen.error) {
+  console.log(`  first attempt failed: ${gen.error}`);
+  console.log("  retrying once...");
+  gen = await generate(2);
+}
+if (gen.error) {
+  console.error(`generation failed: ${gen.error}`);
   process.exit(EXIT.FAIL);
 }
-const data = await res.json();
-let body = (data.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("").trim();
-
-if (!body) {
-  console.error(`empty response from model: ${JSON.stringify(data).slice(0, 400)}`);
-  process.exit(EXIT.FAIL);
-}
+let body = gen.text;
 
 // ── post-process and validate the model's output ──────────────────────────
 body = body.replace(/^```[a-z]*\n?/gm, "").replace(/```$/gm, "").trim();
@@ -173,7 +285,9 @@ if (words < 500) {
 
 // ── emit spec ─────────────────────────────────────────────────────────────
 const spec = {
-  id: process.env.ARTICLE_ID ?? `art-${slug}`,
+  // Next sequential art-NNN, so ids stay stable and sortable rather than
+  // becoming art-<slug>. Regeneration reuses the existing id.
+  id: process.env.ARTICLE_ID ?? nextArticleId(slug),
   slug,
   title: brief.title,
   excerpt: brief.excerpt ?? `${brief.title}.`,
