@@ -17,13 +17,18 @@
  *   2  throttled before confirming anything — retry later
  */
 
-import { readdirSync, readFileSync, statSync } from "node:fs";
+import { readdirSync, readFileSync, statSync, existsSync } from "node:fs";
 import { join, extname } from "node:path";
 import { verifyAsin, sleep, EXIT } from "./lib/amazon.mjs";
 import { loadCache, saveCache, record, get, stalest, ageDays, STALE_AFTER_DAYS } from "./lib/asin-cache.mjs";
 
-const SRC = new URL("../src", import.meta.url).pathname;
-const CODE_EXT = new Set([".ts", ".tsx", ".js", ".jsx"]);
+const ROOT = new URL("..", import.meta.url).pathname;
+// Scan specs/ as well as src/. An unpublished article's ASINs only exist in
+// its spec, and publish-article fails closed on ASINs it has never confirmed —
+// so without this the cron could never verify them and the cycle would defer
+// forever, waiting on a check that was never going to run.
+const SCAN_DIRS = [`${ROOT}src`, `${ROOT}specs`];
+const CODE_EXT = new Set([".ts", ".tsx", ".js", ".jsx", ".json"]);
 
 const args = process.argv.slice(2);
 const ALL = args.includes("--all");
@@ -38,8 +43,14 @@ function walk(dir) {
 }
 
 const asins = new Set();
-for (const file of walk(SRC)) {
-  for (const [, a] of readFileSync(file, "utf8").matchAll(/\/dp\/(B[0-9A-Z]{9})/g)) asins.add(a);
+for (const dir of SCAN_DIRS) {
+  if (!existsSync(dir)) continue;
+  for (const file of walk(dir)) {
+    const text = readFileSync(file, "utf8");
+    for (const [, a] of text.matchAll(/\/dp\/(B[0-9A-Z]{9})/g)) asins.add(a);
+    // Spec files carry ASINs as bare fields too, not only inside URLs.
+    for (const [, a] of text.matchAll(/"asin"\s*:\s*"(B[0-9A-Z]{9})"/g)) asins.add(a);
+  }
 }
 
 const now = new Date();
