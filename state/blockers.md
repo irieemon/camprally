@@ -10,3 +10,9 @@ Refusing to run with uncommitted changes:
 Could not generate a spec for how-to-camp-in-hot-weather.
 discovering "camping in hot weather"...
 
+
+## 2026-08-04T19:38:39.992Z — working-tree-dirty
+
+Refusing to run with uncommitted changes:
+M src/data/prices.json
+?? specs/how-to-camp-in-hot-weather.json
