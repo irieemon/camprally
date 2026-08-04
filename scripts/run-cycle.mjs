@@ -142,20 +142,45 @@ if (!pending.length) {
 // would block on it while a finished article sat unpublished behind it.
 // Priority orders the ready set; it does not gate it.
 const hasSpec = (i) => existsSync(`${ROOT}specs/${i.slug}.json`);
-const ready = pending.filter(hasSpec);
-const next = ready.find((i) => i.priority === "high") ?? ready[0];
+const byPriority = (a, b) => {
+  const rank = { high: 0, medium: 1, low: 2 };
+  return (rank[a.priority] ?? 3) - (rank[b.priority] ?? 3);
+};
+
+// Prefer something already specced; otherwise write one now. Discovery means a
+// spec no longer requires a human to go shopping first, so "no spec" stopped
+// being a reason to stop — it is just the next step.
+let next = pending.filter(hasSpec).sort(byPriority)[0];
 
 if (!next) {
-  const suggest = pending.find((i) => i.priority === "high") ?? pending[0];
+  const target = [...pending].sort(byPriority)[0];
+  // heroKeyword is the queue's own description of what the article is about,
+  // which is exactly the right search term. Fall back to the first keyword.
+  const term = target.heroKeyword || target.keywords?.[0] || target.title;
+  const cap = (target.title.match(/under\s*\$?\s*(\d+)/i) || [])[1];
+
+  console.log(`\nno spec for ${target.slug} — generating one (term: "${term}"${cap ? `, under $${cap}` : ""})`);
+  const args = ["scripts/write-article.mjs", target.slug, "--discover", term, "--count", "6"];
+  if (cap) args.push("--max", cap);
+
+  try {
+    console.log(sh("node", args));
+    next = hasSpec(target) ? target : null;
+  } catch (err) {
+    console.log(err.stdout ?? "");
+    finish("blocked", {
+      reason: "spec-generation-failed",
+      slug: target.slug,
+      message: `Could not generate a spec for ${target.slug}.\n${(err.stdout ?? err.message ?? "").slice(-900)}`,
+    }, EXIT.FAIL);
+  }
+}
+
+if (!next) {
   finish("blocked", {
     reason: "no-spec",
-    slug: suggest.slug,
     pending: pending.length,
-    message:
-      `${pending.length} queued article(s), none with a spec ready to publish.\n` +
-      `Next to generate: ${suggest.slug}\n\n` +
-      `  node scripts/refresh-asins.mjs --all --limit 6   # verify candidate ASINs\n` +
-      `  node scripts/write-article.mjs ${suggest.slug} --products <asins>`,
+    message: "Spec generation reported success but produced no spec file.",
   }, EXIT.FAIL);
 }
 
