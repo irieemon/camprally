@@ -124,28 +124,38 @@ if (!pending.length) {
   finish("idle", { reason: "queue-empty", queued: items.length }, EXIT.OK);
 }
 
-const next = pending.find((i) => i.priority === "high") ?? pending[0];
-console.log(`\nnext up: ${next.slug} (${pending.length} pending)`);
+// Prefer whatever is ready to ship. Selecting purely by priority would wedge
+// the pipeline permanently: the top-priority item has no spec, so every run
+// would block on it while a finished article sat unpublished behind it.
+// Priority orders the ready set; it does not gate it.
+const hasSpec = (i) => existsSync(`${ROOT}specs/${i.slug}.json`);
+const ready = pending.filter(hasSpec);
+const next = ready.find((i) => i.priority === "high") ?? ready[0];
 
-if (DRY) {
-  finish("idle", { reason: "dry-run", wouldPublish: next.slug, pending: pending.length }, EXIT.OK);
-}
-
-// ── step 4: a spec must already exist ─────────────────────────────────────
-// write-article.mjs needs a verified product set, which needs ASINs confirmed
-// live — and that is rate-limited. So spec generation is a separate, human- or
-// cron-triggered step; this cycle publishes specs that are ready.
-const specPath = `${ROOT}specs/${next.slug}.json`;
-if (!existsSync(specPath)) {
+if (!next) {
+  const suggest = pending.find((i) => i.priority === "high") ?? pending[0];
   finish("blocked", {
     reason: "no-spec",
-    slug: next.slug,
+    slug: suggest.slug,
+    pending: pending.length,
     message:
-      `No spec for ${next.slug}. Generate one:\n` +
+      `${pending.length} queued article(s), none with a spec ready to publish.\n` +
+      `Next to generate: ${suggest.slug}\n\n` +
       `  node scripts/refresh-asins.mjs --all --limit 6   # verify candidate ASINs\n` +
-      `  node scripts/write-article.mjs ${next.slug} --products <asins>`,
+      `  node scripts/write-article.mjs ${suggest.slug} --products <asins>`,
   }, EXIT.FAIL);
 }
+
+console.log(`\nnext up: ${next.slug} (${ready.length} ready of ${pending.length} pending)`);
+
+if (DRY) {
+  finish("idle", {
+    reason: "dry-run", wouldPublish: next.slug,
+    ready: ready.length, pending: pending.length,
+  }, EXIT.OK);
+}
+
+const specPath = `${ROOT}specs/${next.slug}.json`;
 
 // ── step 5: publish (gated on cached-live links + a passing build) ────────
 let pubCode = 0, pubOut = "";
