@@ -28,13 +28,31 @@
 import { verifyAsin, extractTitle, UA } from "./amazon.mjs";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { readFileSync } from "node:fs";
+import { homedir } from "node:os";
 
 const run = promisify(execFile);
 
 const CANOPY_ENDPOINT = "https://graphql.canopyapi.co/";
 
+/*
+ * Resolve the Canopy key from the environment, falling back to OpenClaw's
+ * config. The launchd cron runs via `zsh -lc` and does not reliably inherit
+ * exported shell variables, so depending on the environment alone would mean
+ * prices silently stop refreshing under automation while working by hand —
+ * the exact class of silent degradation this pipeline is built to avoid.
+ * Same pattern write-article.mjs uses for the MiniMax key.
+ */
 export function canopyKey() {
-  return process.env.CANOPY_API_KEY || null;
+  if (process.env.CANOPY_API_KEY) return process.env.CANOPY_API_KEY;
+  try {
+    const cfg = JSON.parse(
+      readFileSync(`${homedir()}/.openclaw/openclaw.json`, "utf8"),
+    );
+    return cfg?.env?.vars?.CANOPY_API_KEY || null;
+  } catch {
+    return null;
+  }
 }
 
 /**

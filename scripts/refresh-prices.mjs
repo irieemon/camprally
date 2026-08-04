@@ -36,8 +36,18 @@ const args = process.argv.slice(2);
 const ALL = args.includes("--all");
 const DRY = args.includes("--dry-run");
 const LIMIT = Number(args[args.indexOf("--limit") + 1]) || (ALL ? Infinity : 40);
-/** Re-price anything older than this. Amazon pricing moves constantly. */
-const STALE_HOURS = 20;
+/*
+ * Re-price anything older than this.
+ *
+ * Budget maths against Canopy's 100 free requests/month for ~50 ASINs:
+ *   every 20h  ~1,440 req/mo  ~$13.40/mo   too eager
+ *   weekly       ~215 req/mo   ~$1.15/mo   good balance  <-- default
+ *   monthly       ~50 req/mo      free     prices drift badly between runs
+ *
+ * Weekly is the default because it costs about a dollar a month and keeps
+ * figures honest. Override with PRICE_STALE_HOURS to trade cost for freshness.
+ */
+const STALE_HOURS = Number(process.env.PRICE_STALE_HOURS) || 168;
 
 function walk(dir) {
   return readdirSync(dir).flatMap((e) => {
