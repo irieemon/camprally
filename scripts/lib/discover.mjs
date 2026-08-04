@@ -75,10 +75,23 @@ export async function discover(term, { min, max, force = false, nowIso } = {}) {
       body: JSON.stringify({ query: SEARCH_QUERY, variables: { term, min, max } }),
       signal: AbortSignal.timeout(30_000),
     });
+    const json = await res.json().catch(() => null);
+    const err = json?.errors?.[0];
+
+    /*
+     * Quota exhaustion is not "no products exist" — conflating them makes a
+     * billing problem look like an empty category and sends whoever is
+     * debugging it off widening search terms that were never wrong. Canopy
+     * answers 402 / PLAN_LIMIT_EXCEEDED when the plan's requests run out.
+     */
+    if (res.status === 402 || err?.extensions?.code === "PLAN_LIMIT_EXCEEDED") {
+      const e = new Error("Canopy plan limit reached — add pay-as-you-go or wait for the monthly reset");
+      e.code = "QUOTA";
+      throw e;
+    }
     if (!res.ok) return [];
-    const json = await res.json();
-    if (json.errors?.length) {
-      console.error(`  search error: ${json.errors[0]?.message?.slice(0, 140)}`);
+    if (err) {
+      console.error(`  search error: ${err.message?.slice(0, 140)}`);
       return [];
     }
 
@@ -129,7 +142,8 @@ export async function discover(term, { min, max, force = false, nowIso } = {}) {
     cache[key] = { term, min, max, fetchedAt: nowIso ?? null, results: deduped };
     saveCache(cache);
     return deduped;
-  } catch {
+  } catch (err) {
+    if (err?.code === "QUOTA") throw err;
     return [];
   }
 }

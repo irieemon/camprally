@@ -60,6 +60,33 @@ function nextArticleId(slug) {
   return `art-${String(Math.max(0, ...ids) + 1).padStart(3, "0")}`;
 }
 
+
+/** Translate an article topic into an Amazon product search term. */
+async function deriveProductTerm(title) {
+  try {
+    const res = await fetch(BASE, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-api-key": apiKey(), "anthropic-version": "2023-06-01" },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 2000,
+        system: "Reply with ONLY an Amazon product search phrase of 2-4 words. No punctuation, no explanation.",
+        messages: [{ role: "user", content:
+          `An article titled "${title}" recommends camping gear. ` +
+          `What product category should I search for on Amazon to find things it would recommend?` }],
+      }),
+    });
+    if (!res.ok) return null;
+    const d = await res.json();
+    const txt = (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("").trim();
+    // Guard against the model returning a sentence instead of a search phrase.
+    const words = txt.replace(/["'.]/g, "").split(/\s+/).filter(Boolean);
+    return words.length && words.length <= 6 ? words.join(" ").toLowerCase() : null;
+  } catch {
+    return null;
+  }
+}
+
 const slug = process.argv[2];
 if (!slug) {
   console.error("usage: write-article.mjs <slug> [--out path] [--products A,B,C]");
@@ -132,9 +159,44 @@ if (!asins.length && dIdx > -1) {
   const count = nIdx > -1 ? Number(process.argv[nIdx + 1]) : 6;
   console.log(`discovering "${term}"${max ? ` under $${max}` : ""}...`);
 
-  const found = await discover(term, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
+  let found;
+  try {
+    found = await discover(term, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
+  } catch (err) {
+    if (err?.code === "QUOTA") {
+      console.error(`\nCANOPY QUOTA EXHAUSTED — ${err.message}`);
+      console.error("This is a billing limit, not a content problem. Nothing is broken.");
+      process.exit(EXIT.DEFER);
+    }
+    throw err;
+  }
+
+  /*
+   * How-to articles name a topic, not a product. "camping in hot weather" is a
+   * real heroKeyword in the queue and Amazon sells nothing by that name, so
+   * discovery came back empty and the cycle stalled.
+   *
+   * Rather than hand-curating a product term per queue item — which reintroduces
+   * the manual step this is meant to remove — ask the model to translate the
+   * topic into something Amazon actually sells. It is a cheap call and it keeps
+   * new topics working without anyone editing the queue.
+   */
   if (!found.length) {
-    console.error(`discovery returned nothing for "${term}". Try a broader term or raise --max.`);
+    console.log(`  "${term}" returned nothing — deriving a product term...`);
+    const derived = await deriveProductTerm(brief.title);
+    if (derived) {
+      console.log(`  trying "${derived}"`);
+      found = await discover(derived, { min: 1, max: max ?? undefined, nowIso: new Date().toISOString() });
+    }
+    // Last resort: the price cap may simply be too tight for this category.
+    if (!found.length && max) {
+      console.log(`  still nothing — retrying without the $${max} cap`);
+      found = await discover(derived || term, { min: 1, nowIso: new Date().toISOString() });
+    }
+  }
+
+  if (!found.length) {
+    console.error(`discovery found no products for "${term}". Widen the term or raise --max.`);
     process.exit(EXIT.FAIL);
   }
   const picked = found.slice(0, count);

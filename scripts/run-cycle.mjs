@@ -168,6 +168,16 @@ if (!next) {
     next = hasSpec(target) ? target : null;
   } catch (err) {
     console.log(err.stdout ?? "");
+    // Exit 2 from write-article means a transient limit (Canopy quota), not a
+    // broken article. Defer so the next cycle retries instead of raising a
+    // blocker that needs a human.
+    if (err.status === EXIT.DEFER) {
+      finish("deferred", {
+        reason: "product-data-quota",
+        slug: target.slug,
+        message: "Canopy request quota exhausted — add pay-as-you-go or wait for the monthly reset.",
+      }, EXIT.OK);
+    }
     finish("blocked", {
       reason: "spec-generation-failed",
       slug: target.slug,
