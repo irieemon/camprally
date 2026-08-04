@@ -4,3 +4,9 @@
 Refusing to run with uncommitted changes:
 ?? state/cycle.err.log
 ?? state/cycle.log
+
+## 2026-08-04T19:14:18.872Z — spec-generation-failed
+
+Could not generate a spec for how-to-camp-in-hot-weather.
+discovering "camping in hot weather"...
+
