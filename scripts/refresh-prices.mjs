@@ -41,18 +41,17 @@ const LIMIT = Number(args[args.indexOf("--limit") + 1]) || (ALL ? Infinity : 40)
  *
  * Budget maths against Canopy's 100 free requests/month for ~50 ASINs:
  *   every 20h  ~1,440 req/mo  ~$13.40/mo   too eager
- *   weekly       ~215 req/mo   ~$1.15/mo   needs pay-as-you-go billing
- *   monthly       ~50 req/mo      free     prices drift between runs  <-- default
+ *   weekly       ~215 req/mo   ~$1.15/mo   good balance  <-- default
+ *   monthly       ~50 req/mo      free     prices drift badly between runs
  *
- * Weekly was the original default, but it assumed pay-as-you-go billing that
- * was never enabled — the account is hard-capped at 100/month, so weekly
- * refreshes ate the whole allowance by the 4th and starved discovery, which is
- * the call that actually unlocks publishing. Monthly keeps pricing inside the
- * free tier (~50/mo) and leaves ~50/mo for discovery. The site already labels
- * figures as indicative, and every product grid carries a price disclaimer.
- * Override with PRICE_STALE_HOURS if pay-as-you-go is ever enabled.
+ * Weekly assumes pay-as-you-go billing on the Canopy account, which Sean
+ * enabled 2026-08-04 after the hard 100/mo cap ate the whole allowance by the
+ * 4th and stalled publishing for the month. If billing ever lapses, the quota
+ * ledger (lib/canopy-quota.mjs) self-arms on the first 402 and the pipeline
+ * falls back to cached products — degraded, not dead. Override with
+ * PRICE_STALE_HOURS to trade cost for freshness.
  */
-const STALE_HOURS = Number(process.env.PRICE_STALE_HOURS) || 720;
+const STALE_HOURS = Number(process.env.PRICE_STALE_HOURS) || 168;
 
 function walk(dir) {
   return readdirSync(dir).flatMap((e) => {
