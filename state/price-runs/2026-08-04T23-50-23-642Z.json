@@ -1,0 +1,11 @@
+{
+  "startedAt": "2026-08-04T23:50:23.642Z",
+  "finishedAt": "2026-08-04T23:50:25.156Z",
+  "outcome": "refreshed",
+  "products": 73,
+  "priced": 73,
+  "displayable": 73,
+  "stale": 0,
+  "commit": "8a24f4a",
+  "priceClaims": "ok"
+}
