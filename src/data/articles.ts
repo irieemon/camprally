@@ -246,9 +246,9 @@ You need almost nothing to camp. People slept outside for millennia before REI e
 
 Eventually you'll want your own kit. Here's the budget setup that actually works:
 
-- **[Coleman Sundome 2-Person Tent $49.99](https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20)** — The gold standard beginner tent. Sets up in 10 minutes, weather-tested, backed by Coleman's warranty.
-- **[Coleman Brazos 30°F Sleeping Bag $24.99](https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20)** — Warm to 30°F, machine washable, great for spring and fall.
-- **[Klymit Static V Sleeping Pad $44.99](https://www.amazon.com/dp/B082429QGK?tag=camprally-20)** — R-value 2.3, packs down small, genuinely comfortable.
+- **[Coleman Sundome 2-Person Tent](https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20)** — The gold standard beginner tent. Sets up in 10 minutes, weather-tested, backed by Coleman's warranty.
+- **[Coleman Brazos 30°F Sleeping Bag](https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20)** — Warm to 30°F, machine washable, great for spring and fall.
+- **[Klymit Static V Sleeping Pad](https://www.amazon.com/dp/B082429QGK?tag=camprally-20)** — R-value 2.3, packs down small, genuinely comfortable.
 
 *Start messy. Start cheap. Start now.*
     `
@@ -524,9 +524,9 @@ Challenge yourself: can you fit everything in one bag AND one cooler? If yes, yo
 
 These are the items that actually upgrade your camp — not just nice-to-haves:
 
-- **[Teton Sports Celsius Sleeping Bag $34.99](https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20)** — Rated to 0°F, way warmer than its price suggests. The best budget sleeping bag on Amazon.
-- **[Vont 4-Pack LED Lanterns $14.99](https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20)** — Bright, durable, and you get 4 for the price of one fancy lantern.
-- **[Stanley Adventure Camp Cook Set $29.99](https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20)** — Everything nests together. One pot, one pan, one set of utensils. Ninety percent of campers don't need more.
+- **[Teton Sports Celsius Sleeping Bag](https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20)** — Rated to 0°F, way warmer than its price suggests. The best budget sleeping bag on Amazon.
+- **[Vont 4-Pack LED Lanterns](https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20)** — Bright, durable, and you get 4 for the price of one fancy lantern.
+- **[Stanley Adventure Camp Cook Set](https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20)** — Everything nests together. One pot, one pan, one set of utensils. Ninety percent of campers don't need more.
 
 *Less gear = more adventure. Pack intentionally.*
     `
@@ -769,8 +769,8 @@ Download iOverlander, find a spot within 2 hours of home, and try free camping t
 Free camping means more budget for the gear that counts:
 
 - **[Handheld GPS units on Amazon](https://www.amazon.com/s?k=handheld+hiking+gps&tag=camprally-20)** — Offline maps for when you have zero cell signal. Essential for finding those unmarked BLM pullouts.
-- **[Black Diamond Spot 400 Headlamp $39.95](https://www.amazon.com/dp/B09NQK2581?tag=camprally-20)** — 400 lumens, waterproof, runs on AAA batteries. The one piece of gear you use every single night.
-- **[Sawyer Squeeze Water Filter $34.95](https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20)** — 0.1 micron absolute filter. Filters 1 million gallons. The gold standard for backcountry water.
+- **[Black Diamond Spot 400 Headlamp](https://www.amazon.com/dp/B09NQK2581?tag=camprally-20)** — 400 lumens, waterproof, runs on AAA batteries. The one piece of gear you use every single night.
+- **[Sawyer Squeeze Water Filter](https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20)** — 0.1 micron absolute filter. Filters 1 million gallons. The gold standard for backcountry water.
 
 *The best campsites don't have signs or reservations. Go find yours.*
     `
@@ -936,8 +936,8 @@ Winter camping requires skill, but rewards are massive. Free hot springs camping
 The right gear extends your season into shoulder months:
 
 - **[YETI Trailhead Camp Chair $149.95](https://www.amazon.com/s?k=YETI+Trailhead+camp+chair&tag=camprally-20)** — Yes it's pricey. It also lasts forever and you'll use it on every single trip.
-- **[Therm-a-Rest NeoAir XTherm Sleeping Pad $179.95](https://www.amazon.com/dp/B0BMCTFKH7?tag=camprally-20)** — R-value 7.3. Winter camping game changer. If you're doing cold weather, this is worth every penny.
-- **[Osprey Atmos AG 65 Pack $219.95](https://www.amazon.com/dp/B09PSNSFQQ?tag=camprally-20)** — Anti-Gravity suspension, 65 liters, fits every season. The last backpacking pack you'll ever buy.
+- **[Therm-a-Rest NeoAir XTherm Sleeping Pad](https://www.amazon.com/dp/B0BMCTFKH7?tag=camprally-20)** — R-value 7.3. Winter camping game changer. If you're doing cold weather, this is worth every penny.
+- **[Osprey Atmos AG 65 Pack](https://www.amazon.com/dp/B09PSNSFQQ?tag=camprally-20)** — Anti-Gravity suspension, 65 liters, fits every season. The last backpacking pack you'll ever buy.
 
 *The best time to camp is whenever you can get outside. Plan for it.*
     `
