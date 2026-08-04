@@ -71,6 +71,32 @@ function repo() {
   return { articles, cycles7d: receipts.length, byOutcome };
 }
 
+async function printables() {
+  const out = { productsLive: 0, awaiting: 0, pins7d: 0, sales7d: null, revenue7dCents: null };
+  const ROOT_P = `${homedir()}/camprally-printables`;
+  try {
+    const products = Object.values(JSON.parse(readFileSync(`${ROOT_P}/state/products.json`, "utf8")).products);
+    out.productsLive = products.filter((p) => p.status === "published").length;
+    out.awaiting = products.filter((p) => ["generated", "publishing-partial"].includes(p.status)).length;
+  } catch { /* engine may not have run yet */ }
+  try {
+    const posted = JSON.parse(readFileSync(`${ROOT_P}/state/pins-posted.json`, "utf8")).posted ?? [];
+    out.pins7d = posted.filter((p) => Date.parse(p.at) > weekAgo).length;
+  } catch { /* no product pins yet */ }
+  try {
+    if (vars.GUMROAD_ACCESS_TOKEN) {
+      const res = await fetch(`https://api.gumroad.com/v2/sales?after=${day(weekAgo)}`, {
+        headers: { Authorization: `Bearer ${vars.GUMROAD_ACCESS_TOKEN}` } });
+      if (res.ok) {
+        const sales = (await res.json()).sales ?? [];
+        out.sales7d = sales.length;
+        out.revenue7dCents = sales.reduce((n, s) => n + (s.price ?? 0), 0);
+      }
+    }
+  } catch { /* leave null */ }
+  return out;
+}
+
 async function site() {
   try {
     const res = await fetch("https://www.camprally.co", { redirect: "follow", signal: AbortSignal.timeout(15000) });
@@ -78,7 +104,7 @@ async function site() {
   } catch { return { up: false }; }
 }
 
-const [pin, news, rep, live] = [await pinterest(), await beehiiv(), repo(), await site()];
+const [pin, news, rep, live, prod] = [await pinterest(), await beehiiv(), repo(), await site(), await printables()];
 
 const entry = {
   weekEnding: day(now),
@@ -91,6 +117,11 @@ const entry = {
   pinterest_impressions_7d: pin.impressions7d,
   pinterest_outbound_clicks_7d: pin.outboundClicks7d,
   beehiiv_subscribers: news.subscribers,
+  printables_live: prod.productsLive,
+  printables_awaiting_publish: prod.awaiting,
+  printables_pins_7d: prod.pins7d,
+  gumroad_sales_7d: prod.sales7d,
+  gumroad_revenue_7d_cents: prod.revenue7dCents,
 };
 
 try {
@@ -112,6 +143,10 @@ console.log(
     `pins posted 7d: ${pin.posted7d} · followers: ${fmt(pin.followers)}`,
     `pin impressions 7d: ${fmt(pin.impressions7d)} · outbound clicks 7d: ${fmt(pin.outboundClicks7d)}`,
     `newsletter subs: ${fmt(news.subscribers)}`,
-    `revenue: check Amazon Associates + GA4 affiliate_click events (no API until 10 sales/30d)`,
+    `printables: ${prod.productsLive} live · ${prod.awaiting} awaiting publish · ${prod.pins7d} pins 7d`,
+    prod.sales7d === null
+      ? `gumroad: no token yet (products queue until GUMROAD_ACCESS_TOKEN lands)`
+      : `gumroad 7d: ${prod.sales7d} sales · $${((prod.revenue7dCents ?? 0) / 100).toFixed(2)}`,
+    `amazon: check Associates + GA4 affiliate_click events (no API until 10 sales/30d)`,
   ].join("\n"),
 );
