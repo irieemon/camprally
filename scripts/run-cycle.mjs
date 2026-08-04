@@ -87,7 +87,12 @@ if (existsSync(PAUSE)) {
 }
 
 // ── step 1: clean tree ────────────────────────────────────────────────────
-const dirty = sh("git", ["status", "--porcelain"]);
+// The gate exists to avoid clobbering a human's work-in-progress, so it must
+// not trip on the pipeline's own outputs: state receipts, generated specs, and
+// the price snapshot are all written by cycles (a --dry-run legitimately
+// leaves a spec behind) and are committed by the publish step anyway. Before
+// this exclusion, a dry-run wedged every real cycle that followed it.
+const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/prices.json"]);
 if (dirty) {
   finish("blocked", {
     reason: "working-tree-dirty",
