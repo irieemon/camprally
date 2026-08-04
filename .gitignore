@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# launchd job logs — runtime output, not state. These live under state/ so the
+# plist can write them without extra setup, but committing them would make the
+# working tree dirty on every run and the cycle refuses to run dirty. The job
+# would block on its own logs forever.
+state/cycle.log
+state/cycle.err.log
