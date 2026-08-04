@@ -3,48 +3,28 @@
  * Verify every Amazon ASIN referenced in src/ actually resolves.
  *
  * Exists because of the art-022 incident (2026-04-11): five affiliate links
- * shipped pointing at B00NPLUG9C, a dead ASIN. Broken links convert at zero
- * and nothing in the pipeline caught it.
+ * shipped pointing at B00NPLUG9C, a dead ASIN. A later audit found 28 of 70
+ * ASINs (40%) were dead across 14 articles, unnoticed for months.
  *
- *   node scripts/verify-asins.mjs            # audit every ASIN in src/
- *   node scripts/verify-asins.mjs B014LSDUA8 # check specific ASINs
+ *   node scripts/verify-asins.mjs             # audit every ASIN in src/
+ *   node scripts/verify-asins.mjs B014LSDUA8  # check specific ASINs
  *
- * Exits non-zero if any ASIN is DEAD or could not be confirmed.
+ * Exit codes (see lib/amazon.mjs):
+ *   0  all confirmed live
+ *   1  at least one confirmed DEAD — a real broken link
+ *   2  inconclusive (Amazon throttling) — retry later, not a link problem
  *
- * Why curl and not fetch(): Amazon rate-limits Node's fetch aggressively and
- * then answers every request — live ASIN or not — with an identical ~3.8KB
- * stub carrying HTTP 200. Trusting the status code alone silently reports dead
- * links as healthy. curl with a browser UA still gets true 404s, and we
- * additionally require positive evidence of a product page before calling
- * anything OK. Three outcomes, never two:
- *
- *   LIVE     404 not returned AND a real product title was found
- *   DEAD     404 (confirmed across retries)
- *   UNKNOWN  blocked, stubbed, or throttled — treated as failure, not success
+ * The 1 vs 2 split matters: a cron that treats throttling as failure will cry
+ * wolf every time Amazon rate-limits, and one that treats it as success will
+ * ship dead links.
  */
 
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
-import { execFile } from "node:child_process";
-import { promisify } from "node:util";
-
-const run = promisify(execFile);
-
-const UA =
-  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
-  "(KHTML, like Gecko) Chrome/120 Safari/537.36";
+import { verifyMany, summarize, EXIT } from "./lib/amazon.mjs";
 
 const SRC = new URL("../src", import.meta.url).pathname;
 const CODE_EXT = new Set([".ts", ".tsx", ".js", ".jsx"]);
-
-// Amazon's throttle stub is a tiny body with no product markup. Anything at or
-// under this size cannot be a real product page.
-const STUB_MAX_BYTES = 6000;
-
-const RETRIES = 3;
-const BASE_DELAY_MS = 1500;
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function walk(dir) {
   return readdirSync(dir).flatMap((entry) => {
@@ -69,63 +49,6 @@ function collectAsins() {
   return found;
 }
 
-/** One curl attempt. Returns {status, body}. */
-async function fetchOnce(asin) {
-  const { stdout } = await run(
-    "curl",
-    [
-      "-s",
-      "-L",
-      "--max-time", "25",
-      "-A", UA,
-      "-H", "Accept-Language: en-US,en;q=0.9",
-      "-w", "\n__STATUS__%{http_code}",
-      `https://www.amazon.com/dp/${asin}`,
-    ],
-    { maxBuffer: 32 * 1024 * 1024 },
-  );
-  const cut = stdout.lastIndexOf("\n__STATUS__");
-  return {
-    status: cut === -1 ? 0 : Number(stdout.slice(cut + 11).trim()),
-    body: cut === -1 ? stdout : stdout.slice(0, cut),
-  };
-}
-
-function extractTitle(html) {
-  const raw =
-    html.match(/id="productTitle"[^>]*>([^<]*)/)?.[1] ??
-    html.match(/<title>([^<]*)<\/title>/)?.[1] ??
-    "";
-  return raw.replace(/&amp;/g, "&").replace(/\s+/g, " ").replace(/^Amazon\.com\s*:?\s*/, "").trim();
-}
-
-/** Classify an ASIN, retrying through throttle stubs with backoff. */
-async function check(asin) {
-  let last = { verdict: "UNKNOWN", reason: "no attempt" };
-  for (let attempt = 1; attempt <= RETRIES; attempt++) {
-    if (attempt > 1) await sleep(BASE_DELAY_MS * 2 ** (attempt - 1));
-    let res;
-    try {
-      res = await fetchOnce(asin);
-    } catch (err) {
-      last = { verdict: "UNKNOWN", reason: `curl failed: ${err.code ?? err.message}` };
-      continue;
-    }
-    if (res.status === 404) return { verdict: "DEAD", reason: "HTTP 404" };
-    if (res.body.length <= STUB_MAX_BYTES) {
-      last = { verdict: "UNKNOWN", reason: `throttle stub (${res.body.length}B, HTTP ${res.status})` };
-      continue;
-    }
-    const title = extractTitle(res.body);
-    if (!title) {
-      last = { verdict: "UNKNOWN", reason: `no product title (HTTP ${res.status})` };
-      continue;
-    }
-    return { verdict: "LIVE", title: title.slice(0, 68) };
-  }
-  return last;
-}
-
 const explicit = process.argv.slice(2);
 const targets = explicit.length
   ? new Map(explicit.map((a) => [a, new Set(["(cli)"])]))
@@ -133,44 +56,42 @@ const targets = explicit.length
 
 if (targets.size === 0) {
   console.log("No ASINs found in src/.");
-  process.exit(0);
+  process.exit(EXIT.OK);
 }
 
 console.log(`Verifying ${targets.size} ASIN(s) against Amazon...\n`);
 
-const dead = [];
-const unknown = [];
+const results = await verifyMany([...targets.keys()], {
+  onResult: (asin, r) => {
+    const line =
+      r.verdict === "LIVE"
+        ? `LIVE     ${asin}  ${r.title.slice(0, 68)}`
+        : `${r.verdict.padEnd(8)} ${asin}  ${r.reason}`;
+    console.log(line);
+  },
+});
 
-for (const [asin, files] of targets) {
-  const r = await check(asin);
-  if (r.verdict === "LIVE") {
-    console.log(`LIVE     ${asin}  ${r.title}`);
-  } else if (r.verdict === "DEAD") {
-    dead.push([asin, files, r.reason]);
-    console.log(`DEAD     ${asin}  ${r.reason}`);
-  } else {
-    unknown.push([asin, files, r.reason]);
-    console.log(`UNKNOWN  ${asin}  ${r.reason}`);
-  }
-  await sleep(600);
-}
-
-const live = targets.size - dead.length - unknown.length;
-console.log(`\nLIVE ${live}   DEAD ${dead.length}   UNKNOWN ${unknown.length}`);
+const { live, dead, unknown } = summarize(results);
+console.log(`\nLIVE ${live.length}   DEAD ${dead.length}   UNKNOWN ${unknown.length}`);
 
 for (const [label, rows] of [["DEAD", dead], ["UNKNOWN", unknown]]) {
   if (!rows.length) continue;
   console.log(`\n${label}:`);
-  for (const [asin, files, reason] of rows) {
-    console.log(`  ${asin} — ${reason}`);
-    for (const f of files) console.log(`    ${f}`);
+  for (const [asin, r] of rows) {
+    console.log(`  ${asin} — ${r.reason}`);
+    for (const f of targets.get(asin) ?? []) console.log(`    ${f}`);
   }
 }
 
-if (dead.length || unknown.length) {
-  console.log(
-    `\nFAILED. UNKNOWN is not a pass — re-run when Amazon stops throttling.`,
-  );
-  process.exit(1);
+if (dead.length) {
+  console.log(`\nFAILED: ${dead.length} confirmed dead link(s). Fix before shipping.`);
+  process.exit(EXIT.FAIL);
 }
-console.log(`\nAll ${live} ASIN(s) confirmed live.`);
+if (unknown.length) {
+  console.log(
+    `\nINCONCLUSIVE: ${unknown.length} ASIN(s) could not be confirmed (Amazon throttling).` +
+    `\nThis is not a link failure — re-run later. Exiting ${EXIT.DEFER} (defer).`,
+  );
+  process.exit(EXIT.DEFER);
+}
+console.log(`\nAll ${live.length} ASIN(s) confirmed live.`);

@@ -1,0 +1,76 @@
+name: Liveness
+
+# The watchdog that lives OUTSIDE the failure domain.
+#
+# Every monitor the previous setup had — the 30-minute heartbeat watchdog, the
+# cron failure alerts, the health monitors — ran on the same Mac as the agents
+# they watched. On 2026-06-12 that machine lost power and, with pmset
+# autorestart disabled, stayed off. The watchdogs died with the thing they were
+# watching, and 52 days passed before anyone noticed. A monitor inside the
+# failure domain is not a monitor; it is another component.
+#
+# This runs on GitHub's infrastructure. It cannot be taken out by anything that
+# happens in the house. It reads state/last-run.json, which run-cycle.mjs
+# commits on every outcome, and distinguishes:
+#
+#   stale heartbeat  -> the host is gone            (loud)
+#   fresh + blocked  -> the host is alive and stuck (also loud, different fix)
+#   fresh + healthy  -> silence
+#
+# Silence from this workflow means healthy. Silence from the Mac does not.
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 09:00 America/New_York (13:00 UTC, standard time)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Evaluate heartbeat
+        id: check
+        run: |
+          node .github/scripts/liveness.mjs >> "$GITHUB_OUTPUT"
+
+      - name: Open or update alert issue
+        if: steps.check.outputs.status != 'ok'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="CampRally pipeline alert: ${{ steps.check.outputs.status }}"
+          BODY_FILE=$(mktemp)
+          {
+            echo "${{ steps.check.outputs.summary }}"
+            echo
+            echo "---"
+            echo "_Raised by the Liveness workflow at $(date -u '+%Y-%m-%d %H:%M UTC')._"
+            echo "_This runs on GitHub, not on the Mac, so it still fires when the Mac is off._"
+          } > "$BODY_FILE"
+
+          EXISTING=$(gh issue list --state open --label pipeline-alert \
+            --search "in:title CampRally pipeline alert" --json number --jq '.[0].number' || true)
+
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body-file "$BODY_FILE"
+            echo "commented on existing issue #$EXISTING"
+          else
+            gh label create pipeline-alert --color B60205 --description "Autonomous pipeline health" 2>/dev/null || true
+            gh issue create --title "$TITLE" --body-file "$BODY_FILE" --label pipeline-alert
+          fi
+
+      - name: Close alert when healthy again
+        if: steps.check.outputs.status == 'ok'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list --state open --label pipeline-alert --json number --jq '.[].number'); do
+            gh issue comment "$n" --body "Pipeline healthy again as of $(date -u '+%Y-%m-%d %H:%M UTC'). Closing."
+            gh issue close "$n"
+          done
