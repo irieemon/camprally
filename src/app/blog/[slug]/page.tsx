@@ -950,7 +950,30 @@ function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: st
           </a>
         );})}
       </div>
+      <PriceDisclaimer />
     </div>
+  );
+}
+
+/*
+ * Prices and star ratings across this site are hardcoded strings written when
+ * each article was published, not live data. They go stale immediately, and
+ * Amazon's Associates Operating Agreement restricts presenting prices that
+ * did not come from their product API as if they were current.
+ *
+ * The durable fix is to stop displaying specific figures, or to source them
+ * from Amazon's API — which requires 3 qualifying sales the account does not
+ * yet have. Until then this states plainly that the numbers are indicative,
+ * which is both honest to the reader and materially lower risk than implying
+ * they are live. Rendered once per grid rather than edited into ~180 places.
+ */
+function PriceDisclaimer() {
+  return (
+    <p className="mt-3 text-xs text-muted-foreground">
+      Prices and ratings are indicative and were accurate when this guide was
+      written. Amazon pricing changes frequently — check the current price on
+      Amazon before buying.
+    </p>
   );
 }
 
@@ -994,6 +1017,7 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
             View on Amazon
           </a>
         </div>
+        <PriceDisclaimer />
       </div>
     </div>
   );
