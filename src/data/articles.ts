@@ -33,15 +33,13 @@ We believe everyone deserves to experience the outdoors. So we designed this set
 
 You genuinely need just seven things to camp:
 
-1. **Shelter** - Coleman Sundome 2P: $49.99
-2. **Sleeping bag** - Coleman Brazos 30°F: $24.99
-3. **Sleeping pad** - Klymit Static V: $44.99
-4. **Cooking** - Stanley Adventure Camp Cook Set: $29.99
-5. **Stove** - Etekcity Ultralight: $12.99
-6. **Light** - Vont 4-Pack Lanterns: $14.99
-7. **Water** - Nalgene 32oz: $14.99
-
-**Total: $192.93**
+1. **Shelter** - Coleman Sundome 2P
+2. **Sleeping bag** - Coleman Brazos 30°F
+3. **Sleeping pad** - Klymit Static V
+4. **Cooking** - Stanley Adventure Camp Cook Set
+5. **Stove** - Etekcity Ultralight
+6. **Light** - Vont 4-Pack Lanterns
+7. **Water** - Nalgene 32oz
 
 Everything else is optional.
 
@@ -56,13 +54,13 @@ Everything else is optional.
 ## Where to Save vs. Splurge
 
 ### SAVE: Tent
-The $50 Sundome outperforms tents 3x its price in weather protection. Don't overthink this.
+The Sundome outperforms tents several times its price in weather protection. Don't overthink this.
 
 ### SPLURGE: Sleeping Bag
-Your sleeping bag is the most personal item. The Brazos is decent, but if you camp in colder weather, consider the Teton Sports Celsius (rated to 0°F) for $34.99.
+Your sleeping bag is the most personal item. The Brazos is decent, but if you camp in colder weather, consider the Teton Sports Celsius (rated to 0°F).
 
 ### SAVE: Stove
-The Etekcity canister stove at $12.99 boils water in 3 minutes. Expensive stoves do the same thing 30 seconds faster. Not worth the money.
+The Etekcity canister stove boils water in 3 minutes. Expensive stoves do the same thing 30 seconds faster. Not worth the money.
 
 ## Free Camping Spots
 
@@ -510,7 +508,7 @@ These are the items that actually upgrade your camp — not just nice-to-haves:
     id: "art-012",
     slug: "best-budget-multitool-camping",
     title: "Best Budget Multi-Tool for Camping",
-    excerpt: "A multi-tool is the most versatile piece of equipment you carry. These options under $35 handle 90% of camp tasks without the premium price.",
+    excerpt: "A multi-tool is the most versatile piece of equipment you carry. These affordable options handle 90% of camp tasks without the premium price.",
     category: "Tools",
     date: "2026-04-01",
     author: "Camp Rally Team",
@@ -554,7 +552,7 @@ For most US/Canada camping: **a filter is sufficient**.
 
 ## Alternative: UV Sterilization
 
-**SteriPEN Ultra ($99.99)** kills 99.99% of bacteria, viruses, and protozoa in 90 seconds. No filter to replace. Expensive upfront, cheap long-term.
+**SteriPEN Ultra** kills 99.99% of bacteria, viruses, and protozoa in 90 seconds. No filter to replace. Expensive upfront, cheap long-term.
 
 Not recommended as primary budget option, but worth considering for heavy use.
 
@@ -624,8 +622,6 @@ A compass doesn't need power, connectivity, or software updates. It just works. 
 
 ### Our Pick: Suunto A-10 Compass
 
-**Price:** $19.99 | **Rating:** 4.4/5
-
 The A-10 is the benchmark for budget orienteering compasses. The liquid-filled needle stabilizes quickly, and the baseplate markings work with any map.
 
 **What we love:**
@@ -636,7 +632,7 @@ The A-10 is the benchmark for budget orienteering compasses. The liquid-filled n
 
 ## When You Want GPS: Garmin eTrex 22x
 
-**Price:** $99.99 | **Rating:** 4.3/5 | **Battery:** 25 hours
+**Battery:** 25 hours
 
 The eTrex 22x adds GPS accuracy to your toolkit. Preloaded TopoActive maps, barometric altimeter, and 25-hour battery life cover most backcountry scenarios.
 
@@ -657,7 +653,7 @@ The eTrex 22x adds GPS accuracy to your toolkit. Preloaded TopoActive maps, baro
 
 ## Our Recommendation
 
-**Start with Suunto A-10 Compass at $19.99** and learn to use it. Add Garmin eTrex 22x at $99.99 only if your adventures demand it.
+**Start with Suunto A-10 Compass** and learn to use it. Add Garmin eTrex 22x only if your adventures demand it.
 
 **[Shop Navigation Tools on Amazon](https://www.amazon.com/s?k=hiking+gps+compass&tag=camprally-20)**
 
@@ -873,7 +869,7 @@ Winter camping requires skill, but rewards are massive. Free hot springs camping
 
 The right gear extends your season into shoulder months:
 
-- **[YETI Trailhead Camp Chair $149.95](https://www.amazon.com/s?k=YETI+Trailhead+camp+chair&tag=camprally-20)** — Yes it's pricey. It also lasts forever and you'll use it on every single trip.
+- **[YETI Trailhead Camp Chair](https://www.amazon.com/s?k=YETI+Trailhead+camp+chair&tag=camprally-20)** — Yes it's pricey. It also lasts forever and you'll use it on every single trip.
 - **[Therm-a-Rest NeoAir XTherm Sleeping Pad](https://www.amazon.com/dp/B0BMCTFKH7?tag=camprally-20)** — R-value 7.3. Winter camping game changer. If you're doing cold weather, this is worth every penny.
 - **[Osprey Atmos AG 65 Pack](https://www.amazon.com/dp/B09PSNSFQQ?tag=camprally-20)** — Anti-Gravity suspension, 65 liters, fits every season. The last backpacking pack you'll ever buy.
 
@@ -924,18 +920,14 @@ Before we get to the products, let's talk about what you're actually buying. A f
 ## The Kits That Actually Work
 
 ### Best Overall: Adventure Medical Kits UltraLite .5
-**$31.95 | Rating: 4.8★**
 
 This is the kit we grab for weekend car camping. It weighs just 1.1 lbs and has the best organized interior of any budget kit we've tested. The layout matters — when you're trying to find supplies fast, a disorganized kit is worse than no kit.
 
-
 What you get: wound care, blister treatment, medications, and a CPR face shield. The only gap is SAM splint material, which most casual campers don't need anyway.
-
 
 **[Buy Adventure Medical Kits UltraLite .5 on Amazon](https://www.amazon.com/dp/B0DV6PDY9R?tag=camprally-20)**
 
 ### Best Value: Coleman 150-Piece First Aid Kit
-**$9.99 | Rating: 4.8★**
 
 At under $10, this is the kit you buy and then immediately upgrade 2-3 items. The stock bandages are cheap, but the container is solid and the volume of supplies means you can build a proper kit around it.
 
@@ -944,7 +936,6 @@ Pull out the low-quality items, add better butterfly closures and some ibuprofen
 **[Buy Coleman 150-Piece Kit on Amazon](https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20)**
 
 ### Best for Groups: Adventure Medical Kits UltraLite .7
-**$44.95 | Rating: 4.7★**
 
 For small groups or longer trips, the UltraLite .7 steps up to a 3-person, 3-day kit. Same quality as the .5 but with more supplies — still compact enough for a weekend pack.
 
@@ -958,7 +949,7 @@ For small groups or longer trips, the UltraLite .7 steps up to a 3-person, 3-day
 
 ## Our Recommendation
 
-For most campers, the **Adventure Medical Kits UltraLite .5 at $31.95** is the sweet spot. It's light enough for trail use, organized enough to actually use under stress, and has real medical quality supplies instead of the junk grade bandages that come in gas station kits.
+For most campers, the **Adventure Medical Kits UltraLite .5** is the sweet spot. It's light enough for trail use, organized enough to actually use under stress, and has real medical quality supplies instead of the junk grade bandages that come in gas station kits.
 
 Buy it, add a sheet of moleskin, and you're set for any car camping trip or shorter backpacking weekend.
 
@@ -999,7 +990,6 @@ The best camping fans run on USB rechargeable batteries, move real air, and won'
 ## The Fans That Actually Work
 
 ### Best Overall: Rechargeable Camping Fan with LED Lantern
-**$34.99 | Rating: 4.6★**
 
 The 20000mAh battery delivers 40+ hours on low, 15+ hours on medium, and 8+ hours on high — more than enough for any overnight or weekend trip. The built-in LED lantern puts out enough light to read by or navigate camp after dark. Auto-oscillation and a remote control make it easy to adjust without getting up.
 
@@ -1008,7 +998,6 @@ The motor is quiet at under 35dB on low, so it won't keep you awake. USB-C charg
 **[Buy Rechargeable Camping Fan with LED Lantern on Amazon](https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20)**
 
 ### Best Value: Featwell 20000mAh Portable Fan with Touch Screen
-**$29.99 | Rating: 4.5★**
 
 At under $30, this is the fan to get if you want solid performance without overthinking it. The 20000mAh battery keeps it running all night. Five speed settings give you genuine control over airflow — low is quiet enough for sleep, high actually moves air in a 2-person tent.
 
@@ -1017,7 +1006,6 @@ The touch screen display shows battery level and current speed, which sounds gim
 **[Buy Featwell 20000mAh Portable Fan on Amazon](https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20)**
 
 ### Best for Groups: AJVV Camping Fan with Light, Remote and Oscillation
-**$31.99 | Rating: 4.4★**
 
 The AJVV is the move if you're camping with a group or running the fan on a picnic table where everyone can benefit. The 10-inch blade size moves more air than the compact 5-6 inch fans, and the wide-angle oscillation covers a bigger area. The remote control means you don't have to get up to change settings.
 
@@ -1026,7 +1014,6 @@ Battery life is solid at 15+ hours on medium with the lantern running at the sam
 **[Buy AJVV Camping Fan with Light and Oscillation on Amazon](https://www.amazon.com/dp/B0DS5CRTGK?tag=camprally-20)**
 
 ### Best Budget: Camping Fan Rechargeable 20000mAh
-**$27.99 | Rating: 4.3★**
 
 At under $28, this is the entry point for a real camping fan. The 20000mAh battery is genuine — not the inflated specs you'll find on cheap gas station fans. Four speed settings and a rotating head let you direct airflow where you need it.
 
@@ -1035,7 +1022,6 @@ No LED lantern means fewer features to break, which actually makes this more rel
 **[Buy Camping Fan Rechargeable 20000mAh on Amazon](https://www.amazon.com/dp/B0FCFCNSZH?tag=camprally-20)**
 
 ## The Upgrade Pick: ATEngeus USB Desk Fan
-**$24.99 | Rating: 4.5★**
 
 If you do a mix of camping and base camping (car camping where you have more gear), the ATEngeus is worth the upgrade. The 10,000mAh battery and 8-inch blade deliver genuinely more airflow than the compact camping fans. It sits stable on any flat surface and runs 20+ hours on low.
 
@@ -1045,9 +1031,9 @@ It's heavier than the dedicated camping fans but that weight is all in the motor
 
 ## Our Recommendation
 
-For most campers, the **Rechargeable Camping Fan with LED Lantern at $34.99** is the best balance of features, battery life, and reliability. The 20000mAh battery outlasts any weekend trip, the lantern replaces a separate camp light, and the quiet motor won't ruin your sleep.
+For most campers, the **Rechargeable Camping Fan with LED Lantern** is the best balance of features, battery life, and reliability. The 20000mAh battery outlasts any weekend trip, the lantern replaces a separate camp light, and the quiet motor won't ruin your sleep.
 
-If you want to save $5 and skip the lantern, the **Featwell 20000mAh at $29.99** delivers the same core performance for a dedicated fan use case.
+If you do not need the built-in lantern, the **Featwell 20000mAh** delivers the same core performance for a dedicated fan use case.
 
 ---
 

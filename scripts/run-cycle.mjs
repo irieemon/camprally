@@ -40,6 +40,11 @@ const PUSH = !process.argv.includes("--no-push");
 const startedAt = new Date().toISOString();
 const stamp = startedAt.replace(/[:.]/g, "-");
 
+/* Declared up here, not at the check itself: the pause-flag and dirty-tree
+ * gates call finish() before step 2c is reached, and reading a `let` from its
+ * temporal dead zone throws — even through typeof. */
+let priceClaims = null;
+
 function sh(cmd, args, opts = {}) {
   return execFileSync(cmd, args, { cwd: ROOT, encoding: "utf8", ...opts }).trim();
 }
@@ -55,7 +60,11 @@ function sh(cmd, args, opts = {}) {
  * fresh receipts saying "blocked" mean the host is alive and stuck.
  */
 function finish(outcome, detail, code) {
-  const receipt = { startedAt, finishedAt: new Date().toISOString(), outcome, ...detail };
+  const receipt = {
+    startedAt, finishedAt: new Date().toISOString(), outcome,
+    ...(typeof priceClaims === "string" ? { priceClaims } : {}),
+    ...detail,
+  };
   if (!DRY) {
     mkdirSync(RUNS, { recursive: true });
     const receiptPath = `${RUNS}/${stamp}.json`;
@@ -129,6 +138,21 @@ try {
 } catch (err) {
   console.log(err.stdout ?? "");
   console.log("(price refresh did not complete — pages keep their existing figures)");
+}
+
+// ── step 2c: price-claim check ────────────────────────────────────────────
+// Deliberately non-blocking. A frozen price is a correctness problem worth
+// surfacing on every run, but wedging the publisher over one line of prose
+// would trade a wrong number for a dead pipeline — the worse failure. The
+// render layer already refuses to display anything but live prices, so this
+// reports rather than gates.
+priceClaims = "ok";
+try {
+  console.log(sh("node", ["scripts/check-price-claims.mjs"]));
+} catch (err) {
+  priceClaims = "frozen-price-claims";
+  console.log(err.stdout ?? "");
+  console.log("(frozen price claims found — see scripts/strip-prose-prices.mjs)");
 }
 
 // ── step 3: pick the next unpublished queue item ──────────────────────────

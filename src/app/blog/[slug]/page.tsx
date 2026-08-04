@@ -226,19 +226,19 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "callout",
       calloutType: "save",
       calloutTitle: "SAVE: Tent",
-      calloutBody: "The $50 Sundome outperforms tents 3x its price in weather protection. Don't overthink this."
+      calloutBody: "The Sundome outperforms tents several times its price in weather protection. Don't overthink this."
     },
     {
       type: "callout",
       calloutType: "splurge",
       calloutTitle: "SPLURGE: Sleeping Bag",
-      calloutBody: "Your sleeping bag is the most personal item. The Brazos is decent, but if you camp in colder weather, consider the Teton Sports Celsius (rated to 0°F) for $34.99."
+      calloutBody: "Your sleeping bag is the most personal item. The Brazos is decent, but if you camp in colder weather, consider the Teton Sports Celsius (rated to 0°F)."
     },
     {
       type: "callout",
       calloutType: "save",
       calloutTitle: "SAVE: Stove",
-      calloutBody: "The Etekcity canister stove at $12.99 boils water in 3 minutes. Expensive stoves do the same thing 30 seconds faster. Not worth the money."
+      calloutBody: "The Etekcity canister stove boils water in 3 minutes. Expensive stoves do the same thing 30 seconds faster. Not worth the money."
     },
     {
       type: "spotlight",
@@ -246,7 +246,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
         name: "Coleman Sundome 2P",
         price: "$49.99",
         rating: "4.4/5",
-        why: "The benchmark budget tent. WeatherTec™ system, 10-minute setup, and genuine 2-person capacity. Under $50 and backed by Coleman reliability.",
+        why: "The benchmark budget tent. WeatherTec™ system, 10-minute setup, and genuine 2-person capacity. Backed by Coleman reliability.",
         category: "Tent"
       }
     },
@@ -314,7 +314,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
         name: "Stanley Adventure Camp Cook Set",
         price: "$29.99",
         rating: "4.6/5",
-        why: "24oz pot, two cups, and lid/pan nest perfectly. Stainless steel handles don't melt over open flame. At $30, it's the best value in camping cookware. Period.",
+        why: "24oz pot, two cups, and lid/pan nest perfectly. Stainless steel handles don't melt over open flame. The best value in camping cookware. Period.",
         category: "Cookware"
       }
     },
@@ -387,7 +387,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "callout",
       calloutType: "warning",
       calloutTitle: "Your Sleeping Pad Is More Important Than Your Sleeping Bag",
-      calloutBody: "80% of your body heat escapes through contact with the ground. A $200 sleeping bag on a bare tarp will leave you colder than a $30 bag on a quality pad."
+      calloutBody: "80% of your body heat escapes through contact with the ground. An expensive sleeping bag on a bare tarp will leave you colder than a budget bag on a quality pad."
     },
   ],
 
@@ -398,7 +398,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
         name: "Etekcity Ultralight Portable Stove",
         price: "$12.99",
         rating: "4.4/5",
-        why: "Piezo ignition means no lighter needed. Adjustable flame gives cooking control. 3.9 oz and folds to pocket size. For under $13, this stove rivals units 5x the price.",
+        why: "Piezo ignition means no lighter needed. Adjustable flame gives cooking control. 3.9 oz and folds to pocket size. This stove rivals units many times its price.",
         category: "Stove"
       }
     },
@@ -446,7 +446,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "callout",
       calloutType: "warning",
       calloutTitle: "Don't: The Bleach Method",
-      calloutBody: "8 drops per gallon, 30-minute wait, tastes terrible, dosage is imprecise. Just buy a filter. Never risk giardia over $18."
+      calloutBody: "8 drops per gallon, 30-minute wait, tastes terrible, dosage is imprecise. Just buy a filter. Never risk giardia to save a few dollars."
     },
   ],
 
@@ -807,7 +807,7 @@ const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
     {
       type: "product-grid",
       title: "The Best Camping Fans",
-      subtitle: "From best overall to best budget, all under $35.",
+      subtitle: "From best overall to best budget.",
       items: [
         { label: "Rechargeable Camping Fan with LED Lantern", detail: "$34.99", note: "4.6★", category: "Best Overall", icon: "🏆", link: "https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20" },
         { label: "Featwell 20000mAh Portable Fan", detail: "$29.99", note: "4.5★", category: "Best Value", icon: "💰", link: "https://www.amazon.com/dp/B0F13TH5P4?tag=camprally-20" },
@@ -898,10 +898,20 @@ function getCustomSections(slug: string): CustomSection[] {
 // ─────────────────────────────────────────
 
 
-function StatsSection({ stats }: { stats: Array<{ value: string; label: string }> }) {
+function StatsSection({ stats, liveTotal }: { stats: Array<{ value: string; label: string }>; liveTotal?: string | null }) {
+  /* A "$…" stat is a sum of product prices frozen when the article was written
+   * ("$192.93 Total Setup Cost"). Recompute it from live prices when every
+   * component product is currently priced; otherwise drop the tile rather than
+   * headline a total we cannot stand behind. */
+  const shown = stats.flatMap((s) =>
+    s.value.trim().startsWith("$")
+      ? liveTotal ? [{ ...s, value: liveTotal }] : []
+      : [s],
+  );
+  if (!shown.length) return null;
   return (
     <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-      {stats.map((stat, i) => (
+      {shown.map((stat, i) => (
         <div key={i} className="rounded-xl border bg-gradient-to-br from-camp-green/8 to-transparent p-4 text-center">
           <p className="text-2xl font-bold text-camp-green">{stat.value}</p>
           <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
@@ -916,8 +926,18 @@ function StatsSection({ stats }: { stats: Array<{ value: string; label: string }
  *
  * src/data/prices.json is generated by scripts/refresh-prices.mjs and committed,
  * so the statically generated pages pick up current prices on every Vercel
- * rebuild. When an ASIN has a fresh price we render it; when it does not we
- * fall back to whatever the article originally said. Nothing is ever invented.
+ * rebuild.
+ *
+ * THE RULE: a price or rating renders ONLY when it comes from this file and is
+ * recent. There is no fallback to the figure an article was written with.
+ *
+ * That rule exists because the fallback actively lied. A sleeping bag whose
+ * spotlight card said "$34.99" was $94.99 on Amazon — the card rendered a
+ * hardcoded string while the grid two inches below it rendered $94.99 from this
+ * file, so the same page quoted two different prices for the same product.
+ * Showing no number is always better than showing a wrong one: it costs a
+ * click, while a wrong price costs trust and breaches the Associates agreement,
+ * which forbids presenting non-API prices as current.
  *
  * Amazon's own API is not an option here: PA-API shut down 2026-05-15 and the
  * Creators API that replaced it requires 10 qualified sales in the trailing 30
@@ -927,10 +947,21 @@ function StatsSection({ stats }: { stats: Array<{ value: string; label: string }
 type LivePrice = { price: string; rating: number | null; ratingsTotal: number | null; asOf: string };
 const LIVE_PRICES = (priceData as { prices: Record<string, LivePrice> }).prices ?? {};
 
+/* Amazon prices move constantly, so a figure we last confirmed weeks ago is not
+ * evidence of anything. Past this age we stop asserting a number at all. Pages
+ * are statically generated and the publish cycle rebuilds daily, so this is
+ * re-evaluated far more often than the window itself. */
+const PRICE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+
 function getLivePrice(link?: string): LivePrice | null {
   const asin = link?.match(/\/dp\/(B[0-9A-Z]{9})/)?.[1];
-  return asin ? (LIVE_PRICES[asin] ?? null) : null;
+  const live = asin ? (LIVE_PRICES[asin] ?? null) : null;
+  if (!live) return null;
+  return Date.now() - Date.parse(live.asOf) > PRICE_MAX_AGE_MS ? null : live;
 }
+
+/** What to show when we cannot stand behind a number. */
+const CHECK_PRICE = "Check price";
 
 /** Newest asOf among the given links, or null if none are priced. */
 function newestAsOf(links: Array<string | undefined>): string | null {
@@ -974,11 +1005,11 @@ function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: st
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium leading-tight group-hover:text-camp-green transition-colors">{item.label}</p>
               <div className="flex items-center gap-2 mt-0.5">
-                <span className="text-sm font-bold text-camp-green">{live?.price ?? item.detail}</span>
-                {(live?.rating ? `${live.rating}★` : item.note) && (
-                  <span className="text-xs text-muted-foreground">
-                    {live?.rating ? `${live.rating}★` : item.note}
-                  </span>
+                <span className={`text-sm font-bold ${live ? "text-camp-green" : "text-muted-foreground"}`}>
+                  {live?.price ?? CHECK_PRICE}
+                </span>
+                {live?.rating && (
+                  <span className="text-xs text-muted-foreground">{live.rating}★</span>
                 )}
               </div>
               {item.category && (
@@ -1032,6 +1063,10 @@ function PriceDisclaimer({ asOf }: { asOf?: string | null }) {
 
 function SpotlightSection({ item }: { item: { name: string; price: string; rating: string; why: string; category: string } }) {
   const productImage = getProductImage(item.name);
+  // item.price/item.rating are frozen strings from when the article was written
+  // and are deliberately ignored — this card quoted $34.99 for a bag the grid
+  // below it correctly showed at $94.99. Live data or no number at all.
+  const live = getLivePrice(getProductLink(item.name));
   return (
     <div className="mb-10 rounded-2xl border border-camp-green/20 bg-gradient-to-br from-camp-green/5 to-transparent overflow-hidden">
       <div className="bg-camp-green/10 px-6 py-3 flex items-center justify-between">
@@ -1057,11 +1092,15 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
           <div className="flex-1 min-w-0">
             <h3 className="text-lg font-bold leading-tight">{item.name}</h3>
             <div className="flex items-center gap-3 mt-1">
-              <span className="text-lg font-bold text-camp-green">{item.price}</span>
-              <div className="flex items-center gap-0.5">
-                <Star className="size-3.5 fill-camp-orange text-camp-orange" />
-                <span className="text-sm text-muted-foreground">{item.rating}</span>
-              </div>
+              <span className={`text-lg font-bold ${live ? "text-camp-green" : "text-muted-foreground"}`}>
+                {live?.price ?? CHECK_PRICE}
+              </span>
+              {live?.rating && (
+                <div className="flex items-center gap-0.5">
+                  <Star className="size-3.5 fill-camp-orange text-camp-orange" />
+                  <span className="text-sm text-muted-foreground">{live.rating}/5</span>
+                </div>
+              )}
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mt-2">{item.why}</p>
           </div>
@@ -1076,7 +1115,7 @@ function SpotlightSection({ item }: { item: { name: string; price: string; ratin
             View on Amazon
           </a>
         </div>
-        <PriceDisclaimer />
+        <PriceDisclaimer asOf={live?.asOf} />
       </div>
     </div>
   );
@@ -1265,6 +1304,18 @@ export default async function ArticlePage({ params }: Props) {
   const customSections = getCustomSections(slug);
   const heroImage = getHeroImage(slug);
 
+  /* Live replacement for a headline "total cost" stat. Asserted only when every
+   * product in the article's grid has a current price — a total built from a
+   * mix of live and months-old figures is not a total of anything. */
+  const liveTotal = (() => {
+    const items = customSections.find((s) => s.type === "product-grid")?.items ?? [];
+    if (!items.length) return null;
+    const prices = items.map((i) => getLivePrice(i.link));
+    if (prices.some((p) => !p)) return null;
+    const sum = prices.reduce((n, p) => n + Number(p!.price.replace(/[^0-9.]/g, "")), 0);
+    return Number.isFinite(sum) && sum > 0 ? `$${sum.toFixed(2)}` : null;
+  })();
+
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-8">
       {/* Back nav */}
@@ -1317,7 +1368,7 @@ export default async function ArticlePage({ params }: Props) {
           {customSections.map((section, i) => {
             switch (section.type) {
               case "stats":
-                return section.stats ? <StatsSection key={i} stats={section.stats} /> : null;
+                return section.stats ? <StatsSection key={i} stats={section.stats} liveTotal={liveTotal} /> : null;
               case "product-grid":
                 return <ProductGrid key={i} title={section.title} subtitle={section.subtitle} items={section.items} />;
               case "spotlight":
