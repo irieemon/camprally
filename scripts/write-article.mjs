@@ -28,6 +28,7 @@ import { homedir } from "node:os";
 import { EXIT } from "./lib/amazon.mjs";
 import { loadCache, saveCache, classify, get } from "./lib/asin-cache.mjs";
 import { discover, priceCeiling } from "./lib/discover.mjs";
+import { generateImage, heroPrompt } from "./lib/minimax-image.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const MODEL = "MiniMax-M2.7";
@@ -415,6 +416,20 @@ if (words < 500) {
   process.exit(EXIT.FAIL);
 }
 
+// ── hero image (best-effort) ──────────────────────────────────────────────
+// image-01 shares the coding-plan quota with text, so this is effectively
+// free — but never publish-blocking: on any failure the page keeps using
+// HERO_IMAGES.default exactly as it did before.
+const heroOut = `${ROOT}public/images/heroes/${slug}.jpg`;
+const heroPath = await generateImage({
+  prompt: heroPrompt(brief.title, brief.category ?? "camping gear"),
+  outPath: heroOut,
+  apiKey: apiKey(),
+});
+console.log(heroPath
+  ? `hero image → public/images/heroes/${slug}.jpg`
+  : "no hero image — page will use the site default");
+
 // ── emit spec ─────────────────────────────────────────────────────────────
 const spec = {
   // Next sequential art-NNN, so ids stay stable and sortable rather than
@@ -427,6 +442,7 @@ const spec = {
   date: (process.env.RUN_DATE ?? new Date().toISOString()).slice(0, 10),
   readTime: `${Math.max(4, Math.round(words / 200))} min read`,
   gridTitle: `${brief.title} — Quick Comparison`,
+  ...(heroPath ? { hero: `/images/heroes/${slug}.jpg` } : {}),
   products: products.map((p) => ({
     asin: p.asin,
     label: p.title.split(",")[0].slice(0, 34),

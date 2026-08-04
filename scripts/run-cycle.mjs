@@ -92,7 +92,7 @@ if (existsSync(PAUSE)) {
 // the price snapshot are all written by cycles (a --dry-run legitimately
 // leaves a spec behind) and are committed by the publish step anyway. Before
 // this exclusion, a dry-run wedged every real cycle that followed it.
-const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/prices.json"]);
+const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/prices.json", ":!public/images/heroes"]);
 if (dirty) {
   finish("blocked", {
     reason: "working-tree-dirty",
@@ -233,7 +233,7 @@ if (pubCode !== EXIT.OK) {
 }
 
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
-sh("git", ["add", "src/data/articles.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/prices.json", specPath]);
+sh("git", ["add", "src/data/articles.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/prices.json", "public/images/heroes", specPath]);
 sh("git", ["commit", "-m",
   `Publish ${next.slug}\n\n` +
   `Generated from specs/${next.slug}.json. All affiliate ASINs verified live\n` +
