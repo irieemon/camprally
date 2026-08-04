@@ -52,6 +52,21 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-MQWSB6RTKJ');
+
+            // Affiliate click telemetry. GA4's built-in outbound-click event
+            // can't answer "which product on which article converts", so tag
+            // every Amazon link click with the ASIN and the page it came from.
+            // transport beacon survives the navigation away.
+            document.addEventListener('click', function (e) {
+              var a = e.target && e.target.closest ? e.target.closest('a[href*="amazon.com"]') : null;
+              if (!a) return;
+              var m = a.href.match(/\\/dp\\/(B[0-9A-Z]{9})/);
+              gtag('event', 'affiliate_click', {
+                asin: m ? m[1] : '(unknown)',
+                article_path: location.pathname,
+                transport_type: 'beacon'
+              });
+            }, true);
           `}
         </Script>
         {/*
