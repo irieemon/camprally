@@ -164,8 +164,12 @@ function finish(outcome, detail, code, { commit = true } = {}) {
       // product-images.json rides along: the maintenance backfill runs before
       // the queue check, so a cycle that ends idle or blocked can still have
       // recovered photos worth keeping.
-      sh("git", ["add", "state/", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables"]);
-      if (sh("git", ["status", "--porcelain", "state/", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables"])) {
+      // specs/quarantine rides along so a rejected draft is preserved off the
+      // machine. It is the evidence for why a slug stopped publishing, and it is
+      // useless if it only ever exists on the Mac that rejected it.
+      const heartbeatPaths = ["state/", "specs/quarantine", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables"];
+      sh("git", ["add", ...heartbeatPaths]);
+      if (sh("git", ["status", "--porcelain", ...heartbeatPaths])) {
         sh("git", ["commit", "-m", `chore(heartbeat): ${outcome} — ${detail.reason ?? detail.slug ?? ""}`.trim()]);
         if (PUSH) sh("git", ["push", "origin", "HEAD"]);
       }

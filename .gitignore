@@ -47,6 +47,12 @@ next-env.d.ts
 state/cycle.log
 state/cycle.err.log
 
+# The run lock is liveness, not state. The heartbeat commits state/ wholesale,
+# so a held lock was being committed and then showing as deleted the moment the
+# run exited — churn in history, and worse, a lock file that could arrive on
+# another checkout naming a pid that means nothing there.
+state/cycle.lock
+
 # Never commit subscriber data. The repo is public. The subscribe route posts
 # straight to Beehiiv and keeps no local list, but this guards against a future
 # implementation quietly writing one here.
