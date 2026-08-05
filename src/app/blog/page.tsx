@@ -24,7 +24,16 @@ function BlogIndex() {
   const counts = groupCounts();
 
   const filtered = useMemo(() => {
-    let result = articles;
+    /* Newest first.
+     *
+     * There was no sort here at all, so the index rendered `articles` in array
+     * order — which is append order, because publish-article adds each new
+     * entry at the end. Every newly published guide was therefore born on the
+     * LAST page of the index and pushed further away with each publish: the
+     * newer the article, the harder it was to find. `camping-fire-starting-guide`
+     * went live and landed at index 27 of 28, page 4 of 4, linked from nowhere
+     * else on the site. */
+    let result = [...articles].sort((a, b) => b.date.localeCompare(a.date));
     if (activeCategory) {
       result = result.filter((a) => matchesCategory(a.category, activeCategory));
     }

@@ -15,9 +15,16 @@ import { priceFromFor, pickCountFor } from "@/lib/article-pricing";
 export default function ArticleCard({
   article,
   priority = false,
+  showDate = false,
 }: {
   article: Article;
   priority?: boolean;
+  /* Off by default, and that is the point: leading with a date is what this
+   * card was redesigned to stop doing, because a shopper does not scan for one
+   * and an old date on an evergreen buying guide reads as neglect. In a row
+   * explicitly labelled "Latest" the same date is the whole message, so it is
+   * opt-in per placement rather than a property of the card. */
+  showDate?: boolean;
 }) {
   const priceFrom = priceFromFor(article.slug);
   const picks = pickCountFor(article.slug);
@@ -44,7 +51,21 @@ export default function ArticleCard({
       </div>
 
       <div className="flex flex-1 flex-col gap-2 p-5">
-        <span className="eyebrow text-camp-green">{article.category}</span>
+        <span className="eyebrow text-camp-green">
+          {article.category}
+          {showDate && (
+            <>
+              {" · "}
+              <time dateTime={article.date} className="text-muted-foreground">
+                {new Date(`${article.date}T00:00:00Z`).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  timeZone: "UTC",
+                })}
+              </time>
+            </>
+          )}
+        </span>
 
         <h3 className="text-h3 text-balance text-foreground">
           {article.title}

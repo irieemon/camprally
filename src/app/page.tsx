@@ -57,6 +57,23 @@ export default function Home() {
     .sort((a, b) => b.date.localeCompare(a.date));
   const lead = [...featured, ...filler].slice(0, 6);
 
+  /* The newest guides, derived rather than curated.
+   *
+   * featuredSlugs is a hand-maintained list, and its own comment records that
+   * it had already drifted once. Nothing on this page was computed from the
+   * publish date, so a newly published article appeared nowhere on the homepage
+   * at all — two went live on 2026-08-05 and neither was reachable from here.
+   * That is the wrong way round for a site that publishes daily: an article
+   * cannot become popular if nobody can find it while it is new.
+   *
+   * Excluding whatever the lead grid already shows means an article promoted
+   * into `featured` does not appear twice, and this row never needs editing. */
+  const leadSlugs = new Set(lead.map((a) => a.slug));
+  const latest = [...articles]
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .filter((a) => !leadSlugs.has(a.slug))
+    .slice(0, 3);
+
   const groups = populatedGroups();
   const counts = groupCounts();
   const heroArticle = lead[0];
@@ -164,6 +181,33 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* ── Latest guides ────────────────────────────────────────────────── */}
+      {/* Sits directly under the popular grid: high enough on the page to
+          actually get clicked, without displacing the guides that convert. */}
+      {latest.length > 0 && (
+        <section className="border-t border-camp-stone">
+          <div className="mx-auto w-full max-w-6xl px-4 py-16 md:py-20">
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className="eyebrow mb-2 text-camp-ember">Just published</p>
+                <h2 className="text-h2 text-foreground">Latest guides</h2>
+              </div>
+              <Link
+                href="/blog"
+                className="inline-flex h-11 items-center border border-camp-stone px-5 text-[0.9375rem] font-semibold text-foreground transition-colors hover:border-camp-green hover:text-camp-green"
+              >
+                Browse the archive
+              </Link>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {latest.map((article) => (
+                <ArticleCard key={article.slug} article={article} showDate />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Editorial split ──────────────────────────────────────────────── */}
       {heroArticle && (
