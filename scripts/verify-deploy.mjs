@@ -24,8 +24,12 @@
 const SITE = process.env.CAMPRALLY_SITE ?? "https://www.camprally.co";
 
 const args = process.argv.slice(2);
-const slug = args.find((a) => !a.startsWith("--")) ?? null;
-const budgetSec = Number(args[args.indexOf("--budget") + 1]) || 300;
+const budgetAt = args.indexOf("--budget");
+const budgetSec = Number(args[budgetAt + 1]) || 300;
+/* Skip the value belonging to --budget when looking for the slug. Without this,
+ * `verify-deploy.mjs --budget 300` reads "300" as the slug and spends the whole
+ * budget polling /blog/300 for a 404 it was never going to stop getting. */
+const slug = args.find((a, i) => !a.startsWith("--") && i !== budgetAt + 1) ?? null;
 
 const deadline = Date.now() + budgetSec * 1000;
 /* Vercel typically publishes a small Next site in 60-120s. Polling every 15s
