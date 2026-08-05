@@ -12,9 +12,14 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 
+/* Groups rather than raw article categories — the raw list is mostly
+ * one-article dead ends. See src/data/categories.ts. */
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/blog", label: "Blog" },
+  { href: "/blog", label: "All Guides" },
+  { href: "/blog?category=shelter", label: "Shelter" },
+  { href: "/blog?category=sleep", label: "Sleep" },
+  { href: "/blog?category=cooking", label: "Cooking" },
+  { href: "/blog?category=planning", label: "Tips" },
   { href: "/about", label: "About" },
 ]
 
@@ -22,21 +27,35 @@ export default function Navigation() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-camp-brown/20 bg-camp-cream/95 backdrop-blur-sm">
+    <>
+      {/* Promo rail. Deliberately outside the sticky header: pinned, its copy
+          wrapped to two lines on a phone and the fixed chrome ate ~110px of an
+          844px viewport. It scrolls away; the nav stays. */}
+      <div className="bg-camp-green-deep px-4 py-2 text-center">
+        <p className="truncate text-eyebrow uppercase text-white/85">
+          Field-tested gear
+          <span className="hidden sm:inline"> &middot; Prices checked daily</span>
+        </p>
+      </div>
+
+      <header className="sticky top-0 z-40 w-full border-b border-camp-stone bg-background/95 backdrop-blur-sm">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Mountain className="size-6 text-camp-green" />
-          <span className="text-xl font-bold text-camp-green">CampRally</span>
+        <Link
+          href="/"
+          className="flex items-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-camp-green"
+        >
+          <Mountain className="size-6 text-camp-green" strokeWidth={2.25} />
+          <span className="font-display text-xl font-bold tracking-[-0.02em] text-camp-green">
+            CampRally
+          </span>
         </Link>
 
-        {/* Desktop nav links */}
-        <ul className="hidden items-center gap-6 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
-            <li key={link.href}>
+            <li key={link.label}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-camp-brown transition-colors hover:text-camp-green"
+                className="link-wipe text-[0.9375rem] font-medium text-foreground transition-colors hover:text-camp-green"
               >
                 {link.label}
               </Link>
@@ -44,7 +63,6 @@ export default function Navigation() {
           ))}
         </ul>
 
-        {/* Mobile hamburger menu */}
         <div className="md:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
@@ -52,7 +70,7 @@ export default function Navigation() {
                 <Button variant="ghost" size="icon" aria-label="Open menu" />
               }
             >
-              <Menu className="size-5 text-camp-brown" />
+              <Menu className="size-5 text-foreground" />
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
@@ -62,20 +80,20 @@ export default function Navigation() {
                     className="flex items-center gap-2"
                     onClick={() => setOpen(false)}
                   >
-                    <Mountain className="size-5 text-camp-green" />
-                    <span className="text-lg font-bold text-camp-green">
+                    <Mountain className="size-5 text-camp-green" strokeWidth={2.25} />
+                    <span className="font-display text-lg font-bold text-camp-green">
                       CampRally
                     </span>
                   </Link>
                 </SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-4 px-4">
+              <div className="flex flex-col gap-1 px-4">
                 {navLinks.map((link) => (
                   <Link
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="text-base font-medium text-camp-brown transition-colors hover:text-camp-green"
+                    className="border-b border-camp-stone py-3 text-base font-medium text-foreground transition-colors hover:text-camp-green"
                   >
                     {link.label}
                   </Link>
@@ -85,6 +103,7 @@ export default function Navigation() {
           </Sheet>
         </div>
       </nav>
-    </header>
+      </header>
+    </>
   )
 }

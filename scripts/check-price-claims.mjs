@@ -41,14 +41,16 @@ if (proseHits.length) {
 // Editorial fields in the article template (callouts, spotlight rationale,
 // section subtitles). The `detail`/`price` fields are legacy data the renderer
 // deliberately ignores, so they are not flagged.
-const page = readFileSync(`${ROOT}src/app/blog/[slug]/page.tsx`, "utf8");
+// Moved out of the blog route into src/data/ so the home page and blog index
+// could read the same per-article product data for their cards.
+const page = readFileSync(`${ROOT}src/data/article-sections.ts`, "utf8");
 const editorial = [...page.matchAll(/(?:calloutBody|calloutTitle|why|subtitle):\s*"([^"]*)"/g)]
   .map((m) => m[1])
   .filter((t) => CENTS.test(t));
 CENTS.lastIndex = 0;
 if (editorial.length) {
   failures += editorial.length;
-  console.error(`\nFROZEN PRICES in editorial copy (page.tsx): ${editorial.length}`);
+  console.error(`\nFROZEN PRICES in editorial copy (article-sections.ts): ${editorial.length}`);
   for (const t of editorial) console.error(`  "${t.slice(0, 110)}"`);
 }
 

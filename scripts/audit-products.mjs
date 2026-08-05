@@ -39,7 +39,8 @@ function apiKey() {
 
 const catalog = JSON.parse(readFileSync(`${ROOT}src/data/catalog.json`, "utf8")).products ?? {};
 const articlesSrc = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
-const pageSrc = readFileSync(`${ROOT}src/app/blog/[slug]/page.tsx`, "utf8");
+// Extracted from the blog route into src/data/ so the card grids could read it.
+const pageSrc = readFileSync(`${ROOT}src/data/article-sections.ts`, "utf8");
 
 // ── every (article, product) pair the site actually renders ───────────────
 const byArticle = new Map();

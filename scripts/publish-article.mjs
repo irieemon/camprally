@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Publish an article from a JSON spec — atomically, across both files.
+ * Publish an article from a JSON spec — atomically, across all three files.
  *
  *   node scripts/publish-article.mjs specs/art-024.json
  *   node scripts/publish-article.mjs specs/art-024.json --dry-run
@@ -16,8 +16,8 @@
  * Guarantees:
  *   - Fails closed on links. Every product ASIN must be cached LIVE. An ASIN
  *     that is DEAD or has never been confirmed blocks the publish.
- *   - All-or-nothing. If anything fails, including the build, both files are
- *     restored to their prior contents.
+ *   - All-or-nothing. If anything fails, including the build, every file is
+ *     restored to its prior contents.
  *   - Idempotent. Refuses to publish a slug that already exists.
  *
  * Does NOT commit. Tier 3 (run-cycle) owns git, so a failed build never
@@ -33,7 +33,13 @@ import { loadCache, classify } from "./lib/asin-cache.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const ARTICLES = `${ROOT}src/data/articles.ts`;
-const PAGE = `${ROOT}src/app/blog/[slug]/page.tsx`;
+/* Heroes and per-article sections used to live inside the blog route, and this
+ * script patched that one file. They were extracted to src/data/ so the home
+ * page and blog index could render the same photographs and prices on their
+ * cards, which means the publish now edits three files instead of two. The
+ * all-or-nothing guarantee covers all three. */
+const HEROES = `${ROOT}src/data/heroes.ts`;
+const SECTIONS = `${ROOT}src/data/article-sections.ts`;
 const TAG = "camprally-20";
 
 const specPath = process.argv[2];
@@ -63,7 +69,8 @@ if (/AMZ_[A-Z_]+/.test(spec.body)) {
 }
 
 const articlesSrc = readFileSync(ARTICLES, "utf8");
-const pageSrc = readFileSync(PAGE, "utf8");
+const heroesSrc = readFileSync(HEROES, "utf8");
+const sectionsSrc = readFileSync(SECTIONS, "utf8");
 
 /*
  * --replace regenerates an article that already exists, swapping its body and
@@ -167,24 +174,44 @@ let nextArticles;
   nextArticles = baseArticles.slice(0, lastBrace + 2) + "\n\n" + entry + baseArticles.slice(close);
 }
 
-let nextPage = pageSrc;
+let nextHeroes = heroesSrc;
+let nextSections = sectionsSrc;
 if (REPLACE) {
-  nextPage = removeCustomSections(nextPage, spec.slug);
-  nextPage = nextPage.replace(new RegExp(`^  "${spec.slug}": "[^"]*",\\n`, "m"), "");
+  nextSections = removeCustomSections(nextSections, spec.slug);
+  // `\s*` rather than a single space: the hand-maintained entries in heroes.ts
+  // are column-aligned, so the separator is a run of spaces.
+  nextHeroes = nextHeroes.replace(new RegExp(`^  "${spec.slug}":\\s*"[^"]*",\\n`, "m"), "");
 }
 if (spec.hero) {
-  const anchor = "  default: ";
-  const i = nextPage.indexOf(anchor);
+  const anchor = "\n  default: ";
+  const i = nextHeroes.indexOf(anchor);
   if (i === -1) { console.error("could not locate HERO_IMAGES default"); process.exit(EXIT.FAIL); }
-  nextPage = nextPage.slice(0, i) + `  "${esc(spec.slug)}": "${esc(spec.hero)}",\n` + nextPage.slice(i);
+  nextHeroes =
+    nextHeroes.slice(0, i + 1) +
+    `  "${esc(spec.slug)}": "${esc(spec.hero)}",\n` +
+    nextHeroes.slice(i + 1);
 }
 
 if (spec.products.length) {
+  /* Emits only fields CustomSection["items"] actually declares.
+   *
+   * This previously also wrote `detail` and `note`. Those were stripped from
+   * the type and from every existing entry when the catalog became the single
+   * source of price and rating data — the renderer had been falling back to
+   * `detail` to print a figure frozen at write time, which is how one page
+   * managed to quote two different prices for the same product. The publisher
+   * was never updated to match, so it kept emitting two fields the type
+   * rejects: the next real publish would have failed type-checking and rolled
+   * itself back, silently, on every attempt.
+   *
+   * `asin` is written alongside `link` because the catalog is ASIN-keyed and
+   * that is the address the renderer prefers; `link` remains as the href to
+   * fall back on for a product the catalog does not have. */
   const items = spec.products
     .map((p) =>
-      `        { label: "${esc(p.label)}", detail: "${esc(p.detail ?? "")}", ` +
-      `note: "${esc(p.note ?? "")}", category: "${esc(p.category ?? "")}", ` +
-      `icon: "${p.icon ?? ""}", link: "https://www.amazon.com/dp/${p.asin}?tag=${TAG}" },`)
+      `        { label: "${esc(p.label)}", category: "${esc(p.category ?? "")}", ` +
+      `icon: "${p.icon ?? ""}", asin: "${esc(p.asin)}", ` +
+      `link: "https://www.amazon.com/dp/${p.asin}?tag=${TAG}" },`)
     .join("\n");
 
   const callout = spec.callout
@@ -205,36 +232,41 @@ if (spec.products.length) {
     "    },\n" + callout +
     "  ],\n";
 
-  const marker = "const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {\n";
-  const j = nextPage.indexOf(marker);
+  // Matched without the declaration keyword so it survives the const -> export
+  // const change that came with the move out of the route file.
+  const marker = "ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {\n";
+  const j = nextSections.indexOf(marker);
   if (j === -1) { console.error("could not locate ARTICLE_CUSTOM_SECTIONS"); process.exit(EXIT.FAIL); }
-  nextPage = nextPage.slice(0, j + marker.length) + section + nextPage.slice(j + marker.length);
+  nextSections = nextSections.slice(0, j + marker.length) + section + nextSections.slice(j + marker.length);
 }
 
 if (DRY) {
   console.log(`\n[dry run] would add ${spec.id} (${spec.slug})`);
-  console.log(`  articles.ts  +${entry.split("\n").length} lines`);
-  console.log(`  page.tsx     hero=${!!spec.hero} products=${spec.products.length} callout=${!!spec.callout}`);
+  console.log(`  articles.ts          +${entry.split("\n").length} lines`);
+  console.log(`  heroes.ts            hero=${!!spec.hero}`);
+  console.log(`  article-sections.ts  products=${spec.products.length} callout=${!!spec.callout}`);
   process.exit(EXIT.OK);
 }
 
 // ── write, then verify the build; restore on any failure ──────────────────
 writeFileSync(ARTICLES, nextArticles);
-writeFileSync(PAGE, nextPage);
-console.log(`wrote articles.ts and page.tsx`);
+writeFileSync(HEROES, nextHeroes);
+writeFileSync(SECTIONS, nextSections);
+console.log(`wrote articles.ts, heroes.ts and article-sections.ts`);
 
 const restore = (why) => {
   writeFileSync(ARTICLES, articlesSrc);
-  writeFileSync(PAGE, pageSrc);
+  writeFileSync(HEROES, heroesSrc);
+  writeFileSync(SECTIONS, sectionsSrc);
   console.error(`\nROLLED BACK — ${why}`);
 };
 
 /*
  * Build, retrying once on a transient failure.
  *
- * next/font/google fetches Geist from Google at build time, so a momentary
- * Google outage fails the build — observed 2026-08-04, where two consecutive
- * builds failed on "Failed to fetch Geist from Google Fonts" and the third
+ * next/font/google fetches Inter and Archivo from Google at build time, so a
+ * momentary Google outage fails the build — observed 2026-08-04, where two
+ * consecutive builds failed on "Failed to fetch ... from Google Fonts" and the third
  * succeeded with no code change. Without a retry the cycle would roll back a
  * perfectly good article and report it as broken, which is exactly the kind of
  * misleading signal this pipeline exists to eliminate.
