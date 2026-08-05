@@ -50,6 +50,33 @@ function sh(cmd, args, opts = {}) {
 }
 
 /**
+ * Fetch photographs for any referenced product that lacks one, then fold them
+ * into the catalog.
+ *
+ * Called twice per cycle and a no-op both times unless there is actually a gap:
+ * the script filters referenced ASINs against the ones already in
+ * product-images.json and exits without touching the network when the set is
+ * empty. Before the queue check it retries gaps a previous run was throttled
+ * out of; after a publish it covers the ASINs that article just introduced,
+ * which is the only point at which they become referenced.
+ *
+ * Never fatal. A product with no photo renders a branded icon tile, which is a
+ * cosmetic loss; failing the cycle over it would trade that for a dead
+ * pipeline. Amazon throttling is the common cause and it is transient, so the
+ * next cycle simply picks up what this one missed.
+ */
+function backfillPhotos(when) {
+  try {
+    const out = sh("node", ["scripts/backfill-product-images.mjs"]);
+    if (out) console.log(out);
+    console.log(sh("node", ["scripts/build-catalog.mjs"]));
+  } catch (err) {
+    console.log(err.stdout ?? "");
+    console.log(`(product photo backfill incomplete at ${when} — icon tiles until the next cycle)`);
+  }
+}
+
+/**
  * Record the outcome and exit. This is the only way this script terminates.
  *
  * The receipt is committed and pushed on EVERY outcome, not just successful
@@ -76,8 +103,11 @@ function finish(outcome, detail, code) {
     // Best-effort heartbeat commit. Never let this failure mask the real
     // outcome — a heartbeat that changes the exit code is worse than none.
     try {
-      sh("git", ["add", "state/", "src/data/catalog.json"]);
-      if (sh("git", ["status", "--porcelain", "state/", "src/data/catalog.json"])) {
+      // product-images.json rides along: the maintenance backfill runs before
+      // the queue check, so a cycle that ends idle or blocked can still have
+      // recovered photos worth keeping.
+      sh("git", ["add", "state/", "src/data/catalog.json", "src/data/product-images.json"]);
+      if (sh("git", ["status", "--porcelain", "state/", "src/data/catalog.json", "src/data/product-images.json"])) {
         sh("git", ["commit", "-m", `chore(heartbeat): ${outcome} — ${detail.reason ?? detail.slug ?? ""}`.trim()]);
         if (PUSH) sh("git", ["push", "origin", "HEAD"]);
       }
@@ -101,7 +131,7 @@ if (existsSync(PAUSE)) {
 // the price snapshot are all written by cycles (a --dry-run legitimately
 // leaves a spec behind) and are committed by the publish step anyway. Before
 // this exclusion, a dry-run wedged every real cycle that followed it.
-const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!public/images/heroes"]);
+const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!src/data/product-images.json", ":!public/images/heroes"]);
 if (dirty) {
   finish("blocked", {
     reason: "working-tree-dirty",
@@ -154,6 +184,9 @@ try {
   console.log(err.stdout ?? "");
   console.log("(frozen price claims found — see scripts/strip-prose-prices.mjs)");
 }
+
+// ── step 2d: retry any product photos an earlier cycle missed ─────────────
+backfillPhotos("maintenance");
 
 // ── step 3: pick the next unpublished queue item ──────────────────────────
 const queueRaw = JSON.parse(readFileSync(`${ROOT}article-queue.json`, "utf8"));
@@ -256,8 +289,13 @@ if (pubCode !== EXIT.OK) {
   finish("blocked", { reason: "publish-failed", slug: next.slug, message: pubOut.slice(-1200) }, EXIT.FAIL);
 }
 
+// ── step 5b: photographs for the products this article just introduced ────
+// Only reachable after a successful publish, which is the first moment those
+// ASINs are referenced by the site and therefore in scope for the backfill.
+backfillPhotos("publish");
+
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
-sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "public/images/heroes", specPath]);
+sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json", "public/images/heroes", specPath]);
 sh("git", ["commit", "-m",
   `Publish ${next.slug}\n\n` +
   `Generated from specs/${next.slug}.json. All affiliate ASINs verified live\n` +

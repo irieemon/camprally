@@ -22,7 +22,12 @@
  * ASIN untouched and the run reports it, so re-running only retries what is
  * still missing. Nothing is ever overwritten with null.
  *
- * Exit codes: 0 OK (even with misses) · 1 nothing written and everything failed
+ * Wired into run-cycle.mjs twice: once before the queue check, to retry gaps an
+ * earlier run was throttled out of, and once after a publish, which is the
+ * first moment that article's ASINs count as referenced. Both calls are no-ops
+ * — no network at all — when nothing is missing.
+ *
+ * Exit codes: 0 OK (even with some misses) · 2 nothing resolved, retry later
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -106,8 +111,11 @@ if (DRY) {
   process.exit(EXIT.OK);
 }
 if (!found.size) {
+  // DEFER, not FAIL. The overwhelming cause is Amazon throttling, which is
+  // transient by definition, and run-cycle reads these codes: FAIL would raise
+  // a blocker needing a human over a missing thumbnail.
   console.error("\nnothing resolved — not writing");
-  process.exit(EXIT.FAIL);
+  process.exit(EXIT.DEFER);
 }
 
 // Sorted so the diff of a backfill is readable rather than append-ordered.
