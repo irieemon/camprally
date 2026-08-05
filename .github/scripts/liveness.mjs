@@ -9,16 +9,38 @@
  * Emits GITHUB_OUTPUT lines: status and summary.
  *
  * Statuses:
- *   ok             recent run, not stuck
- *   host-silent    no heartbeat in STALE_DAYS — the machine is probably off
- *   stuck          heartbeat is fresh but the last outcomes were blocked
+ *   ok             recent run, publishing, site serving
+ *   host-silent    no heartbeat in STALE_HOURS — the machine is probably off
+ *   stuck          heartbeat is fresh but nothing has published in STUCK_RUNS
+ *   deploy-failing committing and pushing, but the origin never serves it
+ *   site-down      host healthy, site not
  *   never-started  no heartbeat has ever been committed
  */
 
-import { readFileSync, existsSync, readdirSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { sinceLastPublish, receipts } from "../../scripts/lib/run-history.mjs";
 
-const STALE_DAYS = 3;      // heartbeat older than this means the host is gone
-const STUCK_RUNS = 3;      // this many consecutive blocked runs means stuck
+/* Hours, not days.
+ *
+ * Three days was the original threshold and it is far too slack for a pipeline
+ * that runs three times daily: nine missed cycles before anyone hears about it.
+ * The binding constraint is the overnight gap — the 19:00 run to the 09:00 run
+ * is 14 hours of legitimate silence — so 20 gives a margin over that without
+ * waiting for a third day. */
+const STALE_HOURS = 20;
+
+/* Consecutive non-publishing runs that mean stuck.
+ *
+ * Counted by "did anything publish", not by "was the outcome blocked". The old
+ * test required all three of the last runs to be `blocked`, so a pipeline
+ * alternating blocked / deferred / idle — which is what a quota exhaustion
+ * actually looks like — never tripped it while publishing nothing for weeks. */
+const STUCK_RUNS = 6;
+
+/* Runs that committed and pushed but whose deploy never appeared. One is a slow
+ * build; three in a row means Vercel is failing and the site is frozen at an
+ * older commit while every local signal reports success. */
+const DEPLOY_FAIL_RUNS = 3;
 
 const out = [];
 const emit = (k, v) => out.push(`${k}=${String(v).replace(/\n/g, "%0A")}`);
@@ -40,13 +62,14 @@ if (!existsSync(LAST)) {
 
 const last = JSON.parse(readFileSync(LAST, "utf8"));
 const ageMs = Date.now() - Date.parse(last.finishedAt ?? last.startedAt);
+const ageHours = ageMs / 3_600_000;
 const ageDays = ageMs / 86_400_000;
 
-if (ageDays > STALE_DAYS) {
+if (ageHours > STALE_HOURS) {
   emit("status", "host-silent");
   emit(
     "summary",
-    `**No heartbeat for ${ageDays.toFixed(1)} days.**\n\n` +
+    `**No heartbeat for ${ageHours.toFixed(1)} hours.**\n\n` +
     `Last run finished \`${last.finishedAt}\` with outcome \`${last.outcome}\`.\n\n` +
     "The publishing host has stopped reporting. Most likely the Mac is off or lost power.\n\n" +
     "Checklist:\n" +
@@ -61,30 +84,42 @@ if (ageDays > STALE_DAYS) {
 }
 
 // Fresh heartbeat — but is it making progress?
-let recent = [];
-if (existsSync("state/runs")) {
-  recent = readdirSync("state/runs")
-    .filter((f) => f.endsWith(".json"))
-    .sort()
-    .slice(-STUCK_RUNS)
-    .map((f) => {
-      try { return JSON.parse(readFileSync(`state/runs/${f}`, "utf8")); }
-      catch { return null; }
-    })
-    .filter(Boolean);
-}
+const { runs: sincePublish, reasons, lastPublishedAt } = sinceLastPublish("state/runs");
 
-const allBlocked = recent.length >= STUCK_RUNS && recent.every((r) => r.outcome === "blocked");
-
-if (allBlocked) {
-  const reasons = [...new Set(recent.map((r) => r.reason))].join(", ");
+if (sincePublish >= STUCK_RUNS) {
   emit("status", "stuck");
   emit(
     "summary",
-    `**The pipeline is alive but has been blocked for ${recent.length} consecutive runs.**\n\n` +
-    `Reason(s): \`${reasons}\`\n\n` +
+    `**The pipeline is alive but has not published in ${sincePublish} consecutive runs.**\n\n` +
+    `Reason(s): \`${reasons.join(", ") || "none recorded"}\`\n` +
+    `Last publish: ${lastPublishedAt ?? "never"}\n\n` +
     `Latest message:\n\n\`\`\`\n${(last.message ?? "(none)").slice(0, 900)}\n\`\`\`\n\n` +
     "The host is healthy — this needs a decision, not a reboot.",
+  );
+  console.log(out.join("\n"));
+  process.exit(0);
+}
+
+/* Deploys that never landed.
+ *
+ * run-cycle records `published-unverified` when it committed and pushed but the
+ * origin never served the new article. Individually that is usually just a slow
+ * Vercel build finishing after the check gave up. Repeated, it means the site is
+ * frozen at an older commit while git history, receipts and Telegram all report
+ * a healthy publishing pipeline. */
+const recentRuns = receipts("state/runs", DEPLOY_FAIL_RUNS);
+const deployFailing =
+  recentRuns.length >= DEPLOY_FAIL_RUNS &&
+  recentRuns.every((r) => r.outcome === "published-unverified");
+
+if (deployFailing) {
+  emit("status", "deploy-failing");
+  emit(
+    "summary",
+    `**${recentRuns.length} consecutive publishes never appeared on the site.**\n\n` +
+    `The Mac is committing and pushing normally, so this is Vercel's build, not the agent.\n\n` +
+    `Most recent: \`${last.slug}\` — ${last.deploy ?? "(no detail)"}\n\n` +
+    "Check the Vercel dashboard for failed deployments on `main`.",
   );
   console.log(out.join("\n"));
   process.exit(0);
@@ -131,8 +166,8 @@ if (siteStatus !== 200 || pageCount < MIN_PAGES) {
 emit("status", "ok");
 emit(
   "summary",
-  `Healthy. Last run ${ageDays.toFixed(1)}d ago: \`${last.outcome}\`` +
+  `Healthy. Last run ${ageHours.toFixed(1)}h ago: \`${last.outcome}\`` +
   (last.slug ? ` (${last.slug})` : "") +
-  ` · site serving ${pageCount} pages.`,
+  ` · ${sincePublish} run(s) since last publish · site serving ${pageCount} pages.`,
 );
 console.log(out.join("\n"));

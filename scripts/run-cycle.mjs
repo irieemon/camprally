@@ -10,10 +10,11 @@
  * state/runs/<timestamp>.json. There is no silent success and no "nothing
  * needed" that leaves no trace.
  *
- *   published  an article was committed
- *   blocked    something stopped us, with a named reason
- *   deferred   transient (Amazon throttling) — retry later, not a failure
- *   idle       queue genuinely empty, recorded explicitly
+ *   published              an article was committed, pushed, and confirmed live
+ *   published-unverified   committed and pushed, but the origin never served it
+ *   blocked                something stopped us, with a named reason
+ *   deferred               transient (Amazon throttling) — retry later
+ *   idle                   nothing to do, recorded explicitly
  *
  * This exists because of what the old loop did. Between 2026-04-16 and
  * 2026-06-05 it ran repeatedly and published nothing, logging "clean cycle,
@@ -24,15 +25,32 @@
  * says "blocked" for days is visible in a way that silence never was.
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync, renameSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { homedir } from "node:os";
 import { EXIT } from "./lib/amazon.mjs";
+import { acquire } from "./lib/run-lock.mjs";
+import { sinceLastPublish } from "./lib/run-history.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const RUNS = `${ROOT}state/runs`;
 const BLOCKERS = `${ROOT}state/blockers.md`;
+const LOCK = `${ROOT}state/cycle.lock`;
+const QUARANTINE = `${ROOT}specs/quarantine`;
+const SKIPS = `${ROOT}state/content-skips.json`;
 const PAUSE = `${homedir()}/.openclaw/workspace/state/pause.flag`;
+
+/* Runs that end without publishing are individually legitimate and collectively
+ * a dead pipeline. Six is two full days at three cycles a day — long enough
+ * that a throttling spell or a same-day queue top-up passes unremarked, short
+ * enough that nobody discovers the silence four months later. */
+const STALL_AFTER_RUNS = 6;
+
+/* Two rejected drafts of the same article is enough. The model gets a second
+ * attempt because regeneration is cheap and often lands clean, but a topic it
+ * cannot write safely twice is a topic a human should look at, and the queue
+ * has to keep moving in the meantime. */
+const MAX_CONTENT_ATTEMPTS = 2;
 
 const DRY = process.argv.includes("--dry-run");
 const PUSH = !process.argv.includes("--no-push");
@@ -86,10 +104,36 @@ function backfillPhotos(when) {
  * With it, Tier 4 can tell them apart — stale receipts mean the host is gone,
  * fresh receipts saying "blocked" mean the host is alive and stuck.
  */
-function finish(outcome, detail, code) {
+function finish(outcome, detail, code, { commit = true } = {}) {
+  /* Stall escalation.
+   *
+   * `deferred` and `idle` exit 0 by design — one throttled run or one empty
+   * queue is not a failure, and treating it as one would page someone daily.
+   * But nothing was summing them, so an unbroken month of them read exactly
+   * like an unbroken month of health. Past the threshold the exit code flips,
+   * which is all the cron needs to start alerting: it already pages after two
+   * consecutive failures.
+   *
+   * A deliberate pause is excluded inside sinceLastPublish — pausing the
+   * pipeline should not page the person who paused it. */
+  let stalledRuns;
+  if (!DRY && (outcome === "deferred" || outcome === "idle") && detail.reason !== "paused") {
+    const { runs, reasons } = sinceLastPublish(RUNS);
+    stalledRuns = runs + 1; // this run is not on disk yet
+    if (stalledRuns >= STALL_AFTER_RUNS) {
+      code = EXIT.FAIL;
+      detail = {
+        ...detail,
+        stalledSince: `${stalledRuns} consecutive runs without publishing`,
+        stalledReasons: [...new Set([detail.reason, ...reasons].filter(Boolean))],
+      };
+    }
+  }
+
   const receipt = {
     startedAt, finishedAt: new Date().toISOString(), outcome,
     ...(typeof priceClaims === "string" ? { priceClaims } : {}),
+    ...(stalledRuns ? { runsSincePublish: stalledRuns } : {}),
     ...detail,
   };
   if (!DRY) {
@@ -97,12 +141,26 @@ function finish(outcome, detail, code) {
     const receiptPath = `${RUNS}/${stamp}.json`;
     writeFileSync(receiptPath, JSON.stringify(receipt, null, 2) + "\n");
     writeFileSync(`${ROOT}state/last-run.json`, JSON.stringify(receipt, null, 2) + "\n");
-    if (outcome === "blocked") {
-      appendFileSync(BLOCKERS, `\n## ${startedAt} — ${detail.reason}\n\n${detail.message ?? ""}\n`);
+    // A stall is recorded here too. It is not a "blocked" outcome, but it needs
+    // a human exactly as much as one does, and this file is where a human looks.
+    if (outcome === "blocked" || detail.stalledSince) {
+      appendFileSync(
+        BLOCKERS,
+        `\n## ${startedAt} — ${detail.stalledSince ? `stalled: ${detail.reason}` : detail.reason}\n\n` +
+        `${detail.stalledSince ? `${detail.stalledSince} (reasons: ${detail.stalledReasons.join(", ")})\n\n` : ""}` +
+        `${detail.message ?? ""}\n`,
+      );
     }
     // Best-effort heartbeat commit. Never let this failure mask the real
     // outcome — a heartbeat that changes the exit code is worse than none.
-    try {
+    //
+    // Suppressed when another cycle holds the lock: this function runs on every
+    // exit path including that one, and committing from underneath a run that is
+    // mid-publish is the exact interleaving the lock exists to prevent. The
+    // receipt above is still written, so the run is not invisible — it simply
+    // does not touch git, and the holder's own heartbeat carries the push.
+    if (!commit) console.log("(heartbeat commit skipped — another cycle holds the lock)");
+    else try {
       // product-images.json rides along: the maintenance backfill runs before
       // the queue check, so a cycle that ends idle or blocked can still have
       // recovered photos worth keeping.
@@ -123,6 +181,21 @@ function finish(outcome, detail, code) {
 // ── step 0: pause flag ────────────────────────────────────────────────────
 if (existsSync(PAUSE)) {
   finish("idle", { reason: "paused", message: readFileSync(PAUSE, "utf8").trim() }, EXIT.OK);
+}
+
+// ── step 0b: single-holder lock ───────────────────────────────────────────
+// Checked after the pause flag so a paused pipeline still answers "paused"
+// rather than "busy", and before anything touches the tree.
+if (!DRY) {
+  const lock = acquire(LOCK);
+  if (!lock.ok) {
+    // Not a failure: the previous cycle is still working. Exit 0 so the cron
+    // does not treat healthy overlap as an incident.
+    finish("idle", {
+      reason: "already-running",
+      message: `Another cycle holds the lock (${lock.reason}).`,
+    }, EXIT.OK, { commit: false });
+  }
 }
 
 // ── step 1: clean tree ────────────────────────────────────────────────────
@@ -205,7 +278,24 @@ const queueRaw = JSON.parse(readFileSync(`${ROOT}article-queue.json`, "utf8"));
 const items = Array.isArray(queueRaw) ? queueRaw
   : queueRaw.articles ?? queueRaw.queue ?? queueRaw.items ?? [];
 const published = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
-const pending = items.filter((i) => i.slug && !published.includes(`slug: "${i.slug}"`));
+
+/* Slugs the content review has rejected too many times.
+ *
+ * Without this the pipeline wedges on its own safety gate: a quarantined spec
+ * is regenerated next run, rejected again, and the queue never advances past
+ * the one topic the model cannot write safely. Skipping keeps the other eleven
+ * articles shipping while the bad one waits for a human. */
+const skips = existsSync(SKIPS) ? JSON.parse(readFileSync(SKIPS, "utf8")) : {};
+const exhausted = new Set(
+  Object.entries(skips).filter(([, v]) => (v.attempts ?? 0) >= MAX_CONTENT_ATTEMPTS).map(([slug]) => slug),
+);
+
+const pending = items.filter((i) =>
+  i.slug && !published.includes(`slug: "${i.slug}"`) && !exhausted.has(i.slug));
+
+if (exhausted.size) {
+  console.log(`(skipping ${exhausted.size} slug(s) held by content review: ${[...exhausted].join(", ")})`);
+}
 
 if (!pending.length) {
   finish("idle", { reason: "queue-empty", queued: items.length }, EXIT.OK);
@@ -280,6 +370,43 @@ if (DRY) {
 
 const specPath = `${ROOT}specs/${next.slug}.json`;
 
+// ── step 4b: content review ───────────────────────────────────────────────
+// The last gate that reads what the article actually says. Everything before
+// it checks that the machinery is sound — links resolve, prices are fresh, the
+// build compiles — and none of that would notice an article recommending a
+// propane heater inside a tent.
+//
+// A rejection quarantines the spec rather than stopping the cycle. The run
+// still ends blocked, so it is recorded and alertable, but the draft is moved
+// aside and the slug's attempt count goes up; the next cycle regenerates it, and
+// after MAX_CONTENT_ATTEMPTS the queue moves on without it. A safety gate that
+// halts publishing forever gets switched off by whoever is on call, which is
+// the one outcome worse than not having it.
+let reviewOut = "";
+try {
+  reviewOut = sh("node", ["scripts/review-article.mjs", specPath]);
+  console.log(reviewOut);
+} catch (err) {
+  reviewOut = `${err.stdout ?? ""}${err.stderr ?? ""}`;
+  console.log(reviewOut);
+
+  const attempts = (skips[next.slug]?.attempts ?? 0) + 1;
+  skips[next.slug] = { attempts, lastAt: new Date().toISOString(), findings: reviewOut.slice(-1200) };
+  writeFileSync(SKIPS, JSON.stringify(skips, null, 2) + "\n");
+
+  mkdirSync(QUARANTINE, { recursive: true });
+  renameSync(specPath, `${QUARANTINE}/${next.slug}-${stamp}.json`);
+
+  finish("blocked", {
+    reason: "content-review",
+    slug: next.slug,
+    attempts,
+    message:
+      `Content review rejected ${next.slug} (attempt ${attempts} of ${MAX_CONTENT_ATTEMPTS}).\n` +
+      `Spec quarantined to specs/quarantine/${next.slug}-${stamp}.json\n\n${reviewOut.slice(-1200)}`,
+  }, EXIT.FAIL);
+}
+
 // ── step 5: publish (gated on cached-live links + a passing build) ────────
 let pubCode = 0, pubOut = "";
 try {
@@ -326,7 +453,30 @@ if (PUSH) {
   }
 }
 
-finish("published", {
+// ── step 7: confirm the deploy is actually serving ────────────────────────
+// A push is not a deploy. Vercel rebuilds on its own machine and, when that
+// build fails, keeps serving the previous one — so every local signal says
+// "published" while the article does not exist. Asking the origin is the only
+// way to tell the difference.
+//
+// Never downgraded to a failure: the commit is good, the push succeeded, and a
+// deploy that is merely slow will land on its own. The outcome records which
+// of the two happened so a run of `published-unverified` receipts is visible
+// rather than being quietly indistinguishable from success.
+let deployVerified = false;
+let deployDetail = "not checked (--no-push)";
+if (pushed) {
+  try {
+    deployDetail = sh("node", ["scripts/verify-deploy.mjs", next.slug]);
+    deployVerified = true;
+  } catch (err) {
+    deployDetail = `${err.stdout ?? ""}${err.stderr ?? ""}`.trim().slice(-400);
+  }
+  console.log(deployDetail);
+}
+
+finish(pushed && !deployVerified ? "published-unverified" : "published", {
   slug: next.slug, commit: sha, pushed,
+  deployVerified, deploy: deployDetail,
   remaining: pending.length - 1,
 }, EXIT.OK);

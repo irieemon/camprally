@@ -21,7 +21,10 @@ name: Liveness
 
 on:
   schedule:
-    - cron: "0 13 * * *"   # 09:00 America/New_York (13:00 UTC, standard time)
+    # Every six hours. Daily was too coarse to act on: a Friday-evening power
+    # cut sat undetected until Saturday morning, and the whole point of this
+    # workflow is that the Mac being off is noticed while it still matters.
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 permissions:

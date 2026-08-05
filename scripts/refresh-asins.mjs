@@ -34,9 +34,18 @@ const args = process.argv.slice(2);
 const ALL = args.includes("--all");
 const LIMIT = Number(args[args.indexOf("--limit") + 1]) || (ALL ? Infinity : 6);
 
+/* Rejected drafts are not part of the site.
+ *
+ * specs/quarantine holds articles the content review refused, and they keep
+ * their product lists. Walking into it would put those ASINs back in the
+ * refresh rotation permanently — the same self-perpetuating set that had an
+ * unreferenced Echo Dot billing a price lookup on every run. */
+const SKIP_DIRS = new Set(["quarantine"]);
+
 function walk(dir) {
   return readdirSync(dir).flatMap((e) => {
     const full = join(dir, e);
+    if (SKIP_DIRS.has(e)) return [];
     return statSync(full).isDirectory() ? walk(full)
       : CODE_EXT.has(extname(full)) ? [full] : [];
   });
