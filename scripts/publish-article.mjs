@@ -174,14 +174,24 @@ let nextArticles;
   nextArticles = baseArticles.slice(0, lastBrace + 2) + "\n\n" + entry + baseArticles.slice(close);
 }
 
-let nextHeroes = heroesSrc;
-let nextSections = sectionsSrc;
-if (REPLACE) {
-  nextSections = removeCustomSections(nextSections, spec.slug);
-  // `\s*` rather than a single space: the hand-maintained entries in heroes.ts
-  // are column-aligned, so the separator is a run of spaces.
-  nextHeroes = nextHeroes.replace(new RegExp(`^  "${spec.slug}":\\s*"[^"]*",\\n`, "m"), "");
-}
+/* Clear any entry this slug already owns, on EVERY publish rather than only
+ * under --replace.
+ *
+ * Both maps are object literals, so a second entry for the same key is a type
+ * error, not a last-write-wins overwrite — and the publisher used to insert
+ * blindly on a fresh publish. That wedged the 2026-08-05 09:00 cycle: a hero
+ * had been added by hand for how-to-camp-in-rain while the article was still
+ * sitting in the queue, so publishing it produced a duplicate key and the run
+ * rolled back. It would have failed identically on every cycle thereafter.
+ *
+ * Making the strip unconditional costs nothing when the key is absent (both
+ * helpers return the source unchanged) and makes a publish idempotent against
+ * hand edits and against anything a previous rolled-back attempt left behind.
+ *
+ * `\s*` rather than a single space: entries in heroes.ts are column-aligned,
+ * so the separator is a run of spaces. */
+let nextHeroes = heroesSrc.replace(new RegExp(`^  "${spec.slug}":\\s*"[^"]*",\\n`, "m"), "");
+let nextSections = removeCustomSections(sectionsSrc, spec.slug);
 if (spec.hero) {
   const anchor = "\n  default: ";
   const i = nextHeroes.indexOf(anchor);
