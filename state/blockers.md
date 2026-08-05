@@ -47,3 +47,15 @@ Type error: An object literal cannot have multiple properties with the same name
 Next.js build worker exited with code: 1 and signal: null
 
 
+
+## 2026-08-05T18:19:25.347Z — content-review
+
+Content review rejected how-to-camp-in-rain (attempt 1 of 2).
+Spec quarantined to specs/quarantine/how-to-camp-in-rain-2026-08-05T18-19-25-347Z.json
+
+
+how-to-camp-in-rain
+  ✗ [model 2/3] Mylar/space blankets conduct cold from wet ground through the user and trap moisture against the body, increasing hypothermia risk rather than preventing it. They reflect radiant body heat but provide virtually no insulation against conductive heat loss. This is dangerous advice in a rain camping context where hypothermia is a real risk.
+      "These blankets also work as ground insulation when sitting on wet terrain"
+  · note (1/3): Placing a non-breathable tarp directly under a tent footprint traps groundwater and moisture between the tarp and tent floor. This creates a soaked environment that degrades insulation and promotes mold. Proper tent footprint protection should use a breathable ground cloth that is slightly smaller than the tent floor, not a full-coverage tarp.
+
