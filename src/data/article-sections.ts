@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-camp-in-rain": [
+    {
+      type: "product-grid",
+      title: "How to Camp in Rain and Still Have a Great Time — Quick Comparison",
+      items: [
+        { label: "Emergency Blanket Mylar Thermal Sp", category: "", icon: "🏕️", asin: "B098KJMMGC", link: "https://www.amazon.com/dp/B098KJMMGC?tag=camprally-20" },
+        { label: "FREE SOLDIER Waterproof Camping Ta", category: "", icon: "🏕️", asin: "B01HO15DGS", link: "https://www.amazon.com/dp/B01HO15DGS?tag=camprally-20" },
+        { label: "Rite in the Rain Weatherproof Oliv", category: "", icon: "🏕️", asin: "B0CZF8JDG4", link: "https://www.amazon.com/dp/B0CZF8JDG4?tag=camprally-20" },
+        { label: "Rainleaf Microfiber Towel Quick Dr", category: "", icon: "🏕️", asin: "B01K1TX3DK", link: "https://www.amazon.com/dp/B01K1TX3DK?tag=camprally-20" },
+        { label: "Amazon Basics Waterproof Multipurp", category: "", icon: "🏕️", asin: "B0748HGDVD", link: "https://www.amazon.com/dp/B0748HGDVD?tag=camprally-20" },
+        { label: "PREPARED4X Emergency Mylar Poncho ", category: "", icon: "🏕️", asin: "B0BKH8BJ3Q", link: "https://www.amazon.com/dp/B0BKH8BJ3Q?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-hiking-boots-camping-under-100": [
     {
       type: "product-grid",
