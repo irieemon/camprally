@@ -36,6 +36,20 @@ export const metadata: Metadata = {
   ],
   other: {
     "p:domain_verify": "880d0f2204d93164f159ad9581eab664",
+    /* The commit this build came from, so a deploy can be verified from
+     * outside instead of inferred.
+     *
+     * scripts/verify-deploy.mjs used to check that the article URL returned 200
+     * and mentioned its own slug. For a brand new article that is real evidence
+     * — the page 404s until the deploy lands. For an UPDATE it proves nothing,
+     * because both were already true before the deploy: a price refresh, a
+     * catalog rebuild or a photo backfill would be reported "verified" against
+     * the previous build. That is most deploys.
+     *
+     * Vercel sets VERCEL_GIT_COMMIT_SHA at build time. Read in a server
+     * component it is baked into the static HTML, which makes the served page
+     * state which commit produced it. */
+    "build-commit": process.env.VERCEL_GIT_COMMIT_SHA ?? "local",
   },
 };
 
