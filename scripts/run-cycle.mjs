@@ -130,6 +130,18 @@ function finish(outcome, detail, code, { commit = true } = {}) {
     }
   }
 
+  /* Strip terminal colour codes before anything is recorded.
+   *
+   * `next build` writes ANSI escapes, and its output is captured verbatim into
+   * detail.message on a failed publish — so a receipt carried 32 of them, and
+   * they flowed on into blockers.md and out to Telegram, where they render as
+   * literal garbage around the one line that actually explains the failure.
+   * Colour is for a terminal; none of these three destinations is one. */
+  if (typeof detail.message === "string") {
+    // eslint-disable-next-line no-control-regex
+    detail = { ...detail, message: detail.message.replace(/\[[0-9;]*[A-Za-z]/g, "") };
+  }
+
   const receipt = {
     startedAt, finishedAt: new Date().toISOString(), outcome,
     ...(typeof priceClaims === "string" ? { priceClaims } : {}),
