@@ -75,6 +75,20 @@ export default function RootLayout({
                 transport_type: 'beacon'
               });
             }, true);
+
+            // Gumroad printables are the second revenue rail and the handler
+            // above only matches amazon.com, so without this every click
+            // through to the store is invisible in GA — and the weekly KPI
+            // report cannot tell which page sells a printable.
+            document.addEventListener('click', function (e) {
+              var a = e.target && e.target.closest ? e.target.closest('a[href*="gumroad.com"]') : null;
+              if (!a) return;
+              gtag('event', 'printable_click', {
+                printable: a.getAttribute('data-printable') || '(store)',
+                article_path: location.pathname,
+                transport_type: 'beacon'
+              });
+            }, true);
           `}
         </Script>
         {/*

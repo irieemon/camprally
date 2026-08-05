@@ -5,6 +5,7 @@ import { remark } from "remark";
 import html from "remark-html";
 import { articles } from "@/data/articles";
 import NewsletterForm from "@/components/NewsletterForm";
+import { PrintableSidebarCard } from "@/components/Printables";
 /* Badge and the Card family used to build the hero label and the sidebar
  * panels. Both are now plain markup — an eyebrow and border-topped blocks —
  * so the shadcn wrappers are no longer imported here. */
@@ -618,6 +619,10 @@ export default async function ArticlePage({ params }: Props) {
                 </ul>
               </div>
             )}
+
+            {/* Own-product slot, above the newsletter: a reader deep in a gear
+                guide is closer to buying than to subscribing. */}
+            <PrintableSidebarCard />
 
             <div className="border border-camp-stone bg-camp-bone p-5">
               <p className="eyebrow mb-3 text-camp-green">The dispatch</p>

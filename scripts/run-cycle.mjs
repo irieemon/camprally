@@ -106,8 +106,8 @@ function finish(outcome, detail, code) {
       // product-images.json rides along: the maintenance backfill runs before
       // the queue check, so a cycle that ends idle or blocked can still have
       // recovered photos worth keeping.
-      sh("git", ["add", "state/", "src/data/catalog.json", "src/data/product-images.json"]);
-      if (sh("git", ["status", "--porcelain", "state/", "src/data/catalog.json", "src/data/product-images.json"])) {
+      sh("git", ["add", "state/", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables"]);
+      if (sh("git", ["status", "--porcelain", "state/", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables"])) {
         sh("git", ["commit", "-m", `chore(heartbeat): ${outcome} — ${detail.reason ?? detail.slug ?? ""}`.trim()]);
         if (PUSH) sh("git", ["push", "origin", "HEAD"]);
       }
@@ -131,7 +131,7 @@ if (existsSync(PAUSE)) {
 // the price snapshot are all written by cycles (a --dry-run legitimately
 // leaves a spec behind) and are committed by the publish step anyway. Before
 // this exclusion, a dry-run wedged every real cycle that followed it.
-const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!src/data/product-images.json", ":!public/images/heroes"]);
+const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!src/data/product-images.json", ":!src/data/printables.json", ":!public/images/printables", ":!public/images/heroes"]);
 if (dirty) {
   finish("blocked", {
     reason: "working-tree-dirty",
@@ -187,6 +187,18 @@ try {
 
 // ── step 2d: retry any product photos an earlier cycle missed ─────────────
 backfillPhotos("maintenance");
+
+// ── step 2e: mirror the Gumroad printables ────────────────────────────────
+// Vercel builds from git and cannot see the sibling printables repo, so the
+// product list and cover art have to be committed here. Local-only and cheap;
+// a missing sibling repo is the normal state elsewhere and leaves the committed
+// copy alone. Never fatal — the site keeps showing whatever it last synced.
+try {
+  console.log(sh("node", ["scripts/sync-printables.mjs"]));
+} catch (err) {
+  console.log(err.stdout ?? "");
+  console.log("(printables sync failed — site keeps the last synced product list)");
+}
 
 // ── step 3: pick the next unpublished queue item ──────────────────────────
 const queueRaw = JSON.parse(readFileSync(`${ROOT}article-queue.json`, "utf8"));
@@ -295,7 +307,7 @@ if (pubCode !== EXIT.OK) {
 backfillPhotos("publish");
 
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
-sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json", "public/images/heroes", specPath]);
+sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables", "public/images/heroes", specPath]);
 sh("git", ["commit", "-m",
   `Publish ${next.slug}\n\n` +
   `Generated from specs/${next.slug}.json. All affiliate ASINs verified live\n` +

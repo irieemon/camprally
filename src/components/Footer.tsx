@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Mountain } from "lucide-react"
 import { populatedGroups } from "@/data/categories"
+import { storeUrl } from "@/components/Printables"
 
 export default function Footer() {
   const groups = populatedGroups()
@@ -26,7 +27,17 @@ export default function Footer() {
           <div>
             <p className="eyebrow mb-4 text-foreground">Shop</p>
             <ul className="space-y-2.5">
-              {groups.slice(0, 5).map((g) => (
+              <li>
+                <a
+                  href={storeUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="link-wipe text-meta font-medium text-camp-green transition-colors hover:text-camp-green"
+                >
+                  Printables store
+                </a>
+              </li>
+              {groups.slice(0, 4).map((g) => (
                 <li key={g.slug}>
                   <Link
                     href={`/blog?category=${g.slug}`}

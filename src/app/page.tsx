@@ -5,6 +5,7 @@ import { populatedGroups, groupCounts } from "@/data/categories";
 import { getHeroImage } from "@/data/heroes";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
+import { PrintablesSection } from "@/components/Printables";
 import {
   Tent, Flame, Compass, Map as MapIcon, Moon, Shirt, Armchair, ShieldPlus,
   BadgeCheck, Wallet, Sprout, ArrowRight,
@@ -198,6 +199,12 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* ── Printables ───────────────────────────────────────────────────── */}
+      {/* Placed after the editorial split and before the trust section: it
+          follows the strongest content moment on the page, and keeping it clear
+          of the newsletter avoids stacking two conversion asks back to back. */}
+      <PrintablesSection />
 
       {/* ── Promises ─────────────────────────────────────────────────────── */}
       <section className="mx-auto w-full max-w-6xl px-4 py-16 md:py-20">
