@@ -67,8 +67,49 @@ export function extractTitle(html) {
 }
 
 /**
+ * The product's main photograph, normalised to one rendering size.
+ *
+ * Anchored on the `landingImage` element rather than the first image-looking
+ * URL in the page: a product page carries dozens of media URLs (related items,
+ * brand banners, "customers also bought"), and the first match is frequently
+ * an entirely different product.
+ *
+ * Amazon serves the same photo at any size by swapping the token between the
+ * image id and the extension — `61620kFMmvL._AC_SL1500_.jpg` and
+ * `61620kFMmvL._AC_SX522_.jpg` are one image. Everything is normalised to
+ * SX522 so the catalog holds one canonical URL per product and build-catalog's
+ * duplicate-photo check compares like with like.
+ */
+export function extractImage(html) {
+  const tag = html.match(/<img[^>]*id="landingImage"[^>]*>/)?.[0] ?? "";
+
+  const candidate =
+    tag.match(/data-old-hires="(https:\/\/[^"]+)"/)?.[1] ||
+    // The dynamic set is JSON with HTML-escaped quotes; any entry works because
+    // they differ only in the size token we are about to discard.
+    tag.match(/data-a-dynamic-image="[^"]*?(https:\/\/m\.media-amazon\.com\/images\/I\/[^&"]+)/)?.[1] ||
+    // The ImageBlockATF payload lists the main image first.
+    html.match(/"hiRes":"(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/)?.[1] ||
+    html.match(/"large":"(https:\/\/m\.media-amazon\.com\/images\/I\/[^"]+)"/)?.[1] ||
+    "";
+
+  /* The element's plain `src` is deliberately NOT consulted. On a lazily
+   * hydrated page it holds a 1x1 transparent placeholder, and taking it
+   * silently assigned the same grey pixel to a Sawyer Squeeze and a LifeStraw
+   * — two products that then both lost their photo to the duplicate-image
+   * guard. The hi-res attributes are absent rather than fake when the page has
+   * not hydrated, so a miss is honest and the ASIN is simply retried. */
+
+  const id = candidate.split("/images/I/")[1]?.split("._")[0]?.replace(/\.(jpg|jpeg|png|gif)$/i, "");
+  // Placeholder greys and sprites are served from the same host; a real product
+  // image id is a long mixed-case token and never starts with a zero.
+  if (!id || id.length < 8 || id.startsWith("0")) return null;
+  return `https://m.media-amazon.com/images/I/${id}._AC_SX522_.jpg`;
+}
+
+/**
  * Classify a single ASIN.
- * @returns {{verdict:"LIVE"|"DEAD"|"UNKNOWN", title?:string, reason?:string}}
+ * @returns {{verdict:"LIVE"|"DEAD"|"UNKNOWN", title?:string, image?:string|null, reason?:string}}
  */
 export async function verifyAsin(asin, { retries = 3, baseDelayMs = 1500, timeoutSec = 25 } = {}) {
   let last = { verdict: "UNKNOWN", reason: "no attempt made" };
@@ -92,7 +133,9 @@ export async function verifyAsin(asin, { retries = 3, baseDelayMs = 1500, timeou
       last = { verdict: "UNKNOWN", reason: `no product title (HTTP ${res.status})` };
       continue;
     }
-    return { verdict: "LIVE", title };
+    // The photo rides along on a page we already paid for. A missing image is
+    // never a reason to downgrade the verdict — the title is what LIVE means.
+    return { verdict: "LIVE", title, image: extractImage(res.body) };
   }
   return last;
 }

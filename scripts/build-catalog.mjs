@@ -36,17 +36,38 @@ const images = JSON.parse(readFileSync(`${ROOT}src/data/product-images.json`, "u
  * priced (and billed) forever, and an Echo Dot sat in the catalog this way. */
 const referenced = referencedAsins(ROOT);
 
-/* One photo cannot be two products. The name-keyed map this replaced had the
- * Coleman Sundome's photo attached to a Klymit sleeping pad, so a grid of
- * "compared" products showed a tent where the pad should be. Refuse the image
- * rather than guess which ASIN owns it — an icon tile is honest, a photo of the
- * wrong product is not. */
+/* One photo cannot be two DIFFERENT products. The name-keyed map this replaced
+ * had the Coleman Sundome's photo attached to a Klymit sleeping pad, so a grid
+ * of "compared" products showed a tent where the pad should be. Refuse the
+ * image rather than guess which ASIN owns it — an icon tile is honest, a photo
+ * of the wrong product is not.
+ *
+ * Variants are the exception, and they are common enough to matter: Amazon
+ * lists "Amazon Basics Camping Chair" and "Amazon Basics Camping Chair Large,
+ * Mesh Back" under separate ASINs with one catalog photo, identical price and
+ * the same 17,165 ratings. Dropping both would blank two tiles to protect
+ * against a mix-up that did not happen.
+ *
+ * The titles decide it. One product's title being a prefix of the other's means
+ * the same product at a different size or colour; the tent/pad case shares no
+ * prefix at all and is still refused. */
+const norm = (s) => (s ?? "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+function sameProduct(a, b) {
+  const [x, y] = [norm(cache[a]?.title), norm(cache[b]?.title)].sort((p, q) => p.length - q.length);
+  // A bare brand name ("coleman") would prefix half the catalog, so require
+  // enough of a run to identify a specific product.
+  return x.length >= 12 && y.startsWith(x);
+}
+
 const seen = new Map();
 const contested = new Set();
 for (const [asin, url] of Object.entries(images)) {
-  if (seen.has(url)) {
+  const prior = seen.get(url);
+  if (prior && !sameProduct(asin, prior)) {
     contested.add(url);
-    console.warn(`  duplicate image: ${asin} and ${seen.get(url)} share a photo — dropping both`);
+    console.warn(`  duplicate image: ${asin} and ${prior} are different products sharing a photo — dropping both`);
+  } else if (prior) {
+    console.log(`  shared photo: ${asin} and ${prior} are variants of one product — keeping`);
   }
   seen.set(url, asin);
 }
