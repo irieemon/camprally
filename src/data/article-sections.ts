@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "camping-fire-starting-guide": [
+    {
+      type: "product-grid",
+      title: "Fire Starting for Campers — What Works, What Doesn't, What Burns — Quick Comparison",
+      items: [
+        { label: "Superior Trading Fire Starter Pods", category: "", icon: "🏕️", asin: "B00QJOC2RK", link: "https://www.amazon.com/dp/B00QJOC2RK?tag=camprally-20" },
+        { label: "Pocket Bellows - Weatherproof Coll", category: "", icon: "🏕️", asin: "B00LDSW5BA", link: "https://www.amazon.com/dp/B00LDSW5BA?tag=camprally-20" },
+        { label: "Fire Starter - 3/8\" Thick Ferro Ro", category: "", icon: "🏕️", asin: "B083RH93C6", link: "https://www.amazon.com/dp/B083RH93C6?tag=camprally-20" },
+        { label: "Duraflame Fire Starter Bundle – Fi", category: "", icon: "🏕️", asin: "B07VH7MWZM", link: "https://www.amazon.com/dp/B07VH7MWZM?tag=camprally-20" },
+        { label: "Procamptek Fast Fire Stick - Survi", category: "", icon: "🏕️", asin: "B07MP4DS32", link: "https://www.amazon.com/dp/B07MP4DS32?tag=camprally-20" },
+        { label: "2lb Fatwood Fire Starter Sticks | ", category: "", icon: "🏕️", asin: "B09C2L8LD7", link: "https://www.amazon.com/dp/B09C2L8LD7?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-camp-in-rain": [
     {
       type: "product-grid",

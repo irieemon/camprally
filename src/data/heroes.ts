@@ -71,6 +71,7 @@ export const HERO_IMAGES: Record<string, string> = {
    * automatically; the Unsplash URLs above are the pre-generator backlog. */
 
   "how-to-camp-in-rain": "/images/heroes/how-to-camp-in-rain.jpg",
+  "camping-fire-starting-guide": "/images/heroes/camping-fire-starting-guide.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
