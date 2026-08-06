@@ -1,6 +1,17 @@
 {
   "version": 1,
   "entries": {
+    "1497102936": {
+      "verdict": "LIVE",
+      "title": "Weekend Camping Cookbook: Over 100 Delicious Recipes for Campfire and Grilling (Fox Chapel Publishing) Make-Ahead Meals for Outdoor Adventures - Cast Iron Nachos, Bacon S'Mores, Foil Packs, and More",
+      "checkedAt": "2026-08-06T18:00:24.080Z",
+      "price": "$10.24",
+      "priceValue": 10.24,
+      "rating": 4.6,
+      "ratingsTotal": 317,
+      "priceCheckedAt": "2026-08-06T18:00:24.080Z",
+      "priceSource": "canopy-search"
+    },
     "1885464851": {
       "verdict": "LIVE",
       "title": "National Forest Camping: Directory of 4,108 Designated Camping Areas at 141 Forests in 42 States",
@@ -1093,6 +1104,61 @@
       "rating": 4.5,
       "ratingsTotal": 2559,
       "priceCheckedAt": "2026-08-06T13:45:58.126Z",
+      "priceSource": "canopy-search"
+    },
+    "B00ABW9BUC": {
+      "verdict": "LIVE",
+      "title": "The Backpacking Kit - 18Ct Premium Lightweight Meals in 1 Cup Resealable Pouches by Harmony House Foods, Single Set White",
+      "checkedAt": "2026-08-06T18:00:24.080Z",
+      "price": "$64.95",
+      "priceValue": 64.95,
+      "rating": 4.7,
+      "ratingsTotal": 326,
+      "priceCheckedAt": "2026-08-06T18:00:24.080Z",
+      "priceSource": "canopy-search"
+    },
+    "B07BRBB75X": {
+      "verdict": "LIVE",
+      "title": "Peak Refuel Sweet Pork and Rice Freeze-Dried Meal, 40g Protein, 2 Servings | 40g protein, 100% real pork, non-GMO ingredients, no fillers, freeze-dried, just add water, 2 servings, ready in 10 minutes",
+      "checkedAt": "2026-08-06T18:00:24.080Z",
+      "price": "$13.95",
+      "priceValue": 13.95,
+      "rating": 4.6,
+      "ratingsTotal": 1169,
+      "priceCheckedAt": "2026-08-06T18:00:24.080Z",
+      "priceSource": "canopy-search"
+    },
+    "B084GVLG9B": {
+      "verdict": "LIVE",
+      "title": "Mountain House Emergency Meal Assortment Kits, Freeze-Dried Survival Food Kit for Disaster Preparedness & Long-Term Storage, 30-Year Shelf Life",
+      "checkedAt": "2026-08-06T18:00:24.080Z",
+      "price": "$68.99",
+      "priceValue": 68.99,
+      "rating": 4.6,
+      "ratingsTotal": 833,
+      "priceCheckedAt": "2026-08-06T18:00:24.080Z",
+      "priceSource": "canopy-search"
+    },
+    "B084BTW6LT": {
+      "verdict": "LIVE",
+      "title": "Mountain House Beef Lasagna & Freeze-Dried Food for Camping, 9 Servings, 30-Year Shelf-Life",
+      "checkedAt": "2026-08-06T18:00:24.080Z",
+      "price": "$49.39",
+      "priceValue": 49.39,
+      "rating": 4.6,
+      "ratingsTotal": 561,
+      "priceCheckedAt": "2026-08-06T18:00:24.080Z",
+      "priceSource": "canopy-search"
+    },
+    "B08C9JZYPG": {
+      "verdict": "LIVE",
+      "title": "ReadyWise 7 Day Emergency Food Supply – 60 Servings Grab Bag, Camping Essentials, Freeze Dried Survival Food Kit & Dehydrated Meals, Prepper Bug Out Bag & Hurricane Supplies, up to 25 Year Shelf Life",
+      "checkedAt": "2026-08-06T18:00:24.080Z",
+      "price": "$55.99",
+      "priceValue": 55.99,
+      "rating": 4.6,
+      "ratingsTotal": 265,
+      "priceCheckedAt": "2026-08-06T18:00:24.080Z",
       "priceSource": "canopy-search"
     }
   }

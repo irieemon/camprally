@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "camping-trip-planner",
+      "title": "Complete Camping Trip Planner",
+      "subtitle": "Turn scattered notes and worry into one organized binder that covers every trip from first idea to final campfire story.",
+      "price": "$7",
+      "priceCents": 700,
+      "pages": 9,
+      "url": "https://camprally.gumroad.com/l/camping-trip-planner",
+      "image": "/images/printables/camping-trip-planner.jpg"
+    },
+    {
       "slug": "camping-meal-planner",
       "title": "Camping Meal Planner & Grocery List Bundle",
       "subtitle": "Plan every bite before you go, so camp cooking feels effortless from day one to day seven.",
