@@ -137,20 +137,33 @@ export default function RootLayout({
                 transport_type: 'beacon'
               });
             }, true);
+
+            // Printify merch is the third rail. data-merch carries
+            // "<design>:<kind>", so this answers which PAINTING sells and on
+            // which product — the two questions a design queue is planned
+            // from. Links without the attribute are the "Visit the store"
+            // buttons, which are still worth counting as store intent.
+            document.addEventListener('click', function (e) {
+              var a = e.target && e.target.closest ? e.target.closest('a[href*="printify.me"]') : null;
+              if (!a) return;
+              var tag = (a.getAttribute('data-merch') || '').split(':');
+              gtag('event', 'merch_click', {
+                design: tag[0] || '(store)',
+                product: tag[1] || '(store)',
+                article_path: location.pathname,
+                transport_type: 'beacon'
+              });
+            }, true);
           `}
         </Script>
         {/*
-          AvantLink affiliate application verification. Added 2026-04 and marked
-          "delete after approval" — still here months later, so approval status
-          is unconfirmed. Loaded via next/script rather than a raw tag so it no
-          longer blocks first render on every page; verification still works
-          because the script is present in the DOM either way.
+          The AvantLink application-verification script lived here from 2026-04,
+          marked "delete after approval". Removed 2026-08-06: it had been
+          failing with ERR_BLOCKED_BY_ORB on every page load, so it was a dead
+          request on every view and could not have been verifying anything. If
+          AvantLink is ever applied for again, re-add it, confirm approval, and
+          delete it the same week rather than leaving it to rot.
         */}
-        <Script
-          id="avantlink-verify"
-          src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=20d071dee7649107b0746ce9716f6da2575dd4de"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

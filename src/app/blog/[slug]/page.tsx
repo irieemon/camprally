@@ -551,7 +551,6 @@ export default async function ArticlePage({ params }: Props) {
     <div>
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero. Full-bleed rather than an inset rounded panel — the edge-to-edge
