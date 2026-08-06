@@ -7,7 +7,8 @@
  *
  * Sources, all readable without a human: Pinterest API (account + analytics
  * where the plan allows), Beehiiv API (subscribers), the repo itself
- * (articles published, cycle receipts), and the live site (health probe).
+ * (articles published, cycle receipts), the live site (health probe), Gumroad
+ * (printables sales) and Printify (merch catalogue + orders).
  * Amazon Associates earnings have no API at zero sales — that number stays
  * manual until the Creators API threshold (10 sales/30d) is reached.
  */
@@ -97,6 +98,55 @@ async function printables() {
   return out;
 }
 
+/**
+ * Third rail: Printify merch.
+ *
+ * NOTE THE STATE SHAPES DIFFER FROM THE PRINTABLES RAIL and copying that
+ * reader verbatim reports a confident zero. Printables keep `{posted: [{at}]}`;
+ * merch keeps `{pins: {"<design>:<kind>": {lastPinnedAt}}}` — an object, not an
+ * array, with a different timestamp key. Likewise the merch ledger nests
+ * products inside each design rather than listing them flat.
+ */
+async function merch() {
+  const out = { productsLive: 0, designsLive: 0, pins7d: 0, orders7d: null, revenue7dCents: null };
+  // Overridable for the same reason sync-merch.mjs allows it: so the
+  // missing-sibling-repo path can be exercised rather than assumed.
+  const ROOT_M = process.env.MERCH_REPO ?? `${homedir()}/camprally-merch`;
+  try {
+    const designs = Object.values(JSON.parse(readFileSync(`${ROOT_M}/state/designs.json`, "utf8")).designs ?? {});
+    for (const d of designs) {
+      const live = Object.values(d.products ?? {}).filter((p) => p.status === "published" && p.url);
+      if (live.length) out.designsLive += 1;
+      out.productsLive += live.length;
+    }
+  } catch { /* engine may not have run on this machine */ }
+  try {
+    const pins = Object.values(JSON.parse(readFileSync(`${ROOT_M}/state/pins-posted.json`, "utf8")).pins ?? {});
+    out.pins7d = pins.filter((p) => Date.parse(p.lastPinnedAt) > weekAgo).length;
+  } catch { /* no merch pins yet */ }
+  try {
+    if (vars.PRINTIFY_ACCESS_TOKEN) {
+      const shops = await (await fetch("https://api.printify.com/v1/shops.json", {
+        headers: { Authorization: `Bearer ${vars.PRINTIFY_ACCESS_TOKEN}` } })).json();
+      const shopId = process.env.PRINTIFY_SHOP_ID ?? shops?.[0]?.id;
+      if (shopId) {
+        const res = await fetch(`https://api.printify.com/v1/shops/${shopId}/orders.json?limit=50`, {
+          headers: { Authorization: `Bearer ${vars.PRINTIFY_ACCESS_TOKEN}` } });
+        if (res.ok) {
+          const orders = (await res.json()).data ?? [];
+          /* Printify stamps created_at as "YYYY-MM-DD HH:MM:SS+00:00" — a space
+           * where ISO wants a T. V8 happens to parse it, but normalising costs
+           * nothing and an unparsed date would silently drop every order. */
+          const recent = orders.filter((o) => Date.parse(String(o.created_at ?? "").replace(" ", "T")) > weekAgo);
+          out.orders7d = recent.length;
+          out.revenue7dCents = recent.reduce((n, o) => n + (o.total_price ?? 0), 0);
+        }
+      }
+    }
+  } catch { /* leave null — null reads as "not measured", 0 as "measured, none" */ }
+  return out;
+}
+
 async function site() {
   try {
     const res = await fetch("https://www.camprally.co", { redirect: "follow", signal: AbortSignal.timeout(15000) });
@@ -104,7 +154,9 @@ async function site() {
   } catch { return { up: false }; }
 }
 
-const [pin, news, rep, live, prod] = [await pinterest(), await beehiiv(), repo(), await site(), await printables()];
+const [pin, news, rep, live, prod, mer] = [
+  await pinterest(), await beehiiv(), repo(), await site(), await printables(), await merch(),
+];
 
 const entry = {
   weekEnding: day(now),
@@ -122,6 +174,11 @@ const entry = {
   printables_pins_7d: prod.pins7d,
   gumroad_sales_7d: prod.sales7d,
   gumroad_revenue_7d_cents: prod.revenue7dCents,
+  merch_designs_live: mer.designsLive,
+  merch_products_live: mer.productsLive,
+  merch_pins_7d: mer.pins7d,
+  printify_orders_7d: mer.orders7d,
+  printify_revenue_7d_cents: mer.revenue7dCents,
 };
 
 try {
@@ -147,6 +204,11 @@ console.log(
     prod.sales7d === null
       ? `gumroad: no token yet (products queue until GUMROAD_ACCESS_TOKEN lands)`
       : `gumroad 7d: ${prod.sales7d} sales · $${((prod.revenue7dCents ?? 0) / 100).toFixed(2)}`,
+    `merch: ${mer.productsLive} products live across ${mer.designsLive} designs · ${mer.pins7d} pins 7d`,
+    mer.orders7d === null
+      ? `printify: orders unreadable (no PRINTIFY_ACCESS_TOKEN, or API error)`
+      : `printify 7d: ${mer.orders7d} orders · $${((mer.revenue7dCents ?? 0) / 100).toFixed(2)}`,
+    `merch clicks: GA4 merch_click, split by design + product`,
     `amazon: check Associates + GA4 affiliate_click events (no API until 10 sales/30d)`,
   ].join("\n"),
 );
