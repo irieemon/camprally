@@ -2098,5 +2098,149 @@
         "ratingsTotal": 80
       }
     ]
+  },
+  "camping power station|1|200": {
+    "term": "camping power station",
+    "min": 1,
+    "max": 200,
+    "fetchedAt": "2026-08-06T23:00:04.847Z",
+    "results": [
+      {
+        "asin": "B0GHQCKZBN",
+        "title": "Portable Power Station 330W, 288.6Wh Solar Generator for Outdoor Home | With 60W USB-C PD Output, 120V Pure Sine Wave AC Outlet, 5W Wireless Charging, 330W Backup Lithium Battery Camping Travel",
+        "price": "$129.99",
+        "priceValue": 129.99,
+        "rating": 4.5,
+        "ratingsTotal": 139
+      },
+      {
+        "asin": "B09FF46FQ9",
+        "title": "Anker 521 Portable Power Station Upgraded with LiFePO4 Battery, 256Wh 6-Port PowerHouse, 300W (Peak 600W) Solar Generator (Solar Panel Optional), 2 AC Outlets, 60W USB-C PD Output, Outdoor Generator | 6-Port System, 2 AC Outlets, 60W USB-C PD, Solar Panel-Ready, for Outdoor and Emergency Use, UPS",
+        "price": "$199.99",
+        "priceValue": 199.99,
+        "rating": 4.4,
+        "ratingsTotal": 3122
+      },
+      {
+        "asin": "B08CXN4TZR",
+        "title": "ALLWEI Portable Power Station 300W, 256Wh Solar Generator LiFePO4 Battery | Pure Sine Wave AC Outlet, PD 60W Fast Charging, MPPT & BMS Protection, Compact for Camping Outdoor Home Backup Emergency CPAP",
+        "price": "$128.99",
+        "priceValue": 128.99,
+        "rating": 4.4,
+        "ratingsTotal": 2403
+      },
+      {
+        "asin": "B0DCJX9D71",
+        "title": "VTOMAN FlashSpeed 300 Portable Power Station, 300W 230Wh LiFePO4 Battery | 3000 Life Cycles, 600W peak, 100W PD USB-C, Fast Charge, 6 Outputs, Outdoor Camping, Home Backup, RV, Off-Grid",
+        "price": "$139.99",
+        "priceValue": 139.99,
+        "rating": 4.4,
+        "ratingsTotal": 521
+      },
+      {
+        "asin": "B0C6K5ZPNJ",
+        "title": "DaranEner Portable Power Station, 192Wh LiFePO4 Battery Backup Solar Generator with w/2 300W (Peak 600W) AC Outlets, USB-C PD 60W Fast Charge, Power Bank for Camping, Outdoor, Home,Emergency",
+        "price": "$95.98",
+        "priceValue": 95.98,
+        "rating": 4.4,
+        "ratingsTotal": 370
+      },
+      {
+        "asin": "B0DPFL1CH3",
+        "title": "EBL Portable Power Station 500w(Peak 1000W), Camping Solar 519.48Wh Outdoor | Solar Generator Backup Battery Pack with 2x120V AC Outlets, 10-Port Powerhouse for Outdoor and Indoor Emergency Use",
+        "price": "$179.99",
+        "priceValue": 179.99,
+        "rating": 4.3,
+        "ratingsTotal": 304
+      },
+      {
+        "asin": "B0DWDY4SGV",
+        "title": "HOWEASY Portable Power Station,135W(270W Peak) Solar Generator | Power Bank with AC Outlet and 65W PD Output,98Wh Lithium Battery Backup with LED Light for Camping, Backup Outdoor Emergency",
+        "price": "$70.99",
+        "priceValue": 70.99,
+        "rating": 4.3,
+        "ratingsTotal": 269
+      },
+      {
+        "asin": "B0F3CXVQ6J",
+        "title": "Bailibatt Portable Power Station 300W, 257Wh, 4.6lbs Solar Generator | Pure Sine Wave AC Outlet for Laptop. Backup Battery for Camping, Travel, Emergency, Home, RV, Outdoor, Hunting",
+        "price": "$109.98",
+        "priceValue": 109.98,
+        "rating": 4.3,
+        "ratingsTotal": 236
+      },
+      {
+        "asin": "B0DKFR196Q",
+        "title": "Portable Power Station 192Wh Outdoor Generator with AC Outlet 100W(200W Surge) Power Bank for Home Backup Outdoor Emergency RV Van Hunting, 3.9lb, Music Player&LED Lights LiFePO4 Battery",
+        "price": "$77.14",
+        "priceValue": 77.14,
+        "rating": 4.3,
+        "ratingsTotal": 109
+      },
+      {
+        "asin": "B08G1KB88B",
+        "title": "MARBERO Portable Power Station 88Wh, 120W Surge, Solar Generator 24,000mAh | Power Bank with AC Outlet 110V Portable Generator, 8 Output Ports for Camping Home Backup Outdoor Emergency Hunting Fishing",
+        "price": "$71.99",
+        "priceValue": 71.99,
+        "rating": 4.2,
+        "ratingsTotal": 8898
+      },
+      {
+        "asin": "B0DFLZWKD8",
+        "title": "MARBERO 111Wh Solar Generator with Panels Included Solar Panel Kit 30W | Solar Powered Generator 120W Surge Portable Power Station with 8 Output Ports for Home Outages Camping Outdoor Emergency RV",
+        "price": "$99.98",
+        "priceValue": 99.98,
+        "rating": 4.2,
+        "ratingsTotal": 8898
+      },
+      {
+        "asin": "B0CHFM3V8Q",
+        "title": "Portable Solar Generator 300W Portable Power Station with 60W Solar Panel | 110V Pure Sine Wave 280Wh Battery Solar Power Pack with USB QC3.0 DC AC Outlet for Camping Smart Device RV Van Outdoor-Orange",
+        "price": "$189.96",
+        "priceValue": 189.96,
+        "rating": 4.2,
+        "ratingsTotal": 1895
+      },
+      {
+        "asin": "B0FJD7LCY4",
+        "title": "EnginStar Portable Power Station 300W 296Wh Battery Bank with 110V Pure Sine Wave AC Outlet for Outdoors Camping Hunting and Emergency, 80000mAh Backup Battery Power Supply for CPAP",
+        "price": "$138.69",
+        "priceValue": 138.69,
+        "rating": 4.2,
+        "ratingsTotal": 1747
+      },
+      {
+        "asin": "B09SHB84J2",
+        "title": "EnginStar Solar Generator, 300W Portable Power Station, 296Wh Lithium Battery Backup w/Two 110V Pure Sine Wave AC Outlet for Camping Road Trip RV, 80000mAh Sufficient Power Supply for Blackout",
+        "price": "$132.99",
+        "priceValue": 132.99,
+        "rating": 4.2,
+        "ratingsTotal": 1747
+      },
+      {
+        "asin": "B0GJBLLRDW",
+        "title": "Portable Power Station 300W, 600W Peak Solar Generator 192Wh | 1Hr Fast Charge, LiFePO4 Battery, 10ms UPS, 120V AC Outlet Solar Power Bank for Camping Emergency Travel Home Blackout",
+        "price": "$99.98",
+        "priceValue": 99.98,
+        "rating": 4.1,
+        "ratingsTotal": 103
+      },
+      {
+        "asin": "B0F247MPFL",
+        "title": "DARAN Portable Power Station 600W(1200W Surge) - 288Wh Solar Generator LiFePO4 Battery with AC DC Outlets, 8.3LB Portable Charging Station for Camping, RV, Home, Emergency (Solar Optional)",
+        "price": "$189.99",
+        "priceValue": 189.99,
+        "rating": 4,
+        "ratingsTotal": 125
+      },
+      {
+        "asin": "B0FSZ83QQG",
+        "title": "Portable Power Station 600W (1200W Surge),299Wh 6.8 lbs,140W USB-C | Small Lightweight Portable Power for Camping , Battery Backup Safe for Indoor Blackouts, 2 AC Outlet, Fast Charging",
+        "price": "$169.97",
+        "priceValue": 169.97,
+        "rating": 4,
+        "ratingsTotal": 87
+      }
+    ]
   }
 }
