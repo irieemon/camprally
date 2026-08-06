@@ -26,7 +26,16 @@ const ROOT = new URL("..", import.meta.url).pathname;
 const JSON_OUT = process.argv.includes("--json");
 /* Odd, so a majority always exists. Raise it and the audit gets more stable and
  * proportionally slower; the votes run in parallel so wall-clock barely moves,
- * but the token spend is linear. */
+ * but the token spend is linear.
+ *
+ * IT SHARES A QUOTA WITH THE SAFETY GATE. A full sweep is ~110 pairs and spends
+ * one Gemini call on each, and the first hardened run exhausted the free tier —
+ * which then degraded the content review to a MiniMax-only panel, the exact
+ * single-vendor condition that let a cold-weather sleeping bag through a
+ * hot-weather guide. Run a full sweep well clear of a publish window (09:00,
+ * 14:00, 19:00 ET), or drop AUDIT_VOTES to 1 to sample cheaply. The report says
+ * outright how many pairs lost cross-provider corroboration, so a degraded run
+ * is visible rather than merely quieter. */
 const VOTES = Number(process.env.AUDIT_VOTES ?? 3);
 
 const catalog = JSON.parse(readFileSync(`${ROOT}src/data/catalog.json`, "utf8")).products ?? {};

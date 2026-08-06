@@ -27,12 +27,9 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "product-grid",
       title: "7 Days of Budget Camping Meals — $50 Total Food Budget — Quick Comparison",
       items: [
-        { label: "The Backpacking Kit - 18Ct Premium", category: "", icon: "🏕️", asin: "B00ABW9BUC", link: "https://www.amazon.com/dp/B00ABW9BUC?tag=camprally-20" },
         { label: "Peak Refuel Sweet Pork and Rice Fr", category: "", icon: "🏕️", asin: "B07BRBB75X", link: "https://www.amazon.com/dp/B07BRBB75X?tag=camprally-20" },
-        { label: "Mountain House Emergency Meal Asso", category: "", icon: "🏕️", asin: "B084GVLG9B", link: "https://www.amazon.com/dp/B084GVLG9B?tag=camprally-20" },
         { label: "Mountain House Beef Lasagna & Free", category: "", icon: "🏕️", asin: "B084BTW6LT", link: "https://www.amazon.com/dp/B084BTW6LT?tag=camprally-20" },
         { label: "Weekend Camping Cookbook: Over 100", category: "", icon: "🏕️", asin: "1497102936", link: "https://www.amazon.com/dp/1497102936?tag=camprally-20" },
-        { label: "ReadyWise 7 Day Emergency Food Sup", category: "", icon: "🏕️", asin: "B08C9JZYPG", link: "https://www.amazon.com/dp/B08C9JZYPG?tag=camprally-20" },
       ]
     },
   ],

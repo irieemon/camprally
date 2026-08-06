@@ -1847,29 +1847,17 @@ This is a sample breakdown built around a car camper with a cooler, a single bur
 - Dinners (7 servings): Two boxes of pasta, two pouches of instant rice, instant mashed potatoes, a few foil-pack friendly vegetables, and one or two just-add-water entrées for the roughest evenings.
 - Drinks and extras: A big jar of instant coffee, tea bags, a few flavor packets, salt and pepper, oil for the skillet, and a small bottle of your favorite hot sauce.
 
-## Pick 1: A Lightweight Pantry Starter
-
-If you want a head start on the shelf-stable side of the plan, the **[Check the Backpacking Kit on Amazon](https://www.amazon.com/dp/B00ABW9BUC?tag=camprally-20)** delivers eighteen resealable pouches of dehydrated vegetables, legumes, and grains in single-cup portions. The single-serving pouches keep portioning simple, which matters when you are tired, hungry, and trying not to spill. Toss a few into a pot with boiling water and you have a base for soup, rice bowls, or a quick side dish. It is the kind of bulk pantry that quietly does a lot of work across a week.
-
-## Pick 2: A Real Dinner After a Long Day
+## Pick 1: A Real Dinner After a Long Day
 
 For the night you roll into camp soaked, sore, and not in the mood to cook, a freeze-dried entrée earns its weight. The **[Check the Peak Refuel Sweet Pork and Rice on Amazon](https://www.amazon.com/dp/B07BRBB75X?tag=camprally-20)** is portioned for two, which means one pouch can feed a pair of hungry campers or stretch across dinner and a leftover lunch. The two-serving size also keeps the cost per meal lower than many single-serve options. Just boil water, pour it in, seal the pouch, and wait about ten minutes. Sweet pork and rice lands well with picky eaters and feels like comfort food when the temperature drops.
 
-## Pick 3: Insurance for Power Outages and Surprise Weather
-
-Sometimes the budget gets squeezed by a storm that keeps you an extra day at camp, or a road closure that adds miles to the drive home. A small emergency kit doubles as a smart camping backup. The **[Check the Mountain House Emergency Meal Assortment on Amazon](https://www.amazon.com/dp/B084GVLG9B?tag=camprally-20)** is built around long-term storage, which means the food stays shelf-stable between trips. It is heavier than what you want to carry on a backpacking trip, but for car camping, base camp, or keeping in the garage between seasons, it is a no-brainer safety net.
-
-## Pick 4: A Crowd-Pleaser for the Group Site
+## Pick 2: A Crowd-Pleaser for the Group Site
 
 If you camp with family or friends, lasagna is the universal peacekeeper. The **[Check the Mountain House Beef Lasagna on Amazon](https://www.amazon.com/dp/B084BTW6LT?tag=camprally-20)** covers nine generous servings, which makes it a smart buy the moment you have more than two people at the table. Each pouch just needs hot water, and the result is closer to a real pasta bake than to a typical freeze-dried mush. The bulk format drives down the per-serving cost and removes the headache of cooking for a crowd over a single burner.
 
-## Pick 5: A Recipe Book for When You Have a Grill or Campfire
+## Pick 3: A Recipe Book for When You Have a Grill or Campfire
 
 A fifty-dollar week leaves room for a paperback, especially one that helps you turn cheap staples into meals you actually want to eat. The **[Check the Weekend Camping Cookbook on Amazon](https://www.amazon.com/dp/1497102936?tag=camprally-20)** leans into foil packs, cast-iron skillets, and grill-friendly recipes that work with the groceries already in your cooler. Cast iron nachos, foil-pack fish, and bacon s'mores all use ingredients that cost pennies per serving. The book is also a great way to involve kids, since many of the recipes are more about assembly than knife skills.
-
-## Pick 6: A One-Week Backup in a Single Box
-
-For campers who also want to be ready for hurricanes, snowstorms, or that one summer when the power grid gets cranky, a grab-bag supply covers breakfast, lunch, and dinner in one purchase. The **[Check the ReadyWise 7 Day Emergency Food Supply on Amazon](https://www.amazon.com/dp/B08C9JZYPG?tag=camprally-20)** packs sixty servings into a grab-and-go format that fits in a closet or garage. Treat it as both camping food and household insurance. Rotate the pouches into your trip planning each season and the shelf-life promise does not go to waste.
 
 ## A Sample 7-Day Meal Plan on $50
 
@@ -1888,7 +1876,7 @@ Here is how the pieces come together. Adjust portions and brands to fit your cre
 **Day 3**
 - Breakfast: Grits with cheese and hot sauce.
 - Lunch: Tortilla with refried beans and cheese.
-- Dinner: Rice with a pouch of dehydrated vegetables from the Backpacking Kit.
+- Dinner: Rice with a pouch of dehydrated vegetables and a spoonful of peanut butter stirred through.
 
 **Day 4**
 - Breakfast: Oatmeal with dried fruit and coffee.
@@ -1912,7 +1900,7 @@ Here is how the pieces come together. Adjust portions and brands to fit your cre
 
 ## Verdict
 
-A seven-day camping trip on fifty dollars of food is not about surviving on deprivation meals. It is about combining cheap staples, a couple of smart specialty items, and a little campfire creativity. Stock oats, pasta, rice, tortillas, peanut butter, tuna, and cheese for the backbone, then add one or two freeze-dried entrées for the roughest evenings. Round it out with a recipe book and a small emergency supply for the moments when plans change. Spend a few minutes planning before you leave, label your bins by meal, and the week takes care of itself.
+A seven-day camping trip on fifty dollars of food is not about surviving on deprivation meals. It is about combining cheap staples, a couple of smart specialty items, and a little campfire creativity. Stock oats, pasta, rice, tortillas, peanut butter, tuna, and cheese for the backbone, then add one or two freeze-dried entrées for the roughest evenings. Round it out with a recipe book for the evenings you feel like cooking properly. Spend a few minutes planning before you leave, label your bins by meal, and the week takes care of itself.
 
 *More from CampRally: [budget backpacking food picks](/blog/budget-backpacking-food-picks), [best single-burner camping stoves](/blog/best-single-burner-camping-stoves), and [cast iron campfire recipes for beginners](/blog/cast-iron-campfire-recipes).*
     `
