@@ -45,7 +45,12 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const MODELS = {
   minimaxWriter: process.env.MINIMAX_MODEL ?? "MiniMax-M3",
   minimaxAlt: process.env.MINIMAX_ALT_MODEL ?? "MiniMax-M2.7",
-  gemini: process.env.GEMINI_MODEL ?? "gemini-2.5-flash",
+  /* Pinned to an explicit version rather than the `gemini-flash-latest` alias.
+   * An alias that silently upgrades underneath a safety gate changes what the
+   * gate does without a commit, and "the reviewer got stricter last Tuesday"
+   * is not something the receipts could ever explain. Preview ids are avoided
+   * for the same reason in reverse: they get withdrawn. */
+  gemini: process.env.GEMINI_MODEL ?? "gemini-3.6-flash",
   ollama: process.env.OLLAMA_MODEL ?? "llama3.2:3b",
 };
 
@@ -172,7 +177,17 @@ const ADAPTERS = {
       contents: [{ role: "user", parts: [{ text: user }] }],
       generationConfig: { maxOutputTokens: maxTokens, temperature: 1 },
     }),
-    text: (d) => (d.candidates?.[0]?.content?.parts ?? []).map((p) => p.text ?? "").join(""),
+    /* Skip reasoning parts. Gemini 3.x thinks by default — a trivial probe spent
+     * 152 of its 172 tokens on thought — and when thoughts are surfaced they
+     * arrive as parts carrying `thought: true` alongside their own text. Folding
+     * those into the answer would put the model's deliberation in front of the
+     * JSON extractor, which reads the FIRST brace it finds: a reviewer musing
+     * "{"issues":[...]} would be the shape here" before deciding the article is
+     * clean would be parsed as its verdict. */
+    text: (d) => (d.candidates?.[0]?.content?.parts ?? [])
+      .filter((p) => p.thought !== true)
+      .map((p) => p.text ?? "")
+      .join(""),
     // MAX_TOKENS and SAFETY both yield no parts; naming which one matters,
     // because the second means the reviewer refused rather than ran out.
     why: (d) => `finishReason=${d.candidates?.[0]?.finishReason}, block=${d.promptFeedback?.blockReason}`,
