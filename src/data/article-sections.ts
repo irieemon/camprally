@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "dispersed-camping-beginners-guide": [
+    {
+      type: "product-grid",
+      title: "Dispersed Camping for Beginners — How to Camp Free on Public Land — Quick Comparison",
+      items: [
+        { label: "FLY2SKY Portable LED Gear Camping ", category: "", icon: "🏕️", asin: "B07MKBKN4H", link: "https://www.amazon.com/dp/B07MKBKN4H?tag=camprally-20" },
+        { label: "Lepro LED Camping Lantern with 3 L", category: "", icon: "🏕️", asin: "B083TXB5QY", link: "https://www.amazon.com/dp/B083TXB5QY?tag=camprally-20" },
+        { label: "Eveready LED Camping Lantern X-250", category: "", icon: "🏕️", asin: "B0CW4QLRPQ", link: "https://www.amazon.com/dp/B0CW4QLRPQ?tag=camprally-20" },
+        { label: "National Forest Camping: Directory", category: "", icon: "🏕️", asin: "1885464851", link: "https://www.amazon.com/dp/1885464851?tag=camprally-20" },
+        { label: "4-Pack Solar Camping Lanterns", category: "", icon: "🏕️", asin: "B0DYV7KX92", link: "https://www.amazon.com/dp/B0DYV7KX92?tag=camprally-20" },
+        { label: "Fire-Maple Fixed Star 1 Backpackin", category: "", icon: "🏕️", asin: "B07F2VP353", link: "https://www.amazon.com/dp/B07F2VP353?tag=camprally-20" },
+      ]
+    },
+  ],
   "camping-fire-starting-guide": [
     {
       type: "product-grid",
