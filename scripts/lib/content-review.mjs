@@ -21,7 +21,7 @@
  *   deterministic layer is still standing.
  */
 
-import { generateJSON } from "./minimax.mjs";
+import { panel } from "./llm.mjs";
 
 /**
  * The spec as reviewable units of text.
@@ -170,17 +170,14 @@ export function hazardFlags(spec) {
 }
 
 /**
- * Model review for the errors rules cannot enumerate.
+ * The review question, asked identically of every model on the panel.
  *
  * Deliberately narrow. A reviewer that reported style opinions would make the
  * generation loop unsatisfiable, so it is asked for outright errors only.
- *
- * Returns null when the model could not be reached, which callers must treat
- * as "not reviewed" rather than "clean".
  */
-async function reviewOnce(spec) {
+function reviewPrompt(spec) {
   const body = typeof spec.body === "string" ? spec.body : "";
-  const out = await generateJSON({
+  return {
     system: [
       "You are checking a camping article before it is published. Report only OUTRIGHT ERRORS.",
       "",
@@ -202,11 +199,13 @@ async function reviewOnce(spec) {
       // nothing at all — indistinguishable from a clean review.
       body: body.slice(0, 12000),
     }, null, 1),
-  });
+  };
+}
 
-  if (!out) return null;
+/** One model's reply, as a list of issues. */
+function issuesFrom(out) {
   // Asked for {"issues":[…]}, the model returns a bare [] when it finds nothing.
-  const issues = Array.isArray(out) ? out : Array.isArray(out.issues) ? out.issues : [];
+  const issues = Array.isArray(out) ? out : Array.isArray(out?.issues) ? out.issues : [];
   return issues.filter((i) => i?.quote);
 }
 
@@ -214,7 +213,7 @@ async function reviewOnce(spec) {
 const quoteKey = (q) => String(q).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 120);
 
 /**
- * Review by consensus, because a single pass is a coin flip.
+ * Review by consensus, across DIFFERENT models where possible.
  *
  * Measured on a real queued article: asked the identical question four times,
  * the model flagged the same sentence twice and called the article clean twice.
@@ -222,20 +221,30 @@ const quoteKey = (q) => String(q).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim
  * published it unchanged on Tuesday — worse than no gate, because the outcome
  * carries no information.
  *
- * Independent passes turn that into a usable signal: agreement across runs is
- * evidence the problem is in the text rather than in the sampling. Findings
- * that reach the threshold block; findings only one pass saw are kept as notes,
- * which is the right home for a genuine-but-contested reading.
+ * Repeated sampling fixed the coin flip but not the blind spot. Three passes of
+ * one model still share everything that model is systematically wrong about, so
+ * "2 of 3 agreed" measured MiniMax's self-consistency and quietly presented it
+ * as corroboration. Routing the panel through llm.mjs gives each vote to a
+ * different model where one is configured, and models trained separately fail
+ * separately — which is the only reason a vote is worth counting.
  *
- * Passes that fail to reach the model are dropped rather than counted as clean
- * — a network error must never be evidence that an article is sound. If fewer
- * than two passes come back at all, the whole review reports null.
+ * `independent` reports whether that actually happened. With a single provider
+ * keyed this degrades to the old repeated-sampling behaviour, which is no worse
+ * than before, but the caller is told so rather than being left to assume a
+ * cross-model consensus it did not get.
+ *
+ * Passes that fail to reach a model are dropped rather than counted as clean —
+ * a network error must never be evidence that an article is sound. If fewer
+ * than two come back at all, the whole review reports null.
  */
 export async function reviewContent(spec, { votes = 3, threshold = 2 } = {}) {
-  const runs = (await Promise.all(
-    Array.from({ length: votes }, () => reviewOnce(spec)),
-  )).filter((r) => r !== null);
+  const { results, independent } = await panel(
+    "reviewer",
+    reviewPrompt(spec),
+    { size: votes },
+  );
 
+  const runs = results.map((r) => issuesFrom(r.value));
   if (runs.length < Math.min(2, votes)) return null;
 
   const tally = new Map();
@@ -257,6 +266,11 @@ export async function reviewContent(spec, { votes = 3, threshold = 2 } = {}) {
   const agreed = all.filter((i) => i.votes >= Math.min(threshold, runs.length));
   return {
     passes: runs.length,
+    // Which models actually answered, not which were asked. A panel that
+    // planned on Gemini but got three MiniMax replies because the Gemini key
+    // expired must not be reported as independent.
+    reviewers: results.map((r) => `${r.provider}/${r.model}`),
+    independent,
     blocking: agreed.filter((i) => i.severity === "high"),
     notes: all.filter((i) => !agreed.includes(i) || i.severity !== "high"),
   };

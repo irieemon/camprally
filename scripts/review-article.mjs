@@ -43,6 +43,8 @@ for (const path of specPaths) {
     hazards,
     modelReviewed: model !== null,
     passes: model?.passes ?? 0,
+    reviewers: model?.reviewers ?? [],
+    independent: model?.independent ?? false,
     blocking: model?.blocking ?? [],
     notes: model?.notes ?? [],
   };
@@ -72,6 +74,12 @@ for (const path of specPaths) {
     console.log(`  · note (${n.votes}/${entry.passes}): ${n.problem}`);
   }
   if (model === null && !RULES_ONLY) console.log("  (model review unavailable — deterministic rules only)");
+  /* Say when the panel was one model asked repeatedly. Agreement between
+   * samples of a single model is not corroboration, and a reader comparing
+   * "2/3" across runs deserves to know which kind of 2/3 it was. */
+  if (model && !model.independent) {
+    console.log(`  (panel not independent — ${model.reviewers.join(", ")}; add a second provider)`);
+  }
 }
 
 if (JSON_OUT) console.log(JSON.stringify(report, null, 2));
