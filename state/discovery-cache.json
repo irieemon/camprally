@@ -1859,5 +1859,244 @@
         "ratingsTotal": 305
       }
     ]
+  },
+  "camping meals budget|1|": {
+    "term": "camping meals budget",
+    "min": 1,
+    "fetchedAt": "2026-08-06T18:00:00.538Z",
+    "results": [
+      {
+        "asin": "B00ABW9BUC",
+        "title": "The Backpacking Kit - 18Ct Premium Lightweight Meals in 1 Cup Resealable Pouches by Harmony House Foods, Single Set White",
+        "price": "$64.95",
+        "priceValue": 64.95,
+        "rating": 4.7,
+        "ratingsTotal": 326
+      },
+      {
+        "asin": "B07BRBB75X",
+        "title": "Peak Refuel Sweet Pork and Rice Freeze-Dried Meal, 40g Protein, 2 Servings | 40g protein, 100% real pork, non-GMO ingredients, no fillers, freeze-dried, just add water, 2 servings, ready in 10 minutes",
+        "price": "$13.95",
+        "priceValue": 13.95,
+        "rating": 4.6,
+        "ratingsTotal": 1169
+      },
+      {
+        "asin": "B084GVLG9B",
+        "title": "Mountain House Emergency Meal Assortment Kits, Freeze-Dried Survival Food Kit for Disaster Preparedness & Long-Term Storage, 30-Year Shelf Life",
+        "price": "$68.99",
+        "priceValue": 68.99,
+        "rating": 4.6,
+        "ratingsTotal": 833
+      },
+      {
+        "asin": "B084BTW6LT",
+        "title": "Mountain House Beef Lasagna & Freeze-Dried Food for Camping, 9 Servings, 30-Year Shelf-Life",
+        "price": "$49.39",
+        "priceValue": 49.39,
+        "rating": 4.6,
+        "ratingsTotal": 561
+      },
+      {
+        "asin": "1497102936",
+        "title": "Weekend Camping Cookbook: Over 100 Delicious Recipes for Campfire and Grilling (Fox Chapel Publishing) Make-Ahead Meals for Outdoor Adventures - Cast Iron Nachos, Bacon S'Mores, Foil Packs, and More",
+        "price": "$10.24",
+        "priceValue": 10.24,
+        "rating": 4.6,
+        "ratingsTotal": 317
+      },
+      {
+        "asin": "B08C9JZYPG",
+        "title": "ReadyWise 7 Day Emergency Food Supply – 60 Servings Grab Bag, Camping Essentials, Freeze Dried Survival Food Kit & Dehydrated Meals, Prepper Bug Out Bag & Hurricane Supplies, up to 25 Year Shelf Life",
+        "price": "$55.99",
+        "priceValue": 55.99,
+        "rating": 4.6,
+        "ratingsTotal": 265
+      },
+      {
+        "asin": "B0DG6RDFWZ",
+        "title": "ReadyWise Emergency Food Supply - 88 Servings Meat & Rice Bucket, Freeze Dried Protein Meals, Camping Essentials, Bulk Rice & Survival Food, Disaster Prepping Supplies, up to 25 Year Shelf Life",
+        "price": "$139.99",
+        "priceValue": 139.99,
+        "rating": 4.6,
+        "ratingsTotal": 95
+      },
+      {
+        "asin": "B004JT7F8I",
+        "title": "ReadyWise Emergency Food Supply - 120 Servings Favorites Sample Bucket, Survival Food Kit, Freeze Dried Prepper Food & Dehydrated Meals for Camping Essentials & Backpacking, up to 25 Year Shelf Life",
+        "price": "$97.99",
+        "priceValue": 97.99,
+        "rating": 4.5,
+        "ratingsTotal": 10442
+      },
+      {
+        "asin": "B00HOGS6JA",
+        "title": "ReadyWise Emergency Food Supply - 72 Hour Survival Kit, 30 Servings of Protein Meals, Freeze Dried Food for Backpacking, Camping Essentials & Disaster Prepping Supplies, up to 25 Year Shelf Life",
+        "price": "$23.39",
+        "priceValue": 23.39,
+        "rating": 4.5,
+        "ratingsTotal": 5577
+      },
+      {
+        "asin": "B08BW99BH3",
+        "title": "Greenbelly Backpacking Meals | All Natural Hiking Meal Bars | 650 Calories & High Protein | Variety, 5 Count",
+        "price": "$49.00",
+        "priceValue": 49,
+        "rating": 4.5,
+        "ratingsTotal": 541
+      },
+      {
+        "asin": "B07L86D4C1",
+        "title": "Backpacker's Pantry Granola with Blueberries, Almonds & Milk | 6-Pack | 16g Protein | 620 Cal | Vegetarian, Gluten Free | Made in the USA | Freeze Dried Meal & Camping Food",
+        "price": "$42.00",
+        "priceValue": 42,
+        "rating": 4.5,
+        "ratingsTotal": 258
+      },
+      {
+        "asin": "B00AXAY9IQ",
+        "title": "Legacy Food Storage 360 Serving Emergency Food Supply Bucket, 143,880 Total Calories, Shelf Stable Breakfast, Lunch & Dinner, 2-Month Supply, Freeze Dried Survival Meals for MRE Camping, Hiking, Prepping",
+        "price": "$1,040.00",
+        "priceValue": 1040,
+        "rating": 4.5,
+        "ratingsTotal": 135
+      },
+      {
+        "asin": "B0DJTM4FYY",
+        "title": "BIGHORN Mountain Food Bourbon BBQ Pulled Pork and Beans - contains 4 packs | 8 servings | 140g Protein | 2,000 Calories - premium freeze dried meals for backpacking food - dehydrated camping food for backpacking meals - ideal camping meals just add water - great taste",
+        "price": "$68.21",
+        "priceValue": 68.21,
+        "rating": 4.5,
+        "ratingsTotal": 118
+      },
+      {
+        "asin": "B08HPXGMPD",
+        "title": "GOOD TO-GO Cuban Rice Bowl (Single Serving) |Camping & Backpacking Food | Just Add Water Backpacking Meals | Good To-Go Dehydrated Meals Taste Better Than Freeze Dried Food",
+        "price": "$10.99",
+        "priceValue": 10.99,
+        "rating": 4.5,
+        "ratingsTotal": 87
+      },
+      {
+        "asin": "B006GYYSJI",
+        "title": "ReadyWise Emergency Food Supply - 4320 Servings, 36 Buckets, Freeze Dried & Dehydrated Package of Long Term Meals, Survival Kit for Camping, Prepper Food Storage Supplies, up to 25 Year Shelf Life",
+        "price": "$3,658.56",
+        "priceValue": 3658.56,
+        "rating": 4.4,
+        "ratingsTotal": 632
+      },
+      {
+        "asin": "B009ZIDU0U",
+        "title": "MREs (Meals Ready-to-Eat) Genuine U.S. Military Surplus (1 Pack) Assorted Flavor | Ready-to-Eat Shelf-Stable Meal | Genuine Military Surplus | Long Shelf Life",
+        "price": "$14.25",
+        "priceValue": 14.25,
+        "rating": 4.3,
+        "ratingsTotal": 3062
+      },
+      {
+        "asin": "B001GUT4S2",
+        "title": "Backpacker's Pantry Pad Thai | 1-Pack | 24g Protein | 760 Cal | Vegan, Gluten Free, Dairy Free | Made in the USA | Freeze Dried Meal & Camping Food",
+        "price": "$10.00",
+        "priceValue": 10,
+        "rating": 4.3,
+        "ratingsTotal": 1098
+      },
+      {
+        "asin": "B01NCN6VRO",
+        "title": "Backpacker's Pantry Three Cheese Mac & Cheese | 1-Pack | 24g Protein | 510 Cal | Vegetarian, Nut Free | Made in the USA | Freeze Dried Meal & Camping Food",
+        "price": "$9.95",
+        "priceValue": 9.95,
+        "rating": 4.3,
+        "ratingsTotal": 1034
+      },
+      {
+        "asin": "B00HOGS6AY",
+        "title": "ReadyWise Emergency Food Supply - 18 Servings Favorites Box, Survival Food Kit with Freeze Dried Prepper Food & Dehydrated Meals, Camping Essentials for Backpacking & Hiking, up to 25 Year Shelf Life",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.3,
+        "ratingsTotal": 706
+      },
+      {
+        "asin": "B091MFB1MQ",
+        "title": "GOOD TO-GO Food Kit Assortments | Camping Food, Backpacking Food | Just Add Water Meals, Backpacking Meals | Dehydrated Meals Taste Better Than Freeze Dried Meals",
+        "price": "$99.95",
+        "priceValue": 99.95,
+        "rating": 4.3,
+        "ratingsTotal": 67
+      },
+      {
+        "asin": "B08YFMLRZ8",
+        "title": "Wild Zora Paleo Freeze Dried Meals for Backpacking & Camping - Healthy Gluten Free & Grain Free Camping Meals/Backpacking Food + No Added Sugar - Includes Breakfast & Dinner Options (Variety 7-pack)",
+        "price": "$99.99",
+        "priceValue": 99.99,
+        "rating": 4.2,
+        "ratingsTotal": 127
+      },
+      {
+        "asin": "B07YR7SF7V",
+        "title": "Nomad Nutrition – Indian Red Lentil Stew | High Energy, All Natural Ingredients | Plant-Based & Non-GMO| Just Add Boiling Hot Water | 112g / 4oz (Pack of 1)",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 4.2,
+        "ratingsTotal": 115
+      },
+      {
+        "asin": "B01AS7GYKE",
+        "title": "GOOD TO-GO Weekender 3-Pack | 2 Entrees + 1 Breakfast | Camping Food, Backpacking Food | Just Add Water Meals, Backpacking Meals | Dehydrated Meals Taste Better Than Freeze Dried Meals",
+        "price": "$32.95",
+        "priceValue": 32.95,
+        "rating": 4.2,
+        "ratingsTotal": 83
+      },
+      {
+        "asin": "B07L4G7SK7",
+        "title": "Backpacker's Pantry Mango Sticky Rice | 6-Pack | 6g Protein | 570 Cal | Vegan, Gluten Free, Dairy Free, Nut Free | Made in the USA | Freeze Dried Meal & Camping Food",
+        "price": "$48.00",
+        "priceValue": 48,
+        "rating": 4.1,
+        "ratingsTotal": 501
+      },
+      {
+        "asin": "B07YXC8G3S",
+        "title": "Nomad Nutrition – Irish Shepherd’s Pie | High Energy, All Natural Ingredients | Gluten, Dairy & Palm Oil Free | Just Add Boiling Hot Water",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 4,
+        "ratingsTotal": 235
+      },
+      {
+        "asin": "B07YXBGMF7",
+        "title": "Nomad Nutrition Hungarian Goulash | Instant Freeze Dried Backpacking & Camping Food | Plant-Based, Non-GMO Hiking Meals with High-Energy, Vegan, Gluten-Free | 112g - 1 Pack",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 4,
+        "ratingsTotal": 184
+      },
+      {
+        "asin": "B0CBQPKQ3D",
+        "title": "Nomad Nutrition Southwest Breakfast Skillet | Instant Freeze Dried Backpacking & Camping Food | Plant-Based, Non-GMO Hiking Meals with High-Energy, Vegan, Gluten-Free | 112g - 1 Pack",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 3.8,
+        "ratingsTotal": 66
+      },
+      {
+        "asin": "B00UNYX3W0",
+        "title": "Sopakco MRE Case Pack of 14, Survival & Emergency Green Box | Sopakco MRE case of 14 ready-to-eat meals, long shelf life survival and emergency food, factory sealed green box",
+        "price": "$29.00",
+        "priceValue": 29,
+        "rating": 3.7,
+        "ratingsTotal": 379
+      },
+      {
+        "asin": "B0BSNZKPZT",
+        "title": "Nomad Nutrition Cali Breakfast Bowl | Instant Freeze Dried Backpacking & Camping Food | Plant-Based, Non-GMO Hiking Meals with High-Energy, Vegan, Gluten-Free | 112g - 1 Pack",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 3.7,
+        "ratingsTotal": 80
+      }
+    ]
   }
 }
