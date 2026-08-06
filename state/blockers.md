@@ -59,3 +59,19 @@ how-to-camp-in-rain
       "These blankets also work as ground insulation when sitting on wet terrain"
   · note (1/3): Placing a non-breathable tarp directly under a tent footprint traps groundwater and moisture between the tarp and tent floor. This creates a soaked environment that degrades insulation and promotes mold. Proper tent footprint protection should use a breathable ground cloth that is slightly smaller than the tent floor, not a full-coverage tarp.
 
+
+## 2026-08-06T13:00:00.117Z — spec-generation-failed
+
+Could not generate a spec for dispersed-camping-beginners-guide.
+discovering "dispersed camping"...
+  picked 6:
+    B07MKBKN4H  $11.04    4.6 ★  FLY2SKY Portable LED Gear Camping Lights with Clip H
+    B083TXB5QY  $14.99    4.6 ★  Lepro LED Camping Lantern with 3 Light Modes, Batter
+    B0CW4QLRPQ  $18.18    4.6 ★  Eveready LED Camping Lantern X-250 (2-Pack), Super B
+    1885464851  $22.95    4.6 ★  National Forest Camping: Directory of 4,108 Designat
+    B0DYV7KX92  $39.99    4.5 ★  4-Pack Solar Camping Lanterns,Rechargeable LED with 
+    B07F2VP353  $49.95    4.5 ★  Fire-Maple Fixed Star 1 Backpacking and Camping Stov
+generating "Dispersed Camping for Beginners — How to Camp Free on Public Land" with MiniMax-M2.7...
+  first attempt failed: MiniMax API 529: {"type":"error","error":{"type":"overloaded_error","message":"overloaded_error (529)"},"request_id":"06c3b8586944a07a6870869cf2cfb2c5"}
+  retrying once...
+
