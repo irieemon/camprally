@@ -276,6 +276,7 @@ if (!asins.length && dIdx > -1) {
     console.log("\nquota fallback: selecting from the verified ASIN cache...");
     asins = await pickFromCache(brief.title, { max, count, cache });
     if (asins.length < 4) {
+      console.log("deferring: product-data-quota");
       console.error("cache fallback found fewer than 4 relevant products — deferring until the Canopy quota resets.");
       process.exit(EXIT.DEFER);
     }
@@ -363,7 +364,9 @@ async function generate(attempt) {
     }),
   });
   if (!res.ok) {
-    return { error: `MiniMax API ${res.status}: ${(await res.text()).slice(0, 400)}` };
+    // Carry the status out, not just a message: whether this is worth retrying
+    // and whether it should defer or block are both decided by the code.
+    return { error: `MiniMax API ${res.status}: ${(await res.text()).slice(0, 400)}`, status: res.status };
   }
   const data = await res.json();
   const text = (data.content ?? [])
@@ -378,14 +381,37 @@ async function generate(attempt) {
   return { text };
 }
 
+/* Upstream capacity, not our bug.
+ *
+ * 529 is MiniMax's "overloaded"; the 5xx and 429 family mean the same thing for
+ * our purposes. They are the model-side equivalent of Amazon throttling, which
+ * this pipeline already treats as `deferred` — transient, retry later, not a
+ * failure and not something to wake anyone for. */
+const TRANSIENT_STATUS = new Set([408, 425, 429, 500, 502, 503, 504, 529]);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 console.log(`generating "${brief.title}" with ${MODEL}...`);
 let gen = await generate(1);
-if (gen.error) {
-  console.log(`  first attempt failed: ${gen.error}`);
-  console.log("  retrying once...");
-  gen = await generate(2);
+/* Back off between attempts. The previous version retried instantly, which
+ * against an overloaded server means asking the same question of the same
+ * machine a few milliseconds later — the one moment it is least able to answer.
+ * Three attempts spread over ~25s costs nothing on the happy path and rides out
+ * the short capacity dips that cause most 529s. */
+for (let attempt = 2; gen.error && attempt <= 3; attempt++) {
+  const waitMs = 5000 * (attempt - 1) ** 2; // 5s, then 20s
+  console.log(`  attempt ${attempt - 1} failed: ${gen.error}`);
+  console.log(`  waiting ${waitMs / 1000}s before attempt ${attempt}...`);
+  await sleep(waitMs);
+  gen = await generate(attempt);
 }
 if (gen.error) {
+  if (TRANSIENT_STATUS.has(gen.status)) {
+    // Printed to stdout, and in this exact shape, because run-cycle reads it to
+    // name the deferral in the receipt.
+    console.log(`deferring: model-overloaded`);
+    console.error(`generation deferred after 3 attempts: ${gen.error}`);
+    process.exit(EXIT.DEFER);
+  }
   console.error(`generation failed: ${gen.error}`);
   process.exit(EXIT.FAIL);
 }

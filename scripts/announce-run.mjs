@@ -90,7 +90,12 @@ if (r.outcome === "blocked") {
 }
 
 if (r.outcome === "deferred") {
-  say(`📊 STATUS: cycle deferred — ${r.reason === "product-data-quota" ? "product data quota is exhausted; discovery resumes on the 1st" : r.reason}. Retrying next cycle.`);
+  const detail = {
+    "product-data-quota": "the product data quota is exhausted; discovery resumes on the 1st",
+    "model-overloaded": "MiniMax was overloaded and could not write the article",
+    "asins-unconfirmed": "Amazon throttled the link check, so the ASINs are unconfirmed",
+  }[r.reason] ?? r.reason;
+  say(`📊 STATUS: cycle deferred — ${detail}. Transient; the next cycle retries.`);
 }
 
 if (r.outcome === "idle") {

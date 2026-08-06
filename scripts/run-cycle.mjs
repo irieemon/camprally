@@ -353,10 +353,19 @@ if (!next) {
     // broken article. Defer so the next cycle retries instead of raising a
     // blocker that needs a human.
     if (err.status === EXIT.DEFER) {
+      /* write-article names its own deferral, because there is now more than one
+       * kind and they need different responses: a Canopy quota is out until the
+       * 1st of the month, while an overloaded model is usually fine by the next
+       * cycle. Defaulting to the quota kept the old behaviour when no marker is
+       * printed. */
+      const named = (err.stdout ?? "").match(/^deferring:\s*([a-z0-9-]+)/mi)?.[1];
+      const reason = named ?? "product-data-quota";
       finish("deferred", {
-        reason: "product-data-quota",
+        reason,
         slug: target.slug,
-        message: "Canopy request quota exhausted — add pay-as-you-go or wait for the monthly reset.",
+        message: reason === "model-overloaded"
+          ? "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
+          : "Canopy request quota exhausted — add pay-as-you-go or wait for the monthly reset.",
       }, EXIT.OK);
     }
     finish("blocked", {
