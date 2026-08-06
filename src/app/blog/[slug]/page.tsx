@@ -6,6 +6,7 @@ import html from "remark-html";
 import { articles } from "@/data/articles";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintableSidebarCard } from "@/components/Printables";
+import { MerchSidebarCard, merchDesigns, stableIndex } from "@/components/Merch";
 /* Badge and the Card family used to build the hero label and the sidebar
  * panels. Both are now plain markup — an eyebrow and border-topped blocks —
  * so the shadcn wrappers are no longer imported here. */
@@ -621,8 +622,17 @@ export default async function ArticlePage({ params }: Props) {
             )}
 
             {/* Own-product slot, above the newsletter: a reader deep in a gear
-                guide is closer to buying than to subscribing. */}
-            <PrintableSidebarCard />
+                guide is closer to buying than to subscribing.
+
+                Two rails share the one slot instead of taking one each. Three
+                stacked asks — printable, shirt, newsletter — is how a sidebar
+                stops being read at all, and the split is by slug so a given
+                article shows the same thing on every build. */}
+            {merchDesigns.length > 0 && stableIndex(slug, 2) === 1 ? (
+              <MerchSidebarCard slug={slug} />
+            ) : (
+              <PrintableSidebarCard />
+            )}
 
             <div className="border border-camp-stone bg-camp-bone p-5">
               <p className="eyebrow mb-3 text-camp-green">The dispatch</p>

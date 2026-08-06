@@ -6,6 +6,7 @@ import { getHeroImage } from "@/data/heroes";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintablesSection } from "@/components/Printables";
+import { MerchSection } from "@/components/Merch";
 import {
   Tent, Flame, Compass, Map as MapIcon, Moon, Shirt, Armchair, ShieldPlus,
   BadgeCheck, Wallet, Sprout, ArrowRight,
@@ -249,6 +250,13 @@ export default function Home() {
           follows the strongest content moment on the page, and keeping it clear
           of the newsletter avoids stacking two conversion asks back to back. */}
       <PrintablesSection />
+
+      {/* ── Merch ────────────────────────────────────────────────────────── */}
+      {/* Directly after the printables, not spaced away from them: both sell
+          CampRally's own products, so together they read as one shop rather
+          than as two unrelated asks. The Promises section still separates the
+          pair from the newsletter, which is the gap that matters. */}
+      <MerchSection />
 
       {/* ── Promises ─────────────────────────────────────────────────────── */}
       <section className="mx-auto w-full max-w-6xl px-4 py-16 md:py-20">

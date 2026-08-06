@@ -179,7 +179,7 @@ function finish(outcome, detail, code, { commit = true } = {}) {
       // specs/quarantine rides along so a rejected draft is preserved off the
       // machine. It is the evidence for why a slug stopped publishing, and it is
       // useless if it only ever exists on the Mac that rejected it.
-      const heartbeatPaths = ["state/", "specs/quarantine", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables"];
+      const heartbeatPaths = ["state/", "specs/quarantine", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables", "src/data/merch.json", "public/images/merch"];
       sh("git", ["add", ...heartbeatPaths]);
       if (sh("git", ["status", "--porcelain", ...heartbeatPaths])) {
         sh("git", ["commit", "-m", `chore(heartbeat): ${outcome} — ${detail.reason ?? detail.slug ?? ""}`.trim()]);
@@ -220,7 +220,7 @@ if (!DRY) {
 // the price snapshot are all written by cycles (a --dry-run legitimately
 // leaves a spec behind) and are committed by the publish step anyway. Before
 // this exclusion, a dry-run wedged every real cycle that followed it.
-const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!src/data/product-images.json", ":!src/data/printables.json", ":!public/images/printables", ":!public/images/heroes"]);
+const dirty = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!src/data/product-images.json", ":!src/data/printables.json", ":!public/images/printables", ":!src/data/merch.json", ":!public/images/merch", ":!public/images/heroes"]);
 if (dirty) {
   finish("blocked", {
     reason: "working-tree-dirty",
@@ -287,6 +287,17 @@ try {
 } catch (err) {
   console.log(err.stdout ?? "");
   console.log("(printables sync failed — site keeps the last synced product list)");
+}
+
+// ── step 2f: mirror the Printify merch ────────────────────────────────────
+// Same contract as the printables above. The card art is fetched from Printify
+// only when the ledger says a design's artwork or chest logo changed, so the
+// usual run costs no API call and works with no token at all.
+try {
+  console.log(sh("node", ["scripts/sync-merch.mjs"]));
+} catch (err) {
+  console.log(err.stdout ?? "");
+  console.log("(merch sync failed — site keeps the last synced product list)");
 }
 
 // ── step 3: pick the next unpublished queue item ──────────────────────────
@@ -459,7 +470,7 @@ if (pubCode !== EXIT.OK) {
 backfillPhotos("publish");
 
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
-sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables", "public/images/heroes", specPath]);
+sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables", "src/data/merch.json", "public/images/merch", "public/images/heroes", specPath]);
 sh("git", ["commit", "-m",
   `Publish ${next.slug}\n\n` +
   `Generated from specs/${next.slug}.json. All affiliate ASINs verified live\n` +
