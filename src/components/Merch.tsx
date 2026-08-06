@@ -94,8 +94,8 @@ export function MerchSection() {
               Original watercolours, printed when you order
             </h2>
             <p className="mt-3 max-w-md text-[1.0625rem] leading-relaxed text-muted-foreground">
-              Five camp scenes we painted ourselves, on tees, hoodies, totes,
-              mugs and phone cases. Nothing is printed until someone buys it.
+              Five camp scenes we created ourselves, on tees, hoodies, totes,
+              mugs and phone cases.
             </p>
           </div>
           <a
