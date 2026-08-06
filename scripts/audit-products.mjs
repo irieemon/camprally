@@ -20,22 +20,10 @@
  */
 
 import { readFileSync } from "node:fs";
-import { homedir } from "node:os";
+import { callRole } from "./lib/llm.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const JSON_OUT = process.argv.includes("--json");
-const MODEL = "MiniMax-M2.7";
-const BASE = "https://api.minimax.io/anthropic/v1/messages";
-
-function apiKey() {
-  if (process.env.MINIMAX_API_KEY) return process.env.MINIMAX_API_KEY;
-  try {
-    const k = JSON.parse(readFileSync(`${homedir()}/.openclaw/agents/main/agent/auth-profiles.json`, "utf8"))
-      ?.profiles?.["minimax:global"]?.key;
-    if (k) return k;
-  } catch { /* fall through */ }
-  throw new Error("No MiniMax key");
-}
 
 const catalog = JSON.parse(readFileSync(`${ROOT}src/data/catalog.json`, "utf8")).products ?? {};
 const articlesSrc = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
@@ -83,25 +71,24 @@ for (const { slug, title, asins } of byArticle.values()) {
 
 // ── ask the model, one product at a time ──────────────────────────────────
 async function verdict({ articleTitle, productTitle }) {
-  const res = await fetch(BASE, {
-    method: "POST",
-    headers: { "content-type": "application/json", "x-api-key": apiKey(), "anthropic-version": "2023-06-01" },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 8000,
-      system:
-        "You check whether a product belongs in a camping-gear buying guide. " +
-        "Reply with exactly one word: MATCH if a reader of that article would " +
-        "reasonably expect to see this product recommended, or MISMATCH if it is " +
-        "a different category of product entirely. Accessories and closely " +
-        "related gear count as MATCH. No other text.",
-      messages: [{ role: "user", content:
-        `Article: "${articleTitle}"\nProduct: "${productTitle}"\n\nMATCH or MISMATCH?` }],
-    }),
+  // rounds: 1 — this runs once per (article, product) pair, ~90 of them, and a
+  // single unanswered pair prints "?" rather than derailing the sweep. Backing
+  // off 25s each time a provider hiccups would turn a two-minute audit into an
+  // hour of mostly sleeping.
+  const r = await callRole("cheap", {
+    system:
+      "You check whether a product belongs in a camping-gear buying guide. " +
+      "Reply with exactly one word: MATCH if a reader of that article would " +
+      "reasonably expect to see this product recommended, or MISMATCH if it is " +
+      "a different category of product entirely. Accessories and closely " +
+      "related gear count as MATCH. No other text.",
+    user: `Article: "${articleTitle}"\nProduct: "${productTitle}"\n\nMATCH or MISMATCH?`,
+    maxTokens: 8000,
+    parse: "text",
+    rounds: 1,
   });
-  if (!res.ok) return "ERROR";
-  const d = await res.json();
-  const t = (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("").toUpperCase();
+  if (!r) return "ERROR";
+  const t = r.value.toUpperCase();
   return t.includes("MISMATCH") ? "MISMATCH" : t.includes("MATCH") ? "MATCH" : "UNCLEAR";
 }
 
