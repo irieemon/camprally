@@ -1,7 +1,10 @@
 import { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://camprally.co";
+/* Must match the host that actually serves, or every entry here is a redirect
+ * for the crawler to follow. See src/lib/site.ts. */
+const BASE_URL = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articlePages = articles.map((article) => ({

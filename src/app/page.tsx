@@ -7,6 +7,16 @@ import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintablesSection } from "@/components/Printables";
 import { MerchSection } from "@/components/Merch";
+import type { Metadata } from "next";
+
+/* Title and description come from the root layout; this exists only to state
+ * the canonical, which the layout deliberately does not set. */
+/* No `openGraph` key: setting one REPLACES the layout's whole object rather
+ * than merging into it, so adding a lone `url` here would silently drop
+ * og:title, og:description, og:site_name and og:type from the homepage. */
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 import {
   Tent, Flame, Compass, Map as MapIcon, Moon, Shirt, Armchair, ShieldPlus,
   BadgeCheck, Wallet, Sprout, ArrowRight,

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Use | CampRally",
   description: "Terms and conditions for using CampRally.co",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {

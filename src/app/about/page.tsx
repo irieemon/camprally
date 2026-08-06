@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "About CampRally | Budget Camping Gear Reviews",
   description:
     "Learn about CampRally's mission to make camping accessible and affordable for everyone.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

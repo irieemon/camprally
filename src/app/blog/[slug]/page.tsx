@@ -7,6 +7,7 @@ import { articles } from "@/data/articles";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintableSidebarCard } from "@/components/Printables";
 import { MerchSidebarCard, merchDesigns, stableIndex } from "@/components/Merch";
+import { SITE_URL } from "@/lib/site";
 /* Badge and the Card family used to build the hero label and the sidebar
  * panels. Both are now plain markup — an eyebrow and border-topped blocks —
  * so the shadcn wrappers are no longer imported here. */
@@ -447,11 +448,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
   if (!article) return { title: "Article Not Found" };
+  const path = `/blog/${article.slug}`;
+  const hero = getHeroImage(article.slug);
   return {
     title: `${article.title} | CampRally`,
     description: article.excerpt,
-    alternates: {
-      canonical: `https://camprally.co/blog/${article.slug}`,
+    /* Relative, resolved against metadataBase. It was absolute and pointed at
+     * the bare apex, which 307s to www — every article was telling Google its
+     * real address was a redirect back to itself. */
+    alternates: { canonical: path },
+    openGraph: {
+      /* Restated in full, not merged: setting openGraph at all replaces the
+       * layout's object outright. */
+      type: "article",
+      siteName: "CampRally",
+      locale: "en_US",
+      url: path,
+      title: article.title,
+      description: article.excerpt,
+      publishedTime: article.date,
+      /* Every slug resolves to a hero — a local render for the four the
+       * pipeline has generated, an Unsplash URL otherwise, with a `default`
+       * catching anything unmapped. No dimensions declared: the Unsplash URLs
+       * pin width only, so any height here would be a guess, and platforms
+       * measure the image they fetch anyway. */
+      images: [{ url: hero, alt: article.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [hero],
     },
   };
 }
@@ -481,8 +508,52 @@ export default async function ArticlePage({ params }: Props) {
     return Number.isFinite(sum) && sum > 0 ? `$${sum.toFixed(2)}` : null;
   })();
 
+  /* Article + breadcrumb structured data.
+   *
+   * Inlined rather than emitted through the Metadata API, which has no field
+   * for JSON-LD. Everything asserted here is something the page also states in
+   * visible text — headline, author, dates, image, section — because structured
+   * data that disagrees with the rendered page is a manual-action risk, not a
+   * ranking trick. No `aggregateRating` or `review`: this site publishes buying
+   * guides, not first-party product reviews, and marking them up as reviews
+   * without a real rating is exactly the misuse Google penalises.
+   *
+   * dateModified is the article's own date, not build time: stamping "modified
+   * today" on every rebuild would claim freshness the content does not have. */
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${SITE_URL}/blog/${article.slug}#article`,
+        headline: article.title,
+        description: article.excerpt,
+        image: heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`,
+        datePublished: article.date,
+        dateModified: article.date,
+        articleSection: article.category,
+        author: { "@type": "Organization", name: article.author, url: SITE_URL },
+        publisher: { "@type": "Organization", name: "CampRally", url: SITE_URL },
+        mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${article.slug}` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "All Guides", item: `${SITE_URL}/blog` },
+          { "@type": "ListItem", position: 3, name: article.title },
+        ],
+      },
+    ],
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero. Full-bleed rather than an inset rounded panel — the edge-to-edge
           photograph is most of what separates a store from a blog. */}
       <div className="relative isolate flex min-h-[clamp(22rem,48vh,32rem)] items-end overflow-hidden">
