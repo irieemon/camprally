@@ -7,25 +7,25 @@
       "name": "Starry Night Tent",
       "subtitle": "no ceiling but the sky",
       "image": "/images/merch/starry-night-tent.jpg",
-      "imageKey": "6a74aa534acf11a02698d979:f5a5425b97b0:2026-08-06T16:13:14.057Z",
+      "imageKey": "6a74aa534acf11a02698d979::2026-08-06T19:12:21.677Z",
       "fromCents": 1499,
       "from": "$14.99",
-      "publishedAt": "2026-08-06T15:38:59.584Z",
+      "publishedAt": "2026-08-06T19:12:50.654Z",
       "products": [
         {
           "kind": "tee",
           "label": "T-shirt",
-          "url": "https://camprally.printify.me/product/30703539",
-          "priceCents": 2599,
-          "price": "$25.99",
+          "url": "https://camprally.printify.me/product/30709874",
+          "priceCents": 3599,
+          "price": "$35.99",
           "varies": true
         },
         {
           "kind": "hoodie",
           "label": "Hoodie",
-          "url": "https://camprally.printify.me/product/30703547",
-          "priceCents": 5699,
-          "price": "$56.99",
+          "url": "https://camprally.printify.me/product/30709884",
+          "priceCents": 5399,
+          "price": "$53.99",
           "varies": true
         },
         {
@@ -47,10 +47,10 @@
         {
           "kind": "mug",
           "label": "Mug",
-          "url": "https://camprally.printify.me/product/30703568",
+          "url": "https://camprally.printify.me/product/30709892",
           "priceCents": 1499,
           "price": "$14.99",
-          "varies": false
+          "varies": true
         }
       ]
     },
@@ -59,25 +59,25 @@
       "name": "River Bend Basecamp",
       "subtitle": "camp where the river turns",
       "image": "/images/merch/river-bend-basecamp.jpg",
-      "imageKey": "6a74a7935f9416ae88844cad:f5a5425b97b0:2026-08-06T16:12:52.645Z",
+      "imageKey": "6a74a7935f9416ae88844cad::2026-08-06T19:11:29.607Z",
       "fromCents": 1499,
       "from": "$14.99",
-      "publishedAt": "2026-08-06T15:35:10.340Z",
+      "publishedAt": "2026-08-06T19:11:56.718Z",
       "products": [
         {
           "kind": "tee",
           "label": "T-shirt",
-          "url": "https://camprally.printify.me/product/30703466",
-          "priceCents": 2599,
-          "price": "$25.99",
+          "url": "https://camprally.printify.me/product/30709834",
+          "priceCents": 3599,
+          "price": "$35.99",
           "varies": true
         },
         {
           "kind": "hoodie",
           "label": "Hoodie",
-          "url": "https://camprally.printify.me/product/30703467",
-          "priceCents": 5699,
-          "price": "$56.99",
+          "url": "https://camprally.printify.me/product/30709850",
+          "priceCents": 5399,
+          "price": "$53.99",
           "varies": true
         },
         {
@@ -99,10 +99,10 @@
         {
           "kind": "mug",
           "label": "Mug",
-          "url": "https://camprally.printify.me/product/30703473",
+          "url": "https://camprally.printify.me/product/30709854",
           "priceCents": 1499,
           "price": "$14.99",
-          "varies": false
+          "varies": true
         }
       ]
     },
@@ -111,25 +111,25 @@
       "name": "Campfire & Coffee",
       "subtitle": "the first cup, made over a fire",
       "image": "/images/merch/campfire-and-coffee.jpg",
-      "imageKey": "6a74a78b4acf11a02698d7cb:f5a5425b97b0:2026-08-06T16:12:36.078Z",
+      "imageKey": "6a74a78b4acf11a02698d7cb::2026-08-06T19:10:38.715Z",
       "fromCents": 1499,
       "from": "$14.99",
-      "publishedAt": "2026-08-06T15:34:14.849Z",
+      "publishedAt": "2026-08-06T19:11:06.761Z",
       "products": [
         {
           "kind": "tee",
           "label": "T-shirt",
-          "url": "https://camprally.printify.me/product/30703456",
-          "priceCents": 2599,
-          "price": "$25.99",
+          "url": "https://camprally.printify.me/product/30709789",
+          "priceCents": 3599,
+          "price": "$35.99",
           "varies": true
         },
         {
           "kind": "hoodie",
           "label": "Hoodie",
-          "url": "https://camprally.printify.me/product/30703461",
-          "priceCents": 5699,
-          "price": "$56.99",
+          "url": "https://camprally.printify.me/product/30709805",
+          "priceCents": 5399,
+          "price": "$53.99",
           "varies": true
         },
         {
@@ -151,10 +151,10 @@
         {
           "kind": "mug",
           "label": "Mug",
-          "url": "https://camprally.printify.me/product/30703465",
+          "url": "https://camprally.printify.me/product/30709811",
           "priceCents": 1499,
           "price": "$14.99",
-          "varies": false
+          "varies": true
         }
       ]
     },
@@ -163,25 +163,25 @@
       "name": "Pine Ridge Sunset",
       "subtitle": "golden hour on the high ridge",
       "image": "/images/merch/pine-ridge-sunset.jpg",
-      "imageKey": "6a74a783782a080772a4dd8c:f5a5425b97b0:2026-08-06T16:12:19.377Z",
+      "imageKey": "6a74a783782a080772a4dd8c::2026-08-06T19:09:49.378Z",
       "fromCents": 1499,
       "from": "$14.99",
-      "publishedAt": "2026-08-06T15:33:18.956Z",
+      "publishedAt": "2026-08-06T19:10:16.191Z",
       "products": [
         {
           "kind": "tee",
           "label": "T-shirt",
-          "url": "https://camprally.printify.me/product/30703435",
-          "priceCents": 2599,
-          "price": "$25.99",
+          "url": "https://camprally.printify.me/product/30709759",
+          "priceCents": 3599,
+          "price": "$35.99",
           "varies": true
         },
         {
           "kind": "hoodie",
           "label": "Hoodie",
-          "url": "https://camprally.printify.me/product/30703440",
-          "priceCents": 5699,
-          "price": "$56.99",
+          "url": "https://camprally.printify.me/product/30709768",
+          "priceCents": 5399,
+          "price": "$53.99",
           "varies": true
         },
         {
@@ -203,10 +203,10 @@
         {
           "kind": "mug",
           "label": "Mug",
-          "url": "https://camprally.printify.me/product/30703451",
+          "url": "https://camprally.printify.me/product/30709777",
           "priceCents": 1499,
           "price": "$14.99",
-          "varies": false
+          "varies": true
         }
       ]
     },
@@ -215,25 +215,25 @@
       "name": "Lakeside Camp at Dawn",
       "subtitle": "the quiet hour before anyone else is awake",
       "image": "/images/merch/lakeside-camp-dawn.jpg",
-      "imageKey": "6a74a76ced404eb14a566203:f5a5425b97b0:2026-08-06T16:12:11.873Z",
+      "imageKey": "6a74a76ced404eb14a566203::2026-08-06T19:06:34.856Z",
       "fromCents": 1499,
       "from": "$14.99",
-      "publishedAt": "2026-08-06T15:32:22.462Z",
+      "publishedAt": "2026-08-06T19:06:34.856Z",
       "products": [
         {
           "kind": "tee",
           "label": "T-shirt",
-          "url": "https://camprally.printify.me/product/30703402",
-          "priceCents": 2599,
-          "price": "$25.99",
+          "url": "https://camprally.printify.me/product/30709648",
+          "priceCents": 3599,
+          "price": "$35.99",
           "varies": true
         },
         {
           "kind": "hoodie",
           "label": "Hoodie",
-          "url": "https://camprally.printify.me/product/30703412",
-          "priceCents": 5699,
-          "price": "$56.99",
+          "url": "https://camprally.printify.me/product/30709633",
+          "priceCents": 5399,
+          "price": "$53.99",
           "varies": true
         },
         {
@@ -255,10 +255,10 @@
         {
           "kind": "mug",
           "label": "Mug",
-          "url": "https://camprally.printify.me/product/30703433",
+          "url": "https://camprally.printify.me/product/30709639",
           "priceCents": 1499,
           "price": "$14.99",
-          "varies": false
+          "varies": true
         }
       ]
     }
