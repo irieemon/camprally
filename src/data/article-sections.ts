@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-portable-power-station-camping-under-200": [
+    {
+      type: "product-grid",
+      title: "Best Portable Power Stations for Camping Under $200 — Quick Comparison",
+      items: [
+        { label: "Portable Power Station 330W", category: "", icon: "🏕️", asin: "B0GHQCKZBN", link: "https://www.amazon.com/dp/B0GHQCKZBN?tag=camprally-20" },
+        { label: "Anker 521 Portable Power Station U", category: "", icon: "🏕️", asin: "B09FF46FQ9", link: "https://www.amazon.com/dp/B09FF46FQ9?tag=camprally-20" },
+        { label: "ALLWEI Portable Power Station 300W", category: "", icon: "🏕️", asin: "B08CXN4TZR", link: "https://www.amazon.com/dp/B08CXN4TZR?tag=camprally-20" },
+        { label: "VTOMAN FlashSpeed 300 Portable Pow", category: "", icon: "🏕️", asin: "B0DCJX9D71", link: "https://www.amazon.com/dp/B0DCJX9D71?tag=camprally-20" },
+        { label: "DaranEner Portable Power Station", category: "", icon: "🏕️", asin: "B0C6K5ZPNJ", link: "https://www.amazon.com/dp/B0C6K5ZPNJ?tag=camprally-20" },
+        { label: "EBL Portable Power Station 500w(Pe", category: "", icon: "🏕️", asin: "B0DPFL1CH3", link: "https://www.amazon.com/dp/B0DPFL1CH3?tag=camprally-20" },
+      ]
+    },
+  ],
   "camping-meal-plans-budget-50": [
     {
       type: "product-grid",
