@@ -24,25 +24,21 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
-import { homedir } from "node:os";
 import { EXIT } from "./lib/amazon.mjs";
 import { loadCache, saveCache, classify, get } from "./lib/asin-cache.mjs";
 import { discover, priceCeiling } from "./lib/discover.mjs";
 import { generateImage, heroPrompt } from "./lib/minimax-image.mjs";
+import { callRole, lastError, lastErrorTransient, minimaxKey, roleCandidates } from "./lib/llm.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const MODEL = "MiniMax-M2.7";
-const BASE = "https://api.minimax.io/anthropic/v1/messages";
 
-function apiKey() {
-  if (process.env.MINIMAX_API_KEY) return process.env.MINIMAX_API_KEY;
-  const p = `${homedir()}/.openclaw/agents/main/agent/auth-profiles.json`;
-  try {
-    const k = JSON.parse(readFileSync(p, "utf8"))?.profiles?.["minimax:global"]?.key;
-    if (k) return k;
-  } catch { /* fall through */ }
+/* Fail before generating rather than after, and name the whole role: with
+ * several providers configured, "no MiniMax key" is no longer the same thing as
+ * "nothing can write this article". */
+if (!roleCandidates("writer").length) {
   console.error(
-    "No MiniMax key. Set MINIMAX_API_KEY or ensure ~/.openclaw/.../auth-profiles.json has profiles['minimax:global'].key",
+    "No writer model is configured. Set MINIMAX_API_KEY or GEMINI_API_KEY, or ensure\n" +
+    "~/.openclaw/agents/main/agent/auth-profiles.json has profiles['minimax:global'].key",
   );
   process.exit(EXIT.FAIL);
 }
@@ -64,28 +60,20 @@ function nextArticleId(slug) {
 
 /** Translate an article topic into an Amazon product search term. */
 async function deriveProductTerm(title) {
-  try {
-    const res = await fetch(BASE, {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": apiKey(), "anthropic-version": "2023-06-01" },
-      body: JSON.stringify({
-        model: MODEL,
-        max_tokens: 8000,
-        system: "Reply with ONLY an Amazon product search phrase of 2-4 words. No punctuation, no explanation.",
-        messages: [{ role: "user", content:
-          `An article titled "${title}" recommends camping gear. ` +
-          `What product category should I search for on Amazon to find things it would recommend?` }],
-      }),
-    });
-    if (!res.ok) return null;
-    const d = await res.json();
-    const txt = (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("").trim();
-    // Guard against the model returning a sentence instead of a search phrase.
-    const words = txt.replace(/["'.]/g, "").split(/\s+/).filter(Boolean);
-    return words.length && words.length <= 6 ? words.join(" ").toLowerCase() : null;
-  } catch {
-    return null;
-  }
+  // rounds: 1 because the caller already treats null as "no term" and carries
+  // on; spending 25s of backoff on a hint is not worth the wall clock.
+  const r = await callRole("cheap", {
+    system: "Reply with ONLY an Amazon product search phrase of 2-4 words. No punctuation, no explanation.",
+    user: `An article titled "${title}" recommends camping gear. ` +
+      `What product category should I search for on Amazon to find things it would recommend?`,
+    maxTokens: 8000,
+    parse: "text",
+    rounds: 1,
+  });
+  if (!r) return null;
+  // Guard against the model returning a sentence instead of a search phrase.
+  const words = r.value.replace(/["'.]/g, "").split(/\s+/).filter(Boolean);
+  return words.length && words.length <= 6 ? words.join(" ").toLowerCase() : null;
 }
 
 /**
@@ -109,36 +97,28 @@ async function pickFromCache(title, { max, count, cache }) {
   const inventory = candidates
     .map((c) => `${c.asin}  ${c.price}  ${c.title.slice(0, 90)}`)
     .join("\n");
-  try {
-    const res = await fetch(BASE, {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-api-key": apiKey(), "anthropic-version": "2023-06-01" },
-      body: JSON.stringify({
-        model: MODEL,
-        // Reasoning happens inside the same token budget on this endpoint. At
-        // 2000 the model spent the whole allowance thinking about 69 products
-        // and hit max_tokens with zero text emitted — so the fallback looked
-        // like "nothing relevant" when it was actually "never answered".
-        max_tokens: 8000,
-        system:
-          "You select products for a camping-gear buying guide. Reply with ONLY " +
-          "comma-separated ASINs chosen from the provided inventory, best fits first. " +
-          "If fewer than 4 products genuinely fit the article topic, reply NONE. " +
-          "No other text.",
-        messages: [{ role: "user", content:
-          `Article: "${title}"\n\nInventory (ASIN, price, product):\n${inventory}\n\n` +
-          `Pick up to ${count} products a reader of this article would actually want to buy.` }],
-      }),
-    });
-    if (!res.ok) return [];
-    const d = await res.json();
-    const txt = (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("");
-    const valid = new Set(candidates.map((c) => c.asin));
-    const picked = [...new Set(txt.match(/B[0-9A-Z]{9}/g) ?? [])].filter((a) => valid.has(a));
-    return picked.slice(0, count);
-  } catch {
-    return [];
-  }
+  const r = await callRole("cheap", {
+    system:
+      "You select products for a camping-gear buying guide. Reply with ONLY " +
+      "comma-separated ASINs chosen from the provided inventory, best fits first. " +
+      "If fewer than 4 products genuinely fit the article topic, reply NONE. " +
+      "No other text.",
+    user: `Article: "${title}"\n\nInventory (ASIN, price, product):\n${inventory}\n\n` +
+      `Pick up to ${count} products a reader of this article would actually want to buy.`,
+    // Reasoning happens inside the same token budget on this endpoint. At 2000
+    // the model spent the whole allowance thinking about 69 products and hit
+    // max_tokens with zero text emitted — so the fallback looked like "nothing
+    // relevant" when it was actually "never answered".
+    maxTokens: 8000,
+    parse: "text",
+    rounds: 1,
+  });
+  if (!r) return [];
+  // Validated against the candidate list, so a model that invents an ASIN — or
+  // a fallback model less familiar with the format — cannot smuggle one in.
+  const valid = new Set(candidates.map((c) => c.asin));
+  const picked = [...new Set(r.value.match(/B[0-9A-Z]{9}/g) ?? [])].filter((a) => valid.has(a));
+  return picked.slice(0, count);
 }
 
 const slug = process.argv[2];
@@ -348,74 +328,46 @@ const user = [
  * response containing nothing usable. The ceiling is generous because unused
  * tokens are not billed, and running out is far more expensive than over-asking.
  */
-async function generate(attempt) {
-  const res = await fetch(BASE, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      "x-api-key": apiKey(),
-      "anthropic-version": "2023-06-01",
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 32000,
-      system,
-      messages: [{ role: "user", content: user }],
-    }),
-  });
-  if (!res.ok) {
-    // Carry the status out, not just a message: whether this is worth retrying
-    // and whether it should defer or block are both decided by the code.
-    return { error: `MiniMax API ${res.status}: ${(await res.text()).slice(0, 400)}`, status: res.status };
-  }
-  const data = await res.json();
-  const text = (data.content ?? [])
-    .filter((b) => b.type === "text")
-    .map((b) => b.text)
-    .join("")
-    .trim();
-  if (!text) {
-    const kinds = (data.content ?? []).map((b) => b.type).join(",") || "none";
-    return { error: `no text block (got: ${kinds}, stop_reason: ${data.stop_reason ?? "?"})` };
-  }
-  return { text };
-}
-
-/* Upstream capacity, not our bug.
+/* Generation goes through the `writer` role rather than a private fetch here.
  *
- * 529 is MiniMax's "overloaded"; the 5xx and 429 family mean the same thing for
- * our purposes. They are the model-side equivalent of Amazon throttling, which
- * this pipeline already treats as `deferred` — transient, retry later, not a
- * failure and not something to wake anyone for. */
-const TRANSIENT_STATUS = new Set([408, 425, 429, 500, 502, 503, 504, 529]);
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+ * The retry, the backoff and the transient-status list all moved into
+ * lib/llm.mjs, unchanged in behaviour but now applied across providers: when
+ * MiniMax returns 529 the next attempt goes to a DIFFERENT model immediately
+ * instead of re-asking the overloaded one after a sleep. The 09:00 deferral on
+ * 2026-08-06 would simply have been an article written by the second candidate.
+ *
+ * max_tokens has to cover reasoning AND prose. At 8000 the model spent the
+ * entire budget reasoning and returned no text at all — a valid API response
+ * containing nothing usable. The ceiling is generous because unused tokens are
+ * not billed and running out costs far more than over-asking. */
+console.log(`generating "${brief.title}" via the writer role...`);
+const gen = await callRole("writer", {
+  system,
+  user,
+  maxTokens: 32000,
+  parse: "text",
+  onAttempt: (msg) => console.log(`  ${msg}`),
+});
 
-console.log(`generating "${brief.title}" with ${MODEL}...`);
-let gen = await generate(1);
-/* Back off between attempts. The previous version retried instantly, which
- * against an overloaded server means asking the same question of the same
- * machine a few milliseconds later — the one moment it is least able to answer.
- * Three attempts spread over ~25s costs nothing on the happy path and rides out
- * the short capacity dips that cause most 529s. */
-for (let attempt = 2; gen.error && attempt <= 3; attempt++) {
-  const waitMs = 5000 * (attempt - 1) ** 2; // 5s, then 20s
-  console.log(`  attempt ${attempt - 1} failed: ${gen.error}`);
-  console.log(`  waiting ${waitMs / 1000}s before attempt ${attempt}...`);
-  await sleep(waitMs);
-  gen = await generate(attempt);
-}
-if (gen.error) {
-  if (TRANSIENT_STATUS.has(gen.status)) {
+if (!gen) {
+  const why = lastError();
+  if (lastErrorTransient()) {
     // Printed to stdout, and in this exact shape, because run-cycle reads it to
     // name the deferral in the receipt.
     console.log(`deferring: model-overloaded`);
-    console.error(`generation deferred after 3 attempts: ${gen.error}`);
+    console.error(`generation deferred — every writer candidate was busy: ${why}`);
     process.exit(EXIT.DEFER);
   }
-  console.error(`generation failed: ${gen.error}`);
+  console.error(`generation failed: ${why}`);
   process.exit(EXIT.FAIL);
 }
-let body = gen.text;
+
+/* Which model wrote it, recorded rather than assumed. The writer role can fall
+ * back, so "MiniMax wrote every article" stopped being true the moment a second
+ * provider was configured, and quality drift is impossible to investigate
+ * without knowing who was holding the pen. */
+console.log(`  written by ${gen.provider}/${gen.model}`);
+let body = gen.value;
 
 // ── post-process and validate the model's output ──────────────────────────
 body = body.replace(/^```[a-z]*\n?/gm, "").replace(/```$/gm, "").trim();
@@ -450,7 +402,9 @@ const heroOut = `${ROOT}public/images/heroes/${slug}.jpg`;
 const heroPath = await generateImage({
   prompt: heroPrompt(brief.title, brief.category ?? "camping gear"),
   outPath: heroOut,
-  apiKey: apiKey(),
+  // image-01 is MiniMax-native and has no Gemini equivalent wired up, so this
+  // one still asks for the MiniMax key by name rather than going through a role.
+  apiKey: minimaxKey(),
 });
 console.log(heroPath
   ? `hero image → public/images/heroes/${slug}.jpg`

@@ -89,14 +89,19 @@ const PROVIDERS = {
  * cycle costs a few hours; a bad article published under our name costs more,
  * and the pipeline already treats deferral as a normal outcome.
  *
- * `cheap` is where the local model belongs — mechanical judgements where a
- * wrong answer is caught by the thing that asked.
+ * `cheap` leads with a real cloud model rather than the local one, which is not
+ * the arrangement the name suggests and is the result of measuring it: asked
+ * "what is 2+2" through OpenClaw, llama3.2:3b answered 214. A 3B model drowns
+ * in a long system prompt. It stays last in the list because a wrong answer
+ * that still parses as JSON is worse than no answer — the schema check catches
+ * malformed replies, not confident nonsense. Promote it once a 7-8B model is
+ * pulled (this machine has 16GB and can host one).
  */
 const ROLES = {
   writer: [["minimax", MODELS.minimaxWriter], ["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini]],
   reviewer: [["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["minimax", MODELS.minimaxAlt]],
   vision: [["google", MODELS.gemini], ["minimax", MODELS.minimaxWriter]],
-  cheap: [["ollama", MODELS.ollama], ["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini]],
+  cheap: [["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini], ["ollama", MODELS.ollama]],
 };
 
 function fromAuthProfiles(profile) {
@@ -216,7 +221,7 @@ function extractJSON(text) {
  * Returns {value} on success, or {error, transient} — the caller decides
  * whether to move on to the next candidate or give up on this one for good.
  */
-async function callOne({ provider, model, system, user, maxTokens }) {
+async function callOne({ provider, model, system, user, maxTokens, parse = "json" }) {
   const p = PROVIDERS[provider];
   const a = ADAPTERS[p.api];
   const key = p.key();
@@ -239,6 +244,10 @@ async function callOne({ provider, model, system, user, maxTokens }) {
     if (!text.trim()) {
       return { error: `${provider}/${model}: no text emitted (${a.why(data)})`, transient: true };
     }
+    // Prose callers (write-article) want the markdown as-is; everything else
+    // wants a parsed object. A malformed JSON reply is the model's fault, not
+    // the network's, so it is permanent — retrying it just burns the budget.
+    if (parse === "text") return { value: text.trim() };
     const got = extractJSON(text);
     if (got.error) return { error: `${provider}/${model}: ${got.error}`, transient: false };
     return { value: got.value };
@@ -261,9 +270,9 @@ async function callOne({ provider, model, system, user, maxTokens }) {
  *
  * Returns {value, provider, model} or null.
  */
-export async function callRole(role, { system, user, maxTokens = 8000, rounds = 3 } = {}) {
+export async function callRole(role, { system, user, maxTokens = 8000, rounds = 3, parse = "json", onAttempt } = {}) {
   const candidates = ROLES[role];
-  if (!candidates) return note(`unknown role "${role}"`);
+  if (!candidates) return note(`unknown role "${role}"`, false);
 
   const dead = new Set(); // permanent failures — no point retrying these
   let sawTransient = false;
@@ -271,19 +280,20 @@ export async function callRole(role, { system, user, maxTokens = 8000, rounds = 
   for (let round = 1; round <= rounds; round++) {
     if (round > 1) {
       const waitMs = 5000 * (round - 1) ** 2; // 5s, then 20s
-      if (process.env.MINIMAX_DEBUG) console.error(`[llm] all candidates busy; waiting ${waitMs / 1000}s`);
+      onAttempt?.(`all candidates busy; waiting ${waitMs / 1000}s before round ${round}`);
       await sleep(waitMs);
     }
     sawTransient = false;
     for (const [provider, model] of candidates) {
       const id = `${provider}/${model}`;
       if (dead.has(id)) continue;
-      const r = await callOne({ provider, model, system, user, maxTokens });
+      const r = await callOne({ provider, model, system, user, maxTokens, parse });
       if (r.value !== undefined) {
         if (process.env.MINIMAX_DEBUG) console.error(`[llm] ${role} answered by ${id}`);
         return { value: r.value, provider, model };
       }
-      note(r.error);
+      note(r.error, r.transient);
+      onAttempt?.(r.error);
       if (r.transient) sawTransient = true;
       else dead.add(id);
     }
@@ -291,7 +301,7 @@ export async function callRole(role, { system, user, maxTokens = 8000, rounds = 
     // nothing and would only add 20s to a run that is already going to fail.
     if (!sawTransient) break;
   }
-  return note(`${role}: no candidate answered${sawTransient ? " (all transient — likely capacity)" : ""}`);
+  return note(`${role}: no candidate answered${sawTransient ? " (all transient — likely capacity)" : ""}`, sawTransient);
 }
 
 /**
@@ -351,12 +361,26 @@ export async function panel(role, { system, user, maxTokens = 8000 } = {}, { siz
  * the second one silently disables a safety check.
  */
 let lastFailure = null;
-function note(reason) {
+let lastTransient = false;
+function note(reason, transient = false) {
   lastFailure = reason;
+  lastTransient = transient;
   if (process.env.MINIMAX_DEBUG) console.error(`[llm] ${reason}`);
   return null;
 }
 
 export function lastError() {
   return lastFailure;
+}
+
+/**
+ * Was the last give-up a capacity problem rather than a broken configuration?
+ *
+ * write-article turns this into the difference between `deferred` (exit 0, the
+ * next cycle retries, nobody is paged) and `blocked` (exit non-zero, someone
+ * looks at it). Getting it backwards is what woke Sean at 09:00 on 2026-08-06
+ * for a 529 that had already cleared.
+ */
+export function lastErrorTransient() {
+  return lastTransient;
 }
