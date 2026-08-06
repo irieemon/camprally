@@ -332,9 +332,14 @@ export async function callRole(role, { system, user, maxTokens = 8000, rounds = 
  * `independent: false` so the caller can say so rather than implying a
  * cross-model consensus it did not get.
  *
+ * `parse` is threaded through to each voter and defaults to "json", which is
+ * what the content review needs. A panel voting on a one-word answer must pass
+ * "text", or every vote is discarded as unparseable JSON and the panel reports
+ * a unanimous silence — a check that disables itself and says nothing.
+ *
  * Returns { results: [{value, provider, model}], independent, members }.
  */
-export async function panel(role, { system, user, maxTokens = 8000 } = {}, { size = 3 } = {}) {
+export async function panel(role, { system, user, maxTokens = 8000, parse = "json" } = {}, { size = 3 } = {}) {
   const available = roleCandidates(role);
   if (!available.length) return { results: [], independent: false, members: [] };
 
@@ -343,7 +348,7 @@ export async function panel(role, { system, user, maxTokens = 8000 } = {}, { siz
   const members = Array.from({ length: size }, (_, i) => available[i % available.length]);
 
   const settled = await Promise.all(members.map(async ({ provider, model }) => {
-    const r = await callOne({ provider, model, system, user, maxTokens });
+    const r = await callOne({ provider, model, system, user, maxTokens, parse });
     if (r.value === undefined) {
       note(r.error);
       return null;

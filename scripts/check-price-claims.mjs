@@ -80,7 +80,24 @@ for (const chunk of articlesSrc.split(/\n\s*\{\s*\n\s*id: "/).slice(1)) {
   const slug = chunk.match(/slug: "([^"]+)"/)?.[1];
   const title = chunk.match(/title: "([^"]+)"/)?.[1] ?? "";
   const excerpt = chunk.match(/excerpt: "([^"]+)"/)?.[1] ?? "";
-  const cap = Number((`${title} ${excerpt}`.match(/under \$(\d[\d,]*)/i) ?? [])[1]?.replace(/,/g, ""));
+  /* A cap is a cap however it is worded.
+   *
+   * This matched only the literal phrase "under $N", so "7 Days of Budget
+   * Camping Meals — $50 Total Food Budget" sailed past while FOUR of its six
+   * products cost more than the entire budget the headline promises, one of
+   * them $68.99. The check reported clean because of a preposition.
+   *
+   * "$N budget" and "for $N" are the same promise to a reader, so they are the
+   * same claim here. Deliberately NOT matching a bare "$N" anywhere in a title —
+   * "The $200 Setup" is a total, not a per-item ceiling, and treating every
+   * figure as a cap would flag the correct articles as broken. */
+  const claim = `${title} ${excerpt}`;
+  const cap = Number((
+    claim.match(/under \$(\d[\d,]*)/i)
+    ?? claim.match(/\$(\d[\d,]*)\s+(?:total\s+)?\w*\s*budget/i)
+    ?? claim.match(/(?:all|each|every)\s+(?:for\s+)?\$(\d[\d,]*)/i)
+    ?? []
+  )[1]?.replace(/,/g, ""));
   if (!slug || !cap) continue;
 
   const over = [...new Set([...chunk.matchAll(/\/dp\/(B[0-9A-Z]{9})/g)].map((m) => m[1]))]
