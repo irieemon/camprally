@@ -2968,5 +2968,109 @@
         "ratingsTotal": 51
       }
     ]
+  },
+  "camping tarp|1|30": {
+    "term": "camping tarp",
+    "min": 1,
+    "max": 30,
+    "fetchedAt": "2026-08-07T23:00:05.204Z",
+    "results": [
+      {
+        "asin": "B0DSSLFGJ8",
+        "title": "RAINDEWAY Tarp 8x10 Feet,9Mil Camping Tarp Cover Green/Black | Tent,Outdoor,Multipurpose Tarps Cover with Metal Grommets,Sturdy Corners,Reinforced Edges,Finished Size,UV Resistant,Durable",
+        "price": "$13.88",
+        "priceValue": 13.88,
+        "rating": 4.7,
+        "ratingsTotal": 521
+      },
+      {
+        "asin": "B0748HGDVD",
+        "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green",
+        "price": "$17.29",
+        "priceValue": 17.29,
+        "rating": 4.6,
+        "ratingsTotal": 13648
+      },
+      {
+        "asin": "B089PY2LCV",
+        "title": "CARTMAN 8x10Ft Multipurpose Waterproof Poly Tarp Cover 8 Mil, Green | Reinforced edges, metal grommets every 36in, 10x10 weave, fits camping, emergency shelter, outdoor gear & cargo protection",
+        "price": "$11.69",
+        "priceValue": 11.69,
+        "rating": 4.6,
+        "ratingsTotal": 7435
+      },
+      {
+        "asin": "B0BTLZBWQK",
+        "title": "CARTMAN 6x8Ft Multipurpose Waterproof Poly Tarp Cover 8 Mil, Green | Reinforced edges, metal grommets every 36in, 10x10 weave, fits camping, emergency shelter, outdoor gear & cargo protection",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.6,
+        "ratingsTotal": 7435
+      },
+      {
+        "asin": "B089Q18CCZ",
+        "title": "CARTMAN 10x12Ft Multipurpose Waterproof Poly Tarp Cover 8 Mil, Green | Reinforced edges, metal grommets every 36in, 10x10 weave, fits camping, emergency shelter, outdoor gear & cargo protection",
+        "price": "$17.09",
+        "priceValue": 17.09,
+        "rating": 4.6,
+        "ratingsTotal": 7435
+      },
+      {
+        "asin": "B07F8854P2",
+        "title": "Unigear Hammock Rain Fly Waterproof Camping Tent Tarp for Backpacking | Lightweight Tent Tarp with UV Protection, 9.8-16.5 ft Size Options, Rain Shelter for Camping and Outdoor Adventures",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.6,
+        "ratingsTotal": 5781
+      },
+      {
+        "asin": "B07MZ3CL2N",
+        "title": "Clostnature Heavy Duty Tent Footprint Floor Saver, Camping Tarp | 210T Polyester, Waterproof, Ultralight, Multifunctional Compact Ground Sheet Mat for Hiking, Backpacking, Hammock, Beach",
+        "price": "$18.99",
+        "priceValue": 18.99,
+        "rating": 4.6,
+        "ratingsTotal": 2663
+      },
+      {
+        "asin": "B0C3RWSD8Q",
+        "title": "TICONN Heavy Duty Tarp Cover, Extra Thick Tarps Waterproof Tear and Rip Proof UV Resistant Tarpaulin with Reinforced Grommets and Edges (5.5 Mil, 6'x8')",
+        "price": "$9.95",
+        "priceValue": 9.95,
+        "rating": 4.6,
+        "ratingsTotal": 1894
+      },
+      {
+        "asin": "B08B5RT58N",
+        "title": "KALINCO Waterproof Camping Tarp Tent Hammock Rain Fly, 10X10FT/10X15FT, Mutifunctional Tent Footprint Lightweight Tarp for Camping, Hiking and Survival Shelter",
+        "price": "$26.89",
+        "priceValue": 26.89,
+        "rating": 4.6,
+        "ratingsTotal": 1280
+      },
+      {
+        "asin": "B09VTGDL1X",
+        "title": "RAINDEWAY Tarps 8x10Ft 5.5 Mil Multipurpose Waterproof Poly Tarp Cover | UV Resistant,Finished Size,Grommets Every 36in,Reinforced Edges,Indoor and Outdoor Use,Silver/Blue",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.4,
+        "ratingsTotal": 3310
+      },
+      {
+        "asin": "B0CR6TXVBZ",
+        "title": "Waterproof Camping Tarp - 10X10ft Hammock Rain Fly, Ultralight & Portable & UV Protection Backpacking Tarp, Multifunctional for Outdoor Adventure, Hiking, Tent, Hammock",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 150
+      },
+      {
+        "asin": "B07T337P8Z",
+        "title": "Hammock Camping Tarp Rain Fly, Waterproof Tent Shelter Awning Sunshade Cloth Picnic Mat for Outdoor Hiking Beach Backpacking - Included Guy Lines & Stakes",
+        "price": "$13.49",
+        "priceValue": 13.49,
+        "rating": 4,
+        "ratingsTotal": 319
+      }
+    ]
   }
 }
