@@ -378,17 +378,15 @@ async function processMarkdown(content: string): Promise<string> {
   // it as the first line of every generated article.
   htmlContent = htmlContent.replace(/^\s*<h1>[\s\S]*?<\/h1>\s*/, "");
 
-  // A paragraph whose sole content is a (possibly bold) Amazon affiliate link
-  // is a buy CTA — the revenue mechanism of the whole page. As plain anchors
-  // they were visually indistinguishable from body text; render them as
-  // buttons instead. Inline links elsewhere in a paragraph are left alone.
-  htmlContent = htmlContent.replace(
-    /<p>(?:<strong>)?<a href="(https:\/\/www\.amazon\.com\/[^"]*?tag=camprally-20[^"]*?)">([\s\S]*?)<\/a>(?:<\/strong>)?<\/p>/g,
-    (_m, href, label) =>
-      `<p class="not-prose my-6"><a href="${href}" target="_blank" rel="nofollow noopener sponsored" ` +
-      `class="inline-flex h-11 items-center gap-2 bg-camp-ember px-6 text-[0.9375rem] font-semibold text-white no-underline transition-colors hover:bg-camp-ember-deep">` +
-      `${label}<span aria-hidden="true">&nbsp;→</span></a></p>`,
-  );
+  /* One product, one button.
+   *
+   * The passes below each recognise a different shape the generator has used
+   * over time, and an article can contain more than one of them for the SAME
+   * product — a "### Check the X on Amazon" heading followed by a paragraph
+   * that links X again. Buttoning both put two identical CTAs a line apart on
+   * every product in the older articles. The heading is the canonical slot, so
+   * it claims the href first and the paragraph passes defer to it. */
+  const buttoned = new Set<string>();
 
   // The generated pick headings embed the affiliate link in the heading itself
   // ("### 2. Check the NAME on Amazon"). A link styled as heading text is not
@@ -404,12 +402,88 @@ async function processMarkdown(content: string): Promise<string> {
         .replace(/^check\s+(?:the|out)?\s*/i, "")
         .replace(/[\s,.]*on amazon[\s.]*$/i, "")
         .trim();
+      buttoned.add(href);
       return (
         `<h${lvl}${attrs}>${before}${name}${after}</h${lvl}>` +
         `<p class="not-prose my-4"><a href="${href}" target="_blank" rel="nofollow noopener sponsored" ` +
         `class="inline-flex h-11 items-center gap-2 bg-camp-ember px-6 text-[0.9375rem] font-semibold text-white no-underline transition-colors hover:bg-camp-ember-deep">` +
         `Check price on Amazon<span aria-hidden="true">&nbsp;→</span></a></p>`
       );
+    },
+  );
+
+  const buyButton = (href: string, label: string) =>
+    `<p class="not-prose my-6"><a href="${href}" target="_blank" rel="nofollow noopener sponsored" ` +
+    `class="inline-flex h-11 items-center gap-2 bg-camp-ember px-6 text-[0.9375rem] font-semibold text-white no-underline transition-colors hover:bg-camp-ember-deep">` +
+    `${label}<span aria-hidden="true">&nbsp;→</span></a></p>`;
+
+  /* An Amazon affiliate link that ENDS a paragraph is a buy CTA and gets a
+   * button. It is the revenue mechanism of the page, and as a plain anchor it
+   * is indistinguishable from body text.
+   *
+   * THIS USED TO REQUIRE THE LINK TO BE THE WHOLE PARAGRAPH, AND THE GENERATOR
+   * STOPPED WRITING THEM THAT WAY. Its current shape is a sentence of prose
+   * followed by the CTA — "…you are paying for inverter headroom rather than
+   * extra capacity. **[Check the X on Amazon](url)**" — which matched neither
+   * this pass nor the heading pass below. Every pipeline-written article was
+   * shipping with ZERO buy buttons: the newest guide had 12 affiliate links and
+   * not one of them looked clickable, while an older hand-written article had
+   * ten buttons. Nothing failed; the money just quietly stopped being asked for.
+   *
+   * Matching is per-paragraph — the inner pattern is applied to one paragraph's
+   * contents at a time — because a `[\s\S]*?` prefix in a single regex lazily
+   * crosses `</p>` and swallows whole sections, which is the same trap already
+   * documented on the heading pass.
+   *
+   * Only a TRAILING link is lifted. A link genuinely mid-sentence is part of the
+   * prose and stays inline, where moving it would break the sentence around it. */
+  htmlContent = htmlContent.replace(
+    /<p>((?:(?!<\/p>)[\s\S])*)<\/p>/g,
+    (whole, inner: string) => {
+      const m = inner.match(
+        /^([\s\S]*?)\s*(?:<strong>)?<a href="(https:\/\/www\.amazon\.com\/[^"]*?tag=camprally-20[^"]*?)">([\s\S]*?)<\/a>(?:<\/strong>)?\s*$/,
+      );
+      if (!m) return whole;
+      const [, prose, href, label] = m;
+      if (buttoned.has(href)) return whole;
+      const text = label.replace(/<[^>]+>/g, "").trim();
+      buttoned.add(href);
+      return (prose.trim() ? `<p>${prose.trim()}</p>` : "") + buyButton(href, text);
+    },
+  );
+
+  /* The generator's other shape puts the link MID-sentence, and uses the CTA
+   * phrasing as the link text, so the sentence reads:
+   *
+   *   "The **Check the Mountain House Beef Lasagna on Amazon** covers nine
+   *    generous servings."
+   *
+   * which is not English. The author clearly meant the product NAME there. So
+   * the anchor keeps its place in the sentence but is relabelled to the bare
+   * name, and the CTA it was impersonating becomes a real button after the
+   * paragraph — the same split the heading pass performs, for the same reason.
+   *
+   * Gated on the label actually being that boilerplate. A link whose text is
+   * already a product name, or any other inline reference, is deliberate prose
+   * and is left exactly as it is. */
+  const CTA_LABEL = /^check\s+(?:the\s+|out\s+)?([\s\S]+?)[\s,.]*on\s+amazon[\s.]*$/i;
+  htmlContent = htmlContent.replace(
+    /<p>((?:(?!<\/p>)[\s\S])*)<\/p>/g,
+    (whole, inner: string) => {
+      if (inner.includes("not-prose")) return whole;
+      const m = inner.match(
+        /<a href="(https:\/\/www\.amazon\.com\/[^"]*?tag=camprally-20[^"]*?)">([\s\S]*?)<\/a>/,
+      );
+      if (!m) return whole;
+      const [anchor, href, label] = m;
+      const named = label.replace(/<[^>]+>/g, "").trim().match(CTA_LABEL);
+      if (!named) return whole;
+      const relabelled = inner.replace(anchor, `<a href="${href}" target="_blank" rel="nofollow noopener sponsored">${named[1].trim()}</a>`);
+      /* The relabel happens either way — the sentence is ungrammatical
+       * regardless of whether a button already exists elsewhere for it. */
+      if (buttoned.has(href)) return `<p>${relabelled}</p>`;
+      buttoned.add(href);
+      return `<p>${relabelled}</p>` + buyButton(href, "Check price on Amazon");
     },
   );
 

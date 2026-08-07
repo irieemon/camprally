@@ -2,7 +2,7 @@
 
 import { Suspense, useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { articles } from "@/data/articles";
+import { articles, byNewest } from "@/data/articles";
 import { populatedGroups, groupCounts, matchesCategory } from "@/data/categories";
 import ArticleCard from "@/components/ArticleCard";
 import { Search, X } from "lucide-react";
@@ -33,7 +33,7 @@ function BlogIndex() {
      * newer the article, the harder it was to find. `camping-fire-starting-guide`
      * went live and landed at index 27 of 28, page 4 of 4, linked from nowhere
      * else on the site. */
-    let result = [...articles].sort((a, b) => b.date.localeCompare(a.date));
+    let result = [...articles].sort(byNewest);
     if (activeCategory) {
       result = result.filter((a) => matchesCategory(a.category, activeCategory));
     }

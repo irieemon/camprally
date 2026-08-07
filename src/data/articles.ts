@@ -10,6 +10,25 @@ export interface Article {
   readTime: string;
 }
 
+/**
+ * Newest first — the order every listing on this site wants.
+ *
+ * `date` is day-granularity, and this site publishes up to three times a day,
+ * so same-day articles tie. Every listing sorted on date alone, and JS sorts
+ * are stable, so ties held their array order — which is publish order ascending.
+ * The effect was that the NEWEST article sank to the BOTTOM of its own day:
+ * three went live on 2026-08-06 and the one published last showed up third,
+ * under two older ones, on the blog index and the homepage both.
+ *
+ * `id` is assigned by the publisher in strictly increasing order (art-029,
+ * art-030, art-031) and is zero-padded, so a plain string compare orders it
+ * correctly and keeps doing so to art-999. Using it as the tiebreak needs no
+ * new field and no backfill of the 31 articles that already exist — a
+ * publishedAt timestamp would have to be invented for every one of them.
+ */
+export const byNewest = (a: Article, b: Article) =>
+  b.date.localeCompare(a.date) || b.id.localeCompare(a.id);
+
 export const articles: Article[] = [
   {
     id: "art-002",

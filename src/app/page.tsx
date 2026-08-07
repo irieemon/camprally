@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { articles } from "@/data/articles";
+import { articles, byNewest } from "@/data/articles";
 import { populatedGroups, groupCounts } from "@/data/categories";
 import { getHeroImage } from "@/data/heroes";
 import ArticleCard from "@/components/ArticleCard";
@@ -8,6 +8,11 @@ import NewsletterForm from "@/components/NewsletterForm";
 import { PrintablesSection } from "@/components/Printables";
 import { MerchSection } from "@/components/Merch";
 import type { Metadata } from "next";
+
+import {
+  Tent, Flame, Compass, Map as MapIcon, Moon, Shirt, Armchair, ShieldPlus,
+  BadgeCheck, Wallet, Sprout, ArrowRight,
+} from "lucide-react";
 
 /* Title and description come from the root layout; this exists only to state
  * the canonical, which the layout deliberately does not set. */
@@ -17,10 +22,6 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
-import {
-  Tent, Flame, Compass, Map as MapIcon, Moon, Shirt, Armchair, ShieldPlus,
-  BadgeCheck, Wallet, Sprout, ArrowRight,
-} from "lucide-react";
 
 // Aliased on import: lucide exports a `Map` icon, which shadows the global Map
 // constructor used below and turns `new Map(...)` into a type error.
@@ -65,7 +66,7 @@ export default function Home() {
    * the grid is always a full three columns. */
   const filler = articles
     .filter((a) => !featuredSlugs.includes(a.slug))
-    .sort((a, b) => b.date.localeCompare(a.date));
+    .sort(byNewest);
   const lead = [...featured, ...filler].slice(0, 6);
 
   /* The newest guides, derived rather than curated.
@@ -81,7 +82,7 @@ export default function Home() {
    * into `featured` does not appear twice, and this row never needs editing. */
   const leadSlugs = new Set(lead.map((a) => a.slug));
   const latest = [...articles]
-    .sort((a, b) => b.date.localeCompare(a.date))
+    .sort(byNewest)
     .filter((a) => !leadSlugs.has(a.slug))
     .slice(0, 3);
 
