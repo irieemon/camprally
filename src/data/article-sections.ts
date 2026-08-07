@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "camping-with-dogs-checklist": [
+    {
+      type: "product-grid",
+      title: "Complete Camping With Dogs Checklist — What to Bring, What to Skip — Quick Comparison",
+      items: [
+        { label: "Cibaabo Dog Water Bottle Portable ", category: "", icon: "🏕️", asin: "B0C7WHRQ4Y", link: "https://www.amazon.com/dp/B0C7WHRQ4Y?tag=camprally-20" },
+        { label: "Kytely Large Collapsible Dog Bowls", category: "", icon: "🏕️", asin: "B08925JCB9", link: "https://www.amazon.com/dp/B08925JCB9?tag=camprally-20" },
+        { label: "Original Doggy Bag™ Dog Travel Bag", category: "", icon: "🏕️", asin: "B09GQRK5GL", link: "https://www.amazon.com/dp/B09GQRK5GL?tag=camprally-20" },
+        { label: "6 Set Dog Travel Bag", category: "", icon: "🏕️", asin: "B08XJ2QLZ2", link: "https://www.amazon.com/dp/B08XJ2QLZ2?tag=camprally-20" },
+        { label: "FXW Dog Playpen Storage Bag", category: "", icon: "🏕️", asin: "B0C6KCV3BS", link: "https://www.amazon.com/dp/B0C6KCV3BS?tag=camprally-20" },
+        { label: "Wilderdog Dog Bandana with Lightwe", category: "", icon: "🏕️", asin: "B0C5KBDBLL", link: "https://www.amazon.com/dp/B0C5KBDBLL?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camp-kitchen-organization": [
     {
       type: "product-grid",

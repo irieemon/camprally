@@ -3,6 +3,58 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "trailhead-morning",
+      "name": "Trailhead Morning",
+      "subtitle": "everything you need on your back",
+      "image": "/images/merch/trailhead-morning.jpg",
+      "imageKey": "6a7612a7315b70886e4cfbed::2026-08-07T17:15:46.309Z",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-08-07T17:16:32.074Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/30737467",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/30737475",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/30737477",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/30737484",
+          "priceCents": 2699,
+          "price": "$26.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/30737488",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": true
+        }
+      ]
+    },
+    {
       "slug": "starry-night-tent",
       "name": "Starry Night Tent",
       "subtitle": "no ceiling but the sky",
