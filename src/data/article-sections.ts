@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-tarp-under-30": [
+    {
+      type: "product-grid",
+      title: "Best Camping Tarps Under $30 — Extra Shelter Without the Price Tag — Quick Comparison",
+      items: [
+        { label: "RAINDEWAY Tarp 8x10 Feet", category: "", icon: "🏕️", asin: "B0DSSLFGJ8", link: "https://www.amazon.com/dp/B0DSSLFGJ8?tag=camprally-20" },
+        { label: "Amazon Basics Waterproof Multipurp", category: "", icon: "🏕️", asin: "B0748HGDVD", link: "https://www.amazon.com/dp/B0748HGDVD?tag=camprally-20" },
+        { label: "CARTMAN 8x10Ft Multipurpose Waterp", category: "", icon: "🏕️", asin: "B089PY2LCV", link: "https://www.amazon.com/dp/B089PY2LCV?tag=camprally-20" },
+        { label: "CARTMAN 6x8Ft Multipurpose Waterpr", category: "", icon: "🏕️", asin: "B0BTLZBWQK", link: "https://www.amazon.com/dp/B0BTLZBWQK?tag=camprally-20" },
+        { label: "CARTMAN 10x12Ft Multipurpose Water", category: "", icon: "🏕️", asin: "B089Q18CCZ", link: "https://www.amazon.com/dp/B089Q18CCZ?tag=camprally-20" },
+        { label: "Unigear Hammock Rain Fly Waterproo", category: "", icon: "🏕️", asin: "B07F8854P2", link: "https://www.amazon.com/dp/B07F8854P2?tag=camprally-20" },
+      ]
+    },
+  ],
   "camping-with-dogs-checklist": [
     {
       type: "product-grid",
