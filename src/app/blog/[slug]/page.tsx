@@ -596,6 +596,39 @@ export default async function ArticlePage({ params }: Props) {
   const customSections = getCustomSections(slug);
   const heroImage = getHeroImage(slug);
 
+  /* The article's own recommendations, for the closing CTA.
+   *
+   * That CTA used to be a single "Shop on Amazon" button pointing at
+   * amazon.com — the storefront homepage — on every one of the 32 articles. It
+   * is the last thing a reader sees after a full guide, the point of highest
+   * intent, and it dropped them somewhere they would have to start their search
+   * over. Ten articles had no product link anywhere in their body, so this was
+   * their only body-level CTA and it named no product at all.
+   *
+   * Built from the article's OWN curated products — the grid and spotlight it
+   * already renders — so nothing is invented and it cannot drift from what the
+   * page recommends. Unpriced products are dropped rather than shown with a
+   * "Check price" placeholder: this is a buy prompt, and the site's rule is
+   * that a figure is live or absent. Capped at three so a long comparison does
+   * not end in a wall of buttons.
+   */
+  const ctaProducts = (() => {
+    const refs: Array<{ ref?: string; label?: string }> = [];
+    for (const sec of customSections) {
+      for (const it of sec.items ?? []) refs.push({ ref: it.asin ?? it.link, label: it.label });
+      if (sec.spotlightItem) refs.push({ ref: sec.spotlightItem.asin, label: sec.spotlightItem.name });
+    }
+    const seen = new Set<string>();
+    const out: Array<{ url: string; label: string; price: string }> = [];
+    for (const r of refs) {
+      const live = withLivePrice(productFor(r.ref));
+      if (!live?.url || !live.price || seen.has(live.asin)) continue;
+      seen.add(live.asin);
+      out.push({ url: live.url, label: r.label ?? live.title, price: live.price });
+    }
+    return out.slice(0, 3);
+  })();
+
   /* Live replacement for a headline "total cost" stat. Asserted only when every
    * product in the article's grid has a current price — a total built from a
    * mix of live and months-old figures is not a total of anything. */
@@ -734,15 +767,37 @@ export default async function ArticlePage({ params }: Props) {
               We test every piece of gear we recommend. As an Amazon Associate,
               we earn from qualifying purchases — at no extra cost to you.
             </p>
-            <a
-              href="https://www.amazon.com?tag=camprally-20"
-              target="_blank"
-              rel="nofollow noopener"
-              className="mt-5 inline-flex h-12 items-center gap-2 bg-camp-ember px-7 font-semibold text-white transition-colors hover:bg-camp-ember-deep"
-            >
-              Shop on Amazon
-              <ExternalLink className="size-4" />
-            </a>
+            {ctaProducts.length ? (
+              <ul className="mt-5 flex flex-col gap-2">
+                {ctaProducts.map((p) => (
+                  <li key={p.url}>
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="nofollow noopener sponsored"
+                      className="group flex h-12 items-center justify-between gap-4 bg-camp-ember px-5 font-semibold text-white transition-colors hover:bg-camp-ember-deep"
+                    >
+                      <span className="truncate">{p.label}</span>
+                      <span className="flex shrink-0 items-center gap-2">
+                        {p.price}
+                        <ExternalLink className="size-4" />
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              /* Articles with no products of their own — the pure how-to
+                 pieces — send the reader to the guides rather than to a
+                 storefront they did not ask for. */
+              <Link
+                href="/blog"
+                className="mt-5 inline-flex h-12 items-center gap-2 border border-camp-stone bg-background px-7 font-semibold text-foreground transition-colors hover:border-camp-green hover:text-camp-green"
+              >
+                Browse the gear guides
+                <ArrowLeft className="size-4 rotate-180" />
+              </Link>
+            )}
           </div>
         </article>
 
