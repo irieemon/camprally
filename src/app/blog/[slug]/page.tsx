@@ -487,6 +487,32 @@ async function processMarkdown(content: string): Promise<string> {
     },
   );
 
+  /* The generator's fourth and best shape: the link sits mid-sentence with the
+   * PRODUCT NAME as its text — "The [FLY2SKY Camping Lights](url) clip onto
+   * tent loops…". That prose is correct and must not be touched, which is why
+   * the relabel pass above deliberately skips it. But the article still had no
+   * buy button anywhere in its body: every affiliate link was an ordinary
+   * green inline word, and the whole guide converted on the product grid alone.
+   *
+   * So the sentence is left exactly as written and a button is appended after
+   * the paragraph. Deduplication means a product already buttoned by one of the
+   * passes above does not get a second one here, which is what keeps this from
+   * carpeting the older articles in CTAs. */
+  htmlContent = htmlContent.replace(
+    /<p>((?:(?!<\/p>)[\s\S])*)<\/p>/g,
+    (whole, inner: string) => {
+      if (inner.includes("not-prose")) return whole;
+      const m = inner.match(
+        /<a href="(https:\/\/www\.amazon\.com\/[^"]*?tag=camprally-20[^"]*?)">/,
+      );
+      if (!m) return whole;
+      const href = m[1];
+      if (buttoned.has(href)) return whole;
+      buttoned.add(href);
+      return whole + buyButton(href, "Check price on Amazon");
+    },
+  );
+
   // Add anchor IDs to h2 headings
   const headingMatches = htmlContent.matchAll(/<h2([^>]*)>(.*?)<\/h2>/g) || [];
   const toc: { text: string; id: string }[] = [];
