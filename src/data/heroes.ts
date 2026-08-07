@@ -75,6 +75,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "dispersed-camping-beginners-guide": "/images/heroes/dispersed-camping-beginners-guide.jpg",
   "camping-meal-plans-budget-50": "/images/heroes/camping-meal-plans-budget-50.jpg",
   "best-portable-power-station-camping-under-200": "/images/heroes/best-portable-power-station-camping-under-200.jpg",
+  "best-camp-kitchen-organization": "/images/heroes/best-camp-kitchen-organization.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

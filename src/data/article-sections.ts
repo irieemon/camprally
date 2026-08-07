@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camp-kitchen-organization": [
+    {
+      type: "product-grid",
+      title: "Best Camp Kitchen Organization — Pack, Cook, and Clean Smarter — Quick Comparison",
+      items: [
+        { label: "GCI OUTDOOR Slim-Fold Cook Station", category: "", icon: "🏕️", asin: "B00U9BHKM6", link: "https://www.amazon.com/dp/B00U9BHKM6?tag=camprally-20" },
+        { label: "Kitchen Gadgets Set", category: "", icon: "🏕️", asin: "B08CXQ1HV9", link: "https://www.amazon.com/dp/B08CXQ1HV9?tag=camprally-20" },
+        { label: "Coleman Triton 2-Burner Propane St", category: "", icon: "🏕️", asin: "B09HN1C1YJ", link: "https://www.amazon.com/dp/B09HN1C1YJ?tag=camprally-20" },
+        { label: "GCI OUTDOOR Master Cook Station | ", category: "", icon: "🏕️", asin: "B07C3WK867", link: "https://www.amazon.com/dp/B07C3WK867?tag=camprally-20" },
+        { label: "HOSHANHO Butcher Knife Set", category: "", icon: "🏕️", asin: "B0DB4W8FB1", link: "https://www.amazon.com/dp/B0DB4W8FB1?tag=camprally-20" },
+        { label: "Folding Camping Table", category: "", icon: "🏕️", asin: "B0DPW7RFC7", link: "https://www.amazon.com/dp/B0DPW7RFC7?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-portable-power-station-camping-under-200": [
     {
       type: "product-grid",
