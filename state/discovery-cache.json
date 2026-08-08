@@ -3072,5 +3072,109 @@
         "ratingsTotal": 319
       }
     ]
+  },
+  "trekking poles|1|40": {
+    "term": "trekking poles",
+    "min": 1,
+    "max": 40,
+    "fetchedAt": "2026-08-08T13:00:05.203Z",
+    "results": [
+      {
+        "asin": "B01MRQCENJ",
+        "title": "TrailBuddy Trekking Poles – Lightweight 7075 Aluminum Hiking Poles for Women, Men & Seniors – Collapsible Walking Sticks for Travel, Trails & Balance",
+        "price": "$39.89",
+        "priceValue": 39.89,
+        "rating": 4.7,
+        "ratingsTotal": 63767
+      },
+      {
+        "asin": "B08DNR9ZQQ",
+        "title": "Trekking Poles 7075 Aluminum Lightweight Hiking Sticks | Natural Cork Grip, EVA Support, Flip Lock System, Terrain Accessories, Hiking & Walking Trails",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.7,
+        "ratingsTotal": 3095
+      },
+      {
+        "asin": "B01L2HYPNW",
+        "title": "Cascade Mountain Tech Lightweight Aircraft-Grade Aluminum Trekking Poles with Extended Down Grip Plus Tip Kit",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 14357
+      },
+      {
+        "asin": "B07Z7VGXH8",
+        "title": "Telescopic Trekking Poles for Hiking, Anti-Shock Nordic Walking Sticks | Hiking Poles Collapsible Lightweight & Durable, Adjustable from 25.6\"-51.2\" for Men & Women, Camping backpacking Snowshoeing",
+        "price": "$24.98",
+        "priceValue": 24.98,
+        "rating": 4.5,
+        "ratingsTotal": 17956
+      },
+      {
+        "asin": "B0D6W3HV5Q",
+        "title": "Hiking Poles, Trekking Poles for Hiking, Lightweight Aluminum Adjustable | 2 Pack, Telescoping, Retractable, Hiking Sticks, Walking Sticks for Hiking, Women, Men, Seniors, Skiing",
+        "price": "$20.99",
+        "priceValue": 20.99,
+        "rating": 4.5,
+        "ratingsTotal": 244
+      },
+      {
+        "asin": "B0FPFFC5DK",
+        "title": "Amazon Basics Trekking Poles, Lightweight Collapsible Hiking Sticks with Quick Lock, EVA Grip & All-Terrain Accessories, Adjustable Aluminum, Black, 53in",
+        "price": "$25.91",
+        "priceValue": 25.91,
+        "rating": 4.5,
+        "ratingsTotal": 180
+      },
+      {
+        "asin": "B0828249SY",
+        "title": "A ALAFEN 7075 Aluminum Collapsible Ultralight Trekking Pole | Fit Height 5'3\" - 6'2\", Collapsible to 13.4in, Quick Lock, Adjustable 43-49in, for Hiking, Travel, Trekking, Men & Women",
+        "price": "$21.99",
+        "priceValue": 21.99,
+        "rating": 4.4,
+        "ratingsTotal": 5418
+      },
+      {
+        "asin": "B09LCL79GK",
+        "title": "Hiking Poles Collapsible Lightweight-Aluminum 7075 Trekking Poles | 2 Pcs Hiking Sticks Telescopic & Foldable with Quick Lock, Adjustable Height 39-47\"/43-51\", Impact-Resistant, for Men/Women",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.4,
+        "ratingsTotal": 4467
+      },
+      {
+        "asin": "B0B6H9N3ST",
+        "title": "Hiking Poles, 7075 Aluminum Tri-fold, Adjustable Height, 2PCS | Collapsible, Lightweight, Joint Protection, Balance Support for Seniors, Sweat-absorbent Foam Grip, for Backpacking/Outdoor",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.4,
+        "ratingsTotal": 1191
+      },
+      {
+        "asin": "B0D7MG1N3J",
+        "title": "GPTCAMP Collapsible Hiking Trekking Poles with Cork EVA Grips | Adjustable Height, Compact Travel Design, Aircraft-Grade Aluminum, Walking Sticks for Men & Women, 2pc Per Set",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.4,
+        "ratingsTotal": 766
+      },
+      {
+        "asin": "B0CDWMYWJ1",
+        "title": "Trekking Poles Collapsible Hiking Poles, Lightweight Aluminum Hiking Sticks | Quick-Lock, Anti-Shock, Adjustable Walking Sticks, 2 Pack for Men, Women, Seniors, Kids, Backpacking by Underwood Aggregator",
+        "price": "$22.79",
+        "priceValue": 22.79,
+        "rating": 4.4,
+        "ratingsTotal": 561
+      },
+      {
+        "asin": "B0BLKM51YT",
+        "title": "AISUNOURDOOR Lightweight Adjustable Trekking Poles, Aluminum Collapsible Travel Hiking or Walking Sticks for Women Children, with One Disposable Raincoat",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.4,
+        "ratingsTotal": 285
+      }
+    ]
   }
 }
