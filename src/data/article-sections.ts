@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "camping-bug-tick-prevention-spring": [
+    {
+      type: "product-grid",
+      title: "Camping Bug + Tick Prevention for Spring — Permethrin, DEET, and What Actually Works — Quick Comparison",
+      items: [
+        { label: "Off! Deep Woods Insect Repellent A", category: "", icon: "🏕️", asin: "B07D82N3MZ", link: "https://www.amazon.com/dp/B07D82N3MZ?tag=camprally-20" },
+        { label: "Repel Sportsmen Max Mosquito & Ins", category: "", icon: "🏕️", asin: "B0FKQ2YP2C", link: "https://www.amazon.com/dp/B0FKQ2YP2C?tag=camprally-20" },
+        { label: "Tick Remover Value 3 Pack - Tick R", category: "", icon: "🏕️", asin: "B07D6J52JJ", link: "https://www.amazon.com/dp/B07D6J52JJ?tag=camprally-20" },
+        { label: "Premium Tick Remover Kit - Stainle", category: "", icon: "🏕️", asin: "B075DKL3Z6", link: "https://www.amazon.com/dp/B075DKL3Z6?tag=camprally-20" },
+        { label: "OFF! Deep Woods Mosquito and Insec", category: "", icon: "🏕️", asin: "B0009EXM3E", link: "https://www.amazon.com/dp/B0009EXM3E?tag=camprally-20" },
+        { label: "Boogie Insect Repellent Lotion for", category: "", icon: "🏕️", asin: "B0BTR2DTWM", link: "https://www.amazon.com/dp/B0BTR2DTWM?tag=camprally-20" },
+      ]
+    },
+  ],
   "memorial-day-camping-checklist-2026": [
     {
       type: "product-grid",
