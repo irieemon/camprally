@@ -412,6 +412,40 @@ async function processMarkdown(content: string): Promise<string> {
     },
   );
 
+  /* A BARE affiliate URL sitting in a heading, with no markdown link around it:
+   *
+   *   ### Zonon RV Checklist Board (Single Pack) — https://www.amazon.com/dp/…
+   *
+   * The generator hands the writer an `AMZ_n` token and asks for it inside
+   * `[…](AMZ_n)`; when the writer instead drops the bare token after an em-dash,
+   * substitution turns it into a naked URL and every pass above misses it — they
+   * all key on an <a>, and there is no <a> here. It renders as a wall of
+   * query-string in the middle of an h3, which is what a reader actually sees.
+   *
+   * The URL is removed from the heading and a placeholder is left in its place.
+   * It is NOT buttoned here: the same product is usually linked properly at the
+   * end of its section a few lines later, and buttoning both would put two
+   * identical CTAs on top of each other. The placeholder resolves after the
+   * passes below have had their chance — to nothing if one of them claimed the
+   * href, and to a button only if the heading was the sole reference. */
+  const pendingHeadingCtas: string[] = [];
+  htmlContent = htmlContent.replace(
+    /<h([23])([^>]*)>([^<]*)<\/h\1>/g,
+    (whole, lvl, attrs, text: string) => {
+      const m = text.match(
+        /^([\s\S]*?)[\s—–-]*(https:\/\/www\.amazon\.com\/\S*?tag=camprally-20\S*)\s*$/,
+      );
+      if (!m) return whole;
+      const [, name, href] = m;
+      if (!name.trim()) return whole;
+      pendingHeadingCtas.push(href);
+      return (
+        `<h${lvl}${attrs}>${name.trim()}</h${lvl}>` +
+        `<!--amzcta:${pendingHeadingCtas.length - 1}-->`
+      );
+    },
+  );
+
   const buyButton = (href: string, label: string) =>
     `<p class="not-prose my-6"><a href="${href}" target="_blank" rel="nofollow noopener sponsored" ` +
     `class="inline-flex h-11 items-center gap-2 bg-camp-ember px-6 text-[0.9375rem] font-semibold text-white no-underline transition-colors hover:bg-camp-ember-deep">` +
@@ -512,6 +546,17 @@ async function processMarkdown(content: string): Promise<string> {
       return whole + buyButton(href, "Check price on Amazon");
     },
   );
+
+  /* Resolve the heading placeholders now that every pass has claimed what it
+   * was going to claim. A href another pass already buttoned leaves nothing
+   * behind; one that appeared ONLY in the heading gets the button it would
+   * otherwise have lost when the bare URL was stripped. */
+  htmlContent = htmlContent.replace(/<!--amzcta:(\d+)-->/g, (_m, i: string) => {
+    const href = pendingHeadingCtas[Number(i)];
+    if (!href || buttoned.has(href)) return "";
+    buttoned.add(href);
+    return buyButton(href, "Check price on Amazon");
+  });
 
   // Add anchor IDs to h2 headings
   const headingMatches = htmlContent.matchAll(/<h2([^>]*)>(.*?)<\/h2>/g) || [];

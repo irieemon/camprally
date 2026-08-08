@@ -302,8 +302,12 @@ const system = [
   "- Include a short section on how to choose, then the picks, then a verdict.",
 ].join("\n");
 
+/* Deliberately NOT "<name>  — token AMZ_n". That was the old shape, and the
+ * writer mirrored the line back as its heading — "### <name> — AMZ_5" — putting
+ * the bare token where a link should be. The instruction format is the strongest
+ * example in the prompt; make it look nothing like a heading. */
 const productLines = products
-  .map((p, i) => `  ${i + 1}. ${p.title}  — link with the exact token AMZ_${i + 1}`)
+  .map((p, i) => `  ${i + 1}. ${p.title}\n     token: AMZ_${i + 1}`)
   .join("\n");
 
 const user = [
@@ -314,6 +318,9 @@ const user = [
   "",
   "Products to feature, in this order. Link each exactly once using its token,",
   "in Markdown form: **[Check the <name> on Amazon](AMZ_n)**",
+  "A token is ONLY ever valid inside the parentheses of a Markdown link. Never",
+  "write a bare token in a heading or in prose — a heading is the product name",
+  "and nothing else.",
   productLines,
   "",
   "End with a short italic line linking to related guides using relative paths",
@@ -373,8 +380,41 @@ let body = gen.value;
 body = body.replace(/^```[a-z]*\n?/gm, "").replace(/```$/gm, "").trim();
 body = body.replace(/`/g, "'"); // template-literal safety
 
+/* The writer is asked for `**[Check the <name> on Amazon](AMZ_n)**` and does not
+ * always comply. On memorial-day-camping-checklist-2026 it dropped the BARE
+ * token into each pick's heading — "### Zonon RV Checklist Board — AMZ_5" — and
+ * substitution turned that into a naked affiliate URL sitting in an h3, ninety
+ * characters of query-string where a product name should end. Nothing caught
+ * it: the leftover check below only looks for tokens that SURVIVED
+ * substitution, and this one did not survive, it was consumed into a URL.
+ *
+ * A heading is repaired rather than regenerated — the product name in front of
+ * the token is already right, and the section's closing paragraph carries the
+ * properly-linked CTA — so the token is simply dropped. A bare token anywhere
+ * else fails the run: guessing where a link belongs mid-prose is not repair. */
+/* [ \t] and not \s on both sides. \s matches a newline, and under /m the `$`
+ * happily sits at the end of the FOLLOWING blank line, so a greedy trailing
+ * \s* swallows the blank line that separates the heading from its paragraph. */
+body = body.replace(/^(#{1,6} .+?)[ \t]*[—–-]?[ \t]*AMZ_\d+[ \t]*$/gm, "$1");
+
+const unlinked = body.match(/(?<!\]\()AMZ_\d+/g);
+if (unlinked) {
+  console.error(
+    `model used token(s) outside markdown link syntax: ${[...new Set(unlinked)].join(", ")}`,
+  );
+  process.exit(EXIT.FAIL);
+}
+
+/* Bounded on both sides. A plain replaceAll("AMZ_1", …) also rewrites the
+ * "AMZ_1" inside "AMZ_10", leaving the first product's URL followed by a
+ * stray "0" — which lands in the query string as tag=camprally-200 and quietly
+ * unattributes the click. Only bites at ten or more products, which the longer
+ * roundup briefs do reach. */
 products.forEach((p, i) => {
-  body = body.replaceAll(`AMZ_${i + 1}`, `https://www.amazon.com/dp/${p.asin}?tag=camprally-20`);
+  body = body.replace(
+    new RegExp(`\\bAMZ_${i + 1}\\b`, "g"),
+    `https://www.amazon.com/dp/${p.asin}?tag=camprally-20`,
+  );
 });
 
 const leftover = body.match(/AMZ_\d+/g);

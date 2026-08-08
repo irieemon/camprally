@@ -2492,37 +2492,37 @@ The first trip of the year is your diagnostic run. When you get home, spend ten 
 
 You can write your list on the back of a receipt and technically have a checklist. You'll just lose it. The picks below are purpose-built tools that turn the system above into something durable, reusable, and hard to lose in the shuffle.
 
-### Packing List - Note Pad (60 sheets) — https://www.amazon.com/dp/1441331913?tag=camprally-20
+### Packing List - Note Pad (60 sheets)
 
 A simple 60-sheet notepad is the most underrated piece of trip-planning gear you can own. The value here is portability: it lives on the kitchen counter a week before the trip, lives on the dashboard during the drive, and gets tossed in the gear bin when you unload. Because it's a notepad and not a phone app, the whole family can see it, write on it, and check things off without a charger or signal.
 
 Use it for the trip-specific page: weather-driven items, meal plan, who's bringing what, the kid's snack count. When the trip is over, tear off the top sheet and tape it inside your master checklist binder so next year's list is already half-written. **[Check the Packing List - Note Pad on Amazon](https://www.amazon.com/dp/1441331913?tag=camprally-20)**
 
-### Ultimate RV Equipment Checklist - Reusable Laminated Chart — https://www.amazon.com/dp/B08FBT681W?tag=camprally-20
+### Ultimate RV Equipment Checklist - Reusable Laminated Chart
 
 If you're traveling in an RV, the packing list is the easy part — the hard part is the departure and arrival sequence. That's what a laminated departure chart is built for. Reusable means you slide a wet-erase marker across it every trip instead of reprinting the same PDF for the fourteenth time. Double-sided gives you room for both the leaving-the-house checklist and the setting-up-at-camp sequence, which is where most RV mishaps actually happen (awning out before slides in, jacks down before levelers checked, sewer hose connected before the valve is closed).
 
 Lamination also means it survives the cup-holder, the dashboard, the glovebox, and the inevitable coffee spill. Hang it near the door you actually walk out of and the system becomes self-enforcing. **[Check the Ultimate RV Equipment Checklist on Amazon](https://www.amazon.com/dp/B08FBT681W?tag=camprally-20)**
 
-### Heveboik Camping Journal and RV Travel Log Book — https://www.amazon.com/dp/B0D57CT8NJ?tag=camprally-20
+### Heveboik Camping Journal and RV Travel Log Book
 
 A camping journal is the long-game companion to your checklist. The journal is where you record what you actually did, where you stayed, what the weather did, and what you want to do differently next time. Over a couple of seasons, that record becomes more valuable than any list, because it reflects your real patterns — the campground you keep coming back to, the hike you'll never repeat, the cookware that was a mistake.
 
 The A5 size slips into a seatback pocket or a daypack. Use it the night of each camping day, not a week later when the details have blurred. Note the site number, the temperature swing, what you cooked, what gear failed, and one thing you want to remember. End-of-season, you'll have a private guidebook that beats any review site because it's tuned to your family. **[Check the Heveboik Camping Journal on Amazon](https://www.amazon.com/dp/B0D57CT8NJ?tag=camprally-20)**
 
-### Where Should We Camp Next? — https://www.amazon.com/dp/1728221692?tag=camprally-20
+### Where Should We Camp Next?
 
 The first trip of the season has a planning problem most lists ignore: where do you actually go? A 50-state guidebook solves the "we have three days and no idea" paralysis by giving you a shortlist per region, including a mix of tent, RV, and unique-stay options. The family-friendly framing matters too, because the first trip often includes a mixed-age group and you don't want to discover a five-mile rugged approach at the campground entrance.
 
 Use it during the winter planning phase to pick two or three candidate destinations, then narrow down based on weather and drive time as the trip approaches. Keep it in the car — the sidebars and short write-ups make it useful for spontaneous detours when your original plan falls through. **[Check the Where Should We Camp Next? guide on Amazon](https://www.amazon.com/dp/1728221692?tag=camprally-20)**
 
-### Zonon RV Checklist Board (Single Pack) — https://www.amazon.com/dp/B09DL27TRV?tag=camprally-20
+### Zonon RV Checklist Board (Single Pack)
 
 A dry-erase checklist board is the step up from a laminated chart when you want something more structured. The slider design lets you create reusable categories and physically move items as you complete them, which gives a weirdly satisfying sense of progress you don't get from crossing things off with a pen. For solo trips or smaller RVs, the single-pack option is enough — mount it near the entry door or on the inside of a cabinet.
 
 The big advantage over paper is accountability for other people in the party. Your partner, your kid, or your buddy can see what's left at a glance and grab the next item without asking you. That alone reduces pre-departure arguments by half. **[Check the Zonon RV Checklist Board (1 Pack) on Amazon](https://www.amazon.com/dp/B09DL27TRV?tag=camprally-20)**
 
-### Zonon RV Checklist Board (Two-Pack) — https://www.amazon.com/dp/B0FG26947G?tag=camprally-20
+### Zonon RV Checklist Board (Two-Pack)
 
 If you camp with family or run a bigger rig, the two-pack version lets you split the workload across locations. One board lives inside the RV for setup and breakdown steps, the other lives by the door at home for the leaving-the-house sequence. Splitting the list geographically means nobody is running back and forth through the rig during the 15-minute chaos of departure.
 
