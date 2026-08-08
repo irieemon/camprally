@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-budget-trekking-poles": [
+    {
+      type: "product-grid",
+      title: "Best Budget Trekking Poles Under $40 — Worth It or Waste? — Quick Comparison",
+      items: [
+        { label: "TrailBuddy Trekking Poles – Lightw", category: "", icon: "🏕️", asin: "B01MRQCENJ", link: "https://www.amazon.com/dp/B01MRQCENJ?tag=camprally-20" },
+        { label: "Trekking Poles 7075 Aluminum Light", category: "", icon: "🏕️", asin: "B08DNR9ZQQ", link: "https://www.amazon.com/dp/B08DNR9ZQQ?tag=camprally-20" },
+        { label: "Cascade Mountain Tech Lightweight ", category: "", icon: "🏕️", asin: "B01L2HYPNW", link: "https://www.amazon.com/dp/B01L2HYPNW?tag=camprally-20" },
+        { label: "Telescopic Trekking Poles for Hiki", category: "", icon: "🏕️", asin: "B07Z7VGXH8", link: "https://www.amazon.com/dp/B07Z7VGXH8?tag=camprally-20" },
+        { label: "Hiking Poles", category: "", icon: "🏕️", asin: "B0D6W3HV5Q", link: "https://www.amazon.com/dp/B0D6W3HV5Q?tag=camprally-20" },
+        { label: "Amazon Basics Trekking Poles", category: "", icon: "🏕️", asin: "B0FPFFC5DK", link: "https://www.amazon.com/dp/B0FPFFC5DK?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-tarp-under-30": [
     {
       type: "product-grid",
