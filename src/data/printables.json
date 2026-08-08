@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "rv-maintenance-log-book",
+      "title": "RV Maintenance Log Book",
+      "subtitle": "Keep every service, inspection, and repair organized so your RV stays road-ready mile after mile",
+      "price": "$5",
+      "priceCents": 500,
+      "pages": 12,
+      "url": "https://camprally.gumroad.com/l/rv-maintenance-log-book",
+      "image": "/images/printables/rv-maintenance-log-book.jpg"
+    },
+    {
       "slug": "camping-trip-planner",
       "title": "Complete Camping Trip Planner",
       "subtitle": "Turn scattered notes and worry into one organized binder that covers every trip from first idea to final campfire story.",

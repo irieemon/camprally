@@ -3,6 +3,58 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "alpine-lake-basin",
+      "name": "Alpine Lake Basin",
+      "subtitle": "worth every mile of the climb",
+      "image": "/images/merch/alpine-lake-basin.jpg",
+      "imageKey": "6a77645815aac885bd934bf9::2026-08-08T17:16:35.232Z",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-08-08T17:17:21.894Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/30762607",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/30762613",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/30762615",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/30762617",
+          "priceCents": 2699,
+          "price": "$26.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/30762619",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": true
+        }
+      ]
+    },
+    {
       "slug": "trailhead-morning",
       "name": "Trailhead Morning",
       "subtitle": "everything you need on your back",

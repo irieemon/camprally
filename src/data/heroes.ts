@@ -79,6 +79,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "camping-with-dogs-checklist": "/images/heroes/camping-with-dogs-checklist.jpg",
   "best-camping-tarp-under-30": "/images/heroes/best-camping-tarp-under-30.jpg",
   "best-budget-trekking-poles": "/images/heroes/best-budget-trekking-poles.jpg",
+  "memorial-day-camping-checklist-2026": "/images/heroes/memorial-day-camping-checklist-2026.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

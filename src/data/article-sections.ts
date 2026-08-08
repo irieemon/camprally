@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "memorial-day-camping-checklist-2026": [
+    {
+      type: "product-grid",
+      title: "Memorial Day Camping Checklist 2026 — Your First Trip of the Season — Quick Comparison",
+      items: [
+        { label: "Packing List - Note Pad (60 sheets", category: "", icon: "🏕️", asin: "1441331913", link: "https://www.amazon.com/dp/1441331913?tag=camprally-20" },
+        { label: "Ultimate RV Equipment Checklist - ", category: "", icon: "🏕️", asin: "B08FBT681W", link: "https://www.amazon.com/dp/B08FBT681W?tag=camprally-20" },
+        { label: "Heveboik Camping Journal and RV Tr", category: "", icon: "🏕️", asin: "B0D57CT8NJ", link: "https://www.amazon.com/dp/B0D57CT8NJ?tag=camprally-20" },
+        { label: "Where Should We Camp Next?: A 50-S", category: "", icon: "🏕️", asin: "1728221692", link: "https://www.amazon.com/dp/1728221692?tag=camprally-20" },
+        { label: "Zonon 1 Pack Rv Checklist Board to", category: "", icon: "🏕️", asin: "B09DL27TRV", link: "https://www.amazon.com/dp/B09DL27TRV?tag=camprally-20" },
+        { label: "Zonon 2 Pack Rv Checklist Board to", category: "", icon: "🏕️", asin: "B0FG26947G", link: "https://www.amazon.com/dp/B0FG26947G?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-budget-trekking-poles": [
     {
       type: "product-grid",
