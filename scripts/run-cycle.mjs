@@ -41,10 +41,17 @@ const SKIPS = `${ROOT}state/content-skips.json`;
 const PAUSE = `${homedir()}/.openclaw/workspace/state/pause.flag`;
 
 /* Runs that end without publishing are individually legitimate and collectively
- * a dead pipeline. Six is two full days at three cycles a day — long enough
+ * a dead pipeline. Six was two full days at three cycles a day — long enough
  * that a throttling spell or a same-day queue top-up passes unremarked, short
- * enough that nobody discovers the silence four months later. */
-const STALL_AFTER_RUNS = 6;
+ * enough that nobody discovers the silence four months later.
+ *
+ * The cadence dropped to one run a day on 2026-08-09, which turned those same
+ * six runs into six days. The threshold is a promise about WALL-CLOCK silence,
+ * not about run counts — run counts were only ever a proxy for it — so it moves
+ * to 3 to keep roughly the two-to-three day promise the number was chosen for.
+ * Keep this in step with the cron schedule and with STALE_HOURS in
+ * .github/scripts/liveness.mjs, which is coupled to the same cadence. */
+const STALL_AFTER_RUNS = 3;
 
 /* Two rejected drafts of the same article is enough. The model gets a second
  * attempt because regeneration is cheap and often lands clean, but a topic it

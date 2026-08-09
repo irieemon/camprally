@@ -22,25 +22,40 @@ import { sinceLastPublish, receipts } from "../../scripts/lib/run-history.mjs";
 
 /* Hours, not days.
  *
- * Three days was the original threshold and it is far too slack for a pipeline
- * that runs three times daily: nine missed cycles before anyone hears about it.
- * The binding constraint is the overnight gap — the 19:00 run to the 09:00 run
- * is 14 hours of legitimate silence — so 20 gives a margin over that without
- * waiting for a third day. */
-const STALE_HOURS = 20;
+ * Three days was the original threshold and far too slack. 20 replaced it when
+ * the pipeline ran three times daily and the binding constraint was the 14-hour
+ * overnight gap from the 19:00 run to the 09:00 run.
+ *
+ * THE CADENCE CHANGED ON 2026-08-09 — one run a day at 09:00, so the legitimate
+ * gap between heartbeats is now 24 hours and a 20-hour threshold would have
+ * opened a host-silent issue every single morning. 30 gives six hours of margin
+ * over the real gap and still catches a dead machine inside a day and a quarter.
+ *
+ * THIS NUMBER IS COUPLED TO THE CRON SCHEDULE. If the cycle ever goes back to
+ * three a day, or to every other day, this has to move with it. */
+const STALE_HOURS = 30;
 
 /* Consecutive non-publishing runs that mean stuck.
  *
  * Counted by "did anything publish", not by "was the outcome blocked". The old
  * test required all three of the last runs to be `blocked`, so a pipeline
  * alternating blocked / deferred / idle — which is what a quota exhaustion
- * actually looks like — never tripped it while publishing nothing for weeks. */
-const STUCK_RUNS = 6;
+ * actually looks like — never tripped it while publishing nothing for weeks.
+ *
+ * 6 -> 3 with the cadence change: six runs used to be two days and is now six.
+ * The point of the threshold is a wall-clock promise about how long the site
+ * can be quietly broken, and run counts only stand in for that while the
+ * schedule holds still. */
+const STUCK_RUNS = 3;
 
 /* Runs that committed and pushed but whose deploy never appeared. One is a slow
- * build; three in a row means Vercel is failing and the site is frozen at an
- * older commit while every local signal reports success. */
-const DEPLOY_FAIL_RUNS = 3;
+ * build; several in a row means Vercel is failing and the site is frozen at an
+ * older commit while every local signal reports success.
+ *
+ * 3 -> 2: at one run a day three of these is three days, and the 300s verify
+ * budget that produced most of the false ones was raised to 600s the same day,
+ * so an unverified deploy is now much more likely to be real. */
+const DEPLOY_FAIL_RUNS = 2;
 
 const out = [];
 const emit = (k, v) => out.push(`${k}=${String(v).replace(/\n/g, "%0A")}`);
