@@ -189,14 +189,14 @@
       "slug": "best-camping-socks",
       "title": "The Most Important Gear Most Campers Ignore: A Good Pair of Socks",
       "category": "Apparel",
-      "priority": "low",
+      "priority": "medium",
       "keywords": [
         "best camping socks",
         "wool socks camping",
         "hiking socks review"
       ],
       "heroKeyword": "camping socks",
-      "notes": "Evergreen, low ticket."
+      "notes": "Evergreen, low ticket. HAZARD-SENSITIVE — rejected twice by the content gate for saying cotton is 'comfortable' and a 'smart pick'. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent. Cotton appears ONLY as the material to avoid. Merino and synthetics carry the guide."
     },
     {
       "slug": "dispersed-camping-beginners-guide",
@@ -210,6 +210,396 @@
       ],
       "heroKeyword": "dispersed camping",
       "notes": "Evergreen, high search volume."
+    },
+    {
+      "slug": "labor-day-camping-weekend-guide",
+      "title": "Labor Day Camping 2026 — How to Get a Site and What to Pack",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": [
+        "labor day camping",
+        "labor day weekend camping",
+        "last minute campsite"
+      ],
+      "heroKeyword": "labor day campsite",
+      "notes": "IN SEASON: Labor Day is 2026-09-07. Lead with the booking-window problem — the weekend is the busiest of the year and most sites are gone. Practical, not gear-heavy."
+    },
+    {
+      "slug": "fall-camping-gear-essentials",
+      "title": "Fall Camping Gear — What Actually Changes When the Nights Get Cold",
+      "category": "Gear",
+      "priority": "high",
+      "keywords": [
+        "fall camping gear",
+        "autumn camping essentials",
+        "cold night camping gear"
+      ],
+      "heroKeyword": "fall camping tent",
+      "notes": "IN SEASON: Sept-Nov. Frame as what changes from summer kit, not a generic list. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-camping-blankets-under-40",
+      "title": "Best Camping Blankets Under $40 — Warmth You Can Throw in the Truck",
+      "category": "Sleeping Gear",
+      "priority": "high",
+      "keywords": [
+        "camping blanket",
+        "best camping blankets",
+        "outdoor blanket"
+      ],
+      "heroKeyword": "camping blanket campfire",
+      "notes": "Synthetic fill and wool blends. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "leaf-peeping-camping-destinations",
+      "title": "Leaf-Peeping Camping — Timing the Colour and Booking Before It Peaks",
+      "category": "Planning",
+      "priority": "medium",
+      "keywords": [
+        "fall foliage camping",
+        "leaf peeping camping",
+        "autumn camping trips"
+      ],
+      "heroKeyword": "autumn forest campsite",
+      "notes": "IN SEASON: peak colour runs late Sept (north) to early Nov (south). Timing and booking, light on gear."
+    },
+    {
+      "slug": "how-to-stay-warm-camping-cold-nights",
+      "title": "How to Stay Warm Camping — The Layers and the Mistakes",
+      "category": "Tips",
+      "priority": "high",
+      "keywords": [
+        "stay warm camping",
+        "cold weather camping tips",
+        "camping cold nights"
+      ],
+      "heroKeyword": "camper warm sleeping bag",
+      "notes": "HAZARD-SENSITIVE TOPIC — this is the exact shape that got best-camping-socks rejected twice. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent. Wool and synthetics for warmth; treat cotton only as the thing to avoid, with no redeeming mention."
+    },
+    {
+      "slug": "winter-camping-for-beginners",
+      "title": "Winter Camping for Beginners — What to Get Right Before You Go",
+      "category": "Skills",
+      "priority": "medium",
+      "keywords": [
+        "winter camping beginners",
+        "cold weather camping",
+        "snow camping tips"
+      ],
+      "heroKeyword": "winter camping tent snow",
+      "notes": "IN SEASON: Nov onward. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-4-season-tents-under-300",
+      "title": "Best 4-Season Tents Under $300 — Real Winter Shelter on a Budget",
+      "category": "Tents",
+      "priority": "medium",
+      "keywords": [
+        "4 season tent",
+        "winter tent budget",
+        "cold weather tent"
+      ],
+      "heroKeyword": "four season tent winter",
+      "notes": "Be honest that true 4-season under $300 is a compromise; say what the compromise is."
+    },
+    {
+      "slug": "best-sleeping-bag-liners-camping",
+      "title": "Sleeping Bag Liners — The Cheapest Way to Add Warmth",
+      "category": "Sleeping Gear",
+      "priority": "medium",
+      "keywords": [
+        "sleeping bag liner",
+        "camping bag liner",
+        "add warmth sleeping bag"
+      ],
+      "heroKeyword": "sleeping bag liner",
+      "notes": "Silk, fleece and synthetic. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-budget-hiking-backpacks-under-100",
+      "title": "Best Hiking Backpacks Under $100 — Fit First, Features Second",
+      "category": "Gear",
+      "priority": "high",
+      "keywords": [
+        "budget hiking backpack",
+        "hiking backpack under 100",
+        "camping backpack"
+      ],
+      "heroKeyword": "hiking backpack trail",
+      "notes": "Torso length and hip-belt fit matter more than litres; lead with that."
+    },
+    {
+      "slug": "best-camping-lanterns-under-30",
+      "title": "Best Camping Lanterns Under $30 — Light That Lasts the Weekend",
+      "category": "Lighting",
+      "priority": "high",
+      "keywords": [
+        "camping lantern",
+        "best camping lanterns",
+        "led lantern camping"
+      ],
+      "heroKeyword": "camping lantern night",
+      "notes": "LED and rechargeable only. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent. Do not recommend fuel-burning lanterns for tent use."
+    },
+    {
+      "slug": "best-budget-camping-cots",
+      "title": "Best Budget Camping Cots — Getting Off the Ground Without Overpaying",
+      "category": "Furniture",
+      "priority": "medium",
+      "keywords": [
+        "camping cot",
+        "budget camping cot",
+        "best camping cots"
+      ],
+      "heroKeyword": "camping cot tent",
+      "notes": "Weight capacity and packed size are the real buying axes."
+    },
+    {
+      "slug": "best-camping-hammocks-under-50",
+      "title": "Best Camping Hammocks Under $50 — Straps, Bugs and Cold Butt",
+      "category": "Shelter",
+      "priority": "medium",
+      "keywords": [
+        "camping hammock",
+        "budget hammock camping",
+        "hammock with straps"
+      ],
+      "heroKeyword": "camping hammock forest",
+      "notes": "Cover underquilt/pad need honestly — hammocks are colder than the ground below ~70F."
+    },
+    {
+      "slug": "best-camping-pillows-budget",
+      "title": "Best Camping Pillows — The $20 Upgrade That Fixes Your Sleep",
+      "category": "Sleeping Gear",
+      "priority": "low",
+      "keywords": [
+        "camping pillow",
+        "inflatable camping pillow",
+        "best camp pillow"
+      ],
+      "heroKeyword": "camping pillow tent",
+      "notes": "Evergreen, low ticket."
+    },
+    {
+      "slug": "best-camping-axes-hatchets-under-50",
+      "title": "Best Camping Hatchets Under $50 — Splitting Wood Without Splitting Your Shin",
+      "category": "Tools",
+      "priority": "medium",
+      "keywords": [
+        "camping hatchet",
+        "best camping axe",
+        "budget hatchet"
+      ],
+      "heroKeyword": "hatchet firewood camp",
+      "notes": "Include safe technique briefly; do not glamourise. Head weight and handle material are the buying axes."
+    },
+    {
+      "slug": "best-folding-saws-camping",
+      "title": "Best Folding Saws for Camping — Quieter and Safer Than an Axe",
+      "category": "Tools",
+      "priority": "low",
+      "keywords": [
+        "folding saw camping",
+        "camp saw",
+        "best folding saw"
+      ],
+      "heroKeyword": "folding saw firewood",
+      "notes": "Evergreen."
+    },
+    {
+      "slug": "best-budget-binoculars-camping",
+      "title": "Best Budget Binoculars for Camping — What 8x42 Actually Means",
+      "category": "Optics",
+      "priority": "low",
+      "keywords": [
+        "budget binoculars",
+        "camping binoculars",
+        "binoculars under 100"
+      ],
+      "heroKeyword": "binoculars outdoors",
+      "notes": "Explain the two numbers plainly; that is the whole buying decision at this price."
+    },
+    {
+      "slug": "best-camping-coffee-makers-under-40",
+      "title": "Best Camping Coffee Makers Under $40 — Real Coffee at a Campsite",
+      "category": "Cooking",
+      "priority": "high",
+      "keywords": [
+        "camping coffee maker",
+        "camp coffee",
+        "percolator camping"
+      ],
+      "heroKeyword": "camp coffee morning",
+      "notes": "High-intent evergreen. Cover pour-over, press, percolator and instant honestly."
+    },
+    {
+      "slug": "how-to-keep-food-cold-camping",
+      "title": "How to Keep Food Cold Camping — Ice Strategy, Not Just a Better Cooler",
+      "category": "Cooking",
+      "priority": "medium",
+      "keywords": [
+        "keep food cold camping",
+        "cooler ice tips",
+        "camping food storage"
+      ],
+      "heroKeyword": "cooler ice camping",
+      "notes": "HAZARD-SENSITIVE: food storage. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent. Food goes in a vehicle or a hang/locker, never the tent."
+    },
+    {
+      "slug": "best-camping-water-containers-jugs",
+      "title": "Best Camping Water Containers — Hauling and Storing Water at Camp",
+      "category": "Water",
+      "priority": "medium",
+      "keywords": [
+        "camping water container",
+        "water jug camping",
+        "water storage camping"
+      ],
+      "heroKeyword": "water jug campsite",
+      "notes": "HAZARD-SENSITIVE: SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent. Storage and transport only — treatment is a separate guide, link it."
+    },
+    {
+      "slug": "best-camping-cast-iron-budget",
+      "title": "Budget Cast Iron for Camping — What's Worth the Weight",
+      "category": "Cookware",
+      "priority": "low",
+      "keywords": [
+        "cast iron camping",
+        "camp dutch oven",
+        "budget cast iron"
+      ],
+      "heroKeyword": "cast iron campfire",
+      "notes": "Evergreen."
+    },
+    {
+      "slug": "best-portable-camping-showers",
+      "title": "Best Portable Camping Showers — Getting Clean Without a Bathhouse",
+      "category": "Hygiene",
+      "priority": "medium",
+      "keywords": [
+        "portable camping shower",
+        "solar shower",
+        "camp shower bag"
+      ],
+      "heroKeyword": "portable camp shower",
+      "notes": "Evergreen, underserved."
+    },
+    {
+      "slug": "best-portable-camping-toilets",
+      "title": "Best Portable Camping Toilets — The Gear Nobody Wants to Research",
+      "category": "Hygiene",
+      "priority": "low",
+      "keywords": [
+        "portable camping toilet",
+        "camp toilet",
+        "bucket toilet camping"
+      ],
+      "heroKeyword": "portable camp toilet",
+      "notes": "Matter-of-fact tone. Include Leave No Trace disposal rules."
+    },
+    {
+      "slug": "best-camping-rugs-outdoor-mats",
+      "title": "Best Camping Rugs and Outdoor Mats — Keeping Dirt Out of the Tent",
+      "category": "Accessories",
+      "priority": "low",
+      "keywords": [
+        "camping rug",
+        "outdoor mat camping",
+        "tent mat"
+      ],
+      "heroKeyword": "outdoor rug campsite",
+      "notes": "Evergreen, low ticket."
+    },
+    {
+      "slug": "best-solar-chargers-camping",
+      "title": "Best Solar Chargers for Camping — What Actually Charges a Phone",
+      "category": "Electronics",
+      "priority": "medium",
+      "keywords": [
+        "solar charger camping",
+        "portable solar panel",
+        "camping phone charger"
+      ],
+      "heroKeyword": "solar panel campsite",
+      "notes": "Be blunt about real-world watts versus rated watts."
+    },
+    {
+      "slug": "best-weather-radios-camping",
+      "title": "Best Weather Radios for Camping — Knowing the Storm Is Coming",
+      "category": "Safety",
+      "priority": "medium",
+      "keywords": [
+        "weather radio camping",
+        "noaa radio",
+        "emergency radio camping"
+      ],
+      "heroKeyword": "weather radio outdoors",
+      "notes": "NOAA alert capability is the feature that matters; hand-crank is a backup, not the point."
+    },
+    {
+      "slug": "how-to-choose-a-campsite",
+      "title": "How to Choose a Campsite — The Ten Minutes That Decide Your Night",
+      "category": "Skills",
+      "priority": "medium",
+      "keywords": [
+        "how to choose campsite",
+        "campsite selection",
+        "best tent spot"
+      ],
+      "heroKeyword": "campsite selection forest",
+      "notes": "Drainage, widowmakers, wind, morning sun. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "camping-etiquette-rules",
+      "title": "Camping Etiquette — The Unwritten Rules Nobody Tells First-Timers",
+      "category": "Skills",
+      "priority": "low",
+      "keywords": [
+        "camping etiquette",
+        "campground rules",
+        "quiet hours camping"
+      ],
+      "heroKeyword": "campground morning",
+      "notes": "Evergreen, links well."
+    },
+    {
+      "slug": "car-camping-vs-backpacking",
+      "title": "Car Camping vs Backpacking — Which One Are You Actually Buying For",
+      "category": "Planning",
+      "priority": "medium",
+      "keywords": [
+        "car camping vs backpacking",
+        "types of camping",
+        "backpacking or car camping"
+      ],
+      "heroKeyword": "car camping setup",
+      "notes": "Framing guide that routes readers into the gear guides; link generously."
+    },
+    {
+      "slug": "camping-with-kids-first-trip",
+      "title": "Camping With Kids — Making the First Trip One They Want to Repeat",
+      "category": "Family",
+      "priority": "high",
+      "keywords": [
+        "camping with kids",
+        "family camping tips",
+        "kids first camping trip"
+      ],
+      "heroKeyword": "family camping kids",
+      "notes": "HAZARD-SENSITIVE: children. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "national-park-camping-reservations",
+      "title": "How to Actually Get a National Park Campsite",
+      "category": "Planning",
+      "priority": "medium",
+      "keywords": [
+        "national park campsite reservation",
+        "recreation.gov tips",
+        "book campsite national park"
+      ],
+      "heroKeyword": "national park campground",
+      "notes": "Recreation.gov release windows and cancellation sniping. Timely for 2027 summer booking."
     }
   ],
   "published": [

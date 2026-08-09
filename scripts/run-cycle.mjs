@@ -116,6 +116,24 @@ function finish(outcome, detail, code, { commit = true } = {}) {
    *
    * A deliberate pause is excluded inside sinceLastPublish — pausing the
    * pipeline should not page the person who paused it. */
+  /* An EXHAUSTED QUEUE is not a stall, it is a request, and it gets the exit
+   * code immediately rather than after STALL_AFTER_RUNS.
+   *
+   * The distinction is whether waiting can fix it. A throttled discovery call
+   * or a dirty tree resolves on its own, so counting runs before escalating is
+   * right — it absorbs the noise. An empty queue resolves only when a human
+   * writes briefs, so every run spent waiting is a run guaranteed to publish
+   * nothing. The queue is hand-curated, and on 2026-08-09 it reached its last
+   * item; the next run would have exited 0, turned the cron green and gone
+   * silent on Telegram at the exact moment the site stopped publishing.
+   *
+   * Two runs at three-a-day is a Telegram alert the same afternoon, against two
+   * days under the stall counter. */
+  if (!DRY && outcome === "idle" && detail.reason === "queue-empty") {
+    code = EXIT.FAIL;
+    detail = { ...detail, needs: "briefs — article-queue.json has no unpublished items left" };
+  }
+
   let stalledRuns;
   if (!DRY && (outcome === "deferred" || outcome === "idle") && detail.reason !== "paused") {
     const { runs, reasons } = sinceLastPublish(RUNS);
