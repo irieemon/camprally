@@ -88,3 +88,17 @@ best-camping-socks
       "Material matters more than anything else. Cotton absorbs sweat and holds it, which is why a cotton sock in a wet boot feels like wearing a cold washcloth."
   · note (1/3): Recommends a cotton blend sock after the article states that cotton absorbs sweat, holds it, and creates a cold, wet feeling in boots. A cotton blend was presented as the material to avoid.
 
+
+## 2026-08-09T18:00:00.138Z — content-review
+
+Content review rejected best-camping-socks (attempt 2 of 2).
+Spec quarantined to specs/quarantine/best-camping-socks-2026-08-09T18-00-00-138Z.json
+
+
+best-camping-socks
+  ✗ [high] cotton-for-warmth (body)
+      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
+      "Synthetic blends dry faster and cost less, which makes them a smart pick for warm-weather trips or as a backup pair. Cotton is comfortable on the couch, but it "
+  · note (1/3): "Trash bag foot" is not a standard term for the maceration/blistering caused by cotton socks; the common term is "trench foot" when prolonged wet/cold exposure is involved, or simply severe blistering. This invented or non-standard term could confuse readers.
+  · note (1/3): A single midweight wool hiking sock typically weighs around 1.5–3 ounces (roughly 40–85 grams), so "around an ounce or two" understates the typical weight, which could mislead backpackers counting grams.
+

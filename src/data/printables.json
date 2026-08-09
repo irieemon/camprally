@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "first-time-camper-starter-pack",
+      "title": "First-Time Camper Starter Pack",
+      "subtitle": "Everything a first-time camper needs to head into the wild with confidence",
+      "price": "$4",
+      "priceCents": 400,
+      "pages": 8,
+      "url": "https://camprally.gumroad.com/l/first-time-camper-starter-pack",
+      "image": "/images/printables/first-time-camper-starter-pack.jpg"
+    },
+    {
       "slug": "rv-maintenance-log-book",
       "title": "RV Maintenance Log Book",
       "subtitle": "Keep every service, inspection, and repair organized so your RV stays road-ready mile after mile",
