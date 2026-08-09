@@ -28,7 +28,18 @@ const SITE = process.env.CAMPRALLY_SITE ?? "https://www.camprally.co";
 
 const args = process.argv.slice(2);
 const budgetAt = args.indexOf("--budget");
-const budgetSec = Number(args[budgetAt + 1]) || 300;
+/* 600s, raised from 300s on 2026-08-09 after labor-day-camping-weekend-guide
+ * was recorded `published-unverified` and then went live 30 seconds later.
+ *
+ * 300s was measured against a quiet queue. It is too tight when a build is
+ * already running — this cycle pushed on the heels of the 18:00 heartbeat
+ * commit, so the publish sat queued behind another build before it started.
+ * A false `published-unverified` is expensive out of proportion to the wait:
+ * it is the outcome the off-machine watchdog escalates on, so crying wolf here
+ * trains everyone to ignore the one signal that catches a genuinely failed
+ * Vercel build still serving the last good deployment. Ten minutes of polling
+ * costs a few dozen HEAD requests and one idle cron slot. */
+const budgetSec = Number(args[budgetAt + 1]) || 600;
 /* Skip the value belonging to --budget when looking for the slug. Without this,
  * `verify-deploy.mjs --budget 300` reads "300" as the slug and spends the whole
  * budget polling /blog/300 for a 404 it was never going to stop getting. */
