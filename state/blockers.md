@@ -75,3 +75,16 @@ generating "Dispersed Camping for Beginners — How to Camp Free on Public Land"
   first attempt failed: MiniMax API 529: {"type":"error","error":{"type":"overloaded_error","message":"overloaded_error (529)"},"request_id":"06c3b8586944a07a6870869cf2cfb2c5"}
   retrying once...
 
+
+## 2026-08-09T13:00:00.098Z — content-review
+
+Content review rejected best-camping-socks (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-camping-socks-2026-08-09T13-00-00-098Z.json
+
+
+best-camping-socks
+  ✗ [high] cotton-for-warmth (body)
+      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
+      "Material matters more than anything else. Cotton absorbs sweat and holds it, which is why a cotton sock in a wet boot feels like wearing a cold washcloth."
+  · note (1/3): Recommends a cotton blend sock after the article states that cotton absorbs sweat, holds it, and creates a cold, wet feeling in boots. A cotton blend was presented as the material to avoid.
+

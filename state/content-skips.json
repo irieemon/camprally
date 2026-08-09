@@ -3,5 +3,10 @@
     "attempts": 1,
     "lastAt": "2026-08-05T18:20:19.585Z",
     "findings": "\nhow-to-camp-in-rain\n  ✗ [model 2/3] Mylar/space blankets conduct cold from wet ground through the user and trap moisture against the body, increasing hypothermia risk rather than preventing it. They reflect radiant body heat but provide virtually no insulation against conductive heat loss. This is dangerous advice in a rain camping context where hypothermia is a real risk.\n      \"These blankets also work as ground insulation when sitting on wet terrain\"\n  · note (1/3): Placing a non-breathable tarp directly under a tent footprint traps groundwater and moisture between the tarp and tent floor. This creates a soaked environment that degrades insulation and promotes mold. Proper tent footprint protection should use a breathable ground cloth that is slightly smaller than the tent floor, not a full-coverage tarp.\n"
+  },
+  "best-camping-socks": {
+    "attempts": 1,
+    "lastAt": "2026-08-09T13:01:27.104Z",
+    "findings": "\nbest-camping-socks\n  ✗ [high] cotton-for-warmth (body)\n      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake\n      \"Material matters more than anything else. Cotton absorbs sweat and holds it, which is why a cotton sock in a wet boot feels like wearing a cold washcloth.\"\n  · note (1/3): Recommends a cotton blend sock after the article states that cotton absorbs sweat, holds it, and creates a cold, wet feeling in boots. A cotton blend was presented as the material to avoid.\n"
   }
 }

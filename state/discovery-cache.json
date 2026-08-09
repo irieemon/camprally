@@ -3574,5 +3574,356 @@
         "ratingsTotal": 64
       }
     ]
+  },
+  "camping socks|1|": {
+    "term": "camping socks",
+    "min": 1,
+    "fetchedAt": "2026-08-09T13:00:06.405Z",
+    "results": [
+      {
+        "asin": "B07THXDHGV",
+        "title": "Sock It To Me Men's Crew, Space and Alien Socks",
+        "price": "$12.75",
+        "priceValue": 12.75,
+        "rating": 4.8,
+        "ratingsTotal": 4307
+      },
+      {
+        "asin": "B085R8591S",
+        "title": "Lavley Outdoors Socks Hiking Camping Gift for Nature Lovers Men & Women Holiday",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.8,
+        "ratingsTotal": 1705
+      },
+      {
+        "asin": "B0DJ6ZD2XD",
+        "title": "HAPPYPOP Sports Gifts for Men Women - Gifts for Camper Lifter, Hunting Golfing Socks",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.8,
+        "ratingsTotal": 93
+      },
+      {
+        "asin": "B0DX1G7LJY",
+        "title": "Zmart Funny Socks for Men Women - Outdoorsman Gifts for Surfer Camper Golfing Fishing Lovers",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.8,
+        "ratingsTotal": 83
+      },
+      {
+        "asin": "B07VCMSK8B",
+        "title": "Dickies Men's Dri-tech Original Moisture Control Crew Socks, Available in M-xxl (6, 12, 18 Pairs)",
+        "price": "$11.99",
+        "priceValue": 11.99,
+        "rating": 4.7,
+        "ratingsTotal": 217258
+      },
+      {
+        "asin": "B074QY3KF1",
+        "title": "Hot Sox Women's Fun Nature & Outdoors Crew Socks",
+        "price": "$10.00",
+        "priceValue": 10,
+        "rating": 4.7,
+        "ratingsTotal": 3257
+      },
+      {
+        "asin": "B08LD42RF3",
+        "title": "IRISGOD I'd Rather Be Funny Dress Socks for Men and Women Humor Joke Gifts",
+        "price": "$3.99",
+        "priceValue": 3.99,
+        "rating": 4.7,
+        "ratingsTotal": 1776
+      },
+      {
+        "asin": "B0D73TSW8W",
+        "title": "AugRing Women's Scrunch Crew Socks Retro 3-Pack Solid Cotton Boot Calf Chunky Ribbed Cozy Slouchy Socks Size 5-11",
+        "price": "$13.96",
+        "priceValue": 13.96,
+        "rating": 4.7,
+        "ratingsTotal": 1565
+      },
+      {
+        "asin": "B0C9PFT5XD",
+        "title": "HAPPYPOP Novelty Gifts for Men - Camping Golfing Bowling American Flag Music Fishing Socks",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.7,
+        "ratingsTotal": 999
+      },
+      {
+        "asin": "B0DTQ1KNZ4",
+        "title": "FUNATIC Funny Outdoor Themed Socks for Men Women - Nature and Sports Gifts",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.7,
+        "ratingsTotal": 754
+      },
+      {
+        "asin": "B0FQ4R3CQX",
+        "title": "AGRIMONY I'd Rather Be Funny Socks- Novelty Cool Socks for Men Women Teen- Fathers Christmas Birthday Gifts Stocking Stuffers",
+        "price": "$8.54",
+        "priceValue": 8.54,
+        "rating": 4.7,
+        "ratingsTotal": 648
+      },
+      {
+        "asin": "B0F1ZYG3N8",
+        "title": "Merino Wool Hiking Socks Thermal Warm Winter Cozy Cushioned Moisture Wicking Crew Socks for Women 5 Pairs",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.7,
+        "ratingsTotal": 437
+      },
+      {
+        "asin": "B07HFXKWXF",
+        "title": "Good Luck Sock Men's Nature & Outdoor Hobbies Socks, Adult",
+        "price": "$10.95",
+        "priceValue": 10.95,
+        "rating": 4.7,
+        "ratingsTotal": 358
+      },
+      {
+        "asin": "B0DFCG2DJV",
+        "title": "FOURSTUFF Book, Fishing, Hiking, Gamer, Camping, Pickle, Music, Foods, Ballerina, Bigfoot - Hobbies Socks for Women Men",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.7,
+        "ratingsTotal": 252
+      },
+      {
+        "asin": "B0FFS5G1DW",
+        "title": "Hiking Socks Men Women, Moisture Wicking, 2-Pack",
+        "price": "$18.99",
+        "priceValue": 18.99,
+        "rating": 4.7,
+        "ratingsTotal": 77
+      },
+      {
+        "asin": "B07F3FFTMK",
+        "title": "Alvada Mens Merino Wool Crew Socks Thermal and Warm Socks for Winter Work Hiking Running 3 Pairs",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.6,
+        "ratingsTotal": 37050
+      },
+      {
+        "asin": "B0929CZSL2",
+        "title": "Alvada Warm Thermal Wool Socks for Winter Moisture Wicking and Breathable Cozy Boot Socks",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.6,
+        "ratingsTotal": 9646
+      },
+      {
+        "asin": "B0CDNYQTHP",
+        "title": "Anlisim Merino Wool Hiking Running Socks for Women, Boot Work Crew Socks",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.6,
+        "ratingsTotal": 4591
+      },
+      {
+        "asin": "B0B2RMCCJS",
+        "title": "Eurzom 10 Pairs Socks Womens Crew Elastic Ankle Length Cotton Socks Aesthetic Cute Lightweight Low Cut Gifts for Women",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.6,
+        "ratingsTotal": 4262
+      },
+      {
+        "asin": "B0DMZM4616",
+        "title": "MOGGEI 5 Pairs Womens Merino Wool Socks Hiking Warm Winter Thick Thermal Crew Cozy Cabin Ladies Gift Comfy Boot Work Socks",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 4.6,
+        "ratingsTotal": 2891
+      },
+      {
+        "asin": "B0CFLNW1K3",
+        "title": "DYW Womens Merino Wool Hiking Socks Thermal Warm Winter Boot Crew Socks Cushion Work Walking Gift Socks 5 Pairs",
+        "price": "$7.99",
+        "priceValue": 7.99,
+        "rating": 4.6,
+        "ratingsTotal": 1551
+      },
+      {
+        "asin": "B07HFXXJ79",
+        "title": "Good Luck Sock Women's Nature & Outdoor Hobbies Socks, Adult",
+        "price": "$10.95",
+        "priceValue": 10.95,
+        "rating": 4.6,
+        "ratingsTotal": 219
+      },
+      {
+        "asin": "B0FG64H1B5",
+        "title": "AGRIMONY Funny Sports and Hobby Crew Socks for Men Women and Teens",
+        "price": "$6.64",
+        "priceValue": 6.64,
+        "rating": 4.6,
+        "ratingsTotal": 204
+      },
+      {
+        "asin": "B0DHLSRJL3",
+        "title": "Zmart Unique Gifts for Sports Lovers - Camping Skiing Lifting Socks, Yoga Ballet Gift Ideas",
+        "price": "$6.99",
+        "priceValue": 6.99,
+        "rating": 4.6,
+        "ratingsTotal": 123
+      },
+      {
+        "asin": "B0DK1Y5HQT",
+        "title": "Zmart Sports Gifts for Men Women - Climbing Rv Fishing Bowling Gifts, Disc Golf Socks",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.6,
+        "ratingsTotal": 114
+      },
+      {
+        "asin": "B01MTR6RR0",
+        "title": "Senker Fashion Wool Socks for Women, 5 Pairs Winter Warm Crew Boot Socks",
+        "price": "$11.99",
+        "priceValue": 11.99,
+        "rating": 4.5,
+        "ratingsTotal": 22081
+      },
+      {
+        "asin": "B07CLZ49V5",
+        "title": "Time May Tell Mens Merino Wool Hiking Cushion Socks Thermal Warm Boot Socks",
+        "price": "$8.98",
+        "priceValue": 8.98,
+        "rating": 4.5,
+        "ratingsTotal": 13466
+      },
+      {
+        "asin": "B0D7GF3R4M",
+        "title": "Niorasen Men's Cotton Crew Work Socks, 5 Pairs, Cushioned",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.5,
+        "ratingsTotal": 7717
+      },
+      {
+        "asin": "B0CCCWYDH2",
+        "title": "PAPLUS Ankle Compression Socks for Women, 6 Pairs Cushioned Running Socks",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.5,
+        "ratingsTotal": 3502
+      },
+      {
+        "asin": "B0B974G16P",
+        "title": "MOGGEI 5 Pairs Merino Wool Hiking Socks Warm Thermal Winter Cozy Cushioned Moisture Wicking Socks for Women & Men",
+        "price": "$14.98",
+        "priceValue": 14.98,
+        "rating": 4.5,
+        "ratingsTotal": 2601
+      },
+      {
+        "asin": "B0D6RT162M",
+        "title": "Niorasen Merino Wool Socks for Men & Women, Thermal Winter Crew Warm Socks",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.5,
+        "ratingsTotal": 2200
+      },
+      {
+        "asin": "B0GKFY9F2D",
+        "title": "TANSTC Merino Wool Hiking Socks, Moisture Wicking",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.5,
+        "ratingsTotal": 1847
+      },
+      {
+        "asin": "B0CBS4F96J",
+        "title": "SIMIYA 5 Pairs Merino Wool Socks for Men, Super Thick Hiking Thermal Socks for Cold Weather",
+        "price": "$12.99",
+        "priceValue": 12.99,
+        "rating": 4.5,
+        "ratingsTotal": 1426
+      },
+      {
+        "asin": "B0FMYDZ5Q1",
+        "title": "PULIOU Merino Wool Hiking Socks for Men Women, 3 Pairs Lightweight Breathable Hiking Socks with Seamless Toe and Arch Support",
+        "price": "$33.33",
+        "priceValue": 33.33,
+        "rating": 4.5,
+        "ratingsTotal": 1311
+      },
+      {
+        "asin": "B0FDKPG11B",
+        "title": "Wool Socks for Women Winter Warm Cozy Thick Hiking Boot Crew Socks",
+        "price": "$5.99",
+        "priceValue": 5.99,
+        "rating": 4.5,
+        "ratingsTotal": 1176
+      },
+      {
+        "asin": "B0GTQD71SS",
+        "title": "Merino Wool Compression Socks for Women & Men, 20-30 mmHg Knee High Dryarn Socks for Flying, Travel",
+        "price": "$34.95",
+        "priceValue": 34.95,
+        "rating": 4.5,
+        "ratingsTotal": 135
+      },
+      {
+        "asin": "B0G6DHQC28",
+        "title": "iCamter 5 Pairs Merino Wool Hiking Socks for Women Men",
+        "price": "$12.49",
+        "priceValue": 12.49,
+        "rating": 4.5,
+        "ratingsTotal": 102
+      },
+      {
+        "asin": "B08QRQSWNX",
+        "title": "DANISH ENDURANCE Hiking Socks, Merino Wool, Anti-Blister, 3 & 5-Pack",
+        "price": "$37.95",
+        "priceValue": 37.95,
+        "rating": 4.4,
+        "ratingsTotal": 41589
+      },
+      {
+        "asin": "B0725NLB9B",
+        "title": "Insect Shield Sport Crew Socks, Stretchy and Comfortable Crew Socks with Padding and Built in Bug and Tick Protection",
+        "price": "$11.95",
+        "priceValue": 11.95,
+        "rating": 4.4,
+        "ratingsTotal": 1145
+      },
+      {
+        "asin": "B0DDBFFD2Y",
+        "title": "YEXIPO Funny Socks for Men Women I'D Rather Be Outdoor Activities Novelty Gifts For Hunting Golfing Camping Skiing Gaming",
+        "price": "$4.98",
+        "priceValue": 4.98,
+        "rating": 4.4,
+        "ratingsTotal": 81
+      },
+      {
+        "asin": "B09Q4C5MJL",
+        "title": "ATHMILE Water Shoes for Women Men Quick-Dry Aqua Socks Swim Beach Outfits Barefoot",
+        "price": "$7.99",
+        "priceValue": 7.99,
+        "rating": 4.3,
+        "ratingsTotal": 30414
+      },
+      {
+        "asin": "B0F2DWDY3T",
+        "title": "DarkCom Striped Crew Socks, Casual Comfort for Women and Men, 5 Pairs",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.3,
+        "ratingsTotal": 917
+      },
+      {
+        "asin": "B0FBFM3YXF",
+        "title": "DEKIFNHG Funny Novelty Socks Casual Athletic Crazy Crew Socks For Women Men Gifts",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.2,
+        "ratingsTotal": 58
+      }
+    ]
   }
 }
