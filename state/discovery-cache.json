@@ -3925,5 +3925,132 @@
         "ratingsTotal": 58
       }
     ]
+  },
+  "labor day campsite|1|": {
+    "term": "labor day campsite",
+    "min": 1,
+    "fetchedAt": "2026-08-09T21:01:15.480Z",
+    "results": [
+      {
+        "asin": "B093L29XMF",
+        "title": "Personalized Camper Camping Garden Flag Welcome to Our Campsite Rv Flag for Outdoor Yard House Banner Home Lawn Welcome Decoration 12.5\" X 18\" Double Sided",
+        "price": "$7.99",
+        "priceValue": 7.99,
+        "rating": 4.8,
+        "ratingsTotal": 1128
+      },
+      {
+        "asin": "B081HYK215",
+        "title": "Briarwood Lane Campfire S'mores Summer Garden Flag",
+        "price": "$9.95",
+        "priceValue": 9.95,
+        "rating": 4.8,
+        "ratingsTotal": 999
+      },
+      {
+        "asin": "B0C7TXR2DG",
+        "title": "Hafhue Weekend Forecast 100% Camping Party Decor Flag 12.5x18 In | Summer Autumn Camping Flag for RV Campsite House Outdoor Lawn Farmhouse Front Entry Porch Yard Decor, Funny Campsite Sign",
+        "price": "$12.34",
+        "priceValue": 12.34,
+        "rating": 4.8,
+        "ratingsTotal": 96
+      },
+      {
+        "asin": "B0C9THKCWY",
+        "title": "MEKER Fire Color Changing Packets - Fire Pit, Campfires, Outdoor Fireplaces, Bonfire - Magic Colorful Changing Fire - Perfect Fire Camping Accessories for Kids & Adults (12 Pack)",
+        "price": "$9.45",
+        "priceValue": 9.45,
+        "rating": 4.6,
+        "ratingsTotal": 2630
+      },
+      {
+        "asin": "B09B4HCTC1",
+        "title": "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit, Stainless Steel Outdoor Cooking and Grilling Utensil Organizer Travel Set Perfect for Travel, Picnics, RVs, Camping, BBQs, Parties and More",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.6,
+        "ratingsTotal": 996
+      },
+      {
+        "asin": "B0FGDBK95G",
+        "title": "Hooqict 20 Pieces Camping Party Decorations Camping Themed Party Directional Signs for Summer Camp Day Classroom Welcome to Camp Birthday Decor Picnic Yard Sign",
+        "price": "$3.99",
+        "priceValue": 3.99,
+        "rating": 4.6,
+        "ratingsTotal": 943
+      },
+      {
+        "asin": "B0GMHBMR6D",
+        "title": "30Ft USA Flag Pennant Banner 4th of July American Flag Banner, Red White Blue Stars and Stripes Pennant for Courtyard Independence Day Patriotic Party Decorations",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.6,
+        "ratingsTotal": 53
+      },
+      {
+        "asin": "B0GY4FSX7H",
+        "title": "96PCS Camp Tableware Decoration Welcome to Our Campsite Party Plates Napkins Supplies Disposable Camping Favor Dessert Paper Plates Camping Adventure Campfire Party Picnics BBQ Gatherings Decoration",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.5,
+        "ratingsTotal": 182
+      },
+      {
+        "asin": "B0DFZ1K5FP",
+        "title": "American Flag Picnic Table Cover with Bench Covers and Carrying Bag, USA Flag Wood Texture Outdoor Camping Essentials 6FT 4PCS Fitted Rectangle RV Must Haves Tablecloth",
+        "price": "$17.56",
+        "priceValue": 17.56,
+        "rating": 4.5,
+        "ratingsTotal": 60
+      },
+      {
+        "asin": "B0BRN7JD86",
+        "title": "Picnic Table Cover Bench Covers Camping Essentials Tablecloth | Waterproof Vinyl for Outdoor, Windproof Elastic Fitted Edges, RV BBQ Accessories Must Haves, Storage Bag Included",
+        "price": "$17.89",
+        "priceValue": 17.89,
+        "rating": 4.3,
+        "ratingsTotal": 3670
+      },
+      {
+        "asin": "B0716HSSDZ",
+        "title": "CampLand Outdoor Folding Table Aluminum Lightweight Height Adjustable with Storage Organizer for BBQ, Party, Camping",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.3,
+        "ratingsTotal": 3122
+      },
+      {
+        "asin": "B07K7DY22F",
+        "title": "Camp Field Camping Folding Aluminum Table with Adjustable Legs for Outdoor Travel Beach, Backyards, BBQ, Party and Picnic Foldable Table",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.3,
+        "ratingsTotal": 2496
+      },
+      {
+        "asin": "B092M91JN4",
+        "title": "Sumind 2 Pcs Inflatable Fake Campfire Camping Props, Bonfire Party Decor | Campfire Party Decorations, Artificial Flame Decor for Indoor Camping Classroom Overnight and Scene Setting",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.2,
+        "ratingsTotal": 940
+      },
+      {
+        "asin": "B0BXB2KSNM",
+        "title": "Camping Garden Flag with Led Lights, 12 x 18 Inch Double Sided Vertical Burlap Camping Fire Pit Lighted Garden Flags for RV Campsite Campfire Camper Yard Outdoor Decoration",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 3.8,
+        "ratingsTotal": 267
+      },
+      {
+        "asin": "B0F2MWTVB2",
+        "title": "CAPSCEOLL Fitted Picnic Table Cover with Bench Covers 6ft - American Flag | with Drawstring Bag, Elastic Edges, Scratch-Resistant, Waterproof, Windproof, for Camping Enthusiast RV Essentials Pet Lovers",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 3.8,
+        "ratingsTotal": 116
+      }
+    ]
   }
 }
