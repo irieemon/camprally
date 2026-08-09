@@ -3,6 +3,110 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "desert-canyon-camp",
+      "name": "Desert Canyon Camp",
+      "subtitle": "red rock, long shadows, and total silence",
+      "image": "/images/merch/desert-canyon-camp.jpg",
+      "imageKey": "6a78ea02545ae913b36cd70e::2026-08-09T20:59:08.299Z",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-08-09T20:59:52.084Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/30801502",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/30801510",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/30801518",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/30801525",
+          "priceCents": 2699,
+          "price": "$26.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/30801530",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": true
+        }
+      ]
+    },
+    {
+      "slug": "autumn-woods-camp",
+      "name": "Autumn Woods Camp",
+      "subtitle": "the best month to be out there",
+      "image": "/images/merch/autumn-woods-camp.jpg",
+      "imageKey": "6a78e97061c34a7bcd4d825b::2026-08-09T20:56:41.310Z",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-08-09T20:57:26.266Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/30801411",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/30801419",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/30801424",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/30801428",
+          "priceCents": 2699,
+          "price": "$26.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/30801434",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": true
+        }
+      ]
+    },
+    {
       "slug": "alpine-lake-basin",
       "name": "Alpine Lake Basin",
       "subtitle": "worth every mile of the climb",

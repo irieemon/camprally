@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "labor-day-camping-weekend-guide": [
+    {
+      type: "product-grid",
+      title: "Labor Day Camping 2026 — How to Get a Site and What to Pack — Quick Comparison",
+      items: [
+        { label: "Personalized Camper Camping Garden", category: "", icon: "🏕️", asin: "B093L29XMF", link: "https://www.amazon.com/dp/B093L29XMF?tag=camprally-20" },
+        { label: "Briarwood Lane Campfire S'mores Su", category: "", icon: "🏕️", asin: "B081HYK215", link: "https://www.amazon.com/dp/B081HYK215?tag=camprally-20" },
+        { label: "Hafhue Weekend Forecast 100% Campi", category: "", icon: "🏕️", asin: "B0C7TXR2DG", link: "https://www.amazon.com/dp/B0C7TXR2DG?tag=camprally-20" },
+        { label: "MEKER Fire Color Changing Packets ", category: "", icon: "🏕️", asin: "B0C9THKCWY", link: "https://www.amazon.com/dp/B0C9THKCWY?tag=camprally-20" },
+        { label: "Portable Camping Kitchen Utensil S", category: "", icon: "🏕️", asin: "B09B4HCTC1", link: "https://www.amazon.com/dp/B09B4HCTC1?tag=camprally-20" },
+        { label: "Hooqict 20 Pieces Camping Party De", category: "", icon: "🏕️", asin: "B0FGDBK95G", link: "https://www.amazon.com/dp/B0FGDBK95G?tag=camprally-20" },
+      ]
+    },
+  ],
   "camping-bug-tick-prevention-spring": [
     {
       type: "product-grid",
