@@ -102,3 +102,17 @@ best-camping-socks
   · note (1/3): "Trash bag foot" is not a standard term for the maceration/blistering caused by cotton socks; the common term is "trench foot" when prolonged wet/cold exposure is involved, or simply severe blistering. This invented or non-standard term could confuse readers.
   · note (1/3): A single midweight wool hiking sock typically weighs around 1.5–3 ounces (roughly 40–85 grams), so "around an ounce or two" understates the typical weight, which could mislead backpackers counting grams.
 
+
+## 2026-08-10T13:00:00.161Z — content-review
+
+Content review rejected fall-camping-gear-essentials (attempt 1 of 2).
+Spec quarantined to specs/quarantine/fall-camping-gear-essentials-2026-08-10T13-00-00-161Z.json
+
+ther mistake
+      "The gear that earns its place is the gear that handles three things summer kit doesn't: colder ground, stronger wind, and longer nights. A higher R-value pad, a"
+  ✗ [high] food-in-tent (body)
+      stores food or scented items in the tent — attracts bears and rodents
+      "The tents in this list — from the roomy Core 9 Person Instant Cabin down to the blackout-equipped EVER ADVANCED 4 Person — give you fast setup, weather handling"
+  · note (1/3): This is plausible in cool mountain regions but not generally true for most of the U.S. (e.g., Southeast, Southwest, or coastal areas). Presenting it as a typical scenario could mislead campers in warmer climates about what to expect.
+  · note (1/3): Sunrise actually comes later in the year as autumn progresses, but the article frames it as if shortened fall days still work against you in the morning, which is true. However, the main claim about blackout tents is fine — the issue is that the article later says 'sunrise comes later in the morning' as if this is a good reason for blackout fabric, but longer/earlier sunrises in early fall and shorter days overall make this claim confusing. This is a minor contradiction.
+

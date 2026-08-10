@@ -4052,5 +4052,148 @@
         "ratingsTotal": 116
       }
     ]
+  },
+  "fall camping tent|1|": {
+    "term": "fall camping tent",
+    "min": 1,
+    "fetchedAt": "2026-08-10T13:00:27.729Z",
+    "results": [
+      {
+        "asin": "B00VFH1RQS",
+        "title": "Core 9 Person Instant Cabin Tent - 14' x 9', Green (40008)",
+        "price": "$299.99",
+        "priceValue": 299.99,
+        "rating": 4.6,
+        "ratingsTotal": 7094
+      },
+      {
+        "asin": "B0D7QHY574",
+        "title": "Coleman Sundome Camping Tent with Rainfly, 2/3/4/6 Person Tent Sets Up in 10 Mins, Weatherproof Shelter for Camping, Festivals, Backyard, Sleepovers, & More",
+        "price": "$113.22",
+        "priceValue": 113.22,
+        "rating": 4.6,
+        "ratingsTotal": 272
+      },
+      {
+        "asin": "B07DRQH7RQ",
+        "title": "CORE Instant Cabin Tents | Family Cabin Multi Room Pop Up Tents Car Camping | Included Storage Pockets for Camping Accessories",
+        "price": "$399.99",
+        "priceValue": 399.99,
+        "rating": 4.5,
+        "ratingsTotal": 1709
+      },
+      {
+        "asin": "B0CR144NCS",
+        "title": "FanttikOutdoor 4/6/8/10 Person Instant Tent for Camping Setup in 60s | Camping Tent with Rainfly & Windproof, Portable Instant Cabin Tent with Carry Bag for Family Camping & Hiking",
+        "price": "$127.98",
+        "priceValue": 127.98,
+        "rating": 4.5,
+        "ratingsTotal": 1209
+      },
+      {
+        "asin": "B0DHWVNMKM",
+        "title": "FanttikOutdoor Camping Tent 4/6/8/10 Person Instant Cabin Tent Setup in 60 Seconds with Rainfly & Windproof Portable with Carry Bag for Family Camping & Hiking, Upgraded Ventilation, Navy Blue",
+        "price": "$127.99",
+        "priceValue": 127.99,
+        "rating": 4.5,
+        "ratingsTotal": 584
+      },
+      {
+        "asin": "B0FVLQ46GM",
+        "title": "EVER ADVANCED 4 Person Blackout Camping Tent, 60s Easy Setup Instant Cabin Tent for Family, 4000mm Water-Resistant & UV Protection Light-Blocking Tent with Rainfly for Outdoor Travel, 8' x 7' x 59\"",
+        "price": "$139.99",
+        "priceValue": 139.99,
+        "rating": 4.5,
+        "ratingsTotal": 84
+      },
+      {
+        "asin": "B08G4R7SG5",
+        "title": "CAMPROS CP 8 Person Camping Tent, Room Divider, Rainfly, Weather Resistant | Family tent with 5 large mesh windows, double-layer design, and a carry bag, 14' x 9' x 72\"(H)",
+        "price": "$139.98",
+        "priceValue": 139.98,
+        "rating": 4.4,
+        "ratingsTotal": 5726
+      },
+      {
+        "asin": "B0D3V9NS7K",
+        "title": "UNP 6 Person Tents for Camping Waterproof Family Cabin Tent with Rainfly | Easy Setup Windproof Double Layer Camping Tent with 1 Mesh Door & 5 Large Mesh Windows 10'X9'X78in(H)",
+        "price": "$119.99",
+        "priceValue": 119.99,
+        "rating": 4.4,
+        "ratingsTotal": 4210
+      },
+      {
+        "asin": "B0F5WKMN73",
+        "title": "Vidalido Tents，6-8 Person Camping Tent with Extended Vestibule，2 Room Weather Resistant Family Tents，Easy Install Waterproof Outdoor Tent for Backpacking and Camping Hiking",
+        "price": "$169.99",
+        "priceValue": 169.99,
+        "rating": 4.4,
+        "ratingsTotal": 141
+      },
+      {
+        "asin": "B0G1LF6BG9",
+        "title": "EVER ADVANCED 10 Person Camping Blackout Design Tent, Multi Room Tent for Family, Large Tents with Rainfly and Carry Bag, 2 Doors, Water-Resistant, 14ft x 10ft x 84in",
+        "price": "$265.99",
+        "priceValue": 265.99,
+        "rating": 4.4,
+        "ratingsTotal": 127
+      },
+      {
+        "asin": "B07WR1V29Y",
+        "title": "Night Cat Backpacking Tent for One 1 to 2 Persons Lightweight Waterproof Camping Hiking Tent for Adults Kids Scouts Easy Setup Single Layer 2.2x1.2m",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.3,
+        "ratingsTotal": 3874
+      },
+      {
+        "asin": "B0CGZZJSLH",
+        "title": "PORTAL 6/8/10 Person Family Camping Tent with Screen Room | Portable 8 Person Tent Outdoor Design; Durable Construction; Easy Setup & Storage",
+        "price": "$158.99",
+        "priceValue": 158.99,
+        "rating": 4.3,
+        "ratingsTotal": 717
+      },
+      {
+        "asin": "B0DCVQ7JTR",
+        "title": "Naturehike Village Instant Tent, 4 Person 8 Person Camping Tent with Full Rainfly, Waterproof Large Cabin Tents for Car Camping",
+        "price": "$359.28",
+        "priceValue": 359.28,
+        "rating": 4.3,
+        "ratingsTotal": 361
+      },
+      {
+        "asin": "B0D6NQKDWJ",
+        "title": "Coleman 4/6/8/10 Person Instant Camping Tent with 1-Minute Setup, Large Family Tent with Pre-Attached Poles, Air Vent, & Carry Bag, Sets Up in About 60 Seconds",
+        "price": "$251.68",
+        "priceValue": 251.68,
+        "rating": 4.2,
+        "ratingsTotal": 255
+      },
+      {
+        "asin": "B0D7QG9H85",
+        "title": "Coleman Skydome Camping Tent with 5 Minute Setup, 2/4/6/8 Person Weatherproof Tent with Rainfly & Carry Bag, 20% More Headroom Than Traditional Canopies",
+        "price": "$121.99",
+        "priceValue": 121.99,
+        "rating": 4.2,
+        "ratingsTotal": 184
+      },
+      {
+        "asin": "B0H35JJTT8",
+        "title": "4/6/8 Person Camping Tent,Setup in 60 Seconds,Waterproof,Outdoor Camping | 60-Second Quick Setup,2000-3000mm waterproof tents for camping,Pop Up Tents,Instant Cabin Tents with Portable Carry Bag",
+        "price": "$119.98",
+        "priceValue": 119.98,
+        "rating": 4.2,
+        "ratingsTotal": 76
+      },
+      {
+        "asin": "B0F5WLL1Z5",
+        "title": "Vidalido Tents，3-4 Person Camping Tent with Extended Vestibule，Weather Resistant Family Tents with Breathable Mesh Windows，Easy Install Waterproof Outdoor Tent for Backpacking and Camping Hiking",
+        "price": "$149.99",
+        "priceValue": 149.99,
+        "rating": 4.1,
+        "ratingsTotal": 84
+      }
+    ]
   }
 }
