@@ -128,6 +128,12 @@ const imageKeyFor = (design, tee) => [
   design.uploads?.art ?? "",
   tee?.logoHash ?? "",
   tee?.republishedAt ?? tee?.publishedAt ?? "",
+  /* Where the art sits on the garment. Moving the back print from y=0.5 to
+   * y=0.40 changes every mockup Printify renders and touches none of the
+   * fields above — the upload id, the logo and the publish date are all
+   * identical — so the first sync after that move reported "unchanged" and
+   * would have kept serving the old, lower placement indefinitely. */
+  tee?.backPlacementY ?? "",
   /* The SELECTION RULE is part of the fingerprint, not just the inputs it runs
    * on. Everything above describes what Printify would render; this describes
    * which render we asked for. Without it, changing COLOUR_PREFERENCE silently
