@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "fall-camping-gear-essentials": [
+    {
+      type: "product-grid",
+      title: "Fall Camping Gear — What Actually Changes When the Nights Get Cold — Quick Comparison",
+      items: [
+        { label: "Core 9 Person Instant Cabin Tent -", category: "", icon: "🏕️", asin: "B00VFH1RQS", link: "https://www.amazon.com/dp/B00VFH1RQS?tag=camprally-20" },
+        { label: "Coleman Sundome Camping Tent with ", category: "", icon: "🏕️", asin: "B0D7QHY574", link: "https://www.amazon.com/dp/B0D7QHY574?tag=camprally-20" },
+        { label: "CORE Instant Cabin Tents | Family ", category: "", icon: "🏕️", asin: "B07DRQH7RQ", link: "https://www.amazon.com/dp/B07DRQH7RQ?tag=camprally-20" },
+        { label: "FanttikOutdoor 4/6/8/10 Person Ins", category: "", icon: "🏕️", asin: "B0CR144NCS", link: "https://www.amazon.com/dp/B0CR144NCS?tag=camprally-20" },
+        { label: "FanttikOutdoor Camping Tent 4/6/8/", category: "", icon: "🏕️", asin: "B0DHWVNMKM", link: "https://www.amazon.com/dp/B0DHWVNMKM?tag=camprally-20" },
+        { label: "EVER ADVANCED 4 Person Blackout Ca", category: "", icon: "🏕️", asin: "B0FVLQ46GM", link: "https://www.amazon.com/dp/B0FVLQ46GM?tag=camprally-20" },
+      ]
+    },
+  ],
   "labor-day-camping-weekend-guide": [
     {
       type: "product-grid",

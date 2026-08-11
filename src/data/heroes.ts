@@ -82,6 +82,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "memorial-day-camping-checklist-2026": "/images/heroes/memorial-day-camping-checklist-2026.jpg",
   "camping-bug-tick-prevention-spring": "/images/heroes/camping-bug-tick-prevention-spring.jpg",
   "labor-day-camping-weekend-guide": "/images/heroes/labor-day-camping-weekend-guide.jpg",
+  "fall-camping-gear-essentials": "/images/heroes/fall-camping-gear-essentials.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
