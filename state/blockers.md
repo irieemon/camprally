@@ -116,3 +116,18 @@ ther mistake
   · note (1/3): This is plausible in cool mountain regions but not generally true for most of the U.S. (e.g., Southeast, Southwest, or coastal areas). Presenting it as a typical scenario could mislead campers in warmer climates about what to expect.
   · note (1/3): Sunrise actually comes later in the year as autumn progresses, but the article frames it as if shortened fall days still work against you in the morning, which is true. However, the main claim about blackout tents is fine — the issue is that the article later says 'sunrise comes later in the morning' as if this is a good reason for blackout fabric, but longer/earlier sunrises in early fall and shorter days overall make this claim confusing. This is a minor contradiction.
 
+
+## 2026-08-11T13:00:00.140Z — content-review
+
+Content review rejected fall-camping-gear-essentials (attempt 2 of 2).
+Spec quarantined to specs/quarantine/fall-camping-gear-essentials-2026-08-11T13-00-00-140Z.json
+
+
+fall-camping-gear-essentials
+  ✗ [high] cotton-for-warmth (body)
+      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
+      "Base layers in fall should be synthetic or merino. Cotton absorbs sweat, holds it against your skin, and stops insulating the moment it gets damp."
+  · note (1/3): A 4000mm hydrostatic head rating is typical for rainfly fabric, but a '4000mm water resistance rating' for the tent overall is a misleading claim as it conflates fabric test results with real-world waterproofing and can mislead buyers about performance.
+  · note (1/3): A 10-degree buffer is generally insufficient for fall camping; most sleep system guides recommend 15-20 degrees of buffer to account for pad R-value, shelter drafts, and personal metabolism variation, which could leave campers underprepared.
+  · note (1/3): Closing tent vents when temperatures drop traps body moisture and causes heavy condensation, which contradicts the article's earlier advice that cold-weather camping requires increased ventilation.
+

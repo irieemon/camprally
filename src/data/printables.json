@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "campsite-review-journal",
+      "title": "Campsite Review Journal",
+      "subtitle": "Your complete record of every camp, every site, and every reason to return",
+      "price": "$6",
+      "priceCents": 600,
+      "pages": 12,
+      "url": "https://camprally.gumroad.com/l/campsite-review-journal",
+      "image": "/images/printables/campsite-review-journal.jpg"
+    },
+    {
       "slug": "first-time-camper-starter-pack",
       "title": "First-Time Camper Starter Pack",
       "subtitle": "Everything a first-time camper needs to head into the wild with confidence",
