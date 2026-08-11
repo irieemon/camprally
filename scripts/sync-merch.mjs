@@ -69,8 +69,16 @@ const KINDS = [
 
 /* Preference order for the mockup colourway. Falls through to whatever the
  * blueprint actually offers — the light-garment rule already filters these, so
- * an unlisted colour is still a light one. */
-const COLOUR_PREFERENCE = ["Sport Grey", "Light Blue", "White"];
+ * an unlisted colour is still a light one.
+ *
+ * Sport Grey led this list until 2026-08-11 and was dropped on Sean's call. It
+ * was chosen only for not being near-white on a bone card, which it satisfies
+ * and little else: it is the muddiest of the seven enabled colourways and the
+ * artwork's pale watercolour washes — mist, water, sky — lose most of their
+ * separation against it. Natural is warm, reads as canvas rather than gym kit,
+ * and keeps those washes legible. White stays off the list entirely: on this
+ * site's #f2f1e5 card it is a white rectangle on an off-white rectangle. */
+const COLOUR_PREFERENCE = ["Natural", "Sand", "Light Blue"];
 
 const keep = (msg) => { console.log(`${msg} — keeping the committed copy`); process.exit(0); };
 
@@ -120,6 +128,14 @@ const imageKeyFor = (design, tee) => [
   design.uploads?.art ?? "",
   tee?.logoHash ?? "",
   tee?.republishedAt ?? tee?.publishedAt ?? "",
+  /* The SELECTION RULE is part of the fingerprint, not just the inputs it runs
+   * on. Everything above describes what Printify would render; this describes
+   * which render we asked for. Without it, changing COLOUR_PREFERENCE silently
+   * changes nothing — the cache still matches, no image is re-fetched, and the
+   * site keeps serving the old colourway while the code claims a new one. That
+   * is exactly what happened on the first cut of the Sport Grey -> Natural
+   * change. Anything that alters which mockup fetchHero picks belongs here. */
+  COLOUR_PREFERENCE.join("|"),
 ].join(":");
 
 /** The tee's back mockup, preferring a colourway that is not near-white. */
