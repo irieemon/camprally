@@ -29,6 +29,7 @@
 import { writeFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { homedir } from "node:os";
+import { displayMaxAgeMs } from "./lib/display-window.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 const RUNS = `${ROOT}state/price-runs`;
@@ -106,11 +107,23 @@ const priceClaims = check.code === 0 ? "ok" : "frozen-price-claims";
 const catalog = JSON.parse(readFileSync(`${ROOT}src/data/catalog.json`, "utf8")).products ?? {};
 const products = Object.values(catalog);
 const priced = products.filter((p) => p.price && p.priceAsOf);
-const cutoff = Date.now() - 10 * 24 * 60 * 60 * 1000;
+/* Read from the render layer rather than restated — this line used to carry its
+ * own `10 * 24 * 60 * 60 * 1000`, a third copy of a number that decides whether
+ * the site shows a price at all. See lib/display-window.mjs. */
+const maxAgeMs = displayMaxAgeMs();
+const cutoff = Date.now() - maxAgeMs;
 const displayable = priced.filter((p) => Date.parse(p.priceAsOf) >= cutoff).length;
 
+/* Early warning: priced, still displaying, but inside the last 20% of their
+ * shelf life. `stale` below is the same measurement after the fact — by then
+ * the price is already gone from the page. */
+const expiringCutoff = Date.now() - maxAgeMs * 0.8;
+const expiring = priced.filter(
+  (p) => Date.parse(p.priceAsOf) < expiringCutoff && Date.parse(p.priceAsOf) >= cutoff,
+).length;
+
 if (DRY) {
-  finish("current", { reason: "dry-run", products: products.length, priced: priced.length, displayable, priceClaims });
+  finish("current", { reason: "dry-run", products: products.length, priced: priced.length, displayable, expiring, priceClaims });
 }
 
 // ── step 3: record (finish commits the receipt alongside any price changes) ─
@@ -119,14 +132,42 @@ if (DRY) {
  * price source indistinguishable from a quiet week. Ask the catalog instead. */
 const catalogChanged = Boolean(sh("git", ["status", "--porcelain", "src/data/catalog.json"]));
 
+/*
+ * Prices that have already fallen off the page are a degraded run, not a green
+ * one. Until now the outcome only turned degraded when the price SOURCE failed;
+ * a refresh that succeeded while quietly leaving products past the display
+ * cutoff reported `refreshed` and exited 0. That is the shape the per-run cap
+ * would have produced as the catalogue outgrew it — everything reporting
+ * healthy while prices disappeared from the site one product at a time.
+ *
+ * Thresholded rather than `stale > 0`, deliberately. A single delisted ASIN can
+ * never be priced again, so a bare non-zero test would page every day forever
+ * and train the alert away. 5% or three products, whichever is larger, means a
+ * systemic failure rather than one dead listing.
+ */
+const expired = priced.length - displayable;
+const expiredMatters = expired >= Math.max(3, Math.ceil(priced.length * 0.05));
+
 finish(
-  degraded ? "degraded" : catalogChanged ? "refreshed" : "current",
+  degraded || expiredMatters ? "degraded" : catalogChanged ? "refreshed" : "current",
   {
     ...(degraded ? { reason: "price-source-unavailable" } : {}),
+    ...(expiredMatters && !degraded ? { reason: "prices-past-display-cutoff" } : {}),
     products: products.length,
     priced: priced.length,
     displayable,
-    stale: priced.length - displayable,
+    stale: expired,
+    expiring,
     priceClaims,
   },
+  /* Exit non-zero for expiry ONLY, not for a failed source.
+   *
+   * A source outage is a cause; expired prices are the consequence, and the
+   * consequence is what the site's readers actually experience. Keeping the
+   * source failure at exit 0 means a transient Canopy blip stays quiet, while
+   * an outage long enough to matter escalates on its own — because the prices
+   * it stops refreshing eventually cross the cutoff and trip this. Alerting on
+   * the cause as well would page for every hiccup, and page every single day
+   * of a lapsed-billing month, which is how an alert gets ignored. */
+  expiredMatters ? 1 : 0,
 );

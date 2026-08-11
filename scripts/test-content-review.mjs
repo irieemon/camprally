@@ -28,6 +28,16 @@ const SHOULD_FLAG = [
   ["combustion-in-shelter", "Run the generator in the camper so the noise stays down."],
   ["heater-while-sleeping", "A propane heater will keep you toasty while you sleep through the night."],
   ["cotton-for-warmth", "Pack a cotton base layer for warmth on cold mornings."],
+  /* The exclusion widened on 2026-08-11 to stop condemnations reading as
+   * endorsements. These are the endorsements it must still catch: cosy,
+   * approving, and mentioning neither an alternative fibre nor moisture. */
+  ["cotton-for-warmth", "A cotton hoodie is all the insulation you need for a freezing night."],
+  ["cotton-for-warmth", "Cotton thermals are the cosiest choice for winter camping."],
+  /* `without` and `skip` are excluded only when bound to their own hazard noun,
+   * never globally. These two prove it: both use the word and both are real
+   * hazards that must still flag. */
+  ["combustion-in-shelter", "Run the propane heater without ventilation inside your tent."],
+  ["combustion-in-shelter", "Skip the vent flaps and run a gas stove inside the tent."],
   ["untreated-water", "You can drink straight from the stream on this trail."],
   ["food-in-tent", "Keep your snacks in the tent so raccoons cannot reach them."],
 ];
@@ -43,6 +53,13 @@ const SHOULD_NOT_FLAG = [
   "Store food in a bear canister, never in the tent.",
   "A solar lantern is the safest light to use inside the tent.",
   "Cotton is comfortable in hot weather when staying warm is not the concern.",
+  /* Both of these are real drafts the rule quarantined, and both give exactly
+   * the right advice. Neither contains a negation word — they condemn cotton by
+   * describing what it does, which is how a good writer actually writes it. */
+  "Base layers in fall should be synthetic or merino. Cotton absorbs sweat, holds it against your skin, and stops insulating the moment it gets damp.",
+  "Merino wool keeps insulating when wet. Cotton soaks through and stays cold against the skin all night.",
+  "A higher R-value pad, a real layering system without cotton, and a full rainfly get you most of the way to a warm night.",
+  "Skip combustion devices inside the tent, treat your water, keep food out of your shelter, and October becomes the best month on the calendar.",
   "Keep the campfire well outside the tent, at least fifteen feet away.",
 ];
 

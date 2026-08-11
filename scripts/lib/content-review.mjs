@@ -129,7 +129,33 @@ const HAZARDS = [
     match: (t) =>
       /\bcotton\b/i.test(t) &&
       /\b(warm|insulat|cold|freez|winter|thermal|base ?layer|liner)/i.test(t),
-    exclude: (c) => NEGATED.test(c),
+    /* Prose can condemn cotton without one negation word in it, by describing
+     * what the fibre DOES: "Base layers in fall should be synthetic or merino.
+     * Cotton absorbs sweat, holds it against your skin, and stops insulating
+     * the moment it gets damp." That is the correct advice, stated well, and
+     * NEGATED alone flagged it as an endorsement — it quarantined
+     * fall-camping-gear-essentials twice on 2026-08-11 and best-camping-socks
+     * twice on 2026-08-09.
+     *
+     * Two additional signals, both of which mean "contrasting, not
+     * recommending": naming the fibre you should use instead, and naming
+     * cotton's moisture failure. An article that genuinely endorses cotton for
+     * warmth does neither — it says cotton is soft and cosy and stops there,
+     * which still matches.
+     *
+     * Widening an exclusion weakens a safety rule, so it is worth being
+     * explicit that this is the trade this file already chose: a missed hazard
+     * is caught by the model panel behind these rules, while a false positive
+     * quarantines a good article and, after two attempts, drops the topic. */
+    exclude: (c) =>
+      NEGATED.test(c) ||
+      /* "a real layering system without cotton" is advice to avoid it. `without`
+       * is deliberately NOT in NEGATED — "run a propane heater without
+       * ventilation in your tent" has to keep flagging — so it is bound to the
+       * cotton noun here. */
+      /\b(without|minus|skip\w*)\s+(?:\w+\s+){0,2}cotton\b/i.test(c) ||
+      /\b(merino|wool|synthetic|polyester|polypro\w*|fleece|nylon|capilene)\b/i.test(c) ||
+      /\b(absorb\w*|soak\w*|damp|wet|clammy|sweat\w*|moisture|stops? insulating|loses? (?:its )?insulat\w*)\b/i.test(c),
     problem: "recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake",
   },
   {
@@ -147,7 +173,19 @@ const HAZARDS = [
     match: (t) =>
       /\b(food|snack|scented|toiletr)\w*\b/i.test(t) &&
       /\b(in|inside)\s+(the\s+|your\s+)?tent\b/i.test(t),
-    exclude: (c) => /\b(bear ?(canister|bag|box)|hang|locker|storage box)\b/i.test(c) || NEGATED.test(c),
+    /* "keep food OUT of your shelter" is the correct instruction and read as
+     * the hazard, because the unit that matched was an adjacent pair whose
+     * "inside the tent" came from a different clause entirely: "Skip combustion
+     * devices inside the tent, treat your water, keep food out of your
+     * shelter." Nothing in NEGATED covers `skip` or `keep … out of`, and both
+     * are too useful elsewhere to add there — "skip the vent flaps and run a
+     * stove inside" must keep flagging. So the avoidance verb is tied to the
+     * food noun instead of loosened globally. */
+    exclude: (c) =>
+      /\b(bear ?(canister|bag|box)|hang|locker|storage box)\b/i.test(c) ||
+      /\b(keep|store|leave|stash)\b[^.!?]{0,40}\b(out of|outside|away from|clear of)\b/i.test(c) ||
+      /\b(skip|never|avoid)\b[^.!?]{0,40}\b(food|snack|scented|toiletr)\w*/i.test(c) ||
+      NEGATED.test(c),
     problem: "stores food or scented items in the tent — attracts bears and rodents",
   },
 ];
