@@ -131,3 +131,18 @@ fall-camping-gear-essentials
   · note (1/3): A 10-degree buffer is generally insufficient for fall camping; most sleep system guides recommend 15-20 degrees of buffer to account for pad R-value, shelter drafts, and personal metabolism variation, which could leave campers underprepared.
   · note (1/3): Closing tent vents when temperatures drop traps body moisture and causes heavy condensation, which contradicts the article's earlier advice that cold-weather camping requires increased ventilation.
 
+
+## 2026-08-12T13:04:50.571Z — content-review
+
+Content review rejected best-camping-blankets-under-40 (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-camping-blankets-under-40-2026-08-12T13-04-50-571Z.json
+
+
+best-camping-blankets-under-40
+  ✗ [high] cotton-for-warmth (body)
+      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
+      "Any of the six options above will out-warm a cotton throw at the same price, and that is the bar worth clearing before you spend anything."
+  · note (1/2): This claim is made in the sizing guidance, but the ACUSHLA blanket is listed as 79-by-63 inches and described as covering two adults, while the REDCAMP is 79-by-59 inches and described as covering two adults sitting side by side. The 79-by-59 size would also work for two adults, and the 79-by-63 sizing claim is not contradicted per se, but the REDCAMP is also called 'two adults' despite being smaller in width. This is not a dangerous error, so low severity.
+  · note (1/2): Saying a thick merino blanket 'supplements a sleeping bag for car campers without adding the weight of a heavier blanket' is contradictory — it is itself the heavier blanket supplementing the sleeping bag. Minor wording confusion.
+  (panel not independent — minimax/MiniMax-M3, minimax/MiniMax-M2.7; add a second provider)
+
