@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-blankets-under-40": [
+    {
+      type: "product-grid",
+      title: "Best Camping Blankets Under $40 — Warmth You Can Throw in the Truck — Quick Comparison",
+      items: [
+        { label: "Large Fleece Travel Throw Blanket ", category: "", icon: "🏕️", asin: "B0BWTYCLHN", link: "https://www.amazon.com/dp/B0BWTYCLHN?tag=camprally-20" },
+        { label: "PuTian Merino Wool Blanket Camping", category: "", icon: "🏕️", asin: "B09B736FFX", link: "https://www.amazon.com/dp/B09B736FFX?tag=camprally-20" },
+        { label: "REDCAMP Large Camping Blanket with", category: "", icon: "🏕️", asin: "B08N4RV9HS", link: "https://www.amazon.com/dp/B08N4RV9HS?tag=camprally-20" },
+        { label: "Camping Blanket Camping Lovers Gif", category: "", icon: "🏕️", asin: "B09LRSMJS9", link: "https://www.amazon.com/dp/B09LRSMJS9?tag=camprally-20" },
+        { label: "Large Waterproof Outdoor Blanket T", category: "", icon: "🏕️", asin: "B0CNXQ936R", link: "https://www.amazon.com/dp/B0CNXQ936R?tag=camprally-20" },
+        { label: "ACUSHLA Merino Wool Camp Blanket -", category: "", icon: "🏕️", asin: "B09PMH8MRW", link: "https://www.amazon.com/dp/B09PMH8MRW?tag=camprally-20" },
+      ]
+    },
+  ],
   "fall-camping-gear-essentials": [
     {
       type: "product-grid",
