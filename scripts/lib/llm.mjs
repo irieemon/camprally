@@ -51,7 +51,14 @@ const MODELS = {
    * is not something the receipts could ever explain. Preview ids are avoided
    * for the same reason in reverse: they get withdrawn. */
   gemini: process.env.GEMINI_MODEL ?? "gemini-3.6-flash",
-  ollama: process.env.OLLAMA_MODEL ?? "llama3.2:3b",
+  /* The largest Gemma 4 this machine can hold. Measured, not estimated: the
+   * QAT 12B is 7.2GB on disk and loads to 7.6GB resident at 100% GPU with no
+   * CPU spill, alongside Chrome and the gateway. The next size up does NOT
+   * fit — `26b-a4b-it-qat` is 16GB, which is the machine's entire RAM, and
+   * `31b` is 20GB. Meta's Muse Glimmer was evaluated here too and is out for
+   * the same reason: its smallest build is 18GB against Meta's own stated 24GB
+   * floor, tested on an M4-*Max*. This is a base M4/16GB. */
+  ollama: process.env.OLLAMA_MODEL ?? "gemma4:12b-it-qat",
 };
 
 /**
@@ -94,13 +101,36 @@ const PROVIDERS = {
  * cycle costs a few hours; a bad article published under our name costs more,
  * and the pipeline already treats deferral as a normal outcome.
  *
- * `cheap` leads with a real cloud model rather than the local one, which is not
- * the arrangement the name suggests and is the result of measuring it: asked
- * "what is 2+2" through OpenClaw, llama3.2:3b answered 214. A 3B model drowns
- * in a long system prompt. It stays last in the list because a wrong answer
- * that still parses as JSON is worse than no answer — the schema check catches
- * malformed replies, not confident nonsense. Promote it once a 7-8B model is
- * pulled (this machine has 16GB and can host one).
+ * `cheap` still leads with a cloud model rather than the local one, which is
+ * not what the name suggests. The original reason was quality: asked "what is
+ * 2+2" through OpenClaw, llama3.2:3b answered 214, and a wrong answer that
+ * still parses is worse than no answer. Gemma 4 12B replaced it and settles
+ * that objection — on both of this role's real prompts it returns exactly the
+ * 2-word phrase asked for — so the reason it stays last is now latency, not
+ * trust: ~15s warm against under a second from MiniMax, on a call that runs
+ * once per article for a search hint the caller already treats as optional.
+ * Last means it answers when both clouds are down, which is the failure this
+ * pipeline actually sees.
+ *
+ * GEMMA 4 THINKS BY DEFAULT, and the two traps that follow from it:
+ *   - Keep maxTokens generous. A 10-token probe returned an EMPTY STRING with
+ *     finish_reason=stop, having spent the budget thinking — indistinguishable
+ *     from a model that had nothing to say. Both callers here pass 8000, which
+ *     is the same reason they already pass it for MiniMax.
+ *   - Ollama returns the thought in a separate `reasoning` field and leaves
+ *     `content` clean, so the openai-completions extractor reads the answer and
+ *     drops the musing without special handling. That is a property of Ollama's
+ *     response shape, NOT of the model — a different local server may inline
+ *     the thought, which would feed a chain of reasoning to a `parse: "text"`
+ *     caller. Re-probe the raw response before pointing OLLAMA_BASE_URL
+ *     somewhere new. Same class as the Gemini `thought: true` parts.
+ *
+ * NOT on the reviewer panel, deliberately. Gemma 4 is built from the same
+ * research as Gemini 3, which already votes there, so it would add a second
+ * Google-lineage opinion — and because `panel()` keys independence on the
+ * provider id, `ollama` + `google` would report `independent: true` while
+ * being one lineage. That is the M3/M2.7 overstatement moved from vendor to
+ * lineage. Adding it there needs a lineage-aware check first.
  */
 const ROLES = {
   writer: [["minimax", MODELS.minimaxWriter], ["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini]],
