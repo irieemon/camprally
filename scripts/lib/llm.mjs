@@ -59,6 +59,11 @@ const MODELS = {
    * the same reason: its smallest build is 18GB against Meta's own stated 24GB
    * floor, tested on an M4-*Max*. This is a base M4/16GB. */
   ollama: process.env.OLLAMA_MODEL ?? "gemma4:12b-it-qat",
+  /* The panel's third LINEAGE, which is the whole reason it is here — Meta
+   * weights, reached through a router because 30B does not fit on this machine
+   * (see the ollama note above). Apache 2.0 and served by several hosts, so if
+   * OpenRouter is ever the wrong door the weights are not locked behind it. */
+  museGlimmer: process.env.OPENROUTER_MODEL ?? "meta/muse-glimmer-30b",
 };
 
 /**
@@ -83,6 +88,11 @@ const PROVIDERS = {
     key: () => process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY
       ?? fromOpenclawEnv("GEMINI_API_KEY") ?? fromOpenclawEnv("GOOGLE_API_KEY"),
   },
+  openrouter: {
+    api: "openai-completions",
+    baseUrl: () => process.env.OPENROUTER_BASE_URL ?? "https://openrouter.ai/api",
+    key: () => process.env.OPENROUTER_API_KEY ?? fromOpenclawEnv("OPENROUTER_API_KEY"),
+  },
   ollama: {
     api: "openai-completions",
     baseUrl: () => process.env.OLLAMA_BASE_URL ?? "http://127.0.0.1:11434",
@@ -91,6 +101,29 @@ const PROVIDERS = {
     key: () => "local",
   },
 };
+
+/**
+ * Which vendor actually TRAINED the model behind a candidate.
+ *
+ * This exists because `provider` is where a request is SENT, and the panel
+ * needs to know whose opinion came back. The two stopped being the same thing
+ * the moment a router joined the list: OpenRouter serves Gemini, MiniMax and
+ * Llama alike, so `openrouter` + `google` can be two providers and one lineage.
+ * Keying independence on the provider id would call that a cross-vendor
+ * consensus, which is the failure this panel exists to prevent.
+ *
+ * Read off the MODEL, not the provider, for exactly that reason. Unknown model
+ * ids fall back to the provider id, which is the conservative direction: a new
+ * candidate reads as its own lineage until someone teaches this function
+ * otherwise, so it can never silently merge two vendors into one.
+ */
+export function lineageOf({ provider, model }) {
+  const m = String(model ?? "").toLowerCase();
+  if (/(^|\/)(gemini|gemma)/.test(m)) return "google";
+  if (m.includes("minimax")) return "minimax";
+  if (/(^|\/)(muse|llama)/.test(m)) return "meta";
+  return provider;
+}
 
 /**
  * Role -> ordered candidates. First that answers wins.
@@ -125,16 +158,27 @@ const PROVIDERS = {
  *     caller. Re-probe the raw response before pointing OLLAMA_BASE_URL
  *     somewhere new. Same class as the Gemini `thought: true` parts.
  *
- * NOT on the reviewer panel, deliberately. Gemma 4 is built from the same
- * research as Gemini 3, which already votes there, so it would add a second
- * Google-lineage opinion — and because `panel()` keys independence on the
- * provider id, `ollama` + `google` would report `independent: true` while
- * being one lineage. That is the M3/M2.7 overstatement moved from vendor to
- * lineage. Adding it there needs a lineage-aware check first.
+ * NOT on the reviewer panel, deliberately, and the reason is unchanged now
+ * that `lineageOf` exists: Gemma 4 is built from the same research as Gemini 3,
+ * which already votes there, so it would add a second Google-lineage opinion
+ * rather than a third voice. The lineage check means it would at least be
+ * REPORTED honestly instead of inflating `independent` — but a vote that
+ * changes nothing and costs 2-4 minutes of local inference is still not worth
+ * casting. Meta weights fill that seat instead; see MODELS.museGlimmer.
  */
 const ROLES = {
   writer: [["minimax", MODELS.minimaxWriter], ["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini]],
-  reviewer: [["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["minimax", MODELS.minimaxAlt]],
+  /* Three candidates, three LINEAGES, in that order on purpose: the panel takes
+   * the first `size` entries, so a 3-vote review gets one opinion each from
+   * MiniMax, Google and Meta rather than two checkpoints of one vendor. The
+   * MiniMax alt sits fourth as the top-up when a vendor is down — it is what
+   * the panel falls back TO, not something it reaches by default. */
+  reviewer: [
+    ["minimax", MODELS.minimaxWriter],
+    ["google", MODELS.gemini],
+    ["openrouter", MODELS.museGlimmer],
+    ["minimax", MODELS.minimaxAlt],
+  ],
   vision: [["google", MODELS.gemini], ["minimax", MODELS.minimaxWriter]],
   cheap: [["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini], ["ollama", MODELS.ollama]],
 };
@@ -387,18 +431,24 @@ export async function panel(role, { system, user, maxTokens = 8000, parse = "jso
   }));
 
   const results = settled.filter(Boolean);
-  /* Independence is measured across PROVIDERS, not model ids.
+  /* Independence is measured across LINEAGES, not model ids and not providers.
    *
-   * MiniMax-M3 and MiniMax-M2.7 are different entries in the candidate list but
-   * the same lineage from one vendor, and they are wrong about the same things.
-   * Counting them as two independent opinions is exactly the overstatement this
-   * panel exists to remove — it would have reported a cross-model consensus on
-   * the strength of two checkpoints of one model.
+   * Not model ids: MiniMax-M3 and MiniMax-M2.7 are different entries in the
+   * candidate list but the same lineage from one vendor, and they are wrong
+   * about the same things. Counting them as two independent opinions is exactly
+   * the overstatement this panel exists to remove — it would have reported a
+   * cross-model consensus on the strength of two checkpoints of one model.
+   *
+   * Not providers either, which was the rule until OpenRouter joined the list.
+   * A router is a door, not a vendor: ask it for Gemini and `openrouter` +
+   * `google` look like two providers while being one opinion. The same trap is
+   * a local one away — Gemma 4 is built from the same research as Gemini 3, so
+   * an `ollama` vote would have read as independent of a `google` vote too.
    *
    * And it is a property of what actually ANSWERED, not what was asked: if
    * Gemini was on the panel but its key had expired, the surviving votes are
    * all MiniMax and the caller must not be told otherwise. */
-  const distinct = new Set(results.map((r) => r.provider));
+  const distinct = new Set(results.map(lineageOf));
   return { results, independent: distinct.size > 1, members };
 }
 
