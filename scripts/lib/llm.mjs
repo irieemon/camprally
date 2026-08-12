@@ -64,6 +64,12 @@ const MODELS = {
    * (see the ollama note above). Apache 2.0 and served by several hosts, so if
    * OpenRouter is ever the wrong door the weights are not locked behind it. */
   museGlimmer: process.env.OPENROUTER_MODEL ?? "meta/muse-glimmer-30b",
+  /* Replaced Gemini on the panel on measurement, not reputation — see the
+   * reviewer note below. Distinct lineage, and the cheapest per detection of
+   * everything benchmarked. It DOES hit the empty-content thinking trap
+   * occasionally, which is survivable only because callers pass a generous
+   * maxTokens; do not lower it for this candidate. */
+  deepseek: process.env.DEEPSEEK_MODEL ?? "deepseek/deepseek-v4-pro",
 };
 
 /**
@@ -122,6 +128,11 @@ export function lineageOf({ provider, model }) {
   if (/(^|\/)(gemini|gemma)/.test(m)) return "google";
   if (m.includes("minimax")) return "minimax";
   if (/(^|\/)(muse|llama)/.test(m)) return "meta";
+  if (m.includes("deepseek")) return "deepseek";
+  /* Anything routed and unrecognised collapses to the ROUTER id, which would
+   * make two unknown OpenRouter models look like one lineage. That is the safe
+   * direction — it under-reports independence rather than inventing it — but it
+   * means a new router candidate needs a line here to be counted properly. */
   return provider;
 }
 
@@ -168,15 +179,43 @@ export function lineageOf({ provider, model }) {
  */
 const ROLES = {
   writer: [["minimax", MODELS.minimaxWriter], ["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini]],
-  /* Three candidates, three LINEAGES, in that order on purpose: the panel takes
-   * the first `size` entries, so a 3-vote review gets one opinion each from
-   * MiniMax, Google and Meta rather than two checkpoints of one vendor. The
-   * MiniMax alt sits fourth as the top-up when a vendor is down — it is what
-   * the panel falls back TO, not something it reaches by default. */
+  /* Order is the seating plan, and the two consumers read it DIFFERENTLY —
+   * worth knowing before reordering anything:
+   *   panel()    takes the first `size` entries, calls them once, and drops
+   *              whatever fails. It does NOT substitute. A flaky starter costs
+   *              a vote outright; entries below `size` are unreachable to it
+   *              except when a provider has no key at all.
+   *   callRole() walks the whole list until something answers, so the later
+   *              entries are a real fallback chain for single-answer callers.
+   * So position 1-3 is who reviews articles, and 4-5 only ever helps
+   * generateJSON and audit-products.
+   *
+   * The seats were assigned by measurement, not reputation. Eleven models were
+   * run against the five real defects this panel found in the live corpus on
+   * 2026-08-12, plus clean articles as false-positive controls
+   * (scripts/bench-reviewers.mjs). Muse Glimmer caught 5/5 including all three
+   * safety cases at the second-lowest cost — better than GPT-5, Sonnet 4.6,
+   * Grok and Qwen, which is not the result anyone would have guessed from
+   * parameter counts. DeepSeek matched MiniMax at 3/5 for less money.
+   *
+   * GEMINI WAS DEMOTED, NOT DROPPED. It scored lowest of the three incumbents
+   * (2/5), cost 5x MiniMax because "flash" still bills thinking tokens, and
+   * dropped out of three separate runs on the day it was measured. But it is a
+   * lineage nothing else here covers, so it stays in the list for callRole. Be
+   * clear about what that does and does not buy: it will never step into a
+   * panel seat when DeepSeek has a bad minute, because panel() does not
+   * substitute. It only helps the single-answer callers.
+   *
+   * Two of the three starters route through OpenRouter. That is a shared
+   * availability risk the lineage check cannot see — an OpenRouter outage takes
+   * two votes at once and leaves MiniMax voting with the bench. Accepted
+   * because the bench is two more distinct lineages deep, but it is the reason
+   * the fourth and fifth seats are NOT both MiniMax. */
   reviewer: [
     ["minimax", MODELS.minimaxWriter],
-    ["google", MODELS.gemini],
     ["openrouter", MODELS.museGlimmer],
+    ["openrouter", MODELS.deepseek],
+    ["google", MODELS.gemini],
     ["minimax", MODELS.minimaxAlt],
   ],
   vision: [["google", MODELS.gemini], ["minimax", MODELS.minimaxWriter]],
