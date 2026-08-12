@@ -101,6 +101,56 @@ export function segments(spec) {
  * false positive quarantines a perfectly good article. */
 const NEGATED = /\b(never|do not|don'?t|avoid|not|no|rather than|instead of|except|dangerous|deadly|risk|warning|hazard|keep out|outside)\b/i;
 
+/**
+ * Prose can condemn a material purely by COMPARISON, using no negation word
+ * and naming no alternative fibre:
+ *
+ *   "Any of the six options above will out-warm a cotton throw at the same
+ *    price, and that is the bar worth clearing before you spend anything."
+ *
+ * That is the correct recommendation — cotton is the thing being beaten — and
+ * it blocked best-camping-blankets-under-40 for five consecutive daily runs.
+ * The adjacent-PAIR unit was excluded (its wider context reached "not to a
+ * spec sheet"), but the single-sentence unit's three-sentence neighbourhood
+ * held no negation, no alternative fibre and no moisture word, so the rule
+ * fired anyway. Widening the pair window would not have helped; the signal
+ * simply was not in the window.
+ *
+ * DIRECTION IS THE WHOLE POINT: the material must sit on the LOSING side. Each
+ * alternative requires the noun to follow the comparative, so "cotton beats
+ * fleece for warmth" — a genuine endorsement — still matches and still flags.
+ * And a sentence that praises the material on its own ("cotton is fine for
+ * winter camping") carries no comparative, so it is judged on its own terms.
+ */
+const outclassed = (noun) =>
+  new RegExp(
+    String.raw`\b(?:` +
+      // "out-warm a cotton throw", "outperforms cotton", "beats a cotton blanket"
+      String.raw`(?:out-?(?:warm|perform|insulat|last|class)\w*|beat\w*|outstrip\w*)|` +
+      // "warmer than cotton", "dries faster than a cotton throw"
+      String.raw`(?:warm|dri|light|loft|cosi|cozi|better|faster|quicker|tough)\w*\s+than|` +
+      String.raw`more\s+\w+\s+than|` +
+      // "choose fleece over cotton", "unlike cotton", "compared to cotton"
+      String.raw`over|versus|vs\.?|unlike|compared\s+(?:to|with)|instead\s+of` +
+      String.raw`)\s+(?:\w+[\s-]+){0,3}` + noun + String.raw`\b`,
+    "i",
+  );
+
+const COTTON_OUTCLASSED = outclassed("cotton");
+
+/**
+ * The mirror image: the material stated as the WINNER.
+ *
+ * "Cotton beats fleece for warmth, so choose a cotton base layer" is exactly
+ * the advice this rule exists to stop, and it was passing — naming `fleece`
+ * tripped the alternative-fibre exclusion, which assumes another fibre means
+ * contrasting away from cotton. When cotton is the subject of the comparative,
+ * it means the reverse, so this overrides every exclusion rather than joining
+ * them.
+ */
+const COTTON_PREFERRED =
+  /\bcotton\b(?:\s+\w+){0,3}\s+(?:beats?|out-?(?:warm|perform|insulat|last)\w*|wins?|is\s+(?:warmer|better|cosier|cozier)\s+than)/i;
+
 const HAZARDS = [
   {
     id: "combustion-in-shelter",
@@ -147,15 +197,29 @@ const HAZARDS = [
      * explicit that this is the trade this file already chose: a missed hazard
      * is caught by the model panel behind these rules, while a false positive
      * quarantines a good article and, after two attempts, drops the topic. */
-    exclude: (c) =>
-      NEGATED.test(c) ||
+    exclude: (c, t) =>
+      /* An OVERRIDE, checked first and on the matched text rather than the
+       * neighbourhood: cotton stated as the WINNER is an endorsement, and no
+       * exclusion below should be allowed to excuse it. Without this,
+       * "Cotton beats fleece for warmth, so choose a cotton base layer" was
+       * waved through — the word `fleece` alone tripped the alternative-fibre
+       * exclusion, which assumes naming another fibre means contrasting AWAY
+       * from cotton. Here it means the opposite. */
+      !COTTON_PREFERRED.test(t ?? c) &&
+      (NEGATED.test(c) ||
       /* "a real layering system without cotton" is advice to avoid it. `without`
        * is deliberately NOT in NEGATED — "run a propane heater without
        * ventilation in your tent" has to keep flagging — so it is bound to the
        * cotton noun here. */
       /\b(without|minus|skip\w*)\s+(?:\w+\s+){0,2}cotton\b/i.test(c) ||
+      /* Cotton named as the thing being BEATEN. */
+      COTTON_OUTCLASSED.test(c) ||
       /\b(merino|wool|synthetic|polyester|polypro\w*|fleece|nylon|capilene)\b/i.test(c) ||
-      /\b(absorb\w*|soak\w*|damp|wet|clammy|sweat\w*|moisture|stops? insulating|loses? (?:its )?insulat\w*)\b/i.test(c),
+      /* `sweat\w*` used to sit here and matched SWEATSHIRT, so
+       * "a thick cotton sweatshirt is the warmest thing you can bring for
+       * winter camping" excused itself: a garment name read as evidence that
+       * the prose was discussing moisture. Bounded to sweat the noun/verb. */
+      /\b(absorb\w*|soak\w*|damp|wet|clammy|sweat(?:s|y|ed|ing)?\b|perspir\w*|moisture|stops? insulating|loses? (?:its )?insulat\w*)/i.test(c)),
     problem: "recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake",
   },
   {
@@ -195,7 +259,10 @@ export function hazardFlags(spec) {
   const seen = new Set();
   for (const { path, text, context } of segments(spec)) {
     for (const h of HAZARDS) {
-      if (!h.match(text) || h.exclude(context)) continue;
+      // The matched text is passed alongside the neighbourhood so a rule can
+      // distinguish a signal that must sit in THIS clause (which side of a
+      // comparison the material is on) from one that may sit next door.
+      if (!h.match(text) || h.exclude(context, text)) continue;
       // One article can restate the same mistake several times. Key on rule +
       // field so a report lists each distinct problem once.
       const key = `${h.id}:${path}`;

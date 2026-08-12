@@ -33,6 +33,20 @@ const SHOULD_FLAG = [
    * approving, and mentioning neither an alternative fibre nor moisture. */
   ["cotton-for-warmth", "A cotton hoodie is all the insulation you need for a freezing night."],
   ["cotton-for-warmth", "Cotton thermals are the cosiest choice for winter camping."],
+  /* Both slipped through the ORIGINAL rule and were found while fixing the
+   * comparative false positive below — misses of genuinely dangerous advice,
+   * which is the direction that matters most.
+   *
+   * The first excused itself on the word SWEATSHIRT: the moisture exclusion
+   * used `sweat\w*`, so a garment name read as evidence the prose was
+   * discussing moisture. The second names `fleece`, which tripped the
+   * alternative-fibre exclusion — that exclusion assumes naming another fibre
+   * means contrasting AWAY from cotton, and here it means the opposite,
+   * because cotton is the subject of the comparison rather than its object. */
+  ["cotton-for-warmth", "A thick cotton sweatshirt is the warmest thing you can bring for winter camping."],
+  ["cotton-for-warmth", "Cotton beats fleece for warmth, so choose a cotton base layer."],
+  ["cotton-for-warmth", "Cotton is warmer than merino, so pack cotton for the cold nights."],
+  ["cotton-for-warmth", "Bring cotton sweatpants as your thermal layer."],
   /* `without` and `skip` are excluded only when bound to their own hazard noun,
    * never globally. These two prove it: both use the word and both are real
    * hazards that must still flag. */
@@ -61,6 +75,22 @@ const SHOULD_NOT_FLAG = [
   "A higher R-value pad, a real layering system without cotton, and a full rainfly get you most of the way to a warm night.",
   "Skip combustion devices inside the tent, treat your water, keep food out of your shelter, and October becomes the best month on the calendar.",
   "Keep the campfire well outside the tent, at least fifteen feet away.",
+  /* THE COMPARATIVE FALSE POSITIVE. This exact sentence blocked
+   * best-camping-blankets-under-40 on five consecutive daily runs
+   * (2026-08-08 to 08-12) — cotton is the thing being BEATEN, which is the
+   * correct recommendation. It carries no negation, names no alternative
+   * fibre and mentions no moisture, so every existing exclusion missed it.
+   *
+   * Note the adjacent-PAIR unit was already excluded, because its wider
+   * context reached "not to a spec sheet" in the preceding sentence. Only the
+   * single-sentence unit fired, so widening the pair window would not have
+   * helped — the signal was never in the window. */
+  "Match the blanket to your actual trip, not to a spec sheet. Any of the six options above will out-warm a cotton throw at the same price, and that is the bar worth clearing before you spend anything.",
+  "It stays warmer than cotton once the temperature drops below freezing.",
+  "This blanket dries faster than a cotton throw after a wet morning.",
+  "Choose it over cotton when the forecast turns cold.",
+  "Unlike cotton, it keeps insulating in freezing conditions.",
+  "Merino outperforms cotton in cold weather.",
 ];
 
 let pass = 0;
