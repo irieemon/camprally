@@ -125,7 +125,7 @@ Start with the seven items above. Camp twice. Then decide what you actually need
     content: `
 ## Understanding Temperature Ratings
 
-ISO standard ratings tell you the lowest temp a bag will keep an average sleeper comfortable. But here's the honest truth: most manufacturers rate conservatively. A "20°F bag" might actually keep you comfortable at 25-30°F.
+ISO testing gives a bag two numbers: a *comfort* rating and a lower *limit* rating. Here's the honest truth: bags are usually marketed on the limit number, which is closer to "you will survive the night" than "you will sleep well." So a bag sold as a "20°F bag" often keeps an average sleeper genuinely comfortable only around 25-30°F.
 
 **Get a bag rated 10-15°F below your expected low** for safety margin.
 
@@ -360,7 +360,7 @@ Get both. The combo covers every scenario.
 
 Stack two plastic storage bins. Instant table that's:
 - Completely free
-- Adjustable height
+- Whatever height your bins add up to
 - Provides storage underneath
 
 This hack works surprisingly well for casual car camping.
@@ -405,8 +405,8 @@ Fill a Nalgene with hot water and put it in your sleeping bag 10 minutes before 
 ### Double Your Sleeping Pad
 Stack two foam pads instead of buying an expensive 4-season pad. Two $12 pads = R-value of 4+.
 
-### Dry Clothes in Your Tent
-Hang damp clothes on a paracord line strung across your tent. Your body heat dries them overnight.
+### Dry Damp Clothes Outside the Tent, Not Inside It
+String a paracord line under the vestibule or between two trees and hang damp clothes there. Bringing wet gear into a sealed tent puts that water into the air you are breathing, and it comes back as condensation on the walls and on your sleeping bag — which is how you end up colder than when you started. Socks and gloves are the exception: those are small enough to dry in the bottom of your sleeping bag with body heat.
 
 ## Fire Hacks
 
@@ -1380,7 +1380,7 @@ Unexpected weather changes or emergencies can turn a planned trip serious fast. 
 
 **[Check the QIO CHUANG Emergency Mylar Thermal Blankets on Amazon](https://www.amazon.com/dp/B07GLCYR5S?tag=camprally-20)**
 
-Each blanket reflects body heat back to the user, helping prevent dangerous heat loss in cold or wet conditions. The mylar construction is waterproof and windproof, making it useful for ground cover, emergency shelter, or rain protection. Four blankets per package means you can share with hiking partners, keep some in your vehicle emergency kit, and still have spares at home. The compact packaging slips into any pocket or pack compartment.
+Each blanket reflects body heat back to the user, helping prevent dangerous heat loss in cold or wet conditions. The mylar sheet blocks wind and sheds light rain, which makes it useful as ground cover or a temporary shelter layer — but it is thin and tears easily, so treat it as a backup rather than as rain gear you plan around. Four blankets per package means you can share with hiking partners, keep some in your vehicle emergency kit, and still have spares at home. The compact packaging slips into any pocket or pack compartment.
 
 ### Survival Blanket 4-Pack
 
@@ -1488,7 +1488,7 @@ The five-speed range accommodates different tolerances—some campers prefer gen
 
 When camping near streams, lakes, or natural springs, a squeeze filter eliminates the need to boil water for drinking. The squeeze design lets you fill a reservoir from a water source, then push water through the filter into bottles or a hydration bladder.
 
-Field maintenance is straightforward—backflushing restores flow rates when silt or sediment reduces output. The hollow fiber membrane removes bacteria, protozoa, and microplastics. This capability matters when you are camping in arid regions where natural water sources are few and hauling jugs is impractical.
+Field maintenance is straightforward—backflushing restores flow rates when silt or sediment reduces output. The hollow fiber membrane removes bacteria and protozoa, which are the contaminants that matter in North American backcountry water. It does not filter viruses — rarely a concern in the backcountry here, worth knowing before you rely on it abroad. This capability matters when you are camping in arid regions where natural water sources are few and hauling jugs is impractical.
 
 Pairing a squeeze filter with a couple of wide-mouth bottles gives you both storage and treatment in a compact system.
 
