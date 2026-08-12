@@ -1460,7 +1460,7 @@ Staying hydrated in the heat is not optional. Dehydration accelerates fatigue, i
 
 The wide mouth makes adding ice cubes straightforward, and the BPA-free Tritan material does not retain flavors or odors after repeated use. The graduated measurements on the side help you monitor how much you have drunk. The wide loop cap allows easy carrying with one or two fingers, and the bottle fits most standard cup holders in vehicles and camp chairs.
 
-At 32 ounces, this size balances capacity with portability. Two bottles per person per day is a reasonable minimum target for hot weather camping.
+At 32 ounces, this size balances capacity with portability. Plan on roughly a gallon of water per person per day in hot weather — four fills of this bottle — and more if you are hiking, sweating heavily, or camping somewhere shade is scarce.
 
 **[Check the Nalgene Wide Mouth Water Bottle on Amazon](https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20)**
 
