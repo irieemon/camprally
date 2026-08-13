@@ -4395,5 +4395,132 @@
         "ratingsTotal": 2557
       }
     ]
+  },
+  "camper warm sleeping bag|1|": {
+    "term": "camper warm sleeping bag",
+    "min": 1,
+    "fetchedAt": "2026-08-13T13:00:27.087Z",
+    "results": [
+      {
+        "asin": "B0DKXZSN9B",
+        "title": "Momcozy Universal Stroller Footmuff, Plush Weatherproof Bunting Bag | Easy Attachment with Extendable Cover And Adjustable Buckle, Warm Sleeping Bag for Most Strollers",
+        "price": "$149.99",
+        "priceValue": 149.99,
+        "rating": 4.7,
+        "ratingsTotal": 181
+      },
+      {
+        "asin": "B0896X17S5",
+        "title": "VENTURE 4TH Backpacking Sleeping Bag for Camping - Single, XXL & Double | Water-resistant, breathable polyester. Compresses into included stuff sack for easy carry. Warm & Cold Weather Options.",
+        "price": "$54.95",
+        "priceValue": 54.95,
+        "rating": 4.6,
+        "ratingsTotal": 3930
+      },
+      {
+        "asin": "B00DDP3EHK",
+        "title": "Teton Celsius Regular, 25F, 20F, 0F Degree Sleeping Bags, All Weather Bag for Adults and Kids, Camping Made Easy and Warm, Travel Sack Included",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.6,
+        "ratingsTotal": 3782
+      },
+      {
+        "asin": "B0CBX96X8T",
+        "title": "HiZYNICE Sleeping Bags for Adults XXL Cold Weather | 100% Cotton Flannel Winter Camping Large 90 x 39 in,Compression Sack Included",
+        "price": "$74.99",
+        "priceValue": 74.99,
+        "rating": 4.6,
+        "ratingsTotal": 1586
+      },
+      {
+        "asin": "B077XQDZW4",
+        "title": "MalloMe Sleeping Bags for Adults Cold Weather & Warm - Backpacking Camping Sleeping Bag for Kids, Girls, Boys - Lightweight Camping Essentials Gear Accessories Hiking Sleep Must Haves Single & Double",
+        "price": "$25.99",
+        "priceValue": 25.99,
+        "rating": 4.5,
+        "ratingsTotal": 17042
+      },
+      {
+        "asin": "B07BHJ2YYG",
+        "title": "3-4 Season Sleeping Bag for Adults & Kids, Lightweight Warm Cold Weather Camping Bag with Waterproof Compression Sack – Portable for Hiking, Backpacking, Traveling & Outdoor Adventures",
+        "price": "$34.90",
+        "priceValue": 34.9,
+        "rating": 4.5,
+        "ratingsTotal": 7835
+      },
+      {
+        "asin": "B01N7RG05E",
+        "title": "REDCAMP Cotton Flannel Sleeping Bag for Camping Backpacking, Adults Cold Weather Envelope Sleeping Bags with 2/3/4/6lbs Filling",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.5,
+        "ratingsTotal": 3183
+      },
+      {
+        "asin": "B0CP764W6V",
+        "title": "KingCamp Sleeping Bag for Adults, 100% Flannel XL Big and Tall | Cold Weather Warm Sleeping Bags with Compression Sack Portable Waterproof Gear Accessories for Outdoor Camping",
+        "price": "$64.99",
+        "priceValue": 64.99,
+        "rating": 4.5,
+        "ratingsTotal": 1936
+      },
+      {
+        "asin": "B09MMXW7VK",
+        "title": "Camping Sleeping Bag, 32℉ Sleeping Bags for Adults Kids Teens Cold Weather Warm Sleeping Bag Winter for 3-4 Season Camping, Camping Gear Equipment, Traveling, and Outdoors",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.5,
+        "ratingsTotal": 1046
+      },
+      {
+        "asin": "B00A4VLHSE",
+        "title": "TETON Sports Deer Hunter Sleeping Bag, Warm and Comfortable Camping Sleeping Bag, Teton Tough Canvas Shell for Camping, Hunting, and Cold Weather",
+        "price": "$126.69",
+        "priceValue": 126.69,
+        "rating": 4.5,
+        "ratingsTotal": 460
+      },
+      {
+        "asin": "B0DK6VHTL4",
+        "title": "Warm Weather Sleeping Bag - Portable, Waterproof, Compact Lightweight, Comfort with Compression Sack - Great for Outdoor Camping, Backpacking & Hiking-83 L x 30\" W Fits Adults",
+        "price": "$25.64",
+        "priceValue": 25.64,
+        "rating": 4.4,
+        "ratingsTotal": 9119
+      },
+      {
+        "asin": "B09KBN8GPC",
+        "title": "MEREZA 0 Degree Winter Sleeping Bag for Adults Kids with Pillow, Cold Weather Sleeping Bag for 4 Season Camping Hiking Backpacking Sleeping Bags for Big and Tall",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.4,
+        "ratingsTotal": 654
+      },
+      {
+        "asin": "B0FJS2CVCK",
+        "title": "FARLAND Sleeping Bags for Adults Cold Weather, Fleece-Lined | Waterproof Windproof 3-Season Camping, Microplush Interior, Compression Sack, 87x33\"",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.4,
+        "ratingsTotal": 625
+      },
+      {
+        "asin": "B0D6416YYW",
+        "title": "Coleman Brazos 20/30°F Adult Cool-Weather Sleeping Bag with No-Snag Zipper & Stuff Sack, Machine Washable, Great for Camping, Traveling, Guests, & More",
+        "price": "$53.99",
+        "priceValue": 53.99,
+        "rating": 4.4,
+        "ratingsTotal": 247
+      },
+      {
+        "asin": "B0BPSKPSKZ",
+        "title": "0 Degree Winter Sleeping Bags(480GSM) for Adults with Pillow | Cold Weather Camping Sleeping Bag Comfortable Warm Portable Sleeping Bags Compression Sack for Backpacking Hiking Outdoor",
+        "price": "$41.64",
+        "priceValue": 41.64,
+        "rating": 4.4,
+        "ratingsTotal": 226
+      }
+    ]
   }
 }
