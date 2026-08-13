@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-stay-warm-camping-cold-nights": [
+    {
+      type: "product-grid",
+      title: "How to Stay Warm Camping — The Layers and the Mistakes — Quick Comparison",
+      items: [
+        { label: "Momcozy Universal Stroller Footmuf", category: "", icon: "🏕️", asin: "B0DKXZSN9B", link: "https://www.amazon.com/dp/B0DKXZSN9B?tag=camprally-20" },
+        { label: "VENTURE 4TH Backpacking Sleeping B", category: "", icon: "🏕️", asin: "B0896X17S5", link: "https://www.amazon.com/dp/B0896X17S5?tag=camprally-20" },
+        { label: "Teton Celsius Regular", category: "", icon: "🏕️", asin: "B00DDP3EHK", link: "https://www.amazon.com/dp/B00DDP3EHK?tag=camprally-20" },
+        { label: "HiZYNICE Sleeping Bags for Adults ", category: "", icon: "🏕️", asin: "B0CBX96X8T", link: "https://www.amazon.com/dp/B0CBX96X8T?tag=camprally-20" },
+        { label: "MalloMe Sleeping Bags for Adults C", category: "", icon: "🏕️", asin: "B077XQDZW4", link: "https://www.amazon.com/dp/B077XQDZW4?tag=camprally-20" },
+        { label: "3-4 Season Sleeping Bag for Adults", category: "", icon: "🏕️", asin: "B07BHJ2YYG", link: "https://www.amazon.com/dp/B07BHJ2YYG?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-blankets-under-40": [
     {
       type: "product-grid",
