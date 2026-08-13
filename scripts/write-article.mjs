@@ -44,6 +44,25 @@ if (!roleCandidates("writer").length) {
 }
 
 
+/* Every published slug with its title, for the related-guides trailer.
+ *
+ * The prompt used to say "link to related guides using relative paths like
+ * /blog/some-slug" and left the writer to supply the slug. It invented them,
+ * plausibly and every single time: 21 of 21 trailers across the site pointed at
+ * articles that were never written (/blog/cold-weather-camping-checklist,
+ * /blog/how-to-pick-a-sleeping-bag, and one set on example.com). Nothing caught
+ * it — the dead-link gate only resolves affiliate ASINs, so an internal 404 is
+ * invisible to the pipeline and to the reader until they click.
+ *
+ * Handing the model a closed menu is the fix: it can only choose wrong, not
+ * hallucinate. check-internal-links.mjs is the backstop for when it does. */
+function publishedGuides(excludeSlug) {
+  const src = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
+  return [...src.matchAll(/slug: "([^"]+)"[\s\S]{0,400}?title: "([^"]+)"/g)]
+    .map((m) => ({ slug: m[1], title: m[2] }))
+    .filter((a) => a.slug !== excludeSlug);
+}
+
 /** Reuse an article's existing id when regenerating; otherwise allocate the next. */
 function nextArticleId(slug) {
   const src = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
@@ -323,8 +342,15 @@ const user = [
   "and nothing else.",
   productLines,
   "",
-  "End with a short italic line linking to related guides using relative paths",
-  "like /blog/some-slug.",
+  "",
+  "End with a short italic line of 2-3 related guides, in Markdown form:",
+  "*Related guides: [Title](/blog/slug) · [Title](/blog/slug)*",
+  "Choose ONLY from the list below and copy the slug EXACTLY as written. Never",
+  "invent a slug, never guess one from a title, and never link anything not on",
+  "this list — every other path is a 404. Pick the ones closest in topic:",
+  publishedGuides(brief.slug)
+    .map((a) => `  /blog/${a.slug} — ${a.title}`)
+    .join("\n"),
 ].filter(Boolean).join("\n");
 
 // ── call ──────────────────────────────────────────────────────────────────

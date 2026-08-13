@@ -468,6 +468,40 @@ try {
   }, EXIT.FAIL);
 }
 
+// ── step 4c: internal-link check ──────────────────────────────────────────
+// Blocking, and deliberately so: an article whose closing "related guides" line
+// points at /blog/slugs-that-do-not-exist sends every reader who clicks to a
+// 404, and unlike a dead affiliate link it leaves no trace anywhere — the build
+// passes, the deploy verifies, the receipt says published. That is how 21 of 21
+// trailers on this site came to be hallucinated slugs before anyone noticed.
+//
+// It reuses the content-review quarantine path rather than halting: the draft is
+// moved aside, the attempt count goes up, and the next cycle regenerates it from
+// the closed list of real slugs the writer prompt now supplies. Blocking a
+// publish this way should be rare — this is the backstop, not the fix.
+try {
+  console.log(sh("node", ["scripts/check-internal-links.mjs", specPath]));
+} catch (err) {
+  const out = `${err.stdout ?? ""}${err.stderr ?? ""}`;
+  console.log(out);
+
+  const attempts = (skips[next.slug]?.attempts ?? 0) + 1;
+  skips[next.slug] = { attempts, lastAt: new Date().toISOString(), findings: out.slice(-1200) };
+  writeFileSync(SKIPS, JSON.stringify(skips, null, 2) + "\n");
+
+  mkdirSync(QUARANTINE, { recursive: true });
+  renameSync(specPath, `${QUARANTINE}/${next.slug}-${stamp}.json`);
+
+  finish("blocked", {
+    reason: "internal-links",
+    slug: next.slug,
+    attempts,
+    message:
+      `Dead internal links in ${next.slug} (attempt ${attempts} of ${MAX_CONTENT_ATTEMPTS}).\n` +
+      `Spec quarantined to specs/quarantine/${next.slug}-${stamp}.json\n\n${out.slice(-1200)}`,
+  }, EXIT.FAIL);
+}
+
 // ── step 5: publish (gated on cached-live links + a passing build) ────────
 let pubCode = 0, pubOut = "";
 try {
