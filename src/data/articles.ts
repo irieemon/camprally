@@ -2957,6 +2957,136 @@ If you're buying one thing to fix cold nights, it's not a sleeping bag — it's 
 *Related guides: [Best Budget Sleeping Pads Under $50](/blog/best-budget-sleeping-pads-under-50) · [Fall Camping Gear Essentials](/blog/fall-camping-gear-essentials) · [Best Budget Sleeping Bags for Cold Weather](/blog/best-budget-sleeping-bags-cold-weather)*
     `
   },
+
+  {
+    id: "art-042",
+    slug: "best-budget-hiking-backpacks-under-100",
+    title: "Best Hiking Backpacks Under $100 — Fit First, Features Second",
+    excerpt: "Best Hiking Backpacks Under $100 — Fit First, Features Second.",
+    category: "Gear",
+    date: "2026-08-14",
+    author: "Camp Rally Team",
+    readTime: "10 min read",
+    content: `
+# Best Hiking Backpacks Under $100 — Fit First, Features Second
+
+A backpack is the one piece of hiking gear that lives on your body for hours. Get the fit wrong and every litre, pocket, and mesh panel on the spec sheet stops mattering. Get the fit right and even a budget pack disappears on your back.
+
+This guide is built around that idea. Litres, fabrics, and rain covers all come second to how a pack sits on your torso and how the hip belt wraps your hips. Below is a short primer on fit, followed by six backpacks under $100 that handle the trail without punishing the wallet.
+
+## How to Choose a Hiking Backpack Under $100
+
+Before comparing pockets, measure yourself. Two numbers matter most.
+
+### Torso length, not back length
+
+Torso length is the distance from your C7 vertebra (the bony bump at the base of your neck) down to the top of your iliac crest (the top edge of your hip bones). It is not your height, and it is not your total back length. Most budget packs come in one torso range, but each has a different range, so the numbers on the spec sheet matter. If your torso falls outside the listed range, that pack will load weight onto your shoulders instead of your hips, and your shoulders will hurt by mile three.
+
+### Hip belt size and shape
+
+The hip belt carries most of the load on a real hike, around 70 to 80 percent when the pack is dialed in. A belt that is too narrow will dig into your hip bones. A belt that is too wide will slide down. Padded, contoured belts with a soft edge sit better than flat webbing. Look for a belt that wraps from the front of your hip bone to the back of your spine without gapping.
+
+### Capacity matched to the trip
+
+Capacity is useful as a trip-matching tool, not a flex metric. Day hikes on established trails usually work with 15 to 25 litres. Long day hikes with extra layers, food, and water want 25 to 35. Overnight trips usually want 40 to 55, and you can stretch to 60 if you carry group gear. Bigger is not better — oversize packs tempt you to fill them, which hurts your knees on the descent.
+
+### Frame and back panel
+
+A simple internal frame or foam back panel keeps the load close to your back and helps ventilation. Mesh back panels are common in this price range and feel airier on warm days, though they can sag under heavy loads. If you plan to carry more than about 20 pounds, choose a pack with a stiffer back panel and a real load-lifter strap above the shoulder.
+
+### Other features worth checking
+
+A rain cover is genuinely useful, even if the pack fabric is already water-resistant. Hip-belt pockets are more useful than they look because they hold a phone or a snack without taking the pack off. Side compression straps stabilize a partial load. A hydration sleeve keeps a bladder off your back, which helps on hot days.
+
+### Fit checklist before you buy
+
+- Torso length falls inside the pack's listed range
+- Hip belt sits on the iliac crest, not the waist
+- Load lifter strap pulls the top of the pack toward your body
+- Sternum strap keeps the shoulder straps from sliding outward
+- No pinching at the armpits when fully loaded
+
+Now, the picks.
+
+## 1. Teton 55L Scout Internal Frame Backpack
+
+For first-time backpackers who want a real overnight pack without the cost of a name-brand internal frame, the Teton 55L Scout is the obvious starting point. It is built around a true internal frame, which is rare under $100, and that frame does the job of moving weight off your shoulders and onto your hips.
+
+Capacity is generous at 55 litres, so it works for overnight trips, two-night trips with light packing, or hauling group gear. The pack comes with an included rain cover, which most budget packs charge extra for. Shoulder straps and hip belt are both padded, and there are multiple compression straps along the sides to keep the load from sloshing when the pack is not full.
+
+The downside is weight. This is not a featherweight. You feel it when you pick the pack up, and on long climbs the extra ounces add up. Also, because the pack runs in a single torso range, taller and shorter hikers should measure carefully before committing.
+
+If your torso length falls in the middle of the range and your trips lean toward overnights, this is the most capable pack on the list for the money.
+
+**[Check the Teton 55L Scout Internal Frame Backpack on Amazon](https://www.amazon.com/dp/B09DQZBBFG?tag=camprally-20)**
+
+## 2. AONIJIE Hydration Vest Pack
+
+For fast hikes, trail runs, and any day where the goal is speed over cargo, a hydration vest is a different tool than a daypack. The AONIJIE Hydration Vest Pack is built like a running vest, with two front soft flasks or pockets, a low-profile 5 to 5.5 litre main compartment, and a harness that hugs the body so nothing bounces.
+
+Because it sits on the chest and upper back instead of the lower back, there is no hip belt to fit, no torso length to measure, and no load to transfer. You just adjust the side straps until it stops moving. That makes it a good pick for anyone who finds regular daypacks annoying on faster movement, including runners, fast hikers, and people who carry a small kit plus water for a half day.
+
+Capacity is intentionally small. This is not the pack for a lunch, an extra jacket, and a camera. It is for a phone, a snack, a layer, and a hydration bladder. Pick it for the right job and it disappears. Pick it for the wrong job and you will overstuff it.
+
+**[Check the AONIJIE Hydration Vest Pack on Amazon](https://www.amazon.com/dp/B07QNPZB6V?tag=camprally-20)**
+
+## 3. SKYSPER 20L Lightweight Daypack
+
+For most day hikes — three to eight miles, a water bottle, a layer, lunch, and a few extras — a 20 litre daypack is the sweet spot. The SKYSPER 20L hits that size without tipping the scale, and it costs less than most of the larger packs on this list.
+
+The build is simple, which is the point. There is one main compartment, a front pocket, and side pockets for a water bottle. Straps are lightly padded and the back panel is a basic foam sheet. There is no frame and no hip belt, so this pack is for loads of about 8 to 10 pounds, not for hauling a kid's car seat up a trailhead.
+
+Fit is forgiving because the harness is minimal. Anyone whose torso is roughly average will find it sits fine. The lack of a hip belt also means it works for people whose hips are hard to fit with standard belts, including some youth and some smaller-framed adults.
+
+If you want a clean, simple, light daypack and your hikes are short and fast, this is the budget pick.
+
+**[Check the SKYSPER 20L Lightweight Daypack on Amazon](https://www.amazon.com/dp/B0BGKYB199?tag=camprally-20)**
+
+## 4. Diamond Candy 40L Hiking Backpack
+
+The Diamond Candy 40L is the middle ground of the list — too big for a fast day, too small for a full week, but right at home for a long day hike or a one-night trip with disciplined packing. The standout feature is a breathable mesh back panel that creates a real air gap between your back and the pack, which makes a noticeable difference on summer trails.
+
+Capacity is 40 litres, divided across a main compartment, a front organizer pocket, two side pockets, and a hip-belt pocket on each side. Multiple compression straps and adjustable straps let you cinch the load down when the pack is not full, which keeps weight close to your back and reduces sway.
+
+The hip belt is padded and shaped, and it carries a meaningful amount of load if you tighten the load lifter above the shoulder. That is the part to get right. Skip the load lifter and you will feel the weight on your shoulders regardless of how good the belt is.
+
+This is a solid all-around pick for hikers who want one pack to do most jobs.
+
+**[Check the Diamond Candy 40L Hiking Backpack on Amazon](https://www.amazon.com/dp/B00MPHNAA8?tag=camprally-20)**
+
+## 5. WoneNice 50L Waterproof Hiking Backpack
+
+When capacity and weather protection are both priorities, the WoneNice 50L earns a look. The pack is rated waterproof rather than merely water-resistant, which is a meaningful step up, and it ships with an included rain cover as a second layer of defense.
+
+Capacity is 45 litres plus a 5 litre extension, which lets you grow or shrink the pack depending on the trip. That is useful for hikers who bounce between a short daypack load and a longer overnight without wanting two packs. Side compression straps and multiple carry loops make it easy to lash a sleeping pad or trekking poles to the outside.
+
+Fit is a one-size-fits-most torso range, so measure your torso and check the spec sheet before ordering. The hip belt is padded and includes pockets. The shoulder straps are reasonably wide for the load size.
+
+This is the pick if your trips regularly push into wet weather and you want one pack that handles capacity swings.
+
+**[Check the WoneNice 50L Waterproof Hiking Backpack on Amazon](https://www.amazon.com/dp/B07M9NGMZ5?tag=camprally-20)**
+
+## 6. MOUNTAINTOP 40L Hiking Backpack
+
+The MOUNTAINTOP 40L is built around two features that punch above the price: a 400D polyester fabric that resists abrasion better than the lighter fabrics common at this price, and YKK zippers that hold up to real use. Both of those details matter on the trail, where a torn zipper or a worn panel can end a trip.
+
+Capacity is 40 litres, the same as the Diamond Candy, but the build leans toward durability rather than ventilation. The fabric is water-repellent rather than waterproof, so pair it with a pack liner or rain cover in serious weather. The hip belt is padded and shaped, and the shoulder straps include a sternum strap to keep them from sliding outward.
+
+The trade-off is weight. Durable fabric is heavier than ultralight fabric, and this pack is not the lightest option here. For day-in, day-out use on rocky trails, that weight is a fair exchange.
+
+**[Check the MOUNTAINTOP 40L Hiking Backpack on Amazon](https://www.amazon.com/dp/B0FQ5LNM5N?tag=camprally-20)**
+
+## Verdict
+
+If you can only buy one pack from this list, match the pack to the trip you take most often.
+
+For overnights and first-time backpackers who want a real internal frame, the **Teton 55L Scout** is the most capable pack under $100. For fast movement, the **AONIJIE Hydration Vest** beats every daypack in this price range because it does not bounce. For simple day hikes, the **SKYSPER 20L** is the cleanest and lightest choice. For an all-around do-most-things pack with breathable back support, the **Diamond Candy 40L** is the safest bet. For wet-weather trips and capacity that grows, the **WoneNice 50L** is the most weather-ready. For durable daily use, the **MOUNTAINTOP 40L** will outlast the lighter packs on this list.
+
+Whichever pack you pick, measure your torso before you order. A correct fit turns any of these into a pack that disappears on the trail. A wrong fit turns even the best pack on the shelf into a shoulder-ache by mile two.
+
+*Related guides: [Best Budget Trekking Poles Under $40 — Worth It or Waste?](/blog/best-budget-trekking-poles) · [Best Hiking Boots for Camping Under $100 — Tested on Real Trails](/blog/best-hiking-boots-camping-under-100)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

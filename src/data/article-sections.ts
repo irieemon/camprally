@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-budget-hiking-backpacks-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Hiking Backpacks Under $100 — Fit First, Features Second — Quick Comparison",
+      items: [
+        { label: "Teton 55L Scout Internal Frame Bac", category: "", icon: "🏕️", asin: "B09DQZBBFG", link: "https://www.amazon.com/dp/B09DQZBBFG?tag=camprally-20" },
+        { label: "AONIJIE Hydration Vest Pack Backpa", category: "", icon: "🏕️", asin: "B07QNPZB6V", link: "https://www.amazon.com/dp/B07QNPZB6V?tag=camprally-20" },
+        { label: "SKYSPER Small Hiking Backpack", category: "", icon: "🏕️", asin: "B0BGKYB199", link: "https://www.amazon.com/dp/B0BGKYB199?tag=camprally-20" },
+        { label: "Diamond Candy 40L Hiking Backpack ", category: "", icon: "🏕️", asin: "B00MPHNAA8", link: "https://www.amazon.com/dp/B00MPHNAA8?tag=camprally-20" },
+        { label: "WoneNice 50L(45+5) Waterproof Hiki", category: "", icon: "🏕️", asin: "B07M9NGMZ5", link: "https://www.amazon.com/dp/B07M9NGMZ5?tag=camprally-20" },
+        { label: "MOUNTAINTOP 40L Hiking Backpack", category: "", icon: "🏕️", asin: "B0FQ5LNM5N", link: "https://www.amazon.com/dp/B0FQ5LNM5N?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-stay-warm-camping-cold-nights": [
     {
       type: "product-grid",

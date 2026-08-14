@@ -85,6 +85,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "fall-camping-gear-essentials": "/images/heroes/fall-camping-gear-essentials.jpg",
   "best-camping-blankets-under-40": "/images/heroes/best-camping-blankets-under-40.jpg",
   "how-to-stay-warm-camping-cold-nights": "/images/heroes/how-to-stay-warm-camping-cold-nights.jpg",
+  "best-budget-hiking-backpacks-under-100": "/images/heroes/best-budget-hiking-backpacks-under-100.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

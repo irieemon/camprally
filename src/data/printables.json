@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "kids-camping-activity-pack",
+      "title": "Kids' Camping Activity Pack",
+      "subtitle": "Turn every trail walk and campfire evening into an adventure kids will never forget",
+      "price": "$4",
+      "priceCents": 400,
+      "pages": 10,
+      "url": "https://camprally.gumroad.com/l/kids-camping-activity-pack",
+      "image": "/images/printables/kids-camping-activity-pack.jpg"
+    },
+    {
       "slug": "campsite-review-journal",
       "title": "Campsite Review Journal",
       "subtitle": "Your complete record of every camp, every site, and every reason to return",
