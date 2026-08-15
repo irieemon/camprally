@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-lanterns-under-30": [
+    {
+      type: "product-grid",
+      title: "Best Camping Lanterns Under $30 — Light That Lasts the Weekend — Quick Comparison",
+      items: [
+        { label: "Blukar 116 LED Camping Lantern Rec", category: "", icon: "🏕️", asin: "B0CBV87CYX", link: "https://www.amazon.com/dp/B0CBV87CYX?tag=camprally-20" },
+        { label: "Consciot CL1 Mini Dual Light Sourc", category: "", icon: "🏕️", asin: "B0F8B6J7ML", link: "https://www.amazon.com/dp/B0F8B6J7ML?tag=camprally-20" },
+        { label: "Yonktoo Camping Lantern Rechargeab", category: "", icon: "🏕️", asin: "B0DBZ9BTM8", link: "https://www.amazon.com/dp/B0DBZ9BTM8?tag=camprally-20" },
+        { label: "Stainless Steel Water Bottle with ", category: "", icon: "🏕️", asin: "B0FYFMPLVF", link: "https://www.amazon.com/dp/B0FYFMPLVF?tag=camprally-20" },
+        { label: "Etekcity LED Camping Lanterns", category: "", icon: "🏕️", asin: "B00XM8HTIS", link: "https://www.amazon.com/dp/B00XM8HTIS?tag=camprally-20" },
+        { label: "Lichamp LED Camping Lantern", category: "", icon: "🏕️", asin: "B08WWX5GTZ", link: "https://www.amazon.com/dp/B08WWX5GTZ?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-budget-hiking-backpacks-under-100": [
     {
       type: "product-grid",
