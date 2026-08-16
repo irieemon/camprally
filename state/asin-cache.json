@@ -2073,6 +2073,72 @@
       "ratingsTotal": 10772,
       "priceCheckedAt": "2026-08-15T13:00:19.786Z",
       "priceSource": "canopy-search"
+    },
+    "B0BD9CYGC7": {
+      "verdict": "LIVE",
+      "title": "Black Rifle Coffee Company Dark Roast Ground Coffee Tactisquatch 12 oz",
+      "checkedAt": "2026-08-16T13:00:34.166Z",
+      "price": "$11.66",
+      "priceValue": 11.66,
+      "rating": 4.8,
+      "ratingsTotal": 421,
+      "priceCheckedAt": "2026-08-16T13:00:34.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B01LB1J9BW": {
+      "verdict": "LIVE",
+      "title": "Folgers Classic Roast Instant Coffee, 8 Oz. Jar",
+      "checkedAt": "2026-08-16T13:00:34.166Z",
+      "price": "$6.49",
+      "priceValue": 6.49,
+      "rating": 4.7,
+      "ratingsTotal": 30345,
+      "priceCheckedAt": "2026-08-16T13:00:34.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CRJT1YK9": {
+      "verdict": "LIVE",
+      "title": "NESCAFÉ Gold Espresso Intense Instant Coffee, 3.5 oz Jar | Intense roast instant espresso; single 3.5 oz (100 g) jar",
+      "checkedAt": "2026-08-16T13:00:34.166Z",
+      "price": "$10.12",
+      "priceValue": 10.12,
+      "rating": 4.7,
+      "ratingsTotal": 6115,
+      "priceCheckedAt": "2026-08-16T13:00:34.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B0FKZZKHS5": {
+      "verdict": "LIVE",
+      "title": "French Press 34 OZ, Durable Stainless Steel French Press Coffee Maker | Double-Wall Insulated Coffee Presses for Travel Camping Tea Everyday, Easy to Use, Dishwasher Safe",
+      "checkedAt": "2026-08-16T13:00:34.166Z",
+      "price": "$20.49",
+      "priceValue": 20.49,
+      "rating": 4.7,
+      "ratingsTotal": 574,
+      "priceCheckedAt": "2026-08-16T13:00:34.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B07QTCBCZZ": {
+      "verdict": "LIVE",
+      "title": "Blackout Coffee Morning Reaper Ground Coffee, Medium Roast, 12 oz",
+      "checkedAt": "2026-08-16T13:00:34.166Z",
+      "price": "$17.95",
+      "priceValue": 17.95,
+      "rating": 4.7,
+      "ratingsTotal": 565,
+      "priceCheckedAt": "2026-08-16T13:00:34.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B006CQ1ZHI": {
+      "verdict": "LIVE",
+      "title": "Death Wish Coffee Organic Dark Roast Ground Coffee, Fair Trade, 16 oz | Arabica & Robusta Blend, Baker's Chocolate & Cherry Notes, Low Acidity, Naturally High-Caffeine Robusta, Drip & French Press",
+      "checkedAt": "2026-08-16T13:00:34.166Z",
+      "price": "$17.58",
+      "priceValue": 17.58,
+      "rating": 4.6,
+      "ratingsTotal": 48540,
+      "priceCheckedAt": "2026-08-16T13:00:34.166Z",
+      "priceSource": "canopy-search"
     }
   }
 }

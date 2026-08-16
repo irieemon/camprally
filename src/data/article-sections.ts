@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-coffee-makers-under-40": [
+    {
+      type: "product-grid",
+      title: "Best Camping Coffee Makers Under $40 — Real Coffee at a Campsite — Quick Comparison",
+      items: [
+        { label: "Black Rifle Coffee Company Dark Ro", category: "", icon: "🏕️", asin: "B0BD9CYGC7", link: "https://www.amazon.com/dp/B0BD9CYGC7?tag=camprally-20" },
+        { label: "Folgers Classic Roast Instant Coff", category: "", icon: "🏕️", asin: "B01LB1J9BW", link: "https://www.amazon.com/dp/B01LB1J9BW?tag=camprally-20" },
+        { label: "NESCAFÉ Gold Espresso Intense Inst", category: "", icon: "🏕️", asin: "B0CRJT1YK9", link: "https://www.amazon.com/dp/B0CRJT1YK9?tag=camprally-20" },
+        { label: "French Press 34 OZ", category: "", icon: "🏕️", asin: "B0FKZZKHS5", link: "https://www.amazon.com/dp/B0FKZZKHS5?tag=camprally-20" },
+        { label: "Blackout Coffee Morning Reaper Gro", category: "", icon: "🏕️", asin: "B07QTCBCZZ", link: "https://www.amazon.com/dp/B07QTCBCZZ?tag=camprally-20" },
+        { label: "Death Wish Coffee Organic Dark Roa", category: "", icon: "🏕️", asin: "B006CQ1ZHI", link: "https://www.amazon.com/dp/B006CQ1ZHI?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-lanterns-under-30": [
     {
       type: "product-grid",
