@@ -5314,5 +5314,317 @@
         "ratingsTotal": 112
       }
     ]
+  },
+  "camp coffee morning|1|40": {
+    "term": "camp coffee morning",
+    "min": 1,
+    "max": 40,
+    "fetchedAt": "2026-08-16T13:00:25.252Z",
+    "results": [
+      {
+        "asin": "B0BD9CYGC7",
+        "title": "Black Rifle Coffee Company Dark Roast Ground Coffee Tactisquatch 12 oz",
+        "price": "$11.66",
+        "priceValue": 11.66,
+        "rating": 4.8,
+        "ratingsTotal": 421
+      },
+      {
+        "asin": "B01LB1J9BW",
+        "title": "Folgers Classic Roast Instant Coffee, 8 Oz. Jar",
+        "price": "$6.49",
+        "priceValue": 6.49,
+        "rating": 4.7,
+        "ratingsTotal": 30345
+      },
+      {
+        "asin": "B0CRJT1YK9",
+        "title": "NESCAFÉ Gold Espresso Intense Instant Coffee, 3.5 oz Jar | Intense roast instant espresso; single 3.5 oz (100 g) jar",
+        "price": "$10.12",
+        "priceValue": 10.12,
+        "rating": 4.7,
+        "ratingsTotal": 6115
+      },
+      {
+        "asin": "B0FKZZKHS5",
+        "title": "French Press 34 OZ, Durable Stainless Steel French Press Coffee Maker | Double-Wall Insulated Coffee Presses for Travel Camping Tea Everyday, Easy to Use, Dishwasher Safe",
+        "price": "$20.49",
+        "priceValue": 20.49,
+        "rating": 4.7,
+        "ratingsTotal": 574
+      },
+      {
+        "asin": "B07QTCBCZZ",
+        "title": "Blackout Coffee Morning Reaper Ground Coffee, Medium Roast, 12 oz",
+        "price": "$17.95",
+        "priceValue": 17.95,
+        "rating": 4.7,
+        "ratingsTotal": 565
+      },
+      {
+        "asin": "B006CQ1ZHI",
+        "title": "Death Wish Coffee Organic Dark Roast Ground Coffee, Fair Trade, 16 oz | Arabica & Robusta Blend, Baker's Chocolate & Cherry Notes, Low Acidity, Naturally High-Caffeine Robusta, Drip & French Press",
+        "price": "$17.58",
+        "priceValue": 17.58,
+        "rating": 4.6,
+        "ratingsTotal": 48540
+      },
+      {
+        "asin": "B0047BIWSK",
+        "title": "AeroPress Original Coffee Press, French Press, Pour-Over & Espresso Style | All-in-One Manual Coffee Maker, 2-Minute Brew, Less Bitterness, More Flavor, Portable, Travel & Camping",
+        "price": "$31.96",
+        "priceValue": 31.96,
+        "rating": 4.6,
+        "ratingsTotal": 26240
+      },
+      {
+        "asin": "B00522VKWI",
+        "title": "Maxwell House Instant Coffee, Original Roast, 8 oz Jar | Classic & Rich Instant Coffee, Smooth & Delicious, No Brewer Required, Roasted in the USA Since 1892, Certified Kosher",
+        "price": "$7.97",
+        "priceValue": 7.97,
+        "rating": 4.6,
+        "ratingsTotal": 8372
+      },
+      {
+        "asin": "B07BFHNPGK",
+        "title": "Folgers Classic Roast Coffee Singles, 19 ct",
+        "price": "$8.65",
+        "priceValue": 8.65,
+        "rating": 4.6,
+        "ratingsTotal": 6935
+      },
+      {
+        "asin": "B00438XVGU",
+        "title": "Starbucks VIA Ready Brew Colombia Coffee, 50-Count | 100% Arabica instant coffee packets; single-origin Colombia medium roast; 1 box, 50 packets",
+        "price": "$30.75",
+        "priceValue": 30.75,
+        "rating": 4.6,
+        "ratingsTotal": 6753
+      },
+      {
+        "asin": "B0050K4DQW",
+        "title": "Starbucks VIA Ready Brew Coffee, Italian Roast, 8 Count | 100% Arabica instant coffee packets; Italian Roast dark roast; 1 box, 8 packets",
+        "price": "$7.48",
+        "priceValue": 7.48,
+        "rating": 4.6,
+        "ratingsTotal": 5360
+      },
+      {
+        "asin": "B01HRB7J12",
+        "title": "Bulletproof Mentalist Ground Coffee, 12 OZ",
+        "price": "$14.39",
+        "priceValue": 14.39,
+        "rating": 4.6,
+        "ratingsTotal": 4096
+      },
+      {
+        "asin": "B00H3TCGBW",
+        "title": "Folgers Coffee Singles (19 per box)",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 2665
+      },
+      {
+        "asin": "B0B3SQL431",
+        "title": "Nefelibata Camping Gifts Ceramic Coffee Mug Set of 4 Happy Campers Tea Cups | Travel Holiday Campfire Coffee Cup for Coffee, Tea & Hot Cocoa Outdoor Anniversary Wedding Christmas Camping Lover Gifts",
+        "price": "$25.64",
+        "priceValue": 25.64,
+        "rating": 4.6,
+        "ratingsTotal": 154
+      },
+      {
+        "asin": "B07B1J2TZ3",
+        "title": "Enamel Mug - Outdoor Camping Mugs - Ideal For Early Morning Coffee Or Cold Beverages- Coffee Mug- 16 Oz (Navy)",
+        "price": "$11.99",
+        "priceValue": 11.99,
+        "rating": 4.6,
+        "ratingsTotal": 131
+      },
+      {
+        "asin": "B08FBP3WH5",
+        "title": "Paramount Roasters Ground Coffee (Happy Camper, S'Mores Flavored Coffee)",
+        "price": "$16.98",
+        "priceValue": 16.98,
+        "rating": 4.6,
+        "ratingsTotal": 103
+      },
+      {
+        "asin": "B0FLFC1HF5",
+        "title": "Four Sigmatic Focus Ground Coffee | Organic Ground Coffee with Lion's Mane Mushroom and Yacon for Mental Clarity & Energy Support | 12oz Bag",
+        "price": "$14.49",
+        "priceValue": 14.49,
+        "rating": 4.5,
+        "ratingsTotal": 4152
+      },
+      {
+        "asin": "B081TMDLXF",
+        "title": "Death Wish Coffee Instant Dark Roast Coffee Packets, Bold & Intense Blend of Arabica & Robusta Beans, USDA Organic, 8 Count",
+        "price": "$11.99",
+        "priceValue": 11.99,
+        "rating": 4.5,
+        "ratingsTotal": 4087
+      },
+      {
+        "asin": "B07HNMGYVX",
+        "title": "San Francisco Bay Coffee Fog Chaser Ground Coffee, 28 oz bag",
+        "price": "$30.99",
+        "priceValue": 30.99,
+        "rating": 4.5,
+        "ratingsTotal": 1886
+      },
+      {
+        "asin": "B0DW6NDM64",
+        "title": "Copper Cow Coffee Vietnamese Pour Over Single Serve Dark Roast 8pk | Black ground pour over pouches with rich, bold, low acid coffee. Travel friendly—tear, hang, pour hot water, enjoy anywhere",
+        "price": "$13.49",
+        "priceValue": 13.49,
+        "rating": 4.5,
+        "ratingsTotal": 186
+      },
+      {
+        "asin": "B0FGM76BZM",
+        "title": "Copper Cow Coffee Premium Pour Over Single-Serve Vietnamese Coffee Pouches (8 pack) | Churro | Dark Roast | Flavored with Real Cinnamon | Convenient Vietnamese Ground Coffee Packets, Travel Friendly | Real cinnamon infuses bold robusta with warm spice, while the portable dripper brews café-style flavour anywhere in minutes",
+        "price": "$10.01",
+        "priceValue": 10.01,
+        "rating": 4.5,
+        "ratingsTotal": 69
+      },
+      {
+        "asin": "B00ZWA7LQ4",
+        "title": "Four Sigmatic Focus Organic Mushroom Coffee | Instant Mushroom Coffee Mix with Lion's Mane, Chaga and Rhodiola for Better Focus and Immune Support | 10 Packets",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.4,
+        "ratingsTotal": 14722
+      },
+      {
+        "asin": "B0CDXZ3JX3",
+        "title": "COLETTI Bozeman Percolator Coffee Pot — NO Aluminum or Plastic [6 cup]",
+        "price": "$32.79",
+        "priceValue": 32.79,
+        "rating": 4.4,
+        "ratingsTotal": 12341
+      },
+      {
+        "asin": "B01N78X92P",
+        "title": "Utopia Kitchen Borosilicate Glass French Press Coffee Maker 34 Oz, Black | Heat-Resistant Cafetiere & Tea Maker, Thickened Glass Coffee Press for Travel and Camping",
+        "price": "$18.99",
+        "priceValue": 18.99,
+        "rating": 4.4,
+        "ratingsTotal": 11652
+      },
+      {
+        "asin": "B0883VBNHC",
+        "title": "Four Sigmatic Mushroom Coffee K-Cups | Organic Dark Roast Coffee with Lion’s Mane Mushroom Powder & Yacon | Focus & Immune Support | Vegan & Keto | Sustainable Pods | 24 Count",
+        "price": "$23.49",
+        "priceValue": 23.49,
+        "rating": 4.4,
+        "ratingsTotal": 6873
+      },
+      {
+        "asin": "B0FKG2N7G8",
+        "title": "Pour Over Coffee Maker, Reusable Stainless Steel Filter | Easy to Clean, No Paper Waste. BPA-Free, Plastic-Free Coffee Filter. Eco-Friendly, Reusable, 1-2 Cup",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.4,
+        "ratingsTotal": 489
+      },
+      {
+        "asin": "B00IRYDO7W",
+        "title": "Camp Chicory and Coffee 241g",
+        "price": "$11.80",
+        "priceValue": 11.8,
+        "rating": 4.4,
+        "ratingsTotal": 204
+      },
+      {
+        "asin": "B0D456Z2SL",
+        "title": "COLETTI Bozeman Color Series Percolator Coffee Pot — Camping Coffee Makers — Camping’s Favorite Percolator – NO Aluminum or Plastic (Camp Green, 9 Cup)",
+        "price": "$35.46",
+        "priceValue": 35.46,
+        "rating": 4.4,
+        "ratingsTotal": 203
+      },
+      {
+        "asin": "B0DD2JHZCC",
+        "title": "16 oz Pour Over Camp Coffee Maker Set– Vacuum Insulated Mug with Leakproof Lid, Stainless Steel Micro Filter, Portable Coffee Maker for Camping, Travel & Outdoor Adventures",
+        "price": "$27.00",
+        "priceValue": 27,
+        "rating": 4.4,
+        "ratingsTotal": 140
+      },
+      {
+        "asin": "B0DZLMBN27",
+        "title": "16 oz Pour Over Camping Coffee Maker Set– Vacuum Insulated Mug with Leakproof Lid, Stainless Steel Micro Filter, Portable Coffee Maker for Camping, Travel & Outdoor Adventures",
+        "price": "$27.00",
+        "priceValue": 27,
+        "rating": 4.4,
+        "ratingsTotal": 140
+      },
+      {
+        "asin": "B0G1QMXXC3",
+        "title": "Rosebud Coffee Mix 100 Sticks – Korean Instant 3-in-1 Coffee with Sugar, Cream & Cocoa – Smooth, Sweet & Creamy Flavor – Easy to Make Café-Style Coffee Anywhere – Perfect for Home, Office, Travel, Camping, Gifts – 2.7 lbs (43.2 oz) (Original Espresso)",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.4,
+        "ratingsTotal": 93
+      },
+      {
+        "asin": "B0FJLQFX8D",
+        "title": "COFFREE Organic Instant Coffee Packets - Extra Strong 150% Caffeine - Mold Free, Low Acid, Single-Origin Arabica - Individual Single Serve Coffee Sticks - Travel, Camping - Dark Roast - 24 Count",
+        "price": "$28.49",
+        "priceValue": 28.49,
+        "rating": 4.4,
+        "ratingsTotal": 62
+      },
+      {
+        "asin": "B000690JTC",
+        "title": "GSI Outdoors Percolator Coffee Pot | Enamelware Campfire Coffee Boiler Kettle for Outdoor Camping Cookware, Cabin, RV, Kitchen, Hunting & Backpacking",
+        "price": "$34.95",
+        "priceValue": 34.95,
+        "rating": 4.3,
+        "ratingsTotal": 11509
+      },
+      {
+        "asin": "B084D55FLS",
+        "title": "Whiskey Morning Coffee Texian Army Brew, Double Smoked Whole Bean Coffee, Fire Roasted with Pecan Wood & Cold Smoked with Cherry Wood, Small Batch Texas Roasted, Bold & Smooth Medium Roast, 10 oz Bag",
+        "price": "$21.00",
+        "priceValue": 21,
+        "rating": 4.3,
+        "ratingsTotal": 127
+      },
+      {
+        "asin": "B0BW16HM5V",
+        "title": "COLETTI Classic Percolator Coffee Pot — The Most Nostalgic Camping Coffee Pot, Now Modernized [Blue Enamel, 12 Cup]",
+        "price": "$37.39",
+        "priceValue": 37.39,
+        "rating": 4.2,
+        "ratingsTotal": 1893
+      },
+      {
+        "asin": "B07YXGHJ3X",
+        "title": "Mondo Drip Coffee Mix (10-Pack Variety), Single Serve Pour Over Filter Bags, Pre-Filled 100% Arabica, Medium Roast",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.2,
+        "ratingsTotal": 366
+      },
+      {
+        "asin": "B0CPQ68SPN",
+        "title": "Organic Instant Coffee Packets, 10 Pack - Medium Roast Single Serve Sticks | Great coffee anywhere you go - freeze-dried instant espresso, gourmet in seconds, hot or iced for travel & office",
+        "price": "$7.99",
+        "priceValue": 7.99,
+        "rating": 4.2,
+        "ratingsTotal": 327
+      },
+      {
+        "asin": "B00JSA3V86",
+        "title": "Stansport Enamel Coffee Pot",
+        "price": "$31.02",
+        "priceValue": 31.02,
+        "rating": 4,
+        "ratingsTotal": 1008
+      }
+    ]
   }
 }
