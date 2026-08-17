@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "camping-with-kids-first-trip": [
+    {
+      type: "product-grid",
+      title: "Camping With Kids — Making the First Trip One They Want to Repeat — Quick Comparison",
+      items: [
+        { label: "The Ultimate Camping Would You Rat", category: "", icon: "🏕️", asin: "B0H5ZNW1TV", link: "https://www.amazon.com/dp/B0H5ZNW1TV?tag=camprally-20" },
+        { label: "Wise Owl Outfitters Kids Hammock -", category: "", icon: "🏕️", asin: "B0734L7LTX", link: "https://www.amazon.com/dp/B0734L7LTX?tag=camprally-20" },
+        { label: "Hasbro Gaming Yahtzee Dice Game | ", category: "", icon: "🏕️", asin: "B0FH7CNJLW", link: "https://www.amazon.com/dp/B0FH7CNJLW?tag=camprally-20" },
+        { label: "Llama Llama Loves Camping", category: "", icon: "🏕️", asin: "1524787183", link: "https://www.amazon.com/dp/1524787183?tag=camprally-20" },
+        { label: "Rock Painting Kit- Glow in The Dar", category: "", icon: "🏕️", asin: "B08HD89CX6", link: "https://www.amazon.com/dp/B08HD89CX6?tag=camprally-20" },
+        { label: "Kollide by Relatable - Influencer ", category: "", icon: "🏕️", asin: "B0CTKR7JSK", link: "https://www.amazon.com/dp/B0CTKR7JSK?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-coffee-makers-under-40": [
     {
       type: "product-grid",
