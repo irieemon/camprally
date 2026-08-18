@@ -89,6 +89,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-camping-lanterns-under-30": "/images/heroes/best-camping-lanterns-under-30.jpg",
   "best-camping-coffee-makers-under-40": "/images/heroes/best-camping-coffee-makers-under-40.jpg",
   "camping-with-kids-first-trip": "/images/heroes/camping-with-kids-first-trip.jpg",
+  "best-camping-socks": "/images/heroes/best-camping-socks.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

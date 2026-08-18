@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-socks": [
+    {
+      type: "product-grid",
+      title: "The Most Important Gear Most Campers Ignore: A Good Pair of Socks — Quick Comparison",
+      items: [
+        { label: "Sock It To Me Men's Crew", category: "", icon: "🏕️", asin: "B07THXDHGV", link: "https://www.amazon.com/dp/B07THXDHGV?tag=camprally-20" },
+        { label: "Lavley Outdoors Socks Hiking Campi", category: "", icon: "🏕️", asin: "B085R8591S", link: "https://www.amazon.com/dp/B085R8591S?tag=camprally-20" },
+        { label: "HAPPYPOP Sports Gifts for Men Wome", category: "", icon: "🏕️", asin: "B0DJ6ZD2XD", link: "https://www.amazon.com/dp/B0DJ6ZD2XD?tag=camprally-20" },
+        { label: "Zmart Funny Socks for Men Women - ", category: "", icon: "🏕️", asin: "B0DX1G7LJY", link: "https://www.amazon.com/dp/B0DX1G7LJY?tag=camprally-20" },
+        { label: "Dickies Men's Dri-tech Original Mo", category: "", icon: "🏕️", asin: "B07VCMSK8B", link: "https://www.amazon.com/dp/B07VCMSK8B?tag=camprally-20" },
+        { label: "Hot Sox Women's Fun Nature & Outdo", category: "", icon: "🏕️", asin: "B074QY3KF1", link: "https://www.amazon.com/dp/B074QY3KF1?tag=camprally-20" },
+      ]
+    },
+  ],
   "camping-with-kids-first-trip": [
     {
       type: "product-grid",
