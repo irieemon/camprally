@@ -94,11 +94,17 @@ function backfillPhotos(when) {
   try {
     const out = sh("node", ["scripts/backfill-product-images.mjs"]);
     if (out) console.log(out);
-    console.log(sh("node", ["scripts/build-catalog.mjs"]));
   } catch (err) {
     console.log(err.stdout ?? "");
     console.log(`(product photo backfill incomplete at ${when} — icon tiles until the next cycle)`);
   }
+  // OUTSIDE the try, on purpose: a throttled PHOTO scrape must never block
+  // PRICES from publishing. When both sat in one block, best-camping-socks
+  // shipped 2026-08-18 with its six products absent from catalog.json
+  // entirely — no prices AND no images — instead of the intended fallback of
+  // fresh prices with icon tiles. A build-catalog failure is its own event
+  // and still ends the cycle loudly.
+  console.log(sh("node", ["scripts/build-catalog.mjs"]));
 }
 
 /**
