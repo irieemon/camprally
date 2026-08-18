@@ -219,7 +219,11 @@ const HAZARDS = [
        * "a thick cotton sweatshirt is the warmest thing you can bring for
        * winter camping" excused itself: a garment name read as evidence that
        * the prose was discussing moisture. Bounded to sweat the noun/verb. */
-      /\b(absorb\w*|soak\w*|damp|wet|clammy|sweat(?:s|y|ed|ing)?\b|perspir\w*|moisture|stops? insulating|loses? (?:its )?insulat\w*)/i.test(c)),
+      /* `sogg\w*` added 2026-08-18: "a miserable, soggy mess by mile three" is cotton's
+       * moisture failure described in an intro, and its absence quarantined
+       * best-camping-socks a third time — same false-positive class as the
+       * 2026-08-09/11 tunings above. */
+      /\b(absorb\w*|soak\w*|sogg\w*|damp|wet|clammy|sweat(?:s|y|ed|ing)?\b|perspir\w*|moisture|stops? insulating|loses? (?:its )?insulat\w*)/i.test(c)),
     problem: "recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake",
   },
   {

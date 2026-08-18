@@ -47,6 +47,10 @@ const SHOULD_FLAG = [
   ["cotton-for-warmth", "Cotton beats fleece for warmth, so choose a cotton base layer."],
   ["cotton-for-warmth", "Cotton is warmer than merino, so pack cotton for the cold nights."],
   ["cotton-for-warmth", "Bring cotton sweatpants as your thermal layer."],
+  /* Guards the sogg\w* exclusion added 2026-08-18: an endorsement that merely
+   * MENTIONS sogginess as the thing cotton avoids must still flag — the word
+   * alone is not a licence, the prose has to be condemning cotton. */
+  ["cotton-for-warmth", "Cotton socks keep your feet warm and never soggy, so pack cotton for winter hikes."],
   /* `without` and `skip` are excluded only when bound to their own hazard noun,
    * never globally. These two prove it: both use the word and both are real
    * hazards that must still flag. */
@@ -91,6 +95,12 @@ const SHOULD_NOT_FLAG = [
   "Choose it over cotton when the forecast turns cold.",
   "Unlike cotton, it keeps insulating in freezing conditions.",
   "Merino outperforms cotton in cold weather.",
+  /* THE SOGGY FALSE POSITIVE. This is the verbatim intro that quarantined
+   * best-camping-socks a THIRD time (2026-08-18) — it describes the cotton
+   * mistake and names the moisture failure, but with a word ("soggy") the
+   * moisture exclusion did not list. The wider article says "skip cotton"
+   * twice; only this unit fired. */
+  "Most new campers obsess over tents, sleeping pads, and stoves, then grab whatever cotton socks are clean on the way out the door. That single choice decides whether your feet are warm, dry, and blister-free or a miserable, soggy mess by mile three.",
 ];
 
 let pass = 0;
