@@ -146,3 +146,15 @@ best-camping-blankets-under-40
   · note (1/2): Saying a thick merino blanket 'supplements a sleeping bag for car campers without adding the weight of a heavier blanket' is contradictory — it is itself the heavier blanket supplementing the sleeping bag. Minor wording confusion.
   (panel not independent — minimax/MiniMax-M3, minimax/MiniMax-M2.7; add a second provider)
 
+
+## 2026-08-18T13:00:00.102Z — content-review
+
+Content review rejected best-camping-socks (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-camping-socks-2026-08-18T13-00-00-102Z.json
+
+
+best-camping-socks
+  ✗ [high] cotton-for-warmth (body)
+      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
+      "Most new campers obsess over tents, sleeping pads, and stoves, then grab whatever cotton socks are clean on the way out the door. That single choice decides whe"
+

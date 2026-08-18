@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "backpacking-gear-planner",
+      "title": "Backpacking Gear & Base-Weight Planner",
+      "subtitle": "Track every ounce you carry and plan every mile ahead with gear lists, weight tallies, and resupply stations",
+      "price": "$7",
+      "priceCents": 700,
+      "pages": 8,
+      "url": "https://camprally.gumroad.com/l/backpacking-gear-planner",
+      "image": "/images/printables/backpacking-gear-planner.jpg"
+    },
+    {
       "slug": "kids-camping-activity-pack",
       "title": "Kids' Camping Activity Pack",
       "subtitle": "Turn every trail walk and campfire evening into an adventure kids will never forget",
