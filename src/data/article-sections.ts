@@ -22,6 +22,15 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "leaf-peeping-camping-destinations": [
+    {
+      type: "product-grid",
+      title: "Leaf-Peeping Camping — Timing the Colour and Booking Before It Peaks — Quick Comparison",
+      items: [
+        { label: "Buffalo Games - Country Store - 10", category: "", icon: "🏕️", asin: "B07VR239S8", link: "https://www.amazon.com/dp/B07VR239S8?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-socks": [
     {
       type: "product-grid",
