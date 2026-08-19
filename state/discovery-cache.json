@@ -5977,5 +5977,20 @@
         "ratingsTotal": 147
       }
     ]
+  },
+  "autumn forest campsite|1|": {
+    "term": "autumn forest campsite",
+    "min": 1,
+    "fetchedAt": "2026-08-19T13:01:30.522Z",
+    "results": [
+      {
+        "asin": "B07VR239S8",
+        "title": "Buffalo Games - Country Store - 1000 Piece Jigsaw Puzzle for Adults | Made in USA, Recycled Board, Finished Size 26.75 x 19.75 in, Includes Poster, Giftable, Frameable Art",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.7,
+        "ratingsTotal": 3986
+      }
+    ]
   }
 }
