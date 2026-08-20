@@ -1812,14 +1812,14 @@
     },
     "B0FVLQ46GM": {
       "verdict": "LIVE",
-      "title": "EVER ADVANCED 4 Person Blackout Camping Tent, 60s Easy Setup Instant Cabin Tent for Family, 4000mm Water-Resistant & UV Protection Light-Blocking Tent with Rainfly for Outdoor Travel, 8' x 7' x 59\" Orange",
-      "checkedAt": "2026-08-18T14:58:52.886Z",
+      "title": "EVER ADVANCED 4 Person Blackout Camping Tent, 60s Easy Setup Instant Cabin Tent for Family, 4000mm Water-Resistant & UV Protection Light-Blocking Tent with Rainfly for Outdoor Travel, 8' x 7' x 59\"",
+      "checkedAt": "2026-08-20T13:01:50.410Z",
       "price": "$134.99",
       "priceValue": 134.99,
       "rating": 4.4,
-      "ratingsTotal": 89,
-      "priceCheckedAt": "2026-08-18T14:58:52.886Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 90,
+      "priceCheckedAt": "2026-08-20T13:01:50.410Z",
+      "priceSource": "canopy-search"
     },
     "B0BWTYCLHN": {
       "verdict": "LIVE",
@@ -2215,6 +2215,61 @@
       "rating": 4.7,
       "ratingsTotal": 3986,
       "priceCheckedAt": "2026-08-19T13:01:37.933Z",
+      "priceSource": "canopy-search"
+    },
+    "B07X381HLD": {
+      "verdict": "LIVE",
+      "title": "GEERTOP 2 Person Backpacking Tent, Lightweight Waterproof 4-Season Tent | Freestanding, Fast Pitch, Aluminum Frame, Double-Wall, Snow Skirt, Dual Vestibules",
+      "checkedAt": "2026-08-20T13:01:50.410Z",
+      "price": "$117.99",
+      "priceValue": 117.99,
+      "rating": 4.6,
+      "ratingsTotal": 2526,
+      "priceCheckedAt": "2026-08-20T13:01:50.410Z",
+      "priceSource": "canopy-search"
+    },
+    "B08JSMQ1KF": {
+      "verdict": "LIVE",
+      "title": "Clostnature 4 Season Backpacking Tent - 1/2 Person Cold Weather Winter Tent | Snow Tent, Aluminum Pole, PU 5000, Easy Setup Tent, Lightweight, Waterproof, All Season Weather Tent for Outdoor, Hiking",
+      "checkedAt": "2026-08-20T13:01:50.410Z",
+      "price": "$75.99",
+      "priceValue": 75.99,
+      "rating": 4.6,
+      "ratingsTotal": 561,
+      "priceCheckedAt": "2026-08-20T13:01:50.410Z",
+      "priceSource": "canopy-search"
+    },
+    "B0D7CJSBSB": {
+      "verdict": "LIVE",
+      "title": "1/2 Person 4 Season Backpacking Tent, Lightweight Waterproof Winter Tent | One/Two Person, Cold Weather Tent, PU5000, Easy Setup, Windproof, Camping Hiking for Single/Two Man by Underwood Aggregator",
+      "checkedAt": "2026-08-20T13:01:50.410Z",
+      "price": "$69.99",
+      "priceValue": 69.99,
+      "rating": 4.6,
+      "ratingsTotal": 377,
+      "priceCheckedAt": "2026-08-20T13:01:50.410Z",
+      "priceSource": "canopy-search"
+    },
+    "B0FWB9NCWB": {
+      "verdict": "LIVE",
+      "title": "BISINNA 4 Season Tent for Backpacking Winter Tents 2 Person Lightweight Cold Weather Tents Waterproof Double Layer All Season Tent Aluminum Alloy Poles Easy Set Up for Camping, Hiking, Outdoor",
+      "checkedAt": "2026-08-20T13:01:50.410Z",
+      "price": "$89.99",
+      "priceValue": 89.99,
+      "rating": 4.5,
+      "ratingsTotal": 61,
+      "priceCheckedAt": "2026-08-20T13:01:50.410Z",
+      "priceSource": "canopy-search"
+    },
+    "B0DGTSLV7D": {
+      "verdict": "LIVE",
+      "title": "1/2 Person Backpacking Tent for 4 Season, Winter Ultralight Extreme Cold Weather Tents for Camping Easy Setup Waterproof Double Layer Tent for Family Outdoor Hiking Mountaineering",
+      "checkedAt": "2026-08-20T13:01:50.410Z",
+      "price": "$98.99",
+      "priceValue": 98.99,
+      "rating": 4.5,
+      "ratingsTotal": 58,
+      "priceCheckedAt": "2026-08-20T13:01:50.410Z",
       "priceSource": "canopy-search"
     }
   }

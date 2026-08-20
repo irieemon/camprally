@@ -158,3 +158,15 @@ best-camping-socks
       recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
       "Most new campers obsess over tents, sleeping pads, and stoves, then grab whatever cotton socks are clean on the way out the door. That single choice decides whe"
 
+
+## 2026-08-20T13:00:00.108Z — content-review
+
+Content review rejected winter-camping-for-beginners (attempt 1 of 2).
+Spec quarantined to specs/quarantine/winter-camping-for-beginners-2026-08-20T13-00-00-108Z.json
+
+
+winter-camping-for-beginners
+  ✗ [model 2/3] Carbon monoxide is odorless and cannot be smelled at all, so the phrase 'smell it' is incorrect.
+      "Carbon monoxide builds faster than you can wake up to smell it."
+  · note (1/3): The heading names the shelter as 'Underwood Aggregator 4 Season Backpacking Tent' but the linked product in the list is '1/2 Person 4 Season Backpacking Te' / '1/2 Person Backpacking Tent for 4 ' and no Underwood Aggregator product is listed, creating a name/product mismatch.
+
