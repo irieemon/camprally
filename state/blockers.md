@@ -170,3 +170,15 @@ winter-camping-for-beginners
       "Carbon monoxide builds faster than you can wake up to smell it."
   · note (1/3): The heading names the shelter as 'Underwood Aggregator 4 Season Backpacking Tent' but the linked product in the list is '1/2 Person 4 Season Backpacking Te' / '1/2 Person Backpacking Tent for 4 ' and no Underwood Aggregator product is listed, creating a name/product mismatch.
 
+
+## 2026-08-21T13:00:00.083Z — content-review
+
+Content review rejected winter-camping-for-beginners (attempt 2 of 2).
+Spec quarantined to specs/quarantine/winter-camping-for-beginners-2026-08-21T13-00-00-083Z.json
+
+
+winter-camping-for-beginners
+  ✗ [model 2/3] The statement is contradictory and incorrect: winter shelters need many guy-out points/anchor points for wind and snow load, not few. Advising few guy-out points would mislead a camper into choosing a shelter ill-suited for winter conditions.
+      "- Few guy-out points. Winter shelters need anchor points for high wind and snow load."
+  · note (1/3): This is a 3-season cabin tent not designed for snow loads, high winds, or winter conditions. Recommending it for winter camping risks tent collapse and exposure in snowy weather, even at a drive-in site.
+

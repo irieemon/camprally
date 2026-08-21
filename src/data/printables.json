@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "camping-budget-tracker",
+      "title": "Camping Budget & Gear Savings Tracker",
+      "subtitle": "Track every dollar you spend, set savings goals, and budget smarter for every trip you take.",
+      "price": "$7",
+      "priceCents": 700,
+      "pages": 9,
+      "url": "https://camprally.gumroad.com/l/camping-budget-tracker",
+      "image": "/images/printables/camping-budget-tracker.jpg"
+    },
+    {
       "slug": "backpacking-gear-planner",
       "title": "Backpacking Gear & Base-Weight Planner",
       "subtitle": "Track every ounce you carry and plan every mile ahead with gear lists, weight tallies, and resupply stations",
