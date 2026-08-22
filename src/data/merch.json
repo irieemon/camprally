@@ -3,6 +3,58 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "meadow-morning-mist",
+      "name": "Meadow Morning Mist",
+      "subtitle": "the fog burning off while the coffee brews",
+      "image": "/images/merch/meadow-morning-mist.jpg",
+      "imageKey": "6a8888250af234d18f56c06f::2026-08-21T17:17:51.373Z::Natural|Sand|Light Blue",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-08-21T17:18:31.564Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/31166652",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/31166675",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/31166680",
+          "priceCents": 3599,
+          "price": "$35.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/31166686",
+          "priceCents": 2699,
+          "price": "$26.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/31166693",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": true
+        }
+      ]
+    },
+    {
       "slug": "mountain-pass-overlook",
       "name": "Mountain Pass Overlook",
       "subtitle": "everything you climbed for, all at once",

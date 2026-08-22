@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-4-season-tents-under-300": [
+    {
+      type: "product-grid",
+      title: "Best 4-Season Tents Under $300 — Real Winter Shelter on a Budget — Quick Comparison",
+      items: [
+        { label: "GEERTOP 2 Person Backpacking Tent", category: "", icon: "🏕️", asin: "B07X381HLD", link: "https://www.amazon.com/dp/B07X381HLD?tag=camprally-20" },
+        { label: "Forceatt Tent for 2 and 3 Person i", category: "", icon: "🏕️", asin: "B083R68NSV", link: "https://www.amazon.com/dp/B083R68NSV?tag=camprally-20" },
+        { label: "Clostnature 4 Season Backpacking T", category: "", icon: "🏕️", asin: "B08JSMQ1KF", link: "https://www.amazon.com/dp/B08JSMQ1KF?tag=camprally-20" },
+        { label: "OneTigris Stella 4 Season Camping ", category: "", icon: "🏕️", asin: "B0F52BNCN3", link: "https://www.amazon.com/dp/B0F52BNCN3?tag=camprally-20" },
+        { label: "1/2 Person 4 Season Backpacking Te", category: "", icon: "🏕️", asin: "B0B8HC5CGW", link: "https://www.amazon.com/dp/B0B8HC5CGW?tag=camprally-20" },
+        { label: "BISINNA 4 Season Tent for Backpack", category: "", icon: "🏕️", asin: "B0FWB9NCWB", link: "https://www.amazon.com/dp/B0FWB9NCWB?tag=camprally-20" },
+      ]
+    },
+  ],
   "leaf-peeping-camping-destinations": [
     {
       type: "product-grid",
