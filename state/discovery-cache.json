@@ -6071,5 +6071,117 @@
         "ratingsTotal": 367
       }
     ]
+  },
+  "four season tent winter|1|300": {
+    "term": "four season tent winter",
+    "min": 1,
+    "max": 300,
+    "fetchedAt": "2026-08-22T13:00:10.833Z",
+    "results": [
+      {
+        "asin": "B07X381HLD",
+        "title": "GEERTOP 2 Person Backpacking Tent, Lightweight Waterproof 4-Season Tent | Freestanding, Fast Pitch, Aluminum Frame, Double-Wall, Snow Skirt, Dual Vestibules",
+        "price": "$106.19",
+        "priceValue": 106.19,
+        "rating": 4.6,
+        "ratingsTotal": 2527
+      },
+      {
+        "asin": "B083R68NSV",
+        "title": "Forceatt Tent for 2 and 3 Person is Waterproof and Windproof, Camping Tent for 3 to 4 Seasons,Lightweight Aluminum Pole Backpacking Tent Can be Set Up Quickly,Great for Hiking",
+        "price": "$74.99",
+        "priceValue": 74.99,
+        "rating": 4.6,
+        "ratingsTotal": 1958
+      },
+      {
+        "asin": "B08JSMQ1KF",
+        "title": "Clostnature 4 Season Backpacking Tent - 1/2 Person Cold Weather Winter Tent | Snow Tent, Aluminum Pole, PU 5000, Easy Setup Tent, Lightweight, Waterproof, All Season Weather Tent for Outdoor, Hiking",
+        "price": "$75.99",
+        "priceValue": 75.99,
+        "rating": 4.6,
+        "ratingsTotal": 561
+      },
+      {
+        "asin": "B0F52BNCN3",
+        "title": "OneTigris Stella 4 Season Camping Tent Backpacking Waterproof Lightweight Easy Setup Instant 3000mm Waterproof Rating Outdoor Hiking Tent",
+        "price": "$209.98",
+        "priceValue": 209.98,
+        "rating": 4.6,
+        "ratingsTotal": 490
+      },
+      {
+        "asin": "B0B8HC5CGW",
+        "title": "1/2 Person 4 Season Backpacking Tent, Lightweight Waterproof Winter Tent | One/Two Person, Cold Weather Tent, PU5000, Easy Setup, Windproof, Camping Hiking for Single/Two Man by Underwood Aggregator",
+        "price": "$64.99",
+        "priceValue": 64.99,
+        "rating": 4.6,
+        "ratingsTotal": 377
+      },
+      {
+        "asin": "B0FWB9NCWB",
+        "title": "BISINNA 4 Season Tent for Backpacking Winter Tents 2 Person Lightweight Cold Weather Tents Waterproof Double Layer All Season Tent Aluminum Alloy Poles Easy Set Up for Camping, Hiking, Outdoor",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.6,
+        "ratingsTotal": 62
+      },
+      {
+        "asin": "B082GT1BVZ",
+        "title": "Clostnature 1/1.5/2/3/4/6 Person Lightweight Backpacking Tent, Camping Tent | Aluminum Pole, PU 5000, Easy Setup Tent, Ultralight, Durable, Waterproof, Compact, Freestanding, Two Doors, Hiking, Outdoor",
+        "price": "$94.49",
+        "priceValue": 94.49,
+        "rating": 4.5,
+        "ratingsTotal": 3008
+      },
+      {
+        "asin": "B0DGTSLV7D",
+        "title": "1/2 Person Backpacking Tent for 4 Season, Winter Ultralight Extreme Cold Weather Tents for Camping Easy Setup Waterproof Double Layer Tent for Family Outdoor Hiking Mountaineering",
+        "price": "$98.99",
+        "priceValue": 98.99,
+        "rating": 4.5,
+        "ratingsTotal": 58
+      },
+      {
+        "asin": "B0F5WK281S",
+        "title": "Naturehike 4 Season Tent,Waterproof 2 Person Backpacking Tent, Four Season Tents for Cold Weather Winter Camping",
+        "price": "$139.00",
+        "priceValue": 139,
+        "rating": 4.4,
+        "ratingsTotal": 71
+      },
+      {
+        "asin": "B0B9LGGCLJ",
+        "title": "KTT Extra Large Tent 10-12-14 Person(Style-B),Family Cabin Tents,2 Rooms,3 Doors and 3 Windows with Mesh,Straight Wall,Waterproof,Double Layer,Big Tent for Outdoor,Picnic,Camping,Family Gathering",
+        "price": "$229.99",
+        "priceValue": 229.99,
+        "rating": 4.2,
+        "ratingsTotal": 776
+      },
+      {
+        "asin": "B0CG31XXC3",
+        "title": "Naturehike Village Instant Tent, 4 Person 8 Person Camping Tent with Full Rainfly, Waterproof Large Cabin Tents for Car Camping",
+        "price": "$254.15",
+        "priceValue": 254.15,
+        "rating": 4.2,
+        "ratingsTotal": 370
+      },
+      {
+        "asin": "B0C4T2B7X4",
+        "title": "Naturehike Massif Hot Tent with Stove Jack, Waterproof Windproof 4 Season Tent, 2/4 Person Cold Weather Winter Tents for Camping",
+        "price": "$299.00",
+        "priceValue": 299,
+        "rating": 4.2,
+        "ratingsTotal": 248
+      },
+      {
+        "asin": "B0GZ1X86Z8",
+        "title": "4 Season Camping Hot Tent with Stove Jack for 1-6 Person | Windproof, Waterproof Hot Tent with Stove Jack and Snow Skirt for Camping, Hiking, Backpacking and Outdoor Adventures",
+        "price": "$169.99",
+        "priceValue": 169.99,
+        "rating": 3.9,
+        "ratingsTotal": 103
+      }
+    ]
   }
 }
