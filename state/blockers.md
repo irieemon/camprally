@@ -182,3 +182,16 @@ winter-camping-for-beginners
       "- Few guy-out points. Winter shelters need anchor points for high wind and snow load."
   · note (1/3): This is a 3-season cabin tent not designed for snow loads, high winds, or winter conditions. Recommending it for winter camping risks tent collapse and exposure in snowy weather, even at a drive-in site.
 
+
+## 2026-08-23T13:00:00.107Z — content-review
+
+Content review rejected best-sleeping-bag-liners-camping (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-sleeping-bag-liners-camping-2026-08-23T13-00-00-107Z.json
+
+erally cheaper than silk and many synthetics, but thermals/synthetic and silk are not the only alternatives — and 'warmest liner material' is actually contradicted elsewhere in the article, which describes the Sea to Summit Reactor (synthetic) as adding warmth comparable to a 'serious bump' and fleece liners as adding 'more than 20 degrees,' an implausibly high figure that would mislead readers about expected temperature gains.
+      "fleece is the warmest liner material at the lowest price"
+  ✗ [model 2/3] A 20+ degree warmth bump from a fleece liner greatly exceeds realistic performance; published manufacturer ratings for fleece liners typically claim roughly 10–15°F (5–8°C) of added warmth, and this figure could lead a camper to rely on a liner in conditions their bag cannot handle.
+      "many fleece liners add more than 20 degrees to a bag's effective rating"
+  · note (1/3): Fleece liners typically add roughly 10-15°F of effective warmth, not >20°F; overstating the boost can lead campers to under-prepare for cold and risk hypothermia.
+  · note (1/3): Quality synthetic insulated liners cost more than basic silk liners, so the claim that synthetics cost less than silk is false.
+
