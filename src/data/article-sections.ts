@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-sleeping-bag-liners-camping": [
+    {
+      type: "product-grid",
+      title: "Sleeping Bag Liners — The Cheapest Way to Add Warmth — Quick Comparison",
+      items: [
+        { label: "Sea to Summit Reactor Insulated Sl", category: "", icon: "🏕️", asin: "B0CT67MSSN", link: "https://www.amazon.com/dp/B0CT67MSSN?tag=camprally-20" },
+        { label: "Litume Fleece Sleeping Bag Liner f", category: "", icon: "🏕️", asin: "B0837GD38D", link: "https://www.amazon.com/dp/B0837GD38D?tag=camprally-20" },
+        { label: "REDCAMP Fleece Sleeping Bag Liner ", category: "", icon: "🏕️", asin: "B07FFRRPMQ", link: "https://www.amazon.com/dp/B07FFRRPMQ?tag=camprally-20" },
+        { label: "Snugpak Fleece Sleeping Bag Liner ", category: "", icon: "🏕️", asin: "B0019MEUEA", link: "https://www.amazon.com/dp/B0019MEUEA?tag=camprally-20" },
+        { label: "Mixweer 3 Pcs Fleece Sleeping Bag ", category: "", icon: "🏕️", asin: "B0BTYHRX4D", link: "https://www.amazon.com/dp/B0BTYHRX4D?tag=camprally-20" },
+        { label: "Sleeping Bag Liner – Lightweight T", category: "", icon: "🏕️", asin: "B06XBW19QR", link: "https://www.amazon.com/dp/B06XBW19QR?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-4-season-tents-under-300": [
     {
       type: "product-grid",
