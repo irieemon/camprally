@@ -184,7 +184,7 @@ async function pickFromCache(title, { max, count, cache }) {
 
 const slug = process.argv[2];
 if (!slug) {
-  console.error("usage: write-article.mjs <slug> [--out path] [--products A,B,C]");
+  console.error("usage: write-article.mjs <slug> [--out path] [--products A,B,C] [--discover [term]] [--from-cache]");
   process.exit(EXIT.FAIL);
 }
 const outIdx = process.argv.indexOf("--out");
@@ -270,6 +270,40 @@ const dIdx = process.argv.indexOf("--discover");
 const mIdx = process.argv.indexOf("--max");
 const nIdx = process.argv.indexOf("--count");
 const cache = loadCache();
+
+/* --from-cache: shop the verified ASIN cache and never call Canopy.
+ *
+ * pickFromCache already existed but was reachable only as a quota FALLBACK,
+ * which meant the sole way to shop without spending a search was to have
+ * already run out of them. That is the wrong shape for the case this exists
+ * for: regenerating old articles in bulk, where the discovery budget is better
+ * spent on articles that do not exist yet.
+ *
+ * It matters here because the pipeline has no spec runway — every pending brief
+ * needs its own search — so spending eighteen searches on eighteen ALREADY
+ * PUBLISHED articles would stall new publishing until the monthly reset.
+ *
+ * Products come from stock already verified for other guides rather than picked
+ * fresh for this one, so it is the weaker option and should not become the
+ * default. The model still refuses to return fewer than four genuinely relevant
+ * products, so a topic the cache cannot serve defers rather than being padded. */
+const FROM_CACHE = process.argv.includes("--from-cache");
+
+if (!asins.length && FROM_CACHE) {
+  const max = mIdx > -1 ? Number(process.argv[mIdx + 1]) : priceCeiling(brief.title);
+  const count = nIdx > -1 ? Number(process.argv[nIdx + 1]) : 6;
+  console.log(`shopping the verified ASIN cache${max ? ` under $${max}` : ""} — no Canopy search...`);
+  asins = await pickFromCache(brief.title, { max, count, cache });
+  if (asins.length < 4) {
+    console.error(
+      `cache fallback found only ${asins.length} relevant product(s) for "${brief.title}" — ` +
+      `not enough for a buying guide. Re-run with --discover once quota allows.`,
+    );
+    process.exit(EXIT.DEFER);
+  }
+  console.log(`  picked ${asins.length} from cache:`);
+  for (const a of asins) console.log(`    ${a}  ${(cache.entries[a]?.title ?? "").slice(0, 60)}`);
+}
 
 if (!asins.length && dIdx > -1) {
   /* `--discover` takes an OPTIONAL term, so the next argv is only the term if

@@ -22,6 +22,252 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "cheapest-camping-setup-for-beginners": [
+    {
+      type: "product-grid",
+      title: "Cheapest Camping Setup for Beginners (Complete Guide) — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "Fiskars X7 Small Hatchet Axe 14\"", category: "", icon: "🏕️", asin: "B0002YTO7E", link: "https://www.amazon.com/dp/B0002YTO7E?tag=camprally-20" },
+        { label: "Travel Utensils with Case", category: "", icon: "🏕️", asin: "B0CGV18G25", link: "https://www.amazon.com/dp/B0CGV18G25?tag=camprally-20" },
+        { label: "Mini First Aid Kit", category: "", icon: "🏕️", asin: "B0DB794BKQ", link: "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20" },
+        { label: "DUDE Wipes Unscented Adult Flushable Wet Wipes", category: "", icon: "🏕️", asin: "B010NE2XPC", link: "https://www.amazon.com/dp/B010NE2XPC?tag=camprally-20" },
+        { label: "SZHLUX Camping Hammock Double & Single Portable Hammocks", category: "", icon: "🏕️", asin: "B09VGNJTPW", link: "https://www.amazon.com/dp/B09VGNJTPW?tag=camprally-20" },
+      ]
+    },
+  ],
+  "budget-camping-hacks-that-work": [
+    {
+      type: "product-grid",
+      title: "Budget Camping Hacks That Actually Work — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "Mini First Aid Kit", category: "", icon: "🏕️", asin: "B0DB794BKQ", link: "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20" },
+        { label: "OFF! Deep Woods Dry Insect & Mosquito Repellent Bug Spray", category: "", icon: "🏕️", asin: "B019ZTXU2G", link: "https://www.amazon.com/dp/B019ZTXU2G?tag=camprally-20" },
+        { label: "Kootek Camping Hammock 400lbs Capacity Outdoor Camping", category: "", icon: "🏕️", asin: "B07X5G3BKZ", link: "https://www.amazon.com/dp/B07X5G3BKZ?tag=camprally-20" },
+        { label: "Shower Body Wipes", category: "", icon: "🏕️", asin: "B07MN8ZD21", link: "https://www.amazon.com/dp/B07MN8ZD21?tag=camprally-20" },
+        { label: "Aquatabs 49mg Water Purification Tablets", category: "", icon: "🏕️", asin: "B09B2TVKGB", link: "https://www.amazon.com/dp/B09B2TVKGB?tag=camprally-20" },
+      ]
+    },
+  ],
+  "how-to-find-free-campsites": [
+    {
+      type: "product-grid",
+      title: "How to Find Free Campsites — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "Wise Owl Outfitters Hammock for Camping Double Hammocks Gear", category: "", icon: "🏕️", asin: "B016CHAMX4", link: "https://www.amazon.com/dp/B016CHAMX4?tag=camprally-20" },
+        { label: "8/12/16Pack Tent Stake with Hammer", category: "", icon: "🏕️", asin: "B0BH98NRPD", link: "https://www.amazon.com/dp/B0BH98NRPD?tag=camprally-20" },
+        { label: "BROWEY 1600W", category: "", icon: "🏕️", asin: "B0F8QRW8XK", link: "https://www.amazon.com/dp/B0F8QRW8XK?tag=camprally-20" },
+        { label: "4\" Survival Ferro Rod Drilled Flint Fire Starter and Striker", category: "", icon: "🏕️", asin: "B00PSGOM32", link: "https://www.amazon.com/dp/B00PSGOM32?tag=camprally-20" },
+        { label: "Lichamp LED Camping Lantern", category: "", icon: "🏕️", asin: "B08WWX5GTZ", link: "https://www.amazon.com/dp/B08WWX5GTZ?tag=camprally-20" },
+      ]
+    },
+  ],
+  "how-to-pack-light-camping": [
+    {
+      type: "product-grid",
+      title: "How to Pack Light for Camping — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "Fiskars X7 Small Hatchet Axe 14\"", category: "", icon: "🏕️", asin: "B0002YTO7E", link: "https://www.amazon.com/dp/B0002YTO7E?tag=camprally-20" },
+        { label: "Travel Utensils with Case", category: "", icon: "🏕️", asin: "B0CGV18G25", link: "https://www.amazon.com/dp/B0CGV18G25?tag=camprally-20" },
+        { label: "Mini First Aid Kit", category: "", icon: "🏕️", asin: "B0DB794BKQ", link: "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20" },
+        { label: "DUDE Wipes Unscented Adult Flushable Wet Wipes", category: "", icon: "🏕️", asin: "B010NE2XPC", link: "https://www.amazon.com/dp/B010NE2XPC?tag=camprally-20" },
+        { label: "SZHLUX Camping Hammock Double & Single Portable Hammocks", category: "", icon: "🏕️", asin: "B09VGNJTPW", link: "https://www.amazon.com/dp/B09VGNJTPW?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-budget-gps-compass-hiking": [
+    {
+      type: "product-grid",
+      title: "Best Budget GPS and Compass for Hiking — Quick Comparison",
+      items: [
+        { label: "Garmin inReach® Mini 3 Plus", category: "", icon: "🏕️", asin: "B0G4RST8LV", link: "https://www.amazon.com/dp/B0G4RST8LV?tag=camprally-20" },
+        { label: "Garmin GPSMAP 65s", category: "", icon: "🏕️", asin: "B08HR5CXCK", link: "https://www.amazon.com/dp/B08HR5CXCK?tag=camprally-20" },
+        { label: "ZOLEO Satellite Communicator", category: "", icon: "🏕️", asin: "B07X59RH7T", link: "https://www.amazon.com/dp/B07X59RH7T?tag=camprally-20" },
+        { label: "Garmin inReach® Messenger Satellite Communicator", category: "", icon: "🏕️", asin: "B0BFBZR4KW", link: "https://www.amazon.com/dp/B0BFBZR4KW?tag=camprally-20" },
+        { label: "Spot Gen 4 Satellite GPS Messenger", category: "", icon: "🏕️", asin: "B08F998MFH", link: "https://www.amazon.com/dp/B08F998MFH?tag=camprally-20" },
+        { label: "Garmin Foretrex 801", category: "", icon: "🏕️", asin: "B0BZWXWGYK", link: "https://www.amazon.com/dp/B0BZWXWGYK?tag=camprally-20" },
+      ]
+    },
+  ],
+  "affordable-water-filtration-camping": [
+    {
+      type: "product-grid",
+      title: "Affordable Water Filtration for Camping — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "Sawyer Squeeze Water Filtration System", category: "", icon: "🏕️", asin: "B0DTJK394Q", link: "https://www.amazon.com/dp/B0DTJK394Q?tag=camprally-20" },
+        { label: "Camco Tastepure RV Water Filter", category: "", icon: "🏕️", asin: "B0006IX87S", link: "https://www.amazon.com/dp/B0006IX87S?tag=camprally-20" },
+        { label: "Sawyer Products SP128 Mini Water Filtration System", category: "", icon: "🏕️", asin: "B00FA2RLX2", link: "https://www.amazon.com/dp/B00FA2RLX2?tag=camprally-20" },
+        { label: "Sawyer Products SP105 MINI Water Filtration System", category: "", icon: "🏕️", asin: "B00TOX6UM6", link: "https://www.amazon.com/dp/B00TOX6UM6?tag=camprally-20" },
+        { label: "Membrane Solutions Personal Water Filter Straw S1", category: "", icon: "🏕️", asin: "B07SYYQZDN", link: "https://www.amazon.com/dp/B07SYYQZDN?tag=camprally-20" },
+      ]
+    },
+  ],
+  "affordable-headlamps-camping": [
+    {
+      type: "product-grid",
+      title: "Affordable Headlamps for Camping - Top Picks — Quick Comparison",
+      items: [
+        { label: "Energizer LED Rechargeable Headlamp", category: "", icon: "🏕️", asin: "B0GYV9PM6H", link: "https://www.amazon.com/dp/B0GYV9PM6H?tag=camprally-20" },
+        { label: "Nitecore NU20 Classic Ultralight Headlamp", category: "", icon: "🏕️", asin: "B0DCQDXSS5", link: "https://www.amazon.com/dp/B0DCQDXSS5?tag=camprally-20" },
+        { label: "Energizer PRO-260 LED Headlamp", category: "", icon: "🏕️", asin: "B083JWX9PK", link: "https://www.amazon.com/dp/B083JWX9PK?tag=camprally-20" },
+        { label: "Energizer PRO-315 LED Headlamp", category: "", icon: "🏕️", asin: "B083JWLP4Y", link: "https://www.amazon.com/dp/B083JWLP4Y?tag=camprally-20" },
+        { label: "Energizer LED Headlamp PRO", category: "", icon: "🏕️", asin: "B092RHC2FY", link: "https://www.amazon.com/dp/B092RHC2FY?tag=camprally-20" },
+        { label: "Energizer LED Headlamp PRO", category: "", icon: "🏕️", asin: "B0CG825SSQ", link: "https://www.amazon.com/dp/B0CG825SSQ?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-budget-multitool-camping": [
+    {
+      type: "product-grid",
+      title: "Best Budget Multi-Tool for Camping — Quick Comparison",
+      items: [
+        { label: "Rhino USA Folding Survival Shovel with Pick", category: "", icon: "🏕️", asin: "B07BH7C339", link: "https://www.amazon.com/dp/B07BH7C339?tag=camprally-20" },
+        { label: "LEATHERMAN Wingman Multi-Tool", category: "", icon: "🏕️", asin: "B005DI0XM4", link: "https://www.amazon.com/dp/B005DI0XM4?tag=camprally-20" },
+        { label: "BIIB Gifts for Men", category: "", icon: "🏕️", asin: "B09DYDTD2G", link: "https://www.amazon.com/dp/B09DYDTD2G?tag=camprally-20" },
+        { label: "MOSSY OAK 21-in-1 Multitool", category: "", icon: "🏕️", asin: "B084VJFX9M", link: "https://www.amazon.com/dp/B084VJFX9M?tag=camprally-20" },
+        { label: "Gerber Gear Truss 17-in-1 EDC Needle Nose Pliers Multi tool", category: "", icon: "🏕️", asin: "B07DDDM35D", link: "https://www.amazon.com/dp/B07DDDM35D?tag=camprally-20" },
+        { label: "LEATHERMAN Wave Plus 18-in-1 Multi-Tool", category: "", icon: "🏕️", asin: "B079MJ6MLV", link: "https://www.amazon.com/dp/B079MJ6MLV?tag=camprally-20" },
+      ]
+    },
+  ],
+  "how-to-start-camping-no-gear": [
+    {
+      type: "product-grid",
+      title: "How to Start Camping With No Gear — Quick Comparison",
+      items: [
+        { label: "Coleman Sundome Camping Tent with Rainfly", category: "", icon: "🏕️", asin: "B0D7QHY574", link: "https://www.amazon.com/dp/B0D7QHY574?tag=camprally-20" },
+        { label: "Coleman Brazos 20/30°F Adult Cool-Weather Sleeping Bag", category: "", icon: "🏕️", asin: "B0DHJL8CMJ", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
+        { label: "Klymit Static V Sleeping Pad Green", category: "", icon: "🏕️", asin: "B082429QGK", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
+        { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "", icon: "🏕️", asin: "B07VYNRKCS", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
+        { label: "Squeeze Water Filtration System", category: "", icon: "🏕️", asin: "B0DVHL8FG4", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
+        { label: "Blukar 116 LED Camping Lantern Rechargeable", category: "", icon: "🏕️", asin: "B0CBV87CYX", link: "https://www.amazon.com/dp/B0CBV87CYX?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-time-year-camp-free": [
+    {
+      type: "product-grid",
+      title: "Best Time of Year to Camp for Free — Quick Comparison",
+      items: [
+        { label: "Coleman Tents Coleman Sundome Tent", category: "", icon: "🏕️", asin: "B014LSDUA8", link: "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20" },
+        { label: "Teton Celsius Regular", category: "", icon: "🏕️", asin: "B0D88VH3XN", link: "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20" },
+        { label: "Klymit Static V Sleeping Pad Green", category: "", icon: "🏕️", asin: "B082429QGK", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
+        { label: "Stanley Adventure Stainless Steel Camping Cooking Set", category: "", icon: "🏕️", asin: "B0C79G8L6S", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
+        { label: "Squeeze Water Filtration System", category: "", icon: "🏕️", asin: "B0DVHL8FG4", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
+        { label: "BLACK DIAMOND Spot 400-R Headlamp", category: "", icon: "🏕️", asin: "B09NQK2581", link: "https://www.amazon.com/dp/B09NQK2581?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-budget-sleeping-bags-cold-weather": [
+    {
+      type: "product-grid",
+      title: "Best Budget Sleeping Bags for Cold Weather — Quick Comparison",
+      items: [
+        { label: "Coleman Brazos 20/30°F Adult Cool-Weather Sleeping Bag", category: "", icon: "🏕️", asin: "B0DHJL8CMJ", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
+        { label: "Coleman Brazos Cold-Weather Sleeping Bag", category: "", icon: "🏕️", asin: "B0BXMW1TJ9", link: "https://www.amazon.com/dp/B0BXMW1TJ9?tag=camprally-20" },
+        { label: "HiZYNICE Sleeping Bags for Adults XXL Cold Weather Green 0F", category: "", icon: "🏕️", asin: "B0CBX96X8T", link: "https://www.amazon.com/dp/B0CBX96X8T?tag=camprally-20" },
+        { label: "Teton Celsius Regular", category: "", icon: "🏕️", asin: "B00DDP3EHK", link: "https://www.amazon.com/dp/B00DDP3EHK?tag=camprally-20" },
+        { label: "Teton Celsius Regular", category: "", icon: "🏕️", asin: "B0D88VH3XN", link: "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20" },
+        { label: "VENTURE 4TH Backpacking Sleeping Bag for Camping", category: "", icon: "🏕️", asin: "B0896X17S5", link: "https://www.amazon.com/dp/B0896X17S5?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-budget-camping-knife": [
+    {
+      type: "product-grid",
+      title: "Best Budget Camping Knife — Quick Comparison",
+      items: [
+        { label: "Morakniv Companion Fixed Blade Outdoor Knife with Stainless", category: "", icon: "🏕️", asin: "B094D5QJV5", link: "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20" },
+        { label: "Amazon Basics 8-in-1 Stainless Steel Multitool with Safety", category: "", icon: "🏕️", asin: "B07TQ86781", link: "https://www.amazon.com/dp/B07TQ86781?tag=camprally-20" },
+        { label: "Gerber Suspension NXT 15-in-1 Multitool Pliers", category: "", icon: "🏕️", asin: "B07DD69QN3", link: "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20" },
+        { label: "Multitool Camping", category: "", icon: "🏕️", asin: "B082MGRYRR", link: "https://www.amazon.com/dp/B082MGRYRR?tag=camprally-20" },
+      ]
+    },
+  ],
+  "budget-camp-chairs-that-last": [
+    {
+      type: "product-grid",
+      title: "Budget Camp Chairs That Last — Quick Comparison",
+      items: [
+        { label: "Coleman Portable Camping Chair with 4-Can Cooler", category: "", icon: "🏕️", asin: "B00339C3P0", link: "https://www.amazon.com/dp/B00339C3P0?tag=camprally-20" },
+        { label: "VEVOR Oversized Camping Folding Chair", category: "", icon: "🏕️", asin: "B0C9MF8L3N", link: "https://www.amazon.com/dp/B0C9MF8L3N?tag=camprally-20" },
+        { label: "Amazon Basics Camping Chair Large", category: "", icon: "🏕️", asin: "B074YRN643", link: "https://www.amazon.com/dp/B074YRN643?tag=camprally-20" },
+        { label: "ONETIGRIS Tigerblade Camping Chair", category: "", icon: "🏕️", asin: "B0CQJR8NLW", link: "https://www.amazon.com/dp/B0CQJR8NLW?tag=camprally-20" },
+        { label: "Coleman Broadband Mesh Quad Camping Chair with Carry Bag", category: "", icon: "🏕️", asin: "B00BPWDMOS", link: "https://www.amazon.com/dp/B00BPWDMOS?tag=camprally-20" },
+        { label: "EMERIT Camping Chair", category: "", icon: "🏕️", asin: "B0DFPH7K8C", link: "https://www.amazon.com/dp/B0DFPH7K8C?tag=camprally-20" },
+      ]
+    },
+  ],
+  "affordable-rain-gear-camping": [
+    {
+      type: "product-grid",
+      title: "Affordable Rain Gear for Camping — Quick Comparison",
+      items: [
+        { label: "FROGG TOGGS Men’s Ultra-Lite2 Rain Suit", category: "", icon: "🏕️", asin: "B0BZFTL523", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
+        { label: "PREPARED4X Emergency Mylar Poncho", category: "", icon: "🏕️", asin: "B0BKH8BJ3Q", link: "https://www.amazon.com/dp/B0BKH8BJ3Q?tag=camprally-20" },
+        { label: "RAINDEWAY 8x10 Feet Tarp Waterproof 9Mil Multipurpose Poly", category: "", icon: "🏕️", asin: "B0DSSLFGJ8", link: "https://www.amazon.com/dp/B0DSSLFGJ8?tag=camprally-20" },
+        { label: "CARTMAN 10x12Ft Multipurpose Waterproof Poly Tarp Cover 8", category: "", icon: "🏕️", asin: "B089Q18CCZ", link: "https://www.amazon.com/dp/B089Q18CCZ?tag=camprally-20" },
+        { label: "Amazon Basics Waterproof Multipurpose Camping Tarp", category: "", icon: "🏕️", asin: "B0748HGDVD", link: "https://www.amazon.com/dp/B0748HGDVD?tag=camprally-20" },
+        { label: "Unigear Hammock Rain Fly Waterproof Camping Tent Tarp", category: "", icon: "🏕️", asin: "B07F8854P2", link: "https://www.amazon.com/dp/B07F8854P2?tag=camprally-20" },
+      ]
+    },
+  ],
+  "budget-portable-camping-stoves-compared": [
+    {
+      type: "product-grid",
+      title: "Budget Portable Camping Stoves Compared — Quick Comparison",
+      items: [
+        { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "", icon: "🏕️", asin: "B07VYNRKCS", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
+        { label: "Fire-Maple Fixed Star 1 Backpacking and Camping Stove System", category: "", icon: "🏕️", asin: "B07F2VP353", link: "https://www.amazon.com/dp/B07F2VP353?tag=camprally-20" },
+        { label: "Stanley Adventure Stainless Steel Camping Cooking Set", category: "", icon: "🏕️", asin: "B0C79G8L6S", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
+        { label: "Coleman Gas Camping Stove", category: "", icon: "🏕️", asin: "B00005OU9D", link: "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20" },
+        { label: "Jetboil Zip Camping Stove Cooking System", category: "", icon: "🏕️", asin: "B004UVPDUM", link: "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20" },
+        { label: "Coleman Triton 2-Burner Propane Stove", category: "", icon: "🏕️", asin: "B09HN1C1YJ", link: "https://www.amazon.com/dp/B09HN1C1YJ?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-cheap-camping-tables": [
+    {
+      type: "product-grid",
+      title: "Best Cheap Camping Tables for Cooking — Quick Comparison",
+      items: [
+        { label: "TREKOLOGY Compact Mini Camping Table", category: "", icon: "🏕️", asin: "B0CSD3WQKJ", link: "https://www.amazon.com/dp/B0CSD3WQKJ?tag=camprally-20" },
+        { label: "Byliable Folding Camping Table", category: "", icon: "🏕️", asin: "B0DPW7RFC7", link: "https://www.amazon.com/dp/B0DPW7RFC7?tag=camprally-20" },
+        { label: "Coleman Outdoor Folding Table", category: "", icon: "🏕️", asin: "B0CZDRT3F2", link: "https://www.amazon.com/dp/B0CZDRT3F2?tag=camprally-20" },
+        { label: "GCI OUTDOOR Slim-Fold Cook Station", category: "", icon: "🏕️", asin: "B00U9BHKM6", link: "https://www.amazon.com/dp/B00U9BHKM6?tag=camprally-20" },
+      ]
+    },
+  ],
+  "best-budget-sleeping-pads-under-50": [
+    {
+      type: "product-grid",
+      title: "Best Budget Sleeping Pads Under $50 — Quick Comparison",
+      items: [
+        { label: "HIKENTURE Ultralight Camping Sleeping Pad", category: "", icon: "🏕️", asin: "B09YY89GT6", link: "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20" },
+        { label: "Amazon Basics Camping Sleeping Pad with Quick-Inflate", category: "", icon: "🏕️", asin: "B0FD97YGX6", link: "https://www.amazon.com/dp/B0FD97YGX6?tag=camprally-20" },
+        { label: "Klymit Static V Sleeping Pad Green", category: "", icon: "🏕️", asin: "B082429QGK", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
+        { label: "Therm-a-Rest Z Lite Sol Camping and Backpacking Sleeping Pad", category: "", icon: "🏕️", asin: "B0CN4R2QS2", link: "https://www.amazon.com/dp/B0CN4R2QS2?tag=camprally-20" },
+      ]
+    },
+  ],
+  "budget-camping-cookware-that-works": [
+    {
+      type: "product-grid",
+      title: "Budget Camping Cookware That Actually Works — Quick Comparison",
+      items: [
+        { label: "Stanley Adventure Stainless Steel Camping Cooking Set", category: "", icon: "🏕️", asin: "B0C79G8L6S", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
+        { label: "GSI Outdoors Cascadian Table Set I 6-Piece Camping", category: "", icon: "🏕️", asin: "B001LRPSUS", link: "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20" },
+        { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "", icon: "🏕️", asin: "B07VYNRKCS", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
+        { label: "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit", category: "", icon: "🏕️", asin: "B09B4HCTC1", link: "https://www.amazon.com/dp/B09B4HCTC1?tag=camprally-20" },
+        { label: "Fire-Maple Fixed Star 1 Backpacking and Camping Stove System", category: "", icon: "🏕️", asin: "B07F2VP353", link: "https://www.amazon.com/dp/B07F2VP353?tag=camprally-20" },
+        { label: "GCI OUTDOOR Slim-Fold Cook Station", category: "", icon: "🏕️", asin: "B00U9BHKM6", link: "https://www.amazon.com/dp/B00U9BHKM6?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-budget-camping-cots": [
     {
       type: "product-grid",
@@ -432,551 +678,25 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       ]
     },
   ],
-  "cheapest-camping-setup-for-beginners": [
-    {
-      type: "stats",
-      stats: [
-        { value: "$192.93", label: "Total Setup Cost" },
-        { value: "7", label: "Items Needed" },
-        { value: "2", label: "People" },
-        { value: "2", label: "Nights Min." },
-      ]
-    },
-    {
-      type: "product-grid",
-      title: "The Essential 7 Items",
-      subtitle: "You genuinely need just seven things to camp. Everything else is optional.",
-      items: [
-        { label: "Coleman Tents Coleman Sundome Tent", category: "Shelter", icon: "⛺", link: "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20" },
-        { label: "Coleman Brazos 20/30°F Adult Cool-Weather Sleeping Bag", category: "Sleeping Bag", icon: "🛏️", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
-        { label: "Klymit Static V Sleeping Pad Green", category: "Sleeping Pad", icon: "💤", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
-        { label: "Stanley Adventure Stainless Steel Camping Cooking Set", category: "Cooking", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
-        { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "Stove", icon: "🔥", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
-        { label: "Vont 4 Pack LED Camping Lantern", category: "Lighting", icon: "💡", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
-        { label: "Nalgene Wide Mouth Water Bottle", category: "Water", icon: "💧", link: "https://www.amazon.com/dp/B09CH8W31W?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "save",
-      calloutTitle: "SAVE: Tent",
-      calloutBody: "The Sundome outperforms tents several times its price in weather protection. Don't overthink this."
-    },
-    {
-      type: "callout",
-      calloutType: "splurge",
-      calloutTitle: "SPLURGE: Sleeping Bag",
-      calloutBody: "Your sleeping bag is the most personal item. The Brazos is decent, but if you camp in colder weather, consider the Teton Sports Celsius (rated to 0°F)."
-    },
-    {
-      type: "callout",
-      calloutType: "save",
-      calloutTitle: "SAVE: Stove",
-      calloutBody: "The Etekcity canister stove boils water in 3 minutes. Expensive stoves do the same thing 30 seconds faster. Not worth the money."
-    },
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Coleman Sundome 2P",
-        asin: "B014LSDUA8",
-        why: "The benchmark budget tent. WeatherTec™ system, 10-minute setup, and genuine 2-person capacity. Backed by Coleman reliability.",
-        category: "Tent"
-      }
-    },
-    {
-      type: "checklist",
-      title: "First Trip Checklist",
-      checkItems: [
-        "Tent + rainfly",
-        "Sleeping bag + pad",
-        "Headlamp + lanterns",
-        "Stove + fuel",
-        "Water + filtration",
-        "Food + cooler",
-        "Lighter/matches",
-        "First aid kit",
-        "Sunscreen",
-        "Clothing layers",
-      ]
-    },
-  ],
 
 
-  "best-budget-sleeping-bags-cold-weather": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Teton Sports Celsius Regular",
-        asin: "B0D88VH3XN",
-        why: "Genuine 0°F cold-weather performance at a fraction of the price. Mummy design traps heat efficiently, snag-free zipper, and lifetime warranty. The obvious choice for cold nights.",
-        category: "Sleeping Bag"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Cold Weather Picks",
-      items: [
-        { label: "Teton Celsius Regular", category: "Best Overall", icon: "🥶", link: "https://www.amazon.com/dp/B0D88VH3XN?tag=camprally-20" },
-        { label: "Coleman Brazos 20/30°F Adult Cool-Weather Sleeping Bag", category: "Most Affordable", icon: "💰", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
-        { label: "Oaskys 3-Season", category: "Ultralight", icon: "🪶", link: "https://www.amazon.com/s?k=oaskys+3+season+sleeping+bag&tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Temperature Rating Tip",
-      calloutBody: "Get a bag rated 10-15°F below your expected low for a safety margin. Most manufacturers rate conservatively — a '20°F bag' might keep you comfortable at 25-30°F."
-    },
-    {
-      type: "tips",
-      title: "Cold Weather Tips",
-      tips: [
-        { title: "Eat a Big Dinner", body: "Digestion generates heat. A full stomach keeps you warmer than an empty one." },
-        { title: "Stay Dry", body: "Wet clothes = cold night. Change into dry base layers before bed." },
-        { title: "Use a Sleeping Pad", body: "Ground steals 80% of your body heat. Never skip the pad, even on warm nights." },
-        { title: "Put Clothes in Your Bag", body: "Cold boots in your sleeping bag = eventually warm boots. Start this 30 min before bed." },
-      ]
-    },
-  ],
-
-  "budget-camping-cookware-that-works": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Stanley Adventure Camp Cook Set",
-        asin: "B0C79G8L6S",
-        why: "24oz pot, two cups, and lid/pan nest perfectly. Stainless steel handles don't melt over open flame. The best value in camping cookware. Period.",
-        category: "Cookware"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Cookware Picks",
-      items: [
-        { label: "Stanley Adventure Stainless Steel Camping Cooking Set", category: "Best Pick", icon: "🍳", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
-        { label: "MalloMe Camping Cookware Mess Kit", category: "Budget Runner-Up", icon: "💰", link: "https://www.amazon.com/s?k=MalloMe+camping+cookware+mess+kit&tag=camprally-20" },
-        { label: "GSI Outdoors Cascadian Table Set I 6-Piece Camping", category: "Solo", icon: "🎒", link: "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Why Titanium Isn't Worth It",
-      calloutBody: "Titanium is lighter, but it heats food unevenly, costs more, and shows scratches prominently. For budget camping, stainless or aluminum is just fine."
-    },
-  ],
-
-  "affordable-headlamps-camping": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Black Diamond Spot 400",
-        asin: "B09NQK2581",
-        why: "400 lumens handles trail running, camp chores, and reading. PowerTap technology switches modes instantly. IPX67 waterproof and 200+ hour battery life on low.",
-        category: "Headlamp"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Lighting Picks",
-      items: [
-        { label: "BLACK DIAMOND Spot 400-R Headlamp", category: "Headlamp", icon: "🔦", link: "https://www.amazon.com/dp/B09NQK2581?tag=camprally-20" },
-        { label: "Vont 4 Pack LED Camping Lantern", category: "Lantern 4-pack", icon: "🏮", link: "https://www.amazon.com/dp/B00NPLSZF8?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Get Both",
-      calloutBody: "Headlamp for: hiking, cooking, anything mobile. Lantern for: camp ambiance, tent lighting, group activities. The combo covers every scenario."
-    },
-  ],
-
-  "best-budget-sleeping-pads-under-50": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Klymit Static V",
-        asin: "B082429QGK",
-        why: "V-chamber design limits air movement and heat loss. 4.7/5 rating across 10,000+ reviews. Packs to water bottle size with lifetime warranty. The gold standard of budget pads.",
-        category: "Sleeping Pad"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Sleeping Pad Picks",
-      items: [
-        { label: "Klymit Static V Sleeping Pad Green", category: "Best Pick", icon: "💤", link: "https://www.amazon.com/dp/B082429QGK?tag=camprally-20" },
-        { label: "HIKENTURE Ultralight Camping Sleeping Pad", category: "Self-Inflating", icon: "🎈", link: "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20" },
-        { label: "Therm-a-Rest Z Lite Sol Camping and Backpacking Sleeping Pad", category: "Foam Classic", icon: "🧱", link: "https://www.amazon.com/dp/B0CN4R2QS2?tag=camprally-20" },
-        { label: "Amazon Basics Camping Sleeping Pad with Quick-Inflate", category: "Backup", icon: "🪵", link: "https://www.amazon.com/dp/B0FD97YGX6?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "Your Sleeping Pad Is More Important Than Your Sleeping Bag",
-      calloutBody: "80% of your body heat escapes through contact with the ground. An expensive sleeping bag on a bare tarp will leave you colder than a budget bag on a quality pad."
-    },
-  ],
-
-  "budget-portable-camping-stoves-compared": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Etekcity Ultralight Portable Stove",
-        asin: "B07VYNRKCS",
-        why: "Piezo ignition means no lighter needed. Adjustable flame gives cooking control. 3.9 oz and folds to pocket size. This stove rivals units many times its price.",
-        category: "Stove"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Stove Picks",
-      items: [
-        { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "Best Budget", icon: "🔥", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
-        { label: "Coleman Gas Camping Stove", category: "Upgrade Pick", icon: "🍳", link: "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20" },
-        { label: "Jetboil Zip Camping Stove Cooking System", category: "Backpacking", icon: "🎒", link: "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "table",
-      title: "Fuel Cost Comparison",
-      rows: [
-        ["Stove Type", "Fuel Cost/Trip", "Availability"],
-        ["Canister", "$5-8", "Hardware stores"],
-        ["Liquid Gas", "$8-12", "Outdoor shops"],
-        ["Propane", "$4-6", "Everywhere"],
-      ]
-    },
-  ],
-
-  "affordable-water-filtration-camping": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Sawyer Products Squeeze Filter",
-        asin: "B0DVHL8FG4",
-        why: "0.1-micron absolute pore size removes 99.99999% of bacteria and 99.9999% of protozoa. 100,000 gallon lifespan = essentially forever. Weighs 3 oz.",
-        category: "Water Filter"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Water Filtration Picks",
-      items: [
-        { label: "Squeeze Water Filtration System", category: "Best Pick", icon: "💧", link: "https://www.amazon.com/dp/B0DVHL8FG4?tag=camprally-20" },
-        { label: "LifeStraw Personal Water Filter for Hiking", category: "Budget Pick", icon: "🥤", link: "https://www.amazon.com/dp/B0FDXYKJYF?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "Don't: The Bleach Method",
-      calloutBody: "8 drops per gallon, 30-minute wait, tastes terrible, dosage is imprecise. Just buy a filter. Never risk giardia to save a few dollars."
-    },
-  ],
-
-  "best-budget-gps-compass-hiking": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Suunto A-10 Compass",
-        asin: "B08PDDPX28",
-        why: "Liquid-filled needle stabilizes quickly, baseplate markings work with any map. Balanced for northern hemisphere, lifetime warranty. The benchmark for budget compasses.",
-        category: "Compass"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Navigation Picks",
-      items: [
-        { label: "SUUNTO A-10 Compass: Compact", category: "Compass", icon: "🧭", link: "https://www.amazon.com/dp/B08PDDPX28?tag=camprally-20" },
-        { label: "Garmin 010-02256-00 eTrex 22x", category: "GPS", icon: "📍", link: "https://www.amazon.com/dp/B07RTD2PMT?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Start With Your Phone",
-      calloutBody: "Before buying anything, download offline maps (Gaia GPS or CalTopo). This is your baseline navigation kit. Then add a compass as backup."
-    },
-    {
-      type: "tips",
-      title: "Navigation Essentials",
-      tips: [
-        { title: "Download Offline Maps", body: "Before your trip. You'll lose cell signal when it matters most." },
-        { title: "Carry a Compass", body: "Even if you carry GPS. Electronics fail; magnetics don't." },
-        { title: "Know How to Take a Bearing", body: "5-minute YouTube video teaches this. Practice at home." },
-        { title: "Pack a Paper Map", body: "As final backup. Topographic map of your area." },
-      ]
-    },
-  ],
-
-  "best-budget-multitool-camping": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Gerber Suspension-NXT",
-        asin: "B07DD69QN3",
-        why: "15 tools cover every camp scenario. Spring-loaded pliers reduce hand fatigue, outside-accessible blades, butterfly opening is smooth. The benchmark budget multi-tool.",
-        category: "Multi-Tool"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Multi-Tool Picks",
-      items: [
-        { label: "Gerber Suspension NXT 15-in-1 Multitool Pliers", category: "Best Pick", icon: "🔧", link: "https://www.amazon.com/dp/B07DD69QN3?tag=camprally-20" },
-        { label: "Amazon Basics 8-in-1 Stainless Steel Multitool with Safety", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B07TQ86781?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "Don't Buy: Gas Station Tools",
-      calloutBody: "$5 multi-tools at gas stations are made of inferior steel. They bend, break, and frustrate. Buy once, cry once."
-    },
-  ],
-
-  "best-budget-camping-knife": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Mora Companion",
-        asin: "B094D5QJV5",
-        why: "Swedish high-carbon steel takes a razor edge and holds it. Rubber handle won't slip, full tang construction is nearly indestructible. Fire striker notch on spine. Buy two.",
-        category: "Knife"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Knife Picks",
-      items: [
-        { label: "Morakniv Companion Fixed Blade Outdoor Knife with Stainless", category: "Best Pick", icon: "🔪", link: "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20" },
-        { label: "OutdoorElement Indus Review Knife", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/s?k=outdoor+element+camp+knife&tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "Skip These Temptations",
-      calloutBody: "Swiss Army Knives: great tools, but thin blades struggle with camp tasks. Tactical/military knives: overbuilt for camping. Gas station knives: don't."
-    },
-  ],
-
-  "affordable-rain-gear-camping": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Frogg Toggs Ultra-Lite Rain Suit",
-        asin: "B0BZFTL523",
-        why: "Two-piece suit (jacket + pants) stuffs into its own pocket and deploys in seconds. 5,000mm waterproofing handles heavy rain. Breathable reduces interior condensation.",
-        category: "Rain Gear"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Rain Gear Picks",
-      items: [
-        { label: "FROGG TOGGS Men’s Ultra-Lite2 Rain Suit", category: "Best Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
-        { label: "FROGG TOGGS Men’s Ultra-Lite2 Rain Suit", category: "Budget Pick", icon: "🌧️", link: "https://www.amazon.com/dp/B0BZFTL523?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "Trash Bags Are Not Rain Gear",
-      calloutBody: "Zero breathability = sweat-soaked inside. Tears easily. Zero durability. Still causes hypothermia in cold rain. Just buy real rain gear. It's not optional."
-    },
-  ],
-
-  "budget-camp-chairs-that-last": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "KingCamp Low Sling Folding Chair",
-        asin: "B0BF8PRSZL",
-        why: "Closer to ground (great for campfires), mesh sides provide airflow. Oversized cup holder, padded armrests, storage pocket. Folds flat for trunk storage.",
-        category: "Camp Chair"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Chair Picks",
-      items: [
-        { label: "KingCamp Low Folding Beach Chair", category: "Best Pick", icon: "🪑", link: "https://www.amazon.com/dp/B0BF8PRSZL?tag=camprally-20" },
-        { label: "Amazon Basics Camping Chair Large", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B0CZNY3LR8?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "Skip These Temptations",
-      calloutBody: "Ultralight trekking pole chairs: uncomfortable over 30 min. $10 gas station chairs: frame bends first sit. Hammock chairs: great concept, mediocre execution."
-    },
-  ],
-
-  "best-cheap-camping-tables": [
-    {
-      type: "spotlight",
-      spotlightItem: {
-        name: "Trekology Ultralight Camping Table",
-        asin: "B0CSD3WQKJ",
-        why: "Aluminum surface, sets up in 3 seconds (no assembly). Magnetic legs lock securely. 1.8 lbs, packs to large book size. Carry bag included.",
-        category: "Camping Table"
-      }
-    },
-    {
-      type: "product-grid",
-      title: "Table Picks",
-      items: [
-        { label: "TREKOLOGY Compact Mini Camping Table", category: "Best Pick", icon: "🪑", link: "https://www.amazon.com/dp/B0CSD3WQKJ?tag=camprally-20" },
-        { label: "Coleman Outdoor Folding Table", category: "Budget Pick", icon: "💰", link: "https://www.amazon.com/dp/B0CZDRT3F2?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "DIY Alternative: Plastic Bins",
-      calloutBody: "Stack two plastic storage bins. Instant table: completely free, adjustable height, provides storage underneath. Works surprisingly well for casual car camping."
-    },
-  ],
 
 
-  "how-to-start-camping-no-gear": [
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Borrow Before You Buy",
-      calloutBody: "Family and friends often have gear collecting dust. Outdoor clubs have gear libraries. REI rents full tent + sleeping bag + pad for ~$50/day."
-    },
-    {
-      type: "checklist",
-      title: "The Minimum Viable Setup (Borrow or Rent)",
-      checkItems: [
-        "Tent",
-        "Sleeping bag",
-        "Sleeping pad",
-        "Flashlight/headlamp",
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Try Glamping First",
-      calloutBody: "State park cabins ($50-100/night with real beds), canvas tents with cots, or RV rental via Turo/Outdoorsy. Start comfortable, go rugged when ready."
-    },
-    {
-      type: "tips",
-      title: "First Timer Tips",
-      tips: [
-        { title: "Start Close to Home", body: "1-2 hours away in case you forget something." },
-        { title: "Choose Developed Campgrounds", body: "Bathrooms, water, and rangers nearby reduces stress." },
-        { title: "Check the Weather", body: "No one wants a storm as their first experience." },
-        { title: "Bring Friends", body: "Memories are better shared." },
-      ]
-    },
-  ],
 
-  "how-to-pack-light-camping": [
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "The Golden Rule",
-      calloutBody: "If you haven't used it on your last 3 trips, you won't use it on this one. Leave it at home."
-    },
-    {
-      type: "checklist",
-      title: "Weekend Packing List (30 lbs max)",
-      checkItems: [
-        "2 t-shirts, 1 long sleeve",
-        "2 shorts/pants, 3 underwear, 3 socks",
-        "1 jacket (always pack this)",
-        "Sandals or camp shoes",
-        "Sleeping bag + pad",
-        "Pillow (or stuff a fleece)",
-        "Stove + fuel + lighter",
-        "Cookware + food + water",
-        "Headlamp + first aid kit",
-        "Sunscreen + bug spray",
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "What's Actually Optional",
-      calloutBody: "Camp chairs (sit on logs), tables (use a flat rock), extra shoes (one pair is fine), books (phone works). Less gear = more adventure."
-    },
-  ],
 
-  "how-to-find-free-campsites": [
-    {
-      type: "product-grid",
-      title: "Best Free Camping Resources",
-      items: [
-        { label: "iOverlander App", category: "App", icon: "📱", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "Campendium", category: "Website", icon: "🌐", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "USDA Forest Service Map", category: "Official", icon: "🏕️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "product-grid",
-      title: "Favorite Free Camping Regions",
-      items: [
-        { label: "Colorado National Forests", category: "Mountain", icon: "🏔️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "Utah BLM Lands", category: "Desert", icon: "🏜️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "California National Forests", category: "Forest", icon: "🌲", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "New Mexico BLM", category: "Desert", icon: "🌵", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "warning",
-      calloutTitle: "Dispersed Camping Rules",
-      calloutBody: "Generally free on BLM and National Forest lands. No services (no bathroom, trash, or fire rings). 14-day limit in most locations. Leave no trace is non-negotiable."
-    },
-  ],
 
-  "best-time-year-camp-free": [
-    {
-      type: "product-grid",
-      title: "Seasonal Camping Guide",
-      items: [
-        { label: "🌸 Spring (Mar-May)", category: "Best: Southwest", icon: "🌸", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "☀️ Summer (Jun-Aug)", category: "Best: North", icon: "☀️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🍂 Fall (Sep-Nov)", category: "Best: Everywhere", icon: "🍂", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "❄️ Winter (Dec-Feb)", category: "Best: Deserts", icon: "❄️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "Off-Season Advantage",
-      calloutBody: "Campgrounds empty, weather cools, foliage explodes, and bugs disappear. January Utah BLM, February Arizona desert, November Colorado National Forests — these are the hidden gems."
-    },
-  ],
 
-  "budget-camping-hacks-that-work": [
-    {
-      type: "product-grid",
-      title: "Field-Tested Hacks",
-      items: [
-        { label: "🧊 Freeze Your Food", category: "Cooking", icon: "🧊", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🧊 Pre-Measure Spices", category: "Cooking", icon: "🧂", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "💧 Warmed Water Bottle", category: "Sleep", icon: "🛏️", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🪵 Double Sleeping Pad", category: "Sleep", icon: "💤", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🔥 Char Cloth Hack", category: "Fire", icon: "🔥", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-        { label: "🧴 Denture Tablets", category: "Water", icon: "💧", link: "https://www.amazon.com/shop/camprally?tag=camprally-20" },
-      ]
-    },
-    {
-      type: "callout",
-      calloutType: "tip",
-      calloutTitle: "The Newspaper Seating Test",
-      calloutBody: "Spread newspaper under your tent. If it gets damp overnight, that's where water pools. Now you know to set up elsewhere. Free site assessment tool."
-    },
-  ],
+
+
+
+
+
+
+
+
+
+
+
 
 
   "best-camping-first-aid-kits-under-50": [
