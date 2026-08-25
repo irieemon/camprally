@@ -31,6 +31,7 @@ import { generateImage, heroPrompt } from "./lib/minimax-image.mjs";
 import { callRole, lastError, lastErrorTransient, minimaxKey, roleCandidates } from "./lib/llm.mjs";
 import { canonicalCategory, knownCategories } from "./lib/taxonomy.mjs";
 import { excerptIsDegenerate, MIN_EXCERPT_CHARS } from "./lib/meta.mjs";
+import { productLabel } from "./lib/product-label.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 
@@ -582,7 +583,7 @@ const spec = {
   ...(heroPath ? { hero: `/images/heroes/${slug}.jpg` } : {}),
   products: products.map((p) => ({
     asin: p.asin,
-    label: p.title.split(",")[0].slice(0, 34),
+    label: productLabel(p.title),
     detail: "", note: "", category: "", icon: "🏕️",
   })),
   body,
