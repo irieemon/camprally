@@ -6430,5 +6430,84 @@
         "ratingsTotal": 59
       }
     ]
+  },
+  "camping cot tent|1|": {
+    "term": "camping cot tent",
+    "min": 1,
+    "fetchedAt": "2026-08-25T13:03:14.422Z",
+    "results": [
+      {
+        "asin": "B014LSDUA8",
+        "title": "Coleman Tents Coleman Sundome Tent",
+        "price": "$74.95",
+        "priceValue": 74.95,
+        "rating": 4.6,
+        "ratingsTotal": 7699
+      },
+      {
+        "asin": "B003696236",
+        "title": "Coleman Trailhead II Large Folding Cot with Easy Setup & Takedown, Supports Adults up to 6ft 2in or 300lbs, Great for Camping, Lounging, Elevated Sleeping, Guests, & More",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.4,
+        "ratingsTotal": 24926
+      },
+      {
+        "asin": "B07N8LKWN4",
+        "title": "Outsunny 2 Person Cot Tent 4-in-1 Elevated Bed Combo with Air Mattress | Bed Cover, Foot Pump, Folding Off-Ground Camp Cot, Hiking, Backpacking",
+        "price": "$167.99",
+        "priceValue": 167.99,
+        "rating": 4.3,
+        "ratingsTotal": 816
+      },
+      {
+        "asin": "B0FY2W4RWX",
+        "title": "JEAREY Folding Camping Cot for Adults, 28in Wide with Mattress, Navy | Heavy-duty 1200D Oxford Cot with Removable Mattress and Carry Bag, Portable Design for Camping, Travel, Guests and Hiking",
+        "price": "$52.19",
+        "priceValue": 52.19,
+        "rating": 4.3,
+        "ratingsTotal": 434
+      },
+      {
+        "asin": "B0CRYNPH7T",
+        "title": "Night Cat Camping Cot Tent - Waterproof 1-Person Off-Ground Combo Cot Bed for Adults Portable Easy Set-up Tent Green 27.5'' Width",
+        "price": "$159.98",
+        "priceValue": 159.98,
+        "rating": 4.3,
+        "ratingsTotal": 297
+      },
+      {
+        "asin": "B00EVBVB70",
+        "title": "Outsunny Camping Tent Cot 6-in-1 Single Person Folding Tent Cot Combo | Mattress, Pillow, Sleeping Bag, Bed Cover, Carry Bag, Portable, Easy Set-Up, Off-Ground, Travel Hiking Backpack Picnic Camp",
+        "price": "$118.74",
+        "priceValue": 118.74,
+        "rating": 4.2,
+        "ratingsTotal": 1207
+      },
+      {
+        "asin": "B0CTQDTZ1L",
+        "title": "Goplus Camping Tent Cot, 5-in-1 Folding Camping Bed with Air Mattress, Pillow, Sleeping Bag, Waterproof Elevated Tent Shelter, Portable Outdoor Sleeping Cot with Carry Bag for Picnic, Trip",
+        "price": "$149.99",
+        "priceValue": 149.99,
+        "rating": 4.2,
+        "ratingsTotal": 63
+      },
+      {
+        "asin": "B0D7QK1N81",
+        "title": "Coleman 4/6/8/10 Person Instant Camping Tent with 1-Minute Setup, Large Family Tent with Pre-Attached Poles, Air Vent, & Carry Bag, Sets Up in About 60 Seconds",
+        "price": "$169.00",
+        "priceValue": 169,
+        "rating": 4.1,
+        "ratingsTotal": 624
+      },
+      {
+        "asin": "B0CT8XQ8NF",
+        "title": "GYMAX Tent Cot, 5-in-1 Folding Camping Cot with Mattress & Pillows, Sleeping Bags, Sunshade, Camping Tent Elevated with Carrying Bag for Outdoor Hiking, Fishing, Picnic (2-Person)",
+        "price": "$249.99",
+        "priceValue": 249.99,
+        "rating": 4,
+        "ratingsTotal": 530
+      }
+    ]
   }
 }
