@@ -125,7 +125,7 @@ function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: st
             key={i}
             href={product?.url ?? item.link ?? "https://www.amazon.com/shop/camprally?tag=camprally-20"}
             target="_blank"
-            rel="nofollow noopener"
+            rel="nofollow noopener sponsored"
             className="group flex items-stretch gap-4 border border-camp-stone bg-card p-4 transition-colors hover:border-camp-green"
           >
             <ProductThumb
@@ -244,7 +244,7 @@ function SpotlightSection({ item }: { item: { name: string; asin?: string; why: 
             <a
               href={product?.url ?? "https://www.amazon.com/shop/camprally?tag=camprally-20"}
               target="_blank"
-              rel="nofollow noopener"
+              rel="nofollow noopener sponsored"
               className="inline-flex h-12 items-center gap-2 bg-camp-ember px-7 font-semibold text-white transition-colors hover:bg-camp-ember-deep"
             >
               View on Amazon
@@ -809,8 +809,9 @@ export default async function ArticlePage({ params }: Props) {
           <div className="mt-14 border border-camp-stone bg-camp-bone p-8">
             <h3 className="text-h3 text-foreground">Shop the gear we recommend</h3>
             <p className="mt-2 max-w-prose text-meta leading-relaxed text-muted-foreground">
-              We test every piece of gear we recommend. As an Amazon Associate,
-              we earn from qualifying purchases — at no extra cost to you.
+              Researched, safety-reviewed, and priced live. As an Amazon
+              Associate, we earn from qualifying purchases — at no extra cost to
+              you.
             </p>
             {ctaProducts.length ? (
               <ul className="mt-5 flex flex-col gap-2">

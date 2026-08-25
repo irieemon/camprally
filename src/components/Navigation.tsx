@@ -33,7 +33,7 @@ export default function Navigation() {
           844px viewport. It scrolls away; the nav stays. */}
       <div className="bg-camp-green-deep px-4 py-2 text-center">
         <p className="truncate text-eyebrow uppercase text-white/85">
-          Field-tested gear
+          Safety-reviewed gear
           <span className="hidden sm:inline"> &middot; Prices checked daily</span>
         </p>
       </div>

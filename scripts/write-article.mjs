@@ -29,6 +29,8 @@ import { loadCache, saveCache, classify, get } from "./lib/asin-cache.mjs";
 import { discover, priceCeiling } from "./lib/discover.mjs";
 import { generateImage, heroPrompt } from "./lib/minimax-image.mjs";
 import { callRole, lastError, lastErrorTransient, minimaxKey, roleCandidates } from "./lib/llm.mjs";
+import { canonicalCategory, knownCategories } from "./lib/taxonomy.mjs";
+import { excerptIsDegenerate, MIN_EXCERPT_CHARS } from "./lib/meta.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 
@@ -93,6 +95,45 @@ async function deriveProductTerm(title) {
   // Guard against the model returning a sentence instead of a search phrase.
   const words = r.value.replace(/["'.]/g, "").split(/\s+/).filter(Boolean);
   return words.length && words.length <= 6 ? words.join(" ").toLowerCase() : null;
+}
+
+/**
+ * Write the meta description.
+ *
+ * This is the &lt;meta name="description"&gt; and the og:description for the article,
+ * so it is the sentence a searcher reads before deciding whether to click. It
+ * used to be `${brief.title}.` — the title, with a period — because that was
+ * the fallback here and NO brief has ever carried an `excerpt` field. It is not
+ * in the brief schema at all. So the fallback was not a fallback, it was the
+ * behaviour: 27 of the 30 articles this pipeline has written have a description
+ * that restates their own title, wasting the snippet on every one of them.
+ *
+ * Never blocking on its own failure — a missing description is recoverable and
+ * a blocked queue is not. The caller gates on the RESULT instead, which is the
+ * check that actually holds: an excerpt that comes back degenerate is refused
+ * whether the model failed, refused, or simply parroted the title.
+ */
+async function deriveExcerpt(title, keywords, body) {
+  const r = await callRole("cheap", {
+    system:
+      "You write meta descriptions for search results. Reply with ONE sentence " +
+      "of 140-160 characters. No quotes, no markdown, no label. It must NOT " +
+      "restate the article's title — it must tell the reader what they will " +
+      "learn or be able to decide after reading.",
+    user: [
+      `Article title: "${title}"`,
+      keywords?.length ? `Target search terms: ${keywords.join(", ")}` : "",
+      "",
+      "Opening of the article:",
+      body.slice(0, 1200),
+    ].filter(Boolean).join("\n"),
+    maxTokens: 8000,
+    parse: "text",
+    rounds: 2,
+  });
+  if (!r) return null;
+  const line = r.value.trim().replace(/^["'\s]+|["'\s]+$/g, "").split(/\n/)[0].trim();
+  return line || null;
 }
 
 /**
@@ -175,6 +216,29 @@ if (!brief) {
 }
 if (!brief) {
   console.error(`slug "${slug}" is neither queued nor published`);
+  process.exit(EXIT.FAIL);
+}
+
+/* Fail loudly on a category no browse group claims — and fail HERE, before the
+ * writer call and the hero image, because both cost money and neither is
+ * recoverable once spent.
+ *
+ * An unmapped category errors nowhere downstream. It renders fine; the article
+ * simply appears under no filter and on no category hub, reachable only from
+ * the flat index. Eight of the first fifty went out that way, all of them
+ * near-synonyms of a real member (Cooking/Cookware, Shelter/Tents,
+ * Apparel/Clothing), because this script took `brief.category` exactly as typed
+ * and defaulted to "Gear" when it was missing. Caught here the fix is one word
+ * in article-queue.json; caught later it is a published URL with no home. */
+const category = canonicalCategory(brief.category ?? "Gear");
+if (!category) {
+  console.error(
+    `brief category ${JSON.stringify(brief.category ?? null)} is not a member of ` +
+    `any browse group in src/data/categories.ts.\n` +
+    `  known: ${[...knownCategories()].sort().join(", ")}\n` +
+    `  fix the brief in article-queue.json, or add the category to a group's ` +
+    `members if it is genuinely new.`,
+  );
   process.exit(EXIT.FAIL);
 }
 
@@ -476,6 +540,33 @@ console.log(heroPath
   ? `hero image → public/images/heroes/${slug}.jpg`
   : "no hero image — page will use the site default");
 
+// ── meta description ──────────────────────────────────────────────────────
+let excerpt = brief.excerpt?.trim() || null;
+if (!excerpt) {
+  excerpt = await deriveExcerpt(brief.title, brief.keywords, body);
+  console.log(excerpt ? `meta description → "${excerpt}"` : "meta description: model gave nothing");
+}
+/* The gate that makes the title-as-description regression unrepeatable. It is
+ * deliberately on the VALUE, not on whether the model answered: a parroted
+ * title and a failed call are the same defect from the reader's side, and only
+ * checking the value catches both. */
+if (excerptIsDegenerate(excerpt, brief.title)) {
+  console.error(
+    `meta description is the title restated (${JSON.stringify(excerpt)}) — ` +
+    `this wastes the search snippet.\n` +
+    `  add an "excerpt" to this brief in article-queue.json, or re-run to let ` +
+    `the model try again.`,
+  );
+  process.exit(EXIT.FAIL);
+}
+if (excerpt.length < MIN_EXCERPT_CHARS) {
+  console.error(
+    `meta description is only ${excerpt.length} chars (${JSON.stringify(excerpt)}) — ` +
+    `Google renders roughly 155, so this leaves most of the snippet unused.`,
+  );
+  process.exit(EXIT.FAIL);
+}
+
 // ── emit spec ─────────────────────────────────────────────────────────────
 const spec = {
   // Next sequential art-NNN, so ids stay stable and sortable rather than
@@ -483,8 +574,8 @@ const spec = {
   id: process.env.ARTICLE_ID ?? nextArticleId(slug),
   slug,
   title: brief.title,
-  excerpt: brief.excerpt ?? `${brief.title}.`,
-  category: brief.category ?? "Gear",
+  excerpt,
+  category,
   date: (process.env.RUN_DATE ?? new Date().toISOString()).slice(0, 10),
   readTime: `${Math.max(4, Math.round(words / 200))} min read`,
   gridTitle: `${brief.title} — Quick Comparison`,

@@ -34,9 +34,12 @@ export default function AboutPage() {
           That&apos;s where we come in.
         </p>
         <p className="leading-7 text-foreground/85">
-          We test budget camping gear in real conditions — not in a lab, not in a
-          studio — on actual trails and campsites. Then we write honest reviews
-          so you can make informed decisions without the marketing fluff.
+          We are a research desk, not a test lab, and we would rather say so than
+          imply otherwise. Every guide is built by reading widely across
+          manufacturer specs, long-run owner reports and the recurring complaints
+          that only show up once a product has been in the field for a season —
+          then checked against the safety rules and the editorial review
+          described below before it publishes.
         </p>
       </section>
 
@@ -47,8 +50,8 @@ export default function AboutPage() {
           {[
             {
               icon: Mountain,
-              title: "Real Experience",
-              desc: "Our recommendations come from years of camping across national forests, state parks, and backcountry sites. We use the gear we review.",
+              title: "Safety Rules That Block Publication",
+              desc: "Every draft is scanned for the advice that actually hurts people — burning fuel inside a tent, running a heater while asleep, cotton as cold-weather insulation, untreated water, food stored in the tent. A hit stops the article. It does not get softened; it gets rewritten.",
             },
             {
               icon: DollarSign,
@@ -57,8 +60,8 @@ export default function AboutPage() {
             },
             {
               icon: Shield,
-              title: "Honest Reviews",
-              desc: "We disclose all affiliate relationships. When a product has flaws, we list them. Our reputation matters more than any commission.",
+              title: "Reviewed, and Priced Honestly",
+              desc: "Drafts go to an independent panel of several AI reviewers from different model families; a flaw two of them agree on blocks the guide. Prices are re-checked daily and shown only while current — if we cannot verify a figure, we show no figure rather than a stale one. We disclose every affiliate relationship.",
             },
             {
               icon: Heart,

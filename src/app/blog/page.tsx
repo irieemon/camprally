@@ -73,7 +73,7 @@ function BlogIndex() {
             {activeName ? activeName : "Budget camping guides"}
           </h1>
           <p className="mt-4 max-w-xl text-[1.0625rem] leading-relaxed text-muted-foreground">
-            Honest reviews and field-tested picks to get you outdoors for less.
+            Honest, safety-reviewed gear guides to get you outdoors for less.
           </p>
         </div>
       </div>
