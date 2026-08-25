@@ -32,7 +32,13 @@ function Art({ p, className = "" }: { p: Printable; className?: string }) {
     <div className={`relative overflow-hidden bg-camp-bone ${className}`}>
       <Image
         src={p.image}
-        alt=""
+        /* The product name, which is the right alt for a PRODUCT image even
+           though it would be wrong for an article hero. The distinction is
+           whether the text is redundant: a hero sits directly under the H1 it
+           would restate, whereas this tile is the only visual identifying the
+           thing being sold, and a shopper skimming with a screen reader needs
+           to know which printable it is. */
+        alt={p.title}
         fill
         sizes="(max-width: 640px) 100vw, 340px"
         /* The source is a 3:4 watercolour with the illustration weighted to the

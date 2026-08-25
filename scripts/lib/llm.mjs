@@ -178,7 +178,16 @@ export function lineageOf({ provider, model }) {
  * casting. Meta weights fill that seat instead; see MODELS.museGlimmer.
  */
 const ROLES = {
-  writer: [["minimax", MODELS.minimaxWriter], ["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini]],
+  /* M3, then GEMINI, then M2.7 last.
+   *
+   * The failover used to go M3 -> M2.7, so a MiniMax capacity dip quietly
+   * downgraded the article to the previous generation with nothing in the
+   * receipt to say so. Falling through to a current model from another vendor
+   * is both better output and a more honest failure: it also breaks the
+   * single-vendor dependency, since an M3 outage is usually an M2.7 outage too
+   * — same provider, same door. M2.7 stays as a last resort rather than being
+   * removed, because a deferred cycle is still worse than an older draft. */
+  writer: [["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["minimax", MODELS.minimaxAlt]],
   /* Order is the seating plan, and the two consumers read it DIFFERENTLY —
    * worth knowing before reordering anything:
    *   panel()    takes the first `size` entries, calls them once, and drops
@@ -218,8 +227,23 @@ const ROLES = {
     ["google", MODELS.gemini],
     ["minimax", MODELS.minimaxAlt],
   ],
+  /* Gemini leads on measurement, not preference. Asked to describe the hero on
+   * the camping-cots guide, Gemini and an independent vision tool both returned
+   * "camping cot and small side table"; M3 returned "a hammock and small
+   * table". Both models genuinely SEE the image — M3's request reports 1,256
+   * input tokens — but alt text that misnames the product is worse than none,
+   * so the more accurate reader goes first and M3 is the fallback.
+   *
+   * M2.7 is deliberately absent: it accepts an image request, returns 200, and
+   * silently drops the image (input_tokens 64, "I can't see the image"). A
+   * vision seat that cannot see would produce confident invented descriptions. */
   vision: [["google", MODELS.gemini], ["minimax", MODELS.minimaxWriter]],
-  cheap: [["minimax", MODELS.minimaxAlt], ["google", MODELS.gemini], ["ollama", MODELS.ollama]],
+  /* M3, not M2.7. This role writes the meta description on every article and
+   * picks the Amazon search term, so it is not a throwaway despite the name —
+   * "cheap" describes the SIZE of the job, not a licence to use the older
+   * model. M2.7 stays only as the second MiniMax seat on the reviewer panel,
+   * where a distinct sample is the point. */
+  cheap: [["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["ollama", MODELS.ollama]],
 };
 
 function fromAuthProfiles(profile) {
@@ -269,11 +293,21 @@ const ADAPTERS = {
   "anthropic-messages": {
     url: (base) => `${base}/v1/messages`,
     headers: (key) => ({ "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" }),
-    body: ({ model, system, user, maxTokens }) => ({
+    body: ({ model, system, user, maxTokens, image }) => ({
       model,
       max_tokens: maxTokens,
       system,
-      messages: [{ role: "user", content: user }],
+      messages: [
+        {
+          role: "user",
+          content: image
+            ? [
+                { type: "image", source: { type: "base64", media_type: image.mediaType, data: image.data } },
+                { type: "text", text: user },
+              ]
+            : user,
+        },
+      ],
     }),
     text: (d) => (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join(""),
     // Reasoning is billed against max_tokens on this endpoint, so an overrun
@@ -285,9 +319,16 @@ const ADAPTERS = {
     // Gemini takes the key in the query string, not a header.
     url: (base, model, key) => `${base}/models/${model}:generateContent?key=${encodeURIComponent(key)}`,
     headers: () => ({ "content-type": "application/json" }),
-    body: ({ system, user, maxTokens }) => ({
+    body: ({ system, user, maxTokens, image }) => ({
       systemInstruction: { parts: [{ text: system }] },
-      contents: [{ role: "user", parts: [{ text: user }] }],
+      contents: [
+        {
+          role: "user",
+          parts: image
+            ? [{ inline_data: { mime_type: image.mediaType, data: image.data } }, { text: user }]
+            : [{ text: user }],
+        },
+      ],
       generationConfig: { maxOutputTokens: maxTokens, temperature: 1 },
     }),
     /* Skip reasoning parts. Gemini 3.x thinks by default — a trivial probe spent
@@ -349,7 +390,7 @@ function extractJSON(text) {
  * Returns {value} on success, or {error, transient} — the caller decides
  * whether to move on to the next candidate or give up on this one for good.
  */
-async function callOne({ provider, model, system, user, maxTokens, parse = "json" }) {
+async function callOne({ provider, model, system, user, maxTokens, parse = "json", image }) {
   const p = PROVIDERS[provider];
   const a = ADAPTERS[p.api];
   const key = p.key();
@@ -359,7 +400,7 @@ async function callOne({ provider, model, system, user, maxTokens, parse = "json
     const res = await fetch(a.url(p.baseUrl(), model, key), {
       method: "POST",
       headers: a.headers(key),
-      body: JSON.stringify(a.body({ model, system, user, maxTokens })),
+      body: JSON.stringify(a.body({ model, system, user, maxTokens, image })),
     });
     if (!res.ok) {
       return {
@@ -398,7 +439,7 @@ async function callOne({ provider, model, system, user, maxTokens, parse = "json
  *
  * Returns {value, provider, model} or null.
  */
-export async function callRole(role, { system, user, maxTokens = 8000, rounds = 3, parse = "json", onAttempt } = {}) {
+export async function callRole(role, { system, user, maxTokens = 8000, rounds = 3, parse = "json", onAttempt, image } = {}) {
   const candidates = ROLES[role];
   if (!candidates) return note(`unknown role "${role}"`, false);
 
@@ -415,7 +456,7 @@ export async function callRole(role, { system, user, maxTokens = 8000, rounds = 
     for (const [provider, model] of candidates) {
       const id = `${provider}/${model}`;
       if (dead.has(id)) continue;
-      const r = await callOne({ provider, model, system, user, maxTokens, parse });
+      const r = await callOne({ provider, model, system, user, maxTokens, parse, image });
       if (r.value !== undefined) {
         if (process.env.MINIMAX_DEBUG) console.error(`[llm] ${role} answered by ${id}`);
         return { value: r.value, provider, model };
@@ -452,7 +493,7 @@ export async function callRole(role, { system, user, maxTokens = 8000, rounds = 
  *
  * Returns { results: [{value, provider, model}], independent, members }.
  */
-export async function panel(role, { system, user, maxTokens = 8000, parse = "json" } = {}, { size = 3 } = {}) {
+export async function panel(role, { system, user, maxTokens = 8000, parse = "json", image } = {}, { size = 3 } = {}) {
   const available = roleCandidates(role);
   if (!available.length) return { results: [], independent: false, members: [] };
 
@@ -461,7 +502,7 @@ export async function panel(role, { system, user, maxTokens = 8000, parse = "jso
   const members = Array.from({ length: size }, (_, i) => available[i % available.length]);
 
   const settled = await Promise.all(members.map(async ({ provider, model }) => {
-    const r = await callOne({ provider, model, system, user, maxTokens, parse });
+    const r = await callOne({ provider, model, system, user, maxTokens, parse, image });
     if (r.value === undefined) {
       note(r.error);
       return null;

@@ -16,10 +16,10 @@ import {
  * one-article dead ends. See src/data/categories.ts. */
 const navLinks = [
   { href: "/blog", label: "All Guides" },
-  { href: "/blog?category=shelter", label: "Shelter" },
-  { href: "/blog?category=sleep", label: "Sleep" },
-  { href: "/blog?category=cooking", label: "Cooking" },
-  { href: "/blog?category=planning", label: "Tips" },
+  { href: "/blog/category/shelter", label: "Shelter" },
+  { href: "/blog/category/sleep", label: "Sleep" },
+  { href: "/blog/category/cooking", label: "Cooking" },
+  { href: "/blog/category/planning", label: "Tips" },
   { href: "/about", label: "About" },
 ]
 
@@ -33,7 +33,7 @@ export default function Navigation() {
           844px viewport. It scrolls away; the nav stays. */}
       <div className="bg-camp-green-deep px-4 py-2 text-center">
         <p className="truncate text-eyebrow uppercase text-white/85">
-          Field-tested gear
+          Safety-reviewed gear
           <span className="hidden sm:inline"> &middot; Prices checked daily</span>
         </p>
       </div>

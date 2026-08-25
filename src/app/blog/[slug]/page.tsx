@@ -3,11 +3,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { remark } from "remark";
 import html from "remark-html";
-import { articles } from "@/data/articles";
+import { articles, lastChanged } from "@/data/articles";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintableSidebarCard } from "@/components/Printables";
 import { MerchSidebarCard, merchDesigns, stableIndex } from "@/components/Merch";
 import { SITE_URL } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { articleProductListNode, breadcrumbNode } from "@/lib/structured-data";
 /* Badge and the Card family used to build the hero label and the sidebar
  * panels. Both are now plain markup — an eyebrow and border-topped blocks —
  * so the shadcn wrappers are no longer imported here. */
@@ -15,7 +17,7 @@ import {
   ArrowLeft, ExternalLink, Star, ChevronRight, Mountain
 } from "lucide-react";
 import Image from "next/image";
-import { getHeroImage } from "@/data/heroes";
+import { getHeroImage, getHeroAlt } from "@/data/heroes";
 import { getCustomSections } from "@/data/article-sections";
 import {
   productFor,
@@ -125,7 +127,7 @@ function ProductGrid({ title, subtitle, items }: { title?: string; subtitle?: st
             key={i}
             href={product?.url ?? item.link ?? "https://www.amazon.com/shop/camprally?tag=camprally-20"}
             target="_blank"
-            rel="nofollow noopener"
+            rel="nofollow noopener sponsored"
             className="group flex items-stretch gap-4 border border-camp-stone bg-card p-4 transition-colors hover:border-camp-green"
           >
             <ProductThumb
@@ -244,7 +246,7 @@ function SpotlightSection({ item }: { item: { name: string; asin?: string; why: 
             <a
               href={product?.url ?? "https://www.amazon.com/shop/camprally?tag=camprally-20"}
               target="_blank"
-              rel="nofollow noopener"
+              rel="nofollow noopener sponsored"
               className="inline-flex h-12 items-center gap-2 bg-camp-ember px-7 font-semibold text-white transition-colors hover:bg-camp-ember-deep"
             >
               View on Amazon
@@ -367,7 +369,9 @@ function TableSection({ title, rows }: { title?: string; rows?: string[][] }) {
 // ─────────────────────────────────────────
 // MARKDOWN PROCESSOR
 // ─────────────────────────────────────────
-async function processMarkdown(content: string): Promise<string> {
+async function processMarkdown(
+  content: string,
+): Promise<{ html: string; toc: { text: string; id: string }[] }> {
   const trimmed = content.trim();
   const processed = await remark()
     .use(html)
@@ -558,28 +562,45 @@ async function processMarkdown(content: string): Promise<string> {
     return buyButton(href, "Check price on Amazon");
   });
 
-  // Add anchor IDs to h2 headings
-  const headingMatches = htmlContent.matchAll(/<h2([^>]*)>(.*?)<\/h2>/g) || [];
+  /* Anchor every h2, and hand the caller the table of contents.
+   *
+   * This read `match[1]` — the ATTRIBUTES group — where it meant `match[2]`,
+   * the content, and the two comments on those lines contradicted each other
+   * about which was which. remark-html emits a bare `<h2>`, so group 1 was
+   * always the empty string, every id slugified to "", and all 50 articles
+   * shipped `<h2 id="">` with zero working anchors sitewide. The `toc` array
+   * was built correctly-shaped and then dropped on the floor: nothing read it,
+   * because processMarkdown only ever returned the HTML.
+   *
+   * That costs more than a broken hash link. Anchored headings are what let
+   * Google link straight to a section from a result, and what lets an answer
+   * engine cite one passage instead of the whole page.
+   *
+   * One pass with a replace callback, not a match-then-replace loop: the old
+   * shape called `htmlContent.replace(fullMatch, …)`, which rewrites the FIRST
+   * occurrence, so two headings with identical text both took the first one's
+   * id. `seen` keeps ids unique for the same reason — duplicate ids are invalid
+   * HTML and the browser jumps to whichever came first. */
   const toc: { text: string; id: string }[] = [];
-  for (const match of headingMatches) {
-    const fullMatch = match[0];
-    const text = match[1]; // This is actually the inner content in remark-html output
-    // The format from remark-html is <h2>text</h2>, group 1 is empty, group 2 is content
-    const id = text
-      .toLowerCase()
-      .replace(/<[^>]+>/g, "")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "");
-    toc.push({ text: text.replace(/<[^>]+>/g, ""), id });
-    if (!fullMatch.includes(`id="${id}"`)) {
-      htmlContent = htmlContent.replace(
-        fullMatch,
-        fullMatch.replace("<h2", `<h2 id="${id}"`)
-      );
-    }
-  }
+  const seen = new Map<string, number>();
+  htmlContent = htmlContent.replace(
+    /<h2([^>]*)>([\s\S]*?)<\/h2>/g,
+    (full, attrs: string, inner: string) => {
+      const text = inner.replace(/<[^>]+>/g, "").trim();
+      const base =
+        text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") ||
+        "section";
+      const n = seen.get(base) ?? 0;
+      seen.set(base, n + 1);
+      const id = n ? `${base}-${n + 1}` : base;
+      toc.push({ text, id });
+      // Respect an id the markdown author already set rather than adding a second.
+      if (/\sid=/.test(attrs)) return full;
+      return `<h2${attrs} id="${id}">${inner}</h2>`;
+    },
+  );
 
-  return htmlContent;
+  return { html: htmlContent, toc };
 }
 
 // ─────────────────────────────────────────
@@ -596,7 +617,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/blog/${article.slug}`;
   const hero = getHeroImage(article.slug);
   return {
-    title: `${article.title} | CampRally`,
+    // Brand suffix comes from the root layout's title template.
+    title: article.title,
     description: article.excerpt,
     /* Relative, resolved against metadataBase. It was absolute and pointed at
      * the bare apex, which 307s to www — every article was telling Google its
@@ -637,7 +659,7 @@ export default async function ArticlePage({ params }: Props) {
     .filter((a) => a.slug !== slug && a.category === article.category)
     .slice(0, 3);
 
-  const contentHtml = await processMarkdown(article.content);
+  const { html: contentHtml, toc } = await processMarkdown(article.content);
   const customSections = getCustomSections(slug);
   const heroImage = getHeroImage(slug);
 
@@ -698,45 +720,51 @@ export default async function ArticlePage({ params }: Props) {
    *
    * dateModified is the article's own date, not build time: stamping "modified
    * today" on every rebuild would claim freshness the content does not have. */
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        "@id": `${SITE_URL}/blog/${article.slug}#article`,
-        headline: article.title,
-        description: article.excerpt,
-        image: heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`,
-        datePublished: article.date,
-        dateModified: article.date,
-        articleSection: article.category,
-        author: { "@type": "Organization", name: article.author, url: SITE_URL },
-        publisher: { "@type": "Organization", name: "CampRally", url: SITE_URL },
-        mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${article.slug}` },
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "All Guides", item: `${SITE_URL}/blog` },
-          { "@type": "ListItem", position: 3, name: article.title },
-        ],
-      },
-    ],
+  const productList = articleProductListNode(
+    article.slug,
+    customSections.find((s) => s.type === "product-grid")?.title,
+  );
+
+  const articleNode = {
+    "@type": "Article",
+    "@id": `${SITE_URL}/blog/${article.slug}#article`,
+    headline: article.title,
+    description: article.excerpt,
+    image: heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`,
+    datePublished: article.date,
+    /* The later of publication and last rewrite. It was `article.date` for
+     * both, which was only ever right because nothing had been rewritten yet. */
+    dateModified: lastChanged(article),
+    articleSection: article.category,
+    /* author and publisher stay INLINE objects. Replacing them with
+     * `{ "@id": ORG_ID }` is the obvious tidy and silently breaks the markup:
+     * the Organization node is only emitted on the homepage, and Google does
+     * not resolve an @id reference across documents. */
+    author: { "@type": "Organization", name: article.author, url: SITE_URL },
+    publisher: { "@type": "Organization", name: "CampRally", url: SITE_URL },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${article.slug}` },
+    ...(productList ? { mainEntity: { "@id": `${SITE_URL}/blog/${article.slug}#products` } } : {}),
   };
 
   return (
     <div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <JsonLd
+        nodes={[
+          articleNode,
+          breadcrumbNode([
+            { name: "Home", path: "/" },
+            { name: "All Guides", path: "/blog" },
+            { name: article.title },
+          ]),
+          productList,
+        ]}
       />
       {/* Hero. Full-bleed rather than an inset rounded panel — the edge-to-edge
           photograph is most of what separates a store from a blog. */}
       <div className="relative isolate flex min-h-[clamp(22rem,48vh,32rem)] items-end overflow-hidden">
         <Image
           src={heroImage}
-          alt=""
+          alt={getHeroAlt(slug)}
           fill
           priority
           sizes="100vw"
@@ -796,6 +824,44 @@ export default async function ArticlePage({ params }: Props) {
             }
           })}
 
+          {/* Table of contents.
+              Three or more sections before it earns its space — on a two-heading
+              article it is longer than the thing it indexes. Rendered as real
+              anchors in the static HTML, which is what makes the section links
+              available to a crawler and not only to a reader. */}
+          {toc.length >= 3 ? (
+            <nav
+              aria-labelledby="toc-heading"
+              className="mb-10 max-w-[68ch] border border-camp-stone bg-camp-bone p-5"
+            >
+              {/* A <p>, not a heading: this labels a navigation landmark and
+                  is not a section of the article. As an <h2> it would sit in
+                  the document outline alongside the real sections, which is
+                  exactly the outline a passage-ranking crawler reads. */}
+              <p
+                id="toc-heading"
+                className="text-eyebrow uppercase tracking-wide text-muted-foreground"
+              >
+                In this guide
+              </p>
+              <ol className="mt-3 flex flex-col gap-2">
+                {toc.map((h, i) => (
+                  <li key={h.id} className="text-[1.0625rem] leading-snug">
+                    <span className="mr-2 tabular-nums text-muted-foreground">
+                      {i + 1}.
+                    </span>
+                    <a
+                      href={`#${h.id}`}
+                      className="font-medium text-camp-green hover:underline"
+                    >
+                      {h.text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          ) : null}
+
           {/* Rendered article body */}
           <div
             /* 17px body on a ~68ch measure. REI puts the comfortable range at
@@ -809,8 +875,9 @@ export default async function ArticlePage({ params }: Props) {
           <div className="mt-14 border border-camp-stone bg-camp-bone p-8">
             <h3 className="text-h3 text-foreground">Shop the gear we recommend</h3>
             <p className="mt-2 max-w-prose text-meta leading-relaxed text-muted-foreground">
-              We test every piece of gear we recommend. As an Amazon Associate,
-              we earn from qualifying purchases — at no extra cost to you.
+              Researched, safety-reviewed, and priced live. As an Amazon
+              Associate, we earn from qualifying purchases — at no extra cost to
+              you.
             </p>
             {ctaProducts.length ? (
               <ul className="mt-5 flex flex-col gap-2">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | CampRally",
+  title: "Privacy Policy",
   description: "Privacy policy for CampRally.co",
   alternates: { canonical: "/privacy" },
 };

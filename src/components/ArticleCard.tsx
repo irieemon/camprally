@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Article } from "@/data/articles";
-import { getHeroImage } from "@/data/heroes";
+import { getHeroImage, getHeroAlt } from "@/data/heroes";
 import { priceFromFor, pickCountFor } from "@/lib/article-pricing";
 
 /**
@@ -37,7 +37,7 @@ export default function ArticleCard({
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-camp-bone-deep">
         <Image
           src={getHeroImage(article.slug)}
-          alt=""
+          alt={getHeroAlt(article.slug)}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority={priority}

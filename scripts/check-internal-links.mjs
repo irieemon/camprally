@@ -46,7 +46,17 @@ const targets = specPath
 const dead = [];
 for (const { label, text } of targets) {
   text.split("\n").forEach((line, i) => {
-    for (const m of line.matchAll(/\/blog\/([a-z0-9-]+)/g)) {
+    /* `(?!category/)` keeps the category hubs out of this test.
+     *
+     * /blog/category/<group> is a real page, but it does not look like one to a
+     * pattern that assumes the segment after /blog/ is an article slug: the
+     * capture is "category", which is in no slug set, so the first article that
+     * linked to a hub would have failed this gate and blocked the publish cycle
+     * for a link that was perfectly correct. The hubs are validated at build
+     * time instead — generateStaticParams builds exactly the populated groups
+     * and `dynamicParams = false` 404s anything else, so a bad hub link cannot
+     * reach production regardless. */
+    for (const m of line.matchAll(/\/blog\/(?!category\/)([a-z0-9-]+)/g)) {
       if (!slugs.has(m[1])) dead.push({ label, line: i + 1, slug: m[1] });
     }
     /* example.com is what the writer reaches for when it wants an internal link

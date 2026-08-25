@@ -2,16 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { articles, byNewest } from "@/data/articles";
 import { populatedGroups, groupCounts } from "@/data/categories";
-import { getHeroImage } from "@/data/heroes";
+import { getHeroImage, getHeroAlt } from "@/data/heroes";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintablesSection } from "@/components/Printables";
 import { MerchSection } from "@/components/Merch";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { organizationNode, websiteNode } from "@/lib/structured-data";
 
 import {
   Tent, Flame, Compass, Map as MapIcon, Moon, Shirt, Armchair, ShieldPlus,
-  BadgeCheck, Wallet, Sprout, ArrowRight,
+  Sparkles, BadgeCheck, Wallet, Sprout, ArrowRight,
 } from "lucide-react";
 
 /* Title and description come from the root layout; this exists only to state
@@ -25,7 +27,11 @@ export const metadata: Metadata = {
 
 // Aliased on import: lucide exports a `Map` icon, which shadows the global Map
 // constructor used below and turns `new Map(...)` into a type error.
-const ICONS = { Tent, Flame, Compass, Map: MapIcon, Moon, Shirt, Armchair, ShieldPlus };
+//
+// Every `icon` named in categoryGroups needs an entry here. A missing one is
+// not an error — the lookup falls back to `?? Tent` — so a new group silently
+// renders under a tent until someone notices.
+const ICONS = { Tent, Flame, Compass, Map: MapIcon, Moon, Shirt, Armchair, ShieldPlus, Sparkles };
 
 /* Slugs the homepage leads with. Filtered against the real article list below,
  * because the previous hardcoded list had drifted — three of its six slugs no
@@ -42,8 +48,8 @@ const featuredSlugs = [
 const PROMISES = [
   {
     icon: BadgeCheck,
-    title: "Field-tested picks",
-    desc: "Every recommendation comes from real trail time, not a spec sheet skim.",
+    title: "Safety-reviewed picks",
+    desc: "Every guide is screened against the advice that gets people hurt — and blocked if it trips a rule.",
   },
   {
     icon: Wallet,
@@ -92,11 +98,18 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
+      {/* The site's identity, asserted once and only here.
+          Fifty articles named an Organization as their author and publisher
+          while no Organization node existed anywhere, so nothing tied the
+          corpus to a publisher a search engine or an answer engine could
+          recognise. This is that anchor. */}
+      <JsonLd nodes={[organizationNode(), websiteNode()]} />
+
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative isolate flex min-h-[clamp(30rem,68vh,44rem)] items-end overflow-hidden">
         <Image
           src={getHeroImage("best-budget-tents-under-100")}
-          alt=""
+          alt={getHeroAlt("best-budget-tents-under-100")}
           fill
           priority
           sizes="100vw"
@@ -129,7 +142,7 @@ export default function Home() {
               href="/about"
               className="inline-flex h-12 items-center justify-center border border-white/40 px-7 font-semibold text-white transition-colors hover:bg-white/10"
             >
-              How we test
+              How we choose
             </Link>
           </div>
         </div>
@@ -153,7 +166,7 @@ export default function Home() {
               return (
                 <Link
                   key={g.slug}
-                  href={`/blog?category=${g.slug}`}
+                  href={`/blog/category/${g.slug}`}
                   className="group flex flex-col gap-2 bg-background p-5 transition-colors hover:bg-camp-bone-deep"
                 >
                   <Icon
@@ -228,7 +241,7 @@ export default function Home() {
             <div className="relative min-h-[18rem] md:min-h-[26rem]">
               <Image
                 src={getHeroImage(heroArticle.slug)}
-                alt=""
+                alt={getHeroAlt(heroArticle.slug)}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

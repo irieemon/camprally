@@ -18,9 +18,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-3 text-meta leading-relaxed text-muted-foreground">
-              Field-tested budget camping gear, reviewed honestly and priced
-              live. We would rather show you nothing than show you a wrong
-              number.
+              Budget camping gear, researched carefully and priced live. We
+              would rather show you nothing than show you a wrong number.
             </p>
           </div>
 
@@ -40,7 +39,7 @@ export default function Footer() {
               {groups.slice(0, 4).map((g) => (
                 <li key={g.slug}>
                   <Link
-                    href={`/blog?category=${g.slug}`}
+                    href={`/blog/category/${g.slug}`}
                     className="link-wipe text-meta text-muted-foreground transition-colors hover:text-camp-green"
                   >
                     {g.name}
@@ -55,7 +54,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { href: "/blog", label: "All guides" },
-                { href: "/about", label: "How we test" },
+                { href: "/about", label: "How we choose" },
                 { href: "/privacy", label: "Privacy policy" },
                 { href: "/terms", label: "Terms of use" },
               ].map((l) => (

@@ -40,7 +40,18 @@ export const metadata: Metadata = {
    * every page without an explicit one declaring itself the homepage — worse
    * than having no canonical at all, and silent. Each route sets its own, and a
    * future route that forgets simply has none, which Google infers correctly. */
-  title: TITLE,
+  /* `default` is the homepage's own title; `template` brands every child that
+   * sets a plain string title, so routes stop hand-writing "| CampRally" and a
+   * future one cannot forget it.
+   *
+   * NOTE the template applies to `title` only. Open Graph titles are separate
+   * and are NOT templated — og:title should be the bare headline, since the
+   * site name travels in og:site_name and a social card that says
+   * "Foo | CampRally · CampRally" is the usual result of assuming otherwise. */
+  title: {
+    default: TITLE,
+    template: "%s | CampRally",
+  },
   description: DESCRIPTION,
   /* Inherited by every route that does not set its own, so a link to any page
    * previews as something rather than as a bare URL. Pinterest is this site's

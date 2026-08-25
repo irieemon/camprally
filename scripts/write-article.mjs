@@ -29,6 +29,9 @@ import { loadCache, saveCache, classify, get } from "./lib/asin-cache.mjs";
 import { discover, priceCeiling } from "./lib/discover.mjs";
 import { generateImage, heroPrompt } from "./lib/minimax-image.mjs";
 import { callRole, lastError, lastErrorTransient, minimaxKey, roleCandidates } from "./lib/llm.mjs";
+import { canonicalCategory, knownCategories } from "./lib/taxonomy.mjs";
+import { excerptIsDegenerate, MIN_EXCERPT_CHARS } from "./lib/meta.mjs";
+import { productLabel } from "./lib/product-label.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
 
@@ -96,6 +99,81 @@ async function deriveProductTerm(title) {
 }
 
 /**
+ * Write the meta description.
+ *
+ * This is the &lt;meta name="description"&gt; and the og:description for the article,
+ * so it is the sentence a searcher reads before deciding whether to click. It
+ * used to be `${brief.title}.` — the title, with a period — because that was
+ * the fallback here and NO brief has ever carried an `excerpt` field. It is not
+ * in the brief schema at all. So the fallback was not a fallback, it was the
+ * behaviour: 27 of the 30 articles this pipeline has written have a description
+ * that restates their own title, wasting the snippet on every one of them.
+ *
+ * Never blocking on its own failure — a missing description is recoverable and
+ * a blocked queue is not. The caller gates on the RESULT instead, which is the
+ * check that actually holds: an excerpt that comes back degenerate is refused
+ * whether the model failed, refused, or simply parroted the title.
+ */
+async function deriveExcerpt(title, keywords, body) {
+  const r = await callRole("cheap", {
+    system:
+      "You write meta descriptions for search results. Reply with ONE sentence " +
+      "of 140-160 characters. No quotes, no markdown, no label. It must NOT " +
+      "restate the article's title — it must tell the reader what they will " +
+      "learn or be able to decide after reading.",
+    user: [
+      `Article title: "${title}"`,
+      keywords?.length ? `Target search terms: ${keywords.join(", ")}` : "",
+      "",
+      "Opening of the article:",
+      body.slice(0, 1200),
+    ].filter(Boolean).join("\n"),
+    maxTokens: 8000,
+    parse: "text",
+    rounds: 2,
+  });
+  if (!r) return null;
+  const line = r.value.trim().replace(/^["'\s]+|["'\s]+$/g, "").split(/\n/)[0].trim();
+  return line || null;
+}
+
+/**
+ * Alt text for a generated hero, from the `vision` role.
+ *
+ * Gemini leads that role and MiniMax-M3 backs it up — both genuinely ingest the
+ * image. M2.7 does not: it returns 200 with the image silently dropped and
+ * answers "I can't see the image", which would yield confident invented
+ * descriptions. See the seating note in scripts/lib/llm.mjs.
+ */
+async function describeHero(imagePath) {
+  let image;
+  try {
+    image = {
+      mediaType: "image/jpeg",
+      data: readFileSync(imagePath).toString("base64"),
+    };
+  } catch {
+    return null;
+  }
+  const r = await callRole("vision", {
+    system:
+      "You write alt text for images on a camping-gear website. Reply with the " +
+      "sentence only — no quotes, no label, no preamble.",
+    user:
+      "Describe ONLY what is visibly in this photograph — the scene, objects, " +
+      "setting, time of day, and any gear present. One sentence, under 125 " +
+      'characters. Do not begin with "Image of" or "Photo of". Do not speculate ' +
+      "about anything not visible.",
+    image,
+    parse: "text",
+    rounds: 1,
+  });
+  if (!r) return null;
+  const line = r.value.trim().replace(/^["'\s]+|["'\s]+$/g, "").split("\n")[0].trim();
+  return line && line.length <= 125 ? line : null;
+}
+
+/**
  * Quota fallback: shop from the verified ASIN cache instead of Canopy.
  *
  * When the month's Canopy budget is gone, discovery is closed — but the cache
@@ -142,7 +220,7 @@ async function pickFromCache(title, { max, count, cache }) {
 
 const slug = process.argv[2];
 if (!slug) {
-  console.error("usage: write-article.mjs <slug> [--out path] [--products A,B,C]");
+  console.error("usage: write-article.mjs <slug> [--out path] [--products A,B,C] [--discover [term]] [--from-cache]");
   process.exit(EXIT.FAIL);
 }
 const outIdx = process.argv.indexOf("--out");
@@ -178,6 +256,29 @@ if (!brief) {
   process.exit(EXIT.FAIL);
 }
 
+/* Fail loudly on a category no browse group claims — and fail HERE, before the
+ * writer call and the hero image, because both cost money and neither is
+ * recoverable once spent.
+ *
+ * An unmapped category errors nowhere downstream. It renders fine; the article
+ * simply appears under no filter and on no category hub, reachable only from
+ * the flat index. Eight of the first fifty went out that way, all of them
+ * near-synonyms of a real member (Cooking/Cookware, Shelter/Tents,
+ * Apparel/Clothing), because this script took `brief.category` exactly as typed
+ * and defaulted to "Gear" when it was missing. Caught here the fix is one word
+ * in article-queue.json; caught later it is a published URL with no home. */
+const category = canonicalCategory(brief.category ?? "Gear");
+if (!category) {
+  console.error(
+    `brief category ${JSON.stringify(brief.category ?? null)} is not a member of ` +
+    `any browse group in src/data/categories.ts.\n` +
+    `  known: ${[...knownCategories()].sort().join(", ")}\n` +
+    `  fix the brief in article-queue.json, or add the category to a group's ` +
+    `members if it is genuinely new.`,
+  );
+  process.exit(EXIT.FAIL);
+}
+
 // ── products: caller supplies ASINs; all must already be cached LIVE ───────
 const pIdx = process.argv.indexOf("--products");
 let asins = pIdx > -1 ? process.argv[pIdx + 1].split(",").map((s) => s.trim()) : [];
@@ -206,10 +307,67 @@ const mIdx = process.argv.indexOf("--max");
 const nIdx = process.argv.indexOf("--count");
 const cache = loadCache();
 
-if (!asins.length && dIdx > -1) {
-  const term = process.argv[dIdx + 1];
+/* --from-cache: shop the verified ASIN cache and never call Canopy.
+ *
+ * pickFromCache already existed but was reachable only as a quota FALLBACK,
+ * which meant the sole way to shop without spending a search was to have
+ * already run out of them. That is the wrong shape for the case this exists
+ * for: regenerating old articles in bulk, where the discovery budget is better
+ * spent on articles that do not exist yet.
+ *
+ * It matters here because the pipeline has no spec runway — every pending brief
+ * needs its own search — so spending eighteen searches on eighteen ALREADY
+ * PUBLISHED articles would stall new publishing until the monthly reset.
+ *
+ * Products come from stock already verified for other guides rather than picked
+ * fresh for this one, so it is the weaker option and should not become the
+ * default. The model still refuses to return fewer than four genuinely relevant
+ * products, so a topic the cache cannot serve defers rather than being padded. */
+const FROM_CACHE = process.argv.includes("--from-cache");
+
+if (!asins.length && FROM_CACHE) {
   const max = mIdx > -1 ? Number(process.argv[mIdx + 1]) : priceCeiling(brief.title);
   const count = nIdx > -1 ? Number(process.argv[nIdx + 1]) : 6;
+  console.log(`shopping the verified ASIN cache${max ? ` under $${max}` : ""} — no Canopy search...`);
+  asins = await pickFromCache(brief.title, { max, count, cache });
+  if (asins.length < 4) {
+    console.error(
+      `cache fallback found only ${asins.length} relevant product(s) for "${brief.title}" — ` +
+      `not enough for a buying guide. Re-run with --discover once quota allows.`,
+    );
+    process.exit(EXIT.DEFER);
+  }
+  console.log(`  picked ${asins.length} from cache:`);
+  for (const a of asins) console.log(`    ${a}  ${(cache.entries[a]?.title ?? "").slice(0, 60)}`);
+}
+
+if (!asins.length && dIdx > -1) {
+  /* `--discover` takes an OPTIONAL term, so the next argv is only the term if
+   * it is not itself a flag.
+   *
+   * It used to be read unconditionally, which meant a perfectly ordinary
+   * invocation — `write-article.mjs <slug> --discover --out specs/x.json` —
+   * searched Amazon for the literal string "--out" and silently built the
+   * article around whatever came back. In practice that was five books and a
+   * pack of 360 disposable spoons, all of which were then written into
+   * state/asin-cache.json as VERIFIED LIVE products, where pickFromCache would
+   * happily reuse them as fallback stock for some later article.
+   *
+   * It never fired from run-cycle.mjs, which always passes a term — it fires on
+   * the documented manual usage, which is how a human regenerates an article.
+   * Failing loudly is not an option here either: an absent term is legitimate
+   * and already has a good fallback below (deriveProductTerm from the title),
+   * so the fix is to recognise the flag rather than to reject it. */
+  const nextArg = process.argv[dIdx + 1];
+  const supplied = nextArg && !nextArg.startsWith("--") ? nextArg : null;
+  const max = mIdx > -1 ? Number(process.argv[mIdx + 1]) : priceCeiling(brief.title);
+  const count = nIdx > -1 ? Number(process.argv[nIdx + 1]) : 6;
+
+  /* No term given: derive one from the title up front rather than calling
+   * discover(undefined) and relying on the empty-result fallback below to clean
+   * up after it. Same derivation either way, one fewer wasted round trip. */
+  const term = supplied ?? (await deriveProductTerm(brief.title)) ?? brief.title;
+  if (!supplied) console.log(`no term given — derived "${term}" from the title`);
   console.log(`discovering "${term}"${max ? ` under $${max}` : ""}...`);
 
   // Any of the discovery attempts below can hit the monthly Canopy limit —
@@ -476,6 +634,50 @@ console.log(heroPath
   ? `hero image → public/images/heroes/${slug}.jpg`
   : "no hero image — page will use the site default");
 
+/* Alt text for the hero, written by LOOKING at the image that was just made.
+ *
+ * Not derived from the title, deliberately. heroPrompt() is near-identical for
+ * every article, so title-derived alt text would be boilerplate restating the
+ * H1 beside it — announced twice by a screen reader and worth nothing to an
+ * image crawler. The same reasoning as the meta-description gate above: the
+ * cheap wrong answer is the one that looks fine.
+ *
+ * Best-effort, exactly like the image itself. A hero with no alt renders
+ * alt="" and is treated as decorative, which is the correct degradation; a
+ * blocked publish over a missing image description is not. */
+let heroAlt = null;
+if (heroPath) {
+  heroAlt = await describeHero(heroOut);
+  console.log(heroAlt ? `hero alt → "${heroAlt}"` : "no hero alt — image will render decorative");
+}
+
+// ── meta description ──────────────────────────────────────────────────────
+let excerpt = brief.excerpt?.trim() || null;
+if (!excerpt) {
+  excerpt = await deriveExcerpt(brief.title, brief.keywords, body);
+  console.log(excerpt ? `meta description → "${excerpt}"` : "meta description: model gave nothing");
+}
+/* The gate that makes the title-as-description regression unrepeatable. It is
+ * deliberately on the VALUE, not on whether the model answered: a parroted
+ * title and a failed call are the same defect from the reader's side, and only
+ * checking the value catches both. */
+if (excerptIsDegenerate(excerpt, brief.title)) {
+  console.error(
+    `meta description is the title restated (${JSON.stringify(excerpt)}) — ` +
+    `this wastes the search snippet.\n` +
+    `  add an "excerpt" to this brief in article-queue.json, or re-run to let ` +
+    `the model try again.`,
+  );
+  process.exit(EXIT.FAIL);
+}
+if (excerpt.length < MIN_EXCERPT_CHARS) {
+  console.error(
+    `meta description is only ${excerpt.length} chars (${JSON.stringify(excerpt)}) — ` +
+    `Google renders roughly 155, so this leaves most of the snippet unused.`,
+  );
+  process.exit(EXIT.FAIL);
+}
+
 // ── emit spec ─────────────────────────────────────────────────────────────
 const spec = {
   // Next sequential art-NNN, so ids stay stable and sortable rather than
@@ -483,15 +685,16 @@ const spec = {
   id: process.env.ARTICLE_ID ?? nextArticleId(slug),
   slug,
   title: brief.title,
-  excerpt: brief.excerpt ?? `${brief.title}.`,
-  category: brief.category ?? "Gear",
+  excerpt,
+  category,
   date: (process.env.RUN_DATE ?? new Date().toISOString()).slice(0, 10),
   readTime: `${Math.max(4, Math.round(words / 200))} min read`,
   gridTitle: `${brief.title} — Quick Comparison`,
   ...(heroPath ? { hero: `/images/heroes/${slug}.jpg` } : {}),
+  ...(heroAlt ? { heroAlt } : {}),
   products: products.map((p) => ({
     asin: p.asin,
-    label: p.title.split(",")[0].slice(0, 34),
+    label: productLabel(p.title),
     detail: "", note: "", category: "", icon: "🏕️",
   })),
   body,
