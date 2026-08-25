@@ -59,6 +59,12 @@ const STALL_AFTER_RUNS = 3;
  * has to keep moving in the meantime. */
 const MAX_CONTENT_ATTEMPTS = 2;
 
+/* The origin the site actually serves on. Same name and default as
+ * verify-deploy.mjs so the URL this cycle CHECKS and the URL it ANNOUNCES to
+ * search engines cannot disagree — announcing a host we never verified is how
+ * you notify an engine about a redirect. */
+const SITE_ORIGIN = process.env.CAMPRALLY_SITE ?? "https://www.camprally.co";
+
 const DRY = process.argv.includes("--dry-run");
 const PUSH = !process.argv.includes("--no-push");
 
@@ -576,8 +582,40 @@ if (pushed) {
   console.log(deployDetail);
 }
 
+// ── step 8: tell the search engines, now that the URL actually serves ─────
+/* ONLY when the deploy is verified. Announcing a URL the origin is not yet
+ * serving invites a crawl that 404s, which is worse than staying quiet — it
+ * teaches the engine the URL is broken and it may be a while before it looks
+ * again.
+ *
+ * This exists because waiting to be crawled failed silently for four months:
+ * on 2026-08-25 Bing's last sitemap read was 11 April, 27 URLs against 50
+ * published, status "Success", zero errors. Nothing was broken and nothing was
+ * arriving. A push either gets a status code or it does not.
+ *
+ * Never fatal, and deliberately outside the outcome: a notification that did
+ * not land does not make a published article unpublished. It lands in the
+ * receipt so a run of failures is visible rather than merely quiet — the same
+ * lesson the receipts themselves were built from. */
+let indexNow = null;
+if (deployVerified) {
+  const { submitUrls } = await import("./lib/indexnow.mjs");
+  const host = new URL(SITE_ORIGIN).host;
+  indexNow = await submitUrls(
+    [
+      `${SITE_ORIGIN}/blog/${next.slug}`,
+      // The listings genuinely changed too: a new guide appears on both.
+      `${SITE_ORIGIN}/blog`,
+      SITE_ORIGIN,
+    ],
+    { host },
+  );
+  console.log(`indexnow: ${JSON.stringify(indexNow)}`);
+}
+
 finish(pushed && !deployVerified ? "published-unverified" : "published", {
   slug: next.slug, commit: sha, pushed,
   deployVerified, deploy: deployDetail,
+  ...(indexNow ? { indexNow } : {}),
   remaining: pending.length - 1,
 }, EXIT.OK);
