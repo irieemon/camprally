@@ -37,3 +37,14 @@ export function excerptIsDegenerate(excerpt, title) {
  * empty space, which is a wasted result even when the sentence is honest.
  */
 export const MIN_EXCERPT_CHARS = 100;
+
+/**
+ * The upper bound is deliberately loose.
+ *
+ * Overrunning is a much smaller problem than falling short: Google simply
+ * truncates, and a front-loaded sentence still reads correctly when it does.
+ * This is here to catch a model that answered with a paragraph, not to enforce
+ * a pixel-perfect snippet — which cannot be done from a character count anyway,
+ * since the real limit is rendered width and varies by device and query.
+ */
+export const MAX_EXCERPT_CHARS = 175;
