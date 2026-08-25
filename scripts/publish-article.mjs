@@ -232,6 +232,21 @@ if (spec.hero) {
     nextHeroes.slice(i + 1);
 }
 
+/* Hero alt text, kept in JSON beside heroes.ts rather than inside it.
+ *
+ * It is machine-written and regenerated in bulk by
+ * scripts/backfill-hero-alt.mjs, so inlining it would turn every rerun into a
+ * large diff of a hand-maintained TS map. An absent entry renders alt="" and
+ * the image is treated as decorative, which is the correct degradation. */
+if (spec.heroAlt) {
+  const ALT = `${ROOT}src/data/hero-alt.json`;
+  let altMap = {};
+  try { altMap = JSON.parse(readFileSync(ALT, "utf8")); } catch { /* first write */ }
+  altMap[spec.slug] = spec.heroAlt;
+  const sorted = Object.fromEntries(Object.keys(altMap).sort().map((k) => [k, altMap[k]]));
+  writeFileSync(ALT, JSON.stringify(sorted, null, 2) + "\n");
+}
+
 if (spec.products.length) {
   /* Emits only fields CustomSection["items"] actually declares.
    *

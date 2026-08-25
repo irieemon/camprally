@@ -17,7 +17,7 @@ import {
   ArrowLeft, ExternalLink, Star, ChevronRight, Mountain
 } from "lucide-react";
 import Image from "next/image";
-import { getHeroImage } from "@/data/heroes";
+import { getHeroImage, getHeroAlt } from "@/data/heroes";
 import { getCustomSections } from "@/data/article-sections";
 import {
   productFor,
@@ -764,7 +764,7 @@ export default async function ArticlePage({ params }: Props) {
       <div className="relative isolate flex min-h-[clamp(22rem,48vh,32rem)] items-end overflow-hidden">
         <Image
           src={heroImage}
-          alt=""
+          alt={getHeroAlt(slug)}
           fill
           priority
           sizes="100vw"

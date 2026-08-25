@@ -138,6 +138,42 @@ async function deriveExcerpt(title, keywords, body) {
 }
 
 /**
+ * Alt text for a generated hero, from the `vision` role.
+ *
+ * Gemini leads that role and MiniMax-M3 backs it up — both genuinely ingest the
+ * image. M2.7 does not: it returns 200 with the image silently dropped and
+ * answers "I can't see the image", which would yield confident invented
+ * descriptions. See the seating note in scripts/lib/llm.mjs.
+ */
+async function describeHero(imagePath) {
+  let image;
+  try {
+    image = {
+      mediaType: "image/jpeg",
+      data: readFileSync(imagePath).toString("base64"),
+    };
+  } catch {
+    return null;
+  }
+  const r = await callRole("vision", {
+    system:
+      "You write alt text for images on a camping-gear website. Reply with the " +
+      "sentence only — no quotes, no label, no preamble.",
+    user:
+      "Describe ONLY what is visibly in this photograph — the scene, objects, " +
+      "setting, time of day, and any gear present. One sentence, under 125 " +
+      'characters. Do not begin with "Image of" or "Photo of". Do not speculate ' +
+      "about anything not visible.",
+    image,
+    parse: "text",
+    rounds: 1,
+  });
+  if (!r) return null;
+  const line = r.value.trim().replace(/^["'\s]+|["'\s]+$/g, "").split("\n")[0].trim();
+  return line && line.length <= 125 ? line : null;
+}
+
+/**
  * Quota fallback: shop from the verified ASIN cache instead of Canopy.
  *
  * When the month's Canopy budget is gone, discovery is closed — but the cache
@@ -598,6 +634,23 @@ console.log(heroPath
   ? `hero image → public/images/heroes/${slug}.jpg`
   : "no hero image — page will use the site default");
 
+/* Alt text for the hero, written by LOOKING at the image that was just made.
+ *
+ * Not derived from the title, deliberately. heroPrompt() is near-identical for
+ * every article, so title-derived alt text would be boilerplate restating the
+ * H1 beside it — announced twice by a screen reader and worth nothing to an
+ * image crawler. The same reasoning as the meta-description gate above: the
+ * cheap wrong answer is the one that looks fine.
+ *
+ * Best-effort, exactly like the image itself. A hero with no alt renders
+ * alt="" and is treated as decorative, which is the correct degradation; a
+ * blocked publish over a missing image description is not. */
+let heroAlt = null;
+if (heroPath) {
+  heroAlt = await describeHero(heroOut);
+  console.log(heroAlt ? `hero alt → "${heroAlt}"` : "no hero alt — image will render decorative");
+}
+
 // ── meta description ──────────────────────────────────────────────────────
 let excerpt = brief.excerpt?.trim() || null;
 if (!excerpt) {
@@ -638,6 +691,7 @@ const spec = {
   readTime: `${Math.max(4, Math.round(words / 200))} min read`,
   gridTitle: `${brief.title} — Quick Comparison`,
   ...(heroPath ? { hero: `/images/heroes/${slug}.jpg` } : {}),
+  ...(heroAlt ? { heroAlt } : {}),
   products: products.map((p) => ({
     asin: p.asin,
     label: productLabel(p.title),

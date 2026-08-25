@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { articles, byNewest } from "@/data/articles";
 import { populatedGroups, groupCounts } from "@/data/categories";
-import { getHeroImage } from "@/data/heroes";
+import { getHeroImage, getHeroAlt } from "@/data/heroes";
 import ArticleCard from "@/components/ArticleCard";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintablesSection } from "@/components/Printables";
@@ -109,7 +109,7 @@ export default function Home() {
       <section className="relative isolate flex min-h-[clamp(30rem,68vh,44rem)] items-end overflow-hidden">
         <Image
           src={getHeroImage("best-budget-tents-under-100")}
-          alt=""
+          alt={getHeroAlt("best-budget-tents-under-100")}
           fill
           priority
           sizes="100vw"
@@ -241,7 +241,7 @@ export default function Home() {
             <div className="relative min-h-[18rem] md:min-h-[26rem]">
               <Image
                 src={getHeroImage(heroArticle.slug)}
-                alt=""
+                alt={getHeroAlt(heroArticle.slug)}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

@@ -31,16 +31,23 @@ export const SITE_DESCRIPTION =
 /**
  * Verified profile URLs for the Organization's `sameAs`, and nothing else.
  *
- * EMPTY IS THE CORRECT VALUE UNTIL SOMEONE PASTES A REAL URL IN. There is a
- * Pinterest `p:domain_verify` token in the root layout and a public/assets
- * /pinterest directory, so an account of some kind plainly exists, but its
- * profile URL is written down nowhere in this repo and a guessed one is a
- * false claim about which accounts belong to this business — asserted in
- * machine-readable form, to the search engine, in the one node whose whole job
- * is establishing identity.
+ * `sameAs` is the claim "these accounts are the same entity as this site", made
+ * in machine-readable form to a search engine, in the one node whose whole job
+ * is establishing identity. A guessed URL is a false claim of exactly the kind
+ * that node exists to prevent, so this list stayed EMPTY until each entry could
+ * be confirmed — organizationNode() omits the property entirely rather than
+ * emitting an empty array.
  *
- * organizationNode() omits `sameAs` entirely while this is empty rather than
- * emitting an empty array, so filling it in later is a one-line edit and never
- * a guess.
+ * Pinterest, confirmed 2026-08-25 via the v5 API: account `camprally`, a
+ * BUSINESS account with 121 pins whose own `website_url` points back at
+ * camprally.co, and https://www.pinterest.com/camprally/ answers 200. The
+ * reciprocal link is the part that matters — an account claiming this site and
+ * this site claiming that account is what makes the assertion checkable rather
+ * than merely asserted.
+ *
+ * Anything added here needs the same treatment: confirm the profile resolves
+ * AND that it points back. Do not add a handle because it looks right.
  */
-export const SOCIAL_PROFILES: string[] = [];
+export const SOCIAL_PROFILES: string[] = [
+  "https://www.pinterest.com/camprally/",
+];
