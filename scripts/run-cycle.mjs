@@ -613,9 +613,48 @@ if (deployVerified) {
   console.log(`indexnow: ${JSON.stringify(indexNow)}`);
 }
 
+// ── step 9: pin it ────────────────────────────────────────────────────────
+/* Replaces the CSV bulk upload, which had no way to set alt text — every one of
+ * the 66 pins it produced shipped without any, along with apex links and
+ * descriptions that restated the title. The API takes alt_text on creation, so
+ * createPin() REFUSES a pin without it and the defect stops being possible
+ * rather than being something to remember.
+ *
+ * Same placement and the same rules as the IndexNow step: only once the deploy
+ * is verified, because Pinterest fetches the hero image from the live site and
+ * a pin whose image 404s is worse than no pin; idempotent, so a re-run does not
+ * double-post; and never fatal, because a social post is not what publishing is
+ * for. The result lands in the receipt so a run of failures is visible. */
+let pinned = null;
+if (deployVerified) {
+  try {
+    const { pinExistsFor, createPin } = await import("./lib/pinterest.mjs");
+    const existing = await pinExistsFor(next.slug);
+    if (existing.exists) {
+      pinned = { skipped: "already pinned" };
+    } else {
+      const heroes = readFileSync(`${ROOT}src/data/heroes.ts`, "utf8");
+      const hero = heroes.match(new RegExp(`"${next.slug}":\\s*"([^"]+)"`))?.[1];
+      const alt = JSON.parse(readFileSync(`${ROOT}src/data/hero-alt.json`, "utf8"))[next.slug];
+      const spec = JSON.parse(readFileSync(`${ROOT}specs/${next.slug}.json`, "utf8"));
+      pinned = await createPin({
+        title: spec.title,
+        description: spec.excerpt,
+        altText: alt,
+        link: `${SITE_ORIGIN}/blog/${next.slug}`,
+        imageUrl: hero?.startsWith("http") ? hero : `${SITE_ORIGIN}${hero}`,
+      });
+    }
+  } catch (err) {
+    pinned = { ok: false, error: err?.message?.slice(0, 140) ?? "pin step threw" };
+  }
+  console.log(`pinterest: ${JSON.stringify(pinned)}`);
+}
+
 finish(pushed && !deployVerified ? "published-unverified" : "published", {
   slug: next.slug, commit: sha, pushed,
   deployVerified, deploy: deployDetail,
   ...(indexNow ? { indexNow } : {}),
+  ...(pinned ? { pinned } : {}),
   remaining: pending.length - 1,
 }, EXIT.OK);
