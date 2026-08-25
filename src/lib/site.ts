@@ -22,3 +22,25 @@ export const SITE_URL = "https://www.camprally.co";
 /** Absolute URL for a site-relative path, for metadata that requires one. */
 export const absoluteUrl = (path = "/") =>
   new URL(path, SITE_URL).toString().replace(/\/$/, "") || SITE_URL;
+
+export const SITE_NAME = "CampRally";
+
+export const SITE_DESCRIPTION =
+  "Honest reviews and practical guides to help you get outdoors without breaking the bank. Budget camping gear, tips, and beginner-friendly advice.";
+
+/**
+ * Verified profile URLs for the Organization's `sameAs`, and nothing else.
+ *
+ * EMPTY IS THE CORRECT VALUE UNTIL SOMEONE PASTES A REAL URL IN. There is a
+ * Pinterest `p:domain_verify` token in the root layout and a public/assets
+ * /pinterest directory, so an account of some kind plainly exists, but its
+ * profile URL is written down nowhere in this repo and a guessed one is a
+ * false claim about which accounts belong to this business — asserted in
+ * machine-readable form, to the search engine, in the one node whose whole job
+ * is establishing identity.
+ *
+ * organizationNode() omits `sameAs` entirely while this is empty rather than
+ * emitting an empty array, so filling it in later is a one-line edit and never
+ * a guess.
+ */
+export const SOCIAL_PROFILES: string[] = [];

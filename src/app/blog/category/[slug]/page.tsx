@@ -65,6 +65,12 @@ export default async function CategoryPage({ params }: Props) {
       title={group.name}
       intro={group.blurb}
       activeSlug={group.slug}
+      path={`/blog/category/${group.slug}`}
+      description={group.description}
+      breadcrumb={[
+        { name: "All Guides", path: "/blog" },
+        { name: group.name },
+      ]}
       articles={articlesInGroup(group.slug)}
     />
   );

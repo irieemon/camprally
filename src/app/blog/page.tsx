@@ -31,10 +31,12 @@ import BlogListing from "@/components/BlogListing";
  * child route that does not set its own, so the new /blog/category/[slug] pages
  * would each have quietly declared themselves to be /blog.
  */
+const INDEX_DESCRIPTION =
+  "Every CampRally guide in one place — budget gear reviews, beginner how-tos and practical camping advice, searchable by category.";
+
 export const metadata: Metadata = {
   title: "All Guides | CampRally",
-  description:
-    "Every CampRally guide in one place — budget gear reviews, beginner how-tos and practical camping advice, searchable by category.",
+  description: INDEX_DESCRIPTION,
   alternates: { canonical: "/blog" },
   openGraph: {
     /* Restated in full. Setting `openGraph` in a route REPLACES the root
@@ -57,6 +59,9 @@ export default function BlogPage() {
       title="Budget camping guides"
       intro="Honest, safety-reviewed gear guides to get you outdoors for less."
       activeSlug={null}
+      path="/blog"
+      description={INDEX_DESCRIPTION}
+      breadcrumb={[{ name: "All Guides" }]}
       articles={[...articles].sort(byNewest)}
     />
   );

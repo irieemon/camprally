@@ -8,6 +8,8 @@ import NewsletterForm from "@/components/NewsletterForm";
 import { PrintablesSection } from "@/components/Printables";
 import { MerchSection } from "@/components/Merch";
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { organizationNode, websiteNode } from "@/lib/structured-data";
 
 import {
   Tent, Flame, Compass, Map as MapIcon, Moon, Shirt, Armchair, ShieldPlus,
@@ -96,6 +98,13 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
+      {/* The site's identity, asserted once and only here.
+          Fifty articles named an Organization as their author and publisher
+          while no Organization node existed anywhere, so nothing tied the
+          corpus to a publisher a search engine or an answer engine could
+          recognise. This is that anchor. */}
+      <JsonLd nodes={[organizationNode(), websiteNode()]} />
+
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative isolate flex min-h-[clamp(30rem,68vh,44rem)] items-end overflow-hidden">
         <Image

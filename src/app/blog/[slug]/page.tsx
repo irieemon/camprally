@@ -8,6 +8,8 @@ import NewsletterForm from "@/components/NewsletterForm";
 import { PrintableSidebarCard } from "@/components/Printables";
 import { MerchSidebarCard, merchDesigns, stableIndex } from "@/components/Merch";
 import { SITE_URL } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { articleProductListNode, breadcrumbNode } from "@/lib/structured-data";
 /* Badge and the Card family used to build the hero label and the sidebar
  * panels. Both are now plain markup — an eyebrow and border-topped blocks —
  * so the shadcn wrappers are no longer imported here. */
@@ -717,38 +719,42 @@ export default async function ArticlePage({ params }: Props) {
    *
    * dateModified is the article's own date, not build time: stamping "modified
    * today" on every rebuild would claim freshness the content does not have. */
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        "@id": `${SITE_URL}/blog/${article.slug}#article`,
-        headline: article.title,
-        description: article.excerpt,
-        image: heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`,
-        datePublished: article.date,
-        dateModified: article.date,
-        articleSection: article.category,
-        author: { "@type": "Organization", name: article.author, url: SITE_URL },
-        publisher: { "@type": "Organization", name: "CampRally", url: SITE_URL },
-        mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${article.slug}` },
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-          { "@type": "ListItem", position: 2, name: "All Guides", item: `${SITE_URL}/blog` },
-          { "@type": "ListItem", position: 3, name: article.title },
-        ],
-      },
-    ],
+  const productList = articleProductListNode(
+    article.slug,
+    customSections.find((s) => s.type === "product-grid")?.title,
+  );
+
+  const articleNode = {
+    "@type": "Article",
+    "@id": `${SITE_URL}/blog/${article.slug}#article`,
+    headline: article.title,
+    description: article.excerpt,
+    image: heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`,
+    datePublished: article.date,
+    dateModified: article.date,
+    articleSection: article.category,
+    /* author and publisher stay INLINE objects. Replacing them with
+     * `{ "@id": ORG_ID }` is the obvious tidy and silently breaks the markup:
+     * the Organization node is only emitted on the homepage, and Google does
+     * not resolve an @id reference across documents. */
+    author: { "@type": "Organization", name: article.author, url: SITE_URL },
+    publisher: { "@type": "Organization", name: "CampRally", url: SITE_URL },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${article.slug}` },
+    ...(productList ? { mainEntity: { "@id": `${SITE_URL}/blog/${article.slug}#products` } } : {}),
   };
 
   return (
     <div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <JsonLd
+        nodes={[
+          articleNode,
+          breadcrumbNode([
+            { name: "Home", path: "/" },
+            { name: "All Guides", path: "/blog" },
+            { name: article.title },
+          ]),
+          productList,
+        ]}
       />
       {/* Hero. Full-bleed rather than an inset rounded panel — the edge-to-edge
           photograph is most of what separates a store from a blog. */}

@@ -2,6 +2,8 @@ import type { Article } from "@/data/articles";
 import ArticleCard from "@/components/ArticleCard";
 import BlogGrid from "@/components/BlogGrid";
 import CategoryChips from "@/components/CategoryChips";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbNode, collectionPageNodes } from "@/lib/structured-data";
 
 /**
  * The shared shell for /blog and every /blog/category/<slug> hub.
@@ -19,15 +21,33 @@ export default function BlogListing({
   intro,
   articles,
   activeSlug = null,
+  path,
+  description,
+  breadcrumb,
 }: {
   title: string;
   intro: string;
   /** Already sorted by the caller — usually `byNewest`. */
   articles: Article[];
   activeSlug?: string | null;
+  /** Site-relative path of this listing, for the schema's @id and url. */
+  path: string;
+  /** The listing's meta description, reused as the CollectionPage description. */
+  description: string;
+  /** Trail after Home. The hub passes All Guides → group; /blog passes All Guides. */
+  breadcrumb: Array<{ name: string; path?: string }>;
 }) {
   return (
     <div>
+      {/* Emitted here rather than in each route so /blog and the nine hubs
+          cannot describe themselves differently — the same reason the markup
+          itself is shared. */}
+      <JsonLd
+        nodes={[
+          ...collectionPageNodes({ path, name: title, description, articles }),
+          breadcrumbNode([{ name: "Home", path: "/" }, ...breadcrumb]),
+        ]}
+      />
       {/* Page header on a bone band, the way a retail listing page separates
           "where am I" from "what's for sale". */}
       <div className="border-b border-camp-stone bg-camp-bone">
