@@ -93,6 +93,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "leaf-peeping-camping-destinations": "/images/heroes/leaf-peeping-camping-destinations.jpg",
   "best-4-season-tents-under-300": "/images/heroes/best-4-season-tents-under-300.jpg",
   "best-sleeping-bag-liners-camping": "/images/heroes/best-sleeping-bag-liners-camping.jpg",
+  "best-budget-camping-cots": "/images/heroes/best-budget-camping-cots.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

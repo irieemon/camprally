@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-budget-camping-cots": [
+    {
+      type: "product-grid",
+      title: "Best Budget Camping Cots — Getting Off the Ground Without Overpaying — Quick Comparison",
+      items: [
+        { label: "Coleman Tents Coleman Sundome Tent", category: "", icon: "🏕️", asin: "B014LSDUA8", link: "https://www.amazon.com/dp/B014LSDUA8?tag=camprally-20" },
+        { label: "Coleman Trailhead II Large Folding", category: "", icon: "🏕️", asin: "B003696236", link: "https://www.amazon.com/dp/B003696236?tag=camprally-20" },
+        { label: "Outsunny 2 Person Cot Tent 4-in-1 ", category: "", icon: "🏕️", asin: "B07N8LKWN4", link: "https://www.amazon.com/dp/B07N8LKWN4?tag=camprally-20" },
+        { label: "JEAREY Folding Camping Cot for Adu", category: "", icon: "🏕️", asin: "B0FY2W4RWX", link: "https://www.amazon.com/dp/B0FY2W4RWX?tag=camprally-20" },
+        { label: "Night Cat Camping Cot Tent - Water", category: "", icon: "🏕️", asin: "B0CRYNPH7T", link: "https://www.amazon.com/dp/B0CRYNPH7T?tag=camprally-20" },
+        { label: "Outsunny Camping Tent Cot 6-in-1 S", category: "", icon: "🏕️", asin: "B00EVBVB70", link: "https://www.amazon.com/dp/B00EVBVB70?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-sleeping-bag-liners-camping": [
     {
       type: "product-grid",

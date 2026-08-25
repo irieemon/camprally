@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "campfire-cooking-recipe-cards",
+      "title": "Campfire Recipe Cards & Cook Log",
+      "subtitle": "Every great campfire meal starts with a plan — and a place to remember what worked.",
+      "price": "$6",
+      "priceCents": 600,
+      "pages": 9,
+      "url": "https://camprally.gumroad.com/l/campfire-cooking-recipe-cards",
+      "image": "/images/printables/campfire-cooking-recipe-cards.jpg"
+    },
+    {
       "slug": "camping-budget-tracker",
       "title": "Camping Budget & Gear Savings Tracker",
       "subtitle": "Track every dollar you spend, set savings goals, and budget smarter for every trip you take.",
