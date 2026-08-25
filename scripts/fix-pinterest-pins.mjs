@@ -63,15 +63,36 @@ if (!TOKEN) { console.error("no Pinterest access token"); process.exit(1); }
 const H = { Authorization: `Bearer ${TOKEN}`, "Content-Type": "application/json" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-/** Article metadata: the good excerpt and the described hero alt. */
+/**
+ * Article metadata: the good excerpt, the described hero alt, and the hero's
+ * REAL url.
+ *
+ * The hero url is read from heroes.ts rather than assumed to be
+ * /images/heroes/<slug>.jpg. Assuming it cost 10 of the first 64 replacements:
+ * six slugs still point at images.unsplash.com, the guessed local path 404s for
+ * those, and Pinterest answers "Sorry we could not fetch the image" — which
+ * reads like a Pinterest problem and is entirely ours. Relative paths are
+ * absolutised against the live site; absolute ones are passed through, since
+ * Pinterest fetches the image itself and does not care who hosts it.
+ */
 function articleData() {
   const alt = JSON.parse(readFileSync(`${ROOT}src/data/hero-alt.json`, "utf8"));
+  const heroesSrc = readFileSync(`${ROOT}src/data/heroes.ts`, "utf8");
+  const heroes = Object.fromEntries(
+    [...heroesSrc.matchAll(/"([a-z0-9-]+)":\s*"([^"]+)"/g)].map((m) => [m[1], m[2]]),
+  );
   const src = readFileSync(`${ROOT}src/data/articles.ts`, "utf8");
   const meta = {};
   for (const m of src.matchAll(
     /slug: "([^"]+)"[\s\S]{0,700}?title: "((?:[^"\\]|\\.)*)"[\s\S]{0,700}?excerpt: "((?:[^"\\]|\\.)*)"/g,
   )) {
-    meta[m[1]] = { title: m[2], excerpt: m[3], alt: alt[m[1]] ?? null };
+    const hero = heroes[m[1]];
+    meta[m[1]] = {
+      title: m[2],
+      excerpt: m[3],
+      alt: alt[m[1]] ?? null,
+      image: hero ? (hero.startsWith("http") ? hero : `${SITE}${hero}`) : null,
+    };
   }
   return meta;
 }
@@ -104,7 +125,8 @@ const targets = pins
   })
   .filter(Boolean)
   .filter(({ pin, slug }) => {
-    if (!meta[slug]?.alt) return false;
+    // Needs both a description of the image and an image to point at.
+    if (!meta[slug]?.alt || !meta[slug]?.image) return false;
     if (SKIP && slug === SKIP) return false;
     const needsAlt = !pin.alt_text?.trim();
     const apex = /^https:\/\/camprally\.co/.test(pin.link ?? "");
@@ -141,7 +163,7 @@ for (const [i, { pin, slug }] of targets.entries()) {
         description: m.excerpt.slice(0, 800),
         alt_text: m.alt.slice(0, 500),
         link: `${SITE}/blog/${slug}`,
-        media_source: { source_type: "image_url", url: `${SITE}/images/heroes/${slug}.jpg` },
+        media_source: { source_type: "image_url", url: m.image },
       }),
     });
     const j = await r.json();
