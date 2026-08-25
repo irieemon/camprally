@@ -157,7 +157,7 @@ export default function Home() {
               return (
                 <Link
                   key={g.slug}
-                  href={`/blog?category=${g.slug}`}
+                  href={`/blog/category/${g.slug}`}
                   className="group flex flex-col gap-2 bg-background p-5 transition-colors hover:bg-camp-bone-deep"
                 >
                   <Icon

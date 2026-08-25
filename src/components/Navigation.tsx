@@ -16,10 +16,10 @@ import {
  * one-article dead ends. See src/data/categories.ts. */
 const navLinks = [
   { href: "/blog", label: "All Guides" },
-  { href: "/blog?category=shelter", label: "Shelter" },
-  { href: "/blog?category=sleep", label: "Sleep" },
-  { href: "/blog?category=cooking", label: "Cooking" },
-  { href: "/blog?category=planning", label: "Tips" },
+  { href: "/blog/category/shelter", label: "Shelter" },
+  { href: "/blog/category/sleep", label: "Sleep" },
+  { href: "/blog/category/cooking", label: "Cooking" },
+  { href: "/blog/category/planning", label: "Tips" },
   { href: "/about", label: "About" },
 ]
 

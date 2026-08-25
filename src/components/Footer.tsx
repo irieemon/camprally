@@ -39,7 +39,7 @@ export default function Footer() {
               {groups.slice(0, 4).map((g) => (
                 <li key={g.slug}>
                   <Link
-                    href={`/blog?category=${g.slug}`}
+                    href={`/blog/category/${g.slug}`}
                     className="link-wipe text-meta text-muted-foreground transition-colors hover:text-camp-green"
                   >
                     {g.name}

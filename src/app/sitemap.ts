@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
+import { articlesInGroup, populatedGroups } from "@/data/categories";
 import { SITE_URL } from "@/lib/site";
 
 /* Must match the host that actually serves, or every entry here is a redirect
@@ -38,6 +39,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  /* Category hubs.
+   *
+   * `articlesInGroup` sorts newest-first, so element 0 is the group's most
+   * recent article and its date is honestly when that hub last changed — the
+   * same doctrine as the lastmod note above, applied per group rather than
+   * sitewide. A hub whose category has had nothing new for months should say so.
+   *
+   * Only populated groups, which is also exactly what generateStaticParams
+   * builds, so the sitemap cannot advertise a URL the build did not produce.
+   *
+   * The `?category=` form is deliberately absent and must stay absent: it is a
+   * query-parameter duplicate of these pages. */
+  const categoryPages = populatedGroups().map((group) => {
+    const inGroup = articlesInGroup(group.slug);
+    return {
+      url: `${BASE_URL}/blog/category/${group.slug}`,
+      lastModified: inGroup.length ? new Date(inGroup[0].date) : undefined,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    };
+  });
+
   return [
     {
       // Home and the index both list the latest guides, so the newest article's
@@ -53,6 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.9,
     },
+    ...categoryPages,
     { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE_URL}/terms`, changeFrequency: "yearly", priority: 0.3 },
