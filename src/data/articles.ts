@@ -5,10 +5,37 @@ export interface Article {
   excerpt: string;
   content: string;
   category: string;
+  /** Publication date. Set once and never rewritten. */
   date: string;
+  /**
+   * Date of the last substantive rewrite, when there has been one.
+   *
+   * `date` used to carry both meanings, which was fine only for as long as
+   * nothing was ever rewritten. It is not: regenerating one of the thin April
+   * articles through the pipeline stamps the spec with the run date, so a
+   * rewrite silently claimed to have been PUBLISHED today — which moves it to
+   * the top of every newest-first listing, displaces genuinely new guides on
+   * the homepage, and makes `datePublished` in the article schema false.
+   *
+   * Two fields instead: `date` is when it first went live and never moves,
+   * `updated` is when the body last changed. The article schema maps them onto
+   * datePublished and dateModified, and the sitemap reports the later of the
+   * two — which is the honest answer to "when should you recrawl this".
+   *
+   * Deliberately NOT set by price refreshes or catalog rebuilds. Those change
+   * rendered figures inside an old article, and claiming an editorial update
+   * for them is the same overclaim the sitemap header already warns about.
+   */
+  updated?: string;
   author: string;
   readTime: string;
 }
+
+/**
+ * When this article last meaningfully changed — a rewrite if there has been
+ * one, otherwise publication. The value sitemaps and dateModified want.
+ */
+export const lastChanged = (a: Article) => a.updated ?? a.date;
 
 /**
  * Newest first — the order every listing on this site wants.

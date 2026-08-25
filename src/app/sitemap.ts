@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { articles } from "@/data/articles";
+import { articles, lastChanged } from "@/data/articles";
 import { articlesInGroup, populatedGroups } from "@/data/categories";
 import { SITE_URL } from "@/lib/site";
 
@@ -27,14 +27,14 @@ const BASE_URL = SITE_URL;
  * optional. Inventing one for them is the same lie in a smaller font.
  */
 const newest = (() => {
-  const dates = articles.map((a) => new Date(a.date).getTime()).filter(Number.isFinite);
+  const dates = articles.map((a) => new Date(lastChanged(a)).getTime()).filter(Number.isFinite);
   return dates.length ? new Date(Math.max(...dates)) : undefined;
 })();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articlePages = articles.map((article) => ({
     url: `${BASE_URL}/blog/${article.slug}`,
-    lastModified: new Date(article.date),
+    lastModified: new Date(lastChanged(article)),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const inGroup = articlesInGroup(group.slug);
     return {
       url: `${BASE_URL}/blog/category/${group.slug}`,
-      lastModified: inGroup.length ? new Date(inGroup[0].date) : undefined,
+      lastModified: inGroup.length ? new Date(lastChanged(inGroup[0])) : undefined,
       changeFrequency: "weekly" as const,
       priority: 0.6,
     };

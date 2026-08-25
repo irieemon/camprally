@@ -114,6 +114,35 @@ console.log(`link gate: ${all.length} ASIN(s) all cached LIVE`);
 // ── build the inserts ─────────────────────────────────────────────────────
 const esc = (s) => String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 
+/* A REPLACE KEEPS THE ORIGINAL PUBLICATION DATE.
+ *
+ * write-article stamps every spec with the run date, so without this a
+ * regenerated article claims to have been published today: it jumps to the top
+ * of every newest-first listing, pushes genuinely new guides off the homepage,
+ * and makes `datePublished` in its own schema false. Regenerating the eighteen
+ * thin April articles would have dated all eighteen to the same afternoon.
+ *
+ * So on --replace, `date` is recovered from the entry being replaced and the
+ * spec's date becomes `updated` instead — but only when it is actually later,
+ * since re-running a same-day publish is not an update to anything. */
+const publishedDate = (() => {
+  if (!alreadyPublished) return null;
+  const at = articlesSrc.indexOf(`slug: "${spec.slug}"`);
+  const window = articlesSrc.slice(Math.max(0, at - 400), at + 400);
+  return window.match(/\n    date: "([0-9-]+)"/)?.[1] ?? null;
+})();
+
+const entryDate = publishedDate ?? spec.date;
+const entryUpdated =
+  publishedDate && spec.date > publishedDate ? spec.date : null;
+
+if (REPLACE && publishedDate) {
+  console.log(
+    `replacing: keeping published date ${entryDate}` +
+    (entryUpdated ? `, marking updated ${entryUpdated}` : " (same day — no update stamp)"),
+  );
+}
+
 const entry =
   "  {\n" +
   `    id: "${esc(spec.id)}",\n` +
@@ -121,7 +150,8 @@ const entry =
   `    title: "${esc(spec.title)}",\n` +
   `    excerpt: "${esc(spec.excerpt)}",\n` +
   `    category: "${esc(spec.category)}",\n` +
-  `    date: "${esc(spec.date)}",\n` +
+  `    date: "${esc(entryDate)}",\n` +
+  (entryUpdated ? `    updated: "${esc(entryUpdated)}",\n` : "") +
   `    author: "${esc(spec.author ?? "Camp Rally Team")}",\n` +
   `    readTime: "${esc(spec.readTime)}",\n` +
   "    content: `\n" + spec.body + "\n    `\n" +

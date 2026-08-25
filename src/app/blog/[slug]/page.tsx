@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { remark } from "remark";
 import html from "remark-html";
-import { articles } from "@/data/articles";
+import { articles, lastChanged } from "@/data/articles";
 import NewsletterForm from "@/components/NewsletterForm";
 import { PrintableSidebarCard } from "@/components/Printables";
 import { MerchSidebarCard, merchDesigns, stableIndex } from "@/components/Merch";
@@ -732,7 +732,9 @@ export default async function ArticlePage({ params }: Props) {
     description: article.excerpt,
     image: heroImage.startsWith("http") ? heroImage : `${SITE_URL}${heroImage}`,
     datePublished: article.date,
-    dateModified: article.date,
+    /* The later of publication and last rewrite. It was `article.date` for
+     * both, which was only ever right because nothing had been rewritten yet. */
+    dateModified: lastChanged(article),
     articleSection: article.category,
     /* author and publisher stay INLINE objects. Replacing them with
      * `{ "@id": ORG_ID }` is the obvious tidy and silently breaks the markup:

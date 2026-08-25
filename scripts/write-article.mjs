@@ -272,9 +272,32 @@ const nIdx = process.argv.indexOf("--count");
 const cache = loadCache();
 
 if (!asins.length && dIdx > -1) {
-  const term = process.argv[dIdx + 1];
+  /* `--discover` takes an OPTIONAL term, so the next argv is only the term if
+   * it is not itself a flag.
+   *
+   * It used to be read unconditionally, which meant a perfectly ordinary
+   * invocation — `write-article.mjs <slug> --discover --out specs/x.json` —
+   * searched Amazon for the literal string "--out" and silently built the
+   * article around whatever came back. In practice that was five books and a
+   * pack of 360 disposable spoons, all of which were then written into
+   * state/asin-cache.json as VERIFIED LIVE products, where pickFromCache would
+   * happily reuse them as fallback stock for some later article.
+   *
+   * It never fired from run-cycle.mjs, which always passes a term — it fires on
+   * the documented manual usage, which is how a human regenerates an article.
+   * Failing loudly is not an option here either: an absent term is legitimate
+   * and already has a good fallback below (deriveProductTerm from the title),
+   * so the fix is to recognise the flag rather than to reject it. */
+  const nextArg = process.argv[dIdx + 1];
+  const supplied = nextArg && !nextArg.startsWith("--") ? nextArg : null;
   const max = mIdx > -1 ? Number(process.argv[mIdx + 1]) : priceCeiling(brief.title);
   const count = nIdx > -1 ? Number(process.argv[nIdx + 1]) : 6;
+
+  /* No term given: derive one from the title up front rather than calling
+   * discover(undefined) and relying on the empty-result fallback below to clean
+   * up after it. Same derivation either way, one fewer wasted round trip. */
+  const term = supplied ?? (await deriveProductTerm(brief.title)) ?? brief.title;
+  if (!supplied) console.log(`no term given — derived "${term}" from the title`);
   console.log(`discovering "${term}"${max ? ` under $${max}` : ""}...`);
 
   // Any of the discovery attempts below can hit the monthly Canopy limit —
