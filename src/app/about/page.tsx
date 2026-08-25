@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Mountain, Shield, DollarSign, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About CampRally | Budget Camping Gear Reviews",
+  /* Just "About" — the root layout's template appends "| CampRally", and this
+     title used to carry the brand itself, which rendered it twice. */
+  title: "About",
   description:
     "Learn about CampRally's mission to make camping accessible and affordable for everyone.",
   alternates: { canonical: "/about" },

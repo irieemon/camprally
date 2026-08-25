@@ -617,7 +617,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/blog/${article.slug}`;
   const hero = getHeroImage(article.slug);
   return {
-    title: `${article.title} | CampRally`,
+    // Brand suffix comes from the root layout's title template.
+    title: article.title,
     description: article.excerpt,
     /* Relative, resolved against metadataBase. It was absolute and pointed at
      * the bare apex, which 307s to www — every article was telling Google its

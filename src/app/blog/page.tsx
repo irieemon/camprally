@@ -35,7 +35,8 @@ const INDEX_DESCRIPTION =
   "Every CampRally guide in one place — budget gear reviews, beginner how-tos and practical camping advice, searchable by category.";
 
 export const metadata: Metadata = {
-  title: "All Guides | CampRally",
+  // Brand suffix comes from the root layout's title template.
+  title: "All Guides",
   description: INDEX_DESCRIPTION,
   alternates: { canonical: "/blog" },
   openGraph: {
@@ -47,7 +48,9 @@ export const metadata: Metadata = {
     siteName: "CampRally",
     locale: "en_US",
     url: "/blog",
-    title: "All Guides | CampRally",
+    /* Bare, not templated: og:site_name already carries the brand, so
+     * suffixing here gives social cards "All Guides | CampRally · CampRally". */
+    title: "All Guides",
     description:
       "Every CampRally guide in one place — budget gear reviews, beginner how-tos and practical camping advice.",
   },

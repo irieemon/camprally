@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | CampRally",
+  title: "Terms of Use",
   description: "Terms and conditions for using CampRally.co",
   alternates: { canonical: "/terms" },
 };

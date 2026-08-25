@@ -33,7 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const group = groupBySlug(slug);
   if (!group) return { title: "Category Not Found" };
 
-  const title = `${group.name} — Budget Camping Guides | CampRally`;
+  // Brand suffix comes from the root layout's title template.
+  const title = `${group.name} — Budget Camping Guides`;
   return {
     title,
     description: group.description,
