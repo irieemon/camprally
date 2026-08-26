@@ -103,7 +103,7 @@ Before we get to the products, let's talk about what you're actually buying. A f
 
 ### Best Overall: Adventure Medical Kits UltraLite .5
 
-This is the kit we grab for weekend car camping. It weighs just 1.1 lbs and has the best organized interior of any budget kit we've tested. The layout matters — when you're trying to find supplies fast, a disorganized kit is worse than no kit.
+At 1.1 lbs, it has the best-organized interior in the sub-$50 field. The layout matters — when you're trying to find supplies fast, a disorganized kit is worse than no kit.
 
 What you get: wound care, blister treatment, medications, and a CPR face shield. The only gap is SAM splint material, which most casual campers don't need anyway.
 
@@ -144,14 +144,14 @@ Buy it, add a sheet of moleskin, and you're set for any car camping trip or shor
   {
     id: "art-023",
     slug: "best-portable-camping-fans",
-    title: "Best Portable Camping Fans of 2024 — Battery-Powered Cooling for Tent and Campsite",
+    title: "Best Portable Camping Fans of 2026 — Battery-Powered Cooling for Tent and Campsite",
     excerpt: "A good camping fan turns a stuffy tent into a livable space. Here are the best battery-powered fans that actually move enough air to keep you cool at camp.",
     category: "Gear",
     date: "2026-04-16",
     author: "Camp Rally Team",
     readTime: "5 min read",
     content: `
-# Best Portable Camping Fans of 2024 — Battery-Powered Cooling for Tent and Campsite
+# Best Portable Camping Fans of 2026 — Battery-Powered Cooling for Tent and Campsite
 
 Nothing ruins a summer camping trip faster than a tent that turns into a solar oven overnight. You go to bed hot, wake up hot, and spend the whole night kicking off blankets just to immediately regret it. A portable camping fan solves this — but not all fans are built the same.
 
@@ -227,7 +227,7 @@ If you do not need the built-in lantern, the **Featwell 20000mAh** delivers the 
     id: "art-best-camping-coolers-under-100",
     slug: "best-camping-coolers-under-100",
     title: "Best Camping Coolers Under $100 in 2026 — Stay Cold, Stay Happy",
-    excerpt: "A great cooler keeps your food fresh and your drinks cold for days. We've tested the best options under $100 so you don't have to guess.",
+    excerpt: "A great cooler keeps your food fresh and your drinks cold for days. Here is how the best options under $100 compare on ice retention, capacity, and price.",
     category: "Coolers",
     date: "2026-08-04",
     author: "Camp Rally Team",
@@ -409,7 +409,7 @@ No matter which chair you choose, buying under $50 means you can grab a second o
     id: "art-001",
     slug: "best-budget-tents-under-100",
     title: "Best Budget Tents Under $100 - 2026 Reviews",
-    excerpt: "Finding a quality tent without breaking the bank is easier than you think. We've tested the top options under $100 for every camping style.",
+    excerpt: "Finding a quality tent without breaking the bank is easier than you think. Here are the top options under $100, compared by camping style, weather, and pack size.",
     category: "Tents",
     date: "2026-08-04",
     author: "Camp Rally Team",
@@ -4319,7 +4319,7 @@ Free camping isn't a hack — it's a category of public land with its own rules,
     id: "art-010",
     slug: "budget-camping-hacks-that-work",
     title: "Budget Camping Hacks That Actually Work",
-    excerpt: "experienced campers know these tricks. Save money, stay comfortable, and look like a pro with these field-tested shortcuts.",
+    excerpt: "Experienced campers know these tricks. Save money, stay comfortable, and look like a pro with these well-worn campsite shortcuts.",
     category: "Tips & Tricks",
     date: "2026-04-03",
     updated: "2026-08-25",
