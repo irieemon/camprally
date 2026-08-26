@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-hammocks-under-50": [
+    {
+      type: "product-grid",
+      title: "Best Camping Hammocks Under $50 — Straps, Bugs and Cold Butt — Quick Comparison",
+      items: [
+        { label: "Gold Armour Camping Hammock", category: "", icon: "🏕️", asin: "B07GCH1FM9", link: "https://www.amazon.com/dp/B07GCH1FM9?tag=camprally-20" },
+        { label: "Legit 2 Person Camping Hammock", category: "", icon: "🏕️", asin: "B07B31BJQJ", link: "https://www.amazon.com/dp/B07B31BJQJ?tag=camprally-20" },
+        { label: "KAMMOK: Python 15' Tree Friendly Hammock Straps", category: "", icon: "🏕️", asin: "B07HQSSTZL", link: "https://www.amazon.com/dp/B07HQSSTZL?tag=camprally-20" },
+        { label: "WHTE MOSS Suparpine I Hammock for Camping with Straps", category: "", icon: "🏕️", asin: "B0F8N2NVLY", link: "https://www.amazon.com/dp/B0F8N2NVLY?tag=camprally-20" },
+        { label: "Kootek Camping Hammock 400lbs Capacity Outdoor Camping", category: "", icon: "🏕️", asin: "B07X5G3BKZ", link: "https://www.amazon.com/dp/B07X5G3BKZ?tag=camprally-20" },
+        { label: "Wise Owl Outfitters Camping Hammock", category: "", icon: "🏕️", asin: "B0BSB4HY47", link: "https://www.amazon.com/dp/B0BSB4HY47?tag=camprally-20" },
+      ]
+    },
+  ],
   "cheapest-camping-setup-for-beginners": [
     {
       type: "product-grid",

@@ -96,6 +96,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "how-to-find-free-campsites": "/images/heroes/how-to-find-free-campsites.jpg",
   "budget-camping-hacks-that-work": "/images/heroes/budget-camping-hacks-that-work.jpg",
   "cheapest-camping-setup-for-beginners": "/images/heroes/cheapest-camping-setup-for-beginners.jpg",
+  "best-camping-hammocks-under-50": "/images/heroes/best-camping-hammocks-under-50.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
