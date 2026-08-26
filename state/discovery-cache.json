@@ -9014,5 +9014,285 @@
         "ratingsTotal": 114
       }
     ]
+  },
+  "camping hammock forest|1|50": {
+    "term": "camping hammock forest",
+    "min": 1,
+    "max": 50,
+    "fetchedAt": "2026-08-26T13:02:17.278Z",
+    "results": [
+      {
+        "asin": "B07GCH1FM9",
+        "title": "Gold Armour Camping Hammock - XL Double Hammock Portable Hammock Camping Accessories Gear for Outdoor Indoor with Tree Straps, USA Based Brand (Peach and Pink)",
+        "price": "$36.99",
+        "priceValue": 36.99,
+        "rating": 4.8,
+        "ratingsTotal": 10160
+      },
+      {
+        "asin": "B07B31BJQJ",
+        "title": "Legit 2 Person Camping Hammock - Double Tree Hammock - Portable & Heavy Duty - Perfect for Outdoor & Travel",
+        "price": "$26.97",
+        "priceValue": 26.97,
+        "rating": 4.8,
+        "ratingsTotal": 9050
+      },
+      {
+        "asin": "B07HQSSTZL",
+        "title": "KAMMOK: Python 15' Tree Friendly Hammock Straps | Woven, No-Stretch, Knotless, Durable Holds up to 500lbs, (Lightweight for Hiking, Camping, Backpacking), Set of 2 w/Stuff Sack",
+        "price": "$49.95",
+        "priceValue": 49.95,
+        "rating": 4.8,
+        "ratingsTotal": 175
+      },
+      {
+        "asin": "B0F8N2NVLY",
+        "title": "WHTE MOSS Suparpine I Hammock for Camping with Straps Included (Deep Blue, Single)",
+        "price": "$24.73",
+        "priceValue": 24.73,
+        "rating": 4.8,
+        "ratingsTotal": 52
+      },
+      {
+        "asin": "B07X5G3BKZ",
+        "title": "Kootek Camping Hammock 400lbs Capacity Outdoor Camping Essentials, Single | Outside&Indoors, Tree‑Safe Straps, Included Carry Bag, 210T Parachute Nylon, Heavy‑Duty Carabiners, Lightweight & Quick Setup",
+        "price": "$14.59",
+        "priceValue": 14.59,
+        "rating": 4.7,
+        "ratingsTotal": 31312
+      },
+      {
+        "asin": "B0BSB4HY47",
+        "title": "Wise Owl Outfitters Camping Hammock – up to 500lbs Portable Hammock with Tree Straps - Travel, Backpacking, Hiking, Outdoors Camping Gear - Single or Double",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.7,
+        "ratingsTotal": 21378
+      },
+      {
+        "asin": "B07QN5JK3V",
+        "title": "AnorTrek Camping Hammock, Super Lightweight Portable Parachute Hammock with Two Tree Straps Single or Double Nylon Travel Tree Hammocks for Camping Backpacking Hiking",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.7,
+        "ratingsTotal": 5222
+      },
+      {
+        "asin": "B09VGNJTPW",
+        "title": "SZHLUX Camping Hammock Double & Single Portable Hammocks with 2 Tree Straps and Attached Carry Bag,Great for Outdoor,Indoor,Beach,Camping,Light Grey / Sky Blue",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.7,
+        "ratingsTotal": 4408
+      },
+      {
+        "asin": "B073GR3FMC",
+        "title": "Wise Owl Outfitters Hammock Bug Net – Mosquito Net for Hammock, Lightweight Bug Netting for Camping, Hiking, Backpacking, Forest & Outdoor Use",
+        "price": "$35.71",
+        "priceValue": 35.71,
+        "rating": 4.7,
+        "ratingsTotal": 3738
+      },
+      {
+        "asin": "B08CTPQJQG",
+        "title": "Gold Armour Camping Hammock - Portable Hammock Single Hammock Camping Accessories Gear for Outdoor Indoor Adult Kids, USA Based Brand (OD Green)",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.7,
+        "ratingsTotal": 2894
+      },
+      {
+        "asin": "B0CCKL6Y9J",
+        "title": "Grassman Camping Hammock Double & Single Portable Hammock with Tree Straps, Lightweight Nylon Parachute Hammocks Camping Accessories Gear for Indoor Outdoor Backpacking, Travel, Hiking, Beach",
+        "price": "$18.99",
+        "priceValue": 18.99,
+        "rating": 4.7,
+        "ratingsTotal": 1585
+      },
+      {
+        "asin": "B0CL13G5S4",
+        "title": "GORILLA GRIP Travel Camping Hammock, Durable Tree Straps, Single, Blue | 1.76 lb Portable Hammocks, Essential for Campers, Hikers, Backpackers, Easy to Install and Adjust, 400 lb Capacity",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.7,
+        "ratingsTotal": 824
+      },
+      {
+        "asin": "B077147NV7",
+        "title": "ANYOO Cotton Camping Hammock Portable with Tree Straps Holds 660lbs | Breathable Weave,Hanging Sturdy Hammocks with Carry Bag, Easy Storage,Outdoor/Indoor Garden Patio Backyard",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.6,
+        "ratingsTotal": 25894
+      },
+      {
+        "asin": "B07WDQ676T",
+        "title": "NATUREFUN Ultra-Light Travel Camping Hammock | 300kg Load Capacity,Breathable,Quick-Drying | 2 x Premium Carabiners,2 x Nylon Slings Included | Outdoor Indoor Garden",
+        "price": "$13.01",
+        "priceValue": 13.01,
+        "rating": 4.6,
+        "ratingsTotal": 11066
+      },
+      {
+        "asin": "B076RTNDYV",
+        "title": "Sunyear Camping Hammock, Portable Single & Double Hammock with Net, 2 Person Hammock Tent with 2 * 10ft Straps, Best for Outdoor Hiking Survival Travel",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.6,
+        "ratingsTotal": 6823
+      },
+      {
+        "asin": "B0GVMZM2CC",
+        "title": "Covacure Camping Hammock, 772 lbs Capacity Double Hammock - Army Green | Lightweight Durable Hammocks with Tree Straps & Carry Bag & Mesh Canopy, Durable Nylon, Portable for Hiking, Backyard",
+        "price": "$23.99",
+        "priceValue": 23.99,
+        "rating": 4.6,
+        "ratingsTotal": 5535
+      },
+      {
+        "asin": "B0B785WHZP",
+        "title": "Durable Hammock 400 lb Capacity, Nylon Camping Hammock Chair - Double or Single Sizes w/Tree Straps and Attached Carry Bag - Portable for Travel/Backpacking/Beach/Backyard (Medium, Blue & Light Blue)",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.6,
+        "ratingsTotal": 2424
+      },
+      {
+        "asin": "B07C5MJT2Z",
+        "title": "Foxelli Camping Hammock – Ultralight Hammock for Backpacking, Hiking, Festivals, Travel - Easy Setup with Tree-Friendly Ropes & Steel Carabiners, Heavy Duty Parachute Nylon",
+        "price": "$34.97",
+        "priceValue": 34.97,
+        "rating": 4.6,
+        "ratingsTotal": 1895
+      },
+      {
+        "asin": "B072BDGLH2",
+        "title": "SUNCREAT Camping 2 Person Canvas Hammock, Double Travel Hammock, Natural | 475 lbs Capacity",
+        "price": "$24.89",
+        "priceValue": 24.89,
+        "rating": 4.6,
+        "ratingsTotal": 1411
+      },
+      {
+        "asin": "B0BZSZN9GR",
+        "title": "Vigel Camping Hammock - Durable Hammock, Nylon Hammock - Double or Single Hammocks - Portable Tree Hammocks for Outside - Easy to Set, Camping Accessories for Outdoor, Travel, Hiking",
+        "price": "$14.89",
+        "priceValue": 14.89,
+        "rating": 4.6,
+        "ratingsTotal": 526
+      },
+      {
+        "asin": "B07S7NVYX1",
+        "title": "Camping Hammock with Rain Fly Tarp and Mosquito Net Tent Tree Straps, Portable Single Double Nylon Parachute Hammock Rainfly Set for Backpacking Hiking Travel Yard Outdoor Activities Green",
+        "price": "$46.99",
+        "priceValue": 46.99,
+        "rating": 4.5,
+        "ratingsTotal": 2877
+      },
+      {
+        "asin": "B08R1K8P3H",
+        "title": "Camping Hammock with Net,Portable Lightweight Double Hammocks with Tree Straps and Solid D-Shape Hanging Hooks,Parachute Nylon Hammock for Backpacking Beach Backyard Patio Hiking",
+        "price": "$25.99",
+        "priceValue": 25.99,
+        "rating": 4.5,
+        "ratingsTotal": 2597
+      },
+      {
+        "asin": "B0CSYY2LRT",
+        "title": "Camping Hammock, Portable Hammocks with Mosquito Net,Lightweight Nylon Parachute Hammock with 10ft Tree Straps,Camping Gear Must Haves for Travel Hiking Backpacking Beach Patio-Green&Khaki",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.5,
+        "ratingsTotal": 899
+      },
+      {
+        "asin": "B09T2Z8HPD",
+        "title": "Hammock Camping, Portable Single/Double Hammocks for Outdoor Hiking Travel Backpacking - 210D Nylon Hammock Swing for Backyard & Garden (Green/Khaki)",
+        "price": "$16.98",
+        "priceValue": 16.98,
+        "rating": 4.5,
+        "ratingsTotal": 662
+      },
+      {
+        "asin": "B0FHFS77VV",
+        "title": "JoyView Brazilian Hammock for Single Person Portable Hammock with Hanging Ropes & Carry Bag Large 78.8x39.4” for Patio 300LBS Capacity Perfect for Outdoor/Indoor - Green Grey Stripes",
+        "price": "$23.99",
+        "priceValue": 23.99,
+        "rating": 4.5,
+        "ratingsTotal": 564
+      },
+      {
+        "asin": "B0DK3CBX64",
+        "title": "Camping Hammock with Mosquito Net and Ridge Rope, 2 Person Extra Large | 114\" x 55\" Lay-Flat Oval, 440 lb Capacity, 550 lb Stable Ridge Rope, 70D Ripstop Nylon, 1.8 lb, Zip-Open Net",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.5,
+        "ratingsTotal": 171
+      },
+      {
+        "asin": "B0DR8L2DWG",
+        "title": "Camping Hammock Lightweight, Portable Hammocks Parachute Hammock with Two Tree Straps, Single or Double Travel Swing Nylon Camp Hammocks, Outdoor Essentials for Beach Backpacking Hiking, Blue",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 4.4,
+        "ratingsTotal": 518
+      },
+      {
+        "asin": "B0C38ZLK49",
+        "title": "Chihee Ultra-Light Travel Camping Hammock Pop-up Net Hammock 660lbs Load Capacity,Breathable,Quick-Drying Parachute Nylon 2 Premium Carabiners,2 Tree Slings Included for Outdoor Backpacking Hiking",
+        "price": "$24.69",
+        "priceValue": 24.69,
+        "rating": 4.4,
+        "ratingsTotal": 477
+      },
+      {
+        "asin": "B07RYWJX3Z",
+        "title": "Ryno Tuff XL 2 Person Camping Hammock with Mosquito Net & Rain Fly - Compact Double Hammock with Bug Net, Tarp, Pocket, Tree Straps & Heavy Duty Carabiners - Parachute Grade Nylon Holds Over 600lbs",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.4,
+        "ratingsTotal": 370
+      },
+      {
+        "asin": "B0DGFPVSQH",
+        "title": "Camping Hammock Mosquito Net with Rain Fly | Portable Hammock Set, with Tree Straps, Guylines & Stake, Holds Up to 500lbs, for Camping, Backyard & Beach, Forest Green",
+        "price": "$42.39",
+        "priceValue": 42.39,
+        "rating": 4.4,
+        "ratingsTotal": 229
+      },
+      {
+        "asin": "B0CS2FWSBZ",
+        "title": "Miztli Camping Hammock Portable Tent-Like Hammock with Net 1/2 Person | Easy Setup Outdoor Hammock, 500/600 lbs, Tent-Like No-See-Um Net, 2×10 ft (20+2 loops) Tree Straps",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.4,
+        "ratingsTotal": 191
+      },
+      {
+        "asin": "B0FG79QP28",
+        "title": "Onewind 11ft Ultralight Camping Hammock for Hiking Backpacking, OD Green | 40D Nylon Ripstop, 2*12Ft Tree Straps, Beginner-friendly Lightweight Portable Hammock for Scouts Weekend Camper, No Ridgeline",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 75
+      },
+      {
+        "asin": "B07FJ6WH1V",
+        "title": "G4Free Large Camping Hammock for Outside with Mosquito Net 2 People Hammock | Up to 440lb Portable Hammock Durable Nylon with Bug Net, Tree Straps, Tent Tarp for Outdoor Hiking Camping Backpacking Travel",
+        "price": "$40.99",
+        "priceValue": 40.99,
+        "rating": 4.3,
+        "ratingsTotal": 2474
+      },
+      {
+        "asin": "B0B833BL5Z",
+        "title": "Mesh Hammock, Net Hammock for Outside Camping, 220 lb, Dark Green | Lightweight 13 oz Nylon Rope Bed Hangs Between Two Trees, No Stand Needed - for Backyards, Gardens, Beach Trips, and Travel",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4,
+        "ratingsTotal": 831
+      }
+    ]
   }
 }
