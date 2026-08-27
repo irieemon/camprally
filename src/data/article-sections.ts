@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-axes-hatchets-under-50": [
+    {
+      type: "product-grid",
+      title: "Best Camping Hatchets Under $50 — Splitting Wood Without Splitting Your Shin — Quick Comparison",
+      items: [
+        { label: "Fiskars X14 Universal Axe 14\"", category: "", icon: "🏕️", asin: "B0FSJWZ8TC", link: "https://www.amazon.com/dp/B0FSJWZ8TC?tag=camprally-20" },
+        { label: "Fiskars X7 Small Hatchet Axe 14\"", category: "", icon: "🏕️", asin: "B0002YTO7E", link: "https://www.amazon.com/dp/B0002YTO7E?tag=camprally-20" },
+        { label: "ESTWING Sportsman's Axe", category: "", icon: "🏕️", asin: "B00BNQR4SG", link: "https://www.amazon.com/dp/B00BNQR4SG?tag=camprally-20" },
+        { label: "ESTWING Special Edition Fireside Friend", category: "", icon: "🏕️", asin: "B000HAEI1A", link: "https://www.amazon.com/dp/B000HAEI1A?tag=camprally-20" },
+        { label: "Fiskars 375501-1001 Hatchet with Sheath", category: "", icon: "🏕️", asin: "B00EOA4J4K", link: "https://www.amazon.com/dp/B00EOA4J4K?tag=camprally-20" },
+        { label: "ESTWING Camper's Axe", category: "", icon: "🏕️", asin: "B00047F130", link: "https://www.amazon.com/dp/B00047F130?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-hammocks-under-50": [
     {
       type: "product-grid",
