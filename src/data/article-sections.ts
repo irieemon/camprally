@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-keep-food-cold-camping": [
+    {
+      type: "product-grid",
+      title: "How to Keep Food Cold Camping — Ice Strategy, Not Just a Better Cooler — Quick Comparison",
+      items: [
+        { label: "RTIC 52 QT Ultra-Light Hard Cooler", category: "", icon: "🏕️", asin: "B09LDFJTVF", link: "https://www.amazon.com/dp/B09LDFJTVF?tag=camprally-20" },
+        { label: "GoCJ Arizona Ice Large Industrial Ice Packs", category: "", icon: "🏕️", asin: "B0CRG5LR4L", link: "https://www.amazon.com/dp/B0CRG5LR4L?tag=camprally-20" },
+        { label: "Titan by Arctic Zone Deep Freeze Cooler", category: "", icon: "🏕️", asin: "B0F17M4Q91", link: "https://www.amazon.com/dp/B0F17M4Q91?tag=camprally-20" },
+        { label: "Cool Coolers by Fit & Fresh 4 Pack XL Slim Ice Packs", category: "", icon: "🏕️", asin: "B07CTXRKH8", link: "https://www.amazon.com/dp/B07CTXRKH8?tag=camprally-20" },
+        { label: "Healthy Packers Ice Packs for Lunch Boxes & Coolers", category: "", icon: "🏕️", asin: "B01M06AQLF", link: "https://www.amazon.com/dp/B01M06AQLF?tag=camprally-20" },
+        { label: "Igloo Maxcold Ice Block", category: "", icon: "🏕️", asin: "B0DQ2CRRM3", link: "https://www.amazon.com/dp/B0DQ2CRRM3?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-axes-hatchets-under-50": [
     {
       type: "product-grid",

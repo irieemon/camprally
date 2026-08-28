@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "hiking-log-book",
+      "title": "Hiking Log Book & Trail Journal",
+      "subtitle": "Track every mile, summit, and trail story in one place — from first hike to last.",
+      "price": "$5",
+      "priceCents": 500,
+      "pages": 10,
+      "url": "https://camprally.gumroad.com/l/hiking-log-book",
+      "image": "/images/printables/hiking-log-book.jpg"
+    },
+    {
       "slug": "campfire-cooking-recipe-cards",
       "title": "Campfire Recipe Cards & Cook Log",
       "subtitle": "Every great campfire meal starts with a plan — and a place to remember what worked.",
