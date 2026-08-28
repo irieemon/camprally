@@ -9622,5 +9622,332 @@
         "ratingsTotal": 105
       }
     ]
+  },
+  "cooler ice camping|1|": {
+    "term": "cooler ice camping",
+    "min": 1,
+    "fetchedAt": "2026-08-28T13:03:29.112Z",
+    "results": [
+      {
+        "asin": "B09LDFJTVF",
+        "title": "RTIC 52 QT Ultra-Light Hard Cooler | Portable Ice Chest Box for Beach, Drink, Beverage, Camping, Picnic, Fishing, Boat, Barbecue, 30% Lighter Than Rotomolded",
+        "price": "$229.00",
+        "priceValue": 229,
+        "rating": 4.7,
+        "ratingsTotal": 2020
+      },
+      {
+        "asin": "B0CRG5LR4L",
+        "title": "GoCJ Arizona Ice Large Industrial Ice Packs | Replaces 10lbs of Ice |18°F (-8°C) | Deepest Grooves | May Freeze Drinks | USA Company | 12\" x 9\" | Two Pack",
+        "price": "$29.95",
+        "priceValue": 29.95,
+        "rating": 4.7,
+        "ratingsTotal": 983
+      },
+      {
+        "asin": "B0F17M4Q91",
+        "title": "Titan by Arctic Zone Deep Freeze Cooler - Zipperless Hardbody Cooler - Deep Freeze Insulation, HardBody Liner, and SmartShelf",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.6,
+        "ratingsTotal": 56808
+      },
+      {
+        "asin": "B07CTXRKH8",
+        "title": "Cool Coolers by Fit & Fresh 4 Pack XL Slim Ice Packs, Quick Freeze Space Saving Reusable Ice Packs for Lunch Boxes or Coolers",
+        "price": "$7.49",
+        "priceValue": 7.49,
+        "rating": 4.6,
+        "ratingsTotal": 50019
+      },
+      {
+        "asin": "B01M06AQLF",
+        "title": "Healthy Packers Ice Packs for Lunch Boxes & Coolers - Freezer Packs - Original Cool Pack | Cooler Accessories for Beach, Camping & Fishing | Slim & Long-Lasting Reusable Ice Pack for Cooler",
+        "price": "$15.99",
+        "priceValue": 15.99,
+        "rating": 4.6,
+        "ratingsTotal": 31440
+      },
+      {
+        "asin": "B0DQ2CRRM3",
+        "title": "Igloo Maxcold Ice Block,2 Pieces, Ice Block",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.6,
+        "ratingsTotal": 27537
+      },
+      {
+        "asin": "B0DQ2C24JL",
+        "title": "Igloo Maxcold Ice Block,4 Pieces, Ice Block",
+        "price": "$3.92",
+        "priceValue": 3.92,
+        "rating": 4.6,
+        "ratingsTotal": 27537
+      },
+      {
+        "asin": "B09HN34T7H",
+        "title": "Coleman Chiller 9/16/30/48/60qt Cooler with Ice Retention, Leak Resistant, Great for Camping, Concerts, Sports, and More",
+        "price": "$67.20",
+        "priceValue": 67.2,
+        "rating": 4.6,
+        "ratingsTotal": 16639
+      },
+      {
+        "asin": "B0773FVRZY",
+        "title": "Cooler Shock Reusable Ice Packs for Cooler - Long Lasting Cold Freezer Packs for Coolers and Lunch Boxes - Cooler Ice Packs for Camping Gear, Fishing, Road Trips, Beach Must Haves",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 12114
+      },
+      {
+        "asin": "B004QILD6W",
+        "title": "Igloo Hard Cooler | Polar & Party Bar Series | Insulated Ice Chests",
+        "price": "$115.99",
+        "priceValue": 115.99,
+        "rating": 4.6,
+        "ratingsTotal": 11714
+      },
+      {
+        "asin": "B004XUNDX4",
+        "title": "Igloo Maxcold Glide 110Qt Wheeled Cooler | Insulated Hard Shell Ice Chest",
+        "price": "$139.99",
+        "priceValue": 139.99,
+        "rating": 4.6,
+        "ratingsTotal": 3033
+      },
+      {
+        "asin": "B0BJ5VTPKZ",
+        "title": "RTIC 32 QT Ultra-Light Hard Cooler | Portable Hard Ice Chest Box for Beach, Drinks, Camping, Picnic, Fishing, Boat, Barbecue, 30% Lighter Than Rotomolded",
+        "price": "$159.00",
+        "priceValue": 159,
+        "rating": 4.6,
+        "ratingsTotal": 1343
+      },
+      {
+        "asin": "B0CPFGZ5PD",
+        "title": "Maelstrom 30/40 Can Soft Cooler Bag, Leakproof Insulated Ice Chest | 24h Cold (With Ice), 5-Layer Insulation, Multi-Pockets ,Lightweight,Perfect For Camping, Beach, Hiking, Kayaking, Road Trips",
+        "price": "$26.93",
+        "priceValue": 26.93,
+        "rating": 4.6,
+        "ratingsTotal": 982
+      },
+      {
+        "asin": "B0D4MPFGBH",
+        "title": "Reusable Ice Packs for Coolers and Lunch Box, Long Lasting 12 Hours, 4 Pack",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.6,
+        "ratingsTotal": 912
+      },
+      {
+        "asin": "B0C64BQY4S",
+        "title": "48 Can Insulated Soft Sided Collapsible Cooler Bag Ice Chest | Large 30L Portable Folding Waterproof Leakproof Cooler for Picnic, Beach, Fishing, Travel, Tailgate 32 qt",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 812
+      },
+      {
+        "asin": "B0GHSYQKM4",
+        "title": "Igloo Trailmate Cooler | Insulated Hard Shell Ice Chest",
+        "price": "$79.99",
+        "priceValue": 79.99,
+        "rating": 4.6,
+        "ratingsTotal": 576
+      },
+      {
+        "asin": "B0C4YSXMJT",
+        "title": "Hulongo Soft Sided Insulated Cooler Bag, 32L | Large Reusable Grocery Bags, Collapsible, Soft Ice Chest, Leakproof, Waterproof, for Grocery Shopping, Beach, Camping, Travel",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 574
+      },
+      {
+        "asin": "B08TYLGG34",
+        "title": "Coleman Marine Cooler with Fully Insulated UV Guard Lid & Body, Keeps Ice for 3+ Days, Great for Boating & Fishing, 52qt/100qt Wheeled/120qt Options",
+        "price": "$107.99",
+        "priceValue": 107.99,
+        "rating": 4.6,
+        "ratingsTotal": 371
+      },
+      {
+        "asin": "B0G1LDW7V9",
+        "title": "MIYCOO Cooler Bag with Expandable Double Deck, 60 Can Leakproof Cooler | Insulated Portable Soft Lunch Cooler, Extra Large Ice Chest Cooler for Beach, Picnic, Camping, Shopping",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.6,
+        "ratingsTotal": 318
+      },
+      {
+        "asin": "B0815YWFLR",
+        "title": "Igloo BMX Cooler | Insulated Hard Shell Ice Chest",
+        "price": "$149.99",
+        "priceValue": 149.99,
+        "rating": 4.5,
+        "ratingsTotal": 20672
+      },
+      {
+        "asin": "B00AU6G4QS",
+        "title": "Coleman Xtreme Rolling Cooler with Wheels, Extra-Walled Insulation Keeps Ice up to 5 Days, Portable Wheeled Hard Chiller",
+        "price": "$74.99",
+        "priceValue": 74.99,
+        "rating": 4.5,
+        "ratingsTotal": 20503
+      },
+      {
+        "asin": "B08VDBW5PW",
+        "title": "SPARTER Backpack Cooler Insulated 33/49 Can Leakproof Waterproof Bag Beach | 20H Dual Compartment Multi Pockets Bottle Opener Padded Strap Portable Lunch Soft Ice Chest Collapsible Travel Picnic Camping",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.5,
+        "ratingsTotal": 10984
+      },
+      {
+        "asin": "B08LMVJJ9Q",
+        "title": "Coleman Classic Series Insulated Portable Rolling Cooler with Wheels, Leak-Resistant Outdoor Hard Cooler Keeps Ice up to 5 Days",
+        "price": "$99.99",
+        "priceValue": 99.99,
+        "rating": 4.5,
+        "ratingsTotal": 9483
+      },
+      {
+        "asin": "B0C4H82CHZ",
+        "title": "EUHOMY 19QT 12 Volt Refrigerator, -4℉~68℉ Electric Cooler for Car | No Ice Needed, 12V&100-240V, Compressor Cooling, ECO/MAX Modes, 3-Level Battery Protection, Truck/Travel/Home Use,Low Noise",
+        "price": "$134.96",
+        "priceValue": 134.96,
+        "rating": 4.5,
+        "ratingsTotal": 2336
+      },
+      {
+        "asin": "B08RLKSTLB",
+        "title": "Igloo Hard Coolers | Profile II Series | Insulated Ice Chests | Roller Cooler with Wheels",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.5,
+        "ratingsTotal": 1524
+      },
+      {
+        "asin": "B08RSKGYPM",
+        "title": "TOURIT Soft Sided Cooler Bag 30/48/60Can, Collapsible & Leakproof Ice Chest | Dry & Wet Insulated Beach Cooler, 12h insulated & waterproof large beach bag, ideal for picnic camping hiking fishing sport",
+        "price": "$23.98",
+        "priceValue": 23.98,
+        "rating": 4.4,
+        "ratingsTotal": 4744
+      },
+      {
+        "asin": "B09PD3D27J",
+        "title": "Maelstrom 24/30/60 Can Soft Cooler Bag, Double Deck Portable Ice Chest | 12H Cold, 5-layer Insulation, Lightweight, Collapsible, Bottle Opener, Multiple Pockets, for Beach, Camping, Travel, Picnics",
+        "price": "$26.75",
+        "priceValue": 26.75,
+        "rating": 4.4,
+        "ratingsTotal": 3431
+      },
+      {
+        "asin": "B09F733B2M",
+        "title": "Maelstrom Soft Cooler Bag, 35/55/75 Can Beach Cooler with Flip-top Access | Lightweight, 5-layer Insulation, 12H Cold, Leakproof, Collapsible, Adjustable Strap, Perfect for Camping,Picnics,Work,Travel",
+        "price": "$35.68",
+        "priceValue": 35.68,
+        "rating": 4.4,
+        "ratingsTotal": 3036
+      },
+      {
+        "asin": "B07MT9VMSQ",
+        "title": "Large Leakproof Ice Bag. Reusable Ice Pack for Cooler - Long Lasting Instant Cooler Ice Packs - Drop in Cubed Ice to Make Cold, Dry Freezer Packs for Coolers - Drink Your Ice When It Melts",
+        "price": "$21.99",
+        "priceValue": 21.99,
+        "rating": 4.4,
+        "ratingsTotal": 2048
+      },
+      {
+        "asin": "B0C6C572N2",
+        "title": "Igloo Trailmate Journey 70Qt Wheeled Cooler | Insulated Hard Shell Ice Chest",
+        "price": "$229.99",
+        "priceValue": 229.99,
+        "rating": 4.4,
+        "ratingsTotal": 1137
+      },
+      {
+        "asin": "B09885BDRZ",
+        "title": "Picnic Cooler – 4.5 Liter Hard Cooler – Coolbox Keeps Contents Cool for 48 Hours – BPA Free Outdoor Cooler – Portable Cooler for Picnics, Grill, Camping (Orange)",
+        "price": "$22.99",
+        "priceValue": 22.99,
+        "rating": 4.4,
+        "ratingsTotal": 935
+      },
+      {
+        "asin": "B0DPN963G6",
+        "title": "Ninja FrostVault™ 45qt Cooler with Wheels, Dry Storage, Lakeshore Blue | Ninja FrostVault's 45-qt capacity holds 68 cans, keeps food cool & dry, and rolls easily on all-terrain wheels",
+        "price": "$299.99",
+        "priceValue": 299.99,
+        "rating": 4.4,
+        "ratingsTotal": 719
+      },
+      {
+        "asin": "B0G13NCNZY",
+        "title": "Coleman Snap N Go 45qt Collapsible Hard Cooler, Keeps ice Cold for up to 55 Hours, Holds up to 76 cans, Collapses up to 1/3 its Size, Can Hold up to 200 pounds, Blue Sky",
+        "price": "$219.99",
+        "priceValue": 219.99,
+        "rating": 4.4,
+        "ratingsTotal": 662
+      },
+      {
+        "asin": "B0D4MR7QX2",
+        "title": "Everlasting Ice RX Reusable Ice Packs for Cooler (4 Pack) Up to 48 Hours Freezer Packs for Coolers and Lunch Boxes Cooler Ice Packs for Lunch Box, Camping, Fishing, Beach, Road Trips",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.4,
+        "ratingsTotal": 620
+      },
+      {
+        "asin": "B0BRL8XFTH",
+        "title": "Igloo Marine Cooler | Insulated Hard Shell Ice Chest |Great for Fishing, Camping, Boating, & More",
+        "price": "$63.99",
+        "priceValue": 63.99,
+        "rating": 4.4,
+        "ratingsTotal": 572
+      },
+      {
+        "asin": "B0F61SD6W1",
+        "title": "INSMEER Soft Cooler Bag with Hard Shell & 2 Cup Holders, Portable 40L/70 Cans Collapsible Cooler Bags Insulated with Leakproof for Travel, ice chests and Cooler Lunch Box for Beach Camping Picnic",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.4,
+        "ratingsTotal": 548
+      },
+      {
+        "asin": "B0GKJB37LQ",
+        "title": "Igloo Trailmate 52Qt Wheeled Cooler, Insulated Hard Shell Ice Chest, Sportsman",
+        "price": "$127.99",
+        "priceValue": 127.99,
+        "rating": 4.4,
+        "ratingsTotal": 526
+      },
+      {
+        "asin": "B0CB8YYM8D",
+        "title": "VEVOR Portable Cooler,Hard Cooler with Ice Retention, Heavy-Duty Handles and Strap, Lightweight Rigid Material Insulated Portable Cooler, Suitable for Family Picnics and Short Trips",
+        "price": "$113.50",
+        "priceValue": 113.5,
+        "rating": 4.4,
+        "ratingsTotal": 300
+      },
+      {
+        "asin": "B0FDR8FJ77",
+        "title": "Cooler Bag – Soft Travel Cooler Holds 45 Cans, Stays Cold for 8H & Warm for 7H – Portable Car Trunk Organizer for Camping, Beach, Picnic-Black",
+        "price": "$39.59",
+        "priceValue": 39.59,
+        "rating": 4.3,
+        "ratingsTotal": 141
+      },
+      {
+        "asin": "B0CZ3P3LJ4",
+        "title": "Odoland 72 Can Rolling Cooler, Leakproof Insulated Cooler Bag with Handle | 2-in-1 Collapsible Trolley Cart, Camping & Tailgating - Portable Travel Soft Cooler Bag on Wheels, Collapses for Easy Storage",
+        "price": "$50.39",
+        "priceValue": 50.39,
+        "rating": 3.9,
+        "ratingsTotal": 591
+      }
+    ]
   }
 }
