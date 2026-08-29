@@ -99,6 +99,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-camping-hammocks-under-50": "/images/heroes/best-camping-hammocks-under-50.jpg",
   "best-camping-axes-hatchets-under-50": "/images/heroes/best-camping-axes-hatchets-under-50.jpg",
   "how-to-keep-food-cold-camping": "/images/heroes/how-to-keep-food-cold-camping.jpg",
+  "best-camping-water-containers-jugs": "/images/heroes/best-camping-water-containers-jugs.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

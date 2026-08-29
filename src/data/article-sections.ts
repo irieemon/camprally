@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-water-containers-jugs": [
+    {
+      type: "product-grid",
+      title: "Best Camping Water Containers — Hauling and Storing Water at Camp — Quick Comparison",
+      items: [
+        { label: "Scepter Portable Military Style Water Storage Jug", category: "", icon: "🏕️", asin: "B001IV8IYA", link: "https://www.amazon.com/dp/B001IV8IYA?tag=camprally-20" },
+        { label: "kitchentoolz 2.5 Gallon Water Jug & Used Oil Container", category: "", icon: "🏕️", asin: "B0CDQL9WL3", link: "https://www.amazon.com/dp/B0CDQL9WL3?tag=camprally-20" },
+        { label: "Igloo Sports Cooler", category: "", icon: "🏕️", asin: "B08GVSXNPG", link: "https://www.amazon.com/dp/B08GVSXNPG?tag=camprally-20" },
+        { label: "Scepter 5 Gallon Military BPA Free Water Container", category: "", icon: "🏕️", asin: "B00ZLYUOP6", link: "https://www.amazon.com/dp/B00ZLYUOP6?tag=camprally-20" },
+        { label: "3 Gallon Water Jug", category: "", icon: "🏕️", asin: "B0FSSR8P9R", link: "https://www.amazon.com/dp/B0FSSR8P9R?tag=camprally-20" },
+        { label: "Hanaoyo 5 Gallon Portable Container with Touch Control Pump", category: "", icon: "🏕️", asin: "B0F9FMGSHM", link: "https://www.amazon.com/dp/B0F9FMGSHM?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-keep-food-cold-camping": [
     {
       type: "product-grid",
