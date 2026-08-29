@@ -541,7 +541,15 @@ if (pubCode !== EXIT.OK) {
 backfillPhotos("publish");
 
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
-sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables", "src/data/merch.json", "public/images/merch", "public/images/heroes", specPath]);
+/* hero-alt.json is in this list because publish-article.mjs WRITES it (see its
+ * "Hero alt text" block) and nothing else commits it. Leaving it out made every
+ * publish that produced a new alt string wedge the NEXT cycle: the file stayed
+ * modified, and the working-tree-dirty gate at the top of this file does not
+ * exclude it, so the following run refused to start. That is a self-blocking
+ * loop, and it had already been cleared by hand once (commit 41c6f12,
+ * "chore(hero-alt): add best-camping-hammocks-under-50") before anyone noticed
+ * it was structural rather than a one-off. */
+sh("git", ["add", "src/data/articles.ts", "src/data/heroes.ts", "src/data/article-sections.ts", "src/data/hero-alt.json", "src/app/blog/[slug]/page.tsx", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json", "src/data/printables.json", "public/images/printables", "src/data/merch.json", "public/images/merch", "public/images/heroes", specPath]);
 sh("git", ["commit", "-m",
   `Publish ${next.slug}\n\n` +
   `Generated from specs/${next.slug}.json. All affiliate ASINs verified live\n` +
