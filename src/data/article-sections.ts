@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-portable-camping-showers": [
+    {
+      type: "product-grid",
+      title: "Best Portable Camping Showers — Getting Clean Without a Bathhouse — Quick Comparison",
+      items: [
+        { label: "dessports Portable Camping Shower", category: "", icon: "🏕️", asin: "B0GGZLP17F", link: "https://www.amazon.com/dp/B0GGZLP17F?tag=camprally-20" },
+        { label: "Spopal Portable Shower for Camping", category: "", icon: "🏕️", asin: "B0DW3CH12Q", link: "https://www.amazon.com/dp/B0DW3CH12Q?tag=camprally-20" },
+        { label: "Portable Camping Shower with Water Jug", category: "", icon: "🏕️", asin: "B0GQZ2Y4Y4", link: "https://www.amazon.com/dp/B0GQZ2Y4Y4?tag=camprally-20" },
+        { label: "innhom Portable Camping Shower", category: "", icon: "🏕️", asin: "B0GTZFSF2C", link: "https://www.amazon.com/dp/B0GTZFSF2C?tag=camprally-20" },
+        { label: "vignuto Portable Shower for Camping", category: "", icon: "🏕️", asin: "B0DZPBH6V3", link: "https://www.amazon.com/dp/B0DZPBH6V3?tag=camprally-20" },
+        { label: "InkTrail Portable Camping Shower with Heater", category: "", icon: "🏕️", asin: "B0F1YJ6XDG", link: "https://www.amazon.com/dp/B0F1YJ6XDG?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-water-containers-jugs": [
     {
       type: "product-grid",
