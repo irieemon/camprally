@@ -10507,5 +10507,108 @@
         "ratingsTotal": 51
       }
     ]
+  },
+  "solar panel campsite|1|": {
+    "term": "solar panel campsite",
+    "min": 1,
+    "fetchedAt": "2026-08-31T13:00:38.918Z",
+    "results": [
+      {
+        "asin": "B0CR42CFJ9",
+        "title": "ZOUPW 100W Portable Solar Panel for Power Station,23.5% Efficiency Mono Foldable Solar Charger for Jackery 300/Ecoflow River/Anker/Bluetti,IP67 Waterproof for Camping RV Off-Grid Emergency Power",
+        "price": "$105.99",
+        "priceValue": 105.99,
+        "rating": 4.6,
+        "ratingsTotal": 707
+      },
+      {
+        "asin": "B0F4J9WFY8",
+        "title": "Renogy 200W Portable Solar Panel for Power Stations, 25% High Efficiency | N-Type 200W Solar Blanket, Backpack-Size Foldable Design Use Less Space, USB-A/Type-C Outputs for Camping, RV, SUV And Marine",
+        "price": "$237.99",
+        "priceValue": 237.99,
+        "rating": 4.6,
+        "ratingsTotal": 100
+      },
+      {
+        "asin": "B092872NYT",
+        "title": "MARBERO Portable Solar Panel 30W Solar Panel Charger 23% High Efficiency Foldable Solar Panels QC3.0 USB & DC Port Compatible with Cell Phone Ipad Laptop IP65 Waterproof for Camping Outdoor Cloudy",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.5,
+        "ratingsTotal": 1119
+      },
+      {
+        "asin": "B0DZ2GZHKD",
+        "title": "Renogy ShadowFlux Solar Panel 120 Watt, N-Type 25% High-Efficiency | 120W Solar Panel for RV Marine Rooftop Home, Optimized for Partial Shading from Trees, Roofs, Buildings, Leaves & Snow",
+        "price": "$128.99",
+        "priceValue": 128.99,
+        "rating": 4.5,
+        "ratingsTotal": 318
+      },
+      {
+        "asin": "B09H6GGK55",
+        "title": "FlexSolar 40W Foldable Solar Panel Charger, USB-C USB-A & DC Outputs | Waterproof portable solar charger for camping, hiking, backpacking; works with phones, power banks and tablets",
+        "price": "$53.98",
+        "priceValue": 53.98,
+        "rating": 4.4,
+        "ratingsTotal": 1298
+      },
+      {
+        "asin": "B0DX25J31F",
+        "title": "FlexSolar 100W Foldable Portable Solar Panel Charger IP67 Waterproof | with PD3.0 USB-C, QC3.0 USB-A & DC Ports; Emergency Power for Power Station, Phones, Power Banks Camping Outdoor Use",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.4,
+        "ratingsTotal": 307
+      },
+      {
+        "asin": "B0DK6TM95M",
+        "title": "200W Portable Solar Panel for Power Station, 24% High Efficiency ETFE Foldable Solar Panel Charger, QC3.0, Type-C 60W, MC4 Output, IP65 Waterproof, for Outdoor Camping, RV, Emergency Power Supply",
+        "price": "$189.99",
+        "priceValue": 189.99,
+        "rating": 4.4,
+        "ratingsTotal": 250
+      },
+      {
+        "asin": "B0DQ8LXXWK",
+        "title": "100W Portable Solar Panel CPC Material USB-C PD3.0 & 20V DC XT60 Anderson | Lightweight, Foldable, USB-A/C Fast Charging, 3m DC Cable, IP65 Waterproof for Camping, Power Station, Generator, Cell Phone",
+        "price": "$83.99",
+        "priceValue": 83.99,
+        "rating": 4.4,
+        "ratingsTotal": 123
+      },
+      {
+        "asin": "B0FMXG7Q5D",
+        "title": "FlexSolar 25W Portable Solar Panel Charger Built-in USB-A & USB-C Ports | Quick Charge , ultra-lightweight emergency charging power for hiking, backpacking, camping and outdoor",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.4,
+        "ratingsTotal": 97
+      },
+      {
+        "asin": "B0D6B5X2N9",
+        "title": "FlexSolar 60W Foldable Portable Solar Panel Charger IP67 Waterproof | with PD3.0 USB-C, QC3.0 USB-A & DC; Power Emergency Camping for Small Power Station Generator,Phones, Power Banks, Tablets",
+        "price": "$65.99",
+        "priceValue": 65.99,
+        "rating": 4.3,
+        "ratingsTotal": 277
+      },
+      {
+        "asin": "B0748FYFSK",
+        "title": "DOKIO 100W Portable Foldable Solar Panel Kit for 12V Battery Charging | Folds to 19 x 26 in and weighs 5.3 lb; includes controller and dual USB; for 12V batteries, power stations and camping.",
+        "price": "$68.77",
+        "priceValue": 68.77,
+        "rating": 4.2,
+        "ratingsTotal": 4026
+      },
+      {
+        "asin": "B0CHFM3V8Q",
+        "title": "Portable Solar Generator 300W Portable Power Station with 60W Solar Panel | 110V Pure Sine Wave 280Wh Battery Solar Power Pack with USB QC3.0 DC AC Outlet for Camping Smart Device RV Van Outdoor-Orange",
+        "price": "$169.97",
+        "priceValue": 169.97,
+        "rating": 4.1,
+        "ratingsTotal": 1960
+      }
+    ]
   }
 }
