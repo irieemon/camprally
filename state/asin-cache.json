@@ -844,13 +844,13 @@
     },
     "B08RBW95BC": {
       "verdict": "LIVE",
-      "checkedAt": "2026-08-24T10:37:00.176Z",
+      "checkedAt": "2026-08-31T13:00:00.234Z",
       "title": "BISINNA 2/4 Person Camping Tent Lightweight Waterproof Backpacking Tent Orange 4 Person",
       "price": "$81.89",
       "priceValue": 81.89,
       "rating": 4.6,
       "ratingsTotal": 2341,
-      "priceCheckedAt": "2026-08-24T10:37:00.176Z",
+      "priceCheckedAt": "2026-08-31T13:00:00.234Z",
       "priceSource": "canopy"
     },
     "B077Y8DLSN": {
@@ -911,12 +911,12 @@
     "B0CLWBTMBN": {
       "verdict": "LIVE",
       "title": "Columbia Newton Ridge Plus II Suede Waterproof 11 Elk/Mountain Red",
-      "checkedAt": "2026-08-24T10:37:00.176Z",
+      "checkedAt": "2026-08-31T13:00:00.234Z",
       "price": "$109.99",
       "priceValue": 109.99,
       "rating": 4.6,
-      "ratingsTotal": 4820,
-      "priceCheckedAt": "2026-08-24T10:37:00.176Z",
+      "ratingsTotal": 4824,
+      "priceCheckedAt": "2026-08-31T13:00:00.234Z",
       "priceSource": "canopy"
     },
     "B0987Z4CHV": {
@@ -955,12 +955,12 @@
     "B0CLVYVP56": {
       "verdict": "LIVE",
       "title": "Columbia Women's Newton Ridge Plus Waterproof Hiking Boots 8 Elk/River Blue",
-      "checkedAt": "2026-08-24T10:37:00.176Z",
+      "checkedAt": "2026-08-31T13:00:00.234Z",
       "price": "$109.00",
       "priceValue": 109,
       "rating": 4.6,
-      "ratingsTotal": 1939,
-      "priceCheckedAt": "2026-08-24T10:37:00.176Z",
+      "ratingsTotal": 1944,
+      "priceCheckedAt": "2026-08-31T13:00:00.234Z",
       "priceSource": "canopy"
     },
     "B01HO15DGS": {
@@ -3106,6 +3106,72 @@
       "rating": 4.5,
       "ratingsTotal": 346,
       "priceCheckedAt": "2026-08-30T13:00:20.978Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CR42CFJ9": {
+      "verdict": "LIVE",
+      "title": "ZOUPW 100W Portable Solar Panel for Power Station,23.5% Efficiency Mono Foldable Solar Charger for Jackery 300/Ecoflow River/Anker/Bluetti,IP67 Waterproof for Camping RV Off-Grid Emergency Power",
+      "checkedAt": "2026-08-31T13:00:45.183Z",
+      "price": "$105.99",
+      "priceValue": 105.99,
+      "rating": 4.6,
+      "ratingsTotal": 707,
+      "priceCheckedAt": "2026-08-31T13:00:45.183Z",
+      "priceSource": "canopy-search"
+    },
+    "B0F4J9WFY8": {
+      "verdict": "LIVE",
+      "title": "Renogy 200W Portable Solar Panel for Power Stations, 25% High Efficiency | N-Type 200W Solar Blanket, Backpack-Size Foldable Design Use Less Space, USB-A/Type-C Outputs for Camping, RV, SUV And Marine",
+      "checkedAt": "2026-08-31T13:00:45.183Z",
+      "price": "$237.99",
+      "priceValue": 237.99,
+      "rating": 4.6,
+      "ratingsTotal": 100,
+      "priceCheckedAt": "2026-08-31T13:00:45.183Z",
+      "priceSource": "canopy-search"
+    },
+    "B092872NYT": {
+      "verdict": "LIVE",
+      "title": "MARBERO Portable Solar Panel 30W Solar Panel Charger 23% High Efficiency Foldable Solar Panels QC3.0 USB & DC Port Compatible with Cell Phone Ipad Laptop IP65 Waterproof for Camping Outdoor Cloudy",
+      "checkedAt": "2026-08-31T13:00:45.183Z",
+      "price": "$39.99",
+      "priceValue": 39.99,
+      "rating": 4.5,
+      "ratingsTotal": 1119,
+      "priceCheckedAt": "2026-08-31T13:00:45.183Z",
+      "priceSource": "canopy-search"
+    },
+    "B0DZ2GZHKD": {
+      "verdict": "LIVE",
+      "title": "Renogy ShadowFlux Solar Panel 120 Watt, N-Type 25% High-Efficiency | 120W Solar Panel for RV Marine Rooftop Home, Optimized for Partial Shading from Trees, Roofs, Buildings, Leaves & Snow",
+      "checkedAt": "2026-08-31T13:00:45.183Z",
+      "price": "$128.99",
+      "priceValue": 128.99,
+      "rating": 4.5,
+      "ratingsTotal": 318,
+      "priceCheckedAt": "2026-08-31T13:00:45.183Z",
+      "priceSource": "canopy-search"
+    },
+    "B09H6GGK55": {
+      "verdict": "LIVE",
+      "title": "FlexSolar 40W Foldable Solar Panel Charger, USB-C USB-A & DC Outputs | Waterproof portable solar charger for camping, hiking, backpacking; works with phones, power banks and tablets",
+      "checkedAt": "2026-08-31T13:00:45.183Z",
+      "price": "$53.98",
+      "priceValue": 53.98,
+      "rating": 4.4,
+      "ratingsTotal": 1298,
+      "priceCheckedAt": "2026-08-31T13:00:45.183Z",
+      "priceSource": "canopy-search"
+    },
+    "B0DX25J31F": {
+      "verdict": "LIVE",
+      "title": "FlexSolar 100W Foldable Portable Solar Panel Charger IP67 Waterproof | with PD3.0 USB-C, QC3.0 USB-A & DC Ports; Emergency Power for Power Station, Phones, Power Banks Camping Outdoor Use",
+      "checkedAt": "2026-08-31T13:00:45.183Z",
+      "price": "$89.99",
+      "priceValue": 89.99,
+      "rating": 4.4,
+      "ratingsTotal": 307,
+      "priceCheckedAt": "2026-08-31T13:00:45.183Z",
       "priceSource": "canopy-search"
     }
   }

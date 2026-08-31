@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-solar-chargers-camping": [
+    {
+      type: "product-grid",
+      title: "Best Solar Chargers for Camping — What Actually Charges a Phone — Quick Comparison",
+      items: [
+        { label: "ZOUPW 100W Portable Solar Panel for Power Station", category: "", icon: "🏕️", asin: "B0CR42CFJ9", link: "https://www.amazon.com/dp/B0CR42CFJ9?tag=camprally-20" },
+        { label: "Renogy 200W Portable Solar Panel for Power Stations", category: "", icon: "🏕️", asin: "B0F4J9WFY8", link: "https://www.amazon.com/dp/B0F4J9WFY8?tag=camprally-20" },
+        { label: "MARBERO Portable Solar Panel 30W Solar Panel Charger 23%", category: "", icon: "🏕️", asin: "B092872NYT", link: "https://www.amazon.com/dp/B092872NYT?tag=camprally-20" },
+        { label: "Renogy ShadowFlux Solar Panel 120 Watt", category: "", icon: "🏕️", asin: "B0DZ2GZHKD", link: "https://www.amazon.com/dp/B0DZ2GZHKD?tag=camprally-20" },
+        { label: "FlexSolar 40W Foldable Solar Panel Charger", category: "", icon: "🏕️", asin: "B09H6GGK55", link: "https://www.amazon.com/dp/B09H6GGK55?tag=camprally-20" },
+        { label: "FlexSolar 100W Foldable Portable Solar Panel Charger IP67", category: "", icon: "🏕️", asin: "B0DX25J31F", link: "https://www.amazon.com/dp/B0DX25J31F?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-portable-camping-showers": [
     {
       type: "product-grid",

@@ -101,6 +101,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "how-to-keep-food-cold-camping": "/images/heroes/how-to-keep-food-cold-camping.jpg",
   "best-camping-water-containers-jugs": "/images/heroes/best-camping-water-containers-jugs.jpg",
   "best-portable-camping-showers": "/images/heroes/best-portable-camping-showers.jpg",
+  "best-solar-chargers-camping": "/images/heroes/best-solar-chargers-camping.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
