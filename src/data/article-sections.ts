@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-weather-radios-camping": [
+    {
+      type: "product-grid",
+      title: "Best Weather Radios for Camping — Knowing the Storm Is Coming — Quick Comparison",
+      items: [
+        { label: "Emergency Weather Radio", category: "", icon: "🏕️", asin: "B0F6XTY612", link: "https://www.amazon.com/dp/B0F6XTY612?tag=camprally-20" },
+        { label: "Weather Radios Portable AM FM NOAA Alert with Battery Backup", category: "", icon: "🏕️", asin: "B0F4QVQPH3", link: "https://www.amazon.com/dp/B0F4QVQPH3?tag=camprally-20" },
+        { label: "Emergency Weather Radio with Large Solar Panel", category: "", icon: "🏕️", asin: "B0F4XKLQDK", link: "https://www.amazon.com/dp/B0F4XKLQDK?tag=camprally-20" },
+        { label: "FosPower NOAA Emergency Weather Radio A1 7400mWh Solar Hand", category: "", icon: "🏕️", asin: "B07FKYHTWP", link: "https://www.amazon.com/dp/B07FKYHTWP?tag=camprally-20" },
+        { label: "Esky Emergency Hand Crank Radio 7400mWh with 3 LED", category: "", icon: "🏕️", asin: "B018I4BPNU", link: "https://www.amazon.com/dp/B018I4BPNU?tag=camprally-20" },
+        { label: "Emergency Radio Hand Crank Solar", category: "", icon: "🏕️", asin: "B0F1CHFBG7", link: "https://www.amazon.com/dp/B0F1CHFBG7?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-solar-chargers-camping": [
     {
       type: "product-grid",
