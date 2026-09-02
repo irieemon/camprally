@@ -2,6 +2,8 @@
 
 import { useMemo, useState, Fragment } from "react";
 import { Search, X } from "lucide-react";
+import { useSearchIndex } from "@/lib/useSearchIndex";
+import { search as matchArticles } from "@/lib/search";
 
 export interface BlogGridItem {
   slug: string;
@@ -44,6 +46,15 @@ export interface BlogGridItem {
  * Category filtering deliberately does NOT live here — it is real navigation to
  * /blog/category/<slug>, so each category is a URL that can rank rather than a
  * setState that cannot.
+ *
+ * SEARCH: same matcher, same index as the header search box (src/lib/search.ts,
+ * public/search-index.json), restricted to the slugs this grid is already
+ * showing — so a category hub only ever searches its own category. The index
+ * is not fetched until the user actually types something (see useSearchIndex),
+ * and until it resolves, the FIRST keystroke falls back to the old
+ * title/excerpt substring check rather than showing a stale "0 guides" while
+ * the fetch is in flight. Once the index lands, every keystroke after that
+ * searches article bodies too, not just title and excerpt.
  */
 export default function BlogGrid({
   items,
@@ -54,15 +65,32 @@ export default function BlogGrid({
   emptyHref?: string;
 }) {
   const [search, setSearch] = useState("");
+  const hasQuery = search.trim().length > 0;
+  const { index } = useSearchIndex(hasQuery);
+
+  const onlySlugs = useMemo(() => new Set(items.map((i) => i.slug)), [items]);
 
   const visible = useMemo(() => {
-    const q = search.trim().toLowerCase();
+    const q = search.trim();
     if (!q) return items;
-    return items.filter(
-      (i) =>
-        i.title.toLowerCase().includes(q) || i.excerpt.toLowerCase().includes(q),
+
+    if (!index) {
+      // The index hasn't resolved yet (typically just the first keystroke).
+      // Same substring check this component always used, so search still
+      // works instantly and upgrades to full-text once the fetch lands.
+      const lower = q.toLowerCase();
+      return items.filter(
+        (i) => i.title.toLowerCase().includes(lower) || i.excerpt.toLowerCase().includes(lower),
+      );
+    }
+
+    const order = new Map(
+      matchArticles(index, q, { onlySlugs }).map((r, i) => [r.slug, i]),
     );
-  }, [items, search]);
+    return items
+      .filter((i) => order.has(i.slug))
+      .sort((a, b) => order.get(a.slug)! - order.get(b.slug)!);
+  }, [items, search, index, onlySlugs]);
 
   return (
     <>
