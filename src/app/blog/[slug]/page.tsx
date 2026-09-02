@@ -13,6 +13,7 @@ import { articleProductListNode, breadcrumbNode } from "@/lib/structured-data";
 import { groupSlugForCategory } from "@/data/categories";
 import { printableRelevance, printableOverrides } from "@/data/printable-relevance";
 import { relevantPrintable } from "@/lib/printable-relevance";
+import { computeKeepReading, type KeepReadingTarget } from "@/lib/internal-links";
 /* Badge and the Card family used to build the hero label and the sidebar
  * panels. Both are now plain markup — an eyebrow and border-topped blocks —
  * so the shadcn wrappers are no longer imported here. */
@@ -33,7 +34,24 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-
+/**
+ * The "keep reading" allocation, computed ONCE at module scope over the
+ * whole corpus rather than per page render — see src/lib/internal-links.ts.
+ * Shared by the sidebar's "Related guides" list and the end-of-body "Keep
+ * reading" block below, so both surfaces agree.
+ */
+const keepReadingBySlug = computeKeepReading(
+  articles.map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    excerpt: a.excerpt,
+    category: a.category,
+    groupSlug: groupSlugForCategory(a.category),
+    date: a.date,
+    id: a.id,
+    content: a.content,
+  })),
+);
 
 
 
@@ -364,6 +382,38 @@ function TableSection({ title, rows }: { title?: string; rows?: string[][] }) {
             ))}
           </tbody>
         </table>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * "Keep reading" — the 3 targets from the global internal-link allocation
+ * (src/lib/internal-links.ts), rendered as real server-side `<Link>`s at the
+ * end of the body, after the last section and before the closing "Shop the
+ * gear we recommend" CTA. Plain React, not injected HTML: it sits outside
+ * `processMarkdown`'s output entirely, so none of the markdown-reshaping
+ * passes above need to know about it.
+ */
+function KeepReadingSection({ targets }: { targets: KeepReadingTarget[] }) {
+  if (!targets.length) return null;
+  return (
+    <div className="mt-14 border-t-2 border-camp-green pt-8">
+      <p className="eyebrow mb-5 text-foreground">Keep reading</p>
+      <div className="grid gap-4 sm:grid-cols-3">
+        {targets.map((t) => (
+          <Link
+            key={t.slug}
+            href={`/blog/${t.slug}`}
+            className="group flex flex-col gap-1.5 border border-camp-stone bg-camp-bone p-4 transition-colors hover:border-camp-green"
+          >
+            <span className="eyebrow text-camp-green">{t.category}</span>
+            <span className="text-[0.9375rem] font-semibold leading-snug text-foreground transition-colors group-hover:text-camp-green">
+              {t.title}
+            </span>
+            <span className="line-clamp-2 text-meta text-muted-foreground">{t.excerpt}</span>
+          </Link>
+        ))}
       </div>
     </div>
   );
@@ -880,9 +930,10 @@ export default async function ArticlePage({ params }: Props) {
   const article = articles.find((a) => a.slug === slug);
   if (!article) notFound();
 
-  const related = articles
-    .filter((a) => a.slug !== slug && a.category === article.category)
-    .slice(0, 3);
+  /* Global allocation from src/lib/internal-links.ts — see the module-scope
+   * comment above. Same 3 targets feed both the sidebar and the end-of-body
+   * "Keep reading" block below, so the two never disagree. */
+  const related: KeepReadingTarget[] = keepReadingBySlug.get(slug) ?? [];
 
   /* The printable (if any) src/lib/printable-relevance.ts judged relevant to
    * THIS guide — computed once and shared by the sidebar slot and the inline
@@ -1111,6 +1162,8 @@ export default async function ArticlePage({ params }: Props) {
             className="prose prose-stone max-w-[68ch] prose-headings:font-display prose-headings:tracking-tight prose-h2:mt-12 prose-h2:mb-4 prose-h2:text-h2 prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-h3 prose-p:text-[1.0625rem] prose-p:leading-[1.7] prose-a:text-camp-green prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-li:text-[1.0625rem] prose-li:leading-[1.7] prose-li:mb-1.5 prose-ul:my-4 prose-ol:my-4 prose-blockquote:border-camp-green prose-blockquote:not-italic"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
+
+          <KeepReadingSection targets={related} />
 
           {/* Bottom CTA */}
           <div className="mt-14 border border-camp-stone bg-camp-bone p-8">
