@@ -22,6 +22,18 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-choose-a-campsite": [
+    {
+      type: "product-grid",
+      title: "How to Choose a Campsite — The Ten Minutes That Decide Your Night — Quick Comparison",
+      items: [
+        { label: "Camping And Woodcraft Volume 1", category: "", icon: "🏕️", asin: "1643890824", link: "https://www.amazon.com/dp/1643890824?tag=camprally-20" },
+        { label: "Free and Super Cheap Camping in California and Oregon: Two", category: "", icon: "🏕️", asin: "B0GS5MJ9YV", link: "https://www.amazon.com/dp/B0GS5MJ9YV?tag=camprally-20" },
+        { label: "National Forest Camping: Directory of 4", category: "", icon: "🏕️", asin: "1885464851", link: "https://www.amazon.com/dp/1885464851?tag=camprally-20" },
+        { label: "National Forest Camping", category: "", icon: "🏕️", asin: "1885464800", link: "https://www.amazon.com/dp/1885464800?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-weather-radios-camping": [
     {
       type: "product-grid",

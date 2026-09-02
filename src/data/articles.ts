@@ -4992,6 +4992,98 @@ Whichever you choose, do one thing before your first trip: program the radio to 
 *Related guides: [Affordable Rain Gear for Camping](/blog/affordable-rain-gear-camping) · [How to Camp in Rain and Still Have a Great Time](/blog/how-to-camp-in-rain) · [Best Solar Chargers for Camping — What Actually Charges a Phone](/blog/best-solar-chargers-camping)*
     `
   },
+
+  {
+    id: "art-058",
+    slug: "how-to-choose-a-campsite",
+    title: "How to Choose a Campsite — The Ten Minutes That Decide Your Night",
+    excerpt: "Learn the four-factor checklist for choosing a dry, safe, sheltered tent spot and avoid the drainage, overhead, and wind traps that ruin a night's sleep outdoors.",
+    category: "Skills",
+    date: "2026-09-02",
+    author: "Camp Rally Team",
+    readTime: "8 min read",
+    content: `
+# How to Choose a Campsite — The Ten Minutes That Decide Your Night
+
+The campsite you pick decides the weather you sleep through, the sleep you actually get, and the morning you wake up to. Most campers spend forty minutes choosing a tent and ten seconds choosing the patch of ground it sits on. Flip that ratio. Ten careful minutes of scouting beats any gear upgrade you can buy, because the best tent in the world cannot drain a puddle, dodge a falling branch, or block a steady wind for you.
+
+## What "Good" Actually Means at a Campsite
+
+A good tent spot is the intersection of four things: dry ground, a safe overhead, manageable wind, and useful morning sun. Get two out of four and you'll be uncomfortable. Get three and you'll sleep well. Get all four and you'll wonder why more campers don't take the time.
+
+Everything else — flat ground, privacy, a view, distance from the neighbors — is a bonus stacked on top of those four. Never trade a drainage problem for a view. Never trade a safe overhead for a flat tent pad. The ground is a survival decision. The view is a luxury.
+
+## How to Choose a Campsite: The Field Checklist
+
+Walk the loop twice if you have the time. The first lap is reconnaissance. The second lap is committing.
+
+### Drainage First, Always
+
+Rain finds the lowest point, so the lowest point is where the puddle forms. You want the high ground, not the summit — but you want ground that water will flow past, not collect on. Look for a gentle rise, a slight slope, a spot between two rises, or a bench above a wash. In established campgrounds, look for the existing tent pads. They were usually chosen for drainage on purpose.
+
+If the soil is dark, smooth, and completely free of vegetation, you are probably standing in a seasonal water path or a dried pool. Move. If you can press your heel into the surface and see standing water climb back up, the water table is high — expect moisture even without rain.
+
+A subtle slope is actually your friend. Pitch the tent with the head uphill, and a light rain will run under and past the floor rather than pool against it. Two degrees of tilt is plenty.
+
+### Look Up: Widowmakers and Leaners
+
+This is the step most beginners skip, and it's the step that matters most.
+
+"widowmaker" is the campcraft term for any dead branch, rotting limb, or hanging piece of wood that could fall in wind. Look up and study every tree within striking distance of your tent. Pay particular attention to anything dead, broken, or hanging by a thread. A sixty-foot limb that breaks off in a midnight gust will go through a tent floor, a sleeping bag, and a person without slowing down. If you can see it, a storm will find it.
+
+Healthy trees are safer than dead ones, but even healthy trees drop branches occasionally. Lean-aways — trees leaning out over the tent — are worse than lean-tos, because the wind pushes them the way they're already going. Forested edges are often worse than open woods because edges catch wind unevenly, and trees along the edges are the ones that go first.
+
+If you can hear a tree creaking before you even commit to the spot, walk on.
+
+### Wind, Slope, and the Door Orientation
+
+Wind matters twice: for storm resilience and for cooking comfort. Avoid the obvious wind tunnel — a gap between two hills, a saddle, the open mouth of a valley. These funnel wind and almost always catch it from more than one direction across a night. A solid mid-slope position with some ground shelter behind you is usually calmer than the exposed meadow.
+
+Where you point your tent door is a quiet, underused trick. The ideal setup is a door that faces away from prevailing wind, opens toward morning sun, and lets you see something pleasant from your pillow. Many tents are designed so the rain fly covers the door, but the door swing still affects how wind hits the mesh panels. A south or east door in many regions catches the morning sun and dries dew off the tent early.
+
+In a busy area, orient the door slightly downhill and toward the kitchen area, but never block a trail or a water source.
+
+### Morning Sun vs. Tree Shade
+
+A campsite that catches the first hour of sun dries dew, warms the tent, and makes the morning coffee routine feel civilized. A campsite in deep all-day shade stays damp, holds condensation, and feels cold long after sunrise has technically arrived. If you camp in the shoulder seasons, sun is everything.
+
+In summer, the equation flips. Full shade during midday keeps you cooler and reduces condensation problems. Choose based on your climate. Either way, picture the sun's arc across the sky from where you are standing, not from where you are right now.
+
+## What to Avoid (Beyond the Obvious)
+
+A few ground rules that hold almost everywhere:
+
+- Avoid the actual low point of any terrain feature. Avoid the actual high point if it's exposed and windy. The middle slopes are almost always right.
+- Avoid camping directly under the crown of a single isolated tree. Avoid the dead tree everyone is using for shade.
+- Avoid game trails and obvious bedding spots. Pine or grass flattened in a smooth oval shape is wildlife sign, not a great tent pad.
+- Avoid the space directly uphill from where you would filter water, wash dishes, or go to the bathroom, even in dispersed camping. Gravity is not your friend.
+- Avoid pitching the tent on a perfectly smooth, hard surface like flat rock or bare, compacted dirt — both shed water poorly and offer no drainage under the floor.
+- In established campgrounds, avoid the very last site at the end of a road or loop, and avoid any site with a posted "flood warning" note.
+- Keep all food, trash, and anything scented stored in your vehicle, a bear box, or a hang — never in the tent itself. Food in the tent attracts wildlife and turns a good campsite into a problem one.
+
+## Choose a Spot, Then Commit
+
+Once you commit, stop second-guessing. Don't pop the tent up, look around, decide you don't like it, and walk it back down. Pick the spot, set up, and spend your scouting energy on the details that matter — staking the corners, clearing pinecones that will press through the floor, organizing the vestibule.
+
+A campsite chosen quickly and confidently always sleeps better than one chosen anxiously and changed three times.
+
+## What to Read Before You Go
+
+The best campsite pickers are people who've camped in many places, in many weathers. Reading counts. The classic wilderness library is a great place to start. **[Check the Camping And Woodcraft Volume 1 - The Expanded 1916 Version (Legacy Edition) on Amazon](https://www.amazon.com/dp/1643890824?tag=camprally-20)** is the grandfather of American campcraft writing, and the chapters on camp selection still read like field notes from someone who slept on a lot of ground. Pair that with a current directory and you cover the wisdom plus the where.
+
+If you're camping on federal land in the West, **[Check the Free and Super Cheap Camping in California and Oregon on Amazon](https://www.amazon.com/dp/B0GS5MJ9YV?tag=camprally-20)** is exactly what its title says: a state-by-state, region-by-region guide to sites that are either free or under a small fee, including national forest, BLM, and county land. The short descriptions tell you what to expect at each spot, which is half the battle. For a wider net, **[Check the National Forest Camping: Directory of 4,108 Designated Camping Areas at 141 Forests in 42 States on Amazon](https://www.amazon.com/dp/1885464851?tag=camprally-20)** gives you every developed national forest campground in the country, with the practical info — number of sites, water availability, season — that the agency websites bury. If you want one general book on the same subject, **[Check the National Forest Camping on Amazon](https://www.amazon.com/dp/1885464800?tag=camprally-20)** for a friendlier, more curated read on the same network of land.
+
+A guidebook does not pick your tent pad for you, but it gets you to the right area, on the right road, with the right expectations — and that is most of the work.
+
+## The Verdict
+
+Choose in this order, every time, regardless of where you're camping: drainage first, overhead second, wind third, sun fourth. Flat ground and a pretty view are nice. They are also the two things you can always modify later with a shovel and a closed flap. Drainage you cannot fix mid-rain. Widowmakers you cannot fix mid-storm.
+
+Spend ten minutes. Look up. Look down. Look at where the water will go. Pick a spot. Pitch the tent. The rest of the night is downhill.
+
+*Related guides: [How to Camp in Rain and Still Have a Great Time](/blog/how-to-camp-in-rain) · [Dispersed Camping for Beginners — How to Camp Free on Public Land](/blog/dispersed-camping-beginners-guide) · [How to Find Free Campsites](/blog/how-to-find-free-campsites)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

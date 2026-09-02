@@ -3,6 +3,110 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "birch-grove-hammock",
+      "name": "Birch Grove Hammock",
+      "subtitle": "an afternoon that goes nowhere",
+      "image": "/images/merch/birch-grove-hammock.jpg",
+      "imageKey": "6a9707fcc791d091aa3658ca::2026-09-01T17:14:56.876Z::Natural|Sand|Light Blue",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-09-01T17:15:41.475Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/31536579",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/31536584",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/31536592",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/31536599",
+          "priceCents": 2799,
+          "price": "$27.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/31536605",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": false
+        }
+      ]
+    },
+    {
+      "slug": "harvest-moon-ridge",
+      "name": "Harvest Moon Ridge",
+      "subtitle": "the biggest moon of the year",
+      "image": "/images/merch/harvest-moon-ridge.jpg",
+      "imageKey": "6a9707b94eae91651703f551::2026-09-01T17:13:53.556Z::Natural|Sand|Light Blue",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-09-01T17:14:34.925Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/31536535",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/31536550",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/31536553",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/31536564",
+          "priceCents": 2799,
+          "price": "$27.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/31536571",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": false
+        }
+      ]
+    },
+    {
       "slug": "river-rapids-camp",
       "name": "River Rapids Camp",
       "subtitle": "falling asleep to moving water",
