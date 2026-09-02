@@ -367,6 +367,166 @@ function TableSection({ title, rows }: { title?: string; rows?: string[][] }) {
 }
 
 // ─────────────────────────────────────────
+// PRODUCT IMAGES IN THE BODY
+// ─────────────────────────────────────────
+/* Product photos inside the article body.
+ *
+ * Until now a product's photo appeared only in the "Quick Comparison" grid at
+ * the top of the page — the body section that actually discusses the product
+ * (its own h3, a few paragraphs, the buy CTA) showed no image at all. This
+ * pass finds the same affiliate links the CTA passes below act on and drops
+ * the catalog photo in beside the prose that discusses that product, once,
+ * at the heading (or paragraph) where the product is first mentioned.
+ *
+ * Runs BEFORE the CTA passes, on the untouched markdown-to-HTML output, so it
+ * sees headings and paragraphs in their original shape — including the "link
+ * embedded in the heading" and "bare URL in the heading" shapes those passes
+ * go on to rewrite. The tile it inserts sits outside any <h2>/<h3>/<p> tag (a
+ * standalone `not-prose` <a>…</a>), so none of the passes below — which all
+ * key on tag boundaries — see it or mistake it for a second CTA.
+ *
+ * Placement rule:
+ *  - One heading, one product (the common shape: "### Klein Tools 55600 Work
+ *    Cooler" followed by prose and a trailing CTA link) → the tile goes right
+ *    after that heading, which IS the section for that product.
+ *  - One heading, several products (older articles that link products from
+ *    paragraphs under a single h2, no h3 per product) → the heading isn't
+ *    "its own" for any one of them, so each product's tile goes immediately
+ *    before the paragraph that first links it.
+ *  - No enclosing heading, or the link never appears inside a <p> (only ever
+ *    in heading text) → falls back to the nearest anchor point that does
+ *    exist, rather than dropping the image.
+ *
+ * Deduped by ASIN across the whole body — a product mentioned twice only
+ * gets its photo once, at the first mention. Products with no catalog entry
+ * or no catalog photo are skipped outright — never an empty tile.
+ */
+const AMZN_URL_IN_TEXT = /https:\/\/www\.amazon\.com\/[^\s"<]*?tag=camprally-20[^\s"<]*/g;
+
+function escapeAttr(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function productImageTile(image: string, url: string, title: string): string {
+  // Floats beside the prose on wider screens (~10rem, left margin); on mobile
+  // it just stacks in reading order, centered and capped at the same width
+  // rather than stretching edge to edge.
+  return (
+    `<a href="${escapeAttr(url)}" target="_blank" rel="nofollow noopener sponsored" ` +
+    `class="not-prose mx-auto mb-4 block w-full max-w-[10rem] sm:float-right sm:ml-6 sm:mb-2 sm:mt-1 sm:w-[10rem] sm:max-w-none">` +
+    `<div class="product-tile aspect-square w-full">` +
+    `<img src="${escapeAttr(image)}" alt="${escapeAttr(title)}" class="size-full object-contain p-2" loading="lazy" /></div></a>`
+  );
+}
+
+function insertProductImages(htmlContent: string): string {
+  type Hit = { asin: string; image: string; url: string; title: string; index: number };
+
+  const hitsIn = (start: number, end: number): Hit[] => {
+    const text = htmlContent.slice(start, end);
+    const out: Hit[] = [];
+    for (const m of text.matchAll(AMZN_URL_IN_TEXT)) {
+      const product = productFor(m[0]);
+      if (!product?.image) continue;
+      out.push({
+        asin: product.asin,
+        image: product.image,
+        url: product.url,
+        title: product.title,
+        index: start + (m.index ?? 0),
+      });
+    }
+    return out;
+  };
+
+  // Every top-level paragraph range, so a "before the paragraph" placement
+  // can find the specific <p> that contains a given hit. Same negative-
+  // lookahead shape as the CTA passes below, for the same reason: a lazy
+  // `[\s\S]*?` prefix would cross `</p>` boundaries and swallow whole
+  // sections.
+  const paragraphs = [...htmlContent.matchAll(/<p>(?:(?!<\/p>)[\s\S])*<\/p>/g)].map((m) => ({
+    start: m.index ?? 0,
+    end: (m.index ?? 0) + m[0].length,
+  }));
+  const paragraphContaining = (index: number) =>
+    paragraphs.find((p) => index >= p.start && index < p.end);
+
+  const headings = [...htmlContent.matchAll(/<h[23][^>]*>[\s\S]*?<\/h[23]>/g)].map((m) => ({
+    start: m.index ?? 0,
+    end: (m.index ?? 0) + m[0].length,
+  }));
+
+  // Sections run from one h2/h3 to the next (of either level) or EOF, plus a
+  // headless prefix section for any content before the first heading.
+  type Section = { headingEnd: number | null; start: number; end: number };
+  const sections: Section[] = [];
+  if (!headings.length || headings[0].start > 0) {
+    sections.push({
+      headingEnd: null,
+      start: 0,
+      end: headings.length ? headings[0].start : htmlContent.length,
+    });
+  }
+  headings.forEach((h, i) => {
+    sections.push({
+      headingEnd: h.end,
+      start: h.start,
+      end: i + 1 < headings.length ? headings[i + 1].start : htmlContent.length,
+    });
+  });
+
+  const used = new Set<string>();
+  const insertions: { at: number; markup: string }[] = [];
+
+  for (const section of sections) {
+    const hits = hitsIn(section.start, section.end);
+    const distinct: Hit[] = [];
+    const seenHere = new Set<string>();
+    for (const hit of hits) {
+      if (seenHere.has(hit.asin)) continue;
+      seenHere.add(hit.asin);
+      distinct.push(hit);
+    }
+    if (!distinct.length) continue;
+
+    for (const hit of distinct) {
+      if (used.has(hit.asin)) continue;
+      used.add(hit.asin);
+      const markup = productImageTile(hit.image, hit.url, hit.title);
+
+      // A heading with exactly one product IS that product's section.
+      if (section.headingEnd !== null && distinct.length === 1) {
+        insertions.push({ at: section.headingEnd, markup });
+        continue;
+      }
+      // Several products under one heading (or no heading at all): anchor to
+      // the paragraph that actually names this product.
+      const para = paragraphContaining(hit.index);
+      if (para) {
+        insertions.push({ at: para.start, markup });
+      } else if (section.headingEnd !== null) {
+        insertions.push({ at: section.headingEnd, markup });
+      } else {
+        insertions.push({ at: section.start, markup });
+      }
+    }
+  }
+
+  // Apply back-to-front so an earlier insertion's length never shifts a
+  // later insertion's recorded offset.
+  insertions.sort((a, b) => b.at - a.at);
+  let out = htmlContent;
+  for (const { at, markup } of insertions) {
+    out = out.slice(0, at) + markup + out.slice(at);
+  }
+  return out;
+}
+
+// ─────────────────────────────────────────
 // MARKDOWN PROCESSOR
 // ─────────────────────────────────────────
 async function processMarkdown(
@@ -381,6 +541,10 @@ async function processMarkdown(
   // The hero banner already renders the title — a body-leading H1 duplicated
   // it as the first line of every generated article.
   htmlContent = htmlContent.replace(/^\s*<h1>[\s\S]*?<\/h1>\s*/, "");
+
+  // Body product photos, before any of the CTA passes reshape headings and
+  // paragraphs. See insertProductImages() above for the placement rule.
+  htmlContent = insertProductImages(htmlContent);
 
   /* One product, one button.
    *
