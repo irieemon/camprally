@@ -289,7 +289,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-camping-knife": [
     {
       type: "product-grid",
-      title: "Best Budget Camping Knife — Quick Comparison",
+      title: "Best Budget Camping Knife Under $30 for Camp Chores — Quick Comparison",
       items: [
         { label: "Morakniv Companion Fixed Blade Outdoor Knife with Stainless", category: "", icon: "🏕️", asin: "B094D5QJV5", link: "https://www.amazon.com/dp/B094D5QJV5?tag=camprally-20" },
         { label: "Amazon Basics 8-in-1 Stainless Steel Multitool with Safety", category: "", icon: "🏕️", asin: "B07TQ86781", link: "https://www.amazon.com/dp/B07TQ86781?tag=camprally-20" },
@@ -355,7 +355,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-sleeping-pads-under-50": [
     {
       type: "product-grid",
-      title: "Best Budget Sleeping Pads Under $50 — Quick Comparison",
+      title: "Best Budget Sleeping Pads Under $50: Backpacking & Car Camping — Quick Comparison",
       items: [
         { label: "HIKENTURE Ultralight Camping Sleeping Pad", category: "", icon: "🏕️", asin: "B09YY89GT6", link: "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20" },
         { label: "Amazon Basics Camping Sleeping Pad with Quick-Inflate", category: "", icon: "🏕️", asin: "B0FD97YGX6", link: "https://www.amazon.com/dp/B0FD97YGX6?tag=camprally-20" },
@@ -586,7 +586,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-trekking-poles": [
     {
       type: "product-grid",
-      title: "Best Budget Trekking Poles Under $40 — Worth It or Waste? — Quick Comparison",
+      title: "Best Budget Hiking & Trekking Poles Under $40 — Quick Comparison",
       items: [
         { label: "TrailBuddy Trekking Poles", category: "", icon: "🏕️", asin: "B01MRQCENJ", link: "https://www.amazon.com/dp/B01MRQCENJ?tag=camprally-20" },
         { label: "KINGGEAR Trekking Poles 7075 Aluminum Lightweight Hiking", category: "", icon: "🏕️", asin: "B08DNR9ZQQ", link: "https://www.amazon.com/dp/B08DNR9ZQQ?tag=camprally-20" },
@@ -695,7 +695,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "how-to-camp-in-rain": [
     {
       type: "product-grid",
-      title: "How to Camp in Rain and Still Have a Great Time — Quick Comparison",
+      title: "How to Camp in the Rain: Setup, Packing & Staying Dry — Quick Comparison",
       items: [
         { label: "Emergency Blanket Mylar Thermal Space Survival Gear", category: "", icon: "🏕️", asin: "B098KJMMGC", link: "https://www.amazon.com/dp/B098KJMMGC?tag=camprally-20" },
         { label: "FREE SOLDIER Waterproof Camping Tarp Shelter Awning Brown", category: "", icon: "🏕️", asin: "B01HO15DGS", link: "https://www.amazon.com/dp/B01HO15DGS?tag=camprally-20" },
