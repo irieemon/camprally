@@ -150,6 +150,11 @@ export function groupBySlug(slug: string): CategoryGroup | undefined {
   return categoryGroups.find((g) => g.slug === slug);
 }
 
+/** The group slug a raw article `category` rolls up into, if any. */
+export function groupSlugForCategory(category: string): string | undefined {
+  return categoryGroups.find((g) => g.members.includes(category))?.slug;
+}
+
 /**
  * Does an article belong under this `?category=` value?
  *

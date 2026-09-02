@@ -77,6 +77,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...categoryPages,
+    { url: `${BASE_URL}/printables`, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${BASE_URL}/merch`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/privacy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE_URL}/terms`, changeFrequency: "yearly", priority: 0.3 },

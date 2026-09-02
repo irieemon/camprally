@@ -5,11 +5,14 @@ import { remark } from "remark";
 import html from "remark-html";
 import { articles, lastChanged } from "@/data/articles";
 import NewsletterForm from "@/components/NewsletterForm";
-import { PrintableSidebarCard } from "@/components/Printables";
+import { PrintableSidebarCard, printables, type Printable } from "@/components/Printables";
 import { MerchSidebarCard, merchDesigns, stableIndex } from "@/components/Merch";
 import { SITE_URL } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { articleProductListNode, breadcrumbNode } from "@/lib/structured-data";
+import { groupSlugForCategory } from "@/data/categories";
+import { printableRelevance, printableOverrides } from "@/data/printable-relevance";
+import { relevantPrintable } from "@/lib/printable-relevance";
 /* Badge and the Card family used to build the hero label and the sidebar
  * panels. Both are now plain markup — an eyebrow and border-topped blocks —
  * so the shadcn wrappers are no longer imported here. */
@@ -527,10 +530,64 @@ function insertProductImages(htmlContent: string): string {
 }
 
 // ─────────────────────────────────────────
+// RELATED PRINTABLE, INLINE IN THE BODY
+// ─────────────────────────────────────────
+/* One compact "Related printable" block, at most once per article, for the
+ * printable src/lib/printable-relevance.ts judged relevant to THIS guide.
+ * Runs on the same untouched, pre-CTA-pass html insertProductImages() runs
+ * on and for the same reason: it is a standalone `not-prose` block, so none
+ * of the heading/paragraph-reshaping passes below it can see it or mistake
+ * it for a CTA they should touch.
+ *
+ * Placement: right before the SECOND <h2> — i.e. after the first section's
+ * content ends — once the article has at least three h2 sections (the same
+ * "does this article have enough structure to interrupt" threshold the
+ * table of contents below already uses). A thinner article instead gets the
+ * block right before its FINAL <h2>, so it never lands stranded after all
+ * the content with nothing following it; an article with no h2 at all gets
+ * it appended to the end of the body.
+ */
+function relatedPrintableBlock(p: Printable): string {
+  const thumb = p.image
+    ? `<div class="relative size-16 shrink-0 overflow-hidden bg-camp-bone sm:size-20">` +
+      `<img src="${escapeAttr(p.image)}" alt="${escapeAttr(p.title)}" ` +
+      `class="size-full object-cover object-[center_78%]" loading="lazy" /></div>`
+    : "";
+  return (
+    `<div class="not-prose my-8 flex items-center gap-4 border border-camp-stone bg-camp-bone p-4 sm:p-5">` +
+    thumb +
+    `<div class="min-w-0 flex-1">` +
+    `<p class="eyebrow mb-1 text-camp-green">Related printable</p>` +
+    `<p class="text-[0.9375rem] font-semibold leading-snug text-foreground">${escapeAttr(p.title)}</p>` +
+    `<p class="line-clamp-1 text-meta text-muted-foreground">${escapeAttr(p.subtitle)}</p>` +
+    `</div>` +
+    `<a href="${escapeAttr(p.url)}" target="_blank" rel="noopener" ` +
+    `class="shrink-0 inline-flex h-10 items-center gap-1.5 bg-camp-ember px-4 text-[0.875rem] font-semibold text-white no-underline transition-colors hover:bg-camp-ember-deep">` +
+    `${escapeAttr(p.price)}</a></div>`
+  );
+}
+
+function insertRelatedPrintable(htmlContent: string, printable: Printable | null): string {
+  if (!printable) return htmlContent;
+  const h2s = [...htmlContent.matchAll(/<h2[^>]*>[\s\S]*?<\/h2>/g)].map((m) => m.index ?? 0);
+  let at: number;
+  if (h2s.length >= 3) {
+    at = h2s[1]; // end of the first section, before the second h2
+  } else if (h2s.length >= 1) {
+    at = h2s[h2s.length - 1]; // right before the final h2
+  } else {
+    at = htmlContent.length; // no headings at all — append to the body
+  }
+  const markup = relatedPrintableBlock(printable);
+  return htmlContent.slice(0, at) + markup + htmlContent.slice(at);
+}
+
+// ─────────────────────────────────────────
 // MARKDOWN PROCESSOR
 // ─────────────────────────────────────────
 async function processMarkdown(
   content: string,
+  relatedPrintable: Printable | null,
 ): Promise<{ html: string; toc: { text: string; id: string }[] }> {
   const trimmed = content.trim();
   const processed = await remark()
@@ -545,6 +602,10 @@ async function processMarkdown(
   // Body product photos, before any of the CTA passes reshape headings and
   // paragraphs. See insertProductImages() above for the placement rule.
   htmlContent = insertProductImages(htmlContent);
+
+  // The one relevant-printable block, same reasoning: before any CTA pass
+  // reshapes headings/paragraphs. See insertRelatedPrintable() above.
+  htmlContent = insertRelatedPrintable(htmlContent, relatedPrintable);
 
   /* One product, one button.
    *
@@ -823,7 +884,23 @@ export default async function ArticlePage({ params }: Props) {
     .filter((a) => a.slug !== slug && a.category === article.category)
     .slice(0, 3);
 
-  const { html: contentHtml, toc } = await processMarkdown(article.content);
+  /* The printable (if any) src/lib/printable-relevance.ts judged relevant to
+   * THIS guide — computed once and shared by the sidebar slot and the inline
+   * body block below, so the two agree and the scorer runs only once. */
+  const relatedPrintable = relevantPrintable(
+    {
+      slug: article.slug,
+      title: article.title,
+      excerpt: article.excerpt,
+      content: article.content,
+      groupSlug: groupSlugForCategory(article.category),
+    },
+    printables,
+    printableRelevance,
+    printableOverrides,
+  );
+
+  const { html: contentHtml, toc } = await processMarkdown(article.content, relatedPrintable);
   const customSections = getCustomSections(slug);
   const heroImage = getHeroImage(slug);
 
@@ -1128,8 +1205,15 @@ export default async function ArticlePage({ params }: Props) {
                 Two rails share the one slot instead of taking one each. Three
                 stacked asks — printable, shirt, newsletter — is how a sidebar
                 stops being read at all, and the split is by slug so a given
-                article shows the same thing on every build. */}
-            {merchDesigns.length > 0 && stableIndex(slug, 2) === 1 ? (
+                article shows the same thing on every build.
+
+                A printable judged relevant to THIS guide overrides that
+                split outright — it is a stronger pick than an arbitrary
+                merch/printable alternation, so it always wins the slot when
+                one exists. Absent a match, behaviour is exactly what it was. */}
+            {relatedPrintable ? (
+              <PrintableSidebarCard printable={relatedPrintable} reason="Made for this guide" />
+            ) : merchDesigns.length > 0 && stableIndex(slug, 2) === 1 ? (
               <MerchSidebarCard slug={slug} />
             ) : (
               <PrintableSidebarCard />

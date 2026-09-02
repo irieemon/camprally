@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import printablesData from "@/data/printables.json";
 
-type Printable = {
+export type Printable = {
   slug: string;
   title: string;
   subtitle: string;
@@ -50,6 +50,56 @@ function Art({ p, className = "" }: { p: Printable; className?: string }) {
   );
 }
 
+/**
+ * The product grid — one implementation shared by the homepage band
+ * (`PrintablesSection`) and the standalone `/printables` page, so the two
+ * cannot render different cards for the same catalogue.
+ */
+export function PrintablesGrid({ items = printables }: { items?: Printable[] }) {
+  if (!items.length) return null;
+  return (
+    /* Three columns once the catalogue can fill them. Below that the grid is
+       capped instead, so two products sit as two cards of a normal width
+       rather than leaving a dead third column beside them. */
+    <div
+      className={`grid gap-6 sm:grid-cols-2 ${
+        items.length < 3 ? "max-w-3xl" : "lg:grid-cols-3"
+      }`}
+    >
+      {items.map((p) => (
+        <a
+          key={p.slug}
+          href={p.url}
+          target="_blank"
+          rel={REL}
+          data-printable={p.slug}
+          className="group flex flex-col overflow-hidden border border-camp-stone bg-card transition-colors hover:border-camp-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camp-green"
+        >
+          <Art p={p} className="aspect-[4/3] w-full" />
+          <div className="flex flex-1 flex-col gap-2 p-5">
+            <h3 className="text-h3 text-balance text-foreground">{p.title}</h3>
+            <p className="line-clamp-2 text-meta text-muted-foreground">
+              {p.subtitle}
+            </p>
+            <div className="mt-auto flex items-baseline justify-between gap-3 pt-3">
+              <span className="font-display text-lg font-bold tracking-tight text-camp-ember">
+                {p.price}
+              </span>
+              <span className="text-meta text-muted-foreground">
+                {p.pages ? `${p.pages} pages · PDF` : "PDF"}
+              </span>
+            </div>
+          </div>
+          <span className="flex items-center justify-center gap-2 bg-camp-ember py-3 text-[0.9375rem] font-semibold text-white transition-colors group-hover:bg-camp-ember-deep">
+            Get it for {p.price}
+            <ArrowRight className="size-4" />
+          </span>
+        </a>
+      ))}
+    </div>
+  );
+}
+
 /** Full-width band for the home page. */
 export function PrintablesSection() {
   if (!printables.length) return null;
@@ -78,46 +128,7 @@ export function PrintablesSection() {
           </a>
         </div>
 
-        {/* Three columns once the catalogue can fill them. Below that the grid
-            is capped instead, so two products sit as two cards of a normal
-            width rather than leaving a dead third column beside them. There are
-            14 more products queued, so this reverts to a full row on its own. */}
-        <div
-          className={`grid gap-6 sm:grid-cols-2 ${
-            printables.length < 3 ? "max-w-3xl" : "lg:grid-cols-3"
-          }`}
-        >
-          {printables.map((p) => (
-            <a
-              key={p.slug}
-              href={p.url}
-              target="_blank"
-              rel={REL}
-              data-printable={p.slug}
-              className="group flex flex-col overflow-hidden border border-camp-stone bg-card transition-colors hover:border-camp-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camp-green"
-            >
-              <Art p={p} className="aspect-[4/3] w-full" />
-              <div className="flex flex-1 flex-col gap-2 p-5">
-                <h3 className="text-h3 text-balance text-foreground">{p.title}</h3>
-                <p className="line-clamp-2 text-meta text-muted-foreground">
-                  {p.subtitle}
-                </p>
-                <div className="mt-auto flex items-baseline justify-between gap-3 pt-3">
-                  <span className="font-display text-lg font-bold tracking-tight text-camp-ember">
-                    {p.price}
-                  </span>
-                  <span className="text-meta text-muted-foreground">
-                    {p.pages ? `${p.pages} pages · PDF` : "PDF"}
-                  </span>
-                </div>
-              </div>
-              <span className="flex items-center justify-center gap-2 bg-camp-ember py-3 text-[0.9375rem] font-semibold text-white transition-colors group-hover:bg-camp-ember-deep">
-                Get it for {p.price}
-                <ArrowRight className="size-4" />
-              </span>
-            </a>
-          ))}
-        </div>
+        <PrintablesGrid />
       </div>
     </section>
   );
@@ -126,13 +137,21 @@ export function PrintablesSection() {
 /**
  * Single-product block for the article sidebar.
  *
- * Shows the cheapest printable rather than the newest: the sidebar is an
- * impulse slot next to a reader who came for gear advice, and the lowest ticket
- * is the least friction. With one slot and a growing catalogue this stays
- * deterministic without anybody maintaining a list.
+ * Defaults to the cheapest printable — the sidebar is an impulse slot next to
+ * a reader who came for gear advice, and the lowest ticket is the least
+ * friction. A caller (the guide page) may instead pass the printable its
+ * relevance scorer picked for THIS article, in which case the eyebrow says so
+ * rather than repeating the generic store label.
  */
-export function PrintableSidebarCard() {
-  const p = [...printables].sort((a, b) => a.priceCents - b.priceCents)[0];
+export function PrintableSidebarCard({
+  printable,
+  reason,
+}: {
+  printable?: Printable;
+  /** Shown as the eyebrow instead of "CampRally printables" when set. */
+  reason?: string;
+} = {}) {
+  const p = printable ?? [...printables].sort((a, b) => a.priceCents - b.priceCents)[0];
   if (!p) return null;
 
   return (
@@ -145,7 +164,9 @@ export function PrintableSidebarCard() {
     >
       <Art p={p} className="aspect-[4/3] w-full" />
       <div className="p-5">
-        <p className="eyebrow mb-2 text-camp-green">CampRally printables</p>
+        <p className="eyebrow mb-2 text-camp-green">
+          {reason ?? "CampRally printables"}
+        </p>
         <h3 className="text-[1.0625rem] font-semibold leading-snug text-foreground">
           {p.title}
         </h3>

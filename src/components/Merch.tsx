@@ -74,13 +74,78 @@ function Art({ d, className = "" }: { d: MerchDesign; className?: string }) {
 }
 
 /**
- * Full-width band for the home page.
+ * The design grid — one implementation shared by the homepage band
+ * (`MerchSection`) and the standalone `/merch` page.
  *
  * One card per design rather than per product: there are 25 products but only
  * five paintings, so a product grid would show each image five times. The
  * per-product links live inside the card, which keeps every SKU one click away
  * without repeating the art.
  */
+export function MerchGrid({ items = merchDesigns }: { items?: MerchDesign[] }) {
+  if (!items.length) return null;
+  return (
+    /* Matches the printables grid, including its cap: below three designs the
+       row is narrowed rather than left with a dead third column. */
+    <div
+      className={`grid gap-6 sm:grid-cols-2 ${
+        items.length < 3 ? "max-w-3xl" : "lg:grid-cols-3"
+      }`}
+    >
+      {items.map((d) => {
+        const hero = teeOf(d);
+        return (
+          /* Not a single <a> wrapper, unlike a printable card: a design is
+             five separate products and each needs its own link, which
+             cannot nest inside an anchor. */
+          <div
+            key={d.slug}
+            className="group flex flex-col overflow-hidden border border-camp-stone bg-card transition-colors hover:border-camp-green"
+          >
+            <a
+              href={hero.url}
+              target="_blank"
+              rel={REL}
+              data-merch={`${d.slug}:${hero.kind}`}
+              aria-label={`${d.name} — ${hero.label}`}
+              className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camp-green"
+            >
+              <Art d={d} className="aspect-[4/3] w-full" />
+            </a>
+            <div className="flex flex-1 flex-col gap-2 p-5">
+              <h3 className="text-h3 text-balance text-foreground">{d.name}</h3>
+              {d.subtitle && (
+                <p className="line-clamp-2 text-meta text-muted-foreground first-letter:uppercase">
+                  {d.subtitle}
+                </p>
+              )}
+              <ul className="mt-auto flex flex-wrap gap-1.5 pt-4">
+                {d.products.map((p) => (
+                  <li key={p.kind}>
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel={REL}
+                      data-merch={`${d.slug}:${p.kind}`}
+                      className="inline-flex items-baseline gap-1.5 border border-camp-stone px-2.5 py-1.5 text-[0.8125rem] leading-none text-muted-foreground transition-colors hover:border-camp-green hover:text-camp-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camp-green"
+                    >
+                      {p.label}
+                      <span className="font-display font-bold tracking-tight text-camp-ember">
+                        {priceLabel(p)}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/** Full-width band for the home page. */
 export function MerchSection() {
   if (!merchDesigns.length) return null;
 
@@ -108,63 +173,7 @@ export function MerchSection() {
           </a>
         </div>
 
-        {/* Matches the printables grid, including its cap: below three designs
-            the row is narrowed rather than left with a dead third column. */}
-        <div
-          className={`grid gap-6 sm:grid-cols-2 ${
-            merchDesigns.length < 3 ? "max-w-3xl" : "lg:grid-cols-3"
-          }`}
-        >
-          {merchDesigns.map((d) => {
-            const hero = teeOf(d);
-            return (
-              /* Not a single <a> wrapper, unlike a printable card: a design is
-                 five separate products and each needs its own link, which
-                 cannot nest inside an anchor. */
-              <div
-                key={d.slug}
-                className="group flex flex-col overflow-hidden border border-camp-stone bg-card transition-colors hover:border-camp-green"
-              >
-                <a
-                  href={hero.url}
-                  target="_blank"
-                  rel={REL}
-                  data-merch={`${d.slug}:${hero.kind}`}
-                  aria-label={`${d.name} — ${hero.label}`}
-                  className="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camp-green"
-                >
-                  <Art d={d} className="aspect-[4/3] w-full" />
-                </a>
-                <div className="flex flex-1 flex-col gap-2 p-5">
-                  <h3 className="text-h3 text-balance text-foreground">{d.name}</h3>
-                  {d.subtitle && (
-                    <p className="line-clamp-2 text-meta text-muted-foreground first-letter:uppercase">
-                      {d.subtitle}
-                    </p>
-                  )}
-                  <ul className="mt-auto flex flex-wrap gap-1.5 pt-4">
-                    {d.products.map((p) => (
-                      <li key={p.kind}>
-                        <a
-                          href={p.url}
-                          target="_blank"
-                          rel={REL}
-                          data-merch={`${d.slug}:${p.kind}`}
-                          className="inline-flex items-baseline gap-1.5 border border-camp-stone px-2.5 py-1.5 text-[0.8125rem] leading-none text-muted-foreground transition-colors hover:border-camp-green hover:text-camp-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camp-green"
-                        >
-                          {p.label}
-                          <span className="font-display font-bold tracking-tight text-camp-ember">
-                            {priceLabel(p)}
-                          </span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <MerchGrid />
       </div>
     </section>
   );

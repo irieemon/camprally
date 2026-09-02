@@ -22,6 +22,8 @@ const navLinks = [
   { href: "/blog/category/sleep", label: "Sleep" },
   { href: "/blog/category/cooking", label: "Cooking" },
   { href: "/blog/category/planning", label: "Tips" },
+  { href: "/printables", label: "Printables" },
+  { href: "/merch", label: "Merch" },
   { href: "/about", label: "About" },
 ]
 
@@ -59,7 +61,14 @@ export default function Navigation() {
         </Link>
 
         <div className="flex flex-1 items-center justify-end gap-4 sm:flex-none sm:gap-6">
-          <ul className="hidden items-center gap-7 md:flex">
+          {/* Breakpoint is lg, not md. Eight links plus the search control
+              measure to roughly 725px of content, which does not fit the
+              ~586px available at a 768px (md) viewport once the wordmark and
+              search control are accounted for — verified by summing rendered
+              link-text + padding widths, not by loading a browser. It fits
+              comfortably at 1024px (lg), so the hamburger now covers md as
+              well as everything below it, rather than dropping a link. */}
+          <ul className="hidden items-center gap-7 lg:flex">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <Link
@@ -78,7 +87,7 @@ export default function Navigation() {
             className={searchOpen ? "flex-1 sm:flex-none" : "flex-none"}
           />
 
-          <div className={cn("md:hidden", searchOpen && "hidden sm:block")}>
+          <div className={cn("lg:hidden", searchOpen && "hidden sm:block")}>
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger
                 render={
