@@ -10737,5 +10737,44 @@
         "ratingsTotal": 279
       }
     ]
+  },
+  "campsite selection forest|1|": {
+    "term": "campsite selection forest",
+    "min": 1,
+    "fetchedAt": "2026-09-02T13:05:03.986Z",
+    "results": [
+      {
+        "asin": "1643890824",
+        "title": "Camping And Woodcraft Volume 1 - The Expanded 1916 Version (Legacy Edition): The Deluxe Masterpiece On Outdoors Living And Wilderness Travel (Library of American Outdoors Classics)",
+        "price": "$18.59",
+        "priceValue": 18.59,
+        "rating": 4.9,
+        "ratingsTotal": 107
+      },
+      {
+        "asin": "B0GS5MJ9YV",
+        "title": "Free and Super Cheap Camping in California and Oregon: Two Hundred Five Star Campsites for National Forest Camping, Bureau of Land Management, Federal, State, County, RV Camping, Tent Camping, Boondoc",
+        "price": "$20.95",
+        "priceValue": 20.95,
+        "rating": 4.9,
+        "ratingsTotal": 101
+      },
+      {
+        "asin": "1885464851",
+        "title": "National Forest Camping: Directory of 4,108 Designated Camping Areas at 141 Forests in 42 States",
+        "price": "$22.95",
+        "priceValue": 22.95,
+        "rating": 4.6,
+        "ratingsTotal": 251
+      },
+      {
+        "asin": "1885464800",
+        "title": "National Forest Camping",
+        "price": "$19.80",
+        "priceValue": 19.8,
+        "rating": 4.4,
+        "ratingsTotal": 373
+      }
+    ]
   }
 }
