@@ -121,11 +121,21 @@ function ComboboxItem({ className, ...props }: ComboboxPrimitive.Item.Props) {
   )
 }
 
+/**
+ * Base UI ALWAYS renders this element (see node_modules/@base-ui/react/
+ * combobox/empty/ComboboxEmpty.js) — it only conditionally sets its
+ * CHILDREN to null once `filteredItems.length > 0`, never unmounts the
+ * `<div>` itself. React renders a `null` child as literally nothing, so the
+ * element has zero child nodes in that state — which `:empty` detects
+ * correctly. Without `empty:hidden` here, the element's own py-8 padding
+ * still took up space with no content inside it: a 64px dead band above the
+ * result list every time there were results to show.
+ */
 function ComboboxEmpty({ className, ...props }: ComboboxPrimitive.Empty.Props) {
   return (
     <ComboboxPrimitive.Empty
       data-slot="combobox-empty"
-      className={cn("px-4 py-8 text-center text-meta text-muted-foreground", className)}
+      className={cn("empty:hidden px-4 py-8 text-center text-meta text-muted-foreground", className)}
       {...props}
     />
   )
