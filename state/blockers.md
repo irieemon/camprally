@@ -195,3 +195,16 @@ erally cheaper than silk and many synthetics, but thermals/synthetic and silk ar
   · note (1/3): Fleece liners typically add roughly 10-15°F of effective warmth, not >20°F; overstating the boost can lead campers to under-prepare for cold and risk hypothermia.
   · note (1/3): Quality synthetic insulated liners cost more than basic silk liners, so the claim that synthetics cost less than silk is false.
 
+
+## 2026-09-03T13:00:00.166Z — content-review
+
+Content review rejected car-camping-vs-backpacking (attempt 1 of 2).
+Spec quarantined to specs/quarantine/car-camping-vs-backpacking-2026-09-03T13-00-00-166Z.json
+
+
+car-camping-vs-backpacking
+  ✗ [critical] combustion-in-shelter (body)
+      puts a combustion source inside a tent or vehicle — carbon monoxide kills campers every year
+      "Fuel, Water, and Sanitation In a vehicle, hauling five gallons of fresh water and a full-size propane tank is standard practice."
+  (model review unavailable — deterministic rules only)
+
