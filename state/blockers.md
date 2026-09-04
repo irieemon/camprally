@@ -208,3 +208,16 @@ car-camping-vs-backpacking
       "Fuel, Water, and Sanitation In a vehicle, hauling five gallons of fresh water and a full-size propane tank is standard practice."
   (model review unavailable — deterministic rules only)
 
+
+## 2026-09-04T13:00:00.168Z — content-review
+
+Content review rejected car-camping-vs-backpacking (attempt 2 of 2).
+Spec quarantined to specs/quarantine/car-camping-vs-backpacking-2026-09-04T13-00-00-168Z.json
+
+
+car-camping-vs-backpacking
+  ✗ [critical] combustion-in-shelter (body)
+      puts a combustion source inside a tent or vehicle — carbon monoxide kills campers every year
+      "While a lightweight sleeping bag works fine in a car, trying to haul a heavy steel stove or a thick folding cot into the backcountry quickly leads to misery."
+  (model review unavailable — deterministic rules only)
+
