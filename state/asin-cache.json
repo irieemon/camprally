@@ -1,6 +1,39 @@
 {
   "version": 1,
   "entries": {
+    "1426220103": {
+      "verdict": "LIVE",
+      "title": "100 Parks, 5,000 Ideas: Where to Go, When to Go, What to See, What to Do",
+      "checkedAt": "2026-09-05T13:00:36.397Z",
+      "price": "$14.25",
+      "priceValue": 14.25,
+      "rating": 4.8,
+      "ratingsTotal": 5289,
+      "priceCheckedAt": "2026-09-05T13:00:36.397Z",
+      "priceSource": "canopy-search"
+    },
+    "1426221665": {
+      "verdict": "LIVE",
+      "title": "National Geographic Guide to National Parks of the United States 9th Edition",
+      "checkedAt": "2026-09-05T13:00:36.397Z",
+      "price": "$15.79",
+      "priceValue": 15.79,
+      "rating": 4.7,
+      "ratingsTotal": 1688,
+      "priceCheckedAt": "2026-09-05T13:00:36.397Z",
+      "priceSource": "canopy-search"
+    },
+    "1426222335": {
+      "verdict": "LIVE",
+      "title": "National Geographic Complete National Parks of the United States, 3rd Edition: 400+ Parks, Monuments, Battlefields, Historic Sites, Scenic Trails, Recreation Areas, and Seashores",
+      "checkedAt": "2026-09-05T13:00:36.397Z",
+      "price": "$19.79",
+      "priceValue": 19.79,
+      "rating": 4.7,
+      "ratingsTotal": 1384,
+      "priceCheckedAt": "2026-09-05T13:00:36.397Z",
+      "priceSource": "canopy-search"
+    },
     "1441331913": {
       "verdict": "LIVE",
       "title": "Packing List - Note Pad (60 sheets)",
@@ -1328,14 +1361,14 @@
     },
     "B0DB4W8FB1": {
       "verdict": "LIVE",
-      "title": "HOSHANHO Butcher Knife Set, Sharp Kitchen Knife Set & Roll Bag Gift for Men 6.5\"",
-      "checkedAt": "2026-08-29T10:37:00.184Z",
-      "price": "$207.99",
-      "priceValue": 207.99,
-      "rating": 4.7,
-      "ratingsTotal": 1379,
-      "priceCheckedAt": "2026-08-29T10:37:00.184Z",
-      "priceSource": "canopy"
+      "title": "HOSHANHO Butcher Knife Set, Sharp Kitchen Knife Set & Roll Bag Gift for Men",
+      "checkedAt": "2026-09-05T13:00:00.307Z",
+      "price": "$119.98",
+      "priceValue": 119.98,
+      "rating": 4.4,
+      "ratingsTotal": 97,
+      "priceCheckedAt": "2026-09-05T13:00:00.307Z",
+      "priceSource": "amazon-direct"
     },
     "B0DPW7RFC7": {
       "verdict": "LIVE",
@@ -3337,6 +3370,39 @@
       "rating": 4.5,
       "ratingsTotal": 1281,
       "priceCheckedAt": "2026-09-04T13:03:04.526Z",
+      "priceSource": "canopy-search"
+    },
+    "196005306X": {
+      "verdict": "LIVE",
+      "title": "Danger in Zion National Park: A Mystery Adventure (National Park Mystery Series)",
+      "checkedAt": "2026-09-05T13:00:36.397Z",
+      "price": "$12.99",
+      "priceValue": 12.99,
+      "rating": 4.8,
+      "ratingsTotal": 946,
+      "priceCheckedAt": "2026-09-05T13:00:36.397Z",
+      "priceSource": "canopy-search"
+    },
+    "098971165X": {
+      "verdict": "LIVE",
+      "title": "Mystery In Rocky Mountain National Park (National Park Mystery Series)",
+      "checkedAt": "2026-09-05T13:00:36.397Z",
+      "price": "$8.70",
+      "priceValue": 8.7,
+      "rating": 4.7,
+      "ratingsTotal": 2385,
+      "priceCheckedAt": "2026-09-05T13:00:36.397Z",
+      "priceSource": "canopy-search"
+    },
+    "B09WHKKMGD": {
+      "verdict": "LIVE",
+      "title": "Grand Teton Stampede (The Campground Kids: National Park Adventures)",
+      "checkedAt": "2026-09-05T13:00:36.397Z",
+      "price": "$10.99",
+      "priceValue": 10.99,
+      "rating": 4.7,
+      "ratingsTotal": 687,
+      "priceCheckedAt": "2026-09-05T13:00:36.397Z",
       "priceSource": "canopy-search"
     }
   }

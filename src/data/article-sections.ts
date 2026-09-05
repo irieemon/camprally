@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "national-park-camping-reservations": [
+    {
+      type: "product-grid",
+      title: "How to Actually Get a National Park Campsite — Quick Comparison",
+      items: [
+        { label: "100 Parks, 5,000 Ideas: Where to Go, When to Go, What", category: "", icon: "🏕️", asin: "1426220103", link: "https://www.amazon.com/dp/1426220103?tag=camprally-20" },
+        { label: "Danger in Zion National Park: A Mystery Adventure", category: "", icon: "🏕️", asin: "196005306X", link: "https://www.amazon.com/dp/196005306X?tag=camprally-20" },
+        { label: "Mystery In Rocky Mountain National Park", category: "", icon: "🏕️", asin: "098971165X", link: "https://www.amazon.com/dp/098971165X?tag=camprally-20" },
+        { label: "National Geographic Guide to National Parks of the United", category: "", icon: "🏕️", asin: "1426221665", link: "https://www.amazon.com/dp/1426221665?tag=camprally-20" },
+        { label: "National Geographic Complete National Parks of the United", category: "", icon: "🏕️", asin: "1426222335", link: "https://www.amazon.com/dp/1426222335?tag=camprally-20" },
+        { label: "Grand Teton Stampede", category: "", icon: "🏕️", asin: "B09WHKKMGD", link: "https://www.amazon.com/dp/B09WHKKMGD?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-choose-a-campsite": [
     {
       type: "product-grid",
