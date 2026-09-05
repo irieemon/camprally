@@ -11095,5 +11095,124 @@
         "ratingsTotal": 398
       }
     ]
+  },
+  "national park campground|1|": {
+    "term": "national park campground",
+    "min": 1,
+    "fetchedAt": "2026-09-05T13:00:18.291Z",
+    "results": [
+      {
+        "asin": "1426220103",
+        "title": "100 Parks, 5,000 Ideas: Where to Go, When to Go, What to See, What to Do",
+        "price": "$14.25",
+        "priceValue": 14.25,
+        "rating": 4.8,
+        "ratingsTotal": 5289
+      },
+      {
+        "asin": "196005306X",
+        "title": "Danger in Zion National Park: A Mystery Adventure (National Park Mystery Series)",
+        "price": "$12.99",
+        "priceValue": 12.99,
+        "rating": 4.8,
+        "ratingsTotal": 946
+      },
+      {
+        "asin": "098971165X",
+        "title": "Mystery In Rocky Mountain National Park (National Park Mystery Series)",
+        "price": "$8.70",
+        "priceValue": 8.7,
+        "rating": 4.7,
+        "ratingsTotal": 2385
+      },
+      {
+        "asin": "1426221665",
+        "title": "National Geographic Guide to National Parks of the United States 9th Edition",
+        "price": "$15.79",
+        "priceValue": 15.79,
+        "rating": 4.7,
+        "ratingsTotal": 1688
+      },
+      {
+        "asin": "1426222335",
+        "title": "National Geographic Complete National Parks of the United States, 3rd Edition: 400+ Parks, Monuments, Battlefields, Historic Sites, Scenic Trails, Recreation Areas, and Seashores",
+        "price": "$19.79",
+        "priceValue": 19.79,
+        "rating": 4.7,
+        "ratingsTotal": 1384
+      },
+      {
+        "asin": "B09WHKKMGD",
+        "title": "Grand Teton Stampede (The Campground Kids: National Park Adventures)",
+        "price": "$10.99",
+        "priceValue": 10.99,
+        "rating": 4.7,
+        "ratingsTotal": 687
+      },
+      {
+        "asin": "B0FN7PXC2K",
+        "title": "LET'S WANDER National Parks Water Bottle Bundle with 63 Stunning Stickers | Painstakingly Hand Designed, 63 Waterproof Stickers, 32oz Leakproof Insulated Stainless Steel Gift Pack",
+        "price": "$39.95",
+        "priceValue": 39.95,
+        "rating": 4.7,
+        "ratingsTotal": 607
+      },
+      {
+        "asin": "1426220855",
+        "title": "National Geographic Secrets of the National Parks, 2nd Edition: The Experts' Guide to the Best Experiences Beyond the Tourist Trail",
+        "price": "$12.36",
+        "priceValue": 12.36,
+        "rating": 4.7,
+        "ratingsTotal": 354
+      },
+      {
+        "asin": "1885464851",
+        "title": "National Forest Camping: Directory of 4,108 Designated Camping Areas at 141 Forests in 42 States",
+        "price": "$22.95",
+        "priceValue": 22.95,
+        "rating": 4.6,
+        "ratingsTotal": 251
+      },
+      {
+        "asin": "1728262593",
+        "title": "Where Should We Camp Next?: National Parks: The Best Campgrounds and Unique Outdoor Accommodations In and Around National Parks, Seashores, Monuments, and More",
+        "price": "$10.67",
+        "priceValue": 10.67,
+        "rating": 4.5,
+        "ratingsTotal": 335
+      },
+      {
+        "asin": "1838699856",
+        "title": "Lonely Planet Utah's National Parks: Zion, Bryce Canyon, Arches, Canyonlands & Capitol Reef (National Parks Guide)",
+        "price": "$13.59",
+        "priceValue": 13.59,
+        "rating": 4.5,
+        "ratingsTotal": 85
+      },
+      {
+        "asin": "B0FMR9F8Y9",
+        "title": "USA National Parks with Your RV: The Complete Atlas of RV-Friendly Adventures, Campgrounds & Dump Stations With Full-Color Maps, and Real Stories from ... All 63 National Parks (The Carters Guides)",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.4,
+        "ratingsTotal": 115
+      },
+      {
+        "asin": "1426222173",
+        "title": "50 States, 500 Campgrounds: Where to Go, When to Go, What to See, What to Do (5,000 Ideas)",
+        "price": "$16.85",
+        "priceValue": 16.85,
+        "rating": 4.2,
+        "ratingsTotal": 519
+      },
+      {
+        "asin": "B0F18GLC7Q",
+        "title": "The RVers National Parks Bible: From Acadia’s Coast to Zion’s Cliffs • A Definitive Guide to RVing in All 63 U.S. National Parks, Featuring 500+ of the Most Scenic and Iconic Campgrounds.",
+        "price": "$24.87",
+        "priceValue": 24.87,
+        "rating": 4.2,
+        "ratingsTotal": 106
+      }
+    ]
   }
 }
