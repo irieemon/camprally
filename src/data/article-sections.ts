@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-pillows-budget": [
+    {
+      type: "product-grid",
+      title: "Best Camping Pillows — The $20 Upgrade That Fixes Your Sleep — Quick Comparison",
+      items: [
+        { label: "Klymit Drift Camping Pillow", category: "", icon: "🏕️", asin: "B081ZZVH3M", link: "https://www.amazon.com/dp/B081ZZVH3M?tag=camprally-20" },
+        { label: "1 MIDDLE ONE Travel Pillow for Sleeping Camping", category: "", icon: "🏕️", asin: "B0DZHLNM69", link: "https://www.amazon.com/dp/B0DZHLNM69?tag=camprally-20" },
+        { label: "Memory Foam Camping Pillow for Backpacking and Travel", category: "", icon: "🏕️", asin: "B0DX6XLGY3", link: "https://www.amazon.com/dp/B0DX6XLGY3?tag=camprally-20" },
+        { label: "Coop Home Goods Original Travel and Camping Adjustable", category: "", icon: "🏕️", asin: "B015D8XIDY", link: "https://www.amazon.com/dp/B015D8XIDY?tag=camprally-20" },
+        { label: "ACCURATEX Camping Pillow", category: "", icon: "🏕️", asin: "B0CGZLRJ27", link: "https://www.amazon.com/dp/B0CGZLRJ27?tag=camprally-20" },
+        { label: "Inflatable Camping Pillow", category: "", icon: "🏕️", asin: "B0FH1H21XX", link: "https://www.amazon.com/dp/B0FH1H21XX?tag=camprally-20" },
+      ]
+    },
+  ],
   "national-park-camping-reservations": [
     {
       type: "product-grid",
