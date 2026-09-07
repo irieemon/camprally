@@ -899,13 +899,13 @@
     },
     "B08RBW95BC": {
       "verdict": "LIVE",
-      "checkedAt": "2026-08-31T13:00:00.234Z",
+      "checkedAt": "2026-09-07T13:00:00.241Z",
       "title": "BISINNA 2/4 Person Camping Tent Lightweight Waterproof Backpacking Tent Orange 4 Person",
-      "price": "$81.89",
-      "priceValue": 81.89,
+      "price": "$90.99",
+      "priceValue": 90.99,
       "rating": 4.6,
-      "ratingsTotal": 2341,
-      "priceCheckedAt": "2026-08-31T13:00:00.234Z",
+      "ratingsTotal": 2345,
+      "priceCheckedAt": "2026-09-07T13:00:00.241Z",
       "priceSource": "canopy"
     },
     "B077Y8DLSN": {
@@ -966,12 +966,12 @@
     "B0CLWBTMBN": {
       "verdict": "LIVE",
       "title": "Columbia Newton Ridge Plus II Suede Waterproof 11 Elk/Mountain Red",
-      "checkedAt": "2026-08-31T13:00:00.234Z",
+      "checkedAt": "2026-09-07T13:00:00.241Z",
       "price": "$109.99",
       "priceValue": 109.99,
       "rating": 4.6,
-      "ratingsTotal": 4824,
-      "priceCheckedAt": "2026-08-31T13:00:00.234Z",
+      "ratingsTotal": 4832,
+      "priceCheckedAt": "2026-09-07T13:00:00.241Z",
       "priceSource": "canopy"
     },
     "B0987Z4CHV": {
@@ -1010,12 +1010,12 @@
     "B0CLVYVP56": {
       "verdict": "LIVE",
       "title": "Columbia Women's Newton Ridge Plus Waterproof Hiking Boots 8 Elk/River Blue",
-      "checkedAt": "2026-08-31T13:00:00.234Z",
-      "price": "$109.00",
-      "priceValue": 109,
+      "checkedAt": "2026-09-07T13:00:00.241Z",
+      "price": "$109.99",
+      "priceValue": 109.99,
       "rating": 4.6,
-      "ratingsTotal": 1944,
-      "priceCheckedAt": "2026-08-31T13:00:00.234Z",
+      "ratingsTotal": 1956,
+      "priceCheckedAt": "2026-09-07T13:00:00.241Z",
       "priceSource": "canopy"
     },
     "B01HO15DGS": {
@@ -3469,6 +3469,72 @@
       "rating": 4.6,
       "ratingsTotal": 159,
       "priceCheckedAt": "2026-09-06T13:05:26.398Z",
+      "priceSource": "canopy-search"
+    },
+    "B000CE8RLS": {
+      "verdict": "LIVE",
+      "title": "Silky Professional BIGBOY Folding Saw 360mm Large Teeth (354-36)",
+      "checkedAt": "2026-09-07T13:02:57.697Z",
+      "price": "$98.99",
+      "priceValue": 98.99,
+      "rating": 4.9,
+      "ratingsTotal": 643,
+      "priceCheckedAt": "2026-09-07T13:02:57.697Z",
+      "priceSource": "canopy-search"
+    },
+    "B0001IX7OW": {
+      "verdict": "LIVE",
+      "title": "Bahco BAH396LAP Laplander Folding Saw, 7-1/2\" Blade, Ergo Grip, Green | Trail Maintenance, Wood Processing And Camping Use, Rust Protected Blade, Secure Lock, Fast Cutting Action, Outdoor Tool",
+      "checkedAt": "2026-09-07T13:02:57.697Z",
+      "price": "$20.43",
+      "priceValue": 20.43,
+      "rating": 4.8,
+      "ratingsTotal": 5617,
+      "priceCheckedAt": "2026-09-07T13:02:57.697Z",
+      "priceSource": "canopy-search"
+    },
+    "B0014CA3JQ": {
+      "verdict": "LIVE",
+      "title": "Silky Professional BIGBOY 2000 Folding Saw 360mm XL Teeth (356-36)",
+      "checkedAt": "2026-09-07T13:02:57.697Z",
+      "price": "$104.99",
+      "priceValue": 104.99,
+      "rating": 4.8,
+      "ratingsTotal": 4182,
+      "priceCheckedAt": "2026-09-07T13:02:57.697Z",
+      "priceSource": "canopy-search"
+    },
+    "B01LWZ4ZLA": {
+      "verdict": "LIVE",
+      "title": "AGAWA - BOREAL21-21 Inch Folding Saw with All-Purpose Saw Blade - Camping Gear For Hiking, Fishing, Hunting, Bushcraft & Survival Kit (Black Frame/Green Handle)",
+      "checkedAt": "2026-09-07T13:02:57.697Z",
+      "price": "$85.00",
+      "priceValue": 85,
+      "rating": 4.8,
+      "ratingsTotal": 2627,
+      "priceCheckedAt": "2026-09-07T13:02:57.697Z",
+      "priceSource": "canopy-search"
+    },
+    "B08PW5GD4S": {
+      "verdict": "LIVE",
+      "title": "AGAWA - BOREAL21 Tripper Kit - Includes 21\" Folding Saw, Nylon Carrying Case, 21\" All-Purpose & 21\" Aggressive Blade - For Camping, Hiking & Survival Gear (Black Frame/Green Handle)",
+      "checkedAt": "2026-09-07T13:02:57.697Z",
+      "price": "$120.00",
+      "priceValue": 120,
+      "rating": 4.8,
+      "ratingsTotal": 921,
+      "priceCheckedAt": "2026-09-07T13:02:57.697Z",
+      "priceSource": "canopy-search"
+    },
+    "B0FDXV7PZG": {
+      "verdict": "LIVE",
+      "title": "Corona Tools RS16150B RazorTOOTH 10\" Folding Pruning Saw – 10″ Curved Steel Blade with Ergonomic Non-Slip Handle for Gardening, Tree Trimming, Camping, Biking & Backpacking",
+      "checkedAt": "2026-09-07T13:02:57.697Z",
+      "price": "$29.98",
+      "priceValue": 29.98,
+      "rating": 4.8,
+      "ratingsTotal": 63,
+      "priceCheckedAt": "2026-09-07T13:02:57.697Z",
       "priceSource": "canopy-search"
     }
   }

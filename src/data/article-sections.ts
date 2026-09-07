@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-folding-saws-camping": [
+    {
+      type: "product-grid",
+      title: "Best Folding Saws for Camping — Quieter and Safer Than an Axe — Quick Comparison",
+      items: [
+        { label: "Silky Professional BIGBOY Folding Saw 360mm Large Teeth", category: "", icon: "🏕️", asin: "B000CE8RLS", link: "https://www.amazon.com/dp/B000CE8RLS?tag=camprally-20" },
+        { label: "Bahco BAH396LAP Laplander Folding Saw", category: "", icon: "🏕️", asin: "B0001IX7OW", link: "https://www.amazon.com/dp/B0001IX7OW?tag=camprally-20" },
+        { label: "Silky Professional BIGBOY 2000 Folding Saw 360mm XL Teeth", category: "", icon: "🏕️", asin: "B0014CA3JQ", link: "https://www.amazon.com/dp/B0014CA3JQ?tag=camprally-20" },
+        { label: "AGAWA - BOREAL21-21 Inch Folding Saw with All-Purpose Saw", category: "", icon: "🏕️", asin: "B01LWZ4ZLA", link: "https://www.amazon.com/dp/B01LWZ4ZLA?tag=camprally-20" },
+        { label: "AGAWA - BOREAL21 Tripper Kit - Includes 21\" Folding Saw", category: "", icon: "🏕️", asin: "B08PW5GD4S", link: "https://www.amazon.com/dp/B08PW5GD4S?tag=camprally-20" },
+        { label: "Corona Tools RS16150B RazorTOOTH 10\" Folding Pruning Saw", category: "", icon: "🏕️", asin: "B0FDXV7PZG", link: "https://www.amazon.com/dp/B0FDXV7PZG?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-pillows-budget": [
     {
       type: "product-grid",
