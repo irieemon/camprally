@@ -11892,5 +11892,164 @@
         "ratingsTotal": 50
       }
     ]
+  },
+  "binoculars outdoors|1|": {
+    "term": "binoculars outdoors",
+    "min": 1,
+    "fetchedAt": "2026-09-08T13:10:58.280Z",
+    "results": [
+      {
+        "asin": "B07V3LB5DN",
+        "title": "Vortex Crossfire HD 10x42 Binoculars | HD Optics, Tripod Adaptable, Waterproof, Fogproof, Shockproof, Included GlassPak Harness - Unlimited, Unconditional Warranty",
+        "price": "$149.00",
+        "priceValue": 149,
+        "rating": 4.8,
+        "ratingsTotal": 4023
+      },
+      {
+        "asin": "B0C6N72X5Y",
+        "title": "Vortex Triumph HD 10x42 Binoculars | HD Optics, Tripod Adaptable, Waterproof, Fogproof, Shockproof, Included Glasspak Harness - Unlimited, Unconditional Warranty",
+        "price": "$99.00",
+        "priceValue": 99,
+        "rating": 4.7,
+        "ratingsTotal": 2325
+      },
+      {
+        "asin": "B07Q1GHB5X",
+        "title": "Hontry 10x25 Compact Binoculars for Adults and Kids | Bird Watching, Travel, Cruise Ship, Sport Games, Theater, Concerts, Road Trip",
+        "price": "$24.95",
+        "priceValue": 24.95,
+        "rating": 4.6,
+        "ratingsTotal": 24452
+      },
+      {
+        "asin": "B07VLXKZ33",
+        "title": "12x42 Binoculars for Adults High Powered with Phone Adapter & Tripod | Super Bright BAK4 Prism, Waterproof, for Bird Watching Cruise Travel Safari Hunting Hiking Sports",
+        "price": "$69.86",
+        "priceValue": 69.86,
+        "rating": 4.6,
+        "ratingsTotal": 18132
+      },
+      {
+        "asin": "B00B73JONS",
+        "title": "Celestron Nature DX 8x42 Waterproof Binoculars for Bird Watching & Outdoors | Phase-Coated BaK-4 Prisms,Bright Fully Multi-Coated Optics,42mm Objective Lenses,Durable Rubber Armor,Outdoor&Nature Viewing",
+        "price": "$148.99",
+        "priceValue": 148.99,
+        "rating": 4.6,
+        "ratingsTotal": 4059
+      },
+      {
+        "asin": "B00AMPJGMG",
+        "title": "Bushnell H2O Xtreme 10x42 Waterproof Binoculars | Fully Multi-Coated Lenses, Anti-Fog, Optics for Hunting, Birdwatching, Fishing, Boating & Travel",
+        "price": "$126.57",
+        "priceValue": 126.57,
+        "rating": 4.6,
+        "ratingsTotal": 1051
+      },
+      {
+        "asin": "B07GF4JCDY",
+        "title": "Adorrgon 12x42 High Powered Binoculars for Adults, Phone Adapter and Tripod | BAK4 Prism, FMC Optics, Waterproof, 367ft Wide View, 18.5mm Eyepieces for Bird Watching Cruise Travel Wildlife Viewing Sports",
+        "price": "$57.34",
+        "priceValue": 57.34,
+        "rating": 4.5,
+        "ratingsTotal": 22274
+      },
+      {
+        "asin": "B072QWD8GB",
+        "title": "Gosky 10x42 Binoculars for Adults High Powered with Phone Adapter & Tripod | Super Bright, BAK4 Prism, IPX7 Waterproof Binoculars, for Bird Watching Hunting Cruise Safari Travel Outdoor Sports Concert",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.5,
+        "ratingsTotal": 6507
+      },
+      {
+        "asin": "B0756BXDTX",
+        "title": "Occer 12x25 Compact Binoculars for Adults and Kids | High Powered, Easy Focus, Large Eyepiece for Bird Watching, Cruise Ship, Outdoor Hunting, Travel, Sightseeing",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.4,
+        "ratingsTotal": 33795
+      },
+      {
+        "asin": "B06XT7M6P5",
+        "title": "Aurosports 10x25 Compact Binoculars for Bird Watching, Cruise Ship, Travel | Small & Lightweight for Adults Kids; BAK4 & FMC for Crystal Clarity; Easy Focus with Case & Strap; Gift for Hunting, Sports",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.4,
+        "ratingsTotal": 15974
+      },
+      {
+        "asin": "B08KHCR1YF",
+        "title": "RONHAN 20×50 Binoculars for Adults High Powered with Carrying Case & Strap | HD Optics, Large Eyepiece, Bird Watching, Cruise Ship, Travel, Outdoor Hunting, Road Trip, Sport Games, Tripod Adaptable",
+        "price": "$27.97",
+        "priceValue": 27.97,
+        "rating": 4.4,
+        "ratingsTotal": 8462
+      },
+      {
+        "asin": "B0CG9XF3FR",
+        "title": "15x52 HD Binoculars for Adults High Powered with Upgraded Phone Adapter | Bright & Sharp HD Optics, Clear Low Light Vision, Large View, Waterproof, Lightweight for Bird Watching Cruise Travel Hunting",
+        "price": "$68.86",
+        "priceValue": 68.86,
+        "rating": 4.4,
+        "ratingsTotal": 2115
+      },
+      {
+        "asin": "B0CJRTRRTG",
+        "title": "20x50 High Powered Binoculars for Adults, Waterproof Compact Binoculars with Low Light Vision for Bird Watching Hunting Camping Travel Cruise Hiking Sports Stargazing, Christmas Birthday Gifts for Men",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.3,
+        "ratingsTotal": 5374
+      },
+      {
+        "asin": "B0CR5S2TDM",
+        "title": "Compact Binoculars for Adults and Kids, HD Mini Portable Outdoor Binoculars Children, Pocket Lightweight Folding for Bird Watching, Hunting, Concert, Theater, Opera, Traveling, Tourism, Shows",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.3,
+        "ratingsTotal": 1687
+      },
+      {
+        "asin": "B0H7WNPQDX",
+        "title": "20x25 High Powered Binoculars for Adults,Green | Compact HD Waterproof Durable and Clear BAK4 Prism FMC Lens,Suitable for Bird Watching,Sightseeing and Outdoor Sports",
+        "price": "$26.98",
+        "priceValue": 26.98,
+        "rating": 4.3,
+        "ratingsTotal": 157
+      },
+      {
+        "asin": "B07GQ8J4QX",
+        "title": "POLDR 12X25 Small Pocket Binoculars Compact for Adults | Mini Portable, Easy Focus, Crystal Clarity for Bird Watching, Concert, Opera, Cruise, Travel, Hiking",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.2,
+        "ratingsTotal": 10026
+      },
+      {
+        "asin": "B0C4Y34Q9L",
+        "title": "200x25 Compact Binoculars for Adults and Kids, High Powered Mini Pocket Binoculars, Waterproof Small Binocular for Bird Watching, Hunting, Concert, Theater, Opera, Traveling, Sightseeing",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.2,
+        "ratingsTotal": 1953
+      },
+      {
+        "asin": "B0C2V2V981",
+        "title": "12X25 Mini Pocket Binoculars for Adults Kids, Small Compact Binoculars for Bird Watching, Opera Concert",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.2,
+        "ratingsTotal": 1270
+      },
+      {
+        "asin": "B0DPPYGKCX",
+        "title": "Mini Compact Binoculars for Adults and Kids - Waterproof High Powered Easy Focus Small Binocular, Ideal for Bird Watching, Hunting, Concert, Theater, Travel, Hiking, Sightseeing & Outdoor Sports",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.2,
+        "ratingsTotal": 512
+      }
+    ]
   }
 }
