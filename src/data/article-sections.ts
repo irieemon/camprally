@@ -411,7 +411,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-sleeping-pads-under-50": [
     {
       type: "product-grid",
-      title: "Best Budget Sleeping Pads Under $50: Backpacking & Car Camping — Quick Comparison",
+      title: "Best Budget Sleeping Pads Under $50 for Camping — Quick Comparison",
       items: [
         { label: "HIKENTURE Ultralight Camping Sleeping Pad", category: "", icon: "🏕️", asin: "B09YY89GT6", link: "https://www.amazon.com/dp/B09YY89GT6?tag=camprally-20" },
         { label: "Amazon Basics Camping Sleeping Pad with Quick-Inflate", category: "", icon: "🏕️", asin: "B0FD97YGX6", link: "https://www.amazon.com/dp/B0FD97YGX6?tag=camprally-20" },
@@ -642,7 +642,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-trekking-poles": [
     {
       type: "product-grid",
-      title: "Best Budget Hiking & Trekking Poles Under $40 — Quick Comparison",
+      title: "Best Budget Trekking & Hiking Poles Under $40 — Quick Comparison",
       items: [
         { label: "TrailBuddy Trekking Poles", category: "", icon: "🏕️", asin: "B01MRQCENJ", link: "https://www.amazon.com/dp/B01MRQCENJ?tag=camprally-20" },
         { label: "KINGGEAR Trekking Poles 7075 Aluminum Lightweight Hiking", category: "", icon: "🏕️", asin: "B08DNR9ZQQ", link: "https://www.amazon.com/dp/B08DNR9ZQQ?tag=camprally-20" },
@@ -656,7 +656,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-camping-tarp-under-30": [
     {
       type: "product-grid",
-      title: "Best Camping Tarps Under $30 — Extra Shelter Without the Price Tag — Quick Comparison",
+      title: "Best Camping Tarps Under $30 — Top-Rated Picks — Quick Comparison",
       items: [
         { label: "RAINDEWAY 8x10 Feet Tarp Waterproof 9Mil Multipurpose Poly", category: "", icon: "🏕️", asin: "B0DSSLFGJ8", link: "https://www.amazon.com/dp/B0DSSLFGJ8?tag=camprally-20" },
         { label: "Amazon Basics Waterproof Multipurpose Camping Tarp", category: "", icon: "🏕️", asin: "B0748HGDVD", link: "https://www.amazon.com/dp/B0748HGDVD?tag=camprally-20" },
@@ -820,7 +820,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-camping-chairs-tailgating": [
     {
       type: "product-grid",
-      title: "Best Camping Chairs Under $50 for Tailgating and Campfires — Quick Comparison",
+      title: "Best Camping Chairs for Tailgating Under $50 — Quick Comparison",
       items: [
         { label: "Coleman Portable Camping Chair with 4-Can Cooler", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0033990ZQ?tag=camprally-20" },
         { label: "ONETIGRIS Tigerblade Camping Chair", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B0CQJR8NLW?tag=camprally-20" },
