@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-budget-binoculars-camping": [
+    {
+      type: "product-grid",
+      title: "Best Budget Binoculars for Camping — What 8x42 Actually Means — Quick Comparison",
+      items: [
+        { label: "Vortex Crossfire HD 10x42 Binoculars", category: "", icon: "🏕️", asin: "B07V3LB5DN", link: "https://www.amazon.com/dp/B07V3LB5DN?tag=camprally-20" },
+        { label: "Vortex Triumph HD 10x42 Binoculars", category: "", icon: "🏕️", asin: "B0C6N72X5Y", link: "https://www.amazon.com/dp/B0C6N72X5Y?tag=camprally-20" },
+        { label: "Hontry 10x25 Compact Binoculars for Adults and Kids", category: "", icon: "🏕️", asin: "B07Q1GHB5X", link: "https://www.amazon.com/dp/B07Q1GHB5X?tag=camprally-20" },
+        { label: "12x42 Binoculars for Adults High Powered with Phone Adapter", category: "", icon: "🏕️", asin: "B07VLXKZ33", link: "https://www.amazon.com/dp/B07VLXKZ33?tag=camprally-20" },
+        { label: "Celestron Nature DX 8x42 Waterproof Binoculars for Bird", category: "", icon: "🏕️", asin: "B00B73JONS", link: "https://www.amazon.com/dp/B00B73JONS?tag=camprally-20" },
+        { label: "Bushnell H2O Xtreme 10x42 Waterproof Binoculars", category: "", icon: "🏕️", asin: "B00AMPJGMG", link: "https://www.amazon.com/dp/B00AMPJGMG?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-folding-saws-camping": [
     {
       type: "product-grid",
