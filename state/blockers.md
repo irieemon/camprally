@@ -221,3 +221,8 @@ car-camping-vs-backpacking
       "While a lightweight sleeping bag works fine in a car, trying to haul a heavy steel stove or a thick folding cot into the backcountry quickly leads to misery."
   (model review unavailable — deterministic rules only)
 
+
+## 2026-09-09T13:00:00.106Z — working-tree-dirty
+
+Refusing to run with uncommitted changes:
+?? .claude/
