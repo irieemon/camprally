@@ -226,3 +226,8 @@ car-camping-vs-backpacking
 
 Refusing to run with uncommitted changes:
 ?? .claude/
+
+## 2026-09-10T13:00:00.109Z — working-tree-dirty
+
+Refusing to run with uncommitted changes:
+?? .claude/
