@@ -241,3 +241,8 @@ Refusing to run with uncommitted changes:
 
 Refusing to run with uncommitted changes:
 ?? .claude/
+
+## 2026-09-13T13:00:00.107Z — working-tree-dirty
+
+Refusing to run with uncommitted changes:
+?? .claude/
