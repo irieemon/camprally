@@ -63,3 +63,6 @@ state/cycle.lock
 # implementation quietly writing one here.
 subscribers.json
 subscribers*.json
+
+# Claude Code session state (worktrees, plans, etc.) — transient, not project content
+/.claude/
