@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-cast-iron-budget": [
+    {
+      type: "product-grid",
+      title: "Budget Cast Iron for Camping — What's Worth the Weight — Quick Comparison",
+      items: [
+        { label: "Lodge Pre-Seasoned Cast Iron Deep Camp Dutch Oven with Lid", category: "", icon: "🏕️", asin: "B004W4TXZI", link: "https://www.amazon.com/dp/B004W4TXZI?tag=camprally-20" },
+        { label: "Uno Casa 6 Qt Cast Iron Dutch Oven for Camping", category: "", icon: "🏕️", asin: "B07WX6DDRL", link: "https://www.amazon.com/dp/B07WX6DDRL?tag=camprally-20" },
+        { label: "Stansport Pre-Seasoned Cast Iron Dutch Oven", category: "", icon: "🏕️", asin: "B081B5P4SL", link: "https://www.amazon.com/dp/B081B5P4SL?tag=camprally-20" },
+        { label: "50\" Dutch Oven Tripod with Carry Bag", category: "", icon: "🏕️", asin: "B0D21Y1QN5", link: "https://www.amazon.com/dp/B0D21Y1QN5?tag=camprally-20" },
+        { label: "Lodge Round Seasoned Cast Iron Griddle", category: "", icon: "🏕️", asin: "B00008GKDN", link: "https://www.amazon.com/dp/B00008GKDN?tag=camprally-20" },
+        { label: "RAPICCA Fireplace Fire Pit Gloves", category: "", icon: "🏕️", asin: "B07DW99ZQV", link: "https://www.amazon.com/dp/B07DW99ZQV?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-budget-binoculars-camping": [
     {
       type: "product-grid",
