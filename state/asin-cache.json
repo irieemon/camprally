@@ -3668,6 +3668,72 @@
       "ratingsTotal": 21498,
       "priceCheckedAt": "2026-09-15T13:04:32.616Z",
       "priceSource": "canopy-search"
+    },
+    "B075BZVVLD": {
+      "verdict": "LIVE",
+      "title": "Camco Portable Toilet Bucket with Snap-On Seat and Lid, 5 Gallon, 41549",
+      "checkedAt": "2026-09-16T13:01:32.297Z",
+      "price": "$31.84",
+      "priceValue": 31.84,
+      "rating": 4.7,
+      "ratingsTotal": 8984,
+      "priceCheckedAt": "2026-09-16T13:01:32.297Z",
+      "priceSource": "canopy-search"
+    },
+    "B0D47C6PYC": {
+      "verdict": "LIVE",
+      "title": "Poo Powder for Portable Toilet Gel Powder, Camping Toilet Gel",
+      "checkedAt": "2026-09-16T13:01:32.297Z",
+      "price": "$9.99",
+      "priceValue": 9.99,
+      "rating": 4.7,
+      "ratingsTotal": 1094,
+      "priceCheckedAt": "2026-09-16T13:01:32.297Z",
+      "priceSource": "canopy-search"
+    },
+    "B004SFKJIQ": {
+      "verdict": "LIVE",
+      "title": "Camco Portable RV Toilet with Detachable Tank, Gray, 5.3 Gallon, 41541",
+      "checkedAt": "2026-09-16T13:01:32.297Z",
+      "price": "$99.99",
+      "priceValue": 99.99,
+      "rating": 4.6,
+      "ratingsTotal": 6874,
+      "priceCheckedAt": "2026-09-16T13:01:32.297Z",
+      "priceSource": "canopy-search"
+    },
+    "B07218B4DQ": {
+      "verdict": "LIVE",
+      "title": "SereneLife Portable Toilet 5.3 Gal Camping Travel Outdoor Flush Toilet Seat",
+      "checkedAt": "2026-09-16T13:01:32.297Z",
+      "price": "$109.99",
+      "priceValue": 109.99,
+      "rating": 4.6,
+      "ratingsTotal": 4682,
+      "priceCheckedAt": "2026-09-16T13:01:32.297Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CQ4SDJM6": {
+      "verdict": "LIVE",
+      "title": "Kohree 5.8 Gal Camping Toilet for Adults with Diagonal Elongated Bowl Seat",
+      "checkedAt": "2026-09-16T13:01:32.297Z",
+      "price": "$134.99",
+      "priceValue": 134.99,
+      "rating": 4.6,
+      "ratingsTotal": 1487,
+      "priceCheckedAt": "2026-09-16T13:01:32.297Z",
+      "priceSource": "canopy-search"
+    },
+    "B08PNVLRWG": {
+      "verdict": "LIVE",
+      "title": "5.3 Gallon Portable Camping Toilet for Adults with Carry Bag – Extra Large Porta Potty for Adults Outdoors, RV, Boat | 286 LBS Capacity, 50 Flushes, Detachable Tanks, Carry Bag Included",
+      "checkedAt": "2026-09-16T13:01:32.297Z",
+      "price": "$119.95",
+      "priceValue": 119.95,
+      "rating": 4.6,
+      "ratingsTotal": 691,
+      "priceCheckedAt": "2026-09-16T13:01:32.297Z",
+      "priceSource": "canopy-search"
     }
   }
 }

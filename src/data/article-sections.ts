@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-portable-camping-toilets": [
+    {
+      type: "product-grid",
+      title: "Best Portable Camping Toilets — The Gear Nobody Wants to Research — Quick Comparison",
+      items: [
+        { label: "Camco Portable Toilet Bucket with Snap-On Seat and Lid", category: "", icon: "🏕️", asin: "B075BZVVLD", link: "https://www.amazon.com/dp/B075BZVVLD?tag=camprally-20" },
+        { label: "Poo Powder for Portable Toilet Gel Powder", category: "", icon: "🏕️", asin: "B0D47C6PYC", link: "https://www.amazon.com/dp/B0D47C6PYC?tag=camprally-20" },
+        { label: "Camco Portable RV Toilet with Detachable Tank", category: "", icon: "🏕️", asin: "B004SFKJIQ", link: "https://www.amazon.com/dp/B004SFKJIQ?tag=camprally-20" },
+        { label: "SereneLife Portable Toilet 5.3 Gal Camping Travel Outdoor", category: "", icon: "🏕️", asin: "B07218B4DQ", link: "https://www.amazon.com/dp/B07218B4DQ?tag=camprally-20" },
+        { label: "Kohree 5.8 Gal Camping Toilet for Adults with Diagonal", category: "", icon: "🏕️", asin: "B0CQ4SDJM6", link: "https://www.amazon.com/dp/B0CQ4SDJM6?tag=camprally-20" },
+        { label: "5.3 Gallon Portable Camping Toilet for Adults with Carry Bag", category: "", icon: "🏕️", asin: "B08PNVLRWG", link: "https://www.amazon.com/dp/B08PNVLRWG?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-cast-iron-budget": [
     {
       type: "product-grid",
