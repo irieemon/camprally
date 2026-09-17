@@ -108,6 +108,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-budget-binoculars-camping": "/images/heroes/best-budget-binoculars-camping.jpg",
   "best-camping-cast-iron-budget": "/images/heroes/best-camping-cast-iron-budget.jpg",
   "best-portable-camping-toilets": "/images/heroes/best-portable-camping-toilets.jpg",
+  "best-camping-rugs-outdoor-mats": "/images/heroes/best-camping-rugs-outdoor-mats.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

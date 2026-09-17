@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-rugs-outdoor-mats": [
+    {
+      type: "product-grid",
+      title: "Best Camping Rugs and Outdoor Mats — Keeping Dirt Out of the Tent — Quick Comparison",
+      items: [
+        { label: "Camco Life is Better at The Campsite Scrub Mat", category: "", icon: "🏕️", asin: "B07D7NX5TH", link: "https://www.amazon.com/dp/B07D7NX5TH?tag=camprally-20" },
+        { label: "CGEAR Original Sand-Free Outdoor Camping Mat", category: "", icon: "🏕️", asin: "B0FQ8LSLJ9", link: "https://www.amazon.com/dp/B0FQ8LSLJ9?tag=camprally-20" },
+        { label: "EEZ RV Products 9'x18' GW Heavy Duty Reversible/Durable", category: "", icon: "🏕️", asin: "B07KP63BQY", link: "https://www.amazon.com/dp/B07KP63BQY?tag=camprally-20" },
+        { label: "Outdoor Rugs", category: "", icon: "🏕️", asin: "B0FGJF6CXR", link: "https://www.amazon.com/dp/B0FGJF6CXR?tag=camprally-20" },
+        { label: "fifame 9x18 Outdoor Rug", category: "", icon: "🏕️", asin: "B09V184VH1", link: "https://www.amazon.com/dp/B09V184VH1?tag=camprally-20" },
+        { label: "G GOOD GAIN Picnic Blankets Outdoor", category: "", icon: "🏕️", asin: "B0CS67LQN9", link: "https://www.amazon.com/dp/B0CS67LQN9?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-portable-camping-toilets": [
     {
       type: "product-grid",
