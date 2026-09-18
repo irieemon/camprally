@@ -12968,5 +12968,28 @@
         "ratingsTotal": 55
       }
     ]
+  },
+  "campground morning|1|": {
+    "term": "campground morning",
+    "min": 1,
+    "fetchedAt": "2026-09-18T13:00:32.250Z",
+    "results": [
+      {
+        "asin": "1885464827",
+        "title": "Corps of Engineers Camping: Directory of 942 Camping Areas in 35 States",
+        "price": "$15.95",
+        "priceValue": 15.95,
+        "rating": 4.5,
+        "ratingsTotal": 1100
+      },
+      {
+        "asin": "1728262593",
+        "title": "Where Should We Camp Next?: National Parks: The Best Campgrounds and Unique Outdoor Accommodations In and Around National Parks, Seashores, Monuments, ... National Park Lovers, and Outdoorsy People)",
+        "price": "$5.08",
+        "priceValue": 5.08,
+        "rating": 4.5,
+        "ratingsTotal": 336
+      }
+    ]
   }
 }
