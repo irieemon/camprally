@@ -22,6 +22,16 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "camping-etiquette-rules": [
+    {
+      type: "product-grid",
+      title: "Camping Etiquette — The Unwritten Rules Nobody Tells First-Timers — Quick Comparison",
+      items: [
+        { label: "Corps of Engineers Camping: Directory of 942 Camping Areas", category: "", icon: "🏕️", asin: "1885464827", link: "https://www.amazon.com/dp/1885464827?tag=camprally-20" },
+        { label: "Where Should We Camp Next?: National Parks: The Best", category: "", icon: "🏕️", asin: "1728262593", link: "https://www.amazon.com/dp/1728262593?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-rugs-outdoor-mats": [
     {
       type: "product-grid",

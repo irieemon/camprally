@@ -109,6 +109,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-camping-cast-iron-budget": "/images/heroes/best-camping-cast-iron-budget.jpg",
   "best-portable-camping-toilets": "/images/heroes/best-portable-camping-toilets.jpg",
   "best-camping-rugs-outdoor-mats": "/images/heroes/best-camping-rugs-outdoor-mats.jpg",
+  "camping-etiquette-rules": "/images/heroes/camping-etiquette-rules.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

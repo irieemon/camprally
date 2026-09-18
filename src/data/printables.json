@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "winter-camping-checklist-pack",
+      "title": "Winter & Cold-Weather Camping Checklist Pack",
+      "subtitle": "Print the checklists you need, pack what actually works, and stay warm from car camp to backcountry.",
+      "price": "$4",
+      "priceCents": 400,
+      "pages": 11,
+      "url": "https://camprally.gumroad.com/l/winter-camping-checklist-pack",
+      "image": "/images/printables/winter-camping-checklist-pack.jpg"
+    },
+    {
       "slug": "national-parks-bucket-list-journal",
       "title": "National Parks Bucket List & Trip Journal",
       "subtitle": "Track every park, capture every adventure, and preserve your wilderness memories for a lifetime",

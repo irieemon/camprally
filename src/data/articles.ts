@@ -5889,6 +5889,100 @@ And if the goal is a campsite that looks as good as it functions, the **[Check t
 *Related guides: [Best Camping Fans for Tents Under $40](/blog/best-portable-camping-fans) · [Best Cheap Camping Tables for Cooking](/blog/best-cheap-camping-tables) · [How to Keep Food Cold Camping — Ice Strategy, Not Just a Better Cooler](/blog/how-to-keep-food-cold-camping)*
     `
   },
+
+  {
+    id: "art-066",
+    slug: "camping-etiquette-rules",
+    title: "Camping Etiquette — The Unwritten Rules Nobody Tells First-Timers",
+    excerpt: "Learn the unwritten camping etiquette rules — from quiet hours and generator timing to light trespass — that experienced campers wish someone had told them sooner.",
+    category: "Skills",
+    date: "2026-09-18",
+    author: "Camp Rally Team",
+    readTime: "7 min read",
+    content: `
+# Camping Etiquette — The Unwritten Rules Nobody Tells First-Timers
+
+Every campground has posted rules. Most of them are obvious: pay your fee, put out your fire, don't cut live trees. The etiquette nobody warns you about is everything that lives between those rules — the small, repeated courtesies that decide whether the people in the next loop think of you as a good neighbor or the worst person on the block. None of this is complicated. All of it is easy to get wrong on your first trip because no one told you it existed.
+
+This guide collects the unwritten rules experienced campers eventually learn the hard way, then points you to two resources that will save you a lot of trial and error on the destination side of things.
+
+## Why Etiquette Matters More Than Gear
+
+A bad camper with great gear still ruins a trip — for themselves and everyone around them. Light trespass from a lantern pointed at someone else's tent will end a stranger's night. A generator at 6:30 a.m. will end yours. Most campground conflicts don't escalate to rangers because rangers usually aren't around at 10 p.m. They play out as cold shoulders, bad reviews of a site you'll never book again, and a general sense that something about the trip felt off. Almost all of that is preventable.
+
+The flip side is real, too: when you follow the unwritten rules, people offer you firewood, warn you about a bear that came through last night, and invite your kids to feed the ducks. Camping is one of the last places in America where good citizenship is visibly rewarded.
+
+## Quiet Hours, Generators, and the Sound of Other People's Fun
+
+Every campground has posted quiet hours, often from 10 p.m. to 6 or 7 a.m. Treat that window as a floor, not a ceiling. The real rule is this: if someone at the next site can hear you without trying, you're too loud.
+
+Practical specifics:
+
+- Talk, don't shout. Across a campsite in the evening, call your kids by name, not by volume.
+- Keep vehicle doors closed with the inside handle, not a slam. Slamming a truck door at 11 p.m. travels farther than you think.
+- No generators during quiet hours, ever. During the day, run them far from other sites and only as long as needed to charge.
+- Music stays inside your site. If your neighbor wants to hear it, they'll come over.
+- Dogs that bark through the night are the single most reported complaint at most campgrounds. If yours is reactive, leave them home or get a grip on it before the trip.
+
+Daytime sound has its own version of the rule: most campgrounds ask you to keep generators and music to a reasonable level by mid-afternoon, because people nap after long hikes and small kids crash hard.
+
+## Lights, Lanterns, and the Right to Darkness
+
+After dark, your campsite should glow inward, not outward. A lantern placed in the middle of your table lights your food and not your neighbor's tent. Headlamps stay on red mode when you're walking through shared spaces, and you aim them at your feet. Flashlight beams crossing someone else's site is the nighttime equivalent of shining a flashlight in their face at the dinner table.
+
+Vehicle headlights are the worst offender. Pull in and out of your site without driving through the campground loop. If you arrive after dark, find your site with parking lights only and a passenger guiding you with a covered flashlight. The rule of thumb: if your headlights would sweep across a tent, they are too bright.
+
+## Fires, Smoke, and Downwind
+
+If you're going to have a campfire, three rules govern it. First, smoke always drifts downwind, so position your fire with that in mind — never directly upwind of a neighbor's tent or picnic table. Second, your fire stays inside the ring or pan, and at a size you could stomp out. Third, when you leave your site or go to bed, the fire is dead — cold to the touch, not just "mostly out." This is partly etiquette and partly the law in fire-prone regions.
+
+Don't be the person who burns trash. Food packaging, plastic, and foil release fumes that smell awful and are genuinely bad to breathe downwind. Pack it out. If your fire is smoky enough that you can see the haze hanging under the trees the next morning, you burned something you shouldn't have.
+
+## Kids, Dogs, and the Shared Path
+
+Campgrounds are not backyards. A few specifics worth committing to muscle memory:
+
+- Kids ride bikes and walk dogs on the road, not through other people's sites. Shortcuts across occupied sites are a fast way to make enemies.
+- Dogs stay on a leash within six feet of you, as most rules require, and you pick up after them — every time, no exceptions, even in the woods.
+- If your dog growls at a passing stranger, that's your problem to solve, not theirs.
+- When you walk past someone else's site, eyes forward, no staring, no comments about their setup. People are sensitive about their camps.
+
+The corollary rule: kids and dogs are welcome almost everywhere, but they are your responsibility the entire time. "He's friendly" is not a safety plan.
+
+## Bathroom, Water, and Dump Station Etiquette
+
+The shared spigot is not a place to wash your dishes, your dog, or your car. It's a place to fill your jug. The dump station has a line even when there isn't one — wait your turn and be ready to unhook when the person ahead of you finishes. At vault toilets, leave it the way you'd want to find it. That's the whole list.
+
+Trash is the cleanest tell of a good camper. A site you leave cleaner than you found it, with your bagged trash in the bear-proof container or the dumpster, speaks louder than anything else on this page.
+
+## How to Choose Where to Camp (and What to Read First)
+
+Most etiquette problems start with the wrong site. Overcrowded campgrounds with thin tree cover, near a road, and next to the bathhouse will test any camper's patience. A few practical filters:
+
+- Loop size. Smaller loops are quieter after dark.
+- Site spacing. Look for sites that don't share a common clearing.
+- Proximity to water. Beautiful, but also where generators and radios tend to gather.
+- Generator loops. Some campgrounds now have them — book them if you need power, avoid them if you don't.
+
+If you want a wider catalog of where to actually go, the **[Check the Corps of Engineers Camping: Directory of 942 Camping Areas in 35 States on Amazon](https://www.amazon.com/dp/1885464827?tag=camprally-20)** is a useful starting point because Corps sites tend to be well-managed, have posted rules clearly displayed, and run on a reservation system that filters out some of the chaos. For something more aspirational, the **[Check the Where Should We Camp Next?: National Parks on Amazon](https://www.amazon.com/dp/1728262593?tag=camprally-20)** book curates both classic and lesser-known options in and around the national parks, including tent sites, cabins, and glamping setups that may suit first-timers who aren't ready to rough it.
+
+When in doubt, call the campground office. Ask about loop noise, generator rules, and bear-canister requirements. Five minutes on the phone beats one bad night.
+
+## The Pickup Rule
+
+The single most useful mindset to pack is this: leave every shared space slightly better than you found it. The bathhouse, the spigot, the path to the beach, the dump station, your site, the fire ring. Campgrounds that feel friendly are campgrounds where most people do this, and you can be one of them starting tonight.
+
+The second is even simpler: assume the people around you are good, and act like it. That's the whole point of going.
+
+## Verdict
+
+Etiquette is the cheapest gear you'll ever own. It costs nothing, weighs nothing, and is the single biggest factor in whether a campground feels welcoming or tense. Learn quiet hours and treat them as a floor, aim your lights and your fire downwind, keep your kids and dogs within your own footprint, and leave every shared space a little better than you found it. Do that and you will be welcomed back, offered firewood, and pointed toward sites that never appear in any guide.
+
+If you're still choosing where to put those rules into practice, start with the Corps of Engineers directory for a working catalog of well-run campgrounds, then graduate to the national parks book when you're ready for a longer trip.
+
+*Related guides: [How to Choose a Campsite — The Ten Minutes That Decide Your Night](/blog/how-to-choose-a-campsite) · [Dispersed Camping for Beginners — How to Camp Free on Public Land](/blog/dispersed-camping-beginners-guide)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
