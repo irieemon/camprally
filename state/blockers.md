@@ -251,3 +251,7 @@ Refusing to run with uncommitted changes:
 
 Refusing to run with uncommitted changes:
 ?? .claude/
+
+## 2026-09-19T13:00:00.110Z — dead-links
+
+refresh-asins found confirmed dead affiliate links. Fix before publishing more.
