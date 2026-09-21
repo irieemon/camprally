@@ -255,3 +255,9 @@ Refusing to run with uncommitted changes:
 ## 2026-09-19T13:00:00.110Z — dead-links
 
 refresh-asins found confirmed dead affiliate links. Fix before publishing more.
+
+## 2026-09-21T13:00:00.108Z — stalled: queue-empty
+
+3 consecutive runs without publishing (reasons: queue-empty, dead-links)
+
+
