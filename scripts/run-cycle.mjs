@@ -540,6 +540,22 @@ if (pubCode !== EXIT.OK) {
 // ASINs are referenced by the site and therefore in scope for the backfill.
 backfillPhotos("publish");
 
+// ── step 5c: hero alt text the writer could not get ───────────────────────
+/* write-article describes the hero once, best-effort, and on a busy vision seat
+ * it gives up — "no hero alt — image will render decorative". Nothing retried
+ * it, and the pin step below REFUSES a pin with no alt text, so every such
+ * publish lost its pin permanently: five between 2026-09-02 and 09-18
+ * (axes-hatchets, keep-food-cold, national-park-reservations, pillows, rugs).
+ * The backfill looks at the image again with more retries, and its output is
+ * already in the step-6 commit. Never fatal — alt text is not what publishing
+ * is for. */
+try {
+  console.log(sh("node", ["scripts/backfill-hero-alt.mjs"]));
+} catch (err) {
+  console.log(err.stdout ?? "");
+  console.log("(hero alt backfill incomplete — page renders the hero as decorative)");
+}
+
 // ── step 6: commit, and push so Vercel deploys ────────────────────────────
 /* hero-alt.json is in this list because publish-article.mjs WRITES it (see its
  * "Hero alt text" block) and nothing else commits it. Leaving it out made every
@@ -645,7 +661,11 @@ if (deployVerified) {
       const hero = heroes.match(new RegExp(`"${next.slug}":\\s*"([^"]+)"`))?.[1];
       const alt = JSON.parse(readFileSync(`${ROOT}src/data/hero-alt.json`, "utf8"))[next.slug];
       const spec = JSON.parse(readFileSync(`${ROOT}specs/${next.slug}.json`, "utf8"));
-      pinned = await createPin({
+      // No hero of its own means the page shows the site default, and the URL
+      // below would have been `${SITE_ORIGIN}undefined`. Say so plainly rather
+      // than let it surface as a missing-alt refusal.
+      if (!hero) pinned = { skipped: "no hero image — page uses the site default" };
+      else pinned = await createPin({
         title: spec.title,
         description: spec.excerpt,
         altText: alt,

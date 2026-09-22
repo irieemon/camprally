@@ -68,6 +68,23 @@ const cache = loadCache();
 
 const batch = ALL ? [...asins] : stalest(cache, asins, now.getTime(), LIMIT);
 
+/* The gate is the cached VERDICT, not whether this run happened to re-check it.
+ *
+ * Checking only this run's batch made the gate forget after one run: a DEAD
+ * verdict is freshly checked, so it drops out of the stalest rotation, and the
+ * next run exited 0 with the dead link still live on the site. B07F2VP353 went
+ * DEAD 2026-09-19, blocked exactly one cycle, then read as healthy while two
+ * published guides still linked it. It clears when a later re-check records
+ * the ASIN LIVE, or when no page references it any more. */
+const stillDead = () => [...asins].filter((a) => get(cache, a)?.verdict === "DEAD");
+function exitIfDead() {
+  const dead = stillDead();
+  if (!dead.length) return;
+  console.log(`\nDEAD LINKS — these need fixing:`);
+  for (const a of dead) console.log(`  ${a}`);
+  process.exit(EXIT.FAIL);
+}
+
 if (batch.length === 0) {
   const oldest = [...asins]
     .map((a) => ageDays(get(cache, a), now.getTime()))
@@ -76,13 +93,13 @@ if (batch.length === 0) {
     `Nothing stale. ${asins.size} ASIN(s) tracked, oldest check ${oldest.toFixed(1)}d ago ` +
     `(threshold ${STALE_AFTER_DAYS}d).`,
   );
+  exitIfDead();
   process.exit(EXIT.OK);
 }
 
 console.log(`Refreshing ${batch.length} of ${asins.size} ASIN(s)...\n`);
 
 let confirmed = 0, throttled = 0;
-const dead = [];
 
 for (const asin of batch) {
   const r = await verifyAsin(asin);
@@ -98,7 +115,6 @@ for (const asin of batch) {
   } else {
     confirmed++;
     record(cache, asin, r, nowIso);
-    if (r.verdict === "DEAD") dead.push(asin);
     console.log(`${r.verdict.padEnd(8)} ${asin}  ${r.title ?? r.reason}`);
   }
   await sleep(1200);
@@ -109,11 +125,7 @@ saveCache(cache);
 const tracked = Object.keys(cache.entries).length;
 console.log(`\nconfirmed ${confirmed}   throttled ${throttled}   cache now holds ${tracked}/${asins.size}`);
 
-if (dead.length) {
-  console.log(`\nDEAD LINKS — these need fixing:`);
-  for (const a of dead) console.log(`  ${a}`);
-  process.exit(EXIT.FAIL);
-}
+exitIfDead();
 if (confirmed === 0) {
   console.log(`\nNothing confirmed this run (throttled). Retry later.`);
   process.exit(EXIT.DEFER);
