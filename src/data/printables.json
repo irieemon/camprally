@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "glamping-hosting-planner",
+      "title": "Glamping & Group Trip Host Planner",
+      "subtitle": "Turn the chaos of group camping into a smooth, coordinated adventure everyone will want to repeat.",
+      "price": "$7",
+      "priceCents": 700,
+      "pages": 12,
+      "url": "https://camprally.gumroad.com/l/glamping-hosting-planner",
+      "image": "/images/printables/glamping-hosting-planner.jpg"
+    },
+    {
       "slug": "winter-camping-checklist-pack",
       "title": "Winter & Cold-Weather Camping Checklist Pack",
       "subtitle": "Print the checklists you need, pack what actually works, and stay warm from car camp to backcountry.",

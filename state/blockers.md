@@ -261,3 +261,9 @@ refresh-asins found confirmed dead affiliate links. Fix before publishing more.
 3 consecutive runs without publishing (reasons: queue-empty, dead-links)
 
 
+
+## 2026-09-22T13:00:00.107Z — stalled: queue-empty
+
+4 consecutive runs without publishing (reasons: queue-empty, dead-links)
+
+
