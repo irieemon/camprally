@@ -2,7 +2,7 @@
  * MiniMax-shaped front door onto lib/llm.mjs.
  *
  * This file used to own the HTTP call. It now owns nothing: llm.mjs routes by
- * role across MiniMax, Gemini and the local Ollama, and the JSON extraction and
+ * role across MiniMax, Gemini and Ollama (on the Windows PC), and the JSON extraction and
  * failure-reason logic that lived here moved there intact.
  *
  * Kept because `generateJSON` is a reasonable thing for a script to want and

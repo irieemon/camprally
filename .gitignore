@@ -66,3 +66,8 @@ subscribers*.json
 
 # Claude Code session state (worktrees, plans, etc.) — transient, not project content
 /.claude/
+
+# Atelier agent pipeline state (pipeline-state.md, context-brief.md, ...).
+# Written by the orchestrator during a session; an untracked copy here made the
+# 09:00 cycle refuse to run ("working-tree-dirty").
+/docs/pipeline/

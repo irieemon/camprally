@@ -543,7 +543,7 @@ export function rewritePrompt({ articleTitle, deadLabel, candidate, segments }) 
 /* Rule reminders keyed on the refusal text, so the retry names the rule that
  * was broken next to the quote that broke it. */
 const RETRY_HINTS = [
-  [/paragraph break/, "Each segment is exactly ONE block of text. Never put a blank line inside a segment, and never start or end one with a newline."],
+  [/paragraph break|spilled into paragraph/, "Each segment is exactly ONE block of text. Never put a blank line inside a segment, and never start or end one with a newline."],
   [/not in the listing/, "A claim marked \"not in the listing\" must be deleted, or replaced by what `newProduct.listing` actually states. Do not reword it into a synonym of the same unsupported claim."],
   [/length \d+%/, "Keep each paragraph inside its `allowedChars` range. Cut or add words; do not add or split paragraphs to get there."],
   [/added a call to action/, "Remove the call to action you added. The pipeline places calls to action; a segment that had none must have none."],
@@ -579,6 +579,24 @@ export function retryPrompt(base, { draft, reasons }) {
 }
 
 /**
+ * Strip insignificant whitespace from the ends of every drafted segment.
+ *
+ * Dry run 9: both dispersed drafts ended content#21 with a trailing "\n". A
+ * segment is joined to its neighbour with "\n\n", so that one newline became
+ * "\n\n\n" and the NEXT paragraph came back as "\n<text>" — the count held,
+ * the byte-for-byte check fired on paragraph 22, and the guide was unlinked for
+ * whitespace the writer could not see it had sent.
+ *
+ * Only the ENDS are touched. A blank line INSIDE a segment is a real added
+ * paragraph and still reaches spliceBlocks untouched, so this cannot mask one.
+ * Idempotent, and non-strings pass through so "missing" is still reported.
+ */
+export function normalizeDraft(replacements) {
+  if (!replacements || typeof replacements !== "object") return replacements;
+  return Object.fromEntries(Object.entries(replacements).map(([id, t]) => [id, typeof t === "string" ? t.trim() : t]));
+}
+
+/**
  * The mechanical half of the gate. Free, deterministic, and it runs before any
  * reviewer is asked — a rewrite that fails here never costs three panel calls.
  */
@@ -590,6 +608,7 @@ export function checkRewrite(segments, replacements, { aliases, dead, replacemen
    * reached the retry at all — the one retry was spent on half the problems.
    * Every reason quotes the text it objects to, because the retry prompt
    * hands these strings straight back to the writer. */
+  replacements = normalizeDraft(replacements);
   const problems = [];
   const q = (t, n = 160) => { const x = String(t).replace(/\s+/g, " ").trim(); return `"${x.length > n ? `${x.slice(0, n)}…` : x}"`; };
   const sent = new Set(segments.map((s) => s.id));
@@ -707,8 +726,9 @@ export function markedArticle(hit, replacements) {
 export function editReviewPrompt({ articleTitle, hit, replacements, candidate }) {
   const { text, edits } = markedArticle(hit, replacements);
   return {
-    // The edits list roughly doubles the output a careful reviewer writes;
-    // the default 8000 has been enough for new-article reviews of this size.
+    // The edits list roughly doubles the output a careful reviewer writes.
+    // reviewContent raises this to REVIEW_MAX_TOKENS (16000) — 12000 still let
+    // DeepSeek reason itself out of an answer in dry runs 5, 8 and 10.
     maxTokens: 12000,
     system: [
       "You are checking an EDIT to a camping buying guide that is already published.",
@@ -904,6 +924,7 @@ export function applyUnlink(sources, hit, dead) {
  * move, and every block that was not sent must come back identical.
  */
 export function spliceBlocks(original, segments, replacements) {
+  replacements = normalizeDraft(replacements);
   const blocks = [...original];
   for (const s of segments) if (s.index != null) blocks[s.index] = replacements?.[s.id];
   const content = blocks.join("\n\n");
@@ -920,8 +941,19 @@ export function spliceBlocks(original, segments, replacements) {
       });
     problems.push(`a rewrite added or removed a paragraph break${culprits.length ? ` (${culprits.join("; ")})` : ""}`);
   }
-  else for (let i = 0; i < after.length; i++) {
-    if (!segments.some((s) => s.index === i) && after[i] !== original[i]) problems.push(`paragraph ${i} changed outside the segments`);
+  else {
+    /* A shift that kept the count: some segment's splice spilled into the
+     * blocks after it. Report the FIRST changed block once, blamed on the
+     * nearest segment before it and quoting what it became — "paragraph 22
+     * changed" named nothing the retry could act on (dry run 9). */
+    const changed = [];
+    for (let i = 0; i < after.length; i++) if (!segments.some((s) => s.index === i) && after[i] !== original[i]) changed.push(i);
+    if (changed.length) {
+      const i = changed[0];
+      const culprit = segments.filter((s) => s.index != null && s.index < i).sort((a, b) => b.index - a.index)[0];
+      const q = (t) => { const x = JSON.stringify(String(t)); return x.length > 162 ? `${x.slice(0, 160)}…"` : x; };
+      problems.push(`${culprit ? `${culprit.id}: its rewrite spilled into` : "a rewrite changed"} paragraph ${i}, outside the segments — it became ${q(after[i])} (was ${q(original[i])})${culprit ? `; ${culprit.id} ended ${q(String(replacements?.[culprit.id] ?? "").slice(-60))}` : ""}${changed.length > 1 ? `; ${changed.length - 1} more paragraph(s) after it also changed` : ""}`);
+    }
   }
   return { content, problems };
 }
@@ -1191,7 +1223,7 @@ export async function remediate({ asin, sources, ledger, now, deps, forceUnlink 
       report.events.push({ type: "candidate-rejected", why: `writer said ${candidate.asin} is not the same kind of product` });
       return finish();
     }
-    drafts.push({ h, replacements: r.value.segments ?? r.value });
+    drafts.push({ h, replacements: normalizeDraft(r.value.segments ?? r.value) });
   }
 
   // ── gate and apply, per article ──
@@ -1250,7 +1282,7 @@ export async function remediate({ asin, sources, ledger, now, deps, forceUnlink 
         const why = !r2?.value ? "retry writer unreachable" : `retry answered not-the-same-kind — ${String(r2.value.reason ?? "").slice(0, 120)}`;
         v = { ...v, reasons: [why, ...v.reasons] };
       } else {
-        replacements = r2.value.segments ?? r2.value;
+        replacements = normalizeDraft(r2.value.segments ?? r2.value);
         report.retryDrafts = { ...(report.retryDrafts ?? {}), [h.slug]: replacements };
         v = await judge(h, replacements);
       }

@@ -17,12 +17,12 @@
  */
 
 import { readFileSync, readdirSync } from "node:fs";
-import { hazardFlags, reviewContent } from "./lib/content-review.mjs";
+import { hazardFlags, reviewContent, reviewReplyError, REVIEW_MAX_TOKENS } from "./lib/content-review.mjs";
 import { panel } from "./lib/llm.mjs";
 import {
   searchTerm, productType, typeMatches, formFactor, aliasesFor, priceBand, pickCandidate,
-  locate, remediate, readArticle, newEntry, amazonLink, checkRewrite, spliceArticle,
-  editReviewPrompt, rewritePrompt, ungroundedClaims,
+  locate, remediate, readArticle, newEntry, amazonLink, checkRewrite, spliceArticle, gateSwap,
+  editReviewPrompt, rewritePrompt, ungroundedClaims, spliceBlocks, retryPrompt,
 } from "./lib/dead-link-remediation.mjs";
 
 const ROOT = new URL("..", import.meta.url).pathname;
@@ -199,6 +199,38 @@ const mentions = (sources) => {
   check("splice/order: dispersed unlinked for the paragraph break", disp?.outcome === "unlinked" && /mechanical check: .*paragraph break/.test(disp.why), JSON.stringify(disp));
   check("splice/order: no panel call for the refused guide", !deps.reviewed.some((s) => /Dispersed/i.test(s.title)), deps.reviewed.map((s) => s.title).join(" | "));
   check("splice/order: the other guides still reviewed", deps.counts.review === 2, String(deps.counts.review));
+}
+
+// ── 1b''. edge whitespace is not a paragraph; a real extra paragraph still is ─
+{
+  /* Dry run 9: both dispersed drafts ended a segment with "\n". Joined with
+   * "\n\n" that shifted the next paragraph to "\n<text>" — count held, and the
+   * guide was unlinked for "paragraph 22 changed outside the segments", a
+   * reason that named no segment and quoted nothing. */
+  const blocks = ["### Fixed Star 1 System", "The Fixed Star 1 is compact. It boils fast.", "Unrelated paragraph."];
+  const seg = [{ id: "p", kind: "paragraph", index: 1, text: blocks[1] }];
+  const opts = { aliases: ["Fixed Star 1"], dead: DEAD, replacement: NEW, label: "Odoland Cooking System", blocks };
+  const clean = "The Odoland Cooking System is compact. It boils fast.";
+  const trailing = checkRewrite(seg, { p: `${clean}\n` }, opts);
+  check("edge ws: trailing newline passes the structural check", trailing.ok, JSON.stringify(trailing));
+  check("edge ws: leading+trailing blank lines pass", checkRewrite(seg, { p: `\n\n  ${clean}  \n\n` }, opts).ok);
+  check("edge ws: splice output is byte-identical to the clean draft's", spliceBlocks(blocks, seg, { p: `${clean}\n` }).content === spliceBlocks(blocks, seg, { p: clean }).content);
+  const added = checkRewrite(seg, { p: `${clean}\n\nA brand new paragraph about fuel.\n` }, opts);
+  const why = added.problems.join(" | ");
+  check("edge ws: a genuinely added paragraph still fails", !added.ok && /paragraph break/.test(why), why);
+  check("edge ws: that reason names the segment and quotes the text", /\bp contains/.test(why) && /"A brand new paragraph about fuel\."/.test(why), why);
+  /* The count-preserving shift is now unreachable for string drafts; a String
+   * object skips the trim and reaches it, which is how this pins its wording. */
+  const shifted = spliceBlocks(blocks, seg, { p: new String(`${clean}\n`) }).problems.join(" | ");
+  check("edge ws: a shift outside the segments names the segment and quotes both sides", /^p: its rewrite spilled into paragraph 2/.test(shifted) && /became "\\nUnrelated paragraph\."/.test(shifted) && /was "Unrelated paragraph\."/.test(shifted), shifted);
+  check("edge ws: the shift reason gets the paragraph-break retry hint", retryPrompt({ system: "S", user: "{}" }, { draft: {}, reasons: [shifted] }).system.includes("never start or end one with a newline"));
+
+  // End to end: the dispersed writer ends every segment with "\n" on BOTH drafts.
+  const deps = makeDeps({ write: honestWriter({ sabotage: (s, t) => (/^A reliable stove is the heart/.test(s.text) ? `${t}\n` : t) }) });
+  const r = await run(deps);
+  const disp = r.report.articles["dispersed-camping-beginners-guide"];
+  check("edge ws/e2e: dispersed swapped despite a trailing newline", disp?.outcome === "swapped", JSON.stringify(disp));
+  check("edge ws/e2e: no retry spent on whitespace", !disp?.retry, JSON.stringify(disp?.retry));
 }
 
 // ── 1c. `updated` injection: tolerate a `date:` line with no trailing comma ──
@@ -594,6 +626,140 @@ const mentions = (sources) => {
       install([BROKEN, '{"issues":[]}']);
       const p2 = await panel("reviewer", { system: "s", user: "u" }, { size: 3 });
       check("malformed then valid: the retry's answer counts", p2.results.length === 3 && p2.results.some((r) => r.tries === 2), JSON.stringify(p2.results.map((r) => r.tries)));
+    } finally {
+      globalThis.fetch = realFetch; console.error = realErr;
+      for (const [k, v] of Object.entries(env)) if (v === undefined) delete process.env[k]; else process.env[k] = v;
+    }
+  }
+
+  // (g) the token ceiling reaches the panel on BOTH review paths
+  /* DeepSeek bills reasoning against max_tokens. At panel()'s default 8000 it
+   * reasoned itself out of an answer on a publish review, and at 12000 on three
+   * dead-link reviews (dry runs 5/8/10), 2026-09-22/23. */
+  {
+    const seen = [];
+    const capture = async (_role, opts) => { seen.push(opts.maxTokens); return { results: [], failures: [], independent: false }; };
+    await reviewContent({ title: "t", body: "b" }, { panelFn: capture });
+    check("ceiling: publish review sends REVIEW_MAX_TOKENS (16000)", REVIEW_MAX_TOKENS === 16000 && seen[0] === REVIEW_MAX_TOKENS, JSON.stringify(seen));
+    await reviewContent({ title: "t", body: "b" }, { panelFn: capture, prompt: { system: "s", user: "u", maxTokens: 12000 } });
+    check("ceiling: a smaller prompt maxTokens is raised to the ceiling", seen[1] === REVIEW_MAX_TOKENS, JSON.stringify(seen));
+    await reviewContent({ title: "t", body: "b" }, { panelFn: capture, prompt: { system: "s", user: "u", maxTokens: 20000 } });
+    check("ceiling: a larger prompt maxTokens is kept", seen[2] === 20000, JSON.stringify(seen));
+    const g = await gateSwap(
+      { articleTitle: "T", segments: [], replacements: {}, candidate: { title: "Odoland 1L Stove", asin: "X" }, hit: { title: "T", blocks: [], segments: [] } },
+      { hazardFlags: () => [], reviewContent: (spec, opts) => reviewContent(spec, { ...opts, panelFn: capture }) },
+    );
+    check("ceiling: dead-link gateSwap review sends >= REVIEW_MAX_TOKENS", seen[3] >= REVIEW_MAX_TOKENS && g.verdict === "defer", JSON.stringify({ seen, v: g.verdict }));
+  }
+
+  // (h) the REAL panel(): an EMPTY reply (reasoning ate max_tokens) is retried once
+  {
+    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG };
+    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG;
+    const realFetch = globalThis.fetch, realErr = console.error;
+    const logged = [], calls = {}, maxSeen = {};
+    const reply = (body) => ({ ok: true, status: 200, json: async () => body, text: async () => JSON.stringify(body) });
+    const install = (dsReplies) => {
+      for (const k of Object.keys(calls)) delete calls[k];
+      logged.length = 0;
+      globalThis.fetch = async (_url, init) => {
+        const b = JSON.parse(init.body);
+        calls[b.model] = (calls[b.model] ?? 0) + 1;
+        maxSeen[b.model] = b.max_tokens;
+        if (b.model === "deepseek/deepseek-v4-pro") {
+          const t = dsReplies[Math.min(calls[b.model], dsReplies.length) - 1];
+          return reply({ choices: [{ message: { content: t }, finish_reason: t ? "stop" : "length" }] });
+        }
+        if (b.messages?.[0]?.role === "system") return reply({ choices: [{ message: { content: '{"issues":[]}' } }] });
+        return reply({ content: [{ type: "text", text: '{"issues":[]}' }] });
+      };
+      console.error = (...a) => logged.push(a.join(" "));
+    };
+    try {
+      install(["", '{"issues":[]}']);
+      const r = await reviewContent({ title: "t", body: "b" }, {});
+      check("empty: DeepSeek retried once and its second answer counts", calls["deepseek/deepseek-v4-pro"] === 2 && r?.passes === 3, JSON.stringify({ calls, passes: r?.passes }));
+      check("empty: the real request carries max_tokens 16000", maxSeen["deepseek/deepseek-v4-pro"] === 16000, JSON.stringify(maxSeen));
+      check("empty: retry is logged WITHOUT MINIMAX_DEBUG", logged.some((l) => /deepseek-v4-pro returned no text — retrying once.*finish_reason=length/.test(l)), logged.join(" / "));
+      install(["", "", ""]);
+      const p = await panel("reviewer", { system: "s", user: "u" }, { size: 3 });
+      check("empty twice: exactly 2 calls, then counted as no answer", calls["deepseek/deepseek-v4-pro"] === 2 && p.results.length === 2 && p.failures.length === 1 && p.failures[0].tries === 2, JSON.stringify({ calls, f: p.failures }));
+    } finally {
+      globalThis.fetch = realFetch; console.error = realErr;
+      for (const [k, v] of Object.entries(env)) if (v === undefined) delete process.env[k]; else process.env[k] = v;
+    }
+  }
+
+  // (i) FAIL CLOSED: a reply from an UNRELATED request is no answer, never a pass
+  /* 2026-09-23: SiliconFlow (serving deepseek/deepseek-v4-pro via OpenRouter)
+   * twice returned another request's output. extractJSON found a {…} in each,
+   * and a missing `issues` field read as "no issues" — a clean PASS vote. */
+  {
+    const JUNK_CONFIG = 'server:\n  host: 0.0.0.0\n  port: 8080\nlogging = {"level": "info", "rotate": true}\n# end of file';
+    const JUNK_STATUS = '<status>{"state":"completed","progress":100,"job":"a91f"}</status>';
+    const FLAG = '{"issues":[{"quote":"run this stove inside the tent","problem":"carbon monoxide","severity":"high"}]}';
+    check("shape: config-like junk is not a review", !!reviewReplyError({ level: "info", rotate: true }));
+    check("shape: <status> junk is not a review", !!reviewReplyError({ state: "completed", progress: 100, job: "a91f" }));
+    check("shape: {issues:[]} is a review", reviewReplyError({ issues: [] }) === null);
+    check("shape: bare [] is a review (MiniMax's clean answer)", reviewReplyError([]) === null);
+    check("shape: a flag with quote+severity is a review", reviewReplyError(JSON.parse(FLAG)) === null);
+    check("shape: issues not an array is not", !!reviewReplyError({ issues: "none" }));
+    check("shape: an item without a quote is not", !!reviewReplyError({ issues: [{ problem: "x", severity: "high" }] }));
+    check("shape: severity outside high|low is not", !!reviewReplyError({ issues: [{ quote: "q", problem: "x", severity: "critical" }] }));
+
+    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG };
+    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG;
+    const realFetch = globalThis.fetch, realErr = console.error;
+    const logged = [], calls = {};
+    const reply = (body) => ({ ok: true, status: 200, json: async () => body, text: async () => JSON.stringify(body) });
+    // `others` answers for MiniMax and Muse; DeepSeek plays the rogue host.
+    const install = (dsReplies, others = '{"issues":[]}') => {
+      for (const k of Object.keys(calls)) delete calls[k];
+      logged.length = 0;
+      globalThis.fetch = async (_url, init) => {
+        const b = JSON.parse(init.body);
+        calls[b.model] = (calls[b.model] ?? 0) + 1;
+        if (b.model === "deepseek/deepseek-v4-pro") {
+          const t = dsReplies[Math.min(calls[b.model], dsReplies.length) - 1];
+          return reply({ choices: [{ message: { content: t }, finish_reason: "stop" }] });
+        }
+        if (b.messages?.[0]?.role === "system") return reply({ choices: [{ message: { content: others } }] });
+        return reply({ content: [{ type: "text", text: others }] });
+      };
+      console.error = (...a) => logged.push(a.join(" "));
+    };
+    try {
+      for (const [name, junk] of [["config-like", JUNK_CONFIG], ["<status>", JUNK_STATUS]]) {
+        install([junk, junk]);
+        let seats = null;
+        const r = await reviewContent({ title: "t", body: "b" }, { onSeats: (s) => { seats = s; } });
+        const ds = seats?.find((x) => /deepseek/.test(x.seat));
+        check(`junk ${name}: retried once, then NO ANSWER (not pass)`, calls["deepseek/deepseek-v4-pro"] === 2 && ds?.verdict === "no-answer" && r?.passes === 2, JSON.stringify({ calls, ds, passes: r?.passes }));
+        check(`junk ${name}: logged without MINIMAX_DEBUG`, logged.some((l) => /deepseek-v4-pro returned malformed JSON — retrying once: .*wrong shape/.test(l)), logged.join(" / "));
+      }
+      // Junk from two seats: the review must not stand on the one real vote.
+      install([JUNK_STATUS], JUNK_CONFIG);
+      const none = await reviewContent({ title: "t", body: "b" }, {});
+      check("junk everywhere: review reports null, never a pass", none === null, JSON.stringify(none));
+      install([JUNK_STATUS, '{"issues":[]}']);
+      const healed = await reviewContent({ title: "t", body: "b" }, {});
+      check("junk then valid: the retry's clean answer counts", healed?.passes === 3 && calls["deepseek/deepseek-v4-pro"] === 2, JSON.stringify({ calls, p: healed?.passes }));
+      install([FLAG], FLAG);
+      const flagged = await reviewContent({ title: "t", body: "b" }, {});
+      check("valid flags still flag (3 of 3, high)", flagged?.passes === 3 && flagged?.blocking.length === 1 && flagged.blocking[0].votes === 3, JSON.stringify(flagged));
+      // An injected panel that ignores `validate` is re-checked by reviewContent.
+      let seats = null;
+      const lax = async () => ({ results: [
+        { value: { issues: [] }, provider: "a", model: "1" },
+        { value: { level: "info" }, provider: "b", model: "2" },
+        { value: { state: "completed" }, provider: "c", model: "3" },
+      ], failures: [], independent: true });
+      const r = await reviewContent({ title: "t", body: "b" }, { panelFn: lax, onSeats: (s) => { seats = s; } });
+      check("lax panelFn: junk values re-checked into no-answer", r === null && seats?.filter((s) => s.verdict === "no-answer").length === 2, JSON.stringify({ r, seats }));
+      // audit-products shares the reviewer role with a different schema: no validate, no change.
+      install([JUNK_STATUS]);
+      const raw = await panel("reviewer", { system: "s", user: "u" }, { size: 3 });
+      check("panel without validate: any JSON still accepted (other schemas unaffected)", raw.results.length === 3 && calls["deepseek/deepseek-v4-pro"] === 1, JSON.stringify({ calls, n: raw.results.length }));
     } finally {
       globalThis.fetch = realFetch; console.error = realErr;
       for (const [k, v] of Object.entries(env)) if (v === undefined) delete process.env[k]; else process.env[k] = v;

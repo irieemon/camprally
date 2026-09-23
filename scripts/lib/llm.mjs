@@ -51,24 +51,28 @@ const MODELS = {
    * is not something the receipts could ever explain. Preview ids are avoided
    * for the same reason in reverse: they get withdrawn. */
   gemini: process.env.GEMINI_MODEL ?? "gemini-3.6-flash",
-  /* The largest Gemma 4 this machine can hold. Measured, not estimated: the
-   * QAT 12B is 7.2GB on disk and loads to 7.6GB resident at 100% GPU with no
-   * CPU spill, alongside Chrome and the gateway. The next size up does NOT
-   * fit — `26b-a4b-it-qat` is 16GB, which is the machine's entire RAM, and
-   * `31b` is 20GB. Meta's Muse Glimmer was evaluated here too and is out for
-   * the same reason: its smallest build is 18GB against Meta's own stated 24GB
-   * floor, tested on an M4-*Max*. This is a base M4/16GB. */
-  ollama: process.env.OLLAMA_MODEL ?? "gemma4:12b-it-qat",
+  /* The Windows PC's Ollama, not this Mac's. gemma4:12b-it-qat used to live
+   * here and was moved off-box on 2026-09-23 to give the Mac its 7.6GB of RAM
+   * back. What replaced it is deliberately SMALL: Qwen 3.5 4B (Q4_K_M), CPU-only,
+   * served with a 16k context. It is suited ONLY to short prompts — under ~4k
+   * tokens is the comfortable range — which is every `cheap` caller today (a
+   * search phrase, a meta description over 1,200 chars of body, an ASIN pick
+   * over a ~2k-token inventory). Do not put it on a role with long prompts.
+   * Muse Glimmer (below) was evaluated for this machine and does not fit: its
+   * smallest build is 18GB against Meta's own stated 24GB floor. */
+  ollama: process.env.OLLAMA_MODEL ?? "qwen3.5:4b",
   /* The panel's third LINEAGE, which is the whole reason it is here — Meta
    * weights, reached through a router because 30B does not fit on this machine
-   * (see the ollama note above). Apache 2.0 and served by several hosts, so if
+   * (see the ollama note above — this Mac is a base M4/16GB). Apache 2.0 and served by several hosts, so if
    * OpenRouter is ever the wrong door the weights are not locked behind it. */
   museGlimmer: process.env.OPENROUTER_MODEL ?? "meta/muse-glimmer-30b",
   /* Replaced Gemini on the panel on measurement, not reputation — see the
    * reviewer note below. Distinct lineage, and the cheapest per detection of
    * everything benchmarked. It DOES hit the empty-content thinking trap
    * occasionally, which is survivable only because callers pass a generous
-   * maxTokens; do not lower it for this candidate. */
+   * maxTokens; do not lower it for this candidate. Reviews get 16000
+   * (content-review REVIEW_MAX_TOKENS) and panel() retries an empty reply once;
+   * even so it ran past 8000 on 1 of 3 publish-review samples on 2026-09-23. */
   deepseek: process.env.DEEPSEEK_MODEL ?? "deepseek/deepseek-v4-pro",
 };
 
@@ -101,10 +105,21 @@ const PROVIDERS = {
   },
   ollama: {
     api: "openai-completions",
-    baseUrl: () => process.env.OLLAMA_BASE_URL ?? "http://127.0.0.1:11434",
-    // Local, unauthenticated. A non-null placeholder keeps the "no key means
-    // skip this candidate" check from excluding it.
+    /* The Windows PC over Tailscale (MagicDNS name), not localhost — this Mac no
+     * longer holds a local model. If the PC is asleep or off the tailnet the
+     * fetch fails at the network layer, which callOne already reads as
+     * transient, so the role simply ends without an answer, same as before. */
+    baseUrl: () => process.env.OLLAMA_BASE_URL ?? "http://desktop-32gfflo:11434",
+    // Unauthenticated. A non-null placeholder keeps the "no key means skip this
+    // candidate" check from excluding it.
     key: () => "local",
+    /* THINKING OFF, and this is not a tuning knob. Qwen 3.5 thinks by default
+     * and on this CPU-only box a two-word probe through /v1/chat/completions did
+     * not finish within 120s; with `reasoning_effort: "none"` the same probe
+     * answered in ~1s. Ollama's OpenAI-compatible endpoint honours
+     * reasoning_effort and IGNORES a top-level `think: false` (measured: it
+     * still thought, and ran out of max_tokens with empty content). */
+    extraBody: { reasoning_effort: "none" },
   },
 };
 
@@ -126,6 +141,7 @@ const PROVIDERS = {
 export function lineageOf({ provider, model }) {
   const m = String(model ?? "").toLowerCase();
   if (/(^|\/)(gemini|gemma)/.test(m)) return "google";
+  if (/(^|\/)qwen/.test(m)) return "alibaba";
   if (m.includes("minimax")) return "minimax";
   if (/(^|\/)(muse|llama)/.test(m)) return "meta";
   if (m.includes("deepseek")) return "deepseek";
@@ -148,34 +164,26 @@ export function lineageOf({ provider, model }) {
  * `cheap` still leads with a cloud model rather than the local one, which is
  * not what the name suggests. The original reason was quality: asked "what is
  * 2+2" through OpenClaw, llama3.2:3b answered 214, and a wrong answer that
- * still parses is worse than no answer. Gemma 4 12B replaced it and settles
- * that objection — on both of this role's real prompts it returns exactly the
- * 2-word phrase asked for — so the reason it stays last is now latency, not
- * trust: ~15s warm against under a second from MiniMax, on a call that runs
- * once per article for a search hint the caller already treats as optional.
- * Last means it answers when both clouds are down, which is the failure this
- * pipeline actually sees.
+ * still parses is worse than no answer. Gemma 4 12B later held this seat on
+ * this Mac; since 2026-09-23 it is Qwen 3.5 4B on the Windows PC's CPU (see
+ * MODELS.ollama). It stays LAST for latency and size: it is a 4B model on a
+ * CPU, fine for a short prompt with thinking off (~1s for a two-word probe),
+ * but not a peer of the cloud seats. Last means it answers when both clouds
+ * are down, which is the failure this pipeline actually sees.
  *
- * GEMMA 4 THINKS BY DEFAULT, and the two traps that follow from it:
- *   - Keep maxTokens generous. A 10-token probe returned an EMPTY STRING with
- *     finish_reason=stop, having spent the budget thinking — indistinguishable
- *     from a model that had nothing to say. Both callers here pass 8000, which
- *     is the same reason they already pass it for MiniMax.
- *   - Ollama returns the thought in a separate `reasoning` field and leaves
- *     `content` clean, so the openai-completions extractor reads the answer and
- *     drops the musing without special handling. That is a property of Ollama's
- *     response shape, NOT of the model — a different local server may inline
- *     the thought, which would feed a chain of reasoning to a `parse: "text"`
- *     caller. Re-probe the raw response before pointing OLLAMA_BASE_URL
- *     somewhere new. Same class as the Gemini `thought: true` parts.
+ * QWEN 3.5 THINKS BY DEFAULT, which is why PROVIDERS.ollama sends
+ * `reasoning_effort: "none"`. With thinking ON, a two-word probe on the CPU
+ * did not finish in 120s — callers here have no fetch timeout, so that would
+ * stall a cycle, not just fail a hint. If thinking is ever re-enabled: Ollama
+ * returns the thought in a separate `reasoning` field and leaves `content`
+ * clean, which is a property of Ollama's response shape, NOT of the model — a
+ * different local server may inline the thought and feed a chain of reasoning
+ * to a `parse: "text"` caller. Re-probe the raw response before pointing
+ * OLLAMA_BASE_URL somewhere new. Same class as the Gemini `thought: true` parts.
  *
- * NOT on the reviewer panel, deliberately, and the reason is unchanged now
- * that `lineageOf` exists: Gemma 4 is built from the same research as Gemini 3,
- * which already votes there, so it would add a second Google-lineage opinion
- * rather than a third voice. The lineage check means it would at least be
- * REPORTED honestly instead of inflating `independent` — but a vote that
- * changes nothing and costs 2-4 minutes of local inference is still not worth
- * casting. Meta weights fill that seat instead; see MODELS.museGlimmer.
+ * NOT on the reviewer panel. A 4B CPU model is not a reviewer, and review
+ * prompts (a full article) are far outside its comfortable context. If it ever
+ * were seated, lineageOf reports it as `alibaba`, a distinct lineage.
  */
 const ROLES = {
   /* M3, then GEMINI, then M2.7 last.
@@ -390,7 +398,7 @@ function extractJSON(text) {
  * Returns {value} on success, or {error, transient} — the caller decides
  * whether to move on to the next candidate or give up on this one for good.
  */
-async function callOne({ provider, model, system, user, maxTokens, parse = "json", image }) {
+async function callOne({ provider, model, system, user, maxTokens, parse = "json", image, validate }) {
   const p = PROVIDERS[provider];
   const a = ADAPTERS[p.api];
   const key = p.key();
@@ -400,7 +408,7 @@ async function callOne({ provider, model, system, user, maxTokens, parse = "json
     const res = await fetch(a.url(p.baseUrl(), model, key), {
       method: "POST",
       headers: a.headers(key),
-      body: JSON.stringify(a.body({ model, system, user, maxTokens, image })),
+      body: JSON.stringify({ ...a.body({ model, system, user, maxTokens, image }), ...(p.extraBody ?? {}) }),
     });
     if (!res.ok) {
       return {
@@ -411,7 +419,7 @@ async function callOne({ provider, model, system, user, maxTokens, parse = "json
     const data = await res.json();
     const text = a.text(data);
     if (!text.trim()) {
-      return { error: `${provider}/${model}: no text emitted (${a.why(data)})`, transient: true };
+      return { error: `${provider}/${model}: no text emitted (${a.why(data)})`, transient: true, empty: true };
     }
     // Prose callers (write-article) want the markdown as-is; everything else
     // wants a parsed object. A malformed JSON reply is the model's fault, not
@@ -419,6 +427,14 @@ async function callOne({ provider, model, system, user, maxTokens, parse = "json
     if (parse === "text") return { value: text.trim() };
     const got = extractJSON(text);
     if (got.error) return { error: `${provider}/${model}: ${got.error}`, transient: false, malformed: true };
+    /* Parsing is not answering. extractJSON pulls the first {…} out of ANY
+     * text, so a host that returns another request's output (SiliconFlow
+     * serving DeepSeek via OpenRouter did, twice, 2026-09-23: a config file,
+     * and a `<status>{…}</status>` blob) parses fine. The caller's `validate`
+     * says whether the value is an answer to THIS question; a reply that is
+     * not is malformed, exactly like broken JSON. */
+    const invalid = validate?.(got.value);
+    if (invalid) return { error: `${provider}/${model}: wrong shape (${invalid}): ${text.slice(0, 160)}`, transient: false, malformed: true };
     return { value: got.value };
   } catch (err) {
     // Network-level failures (DNS, refused, timeout) are the same class of
@@ -491,10 +507,17 @@ export async function callRole(role, { system, user, maxTokens = 8000, rounds = 
  * "text", or every vote is discarded as unparseable JSON and the panel reports
  * a unanimous silence — a check that disables itself and says nothing.
  *
+ * `validate(value)` (optional, json only) returns an error string when a
+ * parsed reply is not an answer of the caller's schema. It is per caller on
+ * purpose: roles share panel() with different schemas (audit-products asks
+ * the reviewer role a different question), so the shape check cannot live
+ * here. An invalid reply takes the malformed path: logged, retried once, then
+ * no answer.
+ *
  * Returns { results: [{value, provider, model, tries}], failures:
  * [{provider, model, error, malformed, tries}], independent, members }.
  */
-export async function panel(role, { system, user, maxTokens = 8000, parse = "json", image } = {}, { size = 3 } = {}) {
+export async function panel(role, { system, user, maxTokens = 8000, parse = "json", image, validate } = {}, { size = 3 } = {}) {
   const available = roleCandidates(role);
   if (!available.length) return { results: [], independent: false, members: [] };
 
@@ -512,13 +535,20 @@ export async function panel(role, { system, user, maxTokens = 8000, parse = "jso
    * there is no next candidate, and a second sample from the same model
    * usually closes its braces. After that it counts as no answer — never as a
    * clean review. Transport failures are not retried here: they are what the
-   * callers' own defer paths exist for. */
+   * callers' own defer paths exist for.
+   *
+   * An EMPTY reply (200, no text) gets the same single retry. It is not a
+   * transport failure: it is a thinking model that spent its whole max_tokens
+   * reasoning (finish_reason=length) — DeepSeek did it in 3 of 6 dead-link dry
+   * runs and on a publish review, 2026-09-22/23. It is a tail event, so a
+   * second sample (often from a different OpenRouter host) usually answers;
+   * the cost is one extra call only when the seat would otherwise be lost. */
   const settled = await Promise.all(members.map(async ({ provider, model }) => {
-    let r = await callOne({ provider, model, system, user, maxTokens, parse, image });
+    let r = await callOne({ provider, model, system, user, maxTokens, parse, image, validate });
     let tries = 1;
-    if (r.value === undefined && r.malformed) {
-      console.error(`[llm] panel seat ${provider}/${model} returned malformed JSON — retrying once: ${r.error.slice(0, 200)}`);
-      r = await callOne({ provider, model, system, user, maxTokens, parse, image });
+    if (r.value === undefined && (r.malformed || r.empty)) {
+      console.error(`[llm] panel seat ${provider}/${model} returned ${r.malformed ? "malformed JSON" : "no text"} — retrying once: ${r.error.slice(0, 200)}`);
+      r = await callOne({ provider, model, system, user, maxTokens, parse, image, validate });
       tries = 2;
     }
     if (r.value === undefined) {

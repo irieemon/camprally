@@ -311,7 +311,31 @@ function reviewPrompt(spec) {
   };
 }
 
-/** One model's reply, as a list of issues. */
+/**
+ * Why a parsed reviewer reply is NOT a review, or null when it is one.
+ *
+ * FAIL CLOSED. issuesFrom() below reads anything without an `issues` array as
+ * "no issues", so before this check a reply from an unrelated request — which
+ * an OpenRouter host (SiliconFlow, DeepSeek-V4-Pro) returned twice on
+ * 2026-09-23, a config file and a `<status>{…}</status>` blob, each carrying
+ * a stray {…} — counted as a clean PASS vote on both publishing and ADR-0001
+ * dead-link swaps. Valid means: an `issues` array (or the bare array MiniMax
+ * sends for "nothing found"), every item an object with a non-empty string
+ * `quote` and a severity of high|low. Anything else is malformed, and panel()
+ * logs it, retries once, then counts the seat as no answer — never a pass.
+ */
+export function reviewReplyError(out) {
+  const issues = Array.isArray(out) ? out : out && typeof out === "object" && Array.isArray(out.issues) ? out.issues : null;
+  if (!issues) return "no issues array";
+  for (const [n, i] of issues.entries()) {
+    if (!i || typeof i !== "object" || Array.isArray(i)) return `issue ${n} is not an object`;
+    if (typeof i.quote !== "string" || !i.quote.trim()) return `issue ${n} has no quote`;
+    if (!["high", "low"].includes(i.severity)) return `issue ${n} severity ${JSON.stringify(i.severity)} is not high|low`;
+  }
+  return null;
+}
+
+/** One model's reply, as a list of issues. Only ever called on a reply that passed reviewReplyError. */
 function issuesFrom(out) {
   // Asked for {"issues":[…]}, the model returns a bare [] when it finds nothing.
   const issues = Array.isArray(out) ? out : Array.isArray(out?.issues) ? out.issues : [];
@@ -346,17 +370,51 @@ const quoteKey = (q) => String(q).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim
  * a network error must never be evidence that an article is sound. If fewer
  * than two come back at all, the whole review reports null.
  */
+/**
+ * Output-token ceiling for every review call, reasoning included.
+ *
+ * Measured 2026-09-23 on DeepSeek-V4-Pro via OpenRouter: a normal review
+ * reasons 0-4k tokens (host-dependent — some hosts return 0), but the tail runs
+ * away past 8k and 12k. 16k roughly doubles the headroom over the worst normal
+ * sample. It costs nothing on a normal call — only tokens actually produced are
+ * billed — and a runaway that still exhausts it is retried once by panel().
+ *
+ * NOT fixed with OpenRouter's `reasoning: {max_tokens}` or `effort: "low"`,
+ * both measured the same day: a 1500-token reasoning cap made the truncated
+ * thought spill into `content` as prose (no verdict), and `low` effort still
+ * reasoned 2.7-3.1k — no saving.
+ */
+export const REVIEW_MAX_TOKENS = 16000;
+
 export async function reviewContent(spec, { votes = 3, threshold = 2, prompt = null, inScope = null, panelFn = panel, onSeats = null } = {}) {
   /* `prompt` and `inScope` exist for the dead-link swap review (ADR-0001),
    * which judges an EDIT inside an already-published article rather than a
    * whole new one. `inScope(issue)` false means the finding is about text the
    * edit did not touch: it is kept in `outOfScope` for the record but can
    * never vote toward blocking. Publishing passes neither and is unchanged. */
-  const { results, failures = [], independent } = await panelFn(
+  /* The token ceiling is set HERE, for every review, rather than trusted to
+   * panel()'s 8000 default or to each prompt builder. DeepSeek (panel seat 3)
+   * bills its reasoning against max_tokens, and on 2026-09-23 it reasoned
+   * straight through 8000 on a publish review (DigitalOcean host, 213s,
+   * finish_reason=length, empty content) and through 12000 on three dead-link
+   * reviews across dry runs 5/8/10. A dropped seat leaves two votes, and then
+   * one dissent can never block. A prompt may ask for MORE, never less. */
+  const base = prompt ?? reviewPrompt(spec);
+  const answered = await panelFn(
     "reviewer",
-    prompt ?? reviewPrompt(spec),
+    { ...base, maxTokens: Math.max(base.maxTokens ?? 0, REVIEW_MAX_TOKENS), validate: reviewReplyError },
     { size: votes },
   );
+  const { independent } = answered;
+  /* Checked again here, not only inside panel(): `panelFn` is injectable, and
+   * a panel that ignores `validate` must still not turn junk into a pass. */
+  const results = [], failures = [...(answered.failures ?? [])];
+  for (const r of answered.results ?? []) {
+    const why = reviewReplyError(r.value);
+    if (!why) { results.push(r); continue; }
+    console.error(`[review] seat ${r.provider}/${r.model} answered with the wrong shape — counted as NO ANSWER: ${why}`);
+    failures.push({ provider: r.provider, model: r.model, error: `wrong shape: ${why}`, malformed: true, tries: r.tries ?? 1 });
+  }
 
   const scoped = (issues) => (inScope ? issues.filter(inScope) : issues);
   const rawRuns = results.map((r) => issuesFrom(r.value));
