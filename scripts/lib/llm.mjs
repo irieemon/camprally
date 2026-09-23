@@ -418,7 +418,7 @@ async function callOne({ provider, model, system, user, maxTokens, parse = "json
     // the network's, so it is permanent — retrying it just burns the budget.
     if (parse === "text") return { value: text.trim() };
     const got = extractJSON(text);
-    if (got.error) return { error: `${provider}/${model}: ${got.error}`, transient: false };
+    if (got.error) return { error: `${provider}/${model}: ${got.error}`, transient: false, malformed: true };
     return { value: got.value };
   } catch (err) {
     // Network-level failures (DNS, refused, timeout) are the same class of
@@ -491,7 +491,8 @@ export async function callRole(role, { system, user, maxTokens = 8000, rounds = 
  * "text", or every vote is discarded as unparseable JSON and the panel reports
  * a unanimous silence — a check that disables itself and says nothing.
  *
- * Returns { results: [{value, provider, model}], independent, members }.
+ * Returns { results: [{value, provider, model, tries}], failures:
+ * [{provider, model, error, malformed, tries}], independent, members }.
  */
 export async function panel(role, { system, user, maxTokens = 8000, parse = "json", image } = {}, { size = 3 } = {}) {
   const available = roleCandidates(role);
@@ -501,16 +502,35 @@ export async function panel(role, { system, user, maxTokens = 8000, parse = "jso
   // list, so a two-provider setup votes [A, B, A] rather than [A, A, A].
   const members = Array.from({ length: size }, (_, i) => available[i % available.length]);
 
+  /* A dropped seat is LOGGED ALWAYS, not only under MINIMAX_DEBUG. panel()
+   * does not substitute, so a seat that answers with broken JSON silently
+   * turns a 3-seat vote into a 2-seat one — and on 2026-09-22 Muse Glimmer did
+   * exactly that twice in one dry run with nothing on screen to say so.
+   *
+   * Malformed JSON gets ONE retry, and only malformed JSON. For callRole a bad
+   * reply is permanent because the next candidate is the better move; here
+   * there is no next candidate, and a second sample from the same model
+   * usually closes its braces. After that it counts as no answer — never as a
+   * clean review. Transport failures are not retried here: they are what the
+   * callers' own defer paths exist for. */
   const settled = await Promise.all(members.map(async ({ provider, model }) => {
-    const r = await callOne({ provider, model, system, user, maxTokens, parse, image });
-    if (r.value === undefined) {
-      note(r.error);
-      return null;
+    let r = await callOne({ provider, model, system, user, maxTokens, parse, image });
+    let tries = 1;
+    if (r.value === undefined && r.malformed) {
+      console.error(`[llm] panel seat ${provider}/${model} returned malformed JSON — retrying once: ${r.error.slice(0, 200)}`);
+      r = await callOne({ provider, model, system, user, maxTokens, parse, image });
+      tries = 2;
     }
-    return { value: r.value, provider, model };
+    if (r.value === undefined) {
+      console.error(`[llm] panel seat ${provider}/${model} gave NO ANSWER after ${tries} tr${tries === 1 ? "y" : "ies"}: ${String(r.error).slice(0, 200)}`);
+      note(r.error, r.transient);
+      return { failed: true, provider, model, error: String(r.error).slice(0, 300), malformed: !!r.malformed, tries };
+    }
+    return { value: r.value, provider, model, tries };
   }));
 
-  const results = settled.filter(Boolean);
+  const results = settled.filter((s) => !s.failed);
+  const failures = settled.filter((s) => s.failed);
   /* Independence is measured across LINEAGES, not model ids and not providers.
    *
    * Not model ids: MiniMax-M3 and MiniMax-M2.7 are different entries in the
@@ -529,7 +549,7 @@ export async function panel(role, { system, user, maxTokens = 8000, parse = "jso
    * Gemini was on the panel but its key had expired, the surviving votes are
    * all MiniMax and the caller must not be told otherwise. */
   const distinct = new Set(results.map(lineageOf));
-  return { results, independent: distinct.size > 1, members };
+  return { results, failures, independent: distinct.size > 1, members };
 }
 
 /**

@@ -346,14 +346,47 @@ const quoteKey = (q) => String(q).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim
  * a network error must never be evidence that an article is sound. If fewer
  * than two come back at all, the whole review reports null.
  */
-export async function reviewContent(spec, { votes = 3, threshold = 2 } = {}) {
-  const { results, independent } = await panel(
+export async function reviewContent(spec, { votes = 3, threshold = 2, prompt = null, inScope = null, panelFn = panel, onSeats = null } = {}) {
+  /* `prompt` and `inScope` exist for the dead-link swap review (ADR-0001),
+   * which judges an EDIT inside an already-published article rather than a
+   * whole new one. `inScope(issue)` false means the finding is about text the
+   * edit did not touch: it is kept in `outOfScope` for the record but can
+   * never vote toward blocking. Publishing passes neither and is unchanged. */
+  const { results, failures = [], independent } = await panelFn(
     "reviewer",
-    reviewPrompt(spec),
+    prompt ?? reviewPrompt(spec),
     { size: votes },
   );
 
-  const runs = results.map((r) => issuesFrom(r.value));
+  const scoped = (issues) => (inScope ? issues.filter(inScope) : issues);
+  const rawRuns = results.map((r) => issuesFrom(r.value));
+  const runs = rawRuns.map(scoped);
+
+  /* Per seat, including the ones that never answered, so a swap/unlink can be
+   * audited afterwards: who said what, at what severity, and who was absent. */
+  const seats = [
+    ...results.map((r, i) => {
+      const issues = runs[i];
+      const high = issues.filter((x) => x.severity === "high");
+      return {
+        seat: `${r.provider}/${r.model}`,
+        verdict: high.length ? "flag-high" : issues.length ? "flag-low" : "pass",
+        severity: high.length ? "high" : issues.length ? "low" : null,
+        findings: [...high, ...issues.filter((x) => x.severity !== "high")].slice(0, 3)
+          .map((x) => ({ severity: x.severity ?? "low", quote: String(x.quote).slice(0, 160), problem: String(x.problem ?? "").slice(0, 240) })),
+        outOfScope: rawRuns[i].length - issues.length,
+        ...(r.tries > 1 ? { tries: r.tries } : {}),
+      };
+    }),
+    ...failures.map((f) => ({
+      seat: `${f.provider}/${f.model}`,
+      verdict: "no-answer",
+      severity: null,
+      findings: [],
+      error: `${f.malformed ? "malformed JSON" : "unreachable"} after ${f.tries ?? 1} tr${(f.tries ?? 1) === 1 ? "y" : "ies"}: ${String(f.error).slice(0, 200)}`,
+    })),
+  ];
+  onSeats?.(seats);
   if (runs.length < Math.min(2, votes)) return null;
 
   const tally = new Map();
@@ -382,5 +415,7 @@ export async function reviewContent(spec, { votes = 3, threshold = 2 } = {}) {
     independent,
     blocking: agreed.filter((i) => i.severity === "high"),
     notes: all.filter((i) => !agreed.includes(i) || i.severity !== "high"),
+    outOfScope: rawRuns.flat().filter((i) => inScope && !inScope(i)),
+    seats,
   };
 }

@@ -32,7 +32,10 @@ const receiptPath = args.find((a) => !a.startsWith("--")) ?? `${ROOT}state/last-
  * for today's. */
 const maxAgeSec = Number(args[args.indexOf("--max-age") + 1]) || 900;
 
-const say = (s) => { console.log(s.replace(/\s+/g, " ").trim()); process.exit(0); };
+/* Filled in only once the receipt is known to be THIS run's: the missing and
+ * stale paths below must not append a previous run's dead-link fix. */
+let deadLinkNote = "";
+const say = (s) => { console.log(`${s}${deadLinkNote}`.replace(/\s+/g, " ").trim()); process.exit(0); };
 const quote = (s) => (s ? `"${s}"` : "");
 
 if (!existsSync(receiptPath)) {
@@ -40,6 +43,7 @@ if (!existsSync(receiptPath)) {
 }
 
 const r = JSON.parse(readFileSync(receiptPath, "utf8"));
+
 const ageSec = (Date.now() - Date.parse(r.finishedAt ?? r.startedAt)) / 1000;
 
 /* Guard against announcing a stale receipt.
@@ -55,6 +59,37 @@ if (ageSec > maxAgeSec) {
   );
 }
 
+/* A dead-link fix rides alongside whatever the cycle then did (ADR-0001): the
+ * swap or unlink is committed first and the run carries on to publish, so it
+ * has no outcome of its own. It is appended to the one message rather than
+ * sent as a second — two pings per cycle is how a channel stops being read.
+ *
+ * The two reasons differ in who has to act. A swap is informational: it was
+ * reviewed, and the commit says what changed. An unlink is an action item,
+ * because the guide still NAMES a product readers cannot buy. */
+deadLinkNote = (() => {
+  const e = r.deadLinkEvent;
+  if (!e) return "";
+  const guides = (a) => (a?.length ? a.join(", ") : "");
+  const swapped = e.swapped?.length
+    ? ` 🔗 Dead product ${e.label ?? e.asin} swapped for ${e.replacementLabel ?? e.replacement} in ${guides(e.swapped)} (${e.commit}).`
+    : "";
+  // Which seat said what, per unlinked guide: "M3 flag-high, muse-glimmer-30b
+  // no-answer, deepseek-v4-pro pass". The full findings are in the receipt.
+  const panelOf = (slug) => {
+    const seats = e.reviews?.[slug];
+    return seats?.length ? ` [panel on ${slug}: ${seats.map((x) => `${x.seat.split("/").pop()} ${x.verdict}`).join(", ")}]` : "";
+  };
+  const unlinked = e.unlinked?.length
+    ? ` 🚨 ACTION: dead product ${e.label ?? e.asin} UNLINKED in ${guides(e.unlinked)} (${e.commit}) — ${e.why ?? "no reviewed replacement"}.${e.unlinked.map(panelOf).join("")} The text still names a product readers cannot buy; rewrite or remove that section.`
+    : "";
+  // The one writer retry per guide: which guides needed it and whether it fixed them.
+  const retried = Object.entries(e.retries ?? {});
+  const retries = retried.length
+    ? ` Writer retried once in ${retried.map(([slug, t]) => `${slug} (${t.first} refusal → ${t.final === "pass" ? "fixed" : `still ${t.final}`})`).join(", ")}.`
+    : "";
+  return swapped + unlinked + retries;
+})();
 // ── the publishing cycle ──────────────────────────────────────────────────
 if (r.outcome === "published") {
   say(`✅ DONE: published ${quote(r.slug)} — confirmed live on the site. ${r.remaining ?? "?"} left in the queue.`);
@@ -79,7 +114,7 @@ if (r.outcome === "blocked") {
   // its own tells nobody what to do.
   const detail = {
     "content-review": `the safety review rejected ${quote(r.slug)} (attempt ${r.attempts}/2). Draft quarantined; the next run rewrites it. No action needed unless it repeats.`,
-    "dead-links": "confirmed dead affiliate links. Publishing is held until they are fixed — run scripts/verify-asins.mjs",
+    "dead-links": `dead-link remediation could not finish${r.message ? ` (${String(r.message).slice(0, 160)})` : ""}. Publishing is held — the unlink failed to build or left the tree dirty.`,
     "working-tree-dirty": "uncommitted changes in the repo. Commit or stash them; the cycle refuses to run over someone's work.",
     "publish-failed": `the build failed for ${quote(r.slug)} and everything was rolled back. Nothing shipped.`,
     "push-failed": `${quote(r.slug)} is committed locally (${r.commit}) but the push failed. The site will not update until it lands.`,

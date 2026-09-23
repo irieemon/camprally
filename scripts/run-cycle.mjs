@@ -75,6 +75,12 @@ const stamp = startedAt.replace(/[:.]/g, "-");
  * gates call finish() before step 2c is reached, and reading a `let` from its
  * temporal dead zone throws — even through typeof. */
 let priceClaims = null;
+/* Dead-link remediation (step 2a). Same TDZ reason. deadLinks rides on EVERY
+ * receipt after a remediation so a pending swap shows as a warning on the
+ * dashboard; deadLinkEvent only when this run actually changed a guide, so
+ * announce-run says it once. */
+let deadLinks = null;
+let deadLinkEvent = null;
 
 function sh(cmd, args, opts = {}) {
   return execFileSync(cmd, args, { cwd: ROOT, encoding: "utf8", ...opts }).trim();
@@ -183,6 +189,8 @@ function finish(outcome, detail, code, { commit = true } = {}) {
     startedAt, finishedAt: new Date().toISOString(), outcome,
     ...(typeof priceClaims === "string" ? { priceClaims } : {}),
     ...(stalledRuns ? { runsSincePublish: stalledRuns } : {}),
+    ...(deadLinks?.length ? { deadLinks } : {}),
+    ...(deadLinkEvent ? { deadLinkEvent } : {}),
     ...detail,
   };
   if (!DRY) {
@@ -275,13 +283,90 @@ try {
   refreshCode = err.status ?? 1;
   console.log(err.stdout ?? "");
 }
-if (refreshCode === EXIT.FAIL) {
-  finish("blocked", {
-    reason: "dead-links",
-    message: "refresh-asins found confirmed dead affiliate links. Fix before publishing more.",
-  }, EXIT.FAIL);
-}
 // refreshCode === DEFER just means Amazon throttled; publishing from cache is fine.
+
+// ── step 2a: remediate one dead product, then keep going (ADR-0001) ────────
+/* This used to end the cycle `blocked / dead-links` — right as a detector,
+ * wrong as a gate: B07F2VP353 going DEAD on 2026-09-19 stopped ALL new
+ * publishing until someone hand-edited three guides. Now the oldest dead ASIN
+ * is swapped for a reviewed replacement or unlinked, that fix is committed and
+ * pushed on its own, and the new-article steps below run in the same cycle.
+ *
+ * It blocks in exactly two cases, both of which really do need a human: the
+ * unlink itself failed to build (the remediation script exits 1, everything
+ * restored), or the remediation left the tree dirty. A pending swap, a
+ * finished swap and an unlink all carry on. refresh-asins is untouched — it
+ * keeps exiting 1 until the last reference is gone, which is what drives this
+ * step on the next cycle while a swap is still pending. */
+if (refreshCode === EXIT.FAIL) {
+  let out = "", code = 0;
+  try {
+    out = sh("node", ["scripts/remediate-dead-asins.mjs", ...(DRY ? ["--dry-run"] : [])]);
+  } catch (err) {
+    code = err.status ?? 1;
+    out = `${err.stdout ?? ""}${err.stderr ?? ""}`;
+  }
+  console.log(out);
+  let result = null;
+  try { result = JSON.parse(out.match(/^RESULT (.*)$/m)?.[1] ?? "null"); } catch { /* reported below */ }
+  if (code !== 0 || !result) {
+    finish("blocked", {
+      reason: "dead-links",
+      message: `Dead-link remediation could not finish${result?.asin ? ` for ${result.asin}` : ""}: ` +
+        `${result?.why ?? out.slice(-900)}`,
+      ...(result?.deadLinks ? { deadLinks: result.deadLinks } : {}),
+    }, EXIT.FAIL);
+  }
+  deadLinks = result.deadLinks ?? null;
+
+  if (!DRY && result.changed?.length) {
+    const n = (a) => `${a.length} guide${a.length === 1 ? "" : "s"}`;
+    const subject =
+      result.event === "swapped" ? `fix(links): ${result.asin} → ${result.replacement} in ${n(result.swapped)}` :
+      result.event === "unlinked" ? `fix(links): unlink ${result.asin} in ${n(result.unlinked)}` :
+      `fix(links): ${result.asin} → ${result.replacement} in ${n(result.swapped)}, unlinked in ${result.unlinked.length}`;
+    // catalog.json and product-images.json are rebuilt by the remediation's
+    // build step; the ledger and the new product's LIVE verdict are state.
+    sh("git", ["add", ...result.changed, "state/dead-link-remediation.json", "state/asin-cache.json", "src/data/catalog.json", "src/data/product-images.json"]);
+    sh("git", ["commit", "-m",
+      `${subject}\n\n` +
+      `${result.label ?? result.asin} is DEAD on Amazon.` +
+      `${result.swapped?.length ? ` Swapped for ${result.replacementLabel ?? result.replacement} (reviewed) in: ${result.swapped.join(", ")}.` : ""}` +
+      `${result.unlinked?.length ? ` Unlinked in: ${result.unlinked.join(", ")} — ${result.why ?? ""}` : ""}\n\n` +
+      `Automated by scripts/remediate-dead-asins.mjs (ADR-0001); build passed.\n\n` +
+      `Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>`]);
+    const sha = sh("git", ["rev-parse", "--short", "HEAD"]);
+    let verified = null;
+    if (PUSH) {
+      try { sh("git", ["push", "origin", "HEAD"]); }
+      catch (err) {
+        finish("blocked", {
+          reason: "push-failed", commit: sha,
+          message: `Dead-link fix committed locally (${sha}) but the push failed:\n${err.stderr ?? err.message}`,
+        }, EXIT.FAIL);
+      }
+      // Never fatal: a slow deploy lands on its own, and the receipt says which.
+      try { sh("node", ["scripts/verify-deploy.mjs", (result.swapped?.[0] ?? result.unlinked?.[0])]); verified = true; }
+      catch { verified = false; }
+    }
+    deadLinkEvent = {
+      reason: result.event === "unlinked" ? "dead-link-unlinked" : "dead-link-swapped",
+      asin: result.asin, label: result.label, replacement: result.replacement,
+      replacementLabel: result.replacementLabel, swapped: result.swapped, unlinked: result.unlinked,
+      why: result.why, reviews: result.reviews ?? null, retries: result.retries ?? null, commit: sha, deployVerified: verified,
+    };
+  }
+
+  // Same exclusions as step 1: the remediation must not leave a hand-authored
+  // file modified behind it, or the NEXT cycle would refuse to start.
+  const left = sh("git", ["status", "--porcelain", "--", ".", ":!state", ":!specs", ":!src/data/catalog.json", ":!src/data/product-images.json", ":!src/data/printables.json", ":!public/images/printables", ":!src/data/merch.json", ":!public/images/merch", ":!public/images/heroes"]);
+  if (!DRY && left) {
+    finish("blocked", {
+      reason: "dead-links",
+      message: `Dead-link remediation left uncommitted changes:\n${left}`,
+    }, EXIT.FAIL);
+  }
+}
 
 // ── step 2b: refresh prices ───────────────────────────────────────────────
 // Runs every cycle regardless of whether anything publishes, because stale

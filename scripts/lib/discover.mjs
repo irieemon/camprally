@@ -169,3 +169,86 @@ export function priceCeiling(text) {
     text.match(/\$(\d+)\s*(?:or less|and under)/i);
   return m ? Number(m[1]) : null;
 }
+
+// ── listing facts for one product (ADR-0001 grounding) ─────────────────────
+
+const PRODUCT_QUERY = `
+query product($asin: String!) {
+  amazonProduct(input: { asin: $asin }) {
+    asin title brand featureBullets itemWeight isInStock
+  }
+}`;
+
+/* Only flat scalar fields. Canopy's paginated and estimated fields (reviews,
+ * offers, sales/stock estimates) are separate lookups on their side; asking
+ * for none of them keeps this at exactly one request — the same price as a
+ * search (100/month free, $0.01 after). */
+export const LISTING_MAX_AGE_DAYS = 7;
+const MAX_BULLETS = 10;
+const MAX_BULLET_CHARS = 500;
+
+/**
+ * What the product's own Amazon listing says about it: title, brand, feature
+ * bullets, item weight. This is the evidence a swap's product-specific claims
+ * are checked against — without it the writer carries over the dead product's
+ * specifics (dry run 4: "hard-anodized pot", "piezo igniter" on an Odoland
+ * whose listing says neither) and reviewers cannot tell.
+ *
+ * Cached in discovery-cache.json under `product:<asin>` for
+ * LISTING_MAX_AGE_DAYS, so a deferred run does not pay twice.
+ *
+ * @returns {Promise<null | {asin,title,brand,bullets:string[],itemWeight,isInStock,fetchedAt,source}>}
+ *   null when the lookup failed — the caller must NOT swap on null.
+ *   Throws code "QUOTA" on a plan-limit refusal, like discover().
+ */
+export async function fetchListingFacts(asin, { force = false, nowIso } = {}) {
+  const key = `product:${asin}`;
+  const cache = loadCache();
+  const hit = cache[key];
+  const fresh = hit?.fetchedAt && (Date.now() - Date.parse(hit.fetchedAt)) / 86_400_000 <= LISTING_MAX_AGE_DAYS;
+  if (!force && fresh && hit.facts) return hit.facts;
+
+  const apiKey = canopyKey();
+  if (!apiKey) return null;
+  if (quotaExhausted()) {
+    const e = new Error("Canopy plan limit reached (cached) — resets on the 1st");
+    e.code = "QUOTA";
+    throw e;
+  }
+  try {
+    const res = await fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "API-KEY": apiKey },
+      body: JSON.stringify({ query: PRODUCT_QUERY, variables: { asin } }),
+      signal: AbortSignal.timeout(30_000),
+    });
+    const json = await res.json().catch(() => null);
+    const err = json?.errors?.[0];
+    if (res.status === 402 || err?.extensions?.code === "PLAN_LIMIT_EXCEEDED") {
+      markQuotaExhausted();
+      const e = new Error("Canopy plan limit reached");
+      e.code = "QUOTA";
+      throw e;
+    }
+    if (!res.ok || err) return null;
+    const p = json?.data?.amazonProduct;
+    if (!p?.title) return null;
+    const facts = {
+      asin,
+      title: p.title,
+      brand: p.brand ?? null,
+      bullets: (p.featureBullets ?? []).filter((b) => typeof b === "string" && b.trim())
+        .slice(0, MAX_BULLETS).map((b) => b.trim().slice(0, MAX_BULLET_CHARS)),
+      itemWeight: p.itemWeight ?? null,
+      isInStock: p.isInStock ?? null,
+      fetchedAt: nowIso ?? new Date().toISOString(),
+      source: "canopy amazonProduct",
+    };
+    cache[key] = { fetchedAt: facts.fetchedAt, facts };
+    saveCache(cache);
+    return facts;
+  } catch (err) {
+    if (err?.code === "QUOTA") throw err;
+    return null;
+  }
+}
