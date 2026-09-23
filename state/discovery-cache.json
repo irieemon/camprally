@@ -12991,5 +12991,128 @@
         "ratingsTotal": 336
       }
     ]
+  },
+  "backpacking camping stove system|35|65": {
+    "term": "backpacking camping stove system",
+    "min": 35,
+    "max": 65,
+    "fetchedAt": "2026-09-22T23:58:09.175Z",
+    "results": [
+      {
+        "asin": "B01N5O7551",
+        "title": "MSR PocketRocket 2 Ultralight Camping and Backpacking Stove",
+        "price": "$49.95",
+        "priceValue": 49.95,
+        "rating": 4.8,
+        "ratingsTotal": 4292
+      },
+      {
+        "asin": "B01N2KALAS",
+        "title": "Jetboil MightyMo Ultralight and Compact Camping and Backpacking Stove",
+        "price": "$64.95",
+        "priceValue": 64.95,
+        "rating": 4.8,
+        "ratingsTotal": 664
+      },
+      {
+        "asin": "B0009PUR5E",
+        "title": "Coleman Bottletop Propane Stove, 7,650 BTU Camping Cooker",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.7,
+        "ratingsTotal": 7154
+      },
+      {
+        "asin": "B0DHL1PKVM",
+        "title": "Fire-Maple Petrel G3 Pot & Greenpeak 1 Gas Stove Camping Cooking Set",
+        "price": "$49.95",
+        "priceValue": 49.95,
+        "rating": 4.7,
+        "ratingsTotal": 69
+      },
+      {
+        "asin": "B0CR4W66C3",
+        "title": "Odoland Camping Pots with Heat Exchanger Camping Cooking Set with Portable Camping Stove Camping Mess Kit Include Mug, Folding Utensil Set, Canister Stabilizer for Backpacking Outdoor Hiking & Picnic",
+        "price": "$40.99",
+        "priceValue": 40.99,
+        "rating": 4.6,
+        "ratingsTotal": 258
+      },
+      {
+        "asin": "B0GQZ5D1HR",
+        "title": "Odoland 1L Heat Exchanger Backpacking and Camping Stove System",
+        "price": "$50.39",
+        "priceValue": 50.39,
+        "rating": 4.6,
+        "ratingsTotal": 172
+      },
+      {
+        "asin": "B0GQYTYTMP",
+        "title": "Odoland 1.2L Heat Exchanger Backpacking and Camping Stove System",
+        "price": "$58.99",
+        "priceValue": 58.99,
+        "rating": 4.6,
+        "ratingsTotal": 172
+      },
+      {
+        "asin": "B0822LVK37",
+        "title": "Odoland 17pcs Camping Cookware Set with Folding Camping Stove for Camping",
+        "price": "$40.79",
+        "priceValue": 40.79,
+        "rating": 4.5,
+        "ratingsTotal": 1443
+      },
+      {
+        "asin": "B0CCXZKK7H",
+        "title": "WADEO 7200W Windproof Camp Stove, Camping Gas Stove with Piezo Ignition",
+        "price": "$37.99",
+        "priceValue": 37.99,
+        "rating": 4.4,
+        "ratingsTotal": 357
+      },
+      {
+        "asin": "B0DHLX31RD",
+        "title": "Smokey Camp Camping Cookware Mess Kit Set with Stove - Backpacking Camping Pots and Pans Set, All in One Non-Stick Camping Cooking Set, Portable Stove, Hiking, Picnic, Outdoor & Camping Cookware Set",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.4,
+        "ratingsTotal": 130
+      },
+      {
+        "asin": "B0863RHXZY",
+        "title": "Camplux Propane Camping Stove 20,000 BTU, Camping Stoves 2 Burners with CSA Certification",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.3,
+        "ratingsTotal": 245
+      },
+      {
+        "asin": "B0CQDJX97M",
+        "title": "Flame King Pro-Boil All-in-One Camping and Backpacking Stove Cooking System, Boils Water in 90 Seconds, Gas Powered",
+        "price": "$45.10",
+        "priceValue": 45.1,
+        "rating": 3.2,
+        "ratingsTotal": 58
+      }
+    ]
+  },
+  "product:B0GQZ5D1HR": {
+    "fetchedAt": "2026-09-23T00:47:02.672Z",
+    "facts": {
+      "asin": "B0GQZ5D1HR",
+      "title": "Odoland 1L Heat Exchanger Backpacking and Camping Stove System 1.0L",
+      "brand": "Odoland",
+      "bullets": [
+        "Dual Pot & Pot Stand for Versatile Meals Outdoors: Dual pot with pot stand supports varied outdoor cooking. Small pot doubles as mini frying pan (for heating sauces, frying eggs) or serving bowl. Low edge design lets you eat easily with no extra dishes.",
+        "All in One Storage & Silent Carry: Whole set (fits 230g gas canister) nests completely inside the pot. Elastic strap locks everything tightly, no rattling noise during hiking or camping.",
+        "Upgraded Safety & Anti-Leak: No Melting, No Leaks Metal base. 220℃ heat resistant parts stop warping. Dual O ring valve seals gas perfectly. Silicone nozzle cap blocks debris for steady ignition, no failed sparks—safe cooking for all outdoor trips.",
+        "All-Terrain Stability & Wobble-Free Cooking : Ergonomic C-grip handle for effortless pouring; gas canister stand stays firm on rocks, sand and uneven ground. Rivet free welded pot avoids leaks and hidden dirt.",
+        "Ultra Fast Boiling & Fuel Saving: Boils 1L water in 160s, uses 20% less fuel. Ideal for coffee, dehydrated meals and emergency water purification. Boil faster, wait less time."
+      ],
+      "itemWeight": "680 g",
+      "isInStock": true,
+      "fetchedAt": "2026-09-23T00:47:02.672Z",
+      "source": "canopy amazonProduct"
+    }
   }
 }
