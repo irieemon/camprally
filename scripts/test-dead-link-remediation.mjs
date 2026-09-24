@@ -6,9 +6,12 @@
  *
  * Zero network and zero model calls: search, link check, writer and reviewer
  * are all injected. The SOURCES are real — articles.ts, article-sections.ts,
- * hero-alt.json and the specs are read from this checkout (never written) —
- * so the fan-out cases run against the actual B07F2VP353 damage, including the
- * spec-less cookware guide the original brief missed.
+ * hero-alt.json and the specs are read from git at a PINNED commit (never the
+ * working tree, never written) — so the fan-out cases run against the actual
+ * B07F2VP353 damage, including the spec-less cookware guide the original brief
+ * missed. Pinned because the live cycle repairs that damage for real (6583112
+ * swapped it to B0GQZ5D1HR); reading the checkout made this test depend on
+ * mutable content. Override with DLR_FIXTURE_REF only to re-pin deliberately.
  *
  * The positive controls come first because they are the reason this file
  * exists: a gate that has never rejected anything is unverified. Two
@@ -16,7 +19,7 @@
  * must both be refused and must fall through to unlink.
  */
 
-import { readFileSync, readdirSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { hazardFlags, reviewContent, reviewReplyError, REVIEW_MAX_TOKENS } from "./lib/content-review.mjs";
 import { panel } from "./lib/llm.mjs";
 import {
@@ -31,14 +34,30 @@ const NEW = "B0TESTSTV1";
 const NOW = new Date("2026-09-22T15:00:00Z");
 const THREE = ["budget-camping-cookware-that-works", "budget-portable-camping-stoves-compared", "dispersed-camping-beginners-guide"];
 
+/* Last commit before 6583112 repaired B07F2VP353 in the live content. */
+const FIXTURE_REF = process.env.DLR_FIXTURE_REF ?? "855909eea5c72ece00e34ecc60ba33f4bc96c0ec";
+const git = (...args) => execFileSync("git", ["-C", ROOT, ...args], { maxBuffer: 64 * 1024 * 1024 }).toString();
+const atRef = (path) => git("show", `${FIXTURE_REF}:${path}`);
 const specs = {};
-for (const f of readdirSync(`${ROOT}specs`)) if (f.endsWith(".json")) specs[f.slice(0, -5)] = readFileSync(`${ROOT}specs/${f}`, "utf8");
-const SOURCES = Object.freeze({
-  articles: readFileSync(`${ROOT}src/data/articles.ts`, "utf8"),
-  sections: readFileSync(`${ROOT}src/data/article-sections.ts`, "utf8"),
-  heroAlt: readFileSync(`${ROOT}src/data/hero-alt.json`, "utf8"),
-  specs,
-});
+let SOURCES;
+try {
+  for (const f of git("ls-tree", "--name-only", `${FIXTURE_REF}:specs`).split("\n")) {
+    if (f.endsWith(".json")) specs[f.slice(0, -5)] = atRef(`specs/${f}`);
+  }
+  SOURCES = Object.freeze({
+    articles: atRef("src/data/articles.ts"),
+    sections: atRef("src/data/article-sections.ts"),
+    heroAlt: atRef("src/data/hero-alt.json"),
+    specs,
+  });
+} catch {
+  console.error(`Cannot read fixtures at ${FIXTURE_REF} — a shallow clone will not have it. Fetch history or set DLR_FIXTURE_REF.`);
+  process.exit(2);
+}
+if (!SOURCES.articles.includes(DEAD)) {
+  console.error(`Fixture ref ${FIXTURE_REF} does not contain ${DEAD} — the fan-out cases would test nothing.`);
+  process.exit(2);
+}
 const DEAD_TITLE = "Fire-Maple Fixed Star 1 Backpacking and Camping Stove System, Black 18oz Black X1-Black";
 
 let pass = 0;
