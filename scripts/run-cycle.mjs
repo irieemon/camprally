@@ -40,6 +40,12 @@ const LOCK = `${ROOT}state/cycle.lock`;
 const QUARANTINE = `${ROOT}specs/quarantine`;
 const SKIPS = `${ROOT}state/content-skips.json`;
 const PAUSE = `${homedir()}/.openclaw/workspace/state/pause.flag`;
+/* What IndexNow has been told, per article version (scripts/lib/indexnow-edits.mjs).
+ * In state/ on purpose: the step-1 gate excludes state/ and the heartbeat
+ * commits it every run, so the file can neither wedge the next cycle nor be
+ * lost with this machine. Gitignored would also keep the tree clean, but a
+ * re-clone would then reseed silently and swallow any edit still pending. */
+const INDEXNOW_LEDGER = `${ROOT}state/indexnow-announced.json`;
 
 /* Runs that end without publishing are individually legitimate and collectively
  * a dead pipeline. Six was two full days at three cycles a day — long enough
@@ -85,6 +91,9 @@ let priceClaims = null;
  * announce-run says it once. */
 let deadLinks = null;
 let deadLinkEvent = null;
+/* Step 2g's edit announcements. Same TDZ reason; only on the receipt when the
+ * step did something, so a quiet day stays a quiet receipt. */
+let indexNowEdits = null;
 /* Step 1b's pull. Same TDZ reason. On every receipt once step 1b has run, so
  * a rail that has stopped receiving main (diverged, fetch failing) says so
  * every day instead of quietly publishing from an old tree. */
@@ -199,6 +208,7 @@ function finish(outcome, detail, code, { commit = true } = {}) {
     ...(stalledRuns ? { runsSincePublish: stalledRuns } : {}),
     ...(deadLinks?.length ? { deadLinks } : {}),
     ...(deadLinkEvent ? { deadLinkEvent } : {}),
+    ...(indexNowEdits ? { indexNowEdits } : {}),
     ...(pull ? { pull } : {}),
     ...detail,
   };
@@ -504,6 +514,35 @@ try {
   console.log("(merch sync failed — site keeps the last synced product list)");
 }
 
+// ── step 2g: announce hand edits to existing articles ─────────────────────
+/* Step 8 only ever announced NEW articles, so a guide rewritten by hand and
+ * pushed to main reached Bing only by crawl — the nine SEO rewrites of
+ * 2026-09-24 had to be submitted by hand. This compares each article's
+ * lastChanged (`updated ?? date`, what the sitemap and dateModified report)
+ * against a ledger of what was last announced, and announces the difference.
+ *
+ * It sees what this checkout has, which step 1b has just fast-forwarded to
+ * main — so an edit pushed from another clone is announced the next cycle, or,
+ * if the pull could not fast-forward (see the receipt's `pull`), the first
+ * cycle after this checkout is brought up to date by hand. Runs every cycle, not just publishing ones, and before
+ * the queue so an idle day still announces. The same rules as step 8 hold —
+ * nothing is announced until the origin serves that version, and nothing here
+ * can fail the cycle; anything not yet announced simply stays pending in the
+ * ledger for the next run. */
+try {
+  const { announceEdits } = await import("./lib/indexnow-edits.mjs");
+  const { submitUrls } = await import("./lib/indexnow.mjs");
+  const r = await announceEdits({
+    src: readFileSync(`${ROOT}src/data/articles.ts`, "utf8"),
+    ledgerPath: INDEXNOW_LEDGER, origin: SITE_ORIGIN, dry: DRY, submit: submitUrls,
+  });
+  if (r.changed || r.seeded || r.reseeded || r.error) indexNowEdits = r;
+  console.log(`indexnow edits: ${JSON.stringify(r)}`);
+} catch (err) {
+  indexNowEdits = { error: err?.message?.slice(0, 160) ?? "edit announce step threw" };
+  console.log(`(indexnow edit step failed, continuing: ${indexNowEdits.error})`);
+}
+
 // ── step 3: pick the next unpublished queue item ──────────────────────────
 const queueRaw = JSON.parse(readFileSync(`${ROOT}article-queue.json`, "utf8"));
 const items = Array.isArray(queueRaw) ? queueRaw
@@ -802,6 +841,17 @@ if (deployVerified) {
     { host },
   );
   console.log(`indexnow: ${JSON.stringify(indexNow)}`);
+  /* Tell the edit ledger, or step 2g would announce this slug again next
+   * cycle as "changed". Only on acceptance: a rejected notice stays out of the
+   * ledger, and step 2g then retries it — which also covers every
+   * published-unverified run, where this step never fires at all. */
+  if (indexNow.ok) {
+    try {
+      const { articleVersions, recordAnnounced } = await import("./lib/indexnow-edits.mjs");
+      const v = articleVersions(readFileSync(`${ROOT}src/data/articles.ts`, "utf8"))[next.slug];
+      if (v) recordAnnounced(INDEXNOW_LEDGER, { [next.slug]: v });
+    } catch { /* worst case is one duplicate notice tomorrow */ }
+  }
 }
 
 // ── step 9: pin it ────────────────────────────────────────────────────────
