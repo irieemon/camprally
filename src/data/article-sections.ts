@@ -440,7 +440,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       title: "Budget Portable Camping Stoves Compared — Quick Comparison",
       items: [
         { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "", icon: "🏕️", asin: "B07VYNRKCS", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
-        { label: "Fire-Maple Fixed Star 1 Backpacking and Camping Stove System", category: "", icon: "🏕️", asin: "B07F2VP353", link: "https://www.amazon.com/dp/B07F2VP353?tag=camprally-20" },
+        { label: "Odoland 1L Heat Exchanger Backpacking and Camping Stove", category: "", icon: "🏕️", asin: "B0GQZ5D1HR", link: "https://www.amazon.com/dp/B0GQZ5D1HR?tag=camprally-20" },
         { label: "Stanley Adventure Stainless Steel Camping Cooking Set", category: "", icon: "🏕️", asin: "B0C79G8L6S", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
         { label: "Coleman Gas Camping Stove", category: "", icon: "🏕️", asin: "B00005OU9D", link: "https://www.amazon.com/dp/B00005OU9D?tag=camprally-20" },
         { label: "Jetboil Zip Camping Stove Cooking System", category: "", icon: "🏕️", asin: "B004UVPDUM", link: "https://www.amazon.com/dp/B004UVPDUM?tag=camprally-20" },
@@ -481,7 +481,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
         { label: "GSI Outdoors Cascadian Table Set I 6-Piece Camping", category: "", icon: "🏕️", asin: "B001LRPSUS", link: "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20" },
         { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "", icon: "🏕️", asin: "B07VYNRKCS", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
         { label: "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit", category: "", icon: "🏕️", asin: "B09B4HCTC1", link: "https://www.amazon.com/dp/B09B4HCTC1?tag=camprally-20" },
-        { label: "Fire-Maple Fixed Star 1 Backpacking and Camping Stove System", category: "", icon: "🏕️", asin: "B07F2VP353", link: "https://www.amazon.com/dp/B07F2VP353?tag=camprally-20" },
+        { label: "Odoland 1L Heat Exchanger Backpacking and Camping Stove", category: "", icon: "🏕️", asin: "B0GQZ5D1HR", link: "https://www.amazon.com/dp/B0GQZ5D1HR?tag=camprally-20" },
         { label: "GCI OUTDOOR Slim-Fold Cook Station", category: "", icon: "🏕️", asin: "B00U9BHKM6", link: "https://www.amazon.com/dp/B00U9BHKM6?tag=camprally-20" },
       ]
     },
@@ -782,7 +782,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
         { label: "Eveready LED Camping Lantern X-250", category: "", icon: "🏕️", asin: "B0CW4QLRPQ", link: "https://www.amazon.com/dp/B0CW4QLRPQ?tag=camprally-20" },
         { label: "National Forest Camping: Directory of 4", category: "", icon: "🏕️", asin: "1885464851", link: "https://www.amazon.com/dp/1885464851?tag=camprally-20" },
         { label: "4-Pack Solar Camping Lanterns", category: "", icon: "🏕️", asin: "B0DYV7KX92", link: "https://www.amazon.com/dp/B0DYV7KX92?tag=camprally-20" },
-        { label: "Fire-Maple Fixed Star 1 Backpacking and Camping Stove System", category: "", icon: "🏕️", asin: "B07F2VP353", link: "https://www.amazon.com/dp/B07F2VP353?tag=camprally-20" },
+        { label: "Odoland 1L Heat Exchanger Backpacking and Camping Stove", category: "", icon: "🏕️", asin: "B0GQZ5D1HR", link: "https://www.amazon.com/dp/B0GQZ5D1HR?tag=camprally-20" },
       ]
     },
   ],
