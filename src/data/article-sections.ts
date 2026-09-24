@@ -397,7 +397,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-sleeping-bags-cold-weather": [
     {
       type: "product-grid",
-      title: "Best Budget Sleeping Bags for Cold Weather — Quick Comparison",
+      title: "Best Budget Sleeping Bags for Cold Weather & Winter Camping — Quick Comparison",
       items: [
         { label: "Coleman Brazos 20/30°F Adult Cool-Weather Sleeping Bag", category: "", icon: "🏕️", asin: "B0DHJL8CMJ", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
         { label: "Coleman Brazos Cold-Weather Sleeping Bag", category: "", icon: "🏕️", asin: "B0BXMW1TJ9", link: "https://www.amazon.com/dp/B0BXMW1TJ9?tag=camprally-20" },
@@ -489,7 +489,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "budget-camping-cookware-that-works": [
     {
       type: "product-grid",
-      title: "Budget Camping Cookware That Actually Works — Quick Comparison",
+      title: "Cheap Camping Cookware That Actually Works — Quick Comparison",
       items: [
         { label: "Stanley Adventure Stainless Steel Camping Cooking Set", category: "", icon: "🏕️", asin: "B0C79G8L6S", link: "https://www.amazon.com/dp/B0C79G8L6S?tag=camprally-20" },
         { label: "GSI Outdoors Cascadian Table Set I 6-Piece Camping", category: "", icon: "🏕️", asin: "B001LRPSUS", link: "https://www.amazon.com/dp/B001LRPSUS?tag=camprally-20" },
@@ -708,7 +708,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-trekking-poles": [
     {
       type: "product-grid",
-      title: "Best Budget Trekking & Hiking Poles Under $40 — Quick Comparison",
+      title: "Best Budget Trekking Poles: Cheap Hiking Poles Under $40 — Quick Comparison",
       items: [
         { label: "TrailBuddy Trekking Poles", category: "", icon: "🏕️", asin: "B01MRQCENJ", link: "https://www.amazon.com/dp/B01MRQCENJ?tag=camprally-20" },
         { label: "KINGGEAR Trekking Poles 7075 Aluminum Lightweight Hiking", category: "", icon: "🏕️", asin: "B08DNR9ZQQ", link: "https://www.amazon.com/dp/B08DNR9ZQQ?tag=camprally-20" },
@@ -817,7 +817,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "how-to-camp-in-rain": [
     {
       type: "product-grid",
-      title: "How to Camp in the Rain: Setup, Packing & Staying Dry — Quick Comparison",
+      title: "How to Camp in the Rain: Tips for Staying Dry in Wet Weather — Quick Comparison",
       items: [
         { label: "Emergency Blanket Mylar Thermal Space Survival Gear", category: "", icon: "🏕️", asin: "B098KJMMGC", link: "https://www.amazon.com/dp/B098KJMMGC?tag=camprally-20" },
         { label: "FREE SOLDIER Waterproof Camping Tarp Shelter Awning Brown", category: "", icon: "🏕️", asin: "B01HO15DGS", link: "https://www.amazon.com/dp/B01HO15DGS?tag=camprally-20" },
