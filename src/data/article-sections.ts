@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "portable-power-station-200w-vs-500w": [
+    {
+      type: "product-grid",
+      title: "200W vs 500W Portable Power Stations Under $400 — Which Size You Actually Need — Quick Comparison",
+      items: [
+        { label: "Jackery Explorer 300 Portable Power Station", category: "", icon: "🏕️", asin: "B082TMBYR6", link: "https://www.amazon.com/dp/B082TMBYR6?tag=camprally-20" },
+        { label: "Anker SOLIX C300 Portable Power Station", category: "", icon: "🏕️", asin: "B0D62GMQ3F", link: "https://www.amazon.com/dp/B0D62GMQ3F?tag=camprally-20" },
+        { label: "OUPES Exodus 700 Portable Power Station", category: "", icon: "🏕️", asin: "B0H97WF3YC", link: "https://www.amazon.com/dp/B0H97WF3YC?tag=camprally-20" },
+        { label: "CyberPower CP1500PFCLCD PFC Sinewave UPS Battery Backup", category: "", icon: "🏕️", asin: "B00429N19W", link: "https://www.amazon.com/dp/B00429N19W?tag=camprally-20" },
+        { label: "Anker SOLIX C300 DC Portable Power Station", category: "", icon: "🏕️", asin: "B0D62PMB3R", link: "https://www.amazon.com/dp/B0D62PMB3R?tag=camprally-20" },
+        { label: "BLUETTI Elite 30 V2 Portable Power Station 288Wh 600W LFP", category: "", icon: "🏕️", asin: "B0F42HLLSC", link: "https://www.amazon.com/dp/B0F42HLLSC?tag=camprally-20" },
+      ]
+    },
+  ],
   "camping-etiquette-rules": [
     {
       type: "product-grid",

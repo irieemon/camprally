@@ -110,6 +110,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-portable-camping-toilets": "/images/heroes/best-portable-camping-toilets.jpg",
   "best-camping-rugs-outdoor-mats": "/images/heroes/best-camping-rugs-outdoor-mats.jpg",
   "camping-etiquette-rules": "/images/heroes/camping-etiquette-rules.jpg",
+  "portable-power-station-200w-vs-500w": "/images/heroes/portable-power-station-200w-vs-500w.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
