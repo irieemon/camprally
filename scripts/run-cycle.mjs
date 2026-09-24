@@ -26,8 +26,9 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, appendFileSync, renameSync } from "node:fs";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { homedir } from "node:os";
+import { fileURLToPath } from "node:url";
 import { EXIT } from "./lib/amazon.mjs";
 import { acquire } from "./lib/run-lock.mjs";
 import { sinceLastPublish } from "./lib/run-history.mjs";
@@ -67,6 +68,9 @@ const SITE_ORIGIN = process.env.CAMPRALLY_SITE ?? "https://www.camprally.co";
 
 const DRY = process.argv.includes("--dry-run");
 const PUSH = !process.argv.includes("--no-push");
+/* Set by step 1b on the copy of this script it re-executes after a pull. The
+ * child adopts the parent's lock and does not pull again. */
+const REEXEC = process.env.CAMPRALLY_CYCLE_REEXEC === "1";
 
 const startedAt = new Date().toISOString();
 const stamp = startedAt.replace(/[:.]/g, "-");
@@ -81,6 +85,10 @@ let priceClaims = null;
  * announce-run says it once. */
 let deadLinks = null;
 let deadLinkEvent = null;
+/* Step 1b's pull. Same TDZ reason. On every receipt once step 1b has run, so
+ * a rail that has stopped receiving main (diverged, fetch failing) says so
+ * every day instead of quietly publishing from an old tree. */
+let pull = null;
 
 function sh(cmd, args, opts = {}) {
   return execFileSync(cmd, args, { cwd: ROOT, encoding: "utf8", ...opts }).trim();
@@ -191,6 +199,7 @@ function finish(outcome, detail, code, { commit = true } = {}) {
     ...(stalledRuns ? { runsSincePublish: stalledRuns } : {}),
     ...(deadLinks?.length ? { deadLinks } : {}),
     ...(deadLinkEvent ? { deadLinkEvent } : {}),
+    ...(pull ? { pull } : {}),
     ...detail,
   };
   if (!DRY) {
@@ -248,7 +257,8 @@ if (existsSync(PAUSE)) {
 // Checked after the pause flag so a paused pipeline still answers "paused"
 // rather than "busy", and before anything touches the tree.
 if (!DRY) {
-  const lock = acquire(LOCK);
+  // A re-executed child takes over its parent's lock (see step 1b).
+  const lock = acquire(LOCK, REEXEC ? { adoptFrom: process.ppid } : {});
   if (!lock.ok) {
     // Not a failure: the previous cycle is still working. Exit 0 so the cron
     // does not treat healthy overlap as an incident.
@@ -271,6 +281,78 @@ if (dirty) {
     reason: "working-tree-dirty",
     message: `Refusing to run with uncommitted changes:\n${dirty}`,
   }, EXIT.FAIL);
+}
+
+// ── step 1b: fast-forward to origin/main ──────────────────────────────────
+/* Edits are pushed to main from another clone; before this the rail never
+ * pulled, so it published from a stale tree, step 2g could not see the edits it
+ * exists to announce, and its heartbeat pushes were rejected once main moved.
+ *
+ * After the step-1 gate on purpose: a human's work in progress blocks the cycle
+ * before git is asked to move anything. What can still be dirty here is the
+ * pipeline's own output (state/ from a run that died before its heartbeat, a
+ * dry-run's spec). The fast-forward either leaves those changes untouched, or —
+ * when an incoming commit touches the same file — git refuses it and changes
+ * nothing. There is no stash, reset or discard anywhere in this path; see
+ * scripts/lib/git-pull.mjs. Every failure mode is recorded on the receipt and
+ * the cycle carries on with the tree it has.
+ *
+ * WHY IT RE-EXECUTES. This file is already loaded, and so are its static
+ * imports, but everything else this cycle runs is read fresh from disk: every
+ * `sh("node", …)` child script and every lazy `await import()`. After a pull
+ * that is new code driven by an old orchestrator — and the dangerous commits
+ * are exactly the ones that change both sides of a contract at once (a RESULT
+ * line's shape, an exit code, an announceEdits option). Rather than reason
+ * about which mixes are safe, a pull that moved HEAD hands the cycle to a fresh
+ * process running the new run-cycle.mjs: every line of the cycle is then from
+ * one commit. The child adopts the lock (no window for an overlapping cycle),
+ * skips this step, and writes the one receipt; the parent exits with its code
+ * and writes none. Nothing has happened by this point that the child would
+ * repeat except the pause and clean-tree checks, which are idempotent. */
+if (REEXEC) {
+  try { pull = { ...JSON.parse(process.env.CAMPRALLY_CYCLE_PULL ?? "{}"), reexecuted: true }; }
+  catch { pull = { status: "unknown", reexecuted: true }; }
+} else if (!DRY) {
+  try {
+    const { pullFastForward } = await import("./lib/git-pull.mjs");
+    const r = pullFastForward({ cwd: ROOT });
+    const short = (sha) => sha?.slice(0, 7);
+    pull = {
+      status: r.status,
+      ...(r.status === "fast-forwarded" ? { from: short(r.from), to: short(r.to), files: r.files.length } : {}),
+      ...(r.ahead ? { ahead: r.ahead } : {}),
+      ...(r.behind && !r.ok ? { behind: r.behind } : {}),
+      ...(r.why ? { why: r.why } : {}),
+    };
+    console.log(`git pull: ${JSON.stringify(pull)}`);
+    if (!r.ok) console.log("(pull did not fast-forward — continuing with the local tree)");
+  } catch (err) {
+    pull = { status: "error", why: err?.message?.slice(0, 160) ?? "pull step threw" };
+    console.log(`(pull step failed, continuing with the local tree: ${pull.why})`);
+  }
+
+  if (pull.status === "fast-forwarded") {
+    console.log(`(re-executing run-cycle at ${pull.to} so the whole cycle runs one commit's code)`);
+    const child = spawnSync(process.execPath, [fileURLToPath(import.meta.url), ...process.argv.slice(2)], {
+      cwd: ROOT, stdio: "inherit",
+      env: { ...process.env, CAMPRALLY_CYCLE_REEXEC: "1", CAMPRALLY_CYCLE_PULL: JSON.stringify(pull) },
+    });
+    if (typeof child.status === "number") process.exit(child.status);
+    if (child.error) {
+      // Never started: nothing has run twice, so finishing in this process on
+      // the old code is safe — the pre-pull behaviour, for one cycle.
+      pull.reexec = `failed to start: ${child.error.message?.slice(0, 120)}`;
+      console.log(`(re-exec failed to start, continuing on the loaded code: ${pull.reexec})`);
+    } else {
+      // Started and was killed: it may be mid-publish, so this process must not
+      // run the cycle again. Record it; the dead child's lock is reclaimed as
+      // stale by the next cycle.
+      finish("blocked", {
+        reason: "reexec-killed",
+        message: `The re-executed cycle was killed by ${child.signal ?? "an unknown signal"} before it finished.`,
+      }, EXIT.FAIL);
+    }
+  }
 }
 
 // ── step 2: link health gate ──────────────────────────────────────────────

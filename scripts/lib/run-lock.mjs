@@ -42,7 +42,7 @@ function alive(pid) {
  * expected to record the refusal as an outcome rather than throw — "another
  * cycle is running" is a legitimate thing for a cron to discover.
  */
-export function acquire(path) {
+export function acquire(path, { adoptFrom } = {}) {
   if (existsSync(path)) {
     let holder = null;
     try {
@@ -52,13 +52,21 @@ export function acquire(path) {
       holder = null;
     }
     const age = holder?.startedAt ? Date.now() - Date.parse(holder.startedAt) : Infinity;
-    const held = holder?.pid && alive(holder.pid) && age < STALE_MS;
+    /* Adoption: run-cycle re-executes itself after a pull brought new code, and
+     * the parent still holds the lock while it waits on the child. The child
+     * names that parent here and takes the lock over rather than reading it as
+     * "another cycle is running". Only the exact pid, and only when it is the
+     * child's own parent (the caller passes process.ppid), so this cannot be
+     * used to steal a lock from an unrelated live cycle. */
+    const adopting = adoptFrom && holder?.pid === adoptFrom;
+    const held = !adopting && holder?.pid && alive(holder.pid) && age < STALE_MS;
+    if (adopting) console.log(`(adopting the cycle lock from parent pid ${adoptFrom})`);
     if (held) {
       return { ok: false, holder, reason: `pid ${holder.pid} started ${holder.startedAt}` };
     }
     // Stale or orphaned — reclaim it, but say so. A cycle that silently steals
     // locks hides the crash that left one behind.
-    console.log(
+    if (!adopting) console.log(
       `(reclaiming stale lock: ${holder?.pid ? `pid ${holder.pid} ` : ""}` +
       `${Number.isFinite(age) ? `${Math.round(age / 60000)}m old` : "unreadable"})`,
     );
