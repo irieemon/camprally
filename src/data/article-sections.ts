@@ -243,7 +243,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-camping-hammocks-under-50": [
     {
       type: "product-grid",
-      title: "Best Camping Hammocks Under $50 — Straps, Bugs and Cold Butt — Quick Comparison",
+      title: "Best Cheap Hammocks Under $50: Budget Camping Hammocks That Hold Up — Quick Comparison",
       items: [
         { label: "Gold Armour Camping Hammock", category: "", icon: "🏕️", asin: "B07GCH1FM9", link: "https://www.amazon.com/dp/B07GCH1FM9?tag=camprally-20" },
         { label: "Legit 2 Person Camping Hammock", category: "", icon: "🏕️", asin: "B07B31BJQJ", link: "https://www.amazon.com/dp/B07B31BJQJ?tag=camprally-20" },
@@ -531,14 +531,14 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-4-season-tents-under-300": [
     {
       type: "product-grid",
-      title: "Best 4-Season Tents Under $300 — Real Winter Shelter on a Budget — Quick Comparison",
+      title: "Best Budget 4-Season Tents Under $300: Inexpensive Winter Tents — Quick Comparison",
       items: [
-        { label: "GEERTOP 2 Person Backpacking Tent", category: "", icon: "🏕️", asin: "B07X381HLD", link: "https://www.amazon.com/dp/B07X381HLD?tag=camprally-20" },
-        { label: "Forceatt Tent for 2 and 3 Person is Waterproof and Windproof", category: "", icon: "🏕️", asin: "B083R68NSV", link: "https://www.amazon.com/dp/B083R68NSV?tag=camprally-20" },
         { label: "Clostnature 4 Season Backpacking Tent", category: "", icon: "🏕️", asin: "B08JSMQ1KF", link: "https://www.amazon.com/dp/B08JSMQ1KF?tag=camprally-20" },
-        { label: "OneTigris Stella 4 Season Camping Tent Backpacking", category: "", icon: "🏕️", asin: "B0F52BNCN3", link: "https://www.amazon.com/dp/B0F52BNCN3?tag=camprally-20" },
         { label: "1/2 Person 4 Season Backpacking Tent", category: "", icon: "🏕️", asin: "B0B8HC5CGW", link: "https://www.amazon.com/dp/B0B8HC5CGW?tag=camprally-20" },
         { label: "BISINNA 4 Season Tent for Backpacking Winter Tents 2 Person", category: "", icon: "🏕️", asin: "B0FWB9NCWB", link: "https://www.amazon.com/dp/B0FWB9NCWB?tag=camprally-20" },
+        { label: "OneTigris Stella 4 Season Camping Tent Backpacking", category: "", icon: "🏕️", asin: "B0F52BNCN3", link: "https://www.amazon.com/dp/B0F52BNCN3?tag=camprally-20" },
+        { label: "GEERTOP 2 Person Backpacking Tent", category: "", icon: "🏕️", asin: "B07X381HLD", link: "https://www.amazon.com/dp/B07X381HLD?tag=camprally-20" },
+        { label: "Forceatt Tent for 2 and 3 Person is Waterproof and Windproof", category: "", icon: "🏕️", asin: "B083R68NSV", link: "https://www.amazon.com/dp/B083R68NSV?tag=camprally-20" },
       ]
     },
   ],
@@ -596,7 +596,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-camping-lanterns-under-30": [
     {
       type: "product-grid",
-      title: "Best Camping Lanterns Under $30 — Light That Lasts the Weekend — Quick Comparison",
+      title: "Best Affordable Camping Lanterns Under $30: Cheap, Lightweight LED Picks — Quick Comparison",
       items: [
         { label: "Blukar 116 LED Camping Lantern Rechargeable", category: "", icon: "🏕️", asin: "B0CBV87CYX", link: "https://www.amazon.com/dp/B0CBV87CYX?tag=camprally-20" },
         { label: "Consciot CL1 Mini Dual Light Sources LED Lantern", category: "", icon: "🏕️", asin: "B0F8B6J7ML", link: "https://www.amazon.com/dp/B0F8B6J7ML?tag=camprally-20" },
@@ -900,7 +900,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-camping-coolers-under-100": [
     {
       type: "product-grid",
-      title: "Best Camping Coolers Under $100 in 2026 — Stay Cold, Stay Happy — Quick Comparison",
+      title: "Best Coolers Under $100: Cheap Camping Coolers That Hold Ice (2026) — Quick Comparison",
       items: [
         { label: "Klein Tools 55600 Work Cooler", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B06XGJTTRY?tag=camprally-20" },
         { label: "ENGEL 13qt Leak-Proof", category: "", icon: "🏕️", link: "https://www.amazon.com/dp/B00BD26JMM?tag=camprally-20" },
