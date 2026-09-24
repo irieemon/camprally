@@ -13114,5 +13114,157 @@
       "fetchedAt": "2026-09-23T00:47:02.672Z",
       "source": "canopy amazonProduct"
     }
+  },
+  "portable power station|1|400": {
+    "term": "portable power station",
+    "min": 1,
+    "max": 400,
+    "fetchedAt": "2026-09-24T13:12:50.633Z",
+    "results": [
+      {
+        "asin": "B082TMBYR6",
+        "title": "Jackery Explorer 300 Portable Power Station,292Wh",
+        "price": "$259.00",
+        "priceValue": 259,
+        "rating": 4.6,
+        "ratingsTotal": 11261
+      },
+      {
+        "asin": "B0D62GMQ3F",
+        "title": "Anker SOLIX C300 Portable Power Station, 288Wh Solar Generator for Camping",
+        "price": "$329.99",
+        "priceValue": 329.99,
+        "rating": 4.6,
+        "ratingsTotal": 1909
+      },
+      {
+        "asin": "B0H97WF3YC",
+        "title": "OUPES Exodus 700 Portable Power Station, 576Wh 700W LiFePO4 Solar Generator",
+        "price": "$399.99",
+        "priceValue": 399.99,
+        "rating": 4.6,
+        "ratingsTotal": 101
+      },
+      {
+        "asin": "B00429N19W",
+        "title": "CyberPower CP1500PFCLCD PFC Sinewave UPS Battery Backup and Surge Protector",
+        "price": "$239.95",
+        "priceValue": 239.95,
+        "rating": 4.5,
+        "ratingsTotal": 11412
+      },
+      {
+        "asin": "B0D62PMB3R",
+        "title": "Anker SOLIX C300 DC Portable Power Station, 288Wh, 300W, Outdoor Camping",
+        "price": "$199.99",
+        "priceValue": 199.99,
+        "rating": 4.5,
+        "ratingsTotal": 1756
+      },
+      {
+        "asin": "B0F42HLLSC",
+        "title": "BLUETTI Elite 30 V2 Portable Power Station 288Wh 600W LFP Solar Generator",
+        "price": "$279.99",
+        "priceValue": 279.99,
+        "rating": 4.5,
+        "ratingsTotal": 1177
+      },
+      {
+        "asin": "B0B9H8W8HP",
+        "title": "Portable Power Station 500W, 519.48Wh/140400mAh Solar Generator Backup",
+        "price": "$179.97",
+        "priceValue": 179.97,
+        "rating": 4.5,
+        "ratingsTotal": 243
+      },
+      {
+        "asin": "B0G429L5B4",
+        "title": "Jackery Solar Generator 300 and 40W Solar Panel,292Wh,300W AC",
+        "price": "$339.00",
+        "priceValue": 339,
+        "rating": 4.5,
+        "ratingsTotal": 195
+      },
+      {
+        "asin": "B0GSDX8LTM",
+        "title": "LIBRIDS Portable Power Station 640Wh, 1200W Surge, Solar Generator 4 AC",
+        "price": "$272.99",
+        "priceValue": 272.99,
+        "rating": 4.5,
+        "ratingsTotal": 183
+      },
+      {
+        "asin": "B0H9RWG765",
+        "title": "LIBRIDS Portable Power Station C600, 640Wh Solar Generator 600W 4 AC Output",
+        "price": "$239.98",
+        "priceValue": 239.98,
+        "rating": 4.5,
+        "ratingsTotal": 183
+      },
+      {
+        "asin": "B08CXN4TZR",
+        "title": "ALLWEI Portable Power Station 300W, 256Wh Solar Generator LiFePO4 Battery",
+        "price": "$128.99",
+        "priceValue": 128.99,
+        "rating": 4.4,
+        "ratingsTotal": 2446
+      },
+      {
+        "asin": "B0C6K5ZPNJ",
+        "title": "DaranEner Portable Power Station, 192Wh LiFePO4 Battery Backup Solar Generator with w/2 300W (Peak 600W) AC Outlets, USB-C PD 60W Fast Charge, Power Bank for Camping, Outdoor, Home,Emergency",
+        "price": "$109.99",
+        "priceValue": 109.99,
+        "rating": 4.3,
+        "ratingsTotal": 449
+      },
+      {
+        "asin": "B09YLWLFLF",
+        "title": "HOWEASY Portable Power Station,120W(240W Peak) Solar Generator",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.2,
+        "ratingsTotal": 2137
+      },
+      {
+        "asin": "B0CHFM3V8Q",
+        "title": "Portable Solar Generator 300W Portable Power Station with 60W Solar Panel",
+        "price": "$199.97",
+        "priceValue": 199.97,
+        "rating": 4.2,
+        "ratingsTotal": 2007
+      },
+      {
+        "asin": "B0CQT5G1ZR",
+        "title": "Daran Portable Power Station 89.6Wh LiFePO4 Battery 100W(200W Peak) Solar Power Bank, Portable Charger Small Generator with AC Outlets & PD Fast Charging for Home/Laptop/Camping(Solar Panel Optional)",
+        "price": "$68.39",
+        "priceValue": 68.39,
+        "rating": 4.2,
+        "ratingsTotal": 995
+      },
+      {
+        "asin": "B0DN9QHGG8",
+        "title": "DARAN Portable Power Station, 288Wh LiFePO4 Battery, 350W (600W Peak) Power Bank with AC Outlet, Mini Solar Generator 7-Port Design, 2.1Hrs Fast Charing for Emergency, Hurricane (Solar Optional)",
+        "price": "$129.98",
+        "priceValue": 129.98,
+        "rating": 4.2,
+        "ratingsTotal": 995
+      },
+      {
+        "asin": "B08G1KB88B",
+        "title": "MARBERO Portable Power Station 88Wh, 120W Surge, Solar Generator 24,000mAh",
+        "price": "$75.99",
+        "priceValue": 75.99,
+        "rating": 4.1,
+        "ratingsTotal": 9257
+      },
+      {
+        "asin": "B0FSZ83QQG",
+        "title": "Portable Power Station 600W(1200W Surge) 299Wh 6.8 lbs,140W USB-C",
+        "price": "$229.99",
+        "priceValue": 229.99,
+        "rating": 3.9,
+        "ratingsTotal": 65
+      }
+    ]
   }
 }
