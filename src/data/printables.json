@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "fishing-trip-log-book",
+      "title": "Fishing Trip Log Book",
+      "subtitle": "Track every cast, every catch, and every secret spot so you can fish smarter and relive the memories.",
+      "price": "$5",
+      "priceCents": 500,
+      "pages": 12,
+      "url": "https://camprally.gumroad.com/l/fishing-trip-log-book",
+      "image": "/images/printables/fishing-trip-log-book.jpg"
+    },
+    {
       "slug": "glamping-hosting-planner",
       "title": "Glamping & Group Trip Host Planner",
       "subtitle": "Turn the chaos of group camping into a smooth, coordinated adventure everyone will want to repeat.",

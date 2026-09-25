@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "tailgating-chairs-vs-folding-benches": [
+    {
+      type: "product-grid",
+      title: "Tailgating Chairs vs Folding Benches — Which Seating Makes Sense for Your Crew — Quick Comparison",
+      items: [
+        { label: "LIFETIME Portable Folding Bench", category: "", icon: "🏕️", asin: "B00CTVRB50", link: "https://www.amazon.com/dp/B00CTVRB50?tag=camprally-20" },
+        { label: "6FT Folding Bench 2 Pack", category: "", icon: "🏕️", asin: "B0GJ5576H9", link: "https://www.amazon.com/dp/B0GJ5576H9?tag=camprally-20" },
+        { label: "Sweetcrispy 43 Inch Folding Storage Ottoman Bench", category: "", icon: "🏕️", asin: "B0H3THWCGJ", link: "https://www.amazon.com/dp/B0H3THWCGJ?tag=camprally-20" },
+        { label: "Amazon Basics 6-Foot Portable Folding Bench with Carrying", category: "", icon: "🏕️", asin: "B0DKWXVJWQ", link: "https://www.amazon.com/dp/B0DKWXVJWQ?tag=camprally-20" },
+        { label: "SONGMICS 43.3 Inches Folding Storage Ottoman Bench", category: "", icon: "🏕️", asin: "B07JNFKYC3", link: "https://www.amazon.com/dp/B07JNFKYC3?tag=camprally-20" },
+        { label: "RockJam RJKBB100 Adjustable Padded Piano Bench", category: "", icon: "🏕️", asin: "B06XF6NF5Y", link: "https://www.amazon.com/dp/B06XF6NF5Y?tag=camprally-20" },
+      ]
+    },
+  ],
   "portable-power-station-200w-vs-500w": [
     {
       type: "product-grid",
