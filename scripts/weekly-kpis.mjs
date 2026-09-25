@@ -74,7 +74,7 @@ function repo() {
 
 async function printables() {
   const out = { productsLive: 0, awaiting: 0, pins7d: 0, sales7d: null, revenue7dCents: null };
-  const ROOT_P = `${homedir()}/camprally-printables`;
+  const ROOT_P = process.env.PRINTABLES_REPO ?? new URL("../../camprally-printables", import.meta.url).pathname;
   try {
     const products = Object.values(JSON.parse(readFileSync(`${ROOT_P}/state/products.json`, "utf8")).products);
     out.productsLive = products.filter((p) => p.status === "published").length;
@@ -111,7 +111,7 @@ async function merch() {
   const out = { productsLive: 0, designsLive: 0, pins7d: 0, orders7d: null, revenue7dCents: null };
   // Overridable for the same reason sync-merch.mjs allows it: so the
   // missing-sibling-repo path can be exercised rather than assumed.
-  const ROOT_M = process.env.MERCH_REPO ?? `${homedir()}/camprally-merch`;
+  const ROOT_M = process.env.MERCH_REPO ?? new URL("../../camprally-merch", import.meta.url).pathname;
   try {
     const designs = Object.values(JSON.parse(readFileSync(`${ROOT_M}/state/designs.json`, "utf8")).designs ?? {});
     for (const d of designs) {

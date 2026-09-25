@@ -46,11 +46,10 @@
 import {
   readFileSync, writeFileSync, mkdirSync, existsSync,
 } from "node:fs";
-import { homedir } from "node:os";
 import { pathToFileURL } from "node:url";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const SRC = process.env.MERCH_REPO ?? `${homedir()}/camprally-merch`;
+const SRC = process.env.MERCH_REPO ?? new URL("../../camprally-merch", import.meta.url).pathname;
 const OUT_JSON = `${ROOT}src/data/merch.json`;
 const OUT_IMG = `${ROOT}public/images/merch`;
 const STORE_URL = "https://camprally.printify.me";

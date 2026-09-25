@@ -28,10 +28,9 @@
 import {
   readFileSync, writeFileSync, mkdirSync, existsSync, copyFileSync, statSync,
 } from "node:fs";
-import { homedir } from "node:os";
 
 const ROOT = new URL("..", import.meta.url).pathname;
-const SRC = process.env.PRINTABLES_REPO ?? `${homedir()}/camprally-printables`;
+const SRC = process.env.PRINTABLES_REPO ?? new URL("../../camprally-printables", import.meta.url).pathname;
 const OUT_JSON = `${ROOT}src/data/printables.json`;
 const OUT_IMG = `${ROOT}public/images/printables`;
 const STORE_URL = "https://camprally.gumroad.com";
