@@ -112,6 +112,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "camping-etiquette-rules": "/images/heroes/camping-etiquette-rules.jpg",
   "portable-power-station-200w-vs-500w": "/images/heroes/portable-power-station-200w-vs-500w.jpg",
   "tailgating-chairs-vs-folding-benches": "/images/heroes/tailgating-chairs-vs-folding-benches.jpg",
+  "best-insulated-sleeping-pads-under-100": "/images/heroes/best-insulated-sleeping-pads-under-100.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

@@ -3,6 +3,58 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "aspen-valley-gold",
+      "name": "Aspen Valley Gold",
+      "subtitle": "when the whole valley turns gold",
+      "image": "/images/merch/aspen-valley-gold.jpg",
+      "imageKey": "6ab6abf9c15cdfeb0834eab9::2026-09-25T17:14:55.090Z::Natural|Sand|Light Blue",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-09-25T17:15:43.672Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/32380645",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/32380651",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/32380655",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/32380663",
+          "priceCents": 2799,
+          "price": "$27.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/32380665",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": false
+        }
+      ]
+    },
+    {
       "slug": "frozen-lake-morning",
       "name": "Frozen Lake Morning",
       "subtitle": "cold enough that the whole lake is quiet",

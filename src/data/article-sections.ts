@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-insulated-sleeping-pads-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Insulated Sleeping Pads Under $100 — R-Value for Cold Nights — Quick Comparison",
+      items: [
+        { label: "Therm-a-Rest Z Lite Original Camping and Backpacking", category: "", icon: "🏕️", asin: "B00453NA1E", link: "https://www.amazon.com/dp/B00453NA1E?tag=camprally-20" },
+        { label: "Featherstone Outdoor El Cordion Insulated R-Value 2.1", category: "", icon: "🏕️", asin: "B09W8G81K2", link: "https://www.amazon.com/dp/B09W8G81K2?tag=camprally-20" },
+        { label: "Foam Sleeping Mat", category: "", icon: "🏕️", asin: "B08C7NHQMH", link: "https://www.amazon.com/dp/B08C7NHQMH?tag=camprally-20" },
+        { label: "OGERY Self-Inflating Sleeping Pad", category: "", icon: "🏕️", asin: "B0FXX7VX7N", link: "https://www.amazon.com/dp/B0FXX7VX7N?tag=camprally-20" },
+        { label: "Memory Sleeping Pad", category: "", icon: "🏕️", asin: "B0GDVNXWXY", link: "https://www.amazon.com/dp/B0GDVNXWXY?tag=camprally-20" },
+        { label: "MalloMe Sleeping Bags for Adults Cold Weather & Warm", category: "", icon: "🏕️", asin: "B077XQDZW4", link: "https://www.amazon.com/dp/B077XQDZW4?tag=camprally-20" },
+      ]
+    },
+  ],
   "tailgating-chairs-vs-folding-benches": [
     {
       type: "product-grid",
