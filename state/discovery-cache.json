@@ -13529,5 +13529,285 @@
         "ratingsTotal": 167
       }
     ]
+  },
+  "insulated sleeping pad|1|100": {
+    "term": "insulated sleeping pad",
+    "min": 1,
+    "max": 100,
+    "fetchedAt": "2026-09-26T13:03:54.403Z",
+    "results": [
+      {
+        "asin": "B00453NA1E",
+        "title": "Therm-a-Rest Z Lite Original Camping and Backpacking Sleeping Pad",
+        "price": "$49.95",
+        "priceValue": 49.95,
+        "rating": 4.7,
+        "ratingsTotal": 2224
+      },
+      {
+        "asin": "B09W8G81K2",
+        "title": "Featherstone Outdoor El Cordion Insulated R-Value 2.1 Sleeping Pad Closed Cell Foam Mat for Ultralight Backpacking Thru-Hiking and Camping",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.7,
+        "ratingsTotal": 289
+      },
+      {
+        "asin": "B08C7NHQMH",
+        "title": "Foam Sleeping Mat, Aluminum Insulated Camping Pad for Tent Floor",
+        "price": "$21.99",
+        "priceValue": 21.99,
+        "rating": 4.6,
+        "ratingsTotal": 1400
+      },
+      {
+        "asin": "B0FXX7VX7N",
+        "title": "OGERY Self-Inflating Sleeping Pad, 3\" Memory Foam Camping Mattress",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.6,
+        "ratingsTotal": 192
+      },
+      {
+        "asin": "B0GDVNXWXY",
+        "title": "Memory Sleeping Pad, 3.1\" Ultra-Thick Foam Sleeping Mats for Camping, 9.5 R-Value Insulated Self Inflating Sleeping Pad with Pillow, Camping Mattress Pad for Car Travel Tent",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.6,
+        "ratingsTotal": 73
+      },
+      {
+        "asin": "B077XQDZW4",
+        "title": "MalloMe Sleeping Bags for Adults Cold Weather & Warm - Backpacking Camping Sleeping Bag for Kids 10-12, Girls, Boys - Lightweight Compact Camping Essentials Gear Accessories Hiking Sleep Must Haves",
+        "price": "$25.99",
+        "priceValue": 25.99,
+        "rating": 4.5,
+        "ratingsTotal": 17378
+      },
+      {
+        "asin": "B07GGZWRK6",
+        "title": "Gear Doctors® Oxylus 4.3 R-Value Insulated Foam Self Inflating Sleeping Pad Camping — Sleeping Pad Backpacking Air Mattress—Camping Mattress Self Inflating Camp Mat 4 Seasons Sleep Mat—Camp/Floor/Tent",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.5,
+        "ratingsTotal": 4729
+      },
+      {
+        "asin": "B0GFY2WTVL",
+        "title": "Sea to Summit Camp Plus SI Sleeping Mat, Rectangular/Regular",
+        "price": "$99.00",
+        "priceValue": 99,
+        "rating": 4.5,
+        "ratingsTotal": 768
+      },
+      {
+        "asin": "B0G8JBLM77",
+        "title": "Elegear 4” Thick Sleeping Pad for Camping with 9 R-Value Insulated, Single",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.5,
+        "ratingsTotal": 87
+      },
+      {
+        "asin": "B0BZ87ZQ7W",
+        "title": "CYMULA Memory Foam Camping Mattress Pad, Sleeping Mat, Portable Roll Up Mattress for Adults, Camping Bed Pads for Sleepover, Car Bed with Travel Bag",
+        "price": "$57.99",
+        "priceValue": 57.99,
+        "rating": 4.4,
+        "ratingsTotal": 2381
+      },
+      {
+        "asin": "B08D8VZPDL",
+        "title": "Gear Doctors® ApolloAir 5.2 R-Value [22oz] Ultralight Insulated Inflatable Camping Sleeping Pad — Backpacking Sleeping Pad— Camping Mattress Compact Lightweight for Hiking—Air Mattress for Backpacking",
+        "price": "$84.99",
+        "priceValue": 84.99,
+        "rating": 4.4,
+        "ratingsTotal": 2355
+      },
+      {
+        "asin": "B0DT3K9VYS",
+        "title": "Wevelel Memory Sleeping Pad, 3.1\" Ultra-Thick Foam Sleeping Mats for Camping, Easy Inflate&Deflate,9.5 R-Value Insulated Camping Mattress Pad with Pillow, for Car Travel Tent",
+        "price": "$44.98",
+        "priceValue": 44.98,
+        "rating": 4.4,
+        "ratingsTotal": 563
+      },
+      {
+        "asin": "B0CXPVS77Q",
+        "title": "Self Inflating Sleeping Pad with Electric Pump, 30s Inflate Memory Foam Mat",
+        "price": "$65.99",
+        "priceValue": 65.99,
+        "rating": 4.4,
+        "ratingsTotal": 398
+      },
+      {
+        "asin": "B0DSFVQNHN",
+        "title": "Ultralight Foam Sleeping Pad, Waterproof Closed Cell Foam Pad for Superior Insulation, Folding Sleeping Mat for Compact Storage, Foldable and Portable for Hiking and Camping",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.4,
+        "ratingsTotal": 96
+      },
+      {
+        "asin": "B0BRR6X1P1",
+        "title": "Elegear Self Inflating Sleeping Pad with Pillow 26D Memory Foam 3.15\"",
+        "price": "$67.99",
+        "priceValue": 67.99,
+        "rating": 4.3,
+        "ratingsTotal": 1121
+      },
+      {
+        "asin": "B0DSKJCTPX",
+        "title": "Double Camping Sleeping pad with Pillow & Built-in Foot Pump",
+        "price": "$43.99",
+        "priceValue": 43.99,
+        "rating": 4.3,
+        "ratingsTotal": 825
+      },
+      {
+        "asin": "B0B25WD7WV",
+        "title": "Wind Tour Outdoor Double-Sided Moisture-Proof Aluminum Foil Foam Pad Waterproof and Insulating Foil Mat Picnic Mat Camping Mat for Beach Tent and Camping",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.3,
+        "ratingsTotal": 287
+      },
+      {
+        "asin": "B0DLSP2VKT",
+        "title": "Naturehike Ultralight Insulated Sleeping Pad 4.6R-Value",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.3,
+        "ratingsTotal": 163
+      },
+      {
+        "asin": "B0GJSB6PZ6",
+        "title": "Memory Foam Camping Sleeping Pad, Foldable and Portable Self-Inflating Camping Mattress Pad, 9.5 R-Value Insulated & Quiet Sleeping Mat with Pillow, Compact for Backpacking Hiking Car Traveling Tent",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.3,
+        "ratingsTotal": 138
+      },
+      {
+        "asin": "B0DD7SZVWX",
+        "title": "Camping Mat Insulated Sleeping Pad 78\" x 39\" Tent Floor Thermal Blanket",
+        "price": "$15.99",
+        "priceValue": 15.99,
+        "rating": 4.3,
+        "ratingsTotal": 93
+      },
+      {
+        "asin": "B0G1XHFQ85",
+        "title": "Hikenture R7.3 Insulated Camping Sleeping Pad with Foot Pump(83\"×25\")",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.3,
+        "ratingsTotal": 57
+      },
+      {
+        "asin": "B0H8P8B768",
+        "title": "Hikenture R7.3 Camping Sleeping Pad with Foot Pump",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.3,
+        "ratingsTotal": 57
+      },
+      {
+        "asin": "B0GYMTJN55",
+        "title": "OGERY Sleeping Pad for Camping, R-Value 9.0 Insulated Sleeping Pad",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.3,
+        "ratingsTotal": 52
+      },
+      {
+        "asin": "B0HFVSSY7Y",
+        "title": "OGERY Insulated Sleeping Pad - R-Value 9.0, 4.7-Inch Thick, with Pump Bag",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.3,
+        "ratingsTotal": 52
+      },
+      {
+        "asin": "B09XDNQWXP",
+        "title": "FUN PAC Camping Sleeping Pad, Ultralight Camping Mat with Pillow, Built-in Foot Pump Inflatable Sleeping Pads Compact for Camping Backpacking Hiking Traveling Tent,Single,Green",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.2,
+        "ratingsTotal": 5917
+      },
+      {
+        "asin": "B0DKJ9FNF7",
+        "title": "CYMULA Camping Cot Pad, Pad Only 2 Inch Memory Foam,Camping Pad for Folding Cot and Foldable Cot, Portable Roll Up Camp Gear for Car Camping Travel Tent, Non-Slip Waterproof Bottom, Removable Cover",
+        "price": "$53.18",
+        "priceValue": 53.18,
+        "rating": 4.2,
+        "ratingsTotal": 879
+      },
+      {
+        "asin": "B0FD2RJPYY",
+        "title": "Ultralight Camping Sleeping Pad with Pillow & Built-in Foot Pump",
+        "price": "$24.29",
+        "priceValue": 24.29,
+        "rating": 4.2,
+        "ratingsTotal": 595
+      },
+      {
+        "asin": "B07YP8XY78",
+        "title": "KLYMIT Insulated Static V Lite Inflatable Sleeping Pad | Comfortable, Lightweight, Easy to Inflate, Portable Air Bed for Hiking, Backpacking & Camping — Orange",
+        "price": "$64.37",
+        "priceValue": 64.37,
+        "rating": 4.2,
+        "ratingsTotal": 506
+      },
+      {
+        "asin": "B0DPWNYF91",
+        "title": "TREKOLOGY Sleeping Pad for Camping– Ultra-Lightweight, 4\" Thick Camping Mat with 7.2 R-Value for All Seasons (Blue)",
+        "price": "$60.99",
+        "priceValue": 60.99,
+        "rating": 4.2,
+        "ratingsTotal": 433
+      },
+      {
+        "asin": "B0DKTD7WYS",
+        "title": "Hikenture Camping Sleeping Pad with 6.2 R-Value, Ultralight Camping Mattress for All Season, Compact & Insulated Sleeping Mat for Backpacking,Hiking,Outdoor",
+        "price": "$75.99",
+        "priceValue": 75.99,
+        "rating": 4.2,
+        "ratingsTotal": 248
+      },
+      {
+        "asin": "B0GSTM92V4",
+        "title": "Myxslop Ultralight 50D Camping Sleeping Pad for Backpacking, Hiking, Tent",
+        "price": "$23.49",
+        "priceValue": 23.49,
+        "rating": 4.1,
+        "ratingsTotal": 219
+      },
+      {
+        "asin": "B0DSW5VSX2",
+        "title": "Gear Doctors® Ether 17.5oz Ultralight Camping Sleeping Pad – Backpacking Air Mattress – Camping Mattress Pad – Compact Inflatable Sleeping Mat for Backpacking, Comfortable Outdoor Hiking, Tent, Travel",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4,
+        "ratingsTotal": 934
+      },
+      {
+        "asin": "B0FDQG3Q6G",
+        "title": "HiiPeak Memory Sleeping Pad, Compact 3\" Thick Foam Sleeping Mats with Pillow, 9.5 R-Value Insulated Camping Mattress Pad, Easy Inflate & Deflate, Inflatable Sleep Mat for Backpacking Hiking Car Tent",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4,
+        "ratingsTotal": 291
+      },
+      {
+        "asin": "B0FK526YPZ",
+        "title": "Naturehike 20oz Ultralight Sleeping Pad with Sidewalls, Insulated Inflatable Sleeping Pad 6.5R, Lightweight Sleeping Mat for Camping, Hiking, Backpacking, 10cm Thickened",
+        "price": "$63.16",
+        "priceValue": 63.16,
+        "rating": 4,
+        "ratingsTotal": 138
+      }
+    ]
   }
 }
