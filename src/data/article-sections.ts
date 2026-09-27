@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-thermal-base-layers-camping-under-50": [
+    {
+      type: "product-grid",
+      title: "Best Thermal Base Layers for Camping Under $50 — Merino and Synthetic Picks — Quick Comparison",
+      items: [
+        { label: "TELALEO Boys Thermal Set Fleece Lined Youth Compression", category: "", icon: "🏕️", asin: "B0841X35YN", link: "https://www.amazon.com/dp/B0841X35YN?tag=camprally-20" },
+        { label: "Cuddl Duds Heavyweight 2 Piece Sets Base Layer Thermal", category: "", icon: "🏕️", asin: "B0BV8DQ11Y", link: "https://www.amazon.com/dp/B0BV8DQ11Y?tag=camprally-20" },
+        { label: "G Gradual Youth Boys Compression Thermal Shirt Long Sleeve", category: "", icon: "🏕️", asin: "B0CJ85F6FN", link: "https://www.amazon.com/dp/B0CJ85F6FN?tag=camprally-20" },
+        { label: "Under Armour Men's ColdGear Leggings", category: "", icon: "🏕️", asin: "B08LNZQW3R", link: "https://www.amazon.com/dp/B08LNZQW3R?tag=camprally-20" },
+        { label: "5 or 4 Pack Men's Thermal Compression Shirt Fleece Lined", category: "", icon: "🏕️", asin: "B0B4P7N8S7", link: "https://www.amazon.com/dp/B0B4P7N8S7?tag=camprally-20" },
+        { label: "2 Set Mens Thermal Underwear Fleece Lined Long Johns", category: "", icon: "🏕️", asin: "B0C9YZN8LV", link: "https://www.amazon.com/dp/B0C9YZN8LV?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-insulated-sleeping-pads-under-100": [
     {
       type: "product-grid",
