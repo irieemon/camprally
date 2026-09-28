@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "black-friday-camping-deals-guide": [
+    {
+      type: "product-grid",
+      title: "Black Friday Camping Deals — How to Tell a Real Discount From a Fake One — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "SZHLUX Camping Hammock Double & Single Portable Hammocks", category: "", icon: "🏕️", asin: "B09VGNJTPW", link: "https://www.amazon.com/dp/B09VGNJTPW?tag=camprally-20" },
+        { label: "ReferenceReady Outdoor Knot Cards: 22 Knots", category: "", icon: "🏕️", asin: "B07VVT97RB", link: "https://www.amazon.com/dp/B07VVT97RB?tag=camprally-20" },
+        { label: "MEKER Fire Color Changing Packets", category: "", icon: "🏕️", asin: "B0C9THKCWY", link: "https://www.amazon.com/dp/B0C9THKCWY?tag=camprally-20" },
+        { label: "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit", category: "", icon: "🏕️", asin: "B09B4HCTC1", link: "https://www.amazon.com/dp/B09B4HCTC1?tag=camprally-20" },
+        { label: "Coleman Camp Soap Sheets", category: "", icon: "🏕️", asin: "B0F22VL6K8", link: "https://www.amazon.com/dp/B0F22VL6K8?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-thermal-base-layers-camping-under-50": [
     {
       type: "product-grid",

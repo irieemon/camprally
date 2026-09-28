@@ -114,6 +114,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "tailgating-chairs-vs-folding-benches": "/images/heroes/tailgating-chairs-vs-folding-benches.jpg",
   "best-insulated-sleeping-pads-under-100": "/images/heroes/best-insulated-sleeping-pads-under-100.jpg",
   "best-thermal-base-layers-camping-under-50": "/images/heroes/best-thermal-base-layers-camping-under-50.jpg",
+  "black-friday-camping-deals-guide": "/images/heroes/black-friday-camping-deals-guide.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
