@@ -14025,5 +14025,356 @@
         "ratingsTotal": 195
       }
     ]
+  },
+  "camping gear sale|1|": {
+    "term": "camping gear sale",
+    "min": 1,
+    "fetchedAt": "2026-09-28T13:06:57.239Z",
+    "results": [
+      {
+        "asin": "B006QF3TW4",
+        "title": "LifeStraw Personal Water Filter for Hiking, Travel and Emergency, Blue, 1PK",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.8,
+        "ratingsTotal": 125728
+      },
+      {
+        "asin": "B09VGNJTPW",
+        "title": "SZHLUX Camping Hammock Double & Single Portable Hammocks with 2 Tree Straps and Attached Carry Bag,Great for Outdoor,Indoor,Beach,Camping,Light Grey / Sky Blue",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.7,
+        "ratingsTotal": 4450
+      },
+      {
+        "asin": "B07VVT97RB",
+        "title": "ReferenceReady Outdoor Knot Cards: 22 Knots – Camping, Backpacking, Scouts",
+        "price": "$8.49",
+        "priceValue": 8.49,
+        "rating": 4.7,
+        "ratingsTotal": 2845
+      },
+      {
+        "asin": "B0C9THKCWY",
+        "title": "MEKER Fire Color Changing Packets - Fire Pit, Campfires, Outdoor Fireplaces, Bonfire - Magic Colorful Changing Fire - Perfect Fire Camping Accessories for Kids & Adults (12 Pack)",
+        "price": "$7.95",
+        "priceValue": 7.95,
+        "rating": 4.7,
+        "ratingsTotal": 2776
+      },
+      {
+        "asin": "B09B4HCTC1",
+        "title": "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit, Stainless Steel Outdoor Cooking and Grilling Utensil Organizer Travel Set Perfect for Travel, Picnics, RVs, Camping, BBQs, Parties and More",
+        "price": "$39.98",
+        "priceValue": 39.98,
+        "rating": 4.7,
+        "ratingsTotal": 1032
+      },
+      {
+        "asin": "B0F22VL6K8",
+        "title": "Coleman Camp Soap Sheets – 25 Travel Soap Sheets for Camping, Hiking & Backpacking – Perforated for 50 Washes, Dissolves Instantly in Hot or Cold Water, TSA-Approved for Travel",
+        "price": "$4.99",
+        "priceValue": 4.99,
+        "rating": 4.7,
+        "ratingsTotal": 159
+      },
+      {
+        "asin": "B01HQRD8EO",
+        "title": "Gas One GS-3400P Propane or Butane Stove Dual Fuel Stove Portable Camping Stove - Patented - with Carrying Case Great for Emergency Preparedness Kit",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 15310
+      },
+      {
+        "asin": "B0748HGDVD",
+        "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green",
+        "price": "$15.88",
+        "priceValue": 15.88,
+        "rating": 4.6,
+        "ratingsTotal": 13775
+      },
+      {
+        "asin": "B07MKBKN4H",
+        "title": "FLY2SKY Portable LED Gear Camping Lights with Clip Hook Emergency Light",
+        "price": "$12.99",
+        "priceValue": 12.99,
+        "rating": 4.6,
+        "ratingsTotal": 8946
+      },
+      {
+        "asin": "B01NALJOWF",
+        "title": "Wakeman Collapsible Bucket for Cleaning Supplies, Blue, 7.27L",
+        "price": "$12.74",
+        "priceValue": 12.74,
+        "rating": 4.6,
+        "ratingsTotal": 8877
+      },
+      {
+        "asin": "B09CDCRKNZ",
+        "title": "LUXMOM Emergency Survival Kit and First Aid Kit, 142Pcs Professional Survival Gear and Supplies Equipment with Molle Pouch, Gift for Christmas Men Dad Husband Camping Hiking Hunting Outdoor Adventure",
+        "price": "$40.99",
+        "priceValue": 40.99,
+        "rating": 4.6,
+        "ratingsTotal": 5466
+      },
+      {
+        "asin": "B07B26MHPG",
+        "title": "EverBrite 3-Pack LED Camping Lights, Portable Tent Lights with 4 Modes",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 3160
+      },
+      {
+        "asin": "B0C4G4J45Q",
+        "title": "PartySticks Ultra Bright Green Glow Sticks Emergency Chem Lights (6\", 25 Pack) Military Grade 12 Hour Bulk Tactical Light Sticks for Survival Gear, Camping, Power Outages",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.6,
+        "ratingsTotal": 3112
+      },
+      {
+        "asin": "B0D4765KKT",
+        "title": "Survival Kit, 262Pcs Survival Gear and Supplies with First Aid Kit Pouch and Crossbody Bag, Emergency Kit with Tent, Camping Axe Hammer, Survival Shovel w/Pick, Bug Out Bag Gifts for Men Women",
+        "price": "$45.99",
+        "priceValue": 45.99,
+        "rating": 4.6,
+        "ratingsTotal": 1567
+      },
+      {
+        "asin": "B0F5QKMSL3",
+        "title": "Fuinloth Neck Gaiter, 6 Pack Cooling UV Protection Bandana Face Mask Gator",
+        "price": "$11.99",
+        "priceValue": 11.99,
+        "rating": 4.6,
+        "ratingsTotal": 1463
+      },
+      {
+        "asin": "B0BNZB7WNX",
+        "title": "LED Camping Lantern, Battery Operated, 2 Pack",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 1416
+      },
+      {
+        "asin": "B0BD7W5W6G",
+        "title": "Portable Travel Clothesline with 12 Colorful Clips & Bag, Elastic RV & Camping Clothes Line for Indoor Laundry Drying Line & Outdoor Camping Accessories (Elastic)",
+        "price": "$7.77",
+        "priceValue": 7.77,
+        "rating": 4.6,
+        "ratingsTotal": 1065
+      },
+      {
+        "asin": "B0F3HZZNNP",
+        "title": "Camping String Lights, 32.8FT Rechargeable with Storage Reel, 8 Modes",
+        "price": "$15.00",
+        "priceValue": 15,
+        "rating": 4.6,
+        "ratingsTotal": 414
+      },
+      {
+        "asin": "B01DNDMSLY",
+        "title": "Lepro LED Headlamp Rechargeable IPX4 Waterproof Headlight 5 Modes - Black",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.5,
+        "ratingsTotal": 29493
+      },
+      {
+        "asin": "B09PMKBHF1",
+        "title": "Victoper LED Flashlight 2 Pack, Bright Tactical Torch High Lumens 5 Modes, Waterproof Zoomable Flash Light for Outdoor, Birthday Gifts for Men, Dorm Room Hiking Camping Essentials Gear for Guys",
+        "price": "$9.95",
+        "priceValue": 9.95,
+        "rating": 4.5,
+        "ratingsTotal": 16295
+      },
+      {
+        "asin": "B07NJYV3NP",
+        "title": "AOTU Portable Camping Stoves Backpacking Stove with Piezo Ignition Stable Support Wind-Resistance Camp Stove for Outdoor Camping Hiking Cooking",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.5,
+        "ratingsTotal": 6562
+      },
+      {
+        "asin": "B09P1HZRXH",
+        "title": "Maelstrom 40L Hiking Backpack, Lightweight Camping Daypack with Rain Cover",
+        "price": "$35.91",
+        "priceValue": 35.91,
+        "rating": 4.5,
+        "ratingsTotal": 3530
+      },
+      {
+        "asin": "B0CBS4F96J",
+        "title": "SIMIYA 5 Pairs Merino Wool Socks for Men, Super Thick Hiking Thermal Socks for Cold Weather",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.5,
+        "ratingsTotal": 1493
+      },
+      {
+        "asin": "B0DDPH64GS",
+        "title": "Gaialoop Camping Utensil Set, Camping Cooking Utensils & Kitchen Tools",
+        "price": "$31.49",
+        "priceValue": 31.49,
+        "rating": 4.5,
+        "ratingsTotal": 350
+      },
+      {
+        "asin": "B01M31R8B6",
+        "title": "Atomic Bear Paracord Bracelet (2 Pack) - Adjustable - Fire Starter - Loud Whistle - Perfect for Hiking, Camping, Fishing and Hunting - Black & Black+Orange",
+        "price": "$12.99",
+        "priceValue": 12.99,
+        "rating": 4.4,
+        "ratingsTotal": 16759
+      },
+      {
+        "asin": "B073VZZKK5",
+        "title": "LED Flashlight 2 Pack, Small Flashlights Powerful High Lumens 5 Modes, Waterproof Zoomable Mini Tactical Flash Light for Home Emergencies Camping",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.4,
+        "ratingsTotal": 15759
+      },
+      {
+        "asin": "B08WC2VYMS",
+        "title": "Energizer Universal LED Headlamp 2-Pack, Bright Head Lamp for Camping",
+        "price": "$9.54",
+        "priceValue": 9.54,
+        "rating": 4.4,
+        "ratingsTotal": 9215
+      },
+      {
+        "asin": "B0BRPZR3CZ",
+        "title": "Portable Fan Rechargeable, 20000mAh Cordless Battery Powered Fan with LED Lantern Battery Operated for Travel Bedroom Home Camping Tent Office Beach Desk Fishing Table",
+        "price": "$25.98",
+        "priceValue": 25.98,
+        "rating": 4.4,
+        "ratingsTotal": 7154
+      },
+      {
+        "asin": "B09STL29DQ",
+        "title": "VILLEY Portable Camping Side Table, Ultralight Aluminum Folding Beach Table",
+        "price": "$21.84",
+        "priceValue": 21.84,
+        "rating": 4.4,
+        "ratingsTotal": 4261
+      },
+      {
+        "asin": "B0CQLR515Z",
+        "title": "PFFY Sun Hats for Men Women Wide Brim Bucket Hat UPF 50+ Hiking Fishing Hat",
+        "price": "$9.95",
+        "priceValue": 9.95,
+        "rating": 4.4,
+        "ratingsTotal": 4129
+      },
+      {
+        "asin": "B0BKGCN9P6",
+        "title": "Ann Katy Upgrade XL Portable Toilet for Adults, Extra Large Camping Toilets",
+        "price": "$37.99",
+        "priceValue": 37.99,
+        "rating": 4.4,
+        "ratingsTotal": 2334
+      },
+      {
+        "asin": "B09M68SFL9",
+        "title": "FLY2SKY 4Pcs Portable LED Camping Lights with Clip Hook Emergency Light",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 4.4,
+        "ratingsTotal": 2102
+      },
+      {
+        "asin": "B0D2KF98MC",
+        "title": "THTYBROS 17pcs Camping Cookware Mess Kit,for Camping,Backpacking,Picnic",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.4,
+        "ratingsTotal": 1261
+      },
+      {
+        "asin": "B0C85KTY61",
+        "title": "VEVOR Folding Campfire Grill, Heavy Duty Steel Mesh Grate, 22.4\" Portable Camping Grates Over Fire Pit, Camp Fire Cooking Equipment with Legs Carrying Bag, Grilling Rack for Outdoor Open Flame Cooking",
+        "price": "$28.82",
+        "priceValue": 28.82,
+        "rating": 4.4,
+        "ratingsTotal": 468
+      },
+      {
+        "asin": "B0BZS4Q3Q4",
+        "title": "COVACURE Camping Blanket, Packable Down Alternative Outdoor Blanket 57X78''",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 340
+      },
+      {
+        "asin": "B016HM7QRE",
+        "title": "Odoland Portable LED Camping Lantern with Ceiling Fan - Hurricane Emergency",
+        "price": "$15.19",
+        "priceValue": 15.19,
+        "rating": 4.3,
+        "ratingsTotal": 47533
+      },
+      {
+        "asin": "B088GQMX45",
+        "title": "MOICO Walkie Talkies for Adults, 22 Channel Long Range FRS Two-Way Radios",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.3,
+        "ratingsTotal": 9677
+      },
+      {
+        "asin": "B0B8RWZ1TD",
+        "title": "2 Pack Waterproof Lighter Outdoor Windproof Torch Lighters Dual Arc Butane Electric Lighters USB Rechargeable Lighters Flameless Plasma Lighter Camping Hiking Adventure Survival Tactical Gear",
+        "price": "$13.98",
+        "priceValue": 13.98,
+        "rating": 4.3,
+        "ratingsTotal": 4193
+      },
+      {
+        "asin": "B0FTZ5M84W",
+        "title": "Camping Water Container 2.1 Gallon Collapsible Water Jug with Spout - Reusable Plastic Flasks, Foldable Empty Gallon Jug for Water Storage, Water Bag for Outdoor Hiking Emergency Prep -1 Pack",
+        "price": "$6.99",
+        "priceValue": 6.99,
+        "rating": 4.3,
+        "ratingsTotal": 1259
+      },
+      {
+        "asin": "B0DSKJCTPX",
+        "title": "Double Camping Sleeping pad with Pillow & Built-in Foot Pump",
+        "price": "$43.99",
+        "priceValue": 43.99,
+        "rating": 4.3,
+        "ratingsTotal": 822
+      },
+      {
+        "asin": "B0CTHJ8Q1S",
+        "title": "FNARMW Double Sleeping Pad Camping, Self Inflating 6'' Extra-Thick 2 Person Pillow Built-in Foot Pump Waterproof Inflatable Sleeping Mat Backpacking, Tent, Hiking, Portable Camping Pad (Navy Grey)",
+        "price": "$51.98",
+        "priceValue": 51.98,
+        "rating": 4.2,
+        "ratingsTotal": 1291
+      },
+      {
+        "asin": "B0GQB37YNH",
+        "title": "100P Natural Citronella Mosquito Repellent Incense Sticks for Outdoor Patio",
+        "price": "$7.46",
+        "priceValue": 7.46,
+        "rating": 4.1,
+        "ratingsTotal": 95
+      },
+      {
+        "asin": "B0CZRDFR73",
+        "title": "Yuzonc Double Sleeping Pad - Self Inflating 4\" Extra-Thick for 2 Person with Pillow Built-in Foot Pump Inflatable Sleeping Mat for Backpacking, Hiking, Traveling, Tent, Portable Camping Mat",
+        "price": "$43.99",
+        "priceValue": 43.99,
+        "rating": 4,
+        "ratingsTotal": 2701
+      }
+    ]
   }
 }
