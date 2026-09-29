@@ -3,6 +3,16 @@
   "storeUrl": "https://camprally.gumroad.com",
   "products": [
     {
+      "slug": "van-life-trip-planner",
+      "title": "Van Life Route & Overnight Planner",
+      "subtitle": "Map every mile, log every stop, and keep your rig road-ready with one organized planner you can print and use anywhere.",
+      "price": "$7",
+      "priceCents": 700,
+      "pages": 10,
+      "url": "https://camprally.gumroad.com/l/van-life-trip-planner",
+      "image": "/images/printables/van-life-trip-planner.jpg"
+    },
+    {
       "slug": "fishing-trip-log-book",
       "title": "Fishing Trip Log Book",
       "subtitle": "Track every cast, every catch, and every secret spot so you can fish smarter and relive the memories.",

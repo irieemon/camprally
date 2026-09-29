@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-gifts-under-50": [
+    {
+      type: "product-grid",
+      title: "Best Camping Gifts Under $50 — Gear They'll Actually Use — Quick Comparison",
+      items: [
+        { label: "RV Camping Gifts for Men Women", category: "", icon: "🏕️", asin: "B0FRZX8P7M", link: "https://www.amazon.com/dp/B0FRZX8P7M?tag=camprally-20" },
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "Carhartt Camping Cooler", category: "", icon: "🏕️", asin: "B06XFY5NZW", link: "https://www.amazon.com/dp/B06XFY5NZW?tag=camprally-20" },
+        { label: "Mini First Aid Kit", category: "", icon: "🏕️", asin: "B0DB794BKQ", link: "https://www.amazon.com/dp/B0DB794BKQ?tag=camprally-20" },
+        { label: "The Camping Logbook", category: "", icon: "🏕️", asin: "1441326499", link: "https://www.amazon.com/dp/1441326499?tag=camprally-20" },
+        { label: "Outdoors Socks Hiking Camping Gift for Nature Lovers Men", category: "", icon: "🏕️", asin: "B09TWZP8CQ", link: "https://www.amazon.com/dp/B09TWZP8CQ?tag=camprally-20" },
+      ]
+    },
+  ],
   "black-friday-camping-deals-guide": [
     {
       type: "product-grid",
