@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "winter-camping-for-beginners": [
+    {
+      type: "product-grid",
+      title: "Winter Camping for Beginners — What to Get Right Before You Go — Quick Comparison",
+      items: [
+        { label: "GEERTOP 2 Person Backpacking Tent", category: "", icon: "🏕️", asin: "B07X381HLD", link: "https://www.amazon.com/dp/B07X381HLD?tag=camprally-20" },
+        { label: "Clostnature 4 Season Backpacking Tent", category: "", icon: "🏕️", asin: "B08JSMQ1KF", link: "https://www.amazon.com/dp/B08JSMQ1KF?tag=camprally-20" },
+        { label: "1/2 Person 4 Season Backpacking Tent", category: "", icon: "🏕️", asin: "B0D7CJSBSB", link: "https://www.amazon.com/dp/B0D7CJSBSB?tag=camprally-20" },
+        { label: "BISINNA 4 Season Tent for Backpacking Winter Tents 2 Person", category: "", icon: "🏕️", asin: "B0FWB9NCWB", link: "https://www.amazon.com/dp/B0FWB9NCWB?tag=camprally-20" },
+        { label: "1/2 Person Backpacking Tent for 4 Season", category: "", icon: "🏕️", asin: "B0DGTSLV7D", link: "https://www.amazon.com/dp/B0DGTSLV7D?tag=camprally-20" },
+        { label: "EVER ADVANCED 4 Person Blackout Camping Tent", category: "", icon: "🏕️", asin: "B0FVLQ46GM", link: "https://www.amazon.com/dp/B0FVLQ46GM?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-gifts-under-50": [
     {
       type: "product-grid",
