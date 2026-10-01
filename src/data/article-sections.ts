@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "car-camping-vs-backpacking": [
+    {
+      type: "product-grid",
+      title: "Car Camping vs Backpacking — Which One Are You Actually Buying For — Quick Comparison",
+      items: [
+        { label: "TIMBER RIDGE 20-Second Quick Set-Up Camping Cot", category: "", icon: "🏕️", asin: "B0G3P9WJG6", link: "https://www.amazon.com/dp/B0G3P9WJG6?tag=camprally-20" },
+        { label: "AMACOOL Portable Camping Fan with LED Lantern- 40H Work Time", category: "", icon: "🏕️", asin: "B07TCLB39D", link: "https://www.amazon.com/dp/B07TCLB39D?tag=camprally-20" },
+        { label: "Gas One GS-3400P Propane or Butane Stove Dual Fuel Stove", category: "", icon: "🏕️", asin: "B01HQRD8EO", link: "https://www.amazon.com/dp/B01HQRD8EO?tag=camprally-20" },
+        { label: "Spopal Portable Shower for Camping", category: "", icon: "🏕️", asin: "B0D6RJ42M2", link: "https://www.amazon.com/dp/B0D6RJ42M2?tag=camprally-20" },
+        { label: "TRIPTIPS Upgrade Retractable Portable Toilet Travel Toilet", category: "", icon: "🏕️", asin: "B09S9SW2VJ", link: "https://www.amazon.com/dp/B09S9SW2VJ?tag=camprally-20" },
+        { label: "COOZMENT 3.2 Gallon/5 Gallon Water Containers with Spigot", category: "", icon: "🏕️", asin: "B0BZP7XGNS", link: "https://www.amazon.com/dp/B0BZP7XGNS?tag=camprally-20" },
+      ]
+    },
+  ],
   "winter-camping-for-beginners": [
     {
       type: "product-grid",
