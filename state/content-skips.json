@@ -13,5 +13,10 @@
     "attempts": 1,
     "lastAt": "2026-08-23T13:01:11.141Z",
     "findings": "erally cheaper than silk and many synthetics, but thermals/synthetic and silk are not the only alternatives — and 'warmest liner material' is actually contradicted elsewhere in the article, which describes the Sea to Summit Reactor (synthetic) as adding warmth comparable to a 'serious bump' and fleece liners as adding 'more than 20 degrees,' an implausibly high figure that would mislead readers about expected temperature gains.\n      \"fleece is the warmest liner material at the lowest price\"\n  ✗ [model 2/3] A 20+ degree warmth bump from a fleece liner greatly exceeds realistic performance; published manufacturer ratings for fleece liners typically claim roughly 10–15°F (5–8°C) of added warmth, and this figure could lead a camper to rely on a liner in conditions their bag cannot handle.\n      \"many fleece liners add more than 20 degrees to a bag's effective rating\"\n  · note (1/3): Fleece liners typically add roughly 10-15°F of effective warmth, not >20°F; overstating the boost can lead campers to under-prepare for cold and risk hypothermia.\n  · note (1/3): Quality synthetic insulated liners cost more than basic silk liners, so the claim that synthetics cost less than silk is false.\n"
+  },
+  "best-camping-coolers-with-wheels": {
+    "attempts": 1,
+    "lastAt": "2026-10-02T13:05:03.465Z",
+    "findings": "\nbest-camping-coolers-with-wheels\n  ✗ [model 2/3] YETI Tundra Haul is sold in a single ~65 qt size; it is not offered in multiple sizes.\n      \"The Tundra Haul is available in multiple sizes, letting you match capacity to your typical load.\"\n  · note (1/3): The Tundra Haul is a rotomolded cooler, so it cannot be lighter than comparable rotomolded models. The weight claim is false and misleading.\n  · note (1/3): Coleman Chiller 9 qt, 16 qt and 30 qt models are not wheeled. Wheeled Chiller coolers start at 48 qt, so the stated wheel availability is incorrect.\n"
   }
 }

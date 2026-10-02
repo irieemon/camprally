@@ -14800,5 +14800,284 @@
         "ratingsTotal": 2050
       }
     ]
+  },
+  "wheeled cooler|1|": {
+    "term": "wheeled cooler",
+    "min": 1,
+    "fetchedAt": "2026-10-02T13:02:53.518Z",
+    "results": [
+      {
+        "asin": "B0842C5WVB",
+        "title": "YETI Tundra Haul Portable Wheeled Cooler",
+        "price": "$450.00",
+        "priceValue": 450,
+        "rating": 4.8,
+        "ratingsTotal": 4103
+      },
+      {
+        "asin": "B0GH3PX1VN",
+        "title": "Igloo Tag Along Too Coolers | Insulated Hard Shell Picnic Style Cooler | Rolling Ice Chest",
+        "price": "$149.99",
+        "priceValue": 149.99,
+        "rating": 4.8,
+        "ratingsTotal": 121
+      },
+      {
+        "asin": "B0FV973WL5",
+        "title": "RTIC 72 QT Ultra-Light Wheeled Hard Cooler",
+        "price": "$329.00",
+        "priceValue": 329,
+        "rating": 4.7,
+        "ratingsTotal": 348
+      },
+      {
+        "asin": "B0BLM3MK31",
+        "title": "Titan Zipperless HardBody Cooler, Keeps Ice 2 Days",
+        "price": "$46.99",
+        "priceValue": 46.99,
+        "rating": 4.6,
+        "ratingsTotal": 56981
+      },
+      {
+        "asin": "B0GFP3WZ74",
+        "title": "Coleman Chiller 9/16/30/48/60qt Cooler",
+        "price": "$60.88",
+        "priceValue": 60.88,
+        "rating": 4.6,
+        "ratingsTotal": 16771
+      },
+      {
+        "asin": "B08G56RPVG",
+        "title": "Igloo Hard Cooler | Polar & Party Bar Series | Insulated Ice Chests",
+        "price": "$219.99",
+        "priceValue": 219.99,
+        "rating": 4.6,
+        "ratingsTotal": 11745
+      },
+      {
+        "asin": "B004XUNDX4",
+        "title": "Igloo Maxcold Glide 110Qt Wheeled Cooler | Insulated Hard Shell Ice Chest",
+        "price": "$152.99",
+        "priceValue": 152.99,
+        "rating": 4.6,
+        "ratingsTotal": 3056
+      },
+      {
+        "asin": "B01M1OJO3B",
+        "title": "RTIC 45 QT Ultra-Tough Hard Cooler",
+        "price": "$239.00",
+        "priceValue": 239,
+        "rating": 4.6,
+        "ratingsTotal": 2068
+      },
+      {
+        "asin": "B09HMZJCBL",
+        "title": "Coleman 42-Can Soft Rolling Cooler with Wheels, Insulated Chiller",
+        "price": "$58.99",
+        "priceValue": 58.99,
+        "rating": 4.6,
+        "ratingsTotal": 926
+      },
+      {
+        "asin": "B0GMRW89CF",
+        "title": "RTIC 52 QT Ultra-Light Wheeled Hard Cooler",
+        "price": "$279.00",
+        "priceValue": 279,
+        "rating": 4.6,
+        "ratingsTotal": 894
+      },
+      {
+        "asin": "B0F5C9466M",
+        "title": "Coleman Pro 25-Quart Hard Cooler with Wheels, Desert Sand",
+        "price": "$159.99",
+        "priceValue": 159.99,
+        "rating": 4.6,
+        "ratingsTotal": 723
+      },
+      {
+        "asin": "B0DNGGYMRH",
+        "title": "Coleman Pro 55-Quart Hard Cooler with Wheels, Neptune",
+        "price": "$224.93",
+        "priceValue": 224.93,
+        "rating": 4.6,
+        "ratingsTotal": 723
+      },
+      {
+        "asin": "B0DPN98BT7",
+        "title": "Ninja FrostVault 30qt Cooler with Wheels, Dry Storage, Lakeshore Blue",
+        "price": "$279.95",
+        "priceValue": 279.95,
+        "rating": 4.6,
+        "ratingsTotal": 402
+      },
+      {
+        "asin": "B0GNT7TV8C",
+        "title": "Ninja FrostVault™ 42qt Cooler with Wheels, Dry Storage, Charcoal Gray",
+        "price": "$329.99",
+        "priceValue": 329.99,
+        "rating": 4.6,
+        "ratingsTotal": 402
+      },
+      {
+        "asin": "B0HFKW3XHF",
+        "title": "RTIC 22 QT Ultra-Light Wheeled Cooler with Handle",
+        "price": "$189.00",
+        "priceValue": 189,
+        "rating": 4.6,
+        "ratingsTotal": 402
+      },
+      {
+        "asin": "B0GZ5CPH7S",
+        "title": "VEVOR Portable Cooler,Hard Cooler with Ice Retention, Heavy-Duty Handles and Strap, Lightweight Rigid Material Insulated Portable Cooler, Suitable for Family Picnics and Short Trips",
+        "price": "$96.31",
+        "priceValue": 96.31,
+        "rating": 4.6,
+        "ratingsTotal": 93
+      },
+      {
+        "asin": "B00AU6G4QS",
+        "title": "Coleman Xtreme Rolling Cooler with Wheels, Extra-Walled Insulation Keeps Ice up to 5 Days, Portable Wheeled Hard Chiller",
+        "price": "$74.99",
+        "priceValue": 74.99,
+        "rating": 4.5,
+        "ratingsTotal": 20535
+      },
+      {
+        "asin": "B08LMVJJ9Q",
+        "title": "Coleman Classic Series 62/65/100qt Cooler",
+        "price": "$94.98",
+        "priceValue": 94.98,
+        "rating": 4.5,
+        "ratingsTotal": 9594
+      },
+      {
+        "asin": "B07XMMB6SG",
+        "title": "Coleman Classic Series 52/70/120/150qt Cooler",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.5,
+        "ratingsTotal": 5346
+      },
+      {
+        "asin": "B07DR3N3W3",
+        "title": "VINGLI Rolling Ice Chest, Portable Patio Party Bar Drink Cooler Cart, with Shelf, Beverage Pool with Bottle Opener",
+        "price": "$129.99",
+        "priceValue": 129.99,
+        "rating": 4.5,
+        "ratingsTotal": 2328
+      },
+      {
+        "asin": "B08RLKSTLB",
+        "title": "Igloo Hard Coolers | Profile II Series | Insulated Ice Chests | Roller Cooler with Wheels",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.5,
+        "ratingsTotal": 1559
+      },
+      {
+        "asin": "B0DPN963G6",
+        "title": "Ninja FrostVault™ 45qt Cooler with Wheels, Dry Storage, Lakeshore Blue",
+        "price": "$299.99",
+        "priceValue": 299.99,
+        "rating": 4.5,
+        "ratingsTotal": 772
+      },
+      {
+        "asin": "B08TYLGG34",
+        "title": "Coleman Marine Cooler",
+        "price": "$119.99",
+        "priceValue": 119.99,
+        "rating": 4.5,
+        "ratingsTotal": 395
+      },
+      {
+        "asin": "B0C6C572N2",
+        "title": "Igloo Trailmate Journey 70Qt Wheeled Cooler | Insulated Hard Shell Ice Chest",
+        "price": "$229.98",
+        "priceValue": 229.98,
+        "rating": 4.4,
+        "ratingsTotal": 1160
+      },
+      {
+        "asin": "B0CPMBTTNF",
+        "title": "Igloo Trailmate 52 Qt Roller Cooler, Carbonite",
+        "price": "$127.99",
+        "priceValue": 127.99,
+        "rating": 4.4,
+        "ratingsTotal": 544
+      },
+      {
+        "asin": "B0H74LJ2HH",
+        "title": "Feelfunn 12V Refrigerator 40QT Dual Zone Portable Freezer, Black",
+        "price": "$237.99",
+        "priceValue": 237.99,
+        "rating": 4.4,
+        "ratingsTotal": 482
+      },
+      {
+        "asin": "B0DTKLHM8Y",
+        "title": "55 Qt Hard Cooler with Wheels, Ice Chests Portable Camping Cooler",
+        "price": "$209.99",
+        "priceValue": 209.99,
+        "rating": 4.4,
+        "ratingsTotal": 254
+      },
+      {
+        "asin": "B01NAXV3U4",
+        "title": "Ultra Compact Cooler Smart Cart with Wheels - Collapsible Insulated Cooler Bag - Foldable Travel Cooler 36 Cans - Leak Proof Trolley - Black",
+        "price": "$27.99",
+        "priceValue": 27.99,
+        "rating": 4.3,
+        "ratingsTotal": 2172
+      },
+      {
+        "asin": "B0BLM45DTL",
+        "title": "Titan 60 Can Cooler with Wheeled Cart, Ice Up to 3 Days",
+        "price": "$83.99",
+        "priceValue": 83.99,
+        "rating": 4.3,
+        "ratingsTotal": 866
+      },
+      {
+        "asin": "B0DSK924YL",
+        "title": "INSMEER Cooler with Wheels and Handle, 80 Cans/50L Rolling Cooler, Portable Soft Sided Cooler with Wheel, 2-in-1 Collapsible Trolley Cart, Large Coolerbag for Grocery Shopping",
+        "price": "$52.59",
+        "priceValue": 52.59,
+        "rating": 4.3,
+        "ratingsTotal": 606
+      },
+      {
+        "asin": "B086FYR28C",
+        "title": "Blue Coolers Ice Vault – 60 Quart Roto-Molded Ice Cooler with Wheels | Large Ice Chest Holds Ice up to 10 Days |",
+        "price": "$319.99",
+        "priceValue": 319.99,
+        "rating": 4.3,
+        "ratingsTotal": 310
+      },
+      {
+        "asin": "B0B24P5QV7",
+        "title": "SDLINR Collapsible Cooler with Wheels, Rolling Cooler Bag for Beach Travel",
+        "price": "$49.49",
+        "priceValue": 49.49,
+        "rating": 4,
+        "ratingsTotal": 1526
+      },
+      {
+        "asin": "B0DVHPR1SJ",
+        "title": "Igloo Marine Cooler | Insulated Hard Shell Ice Chest |Great for Fishing, Camping, Boating, & More",
+        "price": "$129.99",
+        "priceValue": 129.99,
+        "rating": 4,
+        "ratingsTotal": 221
+      },
+      {
+        "asin": "B0GJ38758W",
+        "title": "60-Cans Large Rolling Cooler Bag, Insulated Soft Cooler Bag Ice Chest with Wheels Portable Wheeled Cooler, Collapsible Insulated Cooler Bag for Beach Camping Patio Travel Outdoor",
+        "price": "$36.99",
+        "priceValue": 36.99,
+        "rating": 3,
+        "ratingsTotal": 52
+      }
+    ]
   }
 }

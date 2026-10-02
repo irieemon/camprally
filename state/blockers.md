@@ -272,3 +272,16 @@ refresh-asins found confirmed dead affiliate links. Fix before publishing more.
 
 Refusing to run with uncommitted changes:
 ?? docs/pipeline/
+
+## 2026-10-02T13:00:00.115Z — content-review
+
+Content review rejected best-camping-coolers-with-wheels (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-camping-coolers-with-wheels-2026-10-02T13-00-00-115Z.json
+
+
+best-camping-coolers-with-wheels
+  ✗ [model 2/3] YETI Tundra Haul is sold in a single ~65 qt size; it is not offered in multiple sizes.
+      "The Tundra Haul is available in multiple sizes, letting you match capacity to your typical load."
+  · note (1/3): The Tundra Haul is a rotomolded cooler, so it cannot be lighter than comparable rotomolded models. The weight claim is false and misleading.
+  · note (1/3): Coleman Chiller 9 qt, 16 qt and 30 qt models are not wheeled. Wheeled Chiller coolers start at 48 qt, so the stated wheel availability is incorrect.
+
