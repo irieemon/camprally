@@ -285,3 +285,17 @@ best-camping-coolers-with-wheels
   · note (1/3): The Tundra Haul is a rotomolded cooler, so it cannot be lighter than comparable rotomolded models. The weight claim is false and misleading.
   · note (1/3): Coleman Chiller 9 qt, 16 qt and 30 qt models are not wheeled. Wheeled Chiller coolers start at 48 qt, so the stated wheel availability is incorrect.
 
+
+## 2026-10-03T13:00:00.118Z — content-review
+
+Content review rejected best-camping-coolers-with-wheels (attempt 2 of 2).
+Spec quarantined to specs/quarantine/best-camping-coolers-with-wheels-2026-10-03T13-00-00-118Z.json
+
+
+best-camping-coolers-with-wheels
+  ✗ [model 2/3] Calling zippers 'the failure point on cheaper soft coolers' is an overgeneralization that could steer a buyer away from quality soft-sided coolers, though this is a low-stakes claim.
+      "Titan's Zipperless HardBody is a mid-size rolling cooler with a hard plastic body, a latch-and-seal lid (no zipper — zippers are the failure point on cheaper so"
+  · note (1/3): Steel handles have little to do with the rolling capability of a wheeled cooler; this is a non-sequitur and potentially misleading as a buying criterion.
+  · note (1/3): Cold actually makes many plastics more brittle, but the claim that plastic hubs crack 'especially in cold' is plausible but the article frames it as if cold is the primary cause, which could mislead a buyer about the more common failure (load/UV/age). Minor.
+  · note (1/3): Coleman’s wheeled Chiller line is not offered in 9 qt and 16 qt wheeled sizes; the wheeled Chiller models start at ~28 qt. Listing 9/16 qt as wheeled options is inaccurate.
+
