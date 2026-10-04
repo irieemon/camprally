@@ -15079,5 +15079,269 @@
         "ratingsTotal": 52
       }
     ]
+  },
+  "hiking shoes|1|100": {
+    "term": "hiking shoes",
+    "min": 1,
+    "max": 100,
+    "fetchedAt": "2026-10-04T13:01:12.087Z",
+    "results": [
+      {
+        "asin": "B0CLVXP92B",
+        "title": "Columbia Men's Transverse Hike Waterproof",
+        "price": "$79.99",
+        "priceValue": 79.99,
+        "rating": 4.6,
+        "ratingsTotal": 3487
+      },
+      {
+        "asin": "B0CHGKSSX3",
+        "title": "Skechers Men's Stamina AT Upper Stitch",
+        "price": "$51.00",
+        "priceValue": 51,
+        "rating": 4.6,
+        "ratingsTotal": 2866
+      },
+      {
+        "asin": "B0F2G7Q99S",
+        "title": "adidas Mens Terrex Eastrail 3 Hiking Sneakers Shoes - Grey",
+        "price": "$56.00",
+        "priceValue": 56,
+        "rating": 4.6,
+        "ratingsTotal": 531
+      },
+      {
+        "asin": "B07JH35W6K",
+        "title": "Columbia Men’s Crestwood Hiking Boots",
+        "price": "$80.00",
+        "priceValue": 80,
+        "rating": 4.5,
+        "ratingsTotal": 15018
+      },
+      {
+        "asin": "B093W8K1XS",
+        "title": "NORTIV 8 Women's Waterproof Hiking Boots Trekking",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.5,
+        "ratingsTotal": 6360
+      },
+      {
+        "asin": "B098KJQ3SH",
+        "title": "Merrell Women's Moab 3 Hiking Shoes",
+        "price": "$99.95",
+        "priceValue": 99.95,
+        "rating": 4.5,
+        "ratingsTotal": 4187
+      },
+      {
+        "asin": "B08WWW94CW",
+        "title": "Skechers Men's Respected Boswell Boot",
+        "price": "$69.00",
+        "priceValue": 69,
+        "rating": 4.5,
+        "ratingsTotal": 3553
+      },
+      {
+        "asin": "B0CLW9YGYL",
+        "title": "Columbia Women’s Newton Ridge Plus Waterproof Amped",
+        "price": "$99.99",
+        "priceValue": 99.99,
+        "rating": 4.5,
+        "ratingsTotal": 3297
+      },
+      {
+        "asin": "B08CGKJBVK",
+        "title": "Saucony Men's Excursion Tr14 Trail Running Shoes",
+        "price": "$64.99",
+        "priceValue": 64.99,
+        "rating": 4.5,
+        "ratingsTotal": 2918
+      },
+      {
+        "asin": "B0CKM7MWH9",
+        "title": "adidas Men's Terrex Anylander Hiking Shoes",
+        "price": "$60.00",
+        "priceValue": 60,
+        "rating": 4.5,
+        "ratingsTotal": 2597
+      },
+      {
+        "asin": "B0FB117Q1C",
+        "title": "Columbia Women's Crestwood",
+        "price": "$70.89",
+        "priceValue": 70.89,
+        "rating": 4.5,
+        "ratingsTotal": 2364
+      },
+      {
+        "asin": "B0DGXJB7F7",
+        "title": "NORTIV 8 Women's Lightweight Ankle Hiking Boots Backpacking",
+        "price": "$47.99",
+        "priceValue": 47.99,
+        "rating": 4.5,
+        "ratingsTotal": 1876
+      },
+      {
+        "asin": "B0DM3748ZM",
+        "title": "Brooks Men’s Cascadia 19 Mountain Trail Running Shoe",
+        "price": "$98.00",
+        "priceValue": 98,
+        "rating": 4.5,
+        "ratingsTotal": 456
+      },
+      {
+        "asin": "B0D2PL8J79",
+        "title": "adidas Mens Terrex Skychaser Hiking Shoes",
+        "price": "$94.95",
+        "priceValue": 94.95,
+        "rating": 4.5,
+        "ratingsTotal": 141
+      },
+      {
+        "asin": "B00FFXUVHE",
+        "title": "Skechers Men's After Burn M. Fit Sneaker",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.4,
+        "ratingsTotal": 79258
+      },
+      {
+        "asin": "B0B5DK8R4N",
+        "title": "NORTIV 8 Men's Ankle High Waterproof Hiking Boots",
+        "price": "$46.66",
+        "priceValue": 46.66,
+        "rating": 4.4,
+        "ratingsTotal": 23626
+      },
+      {
+        "asin": "B07PBDVT2Z",
+        "title": "NORTIV 8 Men's Waterproof Lightweight Hiking Boots",
+        "price": "$56.99",
+        "priceValue": 56.99,
+        "rating": 4.4,
+        "ratingsTotal": 14670
+      },
+      {
+        "asin": "B09L439J7H",
+        "title": "SHULOOK Men's Waterproof Hiking Boots Non-Slip Lightweight Mid Top Ankle Boot Breathable Hiker Trekking Shoes",
+        "price": "$53.99",
+        "priceValue": 53.99,
+        "rating": 4.4,
+        "ratingsTotal": 1602
+      },
+      {
+        "asin": "B0D1LH22RT",
+        "title": "New Balance Men's Dynasoft Tektrel V1 Suede Trail Running Shoes",
+        "price": "$74.98",
+        "priceValue": 74.98,
+        "rating": 4.4,
+        "ratingsTotal": 1567
+      },
+      {
+        "asin": "B0FG2KCVMY",
+        "title": "NORTIV 8 Men's Trail Running Shoes Wide Toe Box",
+        "price": "$63.99",
+        "priceValue": 63.99,
+        "rating": 4.4,
+        "ratingsTotal": 1387
+      },
+      {
+        "asin": "B0CLWBZQV9",
+        "title": "Columbia Men's Fairbanks Mid Hiking Boots",
+        "price": "$84.99",
+        "priceValue": 84.99,
+        "rating": 4.4,
+        "ratingsTotal": 1246
+      },
+      {
+        "asin": "B0F15SZNPT",
+        "title": "Under Armour Men's Micro G Stellar Mid Military and Tactical Boot",
+        "price": "$64.99",
+        "priceValue": 64.99,
+        "rating": 4.4,
+        "ratingsTotal": 470
+      },
+      {
+        "asin": "B0CLWCSFKC",
+        "title": "Columbia Men's Fairbanks Low",
+        "price": "$84.99",
+        "priceValue": 84.99,
+        "rating": 4.3,
+        "ratingsTotal": 5895
+      },
+      {
+        "asin": "B0DJV1JL27",
+        "title": "New Balance Mens Dynasoft Nitrel V6 Trail Running Shoe",
+        "price": "$59.94",
+        "priceValue": 59.94,
+        "rating": 4.3,
+        "ratingsTotal": 1501
+      },
+      {
+        "asin": "B0CZHZKP77",
+        "title": "Barefoot Shoes Men Women Minimalist Shoes Zero Drop Workout Cross-Trainer Hiking Water Wide Toe Box Grounded Footwear Weightlifting Walking",
+        "price": "$23.39",
+        "priceValue": 23.39,
+        "rating": 4.2,
+        "ratingsTotal": 5314
+      },
+      {
+        "asin": "B0CHVXFCDZ",
+        "title": "CC-Los Women's Waterproof Lightweight Hiking Shoes Non-Slip Outdoor Walking",
+        "price": "$59.14",
+        "priceValue": 59.14,
+        "rating": 4.2,
+        "ratingsTotal": 1661
+      },
+      {
+        "asin": "B0BFBQTLR7",
+        "title": "Saucony Men's Excursion TR16 Trail Running Shoe",
+        "price": "$64.99",
+        "priceValue": 64.99,
+        "rating": 4.2,
+        "ratingsTotal": 1518
+      },
+      {
+        "asin": "B0CC326DZB",
+        "title": "OL OUTJET LEGEND Men's Waterproof Hiking Shoes Leather Low Top",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.2,
+        "ratingsTotal": 1240
+      },
+      {
+        "asin": "B0FT4DQCC1",
+        "title": "adidas Women's Terrex Rockadia Trail Running",
+        "price": "$67.77",
+        "priceValue": 67.77,
+        "rating": 4.2,
+        "ratingsTotal": 88
+      },
+      {
+        "asin": "B0G9PW7Y4D",
+        "title": "Hike Footwear HF Stride Barefoot Slip On Shoes for Women Men, Wide Toe Box",
+        "price": "$69.95",
+        "priceValue": 69.95,
+        "rating": 4.1,
+        "ratingsTotal": 2696
+      },
+      {
+        "asin": "B0F4L6Q2HJ",
+        "title": "New Balance Mens 410 V9",
+        "price": "$52.49",
+        "priceValue": 52.49,
+        "rating": 4.1,
+        "ratingsTotal": 1445
+      },
+      {
+        "asin": "B09PZBSDJG",
+        "title": "CUSHIONAIRE Brig Womens Hiking Shoes, Supportive Trail Shoes for Women with Waterproof Protection and Arch Support",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 3.9,
+        "ratingsTotal": 356
+      }
+    ]
   }
 }
