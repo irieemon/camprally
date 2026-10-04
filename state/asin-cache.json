@@ -4201,6 +4201,72 @@
       "ratingsTotal": 11745,
       "priceCheckedAt": "2026-10-03T13:00:17.421Z",
       "priceSource": "canopy-search"
+    },
+    "B0CLVXP92B": {
+      "verdict": "LIVE",
+      "title": "Columbia Men's Transverse Hike Waterproof",
+      "checkedAt": "2026-10-04T13:01:19.523Z",
+      "price": "$79.99",
+      "priceValue": 79.99,
+      "rating": 4.6,
+      "ratingsTotal": 3487,
+      "priceCheckedAt": "2026-10-04T13:01:19.523Z",
+      "priceSource": "canopy-search"
+    },
+    "B0CHGKSSX3": {
+      "verdict": "LIVE",
+      "title": "Skechers Men's Stamina AT Upper Stitch",
+      "checkedAt": "2026-10-04T13:01:19.523Z",
+      "price": "$51.00",
+      "priceValue": 51,
+      "rating": 4.6,
+      "ratingsTotal": 2866,
+      "priceCheckedAt": "2026-10-04T13:01:19.523Z",
+      "priceSource": "canopy-search"
+    },
+    "B0F2G7Q99S": {
+      "verdict": "LIVE",
+      "title": "adidas Mens Terrex Eastrail 3 Hiking Sneakers Shoes - Grey",
+      "checkedAt": "2026-10-04T13:01:19.523Z",
+      "price": "$56.00",
+      "priceValue": 56,
+      "rating": 4.6,
+      "ratingsTotal": 531,
+      "priceCheckedAt": "2026-10-04T13:01:19.523Z",
+      "priceSource": "canopy-search"
+    },
+    "B07JH35W6K": {
+      "verdict": "LIVE",
+      "title": "Columbia Men’s Crestwood Hiking Boots",
+      "checkedAt": "2026-10-04T13:01:19.523Z",
+      "price": "$80.00",
+      "priceValue": 80,
+      "rating": 4.5,
+      "ratingsTotal": 15018,
+      "priceCheckedAt": "2026-10-04T13:01:19.523Z",
+      "priceSource": "canopy-search"
+    },
+    "B093W8K1XS": {
+      "verdict": "LIVE",
+      "title": "NORTIV 8 Women's Waterproof Hiking Boots Trekking",
+      "checkedAt": "2026-10-04T13:01:19.523Z",
+      "price": "$49.99",
+      "priceValue": 49.99,
+      "rating": 4.5,
+      "ratingsTotal": 6360,
+      "priceCheckedAt": "2026-10-04T13:01:19.523Z",
+      "priceSource": "canopy-search"
+    },
+    "B098KJQ3SH": {
+      "verdict": "LIVE",
+      "title": "Merrell Women's Moab 3 Hiking Shoes",
+      "checkedAt": "2026-10-04T13:01:19.523Z",
+      "price": "$99.95",
+      "priceValue": 99.95,
+      "rating": 4.5,
+      "ratingsTotal": 4187,
+      "priceCheckedAt": "2026-10-04T13:01:19.523Z",
+      "priceSource": "canopy-search"
     }
   }
 }

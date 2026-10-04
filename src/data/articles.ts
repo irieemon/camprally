@@ -6940,6 +6940,64 @@ The fastest path to gear you'll actually use is to stop pretending car camping a
 *Related guides: [How to Choose a Campsite — The Ten Minutes That Decide Your Night](/blog/how-to-choose-a-campsite) · [Budget Camping Hacks That Actually Work](/blog/budget-camping-hacks-that-work)*
     `
   },
+
+  {
+    id: "art-075",
+    slug: "best-hiking-shoes-under-100",
+    title: "Best Hiking Shoes Under $100 — When Low-Cut Beats a Boot",
+    excerpt: "Find the best hiking shoes under $100 for day hikes and camping, and learn when a low-cut trail shoe is actually the smarter choice over a heavier boot.",
+    category: "Footwear",
+    date: "2026-10-04",
+    author: "Camp Rally Team",
+    readTime: "7 min read",
+    content: `
+# Best Hiking Shoes Under $100 — When Low-Cut Beats a Boot
+
+A low-cut trail shoe is the right tool on a lot more trips than people think. If you're hauling a daypack from the car to the lake, walking a graded forest path, or knocking out a well-marked loop with a light load, a hiking shoe gives you better ground feel, dries faster, weighs less on your feet, and costs less than most boots. The pair below are all low-cut trail shoes or trail-runner-style hikers in the budget range, picked because each listing actually states what it's built to do. No specs invented, no prices quoted — just what the catalog says, and what that means for your feet.
+
+## How to Choose a Budget Hiking Shoe
+
+The honest case for a shoe over a boot comes down to four things: trail surface, pack weight, water, and terrain. On a maintained dirt path with roots and minor rocks, your foot is doing fine inside a low-cut shoe with a protective midsole and a grippy outsole. Once you're carrying a heavy multi-day pack, crossing boulder fields, pushing through wet brush at ankle height, or stepping through cold creek crossings, a mid or high boot earns its weight. Our full guide to [Best Hiking Boots for Camping Under $100 — What to Look For](/blog/best-hiking-boots-camping-under-100) covers that side of the choice. The line between them is real, and pretending otherwise just sells you the wrong pair.
+
+Waterproof membranes deserve their own paragraph. A waterproof-breathable membrane keeps splashes and shallow puddles out of the shoe, but it also reduces airflow, so your socks stay damper longer from sweat. On dry trails in warm weather, a non-waterproof mesh shoe is often more comfortable because your feet dry out at rest. The right call is to match the shoe to the climate and the trip, not to chase waterproofing as a default feature.
+
+Socks matter more than most buyers realize. A merino or synthetic hiking sock wicks sweat, reduces blister friction, and pairs cleanly with the cuff of a low-cut shoe. Cotton absorbs water, holds it against your skin, and is the most common cause of hotspots on short hikes. Our guide to [Best Camping Socks](/blog/best-camping-socks) breaks down fiber choice and cushion level so you can match the sock to the shoe.
+
+Fit is the only thing you can't negotiate. Try the shoe on at the end of the day when your feet are slightly swollen, lace it the way you'll actually lace it on trail, and check that your toes can slide forward without slamming the front when you walk downhill. Budget shoes get most of their bad reviews from people who bought a half size too small.
+
+## The Picks
+
+### Columbia Men's Transverse Hike Waterproof
+
+A low-cut trail shoe from Columbia built around a waterproof construction and an aggressive lugged outsole. The listing markets it for hiking across mixed terrain, which lines up with what most buyers want from a budget day-hike shoe: weather-ready upper, grip underfoot, low-cut cuff for mobility. Best matched to shoulder-season day hikes, dewy morning starts, and camp-to-lake walks where the path crosses wet grass and shallow puddles. Because it's waterproof, expect it to run a touch warmer than a fully mesh shoe in summer heat. The **[Columbia Men's Transverse Hike Waterproof on Amazon](https://www.amazon.com/dp/B0CLVXP92B?tag=camprally-20)** is the kind of shoe that does the job for most campers who want one pair that handles light rain without a separate pair for dry days.
+
+### Skechers Men's Stamina AT Upper Stitch
+
+A trail-style shoe from Skechers in the "AT" (all-terrain) line. Skechers shoes in this price tier typically pair a supportive midsole with a grippy rubber outsole and a more athletic last than a classic hiking boot. The Upper Stitch naming hints at reinforced stitching along high-stress zones, which is the part of a shoe that usually fails first on a budget pair. This is a good pick for day hikes on graded trails, campground exploring, and any camper who prefers the roomier, more cushioned feel of a trail-runner-style shoe over a stiffer hiking shoe. Worth knowing: Skechers trail shoes in this line are often lighter than the competition but trade some underfoot protection, so they're best kept to trails without sharp embedded rock. The **[Skechers Men's Stamina AT Upper Stitch on Amazon](https://www.amazon.com/dp/B0CHGKSSX3?tag=camprally-20)** is a strong everyday pick for campers who walk a lot but don't carry a heavy pack.
+
+### adidas Mens Terrex Eastrail 3 Hiking Sneakers Shoes - Grey
+
+The Terrex line is adidas's outdoor trail sub-brand, and the Eastrail sits in the low-cut hiking-shoe category rather than the boot category. The "Hiking Sneakers" wording in the listing is honest — these are closer in feel to a trail runner with a hiking-shoe last than to a traditional leather hiker. That usually means a lighter overall weight, a faster break-in, and a more cushioned ride on hardpack and pavement approaches to the trailhead. adidas outdoor shoes in this tier typically use a lugged outsole for traction and a reinforced toe cap for rock protection. Best suited to day hikes, fastpacking with a light pack, and warm-weather trips where breathability matters more than waterproofing. The **[adidas Mens Terrex Eastrail 3 Hiking Sneakers Shoes - Grey on Amazon](https://www.amazon.com/dp/B0F2G7Q99S?tag=camprally-20)** is a smart pick if you want one pair that handles the trail and the trailhead equally well.
+
+### Columbia Men’s Crestwood Hiking Boots
+
+Wait — the listing says boots. Even though this roundup is shoes, the Crestwood keeps showing up on shoelift shopping lists because it sits at the boundary between a low-cut hiking shoe and a mid-cut boot. We're including it so you know what is the line you're standing on. If you want the low-cut version of a similar Columbia build, the Transverse Hike above is the closer match. If you've been cross-shopping boots and shoes and keep landing here, head over to [Best Hiking Boots for Camping Under $100 — What to Look For](/blog/best-hiking-boots-camping-under-100) for the boot side of the comparison. The **[Columbia Men’s Crestwood Hiking Boots on Amazon](https://www.amazon.com/dp/B07JH35W6K?tag=camprally-20)** is included for reference, not as a shoe recommendation.
+
+### NORTIV 8 Women's Waterproof Hiking Boots
+
+Same situation: this is a waterproof boot in NORTIV 8's line, and it keeps surfacing in budget searches. The reason is the price point — NORTIV 8 routinely sits in the budget tier and pulls in buyers comparing low-cost hiking footwear regardless of cuff height. We've included it so you can see the boundary clearly: a waterproof boot in this category is the right answer for ankle support on rough ground, and a low-cut shoe is the right answer for lighter loads on friendlier trail. The **[NORTIV 8 Women's Waterproof Hiking Boots Trekking on Amazon](https://www.amazon.com/dp/B093W8K1XS?tag=camprally-20)** is here for the boot-versus-shoe comparison, not as a shoe pick.
+
+### Merrell Women's Moab 3 Hiking Shoes
+
+The Moab line is the reference point for a low-cut hiking shoe in this price tier. The Moab 3 continues the formula: a supportive midsole, a Vibram outsole, a protective toe cap, and a low-cut cuff that lets the ankle move freely. Merrell lists this as a hiking shoe, and it's the closest thing in our picks to a "default" recommendation for campers who want one pair that handles day hikes, camp-to-water walks, and graded overnight trails. The Moab 3 ships in both waterproof and non-waterproof versions depending on the listing — pick the waterproof variant for shoulder-season and damp climates, and the non-waterproof mesh version for hot, dry trails where breathability matters more. The **[Merrell Women's Moab 3 Hiking Shoes on Amazon](https://www.amazon.com/dp/B098KJQ3SH?tag=camprally-20)** is the most well-rounded pick in the lineup and the place most campers should start.
+
+## Verdict
+
+For most campers doing day hikes and light overnight trips on maintained trails, a low-cut hiking shoe is the right call. It weighs less, dries faster, costs less, and gives your foot more natural movement on graded trail. Reach for a boot instead when you're carrying a heavy pack, crossing wet brush above the ankle, or walking through cold creek fords.
+
+In this roundup, the **Merrell Women's Moab 3 Hiking Shoes** and the **Columbia Men's Transverse Hike Waterproof** are the two best general-purpose picks — Moab for fit and trail feel, Transverse for weather-ready day hiking. The **Skechers Men's Stamina AT Upper Stitch** is the comfort-first pick for campers who want more cushion underfoot. The **adidas Terrex Eastrail 3** is the fast-and-light pick for warm weather and trailhead-to-trail versatility.*Related guides: [Best Hiking Boots for Camping Under $100 — What to Look For](/blog/best-hiking-boots-camping-under-100) · [The Most Important Gear Most Campers Ignore: A Good Pair of Socks](/blog/best-camping-socks) · [Best Budget Trekking Poles: Cheap Hiking Poles Under $40](/blog/best-budget-trekking-poles)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

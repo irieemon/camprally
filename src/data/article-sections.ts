@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-hiking-shoes-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Hiking Shoes Under $100 — When Low-Cut Beats a Boot — Quick Comparison",
+      items: [
+        { label: "Columbia Men's Transverse Hike Waterproof", category: "", icon: "🏕️", asin: "B0CLVXP92B", link: "https://www.amazon.com/dp/B0CLVXP92B?tag=camprally-20" },
+        { label: "Skechers Men's Stamina AT Upper Stitch", category: "", icon: "🏕️", asin: "B0CHGKSSX3", link: "https://www.amazon.com/dp/B0CHGKSSX3?tag=camprally-20" },
+        { label: "adidas Mens Terrex Eastrail 3 Hiking Sneakers Shoes", category: "", icon: "🏕️", asin: "B0F2G7Q99S", link: "https://www.amazon.com/dp/B0F2G7Q99S?tag=camprally-20" },
+        { label: "Columbia Men’s Crestwood Hiking Boots", category: "", icon: "🏕️", asin: "B07JH35W6K", link: "https://www.amazon.com/dp/B07JH35W6K?tag=camprally-20" },
+        { label: "NORTIV 8 Women's Waterproof Hiking Boots Trekking", category: "", icon: "🏕️", asin: "B093W8K1XS", link: "https://www.amazon.com/dp/B093W8K1XS?tag=camprally-20" },
+        { label: "Merrell Women's Moab 3 Hiking Shoes", category: "", icon: "🏕️", asin: "B098KJQ3SH", link: "https://www.amazon.com/dp/B098KJQ3SH?tag=camprally-20" },
+      ]
+    },
+  ],
   "car-camping-vs-backpacking": [
     {
       type: "product-grid",
