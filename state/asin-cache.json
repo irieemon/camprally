@@ -1053,14 +1053,14 @@
     },
     "B01HO15DGS": {
       "verdict": "LIVE",
-      "title": "FREE SOLDIER Waterproof Camping Tarp Shelter Awning Brown 10×10.5ft",
-      "checkedAt": "2026-10-02T10:37:00.189Z",
+      "title": "FREE SOLDIER Waterproof Camping Tarp Shelter Awning",
+      "checkedAt": "2026-10-05T13:00:20.712Z",
       "price": "$39.99",
       "priceValue": 39.99,
       "rating": 4.7,
-      "ratingsTotal": 4132,
-      "priceCheckedAt": "2026-10-02T10:37:00.189Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 4135,
+      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "priceSource": "canopy-search"
     },
     "B0CZF8JDG4": {
       "verdict": "LIVE",
@@ -1086,14 +1086,14 @@
     },
     "B0748HGDVD": {
       "verdict": "LIVE",
-      "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green 9.5 Feet x 11.3 Feet",
-      "checkedAt": "2026-10-05T10:37:00.174Z",
+      "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green",
+      "checkedAt": "2026-10-05T13:00:20.712Z",
       "price": "$15.88",
       "priceValue": 15.88,
       "rating": 4.6,
       "ratingsTotal": 13789,
-      "priceCheckedAt": "2026-10-05T10:37:00.174Z",
-      "priceSource": "canopy"
+      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "priceSource": "canopy-search"
     },
     "B0BKH8BJ3Q": {
       "verdict": "LIVE",
@@ -4266,6 +4266,50 @@
       "rating": 4.5,
       "ratingsTotal": 4187,
       "priceCheckedAt": "2026-10-04T13:01:19.523Z",
+      "priceSource": "canopy-search"
+    },
+    "B073GQXMM9": {
+      "verdict": "LIVE",
+      "title": "Wise Owl Outfitters Hammock Rain Fly – Waterproof Camping Tarp Cover with Tent Stakes & Carry Bag, Ultralight Shelter for Backpacking & Outdoor Shade",
+      "checkedAt": "2026-10-05T13:00:20.712Z",
+      "price": "$46.72",
+      "priceValue": 46.72,
+      "rating": 4.7,
+      "ratingsTotal": 3933,
+      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "priceSource": "canopy-search"
+    },
+    "B07MZ3CL2N": {
+      "verdict": "LIVE",
+      "title": "Clostnature Heavy Duty Tent Footprint Floor Saver, Camping Tarp",
+      "checkedAt": "2026-10-05T13:00:20.712Z",
+      "price": "$17.99",
+      "priceValue": 17.99,
+      "rating": 4.6,
+      "ratingsTotal": 2790,
+      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "priceSource": "canopy-search"
+    },
+    "B0DX22WPZF": {
+      "verdict": "LIVE",
+      "title": "Tarp 12x16 Feet, 8 Mil Large tarps Heavy Duty Waterproof, Black",
+      "checkedAt": "2026-10-05T13:00:20.712Z",
+      "price": "$27.77",
+      "priceValue": 27.77,
+      "rating": 4.6,
+      "ratingsTotal": 369,
+      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "priceSource": "canopy-search"
+    },
+    "B09YR13839": {
+      "verdict": "LIVE",
+      "title": "GUARD SHIELD Heavy Duty Tarp 10x10 Feet Green Multi Purpose Thick Waterproof Poly Tarp Cover 10mil",
+      "checkedAt": "2026-10-05T13:00:20.712Z",
+      "price": "$23.99",
+      "priceValue": 23.99,
+      "rating": 4.5,
+      "ratingsTotal": 8284,
+      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
       "priceSource": "canopy-search"
     }
   }

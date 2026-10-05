@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-set-up-a-camping-tarp": [
+    {
+      type: "product-grid",
+      title: "How to Set Up a Camping Tarp Over Your Tent or Kitchen — Three Pitches That Shed Rain — Quick Comparison",
+      items: [
+        { label: "FREE SOLDIER Waterproof Camping Tarp Shelter Awning", category: "", icon: "🏕️", asin: "B01HO15DGS", link: "https://www.amazon.com/dp/B01HO15DGS?tag=camprally-20" },
+        { label: "Wise Owl Outfitters Hammock Rain Fly", category: "", icon: "🏕️", asin: "B073GQXMM9", link: "https://www.amazon.com/dp/B073GQXMM9?tag=camprally-20" },
+        { label: "Amazon Basics Waterproof Multipurpose Camping Tarp", category: "", icon: "🏕️", asin: "B0748HGDVD", link: "https://www.amazon.com/dp/B0748HGDVD?tag=camprally-20" },
+        { label: "Clostnature Heavy Duty Tent Footprint Floor Saver", category: "", icon: "🏕️", asin: "B07MZ3CL2N", link: "https://www.amazon.com/dp/B07MZ3CL2N?tag=camprally-20" },
+        { label: "Tarp 12x16 Feet", category: "", icon: "🏕️", asin: "B0DX22WPZF", link: "https://www.amazon.com/dp/B0DX22WPZF?tag=camprally-20" },
+        { label: "GUARD SHIELD Heavy Duty Tarp 10x10 Feet Green Multi Purpose", category: "", icon: "🏕️", asin: "B09YR13839", link: "https://www.amazon.com/dp/B09YR13839?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-hiking-shoes-under-100": [
     {
       type: "product-grid",
