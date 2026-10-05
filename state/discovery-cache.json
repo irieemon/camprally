@@ -15343,5 +15343,92 @@
         "ratingsTotal": 356
       }
     ]
+  },
+  "camping tarp setup|1|": {
+    "term": "camping tarp setup",
+    "min": 1,
+    "fetchedAt": "2026-10-05T13:00:13.981Z",
+    "results": [
+      {
+        "asin": "B01HO15DGS",
+        "title": "FREE SOLDIER Waterproof Camping Tarp Shelter Awning",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.7,
+        "ratingsTotal": 4135
+      },
+      {
+        "asin": "B073GQXMM9",
+        "title": "Wise Owl Outfitters Hammock Rain Fly – Waterproof Camping Tarp Cover with Tent Stakes & Carry Bag, Ultralight Shelter for Backpacking & Outdoor Shade",
+        "price": "$46.72",
+        "priceValue": 46.72,
+        "rating": 4.7,
+        "ratingsTotal": 3933
+      },
+      {
+        "asin": "B0748HGDVD",
+        "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green",
+        "price": "$15.88",
+        "priceValue": 15.88,
+        "rating": 4.6,
+        "ratingsTotal": 13789
+      },
+      {
+        "asin": "B07MZ3CL2N",
+        "title": "Clostnature Heavy Duty Tent Footprint Floor Saver, Camping Tarp",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.6,
+        "ratingsTotal": 2790
+      },
+      {
+        "asin": "B0DX22WPZF",
+        "title": "Tarp 12x16 Feet, 8 Mil Large tarps Heavy Duty Waterproof, Black",
+        "price": "$27.77",
+        "priceValue": 27.77,
+        "rating": 4.6,
+        "ratingsTotal": 369
+      },
+      {
+        "asin": "B09YR13839",
+        "title": "GUARD SHIELD Heavy Duty Tarp 10x10 Feet Green Multi Purpose Thick Waterproof Poly Tarp Cover 10mil",
+        "price": "$23.99",
+        "priceValue": 23.99,
+        "rating": 4.5,
+        "ratingsTotal": 8284
+      },
+      {
+        "asin": "B0F4DG87NJ",
+        "title": "GEERTOP 17 x 10 ft Camping Tarp, Waterproof Rain Fly",
+        "price": "$64.99",
+        "priceValue": 64.99,
+        "rating": 4.5,
+        "ratingsTotal": 297
+      },
+      {
+        "asin": "B07H8PDSCM",
+        "title": "20' x 50' Waterproof Poly Tarp, 5 Mil, Blue & Silver",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.3,
+        "ratingsTotal": 730
+      },
+      {
+        "asin": "B0D8VJVVFX",
+        "title": "Tent Poles for Tarp, AVOFOREST Camping Tent Tarps Poles Adjustable Camping Accessories 75in Heavy Duty Poles Thicker Tent Pole with a Diameter of 0.63in for Backpacking Hiking Awning",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.3,
+        "ratingsTotal": 447
+      },
+      {
+        "asin": "B08Z7YPMGM",
+        "title": "Forceatt 12x14FT Waterproof Camping Tarp with 2 Poles, Sun Shelter for Car, Tent, Hammock in Camping, Hiking, Backpacking, Garden and Traveling",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 3.9,
+        "ratingsTotal": 301
+      }
+    ]
   }
 }
