@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-tent-footprints-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Tent Footprints — Protecting the Floor Without Trapping Water — Quick Comparison",
+      items: [
+        { label: "CORE Outdoor Tent Footprints", category: "", icon: "🏕️", asin: "B0BM54KJDB", link: "https://www.amazon.com/dp/B0BM54KJDB?tag=camprally-20" },
+        { label: "Amazon Basics Waterproof Multipurpose Camping Tarp", category: "", icon: "🏕️", asin: "B0748HGDVD", link: "https://www.amazon.com/dp/B0748HGDVD?tag=camprally-20" },
+        { label: "Clostnature Heavy Duty Tent Footprint Floor Saver", category: "", icon: "🏕️", asin: "B07MZ3CL2N", link: "https://www.amazon.com/dp/B07MZ3CL2N?tag=camprally-20" },
+        { label: "REDCAMP Ultralight Tent Footprint", category: "", icon: "🏕️", asin: "B07YSHB7F5", link: "https://www.amazon.com/dp/B07YSHB7F5?tag=camprally-20" },
+        { label: "ALPS Mountaineering Tent Footprint", category: "", icon: "🏕️", asin: "B003HLI48Y", link: "https://www.amazon.com/dp/B003HLI48Y?tag=camprally-20" },
+        { label: "OneTigris 2 Person Footprint for Backpacking Tent", category: "", icon: "🏕️", asin: "B0C5QWV2XV", link: "https://www.amazon.com/dp/B0C5QWV2XV?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-set-up-a-camping-tarp": [
     {
       type: "product-grid",

@@ -1087,12 +1087,12 @@
     "B0748HGDVD": {
       "verdict": "LIVE",
       "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green",
-      "checkedAt": "2026-10-05T13:00:20.712Z",
+      "checkedAt": "2026-10-06T13:00:59.691Z",
       "price": "$15.88",
       "priceValue": 15.88,
       "rating": 4.6,
-      "ratingsTotal": 13789,
-      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "ratingsTotal": 13791,
+      "priceCheckedAt": "2026-10-06T13:00:59.691Z",
       "priceSource": "canopy-search"
     },
     "B0BKH8BJ3Q": {
@@ -4282,12 +4282,12 @@
     "B07MZ3CL2N": {
       "verdict": "LIVE",
       "title": "Clostnature Heavy Duty Tent Footprint Floor Saver, Camping Tarp",
-      "checkedAt": "2026-10-05T13:00:20.712Z",
-      "price": "$17.99",
-      "priceValue": 17.99,
+      "checkedAt": "2026-10-06T13:00:59.691Z",
+      "price": "$16.99",
+      "priceValue": 16.99,
       "rating": 4.6,
-      "ratingsTotal": 2790,
-      "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "ratingsTotal": 2793,
+      "priceCheckedAt": "2026-10-06T13:00:59.691Z",
       "priceSource": "canopy-search"
     },
     "B0DX22WPZF": {
@@ -4310,6 +4310,50 @@
       "rating": 4.5,
       "ratingsTotal": 8284,
       "priceCheckedAt": "2026-10-05T13:00:20.712Z",
+      "priceSource": "canopy-search"
+    },
+    "B0BM54KJDB": {
+      "verdict": "LIVE",
+      "title": "CORE Outdoor Tent Footprints | Perfect Tarp Camping Accessories for Easy Camp Setup (6 Person Tents - 11' x 9')",
+      "checkedAt": "2026-10-06T13:00:59.691Z",
+      "price": "$39.99",
+      "priceValue": 39.99,
+      "rating": 4.8,
+      "ratingsTotal": 67,
+      "priceCheckedAt": "2026-10-06T13:00:59.691Z",
+      "priceSource": "canopy-search"
+    },
+    "B07YSHB7F5": {
+      "verdict": "LIVE",
+      "title": "REDCAMP Ultralight Tent Footprint, PU 2000 Waterproof Camping Tent Tarp with Drawstring Carrying Bag for Ground Camping Hiking (55\"x87\" UL Black)",
+      "checkedAt": "2026-10-06T13:00:59.691Z",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "rating": 4.6,
+      "ratingsTotal": 2709,
+      "priceCheckedAt": "2026-10-06T13:00:59.691Z",
+      "priceSource": "canopy-search"
+    },
+    "B003HLI48Y": {
+      "verdict": "LIVE",
+      "title": "ALPS Mountaineering Tent Footprint, Multiple Sizes, 1500mm Waterproofing, Webbing Loop Attachments",
+      "checkedAt": "2026-10-06T13:00:59.691Z",
+      "price": "$25.35",
+      "priceValue": 25.35,
+      "rating": 4.6,
+      "ratingsTotal": 367,
+      "priceCheckedAt": "2026-10-06T13:00:59.691Z",
+      "priceSource": "canopy-search"
+    },
+    "B0C5QWV2XV": {
+      "verdict": "LIVE",
+      "title": "OneTigris 2 Person Footprint for Backpacking Tent, 2000mm Waterproof Rating, 78.7\"x47.24\"",
+      "checkedAt": "2026-10-06T13:00:59.691Z",
+      "price": "$29.98",
+      "priceValue": 29.98,
+      "rating": 4.6,
+      "ratingsTotal": 125,
+      "priceCheckedAt": "2026-10-06T13:00:59.691Z",
       "priceSource": "canopy-search"
     }
   }
