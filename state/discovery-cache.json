@@ -15430,5 +15430,100 @@
         "ratingsTotal": 301
       }
     ]
+  },
+  "tent footprint|1|": {
+    "term": "tent footprint",
+    "min": 1,
+    "fetchedAt": "2026-10-06T13:00:48.884Z",
+    "results": [
+      {
+        "asin": "B0BM54KJDB",
+        "title": "CORE Outdoor Tent Footprints | Perfect Tarp Camping Accessories for Easy Camp Setup (6 Person Tents - 11' x 9')",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.8,
+        "ratingsTotal": 67
+      },
+      {
+        "asin": "B0748HGDVD",
+        "title": "Amazon Basics Waterproof Multipurpose Camping Tarp with Reinforced Corners and Edges, Protective Cover, 9.5 x 11.3 Feet, Dark Green",
+        "price": "$15.88",
+        "priceValue": 15.88,
+        "rating": 4.6,
+        "ratingsTotal": 13791
+      },
+      {
+        "asin": "B07MZ3CL2N",
+        "title": "Clostnature Heavy Duty Tent Footprint Floor Saver, Camping Tarp",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.6,
+        "ratingsTotal": 2793
+      },
+      {
+        "asin": "B07YSHB7F5",
+        "title": "REDCAMP Ultralight Tent Footprint, PU 2000 Waterproof Camping Tent Tarp with Drawstring Carrying Bag for Ground Camping Hiking (55\"x87\" UL Black)",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.6,
+        "ratingsTotal": 2709
+      },
+      {
+        "asin": "B003HLI48Y",
+        "title": "ALPS Mountaineering Tent Footprint, Multiple Sizes, 1500mm Waterproofing, Webbing Loop Attachments",
+        "price": "$25.35",
+        "priceValue": 25.35,
+        "rating": 4.6,
+        "ratingsTotal": 367
+      },
+      {
+        "asin": "B0C5QWV2XV",
+        "title": "OneTigris 2 Person Footprint for Backpacking Tent, 2000mm Waterproof Rating, 78.7\"x47.24\"",
+        "price": "$29.98",
+        "priceValue": 29.98,
+        "rating": 4.6,
+        "ratingsTotal": 125
+      },
+      {
+        "asin": "B08Z4BDC14",
+        "title": "Gazelle Tents™, T4 Tent Footprint, 300D, Waterproof Ground Tarp, 4 Tack Down Stakes, GA101",
+        "price": "$65.93",
+        "priceValue": 65.93,
+        "rating": 4.6,
+        "ratingsTotal": 103
+      },
+      {
+        "asin": "B0FX23V8QB",
+        "title": "Tent Footprint, 87\" x 59\" Waterproof Camping Tarp with Storage Bag",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 69
+      },
+      {
+        "asin": "B0DRW86DF4",
+        "title": "JAICOM Tent Footprint, Waterproof Camping Tarp, 1-6 Person Tent Floor Saver",
+        "price": "$12.79",
+        "priceValue": 12.79,
+        "rating": 4.6,
+        "ratingsTotal": 53
+      },
+      {
+        "asin": "B0CKWZ1T6L",
+        "title": "Frelaxy Tent Footprint, Lightweight Waterproof Camping Tarp for Hiking",
+        "price": "$12.63",
+        "priceValue": 12.63,
+        "rating": 4.5,
+        "ratingsTotal": 398
+      },
+      {
+        "asin": "B0B49LWPYB",
+        "title": "Camping Tarp with Carry Bag for Under Tent(86\" x 57\")",
+        "price": "$13.99",
+        "priceValue": 13.99,
+        "rating": 4.3,
+        "ratingsTotal": 73
+      }
+    ]
   }
 }
