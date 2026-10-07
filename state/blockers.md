@@ -299,3 +299,20 @@ best-camping-coolers-with-wheels
   · note (1/3): Cold actually makes many plastics more brittle, but the claim that plastic hubs crack 'especially in cold' is plausible but the article frames it as if cold is the primary cause, which could mislead a buyer about the more common failure (load/UV/age). Minor.
   · note (1/3): Coleman’s wheeled Chiller line is not offered in 9 qt and 16 qt wheeled sizes; the wheeled Chiller models start at ~28 qt. Listing 9/16 qt as wheeled options is inaccurate.
 
+
+## 2026-10-07T13:00:00.118Z — content-review
+
+Content review rejected best-dry-bags-camping (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-dry-bags-camping-2026-10-07T13-00-00-118Z.json
+
+
+best-dry-bags-camping
+  ✗ [model 3/3] Contradicts the article's own framing that IP ratings matter; a bag without a rating has not 'earned' the waterproof claim, yet the sentence says it still survives.
+      "If a bag's page doesn't print one, the bag has not earned one, and it survives."
+  · note (1/3): Word repeated three times in succession, appearing as a typo or editorial error.
+  · note (2/3): 'Sierra off road' is nonsensical in context and contradicts the product brand (Sea to Summit, an Australian company).
+  · note (1/3): IP ingress-protection ratings are not a standard specification for dry bags and are not routinely assigned to the listed camping dry bags. Presenting an IP rating as the definitive waterproof metric for these products is plainly false and misleading.
+  · note (1/3): Typo/misnaming: Sea to Summit does not have a 'SIZE line'; the intended reference is the Ultra-SIL line discussed earlier.
+  · note (1/3): The phrase "the Sierra off road" is nonsensical and appears to be a typo or garbled text.
+  · note (1/3): Sea to Summit does not have a product line called 'SIZE' – this is an erroneous reference.
+

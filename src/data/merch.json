@@ -3,6 +3,26 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "misty-canoe-october",
+      "name": "Misty Canoe October",
+      "subtitle": "one last paddle before the lake freezes",
+      "image": "/images/merch/misty-canoe-october.jpg",
+      "imageKey": "6ac52cd4f7cf5ba8f0d1b97e::2026-10-06T17:16:50.128Z::Natural|Sand|Light Blue",
+      "fromCents": 5399,
+      "from": "$53.99",
+      "publishedAt": "2026-10-06T17:17:09.994Z",
+      "products": [
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/32797016",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        }
+      ]
+    },
+    {
       "slug": "aspen-valley-gold",
       "name": "Aspen Valley Gold",
       "subtitle": "when the whole valley turns gold",
