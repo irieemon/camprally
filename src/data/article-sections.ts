@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-dry-bags-camping": [
+    {
+      type: "product-grid",
+      title: "Best Dry Bags for Camping — Keeping the Sleeping Bag Dry When Everything Else Isn't — Quick Comparison",
+      items: [
+        { label: "babygoal Wet Dry Bags 3 Pack", category: "", icon: "🏕️", asin: "B07H9RBBNK", link: "https://www.amazon.com/dp/B07H9RBBNK?tag=camprally-20" },
+        { label: "YETI Sidekick Dry 3L Gear Case", category: "", icon: "🏕️", asin: "B0D9QX9F67", link: "https://www.amazon.com/dp/B0D9QX9F67?tag=camprally-20" },
+        { label: "Osprey Ultralight Waterproof Dry Sack", category: "", icon: "🏕️", asin: "B0BKQGM42N", link: "https://www.amazon.com/dp/B0BKQGM42N?tag=camprally-20" },
+        { label: "RelaxScene Wet Dry Bags Water Resistant", category: "", icon: "🏕️", asin: "B0F5QKW2KM", link: "https://www.amazon.com/dp/B0F5QKW2KM?tag=camprally-20" },
+        { label: "Sea to Summit Ultra-SIL Dry Bag Set", category: "", icon: "🏕️", asin: "B0BZJPDBKX", link: "https://www.amazon.com/dp/B0BZJPDBKX?tag=camprally-20" },
+        { label: "MARCHWAY Floating Waterproof Dry Bag Backpack", category: "", icon: "🏕️", asin: "B01MZA0ZQ8", link: "https://www.amazon.com/dp/B01MZA0ZQ8?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-tent-footprints-budget": [
     {
       type: "product-grid",
