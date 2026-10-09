@@ -15828,5 +15828,156 @@
         "ratingsTotal": 98
       }
     ]
+  },
+  "tent stakes|1|": {
+    "term": "tent stakes",
+    "min": 1,
+    "fetchedAt": "2026-10-09T13:07:36.004Z",
+    "results": [
+      {
+        "asin": "B07PQB74J4",
+        "title": "Eurmax USA 10-Pack Secure Protection Galvanized Tent Stakes,Rust-Proof Steel Canopy Anchors for High Winds,Heavy Duty Commercial Ground Pegs for Camping,Pop Up Tents&Gazebos - Includes 4x10ft Ropes",
+        "price": "$12.91",
+        "priceValue": 12.91,
+        "rating": 4.8,
+        "ratingsTotal": 12517
+      },
+      {
+        "asin": "B07M9F27Q5",
+        "title": "8 Pack Tent Stakes Heavy Duty 12 inch Steel Tent Pegs for Camping Unbreakable and Inflexible",
+        "price": "$15.92",
+        "priceValue": 15.92,
+        "rating": 4.8,
+        "ratingsTotal": 3232
+      },
+      {
+        "asin": "B006ZC5KLG",
+        "title": "MSR Groundhog Tent Stake Kit",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.8,
+        "ratingsTotal": 2540
+      },
+      {
+        "asin": "B0CWLRQKX9",
+        "title": "Besitu 12 Inch Rebar Stakes J Hook Ground Stakes 16-Pack Heavy Duty Galvanized Chain Link Fence Stakes Metal Tent Stakes for Outdoor Lawn Decorations Inflatables Canopy Swing Set",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.8,
+        "ratingsTotal": 1716
+      },
+      {
+        "asin": "B07T1ZWB8L",
+        "title": "Metal Tent Stakes Heavy Duty 9 Inch, 25 Pcs Anti-Rust Tarp Stakes",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.7,
+        "ratingsTotal": 2268
+      },
+      {
+        "asin": "B07JJSXGV1",
+        "title": "AAGUT Metal Tent Stakes Heavy Duty 9 Inch, Anti-Rust Yard Pegs for Camping",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.7,
+        "ratingsTotal": 2121
+      },
+      {
+        "asin": "B0C9T339WK",
+        "title": "Cheardia 20 Pack Tent Stakes Heavy Duty, 9.75 Inch Yard Stakes Non-Rust Metal Tent Pegs Ground Stakes Tent Spikes for Camping Patio, Garden, Canopies, Grassland, Outdoor, Orange",
+        "price": "$15.98",
+        "priceValue": 15.98,
+        "rating": 4.7,
+        "ratingsTotal": 1565
+      },
+      {
+        "asin": "B07FKK298B",
+        "title": "24pcs 9 inches Plastic Tent Pegs Durable Spike Hook Awning Camping Caravan Pegs Accessory,Plastic Tent Stakes Suitable for Outdoor Lawn, Beach,Garden Decoration and Fixation",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.7,
+        "ratingsTotal": 823
+      },
+      {
+        "asin": "B09MDZHDJZ",
+        "title": "MySit Tent Stake 9 Inch 30 Pack Heavy Duty Anti-Rust Ground Stakes",
+        "price": "$20.99",
+        "priceValue": 20.99,
+        "rating": 4.7,
+        "ratingsTotal": 605
+      },
+      {
+        "asin": "B07BNHDN2X",
+        "title": "Tent Pegs - Aluminium Tent Stakes Pegs with Hook - 7’’ Hexagon Rod Stakes Nail Spike Garden Stakes Camping Pegs for Pitching Camping Tent, Canopies",
+        "price": "$5.99",
+        "priceValue": 5.99,
+        "rating": 4.6,
+        "ratingsTotal": 5987
+      },
+      {
+        "asin": "B0CLV6H7YN",
+        "title": "12 Pack Tent Stakes Heavy Duty Camping Stakes,AVOFOREST 7.1inch Non-Rust Metal Tent Pegs with Storage Bag Ground Stakes Tent Spikes Camping,Garden,Hiking Orange (Orange 12pcs, 7.1IN)",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 2560
+      },
+      {
+        "asin": "B0DP8Y6MHF",
+        "title": "FEED GARDEN 7 Inch Tent Stakes 18 Pack Yard Inflatable Stakes for Outdoor Decorations Metal Pegs Heavy Duty Garden Hooks Camping Tent Spikes for Canopies, Tarp and Outdoor Christmas Decorations",
+        "price": "$7.49",
+        "priceValue": 7.49,
+        "rating": 4.6,
+        "ratingsTotal": 880
+      },
+      {
+        "asin": "B0BVQZK1SP",
+        "title": "HORUSDY 20 Pack 20CM / 8-Inch Heavy Duty Tent Stakes Awning Pegs Camping Stakes with 4 x 13ft Rope & 1 Stopper T Pull Hook",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.6,
+        "ratingsTotal": 612
+      },
+      {
+        "asin": "B0GKB47Z5V",
+        "title": "KLASIT Tent Stakes Heavy Duty-20Pack7.1In Ground Stakes",
+        "price": "$4.39",
+        "priceValue": 4.39,
+        "rating": 4.6,
+        "ratingsTotal": 106
+      },
+      {
+        "asin": "B0CN9CS51X",
+        "title": "APACALI 40 PCS Tent Stakes Heavy Duty, 10 Inch Metal Tent Pegs Ground Stakes for Camping Tents, Tarps and Canopies",
+        "price": "$27.99",
+        "priceValue": 27.99,
+        "rating": 4.5,
+        "ratingsTotal": 128
+      },
+      {
+        "asin": "B0GCK4VH5R",
+        "title": "FEED GARDEN Heavy Duty Tent Stakes 7 Inch, 10 Pack Galvanized Steel Camping Pegs, Ground Anchors Rust Resistant Metal Stakes for Tents, Canopy and Tarp, Inflatable and Outdoor Decorations",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.4,
+        "ratingsTotal": 419
+      },
+      {
+        "asin": "B0CSBDB9FW",
+        "title": "12 Pack Tent Stakes, 7\" Ultralight Aluminum Ground Peg with Reflective Rope",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.4,
+        "ratingsTotal": 296
+      },
+      {
+        "asin": "B09QM2C5DV",
+        "title": "VVOKGO 9 Inches Tent Stakes Heavy Duty Metal Ground Stakes for Camping",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.4,
+        "ratingsTotal": 246
+      }
+    ]
   }
 }
