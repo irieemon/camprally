@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-tent-stakes-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Tent Stakes — The Cheap Upgrade That Keeps the Tent Standing — Quick Comparison",
+      items: [
+        { label: "Eurmax USA 10-Pack Secure Protection Galvanized Tent Stakes", category: "", icon: "🏕️", asin: "B07PQB74J4", link: "https://www.amazon.com/dp/B07PQB74J4?tag=camprally-20" },
+        { label: "8 Pack Tent Stakes Heavy Duty 12 inch Steel Tent Pegs", category: "", icon: "🏕️", asin: "B07M9F27Q5", link: "https://www.amazon.com/dp/B07M9F27Q5?tag=camprally-20" },
+        { label: "MSR Groundhog Tent Stake Kit", category: "", icon: "🏕️", asin: "B006ZC5KLG", link: "https://www.amazon.com/dp/B006ZC5KLG?tag=camprally-20" },
+        { label: "Besitu 12 Inch Rebar Stakes J Hook Ground Stakes 16-Pack", category: "", icon: "🏕️", asin: "B0CWLRQKX9", link: "https://www.amazon.com/dp/B0CWLRQKX9?tag=camprally-20" },
+        { label: "Metal Tent Stakes Heavy Duty 9 Inch", category: "", icon: "🏕️", asin: "B07T1ZWB8L", link: "https://www.amazon.com/dp/B07T1ZWB8L?tag=camprally-20" },
+        { label: "AAGUT Metal Tent Stakes Heavy Duty 9 Inch", category: "", icon: "🏕️", asin: "B07JJSXGV1", link: "https://www.amazon.com/dp/B07JJSXGV1?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-dry-bags-camping": [
     {
       type: "product-grid",
