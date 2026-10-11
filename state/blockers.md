@@ -316,3 +316,16 @@ best-dry-bags-camping
   · note (1/3): The phrase "the Sierra off road" is nonsensical and appears to be a typo or garbled text.
   · note (1/3): Sea to Summit does not have a product line called 'SIZE' – this is an erroneous reference.
 
+
+## 2026-10-11T13:00:00.125Z — content-review
+
+Content review rejected best-budget-puffy-jackets-camping (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-budget-puffy-jackets-camping-2026-10-11T13-00-00-125Z.json
+
+
+best-budget-puffy-jackets-camping
+  ✗ [model 2/3] EN 13537 comfort rating is for a resting person and the limit rating is for a person with light activity; the article reverses the definitions. Presenting comfort as for active use and limit as survival can mislead campers about cold exposure risk.
+      "Comfort ratings indicate where a jacket keeps an active person warm, while lower limit ratings represent survival boundaries."
+  · note (1/3): Washed duck canvas is cotton and is flammable and can burn. It does not offer superior spark resistance for campfire work and can be a fire hazard, so recommending it for work around fire is unsafe.
+  · note (1/3): Cotton duck canvas can ignite and burn from campfire sparks; it is not spark-proof or safer than synthetic shells near fire, making the claim misleading and potentially dangerous.
+
