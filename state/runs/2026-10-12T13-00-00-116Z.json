@@ -1,0 +1,13 @@
+{
+  "startedAt": "2026-10-12T13:00:00.116Z",
+  "finishedAt": "2026-10-12T13:01:05.901Z",
+  "outcome": "deferred",
+  "priceClaims": "ok",
+  "runsSincePublish": 2,
+  "pull": {
+    "status": "up-to-date"
+  },
+  "reason": "model-overloaded",
+  "slug": "best-budget-puffy-jackets-camping",
+  "message": "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
+}
