@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-budget-puffy-jackets-camping": [
+    {
+      type: "product-grid",
+      title: "Best Budget Puffy Jackets for Camping — Warm at Camp Without Paying for a Summit — Quick Comparison",
+      items: [
+        { label: "Yufawow Men Puffer Jacket Insulated Coat Thick Warm for Cold", category: "", icon: "🏕️", asin: "B0H6KCFHVS", link: "https://www.amazon.com/dp/B0H6KCFHVS?tag=camprally-20" },
+        { label: "Carhartt Men's Washed Duck Mock-Neck Vest", category: "", icon: "🏕️", asin: "B083Z162Y6", link: "https://www.amazon.com/dp/B083Z162Y6?tag=camprally-20" },
+        { label: "wantdo Boys Puffy Winter Coats Fleece-Lined Snow Jackets", category: "", icon: "🏕️", asin: "B07RPXFBMT", link: "https://www.amazon.com/dp/B07RPXFBMT?tag=camprally-20" },
+        { label: "Amazon Essentials Men's Lightweight Water-Resistant Packable", category: "", icon: "🏕️", asin: "B07BN72SZ5", link: "https://www.amazon.com/dp/B07BN72SZ5?tag=camprally-20" },
+        { label: "Amazon Essentials Boys and Toddlers' Lightweight", category: "", icon: "🏕️", asin: "B0862LJ1KD", link: "https://www.amazon.com/dp/B0862LJ1KD?tag=camprally-20" },
+        { label: "Amazon Essentials Girls and Toddlers' Lightweight", category: "", icon: "🏕️", asin: "B07Q394Z77", link: "https://www.amazon.com/dp/B07Q394Z77?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-tent-stakes-budget": [
     {
       type: "product-grid",
