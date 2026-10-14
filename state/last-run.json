@@ -1,23 +1,13 @@
 {
-  "startedAt": "2026-10-13T13:00:00.119Z",
-  "finishedAt": "2026-10-13T13:06:24.369Z",
-  "outcome": "published",
+  "startedAt": "2026-10-14T13:00:00.115Z",
+  "finishedAt": "2026-10-14T13:11:07.838Z",
+  "outcome": "deferred",
   "priceClaims": "ok",
+  "runsSincePublish": 1,
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "best-budget-puffy-jackets-camping",
-  "commit": "4c7ffd5",
-  "pushed": true,
-  "deployVerified": true,
-  "deploy": "not live yet (serving 418d8c5, expected 4c7ffd5) — 600s left\nnot live yet (serving 418d8c5, expected 4c7ffd5) — 584s left\ndeploy verified after 3 attempt(s): serving 4c7ffd5 · home HTTP 200",
-  "indexNow": {
-    "ok": true,
-    "status": 200,
-    "submitted": 3
-  },
-  "pinned": {
-    "skipped": "no hero image — page uses the site default"
-  },
-  "remaining": 17
+  "reason": "model-overloaded",
+  "slug": "best-hand-warmers-camping",
+  "message": "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
 }

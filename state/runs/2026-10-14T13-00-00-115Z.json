@@ -1,0 +1,13 @@
+{
+  "startedAt": "2026-10-14T13:00:00.115Z",
+  "finishedAt": "2026-10-14T13:11:07.838Z",
+  "outcome": "deferred",
+  "priceClaims": "ok",
+  "runsSincePublish": 1,
+  "pull": {
+    "status": "up-to-date"
+  },
+  "reason": "model-overloaded",
+  "slug": "best-hand-warmers-camping",
+  "message": "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
+}
