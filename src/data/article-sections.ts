@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-hand-warmers-camping": [
+    {
+      type: "product-grid",
+      title: "Best Hand Warmers for Camping — Rechargeable vs Disposable — Quick Comparison",
+      items: [
+        { label: "HotHands Hand Warmers Bulk Pack", category: "", icon: "🏕️", asin: "B0007ZF4OA", link: "https://www.amazon.com/dp/B0007ZF4OA?tag=camprally-20" },
+        { label: "HotHands Super Warmers Bulk Pack", category: "", icon: "🏕️", asin: "B0007ZF4Q8", link: "https://www.amazon.com/dp/B0007ZF4Q8?tag=camprally-20" },
+        { label: "Karecel Rechargeable Hand Warmers 2 Pack with Thermal", category: "", icon: "🏕️", asin: "B0H94YQ1BZ", link: "https://www.amazon.com/dp/B0H94YQ1BZ?tag=camprally-20" },
+        { label: "Rechargeable Hand Warmers", category: "", icon: "🏕️", asin: "B0H6J8V1RQ", link: "https://www.amazon.com/dp/B0H6J8V1RQ?tag=camprally-20" },
+        { label: "POMPONGO Hand Warmers", category: "", icon: "🏕️", asin: "B0CGHP95LB", link: "https://www.amazon.com/dp/B0CGHP95LB?tag=camprally-20" },
+        { label: "Hand Warmers Rechargeable", category: "", icon: "🏕️", asin: "B0CG8L7Y3S", link: "https://www.amazon.com/dp/B0CG8L7Y3S?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-budget-puffy-jackets-camping": [
     {
       type: "product-grid",
