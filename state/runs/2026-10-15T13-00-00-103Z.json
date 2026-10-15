@@ -1,0 +1,23 @@
+{
+  "startedAt": "2026-10-15T13:00:00.103Z",
+  "finishedAt": "2026-10-15T13:04:53.746Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-hand-warmers-camping",
+  "commit": "a09f6c2",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving 6a80093, expected a09f6c2) — 600s left\nnot live yet (serving 6a80093, expected a09f6c2) — 584s left\ndeploy verified after 3 attempt(s): serving a09f6c2 · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "skipped": "no hero image — page uses the site default"
+  },
+  "remaining": 16
+}
