@@ -548,12 +548,12 @@
     "B0DV6NTJBK": {
       "verdict": "LIVE",
       "title": "Adventure Medical Kits Ultralight/Watertight Medical Kit .7, (3 Person) Up to 3 people, up to 3 days",
-      "checkedAt": "2026-10-09T10:37:00.207Z",
+      "checkedAt": "2026-10-16T13:00:00.513Z",
       "price": "$44.95",
       "priceValue": 44.95,
       "rating": 4.7,
       "ratingsTotal": 763,
-      "priceCheckedAt": "2026-10-09T10:37:00.207Z",
+      "priceCheckedAt": "2026-10-16T13:00:00.513Z",
       "priceSource": "canopy"
     },
     "B0BJV7J24Q": {
@@ -603,23 +603,23 @@
     "B09WK86L84": {
       "verdict": "LIVE",
       "title": "ATEngeus 20000mAh Misting Fan with Clip, 8'' Portable Clip on Fan Battery Operated, 3 Speeds, 3 Mist Modes, Hook, Silicone strap, Max 90H Runtime for Golf Cart, Canopy, Camping Essentials Black",
-      "checkedAt": "2026-10-09T10:37:00.207Z",
+      "checkedAt": "2026-10-16T13:00:00.513Z",
       "price": "$69.99",
       "priceValue": 69.99,
       "rating": 4.5,
-      "ratingsTotal": 732,
-      "priceCheckedAt": "2026-10-09T10:37:00.207Z",
+      "ratingsTotal": 734,
+      "priceCheckedAt": "2026-10-16T13:00:00.513Z",
       "priceSource": "canopy"
     },
     "B0012YMEUW": {
       "verdict": "LIVE",
       "title": "Spenco 2nd Skin Adhesive Knit Blister Protection, Medical, 6 Count , Clear , Large",
-      "checkedAt": "2026-10-09T10:37:00.207Z",
+      "checkedAt": "2026-10-16T13:00:00.513Z",
       "price": "$11.99",
       "priceValue": 11.99,
       "rating": 4.6,
       "ratingsTotal": 521,
-      "priceCheckedAt": "2026-10-09T10:37:00.207Z",
+      "priceCheckedAt": "2026-10-16T13:00:00.513Z",
       "priceSource": "canopy"
     },
     "B082MGRYRR": {
@@ -4618,6 +4618,72 @@
       "rating": 4.7,
       "ratingsTotal": 2047,
       "priceCheckedAt": "2026-10-15T13:01:02.327Z",
+      "priceSource": "canopy-search"
+    },
+    "B077Z3SYJ2": {
+      "verdict": "LIVE",
+      "title": "Cooraby 12 Pairs Kid's Winter Magic Gloves Children Stretchy Warm Magic Gloves Boys or Girls Knit Gloves for 6-12 Years",
+      "checkedAt": "2026-10-16T13:00:56.906Z",
+      "price": "$11.99",
+      "priceValue": 11.99,
+      "rating": 4.7,
+      "ratingsTotal": 6062,
+      "priceCheckedAt": "2026-10-16T13:00:56.906Z",
+      "priceSource": "canopy-search"
+    },
+    "B0C9PVRF6W": {
+      "verdict": "LIVE",
+      "title": "Glooarm 12 Pairs Mens Winter Gloves Knit Warm Adult Stretchy Magic Gloves",
+      "checkedAt": "2026-10-16T13:00:56.906Z",
+      "price": "$16.99",
+      "priceValue": 16.99,
+      "rating": 4.7,
+      "ratingsTotal": 903,
+      "priceCheckedAt": "2026-10-16T13:00:56.906Z",
+      "priceSource": "canopy-search"
+    },
+    "B005I33OVG": {
+      "verdict": "LIVE",
+      "title": "Carhartt Men's Waterproof Insulated Knit Cuff Glove",
+      "checkedAt": "2026-10-16T13:00:56.906Z",
+      "price": "$32.99",
+      "priceValue": 32.99,
+      "rating": 4.6,
+      "ratingsTotal": 37094,
+      "priceCheckedAt": "2026-10-16T13:00:56.906Z",
+      "priceSource": "canopy-search"
+    },
+    "B09Q7V8LD3": {
+      "verdict": "LIVE",
+      "title": "Under Armour Men's Storm Liner",
+      "checkedAt": "2026-10-16T13:00:56.906Z",
+      "price": "$25.00",
+      "priceValue": 25,
+      "rating": 4.6,
+      "ratingsTotal": 4547,
+      "priceCheckedAt": "2026-10-16T13:00:56.906Z",
+      "priceSource": "canopy-search"
+    },
+    "B07J662XCF": {
+      "verdict": "LIVE",
+      "title": "Cooraby 12 Pairs Winter Magic Gloves Stretchy Warm Knit Glove for Men Women",
+      "checkedAt": "2026-10-16T13:00:56.906Z",
+      "price": "$14.95",
+      "priceValue": 14.95,
+      "rating": 4.6,
+      "ratingsTotal": 4237,
+      "priceCheckedAt": "2026-10-16T13:00:56.906Z",
+      "priceSource": "canopy-search"
+    },
+    "B005I33J6G": {
+      "verdict": "LIVE",
+      "title": "Carhartt Men's Vintage Cold Snap Glove",
+      "checkedAt": "2026-10-16T13:00:56.906Z",
+      "price": "$47.99",
+      "priceValue": 47.99,
+      "rating": 4.6,
+      "ratingsTotal": 3478,
+      "priceCheckedAt": "2026-10-16T13:00:56.906Z",
       "priceSource": "canopy-search"
     }
   }

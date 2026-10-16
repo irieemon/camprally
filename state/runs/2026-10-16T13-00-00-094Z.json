@@ -1,0 +1,13 @@
+{
+  "startedAt": "2026-10-16T13:00:00.094Z",
+  "finishedAt": "2026-10-16T13:01:28.349Z",
+  "outcome": "deferred",
+  "priceClaims": "ok",
+  "runsSincePublish": 1,
+  "pull": {
+    "status": "up-to-date"
+  },
+  "reason": "model-overloaded",
+  "slug": "best-winter-camping-gloves-budget",
+  "message": "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
+}
