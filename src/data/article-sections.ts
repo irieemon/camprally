@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-winter-camping-gloves-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Gloves for Cold-Weather Camping — Dexterity vs Warmth — Quick Comparison",
+      items: [
+        { label: "Cooraby 12 Pairs Kid's Winter Magic Gloves Children Stretchy", category: "", icon: "🏕️", asin: "B077Z3SYJ2", link: "https://www.amazon.com/dp/B077Z3SYJ2?tag=camprally-20" },
+        { label: "Glooarm 12 Pairs Mens Winter Gloves Knit Warm Adult Stretchy", category: "", icon: "🏕️", asin: "B0C9PVRF6W", link: "https://www.amazon.com/dp/B0C9PVRF6W?tag=camprally-20" },
+        { label: "Carhartt Men's Waterproof Insulated Knit Cuff Glove", category: "", icon: "🏕️", asin: "B005I33OVG", link: "https://www.amazon.com/dp/B005I33OVG?tag=camprally-20" },
+        { label: "Under Armour Men's Storm Liner", category: "", icon: "🏕️", asin: "B09Q7V8LD3", link: "https://www.amazon.com/dp/B09Q7V8LD3?tag=camprally-20" },
+        { label: "Cooraby 12 Pairs Winter Magic Gloves Stretchy Warm Knit", category: "", icon: "🏕️", asin: "B07J662XCF", link: "https://www.amazon.com/dp/B07J662XCF?tag=camprally-20" },
+        { label: "Carhartt Men's Vintage Cold Snap Glove", category: "", icon: "🏕️", asin: "B005I33J6G", link: "https://www.amazon.com/dp/B005I33J6G?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-hand-warmers-camping": [
     {
       type: "product-grid",
