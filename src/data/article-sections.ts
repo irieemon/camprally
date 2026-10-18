@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-kids-sleeping-bags-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Kids' Sleeping Bags — Warm Enough, Sized Right — Quick Comparison",
+      items: [
+        { label: "Coleman Heritage Big & Tall 10°F Flannel Sleeping Bag", category: "", icon: "🏕️", asin: "B004J2FB5Y", link: "https://www.amazon.com/dp/B004J2FB5Y?tag=camprally-20" },
+        { label: "Jay Franco Kids Slumber Bag and Pillow", category: "", icon: "🏕️", asin: "B0FFTK93BL", link: "https://www.amazon.com/dp/B0FFTK93BL?tag=camprally-20" },
+        { label: "Coleman Kids 45°F Sleeping Bag", category: "", icon: "🏕️", asin: "B0CVSGRFW8", link: "https://www.amazon.com/dp/B0CVSGRFW8?tag=camprally-20" },
+        { label: "Wake In Cloud", category: "", icon: "🏕️", asin: "B0CPD7QGZD", link: "https://www.amazon.com/dp/B0CPD7QGZD?tag=camprally-20" },
+        { label: "oaskys Camping Sleeping Bag", category: "", icon: "🏕️", asin: "B082FD6DLV", link: "https://www.amazon.com/dp/B082FD6DLV?tag=camprally-20" },
+        { label: "MalloMe Sleeping Bags for Adults Cold Weather & Warm", category: "", icon: "🏕️", asin: "B077XQDZW4", link: "https://www.amazon.com/dp/B077XQDZW4?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-winter-camping-gloves-budget": [
     {
       type: "product-grid",
