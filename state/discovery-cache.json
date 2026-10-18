@@ -16920,5 +16920,132 @@
         "ratingsTotal": 303
       }
     ]
+  },
+  "kids sleeping bag|1|": {
+    "term": "kids sleeping bag",
+    "min": 1,
+    "fetchedAt": "2026-10-18T13:05:29.685Z",
+    "results": [
+      {
+        "asin": "B004J2FB5Y",
+        "title": "Coleman Heritage Big & Tall 10°F Flannel Sleeping Bag, XL Sleeping Bag Fits Adults up to 6ft 7in Tall, Machine Washable, Great for Camping, Hunting, Guests, & More",
+        "price": "$101.99",
+        "priceValue": 101.99,
+        "rating": 4.7,
+        "ratingsTotal": 3847
+      },
+      {
+        "asin": "B0FFTK93BL",
+        "title": "Jay Franco Kids Slumber Bag and Pillow - 54 x 27 Inch Comfy Indoor Sleeping Bag for School and Sleepovers, 2 Piece Set, Blue - Monster Jam",
+        "price": "$32.96",
+        "priceValue": 32.96,
+        "rating": 4.7,
+        "ratingsTotal": 574
+      },
+      {
+        "asin": "B0CVSGRFW8",
+        "title": "Coleman Kids 45°F Sleeping Bag, Lightweight Youth Camping Sleep Sack",
+        "price": "$48.49",
+        "priceValue": 48.49,
+        "rating": 4.7,
+        "ratingsTotal": 55
+      },
+      {
+        "asin": "B0CPD7QGZD",
+        "title": "Wake In Cloud - Kids Sleeping Bag for Boys Toddlers, Camping in Warm Cold Weather, Backpacking Lightweight Compact Outdoor Liner for 3 Seasons, Space Stars Rockets Galaxy",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.6,
+        "ratingsTotal": 56
+      },
+      {
+        "asin": "B082FD6DLV",
+        "title": "oaskys Camping Sleeping Bag - 3 Season Warm & Cool Weather - Summer Spring Fall Lightweight Waterproof for Adults Kids - Camping Essentials Gear Accessories Hiking Sleep Must Haves",
+        "price": "$25.99",
+        "priceValue": 25.99,
+        "rating": 4.5,
+        "ratingsTotal": 24093
+      },
+      {
+        "asin": "B077XQDZW4",
+        "title": "MalloMe Sleeping Bags for Adults Cold Weather & Warm - Backpacking Camping Sleeping Bag for Kids 10-12, Girls, Boys - Lightweight Compact Camping Essentials Gear Accessories Hiking Sleep Must Haves",
+        "price": "$23.39",
+        "priceValue": 23.39,
+        "rating": 4.5,
+        "ratingsTotal": 17534
+      },
+      {
+        "asin": "B0DQNPR4VD",
+        "title": "Sportneer Sleeping Bag, 3 Seasons Warm Cold Weather Sleeping Bags for Adults Kids Boys Girls with Compression Sack- Lightweight Camping Essentials Gear Accessories, Backpacking, Hiking",
+        "price": "$21.59",
+        "priceValue": 21.59,
+        "rating": 4.5,
+        "ratingsTotal": 3848
+      },
+      {
+        "asin": "B0CPS1ZMSF",
+        "title": "Lasoftan Toddler Nap Mat with Pillow and Blanket, Extra Large Rolled Napping Mats,Slumber Bags for Boys Girls,Kids Sleeping Bag for Daycare, Preschool Travel Camping",
+        "price": "$29.98",
+        "priceValue": 29.98,
+        "rating": 4.5,
+        "ratingsTotal": 1656
+      },
+      {
+        "asin": "B0CL3B2DX3",
+        "title": "Sleeping Bag - 3 Seasons for Adults Boys Girls Camping Hiking - Warm Cold Weather Lightweight Portable with Compression Bag for Backpacking in Spring, Summer, Fall and Winter",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.5,
+        "ratingsTotal": 1185
+      },
+      {
+        "asin": "B09MMX49VJ",
+        "title": "Camping Sleeping Bag for Adults Kids Teens,Waterproof Lightweight",
+        "price": "$41.99",
+        "priceValue": 41.99,
+        "rating": 4.5,
+        "ratingsTotal": 1111
+      },
+      {
+        "asin": "B007JTLQHQ",
+        "title": "Teton Junior, 20 Degree and 0 Degree Sleeping Bags. Finally, Sleeping Bag for Boys, Girls, All Kids, Warm and Comfortable, for All Camping Weather and Built to Last",
+        "price": "$52.99",
+        "priceValue": 52.99,
+        "rating": 4.5,
+        "ratingsTotal": 971
+      },
+      {
+        "asin": "B0C8J9LCL9",
+        "title": "KingCamp 45°F Kids Sleeping Bag, 100% Flannel Sleeping Bag for 10-12 Child",
+        "price": "$42.99",
+        "priceValue": 42.99,
+        "rating": 4.5,
+        "ratingsTotal": 327
+      },
+      {
+        "asin": "B0C6GCC2GB",
+        "title": "Axolotl Unicorn Sleeping Bag for Kids Boys Girls–Lightweight Warm Cold Weather Sleeping Bags,Waterproof Portable Sleeping Bag with Compression Sack for Camping Backpacking Outdoor Indoor",
+        "price": "$39.19",
+        "priceValue": 39.19,
+        "rating": 4.4,
+        "ratingsTotal": 295
+      },
+      {
+        "asin": "B0GMKVSMTK",
+        "title": "Sleeping Bags for Adults Cold Weather & Warm - Backpacking Camping Sleeping Bag for Kids 10-12, Girls, Boys - Lightweight Compact Camping Essentials Gear Accessories Hiking Sleep Must Haves",
+        "price": "$23.99",
+        "priceValue": 23.99,
+        "rating": 4.4,
+        "ratingsTotal": 173
+      },
+      {
+        "asin": "B0GVT1R3XL",
+        "title": "Camping Sleeping Bags for Adults Kids Teens,Backpacking Lightweight",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.3,
+        "ratingsTotal": 60
+      }
+    ]
   }
 }
