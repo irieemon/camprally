@@ -17047,5 +17047,373 @@
         "ratingsTotal": 60
       }
     ]
+  },
+  "camping air mattress|1|100": {
+    "term": "camping air mattress",
+    "min": 1,
+    "max": 100,
+    "fetchedAt": "2026-10-19T13:06:20.811Z",
+    "results": [
+      {
+        "asin": "B0HFZMCMT6",
+        "title": "Dr. air Queen Air Mattress with Built-in Pump, Blow up Bed,18\" Raised 800lb",
+        "price": "$69.98",
+        "priceValue": 69.98,
+        "rating": 4.7,
+        "ratingsTotal": 235
+      },
+      {
+        "asin": "B0FXX7VX7N",
+        "title": "OGERY Self-Inflating Sleeping Pad, 3\" Memory Foam Camping Mattress",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.6,
+        "ratingsTotal": 229
+      },
+      {
+        "asin": "B0FRY9DFK1",
+        "title": "Air Mattress Queen with Built-in Pump, 18\" Raised Blow Up Air Bed",
+        "price": "$66.98",
+        "priceValue": 66.98,
+        "rating": 4.5,
+        "ratingsTotal": 370
+      },
+      {
+        "asin": "B0BZ87ZQ7W",
+        "title": "CYMULA Memory Foam Camping Mattress Pad, Sleeping Mat, Portable Roll Up Mattress for Adults, Camping Bed Pads for Sleepover, Car Bed with Travel Bag",
+        "price": "$54.98",
+        "priceValue": 54.98,
+        "rating": 4.4,
+        "ratingsTotal": 2503
+      },
+      {
+        "asin": "B0BFFZG5N9",
+        "title": "Intex 64107E Dura-Beam Standard Prestige Air Mattress: Fiber-Tech - Twin Size - 10in Bed Height - 300lb Weight Capacity - Pump Sold Separately",
+        "price": "$19.49",
+        "priceValue": 19.49,
+        "rating": 4.4,
+        "ratingsTotal": 1666
+      },
+      {
+        "asin": "B08JVKVFRJ",
+        "title": "Sierra Designs Queen & Single Camping Air Bed Mattress for Car Camping, Trave, and Camp (Pump Included)",
+        "price": "$79.95",
+        "priceValue": 79.95,
+        "rating": 4.4,
+        "ratingsTotal": 1419
+      },
+      {
+        "asin": "B0HHS2DQMB",
+        "title": "Sleeping Pad for Camping, Built-in Pump with Pillow",
+        "price": "$22.99",
+        "priceValue": 22.99,
+        "rating": 4.4,
+        "ratingsTotal": 1179
+      },
+      {
+        "asin": "B0DSKJCTPX",
+        "title": "Double Camping Sleeping pad with Pillow & Built-in Foot Pump",
+        "price": "$48.99",
+        "priceValue": 48.99,
+        "rating": 4.4,
+        "ratingsTotal": 710
+      },
+      {
+        "asin": "B0G9379BC6",
+        "title": "OGERY Sleeping Pad, Ultralight Inflating Camping Pad with 6\" Extra-Thick",
+        "price": "$28.49",
+        "priceValue": 28.49,
+        "rating": 4.4,
+        "ratingsTotal": 275
+      },
+      {
+        "asin": "B0GD6QZ4QM",
+        "title": "DOO Queen Air Mattress with Built-in Pump, Upgraded Wave Beam Support, Inflatable Blow up Mattress, 3-Min Quick Self-Inflation, Portable Airbed for Guests Home Camping, Colchon Inflable, 700lb Max",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.4,
+        "ratingsTotal": 162
+      },
+      {
+        "asin": "B0869HGSVL",
+        "title": "Intex 64417ED 22in Queen Dura-Beam Comfort Plush High-Rise Inflatable Air Mattress with Built in Pump for Travel and Camping, 600lb Weight Capacity",
+        "price": "$66.10",
+        "priceValue": 66.1,
+        "rating": 4.3,
+        "ratingsTotal": 67642
+      },
+      {
+        "asin": "B0869D64HL",
+        "title": "Intex Dura-Beam Deluxe 18\" Twin Size Air Mattress with Built-in Pump",
+        "price": "$35.71",
+        "priceValue": 35.71,
+        "rating": 4.3,
+        "ratingsTotal": 67642
+      },
+      {
+        "asin": "B0869D5SZN",
+        "title": "Intex Mid-Rise Air Mattress Bed with Built-in Pump, Dura-Beam Deluxe Comfort Plush, Queen - Portable Luxury Travel Airbed for Adults, Camping, Guests",
+        "price": "$55.30",
+        "priceValue": 55.3,
+        "rating": 4.3,
+        "ratingsTotal": 67642
+      },
+      {
+        "asin": "B0869F6XVM",
+        "title": "INTEX Dura-Beam Deluxe Mid-Rise 13\" Full Size Air Mattress w/ Built-in Pump",
+        "price": "$56.40",
+        "priceValue": 56.4,
+        "rating": 4.3,
+        "ratingsTotal": 67642
+      },
+      {
+        "asin": "B0869FJCVG",
+        "title": "Intex Dura-Beam Deluxe 13\" Twin Size Air Mattress with Built-in Pump",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.3,
+        "ratingsTotal": 67642
+      },
+      {
+        "asin": "B0768LQLGH",
+        "title": "Intex 64103E Dura-Beam Standard Single-High Air Mattress: Fiber-Tech - Queen Size - 10in Bed Height - 600lb Weight Capacity - Pump Sold Separately",
+        "price": "$23.44",
+        "priceValue": 23.44,
+        "rating": 4.3,
+        "ratingsTotal": 16463
+      },
+      {
+        "asin": "B0768LRN6T",
+        "title": "Intex 64101E Dura-Beam Standard Single-High Air Mattress: Fiber-Tech - Twin Size - 10in Bed Height - 300lb Weight Capacity - Pump Sold Separately",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.3,
+        "ratingsTotal": 16463
+      },
+      {
+        "asin": "B0869F6JYB",
+        "title": "Intex 64131ED Dura-Beam Plus Deluxe Pillow Rest Air Mattress: Fiber-Tech – Twin Size – Built-in Electric Pump – 16.5in Bed Height – 300lb Weight Capacity",
+        "price": "$43.49",
+        "priceValue": 43.49,
+        "rating": 4.3,
+        "ratingsTotal": 12347
+      },
+      {
+        "asin": "B08H2HDCWV",
+        "title": "INTEX Dura-Beam 18\" Queen Size Air Mattress with Built-In Headboard & Pump",
+        "price": "$89.69",
+        "priceValue": 89.69,
+        "rating": 4.3,
+        "ratingsTotal": 6319
+      },
+      {
+        "asin": "B0GHPVN5DD",
+        "title": "VOSSER Air Mattress Queen with Built in Pump,18'' Raised Blow Up Bed,800lb",
+        "price": "$66.99",
+        "priceValue": 66.99,
+        "rating": 4.3,
+        "ratingsTotal": 5425
+      },
+      {
+        "asin": "B0BVLY5W6K",
+        "title": "OhGeni Air Mattress Queen with Built in Pump, 18\" Raised Blow up Bed, 800lb",
+        "price": "$62.97",
+        "priceValue": 62.97,
+        "rating": 4.3,
+        "ratingsTotal": 5323
+      },
+      {
+        "asin": "B0989JLFGW",
+        "title": "Intex 64757E Dura-Beam Standard Downy Air Mattress: Fiber-Tech - Twin Size - 10in Bed Height - 300lb Weight Capacity - Pump Sold Separately",
+        "price": "$11.45",
+        "priceValue": 11.45,
+        "rating": 4.3,
+        "ratingsTotal": 4100
+      },
+      {
+        "asin": "B0BR3N8J5Q",
+        "title": "MOXILS Sleeping Pad, Ultralight Inflatable Sleeping Pad for Camping, Built-in Pump, Ultimate for Camping, Hiking, Airpad, Carry Bag, Repair Kit, Compact & Lightweight Air Mattress(Blue)",
+        "price": "$23.38",
+        "priceValue": 23.38,
+        "rating": 4.3,
+        "ratingsTotal": 2825
+      },
+      {
+        "asin": "B0DSPNCTFN",
+        "title": "CHERIMOR Queen Air Mattress with Built-in Pump 18in, Upgraded 40 Air-Coil",
+        "price": "$66.49",
+        "priceValue": 66.49,
+        "rating": 4.3,
+        "ratingsTotal": 1749
+      },
+      {
+        "asin": "B0GSPTJ7TT",
+        "title": "16 Inch Queen Air Mattress with Built-in Pump Inflates in 3 Minutes",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.3,
+        "ratingsTotal": 318
+      },
+      {
+        "asin": "B0F3D214Z7",
+        "title": "OGERY 3.15\" Memory Foam Sleeping Pad, Self-Inflating with Electric Pump",
+        "price": "$56.98",
+        "priceValue": 56.98,
+        "rating": 4.3,
+        "ratingsTotal": 228
+      },
+      {
+        "asin": "B0H6LNGVJR",
+        "title": "Queen Air Mattress with Built-in Pump 18in, Anti-Leak PVC Bonding",
+        "price": "$69.98",
+        "priceValue": 69.98,
+        "rating": 4.3,
+        "ratingsTotal": 222
+      },
+      {
+        "asin": "B0869G5RSG",
+        "title": "INTEX 64149ED Dura-Beam Standard Pillow Rest Air Mattress: Fiber-Tech – Queen Size – Built-in Electric Pump – 10in Bed Height – 600lb Weight Capacity",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.2,
+        "ratingsTotal": 16387
+      },
+      {
+        "asin": "B0869FSKTG",
+        "title": "Intex 64147ED Dura-Beam Standard Pillow Rest Air Mattress: Fiber-Tech - Full Size - Built-in Electric Pump - 10in Bed Height - 600lb Weight Capacity",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.2,
+        "ratingsTotal": 16387
+      },
+      {
+        "asin": "B07V49RBLL",
+        "title": "Intex 64779E Dura-Beam Standard Prestige Air Mattress: Fiber-Tech - Queen Size - Hand-Held Battery Pump - 10in Bed Height - 600lb Weight Capacity",
+        "price": "$35.44",
+        "priceValue": 35.44,
+        "rating": 4.2,
+        "ratingsTotal": 9373
+      },
+      {
+        "asin": "B09XDNQWXP",
+        "title": "FUN PAC Camping Sleeping Pad, Ultralight Camping Mat with Pillow, Built-in Foot Pump Inflatable Sleeping Pads Compact for Camping Backpacking Hiking Traveling Tent,Single,Green",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.2,
+        "ratingsTotal": 5975
+      },
+      {
+        "asin": "B0D17B74SZ",
+        "title": "FNARMW Camping Sleeping Pad, Extra Thick 5 Inch Camping Mat with Pillow Built-in Foot Pump Inflatable Sleeping Pads Compact for Camping Backpacking Hiking Traveling Tent（Green）",
+        "price": "$25.18",
+        "priceValue": 25.18,
+        "rating": 4.2,
+        "ratingsTotal": 1697
+      },
+      {
+        "asin": "B0CTHJ8Q1S",
+        "title": "FNARMW Double Sleeping Pad Camping, Self Inflating 6'' Extra-Thick 2 Person Pillow Built-in Foot Pump Waterproof Inflatable Sleeping Mat Backpacking, Tent, Hiking, Portable Camping Pad (Navy Grey)",
+        "price": "$47.68",
+        "priceValue": 47.68,
+        "rating": 4.2,
+        "ratingsTotal": 1311
+      },
+      {
+        "asin": "B0DWX5L4TY",
+        "title": "4in Ultralight Camping Sleeping Pad with Pillow and Foot Pump",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.2,
+        "ratingsTotal": 786
+      },
+      {
+        "asin": "B0DFD3MGVN",
+        "title": "COMMOUDS Queen Air Mattress with 2000mAh Battery Powered Pump, 18\" Raised Inflatable Mattress, Portable Blow up Mattress, Air Bed for Camping, Home and Guest",
+        "price": "$71.99",
+        "priceValue": 71.99,
+        "rating": 4.2,
+        "ratingsTotal": 560
+      },
+      {
+        "asin": "B0F5W14FBT",
+        "title": "Amazon Basics Inflatable Air Mattress with Built-in Pump, Camping Mattress for Travel, Queen Size, 600lb Capacity",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.2,
+        "ratingsTotal": 410
+      },
+      {
+        "asin": "B0GSQJZQXK",
+        "title": "16 inch colchon Portable Queen Air Mattress with Built-in Pump",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.2,
+        "ratingsTotal": 280
+      },
+      {
+        "asin": "B0DHJXX7S9",
+        "title": "Intex 64106E Dura-Beam Prestige Downy Air Mattress: Fiber-Tech - Jr Twin - 10in Bed Height - 300lb Weight Capacity - Pump Sold Separately",
+        "price": "$16.26",
+        "priceValue": 16.26,
+        "rating": 4.2,
+        "ratingsTotal": 229
+      },
+      {
+        "asin": "B0BFFYB8PK",
+        "title": "Intex 64758E Dura-Beam Standard Downy Air Mattress: Fiber-Tech, Full Size, 10in Bed Height, 600lb Weight Capacity, Pump Sold Separately",
+        "price": "$15.19",
+        "priceValue": 15.19,
+        "rating": 4.1,
+        "ratingsTotal": 1965
+      },
+      {
+        "asin": "B0CSM784YP",
+        "title": "Luxchoice Air Mattress Queen with Cordless Pump 9'' Camping Air Mattress",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.1,
+        "ratingsTotal": 736
+      },
+      {
+        "asin": "B0H1QRK7Q2",
+        "title": "Sweetcrispy Weight Capacity 660 lbs Air Bed, Double Height, Non-Slip Bottom Design, Queen Air Mattress - 22\" Inflatable Blow Up Airbed with Built-in High Capacity Pump for Home or Camping",
+        "price": "$44.97",
+        "priceValue": 44.97,
+        "rating": 4.1,
+        "ratingsTotal": 332
+      },
+      {
+        "asin": "B0GMH8CHKS",
+        "title": "NINTYNINE Camping Sleeping Pad, 5.9\" Extra-Thick Reinforced Camping Mat with Built-in Pillow & Foot Pump, Ultralight Compact Inflating Camping Air Mattress for Backpacking Hiking Travel Tent Beach",
+        "price": "$21.97",
+        "priceValue": 21.97,
+        "rating": 4.1,
+        "ratingsTotal": 91
+      },
+      {
+        "asin": "B0CZRDFR73",
+        "title": "Yuzonc Double Sleeping Pad - Self Inflating 4\" Extra-Thick for 2 Person with Pillow Built-in Foot Pump Inflatable Sleeping Mat for Backpacking, Hiking, Traveling, Tent, Portable Camping Mat",
+        "price": "$43.99",
+        "priceValue": 43.99,
+        "rating": 4,
+        "ratingsTotal": 2745
+      },
+      {
+        "asin": "B0DSW5VSX2",
+        "title": "Gear Doctors® Ether 17.5oz Ultralight Camping Sleeping Pad – Backpacking Air Mattress – Camping Mattress Pad – Compact Inflatable Sleeping Mat for Backpacking, Comfortable Outdoor Hiking, Tent, Travel",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4,
+        "ratingsTotal": 984
+      },
+      {
+        "asin": "B0GM41KWH3",
+        "title": "Myxslop Double Sleeping Pad for Camping, 4\" Extra-Thick 2 Person Inflatable Camping Mattress with Built-in Pillow & Foot Pump, Compact Sleeping Mat for Outdoor Tent, Backpacking, Hiking and Car Travel",
+        "price": "$40.99",
+        "priceValue": 40.99,
+        "rating": 3.5,
+        "ratingsTotal": 420
+      }
+    ]
   }
 }
