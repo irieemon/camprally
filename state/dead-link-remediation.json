@@ -182,5 +182,66 @@
     },
     "status": "swapped",
     "deadline": "2026-09-27T13:00:00.271Z"
+  },
+  "B0F8B6J7ML": {
+    "detectedAt": "2026-10-20T13:00:02.113Z",
+    "label": "Consciot CL1 Mini Dual Light Sources LED Lantern",
+    "anchorPrice": 16.14,
+    "anchorSource": "src/data/catalog.json (current)",
+    "aliases": [
+      "Consciot CL1 Mini Dual Light Sources LED Lantern",
+      "Consciot CL1"
+    ],
+    "attempts": 0,
+    "triedCandidates": [],
+    "candidate": {
+      "asin": "B07TM9CQ49",
+      "title": "2 Pack Camping Lanterns Camping Essentials Tent Lights Camping Accessories",
+      "rating": 4.8,
+      "ratingsTotal": 14174,
+      "priceValue": 19.98,
+      "facts": {
+        "asin": "B07TM9CQ49",
+        "title": "2 Pack Camping Lanterns Camping Essentials Tent Lights Camping Accessories",
+        "brand": "EZORKAS LANTERN",
+        "bullets": [
+          "Super Bright & Large Area Brightness. The latest COB bulbs offer ultra-bright lights.360 degree coverage lighting provide high visibility to meet large area brightness. 4 lighting modes.Collapsible COB LED Lantern.Flashlight. Red Warning Light(Strobe & SOS light). LED camping lantern is a vital filed survival tool and camping accessories.",
+          "Rechargeable & Long-lasting. It is a rechargeable camping lantern and also powered by battery. There is a built-in battery , so you can recharge the lantern via USB charging cable. You can also place 3*AA batteries (not included) to use it. By using these two ways of battery supplying, never let you be left in a sudden darkness.",
+          "Durable & Water-resistant. Compact lamp body prevents it being damaged from collision. The rechargeable lantern is water-resistant due to its ABS military material and COB bulb. The Camping lamp can adapt to all kinds of severe hurricane and rainstorm weather. Suitable camping light for your indoor or outdoor activities.",
+          "Novel Design & Lightweight. Collapsible design (by pushing and pulling the handle) can turn on or close the lantern. Metal portable lantern can be used as a flashlight , vertical lift as a lantern and can be hang it on tree or others. 3 Strong magnets on the base can be adsorbed on any metal surface, freeing your hands.",
+          "What You Get. 2 pack lantern, 2 USB charging cable. 24-Month full support. If you encounter any quality or other issues at all, just let us know and it will be properly handled on your want!"
+        ],
+        "itemWeight": "1.5 pounds",
+        "isInStock": true,
+        "fetchedAt": "2026-10-20T13:00:02.113Z",
+        "source": "canopy amazonProduct"
+      }
+    },
+    "perArticle": {
+      "best-camping-lanterns-under-30": {
+        "outcome": "unlinked",
+        "why": "rewrite failed the mechanical check: retry writer unreachable; content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\" [after one writer retry; first draft refused (mechanical): content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\"]",
+        "at": "2026-10-20T13:00:02.113Z",
+        "retry": [
+          {
+            "attempt": 1,
+            "stage": "mechanical",
+            "reasons": [
+              "content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\""
+            ]
+          },
+          {
+            "attempt": 2,
+            "stage": "mechanical",
+            "reasons": [
+              "retry writer unreachable",
+              "content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\""
+            ]
+          }
+        ]
+      }
+    },
+    "status": "unlinked",
+    "deadline": "2026-10-23T13:00:02.113Z"
   }
 }

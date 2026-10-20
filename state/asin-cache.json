@@ -2113,15 +2113,9 @@
       "priceSource": "canopy"
     },
     "B0F8B6J7ML": {
-      "verdict": "LIVE",
+      "verdict": "DEAD",
       "title": "Consciot CL1 Mini Dual Light Sources LED Lantern, Battery Powered Lamp 2 Pack",
-      "checkedAt": "2026-10-06T10:37:00.152Z",
-      "price": "$16.14",
-      "priceValue": 16.14,
-      "rating": 4.8,
-      "ratingsTotal": 371,
-      "priceCheckedAt": "2026-10-06T10:37:00.152Z",
-      "priceSource": "canopy"
+      "checkedAt": "2026-10-20T13:00:00.489Z"
     },
     "B0DBZ9BTM8": {
       "verdict": "LIVE",
@@ -4795,6 +4789,11 @@
       "ratingsTotal": 1419,
       "priceCheckedAt": "2026-10-19T13:06:27.445Z",
       "priceSource": "canopy-search"
+    },
+    "B07TM9CQ49": {
+      "verdict": "LIVE",
+      "title": "2 Pack Camping Lanterns Camping Essentials Tent Lights Camping Accessories",
+      "checkedAt": "2026-10-20T13:00:02.113Z"
     }
   }
 }
