@@ -329,3 +329,9 @@ best-budget-puffy-jackets-camping
   · note (1/3): Washed duck canvas is cotton and is flammable and can burn. It does not offer superior spark resistance for campfire work and can be a fire hazard, so recommending it for work around fire is unsafe.
   · note (1/3): Cotton duck canvas can ignite and burn from campfire sparks; it is not spark-proof or safer than synthetic shells near fire, making the claim misleading and potentially dangerous.
 
+
+## 2026-10-21T13:00:00.120Z — stalled: model-overloaded
+
+3 consecutive runs without publishing (reasons: model-overloaded)
+
+MiniMax was overloaded across three attempts. Transient — the next cycle retries.

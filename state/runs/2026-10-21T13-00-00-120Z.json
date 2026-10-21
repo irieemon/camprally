@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-10-21T13:00:00.120Z",
+  "finishedAt": "2026-10-21T13:01:05.012Z",
+  "outcome": "deferred",
+  "priceClaims": "ok",
+  "runsSincePublish": 3,
+  "pull": {
+    "status": "up-to-date"
+  },
+  "reason": "model-overloaded",
+  "slug": "best-car-camping-air-mattresses-under-100",
+  "message": "MiniMax was overloaded across three attempts. Transient — the next cycle retries.",
+  "stalledSince": "3 consecutive runs without publishing",
+  "stalledReasons": [
+    "model-overloaded"
+  ]
+}

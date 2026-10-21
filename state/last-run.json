@@ -1,50 +1,17 @@
 {
-  "startedAt": "2026-10-20T13:00:00.117Z",
-  "finishedAt": "2026-10-20T13:07:54.962Z",
+  "startedAt": "2026-10-21T13:00:00.120Z",
+  "finishedAt": "2026-10-21T13:01:05.012Z",
   "outcome": "deferred",
   "priceClaims": "ok",
-  "runsSincePublish": 2,
-  "deadLinks": [
-    {
-      "asin": "B0F8B6J7ML",
-      "status": "unlinked",
-      "attempts": 0,
-      "deadline": "2026-10-23T13:00:02.113Z",
-      "replacement": "B07TM9CQ49"
-    }
-  ],
-  "deadLinkEvent": {
-    "reason": "dead-link-unlinked",
-    "asin": "B0F8B6J7ML",
-    "label": "Consciot CL1 Mini Dual Light Sources LED Lantern",
-    "replacement": null,
-    "replacementLabel": null,
-    "swapped": [],
-    "unlinked": [
-      "best-camping-lanterns-under-30"
-    ],
-    "why": "best-camping-lanterns-under-30: rewrite failed the mechanical check: retry writer unreachable; content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\" [after one writer retry; first draft refused (mechanical): content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\"]",
-    "reviews": {},
-    "retries": {
-      "best-camping-lanterns-under-30": {
-        "first": "mechanical",
-        "final": "mechanical",
-        "firstReasons": [
-          "content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\""
-        ],
-        "finalReasons": [
-          "retry writer unreachable",
-          "content#13: heading became several lines — \"### Best Versatile Lantern: 2 Pack Camping Lanterns Camping Essentials Tent Lights This two-pack of collapsible COB LED lanterns offers great versatility around…\""
-        ]
-      }
-    },
-    "commit": "26f7db8",
-    "deployVerified": true
-  },
+  "runsSincePublish": 3,
   "pull": {
     "status": "up-to-date"
   },
   "reason": "model-overloaded",
   "slug": "best-car-camping-air-mattresses-under-100",
-  "message": "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
+  "message": "MiniMax was overloaded across three attempts. Transient — the next cycle retries.",
+  "stalledSince": "3 consecutive runs without publishing",
+  "stalledReasons": [
+    "model-overloaded"
+  ]
 }
