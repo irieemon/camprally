@@ -335,3 +335,9 @@ best-budget-puffy-jackets-camping
 3 consecutive runs without publishing (reasons: model-overloaded)
 
 MiniMax was overloaded across three attempts. Transient — the next cycle retries.
+
+## 2026-10-22T13:00:00.113Z — stalled: model-overloaded
+
+4 consecutive runs without publishing (reasons: model-overloaded)
+
+MiniMax was overloaded across three attempts. Transient — the next cycle retries.
