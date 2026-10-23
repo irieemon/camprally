@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-car-camping-air-mattresses-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Car Camping Air Mattresses Under $100 — And Why They Feel Cold — Quick Comparison",
+      items: [
+        { label: "Dr. air Queen Air Mattress with Built-in Pump", category: "", icon: "🏕️", asin: "B0HFZMCMT6", link: "https://www.amazon.com/dp/B0HFZMCMT6?tag=camprally-20" },
+        { label: "OGERY Self-Inflating Sleeping Pad", category: "", icon: "🏕️", asin: "B0FXX7VX7N", link: "https://www.amazon.com/dp/B0FXX7VX7N?tag=camprally-20" },
+        { label: "Air Mattress Queen with Built-in Pump", category: "", icon: "🏕️", asin: "B0FRY9DFK1", link: "https://www.amazon.com/dp/B0FRY9DFK1?tag=camprally-20" },
+        { label: "CYMULA Memory Foam Camping Mattress Pad", category: "", icon: "🏕️", asin: "B0BZ87ZQ7W", link: "https://www.amazon.com/dp/B0BZ87ZQ7W?tag=camprally-20" },
+        { label: "Intex 64107E Dura-Beam Standard Prestige Air Mattress", category: "", icon: "🏕️", asin: "B0BFFZG5N9", link: "https://www.amazon.com/dp/B0BFFZG5N9?tag=camprally-20" },
+        { label: "Sierra Designs Queen & Single Camping Air Bed Mattress", category: "", icon: "🏕️", asin: "B08JVKVFRJ", link: "https://www.amazon.com/dp/B08JVKVFRJ?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-kids-sleeping-bags-budget": [
     {
       type: "product-grid",
