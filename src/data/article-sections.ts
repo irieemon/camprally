@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-portable-grills-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Portable Grills Under $100 for Camping and Tailgating — Quick Comparison",
+      items: [
+        { label: "Weber® Jumbo Joe Charcoal Grill", category: "", icon: "🏕️", asin: "B0098HR0RC", link: "https://www.amazon.com/dp/B0098HR0RC?tag=camprally-20" },
+        { label: "Weber® Smokey Joe 14-Inch Portable Charcoal Grill", category: "", icon: "🏕️", asin: "B0FQFPY63B", link: "https://www.amazon.com/dp/B0FQFPY63B?tag=camprally-20" },
+        { label: "Gas One GS-3400P Propane or Butane Stove Dual Fuel Stove", category: "", icon: "🏕️", asin: "B01HQRD8EO", link: "https://www.amazon.com/dp/B01HQRD8EO?tag=camprally-20" },
+        { label: "ThermoMaven Bristle-Free BBQ Grill Brush", category: "", icon: "🏕️", asin: "B0FKB8PJLZ", link: "https://www.amazon.com/dp/B0FKB8PJLZ?tag=camprally-20" },
+        { label: "14 x 9 inches Small Portable Charcoal BBQ Grill", category: "", icon: "🏕️", asin: "B0D7HL7XQR", link: "https://www.amazon.com/dp/B0D7HL7XQR?tag=camprally-20" },
+        { label: "Weber® Go‑Anywhere Portable Charcoal Grill", category: "", icon: "🏕️", asin: "B0DQLSBYG3", link: "https://www.amazon.com/dp/B0DQLSBYG3?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-car-camping-air-mattresses-under-100": [
     {
       type: "product-grid",
