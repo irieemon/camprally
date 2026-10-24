@@ -17666,5 +17666,149 @@
       "fetchedAt": "2026-10-20T13:00:02.113Z",
       "source": "canopy amazonProduct"
     }
+  },
+  "portable grill|1|100": {
+    "term": "portable grill",
+    "min": 1,
+    "max": 100,
+    "fetchedAt": "2026-10-24T13:00:29.151Z",
+    "results": [
+      {
+        "asin": "B0098HR0RC",
+        "title": "Weber® Jumbo Joe Charcoal Grill, 18‑Inch, Black",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.8,
+        "ratingsTotal": 5632
+      },
+      {
+        "asin": "B0FQFPY63B",
+        "title": "Weber® Smokey Joe 14-Inch Portable Charcoal Grill, Black",
+        "price": "$54.99",
+        "priceValue": 54.99,
+        "rating": 4.7,
+        "ratingsTotal": 159
+      },
+      {
+        "asin": "B01HQRD8EO",
+        "title": "Gas One GS-3400P Propane or Butane Stove Dual Fuel Stove Portable Camping Stove - Patented - with Carrying Case Great for Emergency Preparedness Kit",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 15404
+      },
+      {
+        "asin": "B0FKB8PJLZ",
+        "title": "ThermoMaven Bristle-Free BBQ Grill Brush - No Wire Risk Steam Cleaner Removes Burnt Grease Fast - 17\" Cool-Touch Handle, Scraper & 3 Replaceable Heads for Gas, Charcoal & Cast Iron",
+        "price": "$36.99",
+        "priceValue": 36.99,
+        "rating": 4.6,
+        "ratingsTotal": 1006
+      },
+      {
+        "asin": "B0D7HL7XQR",
+        "title": "14 x 9 inches Small Portable Charcoal BBQ Grill, Foldable Compact Camping Barbecue for 1–3 People, Ideal for Camping, Tailgating, Beach, Picnic & Tabletop Use, Green",
+        "price": "$39.97",
+        "priceValue": 39.97,
+        "rating": 4.6,
+        "ratingsTotal": 344
+      },
+      {
+        "asin": "B0DQLSBYG3",
+        "title": "Weber® Go‑Anywhere Portable Charcoal Grill",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.6,
+        "ratingsTotal": 119
+      },
+      {
+        "asin": "B0C4Z39TK9",
+        "title": "Chefman XL Electric Griddle with Removable Temperature Control, Immersible Flat Top Grill, Burger, Eggs, Pancake Griddle, Nonstick Extra Large Cooking Surface, Slide Out Drip Tray, 10 x 20 Inch",
+        "price": "$39.97",
+        "priceValue": 39.97,
+        "rating": 4.5,
+        "ratingsTotal": 6301
+      },
+      {
+        "asin": "B0GS9NHQPJ",
+        "title": "Small Portable BBQ Charcoal Grill: Mini Foldable Table Top Barbecue Grills",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.5,
+        "ratingsTotal": 120
+      },
+      {
+        "asin": "B0H8FNC619",
+        "title": "GasOne 14-inch Portable Charcoal Barbecue Grill with Thermometer – Red",
+        "price": "$24.99",
+        "priceValue": 24.99,
+        "rating": 4.5,
+        "ratingsTotal": 70
+      },
+      {
+        "asin": "B00B58A0QU",
+        "title": "Cuisinart Charcoal Grill, Portable Tabletop Design, Locking Lid, 14\"",
+        "price": "$36.99",
+        "priceValue": 36.99,
+        "rating": 4.3,
+        "ratingsTotal": 21043
+      },
+      {
+        "asin": "B07P7M1NH8",
+        "title": "Megamaster Tabletop 1 Burner Gas Grill, Foldable Legs with Warming Rack",
+        "price": "$84.99",
+        "priceValue": 84.99,
+        "rating": 4.3,
+        "ratingsTotal": 2938
+      },
+      {
+        "asin": "B0CN9DYPP8",
+        "title": "Odoland Portable Folding Charcoal Grills for Outdoor Cooking Bonfire BBQ",
+        "price": "$47.99",
+        "priceValue": 47.99,
+        "rating": 4.3,
+        "ratingsTotal": 1127
+      },
+      {
+        "asin": "B00004TBJ4",
+        "title": "Charbroil Portable Convective 1-Burner Propane Gas Grill - 465133010",
+        "price": "$53.91",
+        "priceValue": 53.91,
+        "rating": 4.2,
+        "ratingsTotal": 8308
+      },
+      {
+        "asin": "B0FC4YCCJJ",
+        "title": "GasOne Tabletop Propane Grill – Portable Grill Propane with Heat Resistant Handles, Large Cooking Surface – User Friendly Temperature Control Knob Portable Gas Grill for RV, Camping, Home – Tan Brown",
+        "price": "$69.99",
+        "priceValue": 69.99,
+        "rating": 4.2,
+        "ratingsTotal": 281
+      },
+      {
+        "asin": "B0FDWQHG4X",
+        "title": "QuliMetal Portable Camping Grill – Foldable Charcoal/Gas Grill",
+        "price": "$62.99",
+        "priceValue": 62.99,
+        "rating": 4.2,
+        "ratingsTotal": 125
+      },
+      {
+        "asin": "B0H9M8V7PL",
+        "title": "Portable Charcoal Grill, Portable Tabletop BBQ for Outdoor Cooking | Compact Folding Grill for Camping, Hiking, Picnics & Travel | 24”x13”x9” Lightweight Smoky Flavor Grill",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 3.6,
+        "ratingsTotal": 185
+      },
+      {
+        "asin": "B0GC4YWR7J",
+        "title": "Portable Propane Gas Grill with New 2-in-1 Valve - Compatible with Large Tank & Small Cylinder, Gas Grill with Foldable Legs & Adjustable Regulator,Heavy Duty, Perfect for Outdoor Camping",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 3.4,
+        "ratingsTotal": 152
+      }
+    ]
   }
 }
