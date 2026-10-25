@@ -341,3 +341,16 @@ MiniMax was overloaded across three attempts. Transient — the next cycle retri
 4 consecutive runs without publishing (reasons: model-overloaded)
 
 MiniMax was overloaded across three attempts. Transient — the next cycle retries.
+
+## 2026-10-25T13:00:00.123Z — content-review
+
+Content review rejected best-camping-wagons-under-100 (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-camping-wagons-under-100-2026-10-25T13-00-00-123Z.json
+
+
+best-camping-wagons-under-100
+  ✗ [critical] combustion-in-shelter (body)
+      puts a combustion source inside a tent or vehicle — carbon monoxide kills campers every year
+      "The heavy-duty accordion steel frame provides structural rigidity while loading heavy camp coolers, propane tanks, and packed tent bags. When it is time to pack"
+[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5913. To increase, visit
+
