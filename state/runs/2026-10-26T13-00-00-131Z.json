@@ -1,0 +1,23 @@
+{
+  "startedAt": "2026-10-26T13:00:00.131Z",
+  "finishedAt": "2026-10-26T13:10:03.086Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-camping-wagons-under-100",
+  "commit": "e463292",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving a79ec6a, expected e463292) — 600s left\nnot live yet (serving a79ec6a, expected e463292) — 584s left\ndeploy verified after 3 attempt(s): serving e463292 · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "skipped": "no hero image — page uses the site default"
+  },
+  "remaining": 11
+}
