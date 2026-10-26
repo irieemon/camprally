@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-wagons-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Collapsible Camping Wagons Under $100 — Hauling Gear From Car to Site — Quick Comparison",
+      items: [
+        { label: "Collapsible Heavy Duty Beach Wagons carts Foldable with Big", category: "", icon: "🏕️", asin: "B0HGLHTSWT", link: "https://www.amazon.com/dp/B0HGLHTSWT?tag=camprally-20" },
+        { label: "Mac Sports Heavy Duty Steel Frame Collapsible Folding 150", category: "", icon: "🏕️", asin: "B00BUUUIGK", link: "https://www.amazon.com/dp/B00BUUUIGK?tag=camprally-20" },
+        { label: "HAUSHOF Collapsible Outdoor Utility Wagon", category: "", icon: "🏕️", asin: "B09NBHRP2D", link: "https://www.amazon.com/dp/B09NBHRP2D?tag=camprally-20" },
+        { label: "Hikenture Wagons Carts Foldable 330LBS", category: "", icon: "🏕️", asin: "B0H2DG2ZGD", link: "https://www.amazon.com/dp/B0H2DG2ZGD?tag=camprally-20" },
+        { label: "Double Decker Wagon Heavy Duty Collapsible", category: "", icon: "🏕️", asin: "B0F6CV6V5Z", link: "https://www.amazon.com/dp/B0F6CV6V5Z?tag=camprally-20" },
+        { label: "Wagons Carts Foldable", category: "", icon: "🏕️", asin: "B0GQGDPSKR", link: "https://www.amazon.com/dp/B0GQGDPSKR?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-portable-grills-under-100": [
     {
       type: "product-grid",
