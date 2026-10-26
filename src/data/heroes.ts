@@ -122,6 +122,16 @@ export const HERO_IMAGES: Record<string, string> = {
   "how-to-set-up-a-camping-tarp": "/images/heroes/how-to-set-up-a-camping-tarp.jpg",
   "best-tent-footprints-budget": "/images/heroes/best-tent-footprints-budget.jpg",
   "best-dry-bags-camping": "/images/heroes/best-dry-bags-camping.jpg",
+  "national-park-camping-reservations": "/images/heroes/national-park-camping-reservations.jpg",
+  "best-camping-pillows-budget": "/images/heroes/best-camping-pillows-budget.jpg",
+  "best-tent-stakes-budget": "/images/heroes/best-tent-stakes-budget.jpg",
+  "best-budget-puffy-jackets-camping": "/images/heroes/best-budget-puffy-jackets-camping.jpg",
+  "best-hand-warmers-camping": "/images/heroes/best-hand-warmers-camping.jpg",
+  "best-winter-camping-gloves-budget": "/images/heroes/best-winter-camping-gloves-budget.jpg",
+  "best-kids-sleeping-bags-budget": "/images/heroes/best-kids-sleeping-bags-budget.jpg",
+  "best-car-camping-air-mattresses-under-100": "/images/heroes/best-car-camping-air-mattresses-under-100.jpg",
+  "best-portable-grills-under-100": "/images/heroes/best-portable-grills-under-100.jpg",
+  "best-camping-wagons-under-100": "/images/heroes/best-camping-wagons-under-100.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

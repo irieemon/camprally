@@ -26,7 +26,7 @@
  * Exit codes: 0 published · 1 failed · 2 deferred (ASINs unconfirmed)
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { EXIT } from "./lib/amazon.mjs";
 import { loadCache, classify } from "./lib/asin-cache.mjs";
@@ -65,6 +65,20 @@ if (spec.body.includes("`")) {
 }
 if (/AMZ_[A-Z_]+/.test(spec.body)) {
   console.error("spec.body still contains unresolved AMZ_ placeholders");
+  process.exit(EXIT.FAIL);
+}
+/* Every article carries its own hero. Without one the page falls back to
+ * HERO_IMAGES.default, and from 2026-10-09 to 10-26 ten articles in a row went
+ * out on that same stock photo because image generation was failing quietly.
+ * write-article now refuses to emit a spec without a hero; this is the second
+ * lock, for specs written by hand or by anything else. A site path must also
+ * exist on disk, or the page would ship a broken image instead. */
+if (!spec.hero) {
+  console.error("spec has no hero image — the page would show the site default photo. Generate one first.");
+  process.exit(EXIT.FAIL);
+}
+if (!spec.hero.startsWith("http") && !existsSync(`${ROOT}public${spec.hero}`)) {
+  console.error(`spec.hero ${spec.hero} does not exist under public/`);
   process.exit(EXIT.FAIL);
 }
 

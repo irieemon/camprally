@@ -23,11 +23,11 @@
  * Exit codes: 0 wrote spec · 1 failed
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { EXIT } from "./lib/amazon.mjs";
 import { loadCache, saveCache, classify, get } from "./lib/asin-cache.mjs";
 import { discover, priceCeiling } from "./lib/discover.mjs";
-import { generateImage, heroPrompt } from "./lib/minimax-image.mjs";
+import { generateImage, heroPrompt, lastImageError } from "./lib/minimax-image.mjs";
 import { callRole, lastError, lastErrorTransient, minimaxKey, roleCandidates } from "./lib/llm.mjs";
 import { canonicalCategory, knownCategories } from "./lib/taxonomy.mjs";
 import { excerptIsDegenerate, MIN_EXCERPT_CHARS } from "./lib/meta.mjs";
@@ -511,6 +511,47 @@ const user = [
     .join("\n"),
 ].filter(Boolean).join("\n");
 
+// ── hero image (required) ─────────────────────────────────────────────────
+/* Made BEFORE the writer call, and no article goes out without one.
+ *
+ * This used to be best-effort, after the article was written: any failure left
+ * the page on HERO_IMAGES.default. From 2026-10-09 the MiniMax key stopped
+ * resolving (the OpenClaw 8.35 upgrade removed auth-profiles.json), every
+ * request was refused "login fail", and ten articles in a row went out with
+ * the same stock red tent. The log said "no hero image — page will use the site
+ * default" each time; nobody reads that line.
+ *
+ * So a missing hero now stops the run. A refused or missing key is a config
+ * fault no retry fixes, so it FAILS and run-cycle raises a blocker. Anything
+ * else defers, and the next cycle retries. Done ahead of the writer so a
+ * failure here costs nothing; a file left by an earlier deferred run is
+ * reused rather than paid for twice. publish-article enforces the same rule. */
+const heroOut = `${ROOT}public/images/heroes/${slug}.jpg`;
+let heroPath = existsSync(heroOut) ? heroOut : null;
+for (let attempt = 1; !heroPath && attempt <= 3; attempt++) {
+  heroPath = await generateImage({
+    prompt: heroPrompt(brief.title, brief.category ?? "camping gear"),
+    outPath: heroOut,
+    // image-01 is MiniMax-native and has no Gemini equivalent wired up, so this
+    // one still asks for the MiniMax key by name rather than going through a role.
+    apiKey: minimaxKey(),
+  });
+  if (!heroPath && lastImageError()?.kind === "auth") break;
+  if (!heroPath && attempt < 3) await new Promise((r) => setTimeout(r, 5000 * attempt));
+}
+if (!heroPath) {
+  const why = lastImageError();
+  if (why?.kind === "auth") {
+    console.error(`no hero image — MiniMax refused the key: ${why.message}\n  fix MINIMAX_API_KEY in ~/.openclaw/openclaw.json env.vars`);
+    process.exit(EXIT.FAIL);
+  }
+  // Printed to stdout in this exact shape; run-cycle reads it to name the deferral.
+  console.log("deferring: hero-image");
+  console.error(`no hero image after 3 attempts: ${why?.message ?? "unknown"}`);
+  process.exit(EXIT.DEFER);
+}
+console.log(`hero image → public/images/heroes/${slug}.jpg`);
+
 // ── call ──────────────────────────────────────────────────────────────────
 /*
  * max_tokens has to cover reasoning AND prose. MiniMax M2.7 emits a `thinking`
@@ -617,22 +658,6 @@ if (words < 500) {
   console.error(`output too short (${words} words) — likely a truncated or refused generation`);
   process.exit(EXIT.FAIL);
 }
-
-// ── hero image (best-effort) ──────────────────────────────────────────────
-// image-01 shares the coding-plan quota with text, so this is effectively
-// free — but never publish-blocking: on any failure the page keeps using
-// HERO_IMAGES.default exactly as it did before.
-const heroOut = `${ROOT}public/images/heroes/${slug}.jpg`;
-const heroPath = await generateImage({
-  prompt: heroPrompt(brief.title, brief.category ?? "camping gear"),
-  outPath: heroOut,
-  // image-01 is MiniMax-native and has no Gemini equivalent wired up, so this
-  // one still asks for the MiniMax key by name rather than going through a role.
-  apiKey: minimaxKey(),
-});
-console.log(heroPath
-  ? `hero image → public/images/heroes/${slug}.jpg`
-  : "no hero image — page will use the site default");
 
 /* Alt text for the hero, written by LOOKING at the image that was just made.
  *

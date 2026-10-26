@@ -619,7 +619,9 @@ if (!next) {
         slug: target.slug,
         message: reason === "model-overloaded"
           ? "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
-          : "Canopy request quota exhausted — add pay-as-you-go or wait for the monthly reset.",
+          : reason === "hero-image"
+            ? "MiniMax image generation failed three times. No article publishes without its own hero — the next cycle retries."
+            : "Canopy request quota exhausted — add pay-as-you-go or wait for the monthly reset.",
       }, EXIT.OK);
     }
     finish("blocked", {
