@@ -86,6 +86,54 @@ export function breadcrumbNode(trail: Array<{ name: string; path?: string }>) {
 }
 
 /**
+ * FAQPage from the article's own "Questions People Ask" section.
+ *
+ * Built FROM the rendered body rather than from a parallel data file, so the
+ * markup can never say something the page does not: every question is an
+ * `### ` heading under that section and every answer is the prose beneath it,
+ * with markdown stripped. Same rule as the Article node — structured data
+ * that disagrees with the visible page is a manual-action risk.
+ *
+ * Google has shown FAQ rich results only for authoritative government and
+ * health sites since 2023, so this is not for a SERP feature. It is for the
+ * answer engines (ChatGPT, Perplexity, AI Overviews), which read explicit
+ * question/answer pairs more reliably than they infer them from headings.
+ *
+ * Returns null for fewer than two questions: one Q&A is not an FAQ page.
+ */
+export function faqPageNode(markdown: string, pageUrl: string) {
+  const section = markdown.match(
+    /^## (?:Questions People Ask|Frequently Asked Questions|FAQs?)\s*$([\s\S]*?)(?=^## |(?![\s\S]))/im,
+  )?.[1];
+  if (!section) return null;
+  const plain = (s: string) =>
+    s
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      .replace(/\*\*|__/g, "")
+      .replace(/(^|\s)\*(\S[^*]*?)\*/g, "$1$2")
+      .replace(/\s+/g, " ")
+      .trim();
+  const qa = section
+    .split(/^### /m)
+    .slice(1)
+    .map((chunk) => {
+      const [q, ...rest] = chunk.split("\n");
+      return { q: plain(q), a: plain(rest.join("\n")) };
+    })
+    .filter((x) => x.q && x.a);
+  if (qa.length < 2) return null;
+  return {
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    mainEntity: qa.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+}
+
+/**
  * A listing page and the articles on it.
  *
  * `isPartOf` restates the WebSite inline instead of using a bare `@id`

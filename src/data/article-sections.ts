@@ -221,7 +221,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-camping-gifts-under-50": [
     {
       type: "product-grid",
-      title: "Best Camping Gifts Under $50 — Gear They'll Actually Use — Quick Comparison",
+      title: "Best Camping Gifts Under $50: Cheap Outdoor Gifts They'll Use — Quick Comparison",
       items: [
         { label: "RV Camping Gifts for Men Women", category: "", icon: "🏕️", asin: "B0FRZX8P7M", link: "https://www.amazon.com/dp/B0FRZX8P7M?tag=camprally-20" },
         { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
@@ -663,7 +663,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "best-budget-sleeping-bags-cold-weather": [
     {
       type: "product-grid",
-      title: "Best Budget Sleeping Bags for Cold Weather & Winter Camping — Quick Comparison",
+      title: "Best Budget Sleeping Bags for Cold Weather Camping + Cheap Ideas — Quick Comparison",
       items: [
         { label: "Coleman Brazos 20/30°F Adult Cool-Weather Sleeping Bag", category: "", icon: "🏕️", asin: "B0DHJL8CMJ", link: "https://www.amazon.com/dp/B0DHJL8CMJ?tag=camprally-20" },
         { label: "Coleman Brazos Cold-Weather Sleeping Bag", category: "", icon: "🏕️", asin: "B0BXMW1TJ9", link: "https://www.amazon.com/dp/B0BXMW1TJ9?tag=camprally-20" },
@@ -717,7 +717,7 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
   "budget-portable-camping-stoves-compared": [
     {
       type: "product-grid",
-      title: "Budget Portable Camping Stoves Compared — Quick Comparison",
+      title: "Camping Stove Price Comparison: Budget Stoves From $13 to $100 — Quick Comparison",
       items: [
         { label: "Etekcity Ultralight Portable Outdoor Backpacking Camping", category: "", icon: "🏕️", asin: "B07VYNRKCS", link: "https://www.amazon.com/dp/B07VYNRKCS?tag=camprally-20" },
         { label: "Odoland 1L Heat Exchanger Backpacking and Camping Stove", category: "", icon: "🏕️", asin: "B0GQZ5D1HR", link: "https://www.amazon.com/dp/B0GQZ5D1HR?tag=camprally-20" },

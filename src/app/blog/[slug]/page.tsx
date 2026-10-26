@@ -9,7 +9,7 @@ import { PrintableSidebarCard, printables, type Printable } from "@/components/P
 import { MerchSidebarCard, merchDesigns, stableIndex } from "@/components/Merch";
 import { SITE_URL } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
-import { articleProductListNode, breadcrumbNode } from "@/lib/structured-data";
+import { articleProductListNode, breadcrumbNode, faqPageNode } from "@/lib/structured-data";
 import { groupSlugForCategory } from "@/data/categories";
 import { printableRelevance, printableOverrides } from "@/data/printable-relevance";
 import { relevantPrintable } from "@/lib/printable-relevance";
@@ -1049,6 +1049,7 @@ export default async function ArticlePage({ params }: Props) {
             { name: article.title },
           ]),
           productList,
+          faqPageNode(article.content, `${SITE_URL}/blog/${article.slug}`),
         ]}
       />
       {/* Hero. Full-bleed rather than an inset rounded panel — the edge-to-edge
