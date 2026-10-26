@@ -43,6 +43,13 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
  * year and MiniMax has already gone M2.7 -> M3 once. Env overrides mean a
  * rotation is a config change in openclaw.json rather than a commit here. */
 const MODELS = {
+  /* Claude, on the Console API key — metered, which is the sanctioned path
+   * (the standing constraint bars SUBSCRIPTION OAuth, not the vendor). Opus 5.5
+   * runs adaptive thinking that cannot be turned off, billed against
+   * max_tokens like M3's reasoning, so the generous ceilings below still apply.
+   * Haiku 5.5 is cheaper per token than MiniMax and takes the short jobs. */
+  claude: process.env.CLAUDE_MODEL ?? "claude-opus-5-5",
+  claudeCheap: process.env.CLAUDE_CHEAP_MODEL ?? "claude-haiku-5-5",
   minimaxWriter: process.env.MINIMAX_MODEL ?? "MiniMax-M3",
   minimaxAlt: process.env.MINIMAX_ALT_MODEL ?? "MiniMax-M2.7",
   /* Pinned to an explicit version rather than the `gemini-flash-latest` alias.
@@ -85,6 +92,11 @@ const MODELS = {
  * failover.
  */
 const PROVIDERS = {
+  anthropic: {
+    api: "anthropic-messages",
+    baseUrl: () => process.env.ANTHROPIC_BASE_URL ?? "https://api.anthropic.com",
+    key: () => process.env.ANTHROPIC_API_KEY ?? fromOpenclawEnv("ANTHROPIC_API_KEY"),
+  },
   minimax: {
     api: "anthropic-messages",
     baseUrl: () => process.env.MINIMAX_BASE_URL ?? "https://api.minimax.io/anthropic",
@@ -143,6 +155,7 @@ export function lineageOf({ provider, model }) {
   if (/(^|\/)(gemini|gemma)/.test(m)) return "google";
   if (/(^|\/)qwen/.test(m)) return "alibaba";
   if (m.includes("minimax")) return "minimax";
+  if (/(^|\/)claude/.test(m)) return "anthropic";
   if (/(^|\/)(muse|llama)/.test(m)) return "meta";
   if (m.includes("deepseek")) return "deepseek";
   /* Anything routed and unrecognised collapses to the ROUTER id, which would
@@ -195,7 +208,9 @@ const ROLES = {
    * single-vendor dependency, since an M3 outage is usually an M2.7 outage too
    * — same provider, same door. M2.7 stays as a last resort rather than being
    * removed, because a deferred cycle is still worse than an older draft. */
-  writer: [["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["minimax", MODELS.minimaxAlt]],
+  /* Claude first since 2026-10-26. M3 behind it is the cross-billing fallback:
+   * an Anthropic outage or spend cap is not a MiniMax one. */
+  writer: [["anthropic", MODELS.claude], ["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["minimax", MODELS.minimaxAlt]],
   /* Order is the seating plan, and the two consumers read it DIFFERENTLY —
    * worth knowing before reordering anything:
    *   panel()    takes the first `size` entries, calls them once, and drops
@@ -232,6 +247,13 @@ const ROLES = {
     ["minimax", MODELS.minimaxWriter],
     ["openrouter", MODELS.museGlimmer],
     ["openrouter", MODELS.deepseek],
+    /* Claude Opus 5.5 benched on 2026-10-26 and does NOT earn a starting seat:
+     * safety 1/3, all 1/5, zero false positives, $0.19 for the eight cases. It
+     * read the sealed-tent drying passage and rated it LOW; it missed the
+     * hydration target and the mylar claim outright. So it leads the bench —
+     * a fourth lineage for callRole's single-answer callers — and stays out of
+     * panel() until a re-bench says otherwise. */
+    ["anthropic", MODELS.claude],
     ["google", MODELS.gemini],
     ["minimax", MODELS.minimaxAlt],
   ],
@@ -244,14 +266,19 @@ const ROLES = {
    *
    * M2.7 is deliberately absent: it accepts an image request, returns 200, and
    * silently drops the image (input_tokens 64, "I can't see the image"). A
-   * vision seat that cannot see would produce confident invented descriptions. */
-  vision: [["google", MODELS.gemini], ["minimax", MODELS.minimaxWriter]],
+   * vision seat that cannot see would produce confident invented descriptions.
+   *
+   * Claude Opus 5.5 took the lead seat on 2026-10-26 on the same control: it
+   * named the cots hero "folding camp cot ... small low wooden table", matching
+   * Gemini and the independent reader, not M3's hammock. Gemini stays second,
+   * though its key was quota-exhausted when that was written. */
+  vision: [["anthropic", MODELS.claude], ["google", MODELS.gemini], ["minimax", MODELS.minimaxWriter]],
   /* M3, not M2.7. This role writes the meta description on every article and
    * picks the Amazon search term, so it is not a throwaway despite the name —
    * "cheap" describes the SIZE of the job, not a licence to use the older
    * model. M2.7 stays only as the second MiniMax seat on the reviewer panel,
    * where a distinct sample is the point. */
-  cheap: [["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["ollama", MODELS.ollama]],
+  cheap: [["anthropic", MODELS.claudeCheap], ["minimax", MODELS.minimaxWriter], ["google", MODELS.gemini], ["ollama", MODELS.ollama]],
 };
 
 function fromAuthProfiles(profile) {

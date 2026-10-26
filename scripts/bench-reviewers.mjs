@@ -4,6 +4,8 @@
  *
  *   node scripts/bench-reviewers.mjs                        # the standing field
  *   node scripts/bench-reviewers.mjs --model <openrouter-id> # audition one
+ *   node scripts/bench-reviewers.mjs --model anthropic/claude-opus-5-5 --model anthropic/claude-haiku-5-5
+ *                                    # several; anthropic/* goes DIRECT, billed to the Anthropic key
  *   node scripts/bench-reviewers.mjs --json
  *
  * Exists because "which model should review our articles" was about to be
@@ -35,25 +37,31 @@ import { execFileSync } from "node:child_process";
 const ROOT = new URL("..", import.meta.url).pathname;
 const args = process.argv.slice(2);
 const JSON_OUT = args.includes("--json");
-const ONE = args[args.indexOf("--model") + 1];
+const ONES = args.flatMap((a, i) => (a === "--model" && args[i + 1] ? [args[i + 1]] : []));
 
 /* The last commit before the defects were fixed. b793446 corrected the
  * hydration claim and 1791a9a the other four, so this is the final tree that
  * still contains all five. */
 const FIXTURE_REF = process.env.BENCH_REF ?? "8c77f8e";
 
-const KEY = process.env.OPENROUTER_API_KEY
-  ?? (() => {
-    try {
-      return JSON.parse(readFileSync(`${process.env.HOME}/.openclaw/openclaw.json`, "utf8"))?.env?.vars?.OPENROUTER_API_KEY;
-    } catch { return null; }
-  })();
-if (!KEY) {
-  console.error("No OPENROUTER_API_KEY (env or openclaw.json). Nothing to benchmark against.");
-  process.exit(2);
-}
+const openclawVar = (name) => {
+  try {
+    return JSON.parse(readFileSync(`${process.env.HOME}/.openclaw/openclaw.json`, "utf8"))?.env?.vars?.[name];
+  } catch { return null; }
+};
+const KEY = process.env.OPENROUTER_API_KEY ?? openclawVar("OPENROUTER_API_KEY");
+/* Claude is asked DIRECTLY rather than through OpenRouter: the credits that pay
+ * for it sit on the Anthropic key, and a router hop is one more thing a zero
+ * could be measuring instead of the model. */
+const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY ?? openclawVar("ANTHROPIC_API_KEY");
+/* $/MTok in, out — Anthropic reports tokens, not cost, so the bench prices them. */
+const ANTHROPIC_PRICE = {
+  "claude-opus-5-5": [4, 20],
+  "claude-sonnet-5-5": [2, 10],
+  "claude-haiku-5-5": [0.1, 0.5],
+};
 
-const FIELD = ONE ? [[ONE, "audition"]] : [
+const FIELD = ONES.length ? ONES.map((m) => [m, "audition"]) : [
   ["minimax/minimax-m3", "starter"],
   ["meta/muse-glimmer-30b", "starter"],
   ["deepseek/deepseek-v4-pro", "starter"],
@@ -139,6 +147,8 @@ function extractJSON(text) {
  * which is a real finding. A benchmark that fails a model for its own plumbing
  * is worse than no benchmark, because the number looks authoritative. */
 function ask(model, slug) {
+  if (model.startsWith("anthropic/")) return askAnthropic(model.slice("anthropic/".length), slug);
+  if (!KEY) return { error: "no OPENROUTER_API_KEY" };
   const { title, body } = bodies[slug];
   const payload = JSON.stringify({
     model,
@@ -162,6 +172,40 @@ function ask(model, slug) {
       const parsed = extractJSON(d.choices?.[0]?.message?.content ?? "");
       if (parsed === null) return { error: "no JSON in reply (empty content — thinking budget?)" };
       return { issues: (Array.isArray(parsed) ? parsed : parsed.issues ?? []).filter((i) => i?.quote), cost: d.usage?.cost ?? 0 };
+    } catch (e) {
+      if (attempt === 2) return { error: `transport: ${String(e.message).slice(0, 90)}` };
+    }
+  }
+}
+
+/* Same prompt and same scoring as ask(). No temperature (rejected since
+ * 2026-10-21) and no thinking config: Opus/Sonnet 5.5 think adaptively by
+ * default, and thinking is billed against max_tokens, hence 16000. */
+function askAnthropic(model, slug) {
+  if (!ANTHROPIC_KEY) return { error: "no ANTHROPIC_API_KEY" };
+  const { title, body } = bodies[slug];
+  const payload = JSON.stringify({
+    model,
+    max_tokens: 16000,
+    system: SYSTEM,
+    messages: [{ role: "user", content: JSON.stringify({ title, products: [], body: body.slice(0, 12000) }, null, 1) }],
+  });
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const raw = execFileSync("curl", [
+        "-s", "--fail-with-body", "-m", "600", "https://api.anthropic.com/v1/messages",
+        "-H", `x-api-key: ${ANTHROPIC_KEY}`, "-H", "anthropic-version: 2023-06-01",
+        "-H", "content-type: application/json", "--data-binary", "@-",
+      ], { input: payload, maxBuffer: 64 * 1024 * 1024 }).toString();
+      const d = JSON.parse(raw);
+      if (d.error) return { error: String(d.error.message ?? d.error).slice(0, 120) };
+      const [pin, pout] = ANTHROPIC_PRICE[model] ?? [0, 0];
+      const cost = ((d.usage?.input_tokens ?? 0) * pin + (d.usage?.output_tokens ?? 0) * pout) / 1e6;
+      if (d.stop_reason === "refusal") return { error: `refusal (${d.stop_details?.category ?? "?"})`, cost };
+      const text = (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("");
+      const parsed = extractJSON(text);
+      if (parsed === null) return { error: `no JSON in reply (stop_reason=${d.stop_reason})`, cost };
+      return { issues: (Array.isArray(parsed) ? parsed : parsed.issues ?? []).filter((i) => i?.quote), cost };
     } catch (e) {
       if (attempt === 2) return { error: `transport: ${String(e.message).slice(0, 90)}` };
     }

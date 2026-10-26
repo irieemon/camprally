@@ -19,7 +19,7 @@
  *
  * WHICH MODEL, AND WHY IT MATTERS WHICH. Goes through the `vision` role, so the
  * seating lives in llm.mjs with its reasoning rather than being hardcoded here.
- * Gemini leads and MiniMax-M3 backs it up; both genuinely read the image.
+ * Claude Opus 5.5 leads, then Gemini and MiniMax-M3; all three genuinely read the image.
  *
  * M2.7 does NOT, and fails silently: 200 OK, `input_tokens: 64`, the image
  * dropped on the floor, and a cheerful "I can't see the image." A vision seat
