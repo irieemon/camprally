@@ -132,6 +132,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-car-camping-air-mattresses-under-100": "/images/heroes/best-car-camping-air-mattresses-under-100.jpg",
   "best-portable-grills-under-100": "/images/heroes/best-portable-grills-under-100.jpg",
   "best-camping-wagons-under-100": "/images/heroes/best-camping-wagons-under-100.jpg",
+  "best-bear-canisters-budget": "/images/heroes/best-bear-canisters-budget.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

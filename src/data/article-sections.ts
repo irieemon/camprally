@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-bear-canisters-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Bear Canisters and Food Storage — What Rangers Actually Accept — Quick Comparison",
+      items: [
+        { label: "Veken Coffee Canister with Window", category: "", icon: "🏕️", asin: "B0CWH57Q9F", link: "https://www.amazon.com/dp/B0CWH57Q9F?tag=camprally-20" },
+        { label: "Veken Coffee Canister", category: "", icon: "🏕️", asin: "B0DZ2MMFMJ", link: "https://www.amazon.com/dp/B0DZ2MMFMJ?tag=camprally-20" },
+        { label: "Canister for Backpacking. 4 Sizes: BV500", category: "", icon: "🏕️", asin: "B0019LSGQE", link: "https://www.amazon.com/dp/B0019LSGQE?tag=camprally-20" },
+        { label: "Tough Bison Bear Bag Hanging Kit", category: "", icon: "🏕️", asin: "B0D3XL2L98", link: "https://www.amazon.com/dp/B0D3XL2L98?tag=camprally-20" },
+        { label: "TecQach Portable Aluminum Storage Jar 3-Pack", category: "", icon: "🏕️", asin: "B09ZYBFS12", link: "https://www.amazon.com/dp/B09ZYBFS12?tag=camprally-20" },
+        { label: "Backpackers' Cache", category: "", icon: "🏕️", asin: "B0002ZB5Y8", link: "https://www.amazon.com/dp/B0002ZB5Y8?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-wagons-under-100": [
     {
       type: "product-grid",
