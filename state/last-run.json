@@ -1,41 +1,13 @@
 {
-  "startedAt": "2026-10-27T13:00:00.114Z",
-  "finishedAt": "2026-10-27T13:02:39.842Z",
-  "outcome": "published",
+  "startedAt": "2026-10-28T13:00:00.120Z",
+  "finishedAt": "2026-10-28T13:02:15.176Z",
+  "outcome": "blocked",
   "priceClaims": "ok",
-  "indexNowEdits": {
-    "changed": 7,
-    "submitted": [
-      "best-budget-hiking-backpacks-under-100",
-      "best-budget-tents-under-100",
-      "best-camping-gifts-under-50",
-      "best-camping-pillows-budget",
-      "best-sleeping-bag-liners-camping",
-      "budget-portable-camping-stoves-compared",
-      "cheapest-camping-setup-for-beginners"
-    ],
-    "indexNow": {
-      "ok": true,
-      "status": 200,
-      "submitted": 7
-    }
-  },
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "best-bear-canisters-budget",
-  "commit": "e0c8d27",
-  "pushed": true,
-  "deployVerified": true,
-  "deploy": "not live yet (serving 6e71a96, expected e0c8d27) — 600s left\nnot live yet (serving 6e71a96, expected e0c8d27) — 584s left\ndeploy verified after 3 attempt(s): serving e0c8d27 · home HTTP 200",
-  "indexNow": {
-    "ok": true,
-    "status": 200,
-    "submitted": 3
-  },
-  "pinned": {
-    "ok": true,
-    "id": "1152569729674377397"
-  },
-  "remaining": 10
+  "reason": "content-review",
+  "slug": "best-camping-stocking-stuffers-under-25",
+  "attempts": 1,
+  "message": "Content review rejected best-camping-stocking-stuffers-under-25 (attempt 1 of 2).\nSpec quarantined to specs/quarantine/best-camping-stocking-stuffers-under-25-2026-10-28T13-00-00-120Z.json\n\n\nbest-camping-stocking-stuffers-under-25\n  ✗ [high] cotton-for-warmth (body)\n      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake\n      \"Whichever you choose, pair warmers with honest expectations. They make cold mornings more pleasant, while the sleeping bag, pad, and non-cotton layers do the re\"\n  (model review unavailable — deterministic rules only)\n[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 4567. To increase, visit\n[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2075. To increase, vi\n"
 }

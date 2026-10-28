@@ -323,12 +323,12 @@
     "B00005OU9D": {
       "verdict": "LIVE",
       "title": "Coleman Gas Camping Stove | Classic Propane Stove, 2 Burner, 4.1 x 21.9 x 13.7 Inches",
-      "checkedAt": "2026-10-21T13:00:00.551Z",
-      "price": "$89.99",
-      "priceValue": 89.99,
-      "rating": 4.7,
-      "ratingsTotal": 305,
-      "priceCheckedAt": "2026-10-21T13:00:00.551Z",
+      "checkedAt": "2026-10-28T13:00:00.558Z",
+      "price": "$99.39",
+      "priceValue": 99.39,
+      "rating": 4.6,
+      "ratingsTotal": 313,
+      "priceCheckedAt": "2026-10-28T13:00:00.558Z",
       "priceSource": "amazon-direct"
     },
     "B004UVPDUM": {
@@ -636,12 +636,12 @@
     "B0BXMW1TJ9": {
       "verdict": "LIVE",
       "title": "Coleman Brazos Cold-Weather Sleeping Bag, 20°F/30°F Lightweight Camping Sleeping Bag for Adults, No-Snag Zipper with Stuff Sack Included, Machine Washable",
-      "checkedAt": "2026-10-21T13:00:00.551Z",
-      "price": "$53.99",
-      "priceValue": 53.99,
+      "checkedAt": "2026-10-28T13:00:00.558Z",
+      "price": "$52.70",
+      "priceValue": 52.7,
       "rating": 4.4,
-      "ratingsTotal": 443,
-      "priceCheckedAt": "2026-10-21T13:00:00.551Z",
+      "ratingsTotal": 448,
+      "priceCheckedAt": "2026-10-28T13:00:00.558Z",
       "priceSource": "amazon-direct"
     },
     "B0BMCTFKH7": {
@@ -877,14 +877,14 @@
     },
     "B006QF3TW4": {
       "verdict": "LIVE",
-      "title": "LifeStraw Personal Water Filter for Hiking, Travel and Emergency, Blue, 1PK Blue 1 Pack",
-      "checkedAt": "2026-10-22T10:37:00.196Z",
+      "title": "LifeStraw Personal Water Filter for Hiking, Travel and Emergency, Blue, 1PK",
+      "checkedAt": "2026-10-28T13:00:47.166Z",
       "price": "$17.95",
       "priceValue": 17.95,
       "rating": 4.8,
-      "ratingsTotal": 125982,
-      "priceCheckedAt": "2026-10-22T10:37:00.196Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 126053,
+      "priceCheckedAt": "2026-10-28T13:00:47.166Z",
+      "priceSource": "canopy-search"
     },
     "B07GLCYR5S": {
       "verdict": "LIVE",
@@ -4551,13 +4551,13 @@
     "B0007ZF4OA": {
       "verdict": "LIVE",
       "title": "HotHands Hand Warmers Bulk Pack, 40 Pairs - America's Favorite Warmer",
-      "checkedAt": "2026-10-23T10:37:00.205Z",
+      "checkedAt": "2026-10-28T13:00:47.166Z",
       "price": "$24.25",
       "priceValue": 24.25,
       "rating": 4.8,
-      "ratingsTotal": 52713,
-      "priceCheckedAt": "2026-10-23T10:37:00.205Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 52735,
+      "priceCheckedAt": "2026-10-28T13:00:47.166Z",
+      "priceSource": "canopy-search"
     },
     "B0007ZF4Q8": {
       "verdict": "LIVE",
@@ -4980,6 +4980,50 @@
       "rating": 4.6,
       "ratingsTotal": 534,
       "priceCheckedAt": "2026-10-27T13:00:24.965Z",
+      "priceSource": "canopy-search"
+    },
+    "B00S93EQUK": {
+      "verdict": "LIVE",
+      "title": "Alpha Grillers Meat Thermometer Digital, Stocking Stuffers Gifts for Men",
+      "checkedAt": "2026-10-28T13:00:47.166Z",
+      "price": "$13.97",
+      "priceValue": 13.97,
+      "rating": 4.8,
+      "ratingsTotal": 93055,
+      "priceCheckedAt": "2026-10-28T13:00:47.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B00D7H9LIA": {
+      "verdict": "LIVE",
+      "title": "HotHands Hand Warmers Value Pack, 10 Pairs - America's Favorite Warmer",
+      "checkedAt": "2026-10-28T13:00:47.166Z",
+      "price": "$7.48",
+      "priceValue": 7.48,
+      "rating": 4.8,
+      "ratingsTotal": 20454,
+      "priceCheckedAt": "2026-10-28T13:00:47.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B004R1J464": {
+      "verdict": "LIVE",
+      "title": "HotHands Variety Pack - America's Favorite Warmer",
+      "checkedAt": "2026-10-28T13:00:47.166Z",
+      "price": "$11.99",
+      "priceValue": 11.99,
+      "rating": 4.8,
+      "ratingsTotal": 12602,
+      "priceCheckedAt": "2026-10-28T13:00:47.166Z",
+      "priceSource": "canopy-search"
+    },
+    "B00KDHJBAK": {
+      "verdict": "LIVE",
+      "title": "HotHands Super Warmers Value Pack, 10 Warmers - America's Favorite Warmer",
+      "checkedAt": "2026-10-28T13:00:47.166Z",
+      "price": "$7.48",
+      "priceValue": 7.48,
+      "rating": 4.8,
+      "ratingsTotal": 10034,
+      "priceCheckedAt": "2026-10-28T13:00:47.166Z",
       "priceSource": "canopy-search"
     }
   }

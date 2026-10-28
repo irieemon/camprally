@@ -3,6 +3,58 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "hot-tent-snowfall",
+      "name": "Hot Tent Snowfall",
+      "subtitle": "warm inside, snowing outside",
+      "image": "/images/merch/hot-tent-snowfall.jpg",
+      "imageKey": "6ae0dc6f9c55fce9071fe0fd::2026-10-27T17:16:51.797Z::Natural|Sand|Light Blue",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-10-27T17:17:30.384Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/33607474",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/33607480",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/33607483",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/33607485",
+          "priceCents": 2799,
+          "price": "$27.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/33607490",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": false
+        }
+      ]
+    },
+    {
       "slug": "misty-canoe-october",
       "name": "Misty Canoe October",
       "subtitle": "one last paddle before the lake freezes",

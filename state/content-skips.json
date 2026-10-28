@@ -33,5 +33,10 @@
     "attempts": 1,
     "lastAt": "2026-10-25T13:07:39.009Z",
     "findings": "\nbest-camping-wagons-under-100\n  ✗ [critical] combustion-in-shelter (body)\n      puts a combustion source inside a tent or vehicle — carbon monoxide kills campers every year\n      \"The heavy-duty accordion steel frame provides structural rigidity while loading heavy camp coolers, propane tanks, and packed tent bags. When it is time to pack\"\n[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5913. To increase, visit\n"
+  },
+  "best-camping-stocking-stuffers-under-25": {
+    "attempts": 1,
+    "lastAt": "2026-10-28T13:02:15.174Z",
+    "findings": "\nbest-camping-stocking-stuffers-under-25\n  ✗ [high] cotton-for-warmth (body)\n      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake\n      \"Whichever you choose, pair warmers with honest expectations. They make cold mornings more pleasant, while the sleeping bag, pad, and non-cotton layers do the re\"\n  (model review unavailable — deterministic rules only)\n[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 4567. To increase, visit\n[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2075. To increase, vi\n"
   }
 }

@@ -354,3 +354,18 @@ best-camping-wagons-under-100
       "The heavy-duty accordion steel frame provides structural rigidity while loading heavy camp coolers, propane tanks, and packed tent bags. When it is time to pack"
 [llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5913. To increase, visit
 
+
+## 2026-10-28T13:00:00.120Z — content-review
+
+Content review rejected best-camping-stocking-stuffers-under-25 (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-camping-stocking-stuffers-under-25-2026-10-28T13-00-00-120Z.json
+
+
+best-camping-stocking-stuffers-under-25
+  ✗ [high] cotton-for-warmth (body)
+      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
+      "Whichever you choose, pair warmers with honest expectations. They make cold mornings more pleasant, while the sleeping bag, pad, and non-cotton layers do the re"
+  (model review unavailable — deterministic rules only)
+[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 4567. To increase, visit
+[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2075. To increase, vi
+

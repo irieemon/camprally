@@ -1,0 +1,13 @@
+{
+  "startedAt": "2026-10-28T13:00:00.120Z",
+  "finishedAt": "2026-10-28T13:02:15.176Z",
+  "outcome": "blocked",
+  "priceClaims": "ok",
+  "pull": {
+    "status": "up-to-date"
+  },
+  "reason": "content-review",
+  "slug": "best-camping-stocking-stuffers-under-25",
+  "attempts": 1,
+  "message": "Content review rejected best-camping-stocking-stuffers-under-25 (attempt 1 of 2).\nSpec quarantined to specs/quarantine/best-camping-stocking-stuffers-under-25-2026-10-28T13-00-00-120Z.json\n\n\nbest-camping-stocking-stuffers-under-25\n  ✗ [high] cotton-for-warmth (body)\n      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake\n      \"Whichever you choose, pair warmers with honest expectations. They make cold mornings more pleasant, while the sleeping bag, pad, and non-cotton layers do the re\"\n  (model review unavailable — deterministic rules only)\n[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 4567. To increase, visit\n[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2075. To increase, vi\n"
+}
