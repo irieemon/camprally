@@ -1,10 +1,10 @@
 {
-  "startedAt": "2026-10-27T10:37:00.124Z",
-  "finishedAt": "2026-10-27T10:42:53.624Z",
+  "startedAt": "2026-10-28T10:37:00.122Z",
+  "finishedAt": "2026-10-28T10:38:49.423Z",
   "outcome": "refreshed",
-  "products": 401,
-  "priced": 401,
-  "displayable": 399,
+  "products": 407,
+  "priced": 407,
+  "displayable": 405,
   "stale": 2,
   "expiring": 0,
   "priceClaims": "ok"
