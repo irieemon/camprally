@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-10-29T13:00:00.110Z",
+  "finishedAt": "2026-10-29T13:04:56.503Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-camping-stocking-stuffers-under-25",
+  "commit": "b550f84",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving ba5c018, expected b550f84) — 600s left\nnot live yet (serving ba5c018, expected b550f84) — 584s left\ndeploy verified after 3 attempt(s): serving b550f84 · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729674554183"
+  },
+  "remaining": 9
+}
