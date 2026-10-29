@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-stocking-stuffers-under-25": [
+    {
+      type: "product-grid",
+      title: "Best Camping Stocking Stuffers Under $25 — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "Alpha Grillers Meat Thermometer Digital", category: "", icon: "🏕️", asin: "B00S93EQUK", link: "https://www.amazon.com/dp/B00S93EQUK?tag=camprally-20" },
+        { label: "HotHands Hand Warmers Bulk Pack", category: "", icon: "🏕️", asin: "B0007ZF4OA", link: "https://www.amazon.com/dp/B0007ZF4OA?tag=camprally-20" },
+        { label: "HotHands Hand Warmers Value Pack", category: "", icon: "🏕️", asin: "B00D7H9LIA", link: "https://www.amazon.com/dp/B00D7H9LIA?tag=camprally-20" },
+        { label: "HotHands Variety Pack", category: "", icon: "🏕️", asin: "B004R1J464", link: "https://www.amazon.com/dp/B004R1J464?tag=camprally-20" },
+        { label: "HotHands Super Warmers Value Pack", category: "", icon: "🏕️", asin: "B00KDHJBAK", link: "https://www.amazon.com/dp/B00KDHJBAK?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-bear-canisters-budget": [
     {
       type: "product-grid",
