@@ -234,7 +234,7 @@ The 20000mAh battery delivers 40+ hours on low, 15+ hours on medium, and 8+ hour
 
 The motor is quiet at under 35dB on low, so it won't keep you awake. USB-C charging means you can top it up from any portable battery pack. At just under 1 pound, it hangs from a tent loop or sits on a camp table equally well.
 
-**[Buy Rechargeable Camping Fan with LED Lantern on Amazon](https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20)**
+**Buy Rechargeable Camping Fan with LED Lantern on Amazon**
 
 ### Best Value: Featwell 20000mAh Portable Fan with Touch Screen
 
@@ -791,8 +791,6 @@ When electricity is nowhere nearby, battery capacity determines comfort. This 20
 A built-in LED lantern adds versatility for evening camp tasks. The eight-inch blade size moves substantial air while remaining compact enough to hang from a tent loop or rig line. A remote control lets you adjust settings without getting up, and a timer function prevents the fan from running all night when you only need a few hours of airflow to fall asleep comfortably.
 
 The hook mount works with most tent peak loops and guy lines. The rechargeable battery also doubles as a power bank for phones or headlamps in a pinch.
-
-**[Check this 20000mAh Auto-Oscillating Battery Operated Fan on Amazon](https://www.amazon.com/dp/B0BJV7J24Q?tag=camprally-20)**
 
 ## Nalgene Wide Mouth Water Bottle, 32 oz
 

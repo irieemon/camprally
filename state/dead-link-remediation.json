@@ -243,5 +243,31 @@
     },
     "status": "unlinked",
     "deadline": "2026-10-23T13:00:02.113Z"
+  },
+  "B0BJV7J24Q": {
+    "detectedAt": "2026-10-30T13:00:02.165Z",
+    "label": "20000mAh Auto-Oscillating Battery Operated Fan",
+    "anchorPrice": 37.99,
+    "anchorSource": "src/data/catalog.json (current)",
+    "aliases": [
+      "20000mAh Auto-Oscillating Battery Operated Fan"
+    ],
+    "attempts": 0,
+    "triedCandidates": [],
+    "candidate": null,
+    "perArticle": {
+      "best-portable-camping-fans": {
+        "outcome": "unlinked",
+        "why": "no replacement passed the filters (term \"auto-oscillating battery operated fan remotehooktimer\", $27-$40)",
+        "at": "2026-10-30T13:00:02.165Z"
+      },
+      "how-to-camp-in-hot-weather": {
+        "outcome": "unlinked",
+        "why": "no replacement passed the filters (term \"auto-oscillating battery operated fan remotehooktimer\", $27-$40)",
+        "at": "2026-10-30T13:00:02.165Z"
+      }
+    },
+    "status": "unlinked",
+    "deadline": "2026-11-02T13:00:02.165Z"
   }
 }

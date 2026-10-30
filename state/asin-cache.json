@@ -557,15 +557,9 @@
       "priceSource": "canopy"
     },
     "B0BJV7J24Q": {
-      "verdict": "LIVE",
+      "verdict": "DEAD",
       "title": "20000mAh Auto-Oscillating Battery Operated Fan with Remote/Hook/Timer, 58H Orange",
-      "checkedAt": "2026-10-14T13:00:00.581Z",
-      "price": "$37.99",
-      "priceValue": 37.99,
-      "rating": 4.7,
-      "ratingsTotal": 526,
-      "priceCheckedAt": "2026-10-14T13:00:00.581Z",
-      "priceSource": "canopy"
+      "checkedAt": "2026-10-30T13:00:00.512Z"
     },
     "B0F13TH5P4": {
       "verdict": "LIVE",

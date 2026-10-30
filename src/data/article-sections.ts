@@ -1257,7 +1257,6 @@ export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
       type: "spotlight",
       spotlightItem: {
         name: "Rechargeable Camping Fan with LED Lantern",
-        asin: "B0BJV7J24Q",
         why: "Best balance of features and battery life. 20000mAh runs 40+ hours on low, LED lantern built in, quiet motor, and remote control. The complete package for summer camping.",
         category: "Our Top Pick"
       }
