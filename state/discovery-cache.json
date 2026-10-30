@@ -18785,5 +18785,628 @@
         "ratingsTotal": 38345
       }
     ]
+  },
+  "auto-oscillating battery operated fan remotehooktimer|27|40": {
+    "term": "auto-oscillating battery operated fan remotehooktimer",
+    "min": 27,
+    "max": 40,
+    "fetchedAt": "2026-10-30T13:00:02.165Z",
+    "results": [
+      {
+        "asin": "B0GVB44KFC",
+        "title": "Rechargeable Camping Fan with 20000mAh Battery, 8-Speed Stepless Control, Remote, Auto Oscillating, Dual LED Light & Timer, Hanging Hook for Tent, Beach, Power Outage",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.8,
+        "ratingsTotal": 67
+      },
+      {
+        "asin": "B0CSK3XP5R",
+        "title": "ADUST Camping Fan Battery Powered 20000mAh Outdoor Tent Fans - Orange",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.7,
+        "ratingsTotal": 2292
+      },
+      {
+        "asin": "B0BXHH7J4N",
+        "title": "Battery Powered Fan - 9-Inch Rechargeable Fan Portable, 20000mAh(60Hrs) Camping Fans for Tent, Auto Oscillation Cordless, Tent Fans for Camping with Remote/light, 4 Speeds, 4 Timing, Outdoor",
+        "price": "$32.29",
+        "priceValue": 32.29,
+        "rating": 4.7,
+        "ratingsTotal": 1493
+      },
+      {
+        "asin": "B0GR7XHZXR",
+        "title": "Warmco D3 Portable Travel Fan 10000mAh, Ultra-Slim, 10-24H Battery Life",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.6,
+        "ratingsTotal": 4109
+      },
+      {
+        "asin": "B0BXHM547R",
+        "title": "Portable Rechargeable Fan - 9-Inch Camping Fan for Tent, 20000mAh(60Hrs) Battery Operated Fan for Camping, Auto Oscillation Cordless Fans, Tent Fans with Remote/Light, 4 Speeds, 4 Timing, Outdoor",
+        "price": "$32.29",
+        "priceValue": 32.29,
+        "rating": 4.6,
+        "ratingsTotal": 1853
+      },
+      {
+        "asin": "B0GTTY2BHC",
+        "title": "Camping Fan Rechargeable - 20000mAh Portable Cordless Battery Powered Fans with LED Lantern, Remote Auto Oscillating Table Fan Battery Operated Tent Fan for Travel Outdoor Fishing Bedroom Home (Blue)",
+        "price": "$31.69",
+        "priceValue": 31.69,
+        "rating": 4.6,
+        "ratingsTotal": 218
+      },
+      {
+        "asin": "B0GTV3BPSH",
+        "title": "Camping Fan Rechargeable - 20000mAh Cordless Battery Powered Portable Fan with LED Lantern, Remote Auto Oscillating Wireless Fan USB Rechargeable Tent Fan for Travel Outdoor Cooling Car Home (Black)",
+        "price": "$31.69",
+        "priceValue": 31.69,
+        "rating": 4.6,
+        "ratingsTotal": 218
+      },
+      {
+        "asin": "B0DR7G19TZ",
+        "title": "Battery Operated Fan 20000mAh Battery Powered Camping Fan - Black",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.6,
+        "ratingsTotal": 163
+      },
+      {
+        "asin": "B0DNMPZMRC",
+        "title": "Odoland Portable Camping Fan with Light, 20000mAh Rechargeable Battery Fan",
+        "price": "$35.09",
+        "priceValue": 35.09,
+        "rating": 4.5,
+        "ratingsTotal": 851
+      },
+      {
+        "asin": "B0GGGTPB69",
+        "title": "UUYEE Camping Fan Rechargeable, Battery Powered Fans - Green",
+        "price": "$27.99",
+        "priceValue": 27.99,
+        "rating": 4.5,
+        "ratingsTotal": 555
+      },
+      {
+        "asin": "B0GVM48PZC",
+        "title": "Camping Fan Rechargeable, 20000mAh Battery Powered Fan with Remote, Orange",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.5,
+        "ratingsTotal": 191
+      },
+      {
+        "asin": "B0F83SZ93K",
+        "title": "Portable Fan Rechargeable 20000mAh Cordless Battery Powered Camping Fan",
+        "price": "$27.98",
+        "priceValue": 27.98,
+        "rating": 4.4,
+        "ratingsTotal": 7001
+      },
+      {
+        "asin": "B0GT33HGT9",
+        "title": "Portable Camping Fan, 20000mAh Battery Operated Tent Fan with Light",
+        "price": "$28.07",
+        "priceValue": 28.07,
+        "rating": 4.4,
+        "ratingsTotal": 2594
+      },
+      {
+        "asin": "B0GLH78CSD",
+        "title": "Camping Fan with Detachable Battery,Rechargeable Fan with 127H Working Time",
+        "price": "$35.73",
+        "priceValue": 35.73,
+        "rating": 4.4,
+        "ratingsTotal": 279
+      },
+      {
+        "asin": "B0DHXSZN82",
+        "title": "Portable Clip on Fan, 10000mAh Rechargeable Battery Fan, Small Desk Fan",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 260
+      },
+      {
+        "asin": "B0GL1S2NY7",
+        "title": "40000mAh Clip on Fan - 150H Working Time Rechargeable Fans for Golf Cart",
+        "price": "$30.58",
+        "priceValue": 30.58,
+        "rating": 4.4,
+        "ratingsTotal": 146
+      },
+      {
+        "asin": "B088ZN47V8",
+        "title": "JISULIFE Portable Neck Fan, Hands-Free Bladeless, 5 Speeds, 4000 mAh",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.3,
+        "ratingsTotal": 64270
+      },
+      {
+        "asin": "B07C39RQ37",
+        "title": "COMFORT ZONE 16\" Oscillating Wall Mount Fan with Remote & Timer - White",
+        "price": "$38.00",
+        "priceValue": 38,
+        "rating": 4.3,
+        "ratingsTotal": 6874
+      },
+      {
+        "asin": "B0BVTHPXLB",
+        "title": "FRIZCOL 3-in-1 Camping Fan - Portable Fans Rechargeable - 24000mAh Battery Powered Fan with Light & Remote for Indoor, Outdoor, Tent, Travel, Fishing, Jobsite, Gifts for Men Dad Him - Green",
+        "price": "$29.97",
+        "priceValue": 29.97,
+        "rating": 4.3,
+        "ratingsTotal": 4259
+      },
+      {
+        "asin": "B088BKVZ8R",
+        "title": "Portable Fan, 31'' Oscillating Standing Floor Fan, 5400mAh Battery Powered Foldable Desk Fan with 4 Speeds＆8H Timer, Personal Floor Fan for Bedroom, Small Travel Fan for Outdoor",
+        "price": "$27.99",
+        "priceValue": 27.99,
+        "rating": 4.3,
+        "ratingsTotal": 1934
+      },
+      {
+        "asin": "B0C2M2CH14",
+        "title": "WESTTREE 20000mAh Battery powered fan Camping Fan essentials Portable fan Battery OperatedRechargeable Outdoor Tent with Light & Hook Personal USB Desk for Camping,Orange",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.3,
+        "ratingsTotal": 1850
+      },
+      {
+        "asin": "B0GR85GZQL",
+        "title": "36000mAh Camping Fan, Detachable Rechargeable Portable Battery Fan",
+        "price": "$32.38",
+        "priceValue": 32.38,
+        "rating": 4.3,
+        "ratingsTotal": 1462
+      },
+      {
+        "asin": "B0D14GYYG3",
+        "title": "AVV 20000mAh High Speed Portable Camping Rechargeable Fan with Remote Control, Battery Powered with Auto Oscillating with Camping Essentials Accessories for Outdoor, Beach, Patio, Tent, Black",
+        "price": "$27.06",
+        "priceValue": 27.06,
+        "rating": 4.3,
+        "ratingsTotal": 1361
+      },
+      {
+        "asin": "B0D1CJ79HP",
+        "title": "Belife X8 Portable Oscillating Camping Fan for Travel",
+        "price": "$36.99",
+        "priceValue": 36.99,
+        "rating": 4.3,
+        "ratingsTotal": 1254
+      },
+      {
+        "asin": "B0DSHV33VT",
+        "title": "Portable Oscillating Travel Fan, 10400mAh Rechargeable Battery with Remote",
+        "price": "$38.99",
+        "priceValue": 38.99,
+        "rating": 4.3,
+        "ratingsTotal": 1059
+      },
+      {
+        "asin": "B0DSHLXYW2",
+        "title": "Portable Rechargeable Fan,7200mAh Battery Oscillating Fan with Remote",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.3,
+        "ratingsTotal": 1059
+      },
+      {
+        "asin": "B001V99UYG",
+        "title": "Lasko Oscillating Adjustable Pedestal Stand Fan - 16” - 1646 - White",
+        "price": "$39.98",
+        "priceValue": 39.98,
+        "rating": 4.2,
+        "ratingsTotal": 7538
+      },
+      {
+        "asin": "B0G7YJ191J",
+        "title": "Portable Foldable Rechargeable Oscillating Fan - 8.6\" 8000mah Remote Fan",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.2,
+        "ratingsTotal": 6132
+      },
+      {
+        "asin": "B0DLJTLYLD",
+        "title": "Portable Fan for Travel, Rechargeable Oscillating Fan with Remote",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.2,
+        "ratingsTotal": 3129
+      },
+      {
+        "asin": "B0GHRHKWJD",
+        "title": "36000mAh Camping Fan,120H Rechargeable Fan Portable with Detachable Battery",
+        "price": "$38.69",
+        "priceValue": 38.69,
+        "rating": 4.2,
+        "ratingsTotal": 1326
+      },
+      {
+        "asin": "B0CS9FSW25",
+        "title": "10000mAh 30hrs Portable Fan Rechargeable, 8-Inch Battery Operated Clip on Fan, USB Fans, 4 Speeds, Strong Airflow, Sturdy Clamp for Golf Cart Office Desk Outdoor Travel Camping Bed Truck Treadmill",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.2,
+        "ratingsTotal": 755
+      },
+      {
+        "asin": "B0C433ZWBL",
+        "title": "WESTTREE Camping Fan Oscillating Portable Fan Battery Powered Fans Rechargeable Camping essentials with Light Hook, 270° Pivot USB Desk Battery Operated Outdoor Tent Travel",
+        "price": "$27.06",
+        "priceValue": 27.06,
+        "rating": 4.2,
+        "ratingsTotal": 560
+      },
+      {
+        "asin": "B0F58S88F3",
+        "title": "Minthouz Clip on Fan, 10000mAh Battery, with Remote Control, Quiet, Black",
+        "price": "$28.99",
+        "priceValue": 28.99,
+        "rating": 4.2,
+        "ratingsTotal": 519
+      },
+      {
+        "asin": "B0GLP1116V",
+        "title": "Rechargeable Solar Powered Camping Fan & Auto Oscillating, 【60H Runtime】Battery Powered Fan, Portable Outdoor Fan,5 Speeds,3 Lights,12H Timer for Travel, Fishing,Jobsite,Beach,Camping Essential",
+        "price": "$38.99",
+        "priceValue": 38.99,
+        "rating": 4.1,
+        "ratingsTotal": 111
+      },
+      {
+        "asin": "B0GJSW2MCH",
+        "title": "Desk Fan for Bedroom Air Circulator, Battery Powered Tabletop Fan, White",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 3.9,
+        "ratingsTotal": 105
+      }
+    ]
+  },
+  "camping gear storage|1|": {
+    "term": "camping gear storage",
+    "min": 1,
+    "fetchedAt": "2026-10-30T13:14:36.153Z",
+    "results": [
+      {
+        "asin": "B0BBVY7DNV",
+        "title": "Heavy Duty Extra Large Moving Bags W/Backpack Straps - Strong Handles & Zippers, Storage Totes For Space Saving, Fold Flat, Alternative to Box and Bin (Set of 6, Multicolor)",
+        "price": "$19.97",
+        "priceValue": 19.97,
+        "rating": 4.8,
+        "ratingsTotal": 9473
+      },
+      {
+        "asin": "B0BL7G4VK8",
+        "title": "Trunk Organizer and Storage with Built-In Insulated Leak Proof Cooler Bag",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.8,
+        "ratingsTotal": 1037
+      },
+      {
+        "asin": "B0GH9325VG",
+        "title": "Sterilite Industrial Storage Tote with Lids for Garage, 27 Gallon, 4-Pack",
+        "price": "$77.99",
+        "priceValue": 77.99,
+        "rating": 4.8,
+        "ratingsTotal": 392
+      },
+      {
+        "asin": "B0DT3X133H",
+        "title": "Ayaport Campsite Storage Strap Tent Camping Tree Hanging Organizer with 4 Carabiner Hooks 6 Stainless Steel S Hooks & 20 Separated Loops, Camping Set Travel & Outdoor Camping Gear",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.8,
+        "ratingsTotal": 96
+      },
+      {
+        "asin": "B08J49MZ13",
+        "title": "ZTSXLLIM Extension Cord Holder Organizer, Garage Organization and Storage",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.7,
+        "ratingsTotal": 6358
+      },
+      {
+        "asin": "B0F53LPDF5",
+        "title": "Tactical Camping Storage Bag 18L Utility Tote Bag Camp Kitchen and Trunk Organizer (Army Green)",
+        "price": "$26.95",
+        "priceValue": 26.95,
+        "rating": 4.7,
+        "ratingsTotal": 331
+      },
+      {
+        "asin": "B0BHHQVPYG",
+        "title": "CAMPINGMOON Camping Gear Lantern Storage Case T-8,T-9",
+        "price": "$14.95",
+        "priceValue": 14.95,
+        "rating": 4.7,
+        "ratingsTotal": 321
+      },
+      {
+        "asin": "B0D2DJKFX3",
+        "title": "Tactical Camping Storage Bag Utility Tote Bag Camp Kitchen & Trunk Organizer with Combination Lock and Shoulder Strap",
+        "price": "$38.95",
+        "priceValue": 38.95,
+        "rating": 4.7,
+        "ratingsTotal": 271
+      },
+      {
+        "asin": "B0CW9VZQWK",
+        "title": "ONETIGRIS Camping Storage Bag with Lid, 25L Collapsible Tactical Tote Bag for Outdoor Camping Travel Picnic Garage Trunk Organizer",
+        "price": "$43.98",
+        "priceValue": 43.98,
+        "rating": 4.7,
+        "ratingsTotal": 147
+      },
+      {
+        "asin": "B0G2M92M8M",
+        "title": "Tactical Camping Storage Bag 28L Utility Tote Bag Camp Kitchen and Trunk Organizer",
+        "price": "$32.25",
+        "priceValue": 32.25,
+        "rating": 4.7,
+        "ratingsTotal": 105
+      },
+      {
+        "asin": "B0DTVR9QZQ",
+        "title": "Gregory Alpaca Camp Gear Storage Box",
+        "price": "$159.90",
+        "priceValue": 159.9,
+        "rating": 4.7,
+        "ratingsTotal": 74
+      },
+      {
+        "asin": "B0GJCZPDWR",
+        "title": "Propane Tank Storage Bag, Holds 6 Refillable 1lb Propane Tanks for Camping",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.7,
+        "ratingsTotal": 71
+      },
+      {
+        "asin": "B0DLHDQ289",
+        "title": "Coghlan's Organizer Bags Set - 3 Sizes (7.5\"x3.5\", 10\"x8\", 12\"x10\") - Lightweight Oxford Ripstop with Mesh Front, Zippered Access - Ideal for Camping Gear, Travel Essentials, and Storage Solutions",
+        "price": "$22.50",
+        "priceValue": 22.5,
+        "rating": 4.7,
+        "ratingsTotal": 51
+      },
+      {
+        "asin": "B0B983KTRX",
+        "title": "DoYiKe Extra Large Storage Duffle Bag, Duffel Bag for Travel Black 130L",
+        "price": "$18.99",
+        "priceValue": 18.99,
+        "rating": 4.6,
+        "ratingsTotal": 3223
+      },
+      {
+        "asin": "B0H8Q2X23Y",
+        "title": "Keter Stack-N-Roll Outdoor Gear Organizer, 3-Piece Rolling Storage System",
+        "price": "$139.99",
+        "priceValue": 139.99,
+        "rating": 4.6,
+        "ratingsTotal": 1513
+      },
+      {
+        "asin": "B0992333CG",
+        "title": "TOPDesign 1-Pack Long Storage Duffle Bag – 46\" x 12.5\" x 12.5\", 30Gal",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.6,
+        "ratingsTotal": 1334
+      },
+      {
+        "asin": "B0BNQD343H",
+        "title": "Storage Bins 40 Gallon Heavy-Duty Plastic Storage Bins, 2 Pack Container Totes with Durable Lid and Secure Latching Buckles, Stackable, Tough Storage Containers for Garage and Metal Rack Organizing",
+        "price": "$55.99",
+        "priceValue": 55.99,
+        "rating": 4.6,
+        "ratingsTotal": 463
+      },
+      {
+        "asin": "B09ZD2FM87",
+        "title": "Tent & RV Camping Organizer with Zippered Flap, 9-Shelf Storage. Tent Organizer, RV Shoe Organizer, Dining shelter. Organize any other Camp Gear/Accessories (Patented - Licensed)",
+        "price": "$62.97",
+        "priceValue": 62.97,
+        "rating": 4.6,
+        "ratingsTotal": 440
+      },
+      {
+        "asin": "B09NB4H8YX",
+        "title": "Rubbermaid ActionPacker 35 Gallon, Made in USA, Lockable Plastic Storage Bin with Lid and Wheels- Outdoor, Industrial, Rugged, Camping Gear and Truck Bed Storage - Gray and Black",
+        "price": "$127.99",
+        "priceValue": 127.99,
+        "rating": 4.6,
+        "ratingsTotal": 428
+      },
+      {
+        "asin": "B0D2DKJBDP",
+        "title": "Tactical Camping Storage Bag 46L Structured and Foldable Tote Bag Camp Kitchen and Trunk Organizer (Coyote Brown)",
+        "price": "$43.95",
+        "priceValue": 43.95,
+        "rating": 4.6,
+        "ratingsTotal": 179
+      },
+      {
+        "asin": "B096SVRSJJ",
+        "title": "Kelty Car-Go-Box Camping Storage – 45L Gear Box + Trunk Organizer",
+        "price": "$114.95",
+        "priceValue": 114.95,
+        "rating": 4.6,
+        "ratingsTotal": 112
+      },
+      {
+        "asin": "B0DXF9SKLG",
+        "title": "Outdoor Storage Stuff Sacks, Camping Gear Organizer (Red, XXL)",
+        "price": "$9.49",
+        "priceValue": 9.49,
+        "rating": 4.6,
+        "ratingsTotal": 103
+      },
+      {
+        "asin": "B0F533YZK7",
+        "title": "Tactical Camping Storage Bag 9L Utility Tote Bag Camp Kitchen and Trunk Organizer (Army Green)",
+        "price": "$19.95",
+        "priceValue": 19.95,
+        "rating": 4.6,
+        "ratingsTotal": 88
+      },
+      {
+        "asin": "B08PF21KKL",
+        "title": "THANSTAR Collapsible Dish Drying Rack Portable Dinnerware Drainer Organizer for Kitchen RV Campers Travel Trailer Space Saving Kitchen Storage Tray",
+        "price": "$15.26",
+        "priceValue": 15.26,
+        "rating": 4.5,
+        "ratingsTotal": 6239
+      },
+      {
+        "asin": "B0B33H282H",
+        "title": "Rubbermaid 6-Pack Totes for Storage with Lids, Heavy Duty Plastic Storage Bins with Lids, Black Gray, 10 GAL - Stackable for Garage, Attic, Camping (10 GAL - 6 Pack Solid Black and Grey)",
+        "price": "$109.30",
+        "priceValue": 109.3,
+        "rating": 4.5,
+        "ratingsTotal": 1295
+      },
+      {
+        "asin": "B0C815L636",
+        "title": "Camping Chair Wall Storage for Garage, Metal Camping Chair Storage Rack Wall Holder, Floating Shelf, 4 Hooks, Stainless Steel, Beach Chair Rack, Umbrella Holder, Garage Chair Organizer, Matte Black",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.5,
+        "ratingsTotal": 292
+      },
+      {
+        "asin": "B0C4YP5372",
+        "title": "Camping Chair Rack for Garage Storage,Garage Organization Wall",
+        "price": "$28.99",
+        "priceValue": 28.99,
+        "rating": 4.5,
+        "ratingsTotal": 191
+      },
+      {
+        "asin": "B0DKJKPP1G",
+        "title": "Tactical Camping Storage Bag 14L Utility Tote Bag Camp Kitchen and Trunk Organizer (OD Green)",
+        "price": "$20.95",
+        "priceValue": 20.95,
+        "rating": 4.5,
+        "ratingsTotal": 162
+      },
+      {
+        "asin": "B0C1DHC3PN",
+        "title": "MTM MGC - The Mule Mobile Gear Crate, Army Green",
+        "price": "$101.34",
+        "priceValue": 101.34,
+        "rating": 4.5,
+        "ratingsTotal": 146
+      },
+      {
+        "asin": "B0DRT4W2F2",
+        "title": "Camp Kitchen Organizer with Hanging Storage & Paper Towel Holder",
+        "price": "$39.98",
+        "priceValue": 39.98,
+        "rating": 4.5,
+        "ratingsTotal": 133
+      },
+      {
+        "asin": "B095K6PQ1T",
+        "title": "Frelaxy Dry Bag 5 Pack, Ultralight Waterproof Dry Sack for Outdoor Use",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 2944
+      },
+      {
+        "asin": "B0FTZ5M84W",
+        "title": "Camping Water Container 2.1 Gallon Collapsible Water Jug with Spout - Reusable Plastic Flasks, Foldable Empty Gallon Jug for Water Storage, Water Bag for Outdoor Hiking Emergency Prep -1 Pack",
+        "price": "$7.99",
+        "priceValue": 7.99,
+        "rating": 4.4,
+        "ratingsTotal": 1393
+      },
+      {
+        "asin": "B0CL9RVZFW",
+        "title": "VEVOR 45L Collapsible Storage Bins with Lids 3 Packs, Stackable Utility Crates with Handles, Large Folding Containers for Organizing Tools, Snacks, Books, Food, Drinks, Camping & Transport",
+        "price": "$40.31",
+        "priceValue": 40.31,
+        "rating": 4.4,
+        "ratingsTotal": 490
+      },
+      {
+        "asin": "B0FPKM64XF",
+        "title": "DoYiKe Extra Large Canvas Travel Duffle Bag,Military Tent Duffel Storage",
+        "price": "$32.39",
+        "priceValue": 32.39,
+        "rating": 4.4,
+        "ratingsTotal": 355
+      },
+      {
+        "asin": "B0GN2P52XY",
+        "title": "2 Pcs 83 x 16 x 12 Inch, 260 L Large Storage Duffle Bag Black",
+        "price": "$55.99",
+        "priceValue": 55.99,
+        "rating": 4.4,
+        "ratingsTotal": 180
+      },
+      {
+        "asin": "B0CNV7S9ZW",
+        "title": "Camping Organizers and Storage, 4 Camping Packing Cubes with Carrying Bag",
+        "price": "$47.99",
+        "priceValue": 47.99,
+        "rating": 4.4,
+        "ratingsTotal": 88
+      },
+      {
+        "asin": "B0018E57PA",
+        "title": "Stansport Egg Container for Camping and Travel",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.3,
+        "ratingsTotal": 4208
+      },
+      {
+        "asin": "B0DK263QPV",
+        "title": "60L Foldable Seatable Camp Box Storage Bins w/Lids Trunk Organizer(Black)",
+        "price": "$59.99",
+        "priceValue": 59.99,
+        "rating": 4.3,
+        "ratingsTotal": 89
+      },
+      {
+        "asin": "B0DW3ZZ8QL",
+        "title": "Camping Gear Organizer, 5-in-one Tactical Travel Storage for Car Trunk, 45L",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.3,
+        "ratingsTotal": 63
+      },
+      {
+        "asin": "B0CHMFS9G2",
+        "title": "Collapsible Storage Bins Box with Lids and Handle, 30L Portable Plastic Storage Crate Containers Totes, Instacrate Stackable Foldable Camping Basket Supplies for Camp Fishing Car RV, Office (Black)",
+        "price": "$21.86",
+        "priceValue": 21.86,
+        "rating": 4.2,
+        "ratingsTotal": 85
+      },
+      {
+        "asin": "B0GQ6S8JZL",
+        "title": "Bike Storage Shed Tent, Outdoor Portable Bicycle Storage Sheds",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.1,
+        "ratingsTotal": 2339
+      }
+    ]
   }
 }

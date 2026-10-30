@@ -1,0 +1,39 @@
+{
+  "startedAt": "2026-10-30T13:00:00.119Z",
+  "finishedAt": "2026-10-30T13:15:53.191Z",
+  "outcome": "blocked",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B0BJV7J24Q",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-02T13:00:02.165Z",
+      "replacement": null
+    }
+  ],
+  "deadLinkEvent": {
+    "reason": "dead-link-unlinked",
+    "asin": "B0BJV7J24Q",
+    "label": "20000mAh Auto-Oscillating Battery Operated Fan",
+    "replacement": null,
+    "replacementLabel": null,
+    "swapped": [],
+    "unlinked": [
+      "best-portable-camping-fans",
+      "how-to-camp-in-hot-weather"
+    ],
+    "why": "best-portable-camping-fans: no replacement passed the filters (term \"auto-oscillating battery operated fan remotehooktimer\", $27-$40) | how-to-camp-in-hot-weather: no replacement passed the filters (term \"auto-oscillating battery operated fan remotehooktimer\", $27-$40)",
+    "reviews": {},
+    "retries": {},
+    "commit": "60d84c5",
+    "deployVerified": true
+  },
+  "pull": {
+    "status": "up-to-date"
+  },
+  "reason": "content-review",
+  "slug": "how-to-store-camping-gear-for-winter",
+  "attempts": 1,
+  "message": "Content review rejected how-to-store-camping-gear-for-winter (attempt 1 of 2).\nSpec quarantined to specs/quarantine/how-to-store-camping-gear-for-winter-2026-10-30T13-00-00-119Z.json\n\n\nhow-to-store-camping-gear-for-winter\n  ✗ [high] untreated-water (body)\n      suggests drinking from a natural source without treating it\n      \"Use winter to restock it so it's ready in spring: a blanket, a tarp, a headlamp with fresh batteries stored separately, paper towels, and a small first aid kit.\"\n  (model review unavailable — deterministic rules only)\n[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5699. To increase, visit\n[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 3573. To increase, vi\n"
+}

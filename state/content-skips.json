@@ -38,5 +38,10 @@
     "attempts": 1,
     "lastAt": "2026-10-28T13:02:15.174Z",
     "findings": "\nbest-camping-stocking-stuffers-under-25\n  ✗ [high] cotton-for-warmth (body)\n      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake\n      \"Whichever you choose, pair warmers with honest expectations. They make cold mornings more pleasant, while the sleeping bag, pad, and non-cotton layers do the re\"\n  (model review unavailable — deterministic rules only)\n[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 4567. To increase, visit\n[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2075. To increase, vi\n"
+  },
+  "how-to-store-camping-gear-for-winter": {
+    "attempts": 1,
+    "lastAt": "2026-10-30T13:15:53.188Z",
+    "findings": "\nhow-to-store-camping-gear-for-winter\n  ✗ [high] untreated-water (body)\n      suggests drinking from a natural source without treating it\n      \"Use winter to restock it so it's ready in spring: a blanket, a tarp, a headlamp with fresh batteries stored separately, paper towels, and a small first aid kit.\"\n  (model review unavailable — deterministic rules only)\n[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5699. To increase, visit\n[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 3573. To increase, vi\n"
   }
 }

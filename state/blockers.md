@@ -369,3 +369,18 @@ best-camping-stocking-stuffers-under-25
 [llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 4567. To increase, visit
 [llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2075. To increase, vi
 
+
+## 2026-10-30T13:00:00.119Z — content-review
+
+Content review rejected how-to-store-camping-gear-for-winter (attempt 1 of 2).
+Spec quarantined to specs/quarantine/how-to-store-camping-gear-for-winter-2026-10-30T13-00-00-119Z.json
+
+
+how-to-store-camping-gear-for-winter
+  ✗ [high] untreated-water (body)
+      suggests drinking from a natural source without treating it
+      "Use winter to restock it so it's ready in spring: a blanket, a tarp, a headlamp with fresh batteries stored separately, paper towels, and a small first aid kit."
+  (model review unavailable — deterministic rules only)
+[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5699. To increase, visit
+[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 3573. To increase, vi
+
