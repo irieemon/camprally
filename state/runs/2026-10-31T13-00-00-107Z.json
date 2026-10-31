@@ -1,0 +1,33 @@
+{
+  "startedAt": "2026-10-31T13:00:00.107Z",
+  "finishedAt": "2026-10-31T13:15:21.102Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B0BJV7J24Q",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-02T13:00:02.165Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "how-to-store-camping-gear-for-winter",
+  "commit": "df875cf",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving a0b99f8, expected df875cf) — 600s left\nnot live yet (serving a0b99f8, expected df875cf) — 584s left\ndeploy verified after 3 attempt(s): serving df875cf · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729674740109"
+  },
+  "remaining": 8
+}
