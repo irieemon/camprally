@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-store-camping-gear-for-winter": [
+    {
+      type: "product-grid",
+      title: "How to Store Camping Gear for Winter — So It Works Again in Spring — Quick Comparison",
+      items: [
+        { label: "Heavy Duty Extra Large Moving Bags W/Backpack Straps", category: "", icon: "🏕️", asin: "B0BBVY7DNV", link: "https://www.amazon.com/dp/B0BBVY7DNV?tag=camprally-20" },
+        { label: "Trunk Organizer and Storage with Built-In Insulated Leak", category: "", icon: "🏕️", asin: "B0BL7G4VK8", link: "https://www.amazon.com/dp/B0BL7G4VK8?tag=camprally-20" },
+        { label: "Sterilite Industrial Storage Tote with Lids for Garage", category: "", icon: "🏕️", asin: "B0GH9325VG", link: "https://www.amazon.com/dp/B0GH9325VG?tag=camprally-20" },
+        { label: "Ayaport Campsite Storage Strap Tent Camping Tree Hanging", category: "", icon: "🏕️", asin: "B0DT3X133H", link: "https://www.amazon.com/dp/B0DT3X133H?tag=camprally-20" },
+        { label: "ZTSXLLIM Extension Cord Holder Organizer", category: "", icon: "🏕️", asin: "B08J49MZ13", link: "https://www.amazon.com/dp/B08J49MZ13?tag=camprally-20" },
+        { label: "Tactical Camping Storage Bag 18L Utility Tote Bag Camp", category: "", icon: "🏕️", asin: "B0F53LPDF5", link: "https://www.amazon.com/dp/B0F53LPDF5?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-stocking-stuffers-under-25": [
     {
       type: "product-grid",

@@ -3,6 +3,58 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "northern-lights-camp",
+      "name": "Northern Lights Camp",
+      "subtitle": "the night the sky put on a show",
+      "image": "/images/merch/northern-lights-camp.jpg",
+      "imageKey": "6ae4d09f0a293a4c05b7bcee::2026-10-30T17:15:29.748Z::Natural|Sand|Light Blue",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-10-30T17:16:06.292Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/33730926",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/33730933",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/33730939",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/33730947",
+          "priceCents": 2799,
+          "price": "$27.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/33730954",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": false
+        }
+      ]
+    },
+    {
       "slug": "hot-tent-snowfall",
       "name": "Hot Tent Snowfall",
       "subtitle": "warm inside, snowing outside",
