@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-family-camping-tents-under-200": [
+    {
+      type: "product-grid",
+      title: "Best Family Camping Tents Under $200 — Room for Everyone Without the Big Price — Quick Comparison",
+      items: [
+        { label: "Coleman Sundome Camping Tent with Rainfly", category: "", icon: "🏕️", asin: "B0D7QFZNS7", link: "https://www.amazon.com/dp/B0D7QFZNS7?tag=camprally-20" },
+        { label: "FanttikOutdoor 4/6/8/10 Person Instant Tent for Camping", category: "", icon: "🏕️", asin: "B0CR144NCS", link: "https://www.amazon.com/dp/B0CR144NCS?tag=camprally-20" },
+        { label: "PORTAL Camping Tent", category: "", icon: "🏕️", asin: "B0CMH9W2S4", link: "https://www.amazon.com/dp/B0CMH9W2S4?tag=camprally-20" },
+        { label: "CAMPROS CP 8 Person Camping Tent", category: "", icon: "🏕️", asin: "B08G4R7SG5", link: "https://www.amazon.com/dp/B08G4R7SG5?tag=camprally-20" },
+        { label: "UNP 6 Person Tents for Camping Waterproof Family Cabin Tent", category: "", icon: "🏕️", asin: "B08NJG6Y9J", link: "https://www.amazon.com/dp/B08NJG6Y9J?tag=camprally-20" },
+        { label: "Amazon Basics Camping Tent", category: "", icon: "🏕️", asin: "B0DDSYHYVX", link: "https://www.amazon.com/dp/B0DDSYHYVX?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-store-camping-gear-for-winter": [
     {
       type: "product-grid",

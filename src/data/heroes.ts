@@ -135,6 +135,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-bear-canisters-budget": "/images/heroes/best-bear-canisters-budget.jpg",
   "best-camping-stocking-stuffers-under-25": "/images/heroes/best-camping-stocking-stuffers-under-25.jpg",
   "how-to-store-camping-gear-for-winter": "/images/heroes/how-to-store-camping-gear-for-winter.jpg",
+  "best-family-camping-tents-under-200": "/images/heroes/best-family-camping-tents-under-200.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
