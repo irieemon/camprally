@@ -1,0 +1,33 @@
+{
+  "startedAt": "2026-11-01T14:00:00.118Z",
+  "finishedAt": "2026-11-01T14:09:39.656Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B0BJV7J24Q",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-02T13:00:02.165Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-family-camping-tents-under-200",
+  "commit": "81f40e9",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving 3661d77, expected 81f40e9) — 600s left\nnot live yet (serving 3661d77, expected 81f40e9) — 584s left\ndeploy verified after 3 attempt(s): serving 81f40e9 · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729674829783"
+  },
+  "remaining": 7
+}

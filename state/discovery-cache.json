@@ -19688,5 +19688,117 @@
         "ratingsTotal": 104
       }
     ]
+  },
+  "6 person tent|1|200": {
+    "term": "6 person tent",
+    "min": 1,
+    "max": 200,
+    "fetchedAt": "2026-11-01T14:05:40.063Z",
+    "results": [
+      {
+        "asin": "B0D7QFZNS7",
+        "title": "Coleman Sundome Camping Tent with Rainfly, 2/3/4/6 Person Tent Sets Up in 10 Mins, Weatherproof Shelter for Camping, Festivals, Backyard, Sleepovers, & More",
+        "price": "$153.49",
+        "priceValue": 153.49,
+        "rating": 4.6,
+        "ratingsTotal": 23219
+      },
+      {
+        "asin": "B0CR144NCS",
+        "title": "FanttikOutdoor 4/6/8/10 Person Instant Tent for Camping Setup in 60s",
+        "price": "$129.19",
+        "priceValue": 129.19,
+        "rating": 4.5,
+        "ratingsTotal": 1425
+      },
+      {
+        "asin": "B0CMH9W2S4",
+        "title": "PORTAL Camping Tent, 6/8 /10 Person Instant Cabin Tent with Rainfly, Large Mesh Windows & Upgraded Ventilation, Portable Big Tents with Carry Bag for Family Outdoor, Backpacking, Hiking",
+        "price": "$109.99",
+        "priceValue": 109.99,
+        "rating": 4.5,
+        "ratingsTotal": 411
+      },
+      {
+        "asin": "B08G4R7SG5",
+        "title": "CAMPROS CP 8 Person Camping Tent, Room Divider, Rainfly, Weather Resistant",
+        "price": "$133.98",
+        "priceValue": 133.98,
+        "rating": 4.4,
+        "ratingsTotal": 5852
+      },
+      {
+        "asin": "B08NJG6Y9J",
+        "title": "UNP 6 Person Tents for Camping Waterproof Family Cabin Tent with Rainfly",
+        "price": "$113.99",
+        "priceValue": 113.99,
+        "rating": 4.4,
+        "ratingsTotal": 4370
+      },
+      {
+        "asin": "B0DDSYHYVX",
+        "title": "Amazon Basics Camping Tent, 3-Season Dome Design with Rainfly",
+        "price": "$73.49",
+        "priceValue": 73.49,
+        "rating": 4.4,
+        "ratingsTotal": 4292
+      },
+      {
+        "asin": "B0CH81KHF8",
+        "title": "EVER ADVANCED 6 Person Camping Tent, Blackout Instant Cabin Tent for Family",
+        "price": "$169.99",
+        "priceValue": 169.99,
+        "rating": 4.4,
+        "ratingsTotal": 1155
+      },
+      {
+        "asin": "B0D7QJ3SYW",
+        "title": "Coleman Sundome Dark Room 4/6 Person Tent, Blocks 90% of Sunlight to Keep Inside Cool, Weatherproof Tent with Rainfly Sets Up in Minutes",
+        "price": "$169.99",
+        "priceValue": 169.99,
+        "rating": 4.4,
+        "ratingsTotal": 69
+      },
+      {
+        "asin": "B09Y1MBMYY",
+        "title": "XX-Large 5-6 Person Waterproof Pop-Up Beach Tent",
+        "price": "$89.99",
+        "priceValue": 89.99,
+        "rating": 4.3,
+        "ratingsTotal": 615
+      },
+      {
+        "asin": "B0D7QL1LHC",
+        "title": "Coleman Skydome Camping Tent with 5 Minute Setup, 2/4/6/8 Person Weatherproof Tent with Rainfly & Carry Bag, 20% More Headroom Than Traditional Canopies",
+        "price": "$179.99",
+        "priceValue": 179.99,
+        "rating": 4.3,
+        "ratingsTotal": 477
+      },
+      {
+        "asin": "B0GTRFZLFS",
+        "title": "Camping Tent for 8 Person, 3 Room Family Tent with Rainfly",
+        "price": "$119.99",
+        "priceValue": 119.99,
+        "rating": 4.2,
+        "ratingsTotal": 108
+      },
+      {
+        "asin": "B0FYLR68MK",
+        "title": "CAMEL CROWN Tents for Camping 4/6 Person Tent Waterproof Easy Setup Backpacking Tents",
+        "price": "$65.99",
+        "priceValue": 65.99,
+        "rating": 4.1,
+        "ratingsTotal": 294
+      },
+      {
+        "asin": "B0DNPNX6J6",
+        "title": "CAMEL CROWN 4/6 Person Tent Waterproof Lightweight Portable Backpacking Tent for Outdoor Camping Hiking",
+        "price": "$110.99",
+        "priceValue": 110.99,
+        "rating": 4,
+        "ratingsTotal": 183
+      }
+    ]
   }
 }
