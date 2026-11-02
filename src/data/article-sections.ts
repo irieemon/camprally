@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "camp-table-and-chair-dupes": [
+    {
+      type: "product-grid",
+      title: "Camp Table and Chair Dupes — Budget Alternatives to the Popular Picks — Quick Comparison",
+      items: [
+        { label: "Coleman Outdoor Folding Table with snap-Together Design", category: "", icon: "🏕️", asin: "B005G0XFEM", link: "https://www.amazon.com/dp/B005G0XFEM?tag=camprally-20" },
+        { label: "ALPS Mountaineering Aluminum Roll-Top Camp Table with Fast", category: "", icon: "🏕️", asin: "B09L3HC2W4", link: "https://www.amazon.com/dp/B09L3HC2W4?tag=camprally-20" },
+        { label: "Folding Camping Table", category: "", icon: "🏕️", asin: "B0DPW7RFC7", link: "https://www.amazon.com/dp/B0DPW7RFC7?tag=camprally-20" },
+        { label: "Camping Table Folding Portable Camp Aluminum Table", category: "", icon: "🏕️", asin: "B0FWJMFRF9", link: "https://www.amazon.com/dp/B0FWJMFRF9?tag=camprally-20" },
+        { label: "Portal Outdoor Folding Portable Picnic Camping Table", category: "", icon: "🏕️", asin: "B07R3TFG3R", link: "https://www.amazon.com/dp/B07R3TFG3R?tag=camprally-20" },
+        { label: "Portal Camping Table", category: "", icon: "🏕️", asin: "B0D41S7856", link: "https://www.amazon.com/dp/B0D41S7856?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-family-camping-tents-under-200": [
     {
       type: "product-grid",
