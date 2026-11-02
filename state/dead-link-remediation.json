@@ -263,8 +263,8 @@
       },
       "how-to-camp-in-hot-weather": {
         "outcome": "unlinked",
-        "why": "no replacement passed the filters (term \"auto-oscillating battery operated fan remotehooktimer\", $27-$49)",
-        "at": "2026-11-01T14:00:00.528Z"
+        "why": "72h deadline passed with the swap still pending",
+        "at": "2026-11-02T14:00:00.543Z"
       }
     },
     "status": "unlinked",
