@@ -384,3 +384,18 @@ how-to-store-camping-gear-for-winter
 [llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5699. To increase, visit
 [llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 3573. To increase, vi
 
+
+## 2026-11-03T14:00:00.125Z — content-review
+
+Content review rejected best-hammock-underquilts-budget (attempt 1 of 2).
+Spec quarantined to specs/quarantine/best-hammock-underquilts-budget-2026-11-03T14-00-00-125Z.json
+
+
+best-hammock-underquilts-budget
+  ✗ [high] cotton-for-warmth (body)
+      recommends cotton for warmth — cotton holds moisture and loses insulation when damp, the classic cold-weather mistake
+      "Whatever you buy, build your setup in layers: an underquilt or pad beneath you, a tarp above, and a bag plus non-cotton clothing in between. Try it in the backy"
+  (model review unavailable — deterministic rules only)
+[llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 3430. To increase, vi
+[llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5470. To increase, visit
+
