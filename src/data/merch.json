@@ -3,6 +3,58 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "frosty-morning-tent",
+      "name": "Frosty Morning Tent",
+      "subtitle": "the zipper is the hardest part",
+      "image": "/images/merch/frosty-morning-tent.jpg",
+      "imageKey": "6aea24760f87bde364706a26::2026-11-03T18:14:31.576Z::Natural|Sand|Light Blue",
+      "fromCents": 1499,
+      "from": "$14.99",
+      "publishedAt": "2026-11-03T18:15:07.929Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/33918904",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/33918914",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/33918918",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/33918925",
+          "priceCents": 2799,
+          "price": "$27.99",
+          "varies": true
+        },
+        {
+          "kind": "mug",
+          "label": "Mug",
+          "url": "https://camprally.printify.me/product/33918931",
+          "priceCents": 1499,
+          "price": "$14.99",
+          "varies": false
+        }
+      ]
+    },
+    {
       "slug": "northern-lights-camp",
       "name": "Northern Lights Camp",
       "subtitle": "the night the sky put on a show",

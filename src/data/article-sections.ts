@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-hammock-underquilts-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Hammock Underquilts — Fixing Cold Butt Syndrome — Quick Comparison",
+      items: [
+        { label: "Gold Armour Hammock Underquilt for Single Hammocks", category: "", icon: "🏕️", asin: "B07C1XP4RF", link: "https://www.amazon.com/dp/B07C1XP4RF?tag=camprally-20" },
+        { label: "Wise Owl Outfitters Hammock Underquilt", category: "", icon: "🏕️", asin: "B08GD3MD7B", link: "https://www.amazon.com/dp/B08GD3MD7B?tag=camprally-20" },
+        { label: "onewind 12×10ft Ultralight Camping Hammock Tarp", category: "", icon: "🏕️", asin: "B087BL2S4Y", link: "https://www.amazon.com/dp/B087BL2S4Y?tag=camprally-20" },
+        { label: "DD Hammocks Underblanket", category: "", icon: "🏕️", asin: "B00KG9V93C", link: "https://www.amazon.com/dp/B00KG9V93C?tag=camprally-20" },
+        { label: "Camping Hammock", category: "", icon: "🏕️", asin: "B07P11P7H4", link: "https://www.amazon.com/dp/B07P11P7H4?tag=camprally-20" },
+        { label: "OneTigris Hideout Hammock Underquilt", category: "", icon: "🏕️", asin: "B08936QVJD", link: "https://www.amazon.com/dp/B08936QVJD?tag=camprally-20" },
+      ]
+    },
+  ],
   "camp-table-and-chair-dupes": [
     {
       type: "product-grid",
