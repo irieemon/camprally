@@ -1,0 +1,33 @@
+{
+  "startedAt": "2026-11-04T14:00:00.126Z",
+  "finishedAt": "2026-11-04T14:02:39.670Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B0BJV7J24Q",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-02T13:00:02.165Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-hammock-underquilts-budget",
+  "commit": "d1ba8c7",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving efcff4d, expected d1ba8c7) — 599s left\nnot live yet (serving efcff4d, expected d1ba8c7) — 584s left\ndeploy verified after 3 attempt(s): serving d1ba8c7 · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729675082215"
+  },
+  "remaining": 5
+}
