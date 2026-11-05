@@ -138,6 +138,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-family-camping-tents-under-200": "/images/heroes/best-family-camping-tents-under-200.jpg",
   "camp-table-and-chair-dupes": "/images/heroes/camp-table-and-chair-dupes.jpg",
   "best-hammock-underquilts-budget": "/images/heroes/best-hammock-underquilts-budget.jpg",
+  "best-camp-shoes-slippers-budget": "/images/heroes/best-camp-shoes-slippers-budget.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camp-shoes-slippers-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Camp Shoes and Booties — What to Wear Once the Boots Come Off — Quick Comparison",
+      items: [
+        { label: "The North Face Thermoball™ Traction Bootie", category: "", icon: "🏕️", asin: "B0971CCLJX", link: "https://www.amazon.com/dp/B0971CCLJX?tag=camprally-20" },
+        { label: "Premium Disposable Boot & Shoe Covers Booties", category: "", icon: "🏕️", asin: "B01CRLCSOK", link: "https://www.amazon.com/dp/B01CRLCSOK?tag=camprally-20" },
+        { label: "The North Face Women's Thermoball Traction Winter Bootie", category: "", icon: "🏕️", asin: "B0971DRC4H", link: "https://www.amazon.com/dp/B0971DRC4H?tag=camprally-20" },
+        { label: "The North Face Men’s Thermoball Traction Mule V Winter Shoe", category: "", icon: "🏕️", asin: "B0971DTNCC", link: "https://www.amazon.com/dp/B0971DTNCC?tag=camprally-20" },
+        { label: "Mens Winter Snow Boots Water Resistant Non Slip Faux Fur", category: "", icon: "🏕️", asin: "B0DC538K8V", link: "https://www.amazon.com/dp/B0DC538K8V?tag=camprally-20" },
+        { label: "Mens Merino Wool Crew Socks Thermal and Warm Socks", category: "", icon: "🏕️", asin: "B07F3FFTMK", link: "https://www.amazon.com/dp/B07F3FFTMK?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-hammock-underquilts-budget": [
     {
       type: "product-grid",
