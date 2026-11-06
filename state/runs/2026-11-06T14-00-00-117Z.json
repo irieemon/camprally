@@ -1,0 +1,33 @@
+{
+  "startedAt": "2026-11-06T14:00:00.117Z",
+  "finishedAt": "2026-11-06T14:10:47.757Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B0BJV7J24Q",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-02T13:00:02.165Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-camping-thermoses-under-30",
+  "commit": "e832f45",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving fa960da, expected e832f45) — 600s left\nnot live yet (serving fa960da, expected e832f45) — 584s left\nnot live yet (serving fa960da, expected e832f45) — 569s left\ndeploy verified after 4 attempt(s): serving e832f45 · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729675247198"
+  },
+  "remaining": 3
+}
