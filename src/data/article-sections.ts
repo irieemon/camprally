@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-thermoses-under-30": [
+    {
+      type: "product-grid",
+      title: "Best Camping Thermoses Under $30 — Hot Coffee at Dawn, Hot Soup at Dusk — Quick Comparison",
+      items: [
+        { label: "STANLEY Heritage Classic Vacuum 1.1 qt Bottle with Handle", category: "", icon: "🏕️", asin: "B000FZX93K", link: "https://www.amazon.com/dp/B000FZX93K?tag=camprally-20" },
+        { label: "Thermos 16oz Compact Stainless Steel Beverage Bottle", category: "", icon: "🏕️", asin: "B00JFB2RA6", link: "https://www.amazon.com/dp/B00JFB2RA6?tag=camprally-20" },
+        { label: "THERMOS Stainless King Vacuum-Insulated Compact Bottle", category: "", icon: "🏕️", asin: "B01DZQT0CE", link: "https://www.amazon.com/dp/B01DZQT0CE?tag=camprally-20" },
+        { label: "RAYMYLO Insulated Water Bottle 40 oz", category: "", icon: "🏕️", asin: "B0CBLY5GWQ", link: "https://www.amazon.com/dp/B0CBLY5GWQ?tag=camprally-20" },
+        { label: "THERMOS Stainless King Food Jar with Bowl", category: "", icon: "🏕️", asin: "B0H31NZNZ5", link: "https://www.amazon.com/dp/B0H31NZNZ5?tag=camprally-20" },
+        { label: "STANLEY Adventure To-Go Vacuum Bottle", category: "", icon: "🏕️", asin: "B0D4FG7KZ1", link: "https://www.amazon.com/dp/B0D4FG7KZ1?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camp-shoes-slippers-budget": [
     {
       type: "product-grid",
