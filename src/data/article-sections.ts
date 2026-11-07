@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-dish-washing-setup": [
+    {
+      type: "product-grid",
+      title: "Camp Dishwashing on a Budget — The Three-Bin Setup and Leave No Trace — Quick Comparison",
+      items: [
+        { label: "Tiawudi 2 Pack Collapsible Sink with 2.25 Gal / 8.5L Each", category: "", icon: "🏕️", asin: "B07VF44XFS", link: "https://www.amazon.com/dp/B07VF44XFS?tag=camprally-20" },
+        { label: "2.4Gal Collapsible Dish Basin with Drain Plug", category: "", icon: "🏕️", asin: "B0CRVV9HVG", link: "https://www.amazon.com/dp/B0CRVV9HVG?tag=camprally-20" },
+        { label: "2 Pack Collapsible Sink with 2.25 Gal / 8.5L Each", category: "", icon: "🏕️", asin: "B08DTPTYW6", link: "https://www.amazon.com/dp/B08DTPTYW6?tag=camprally-20" },
+        { label: "Collapsible Wash Basin", category: "", icon: "🏕️", asin: "B0CMQK83TV", link: "https://www.amazon.com/dp/B0CMQK83TV?tag=camprally-20" },
+        { label: "OXO Outdoor Kitchen Gear Wash", category: "", icon: "🏕️", asin: "B0CZ7J4BR9", link: "https://www.amazon.com/dp/B0CZ7J4BR9?tag=camprally-20" },
+        { label: "Collapsible Dish Basin with Drain Plug", category: "", icon: "🏕️", asin: "B09MQM1XG1", link: "https://www.amazon.com/dp/B09MQM1XG1?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-thermoses-under-30": [
     {
       type: "product-grid",
