@@ -269,5 +269,27 @@
     },
     "status": "unlinked",
     "deadline": "2026-11-02T13:00:02.165Z"
+  },
+  "B00BPWDMOS": {
+    "detectedAt": "2026-11-07T14:00:00.579Z",
+    "label": "Coleman Broadband Mesh Quad Camping Chair with Carry Bag",
+    "anchorPrice": 14.97,
+    "anchorSource": "git df875cf^:src/data/catalog.json",
+    "aliases": [
+      "Coleman Broadband Mesh Quad Camping Chair with Carry Bag"
+    ],
+    "attempts": 1,
+    "triedCandidates": [
+      "B0D49GHRQF"
+    ],
+    "candidate": null,
+    "perArticle": {
+      "budget-camp-chairs-that-last": {
+        "outcome": "pending",
+        "why": "writer: not the same kind — The new product is a clip-on cup holder and phone organizer for a chair's armrest, not a camping chair, so it cannot rep"
+      }
+    },
+    "status": "pending",
+    "deadline": "2026-11-10T14:00:00.579Z"
   }
 }
