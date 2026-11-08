@@ -9221,6 +9221,105 @@ Whatever you choose, the method matters more than the gear: scrape, wash, rinse,
 *Related guides: [Best Camp Kitchen Organization — Pack, Cook, and Clean Smarter](/blog/best-camp-kitchen-organization) · [Cheap Camping Cookware That Actually Works](/blog/budget-camping-cookware-that-works) · [Affordable Water Filtration for Camping](/blog/affordable-water-filtration-camping)*
     `
   },
+
+  {
+    id: "art-096",
+    slug: "thanksgiving-camping-guide",
+    title: "Thanksgiving Camping — Cooking a Holiday Meal at a Campsite",
+    excerpt: "Planning a Thanksgiving camping trip? Learn how to handle cold November nights, pick a campsite-friendly holiday menu, and decide which gear is worth packing before you go.",
+    category: "Planning",
+    date: "2026-11-08",
+    author: "Camp Rally Team",
+    readTime: "7 min read",
+    content: `
+# Thanksgiving Camping — Cooking a Holiday Meal at a Campsite
+
+A Thanksgiving camping trip trades the crowded dining room for a picnic table, a fire ring, and a sky that gets dark before dinner is done. It works well if you plan around two realities of November camping: the nights are long and cold, and every bit of cooking happens outdoors. This guide covers cold-night planning, a menu you can actually pull off at a campsite, and a handful of inexpensive extras that keep the table fun.
+
+## Plan for the Cold Night First
+
+The meal gets the attention, but the night decides whether anyone wants to do this again. Late November often brings near-freezing or below-freezing lows in much of the country. Check the forecast low for your specific campground, not the nearest city.
+
+**Understand sleeping bag ratings.** Many bags list a comfort rating and a limit rating, and they mean different things. The comfort rating is roughly the temperature at which an average sleeper stays comfortable lying relaxed. The limit rating is the lowest temperature at which a person can sleep curled up without getting dangerously cold. It is not a comfortable night. Plan around the comfort rating and choose a bag whose comfort figure sits below your forecast low. If your bag only lists one number, assume it is closer to the limit than to comfort.
+
+**Insulate from the ground.** Cold ground pulls heat out of you faster than cold air does. An insulated sleeping pad with a meaningful R-value matters as much as the bag. An uninsulated air mattress can feel colder than sleeping on a foam pad. A mylar or space blanket is an emergency signaling and wind item, not insulation and not a ground layer, so don't count it toward warmth.
+
+**Dress in wool or synthetics.** Cotton holds moisture and loses its warmth when damp, so leave cotton hoodies and jeans for daytime around camp, not for sleeping or for evening layers. Change into dry socks and a dry base layer before bed. Eat something warm and drink water before you turn in.
+
+For the full layering system and the common mistakes, read [How to Stay Warm Camping — The Layers and the Mistakes](/blog/how-to-stay-warm-camping-cold-nights).
+
+## A Realistic Campsite Thanksgiving Menu
+
+A whole roast turkey is not a campsite project. You don't have an oven, and the fire won't hold steady heat for hours. Scale the meal to what a camp stove, a grill grate over the fire ring, and a cast iron pan can handle.
+
+- **Turkey:** Bring turkey tenderloins or a boneless breast, brined or marinated at home and packed sealed in the cooler. Sear them in cast iron at the picnic table on your camp stove, then finish over moderate coals on the fire ring grate. Use a meat thermometer and cook poultry to the USDA-recommended internal temperature. Thick cuts take longer than you expect when the air is cold.
+- **Stuffing:** Boxed stuffing only needs boiling water, butter, and a pot. Stir in sautéed onion and celery you chopped at home.
+- **Potatoes:** Wrap sweet potatoes in heavy foil and bury them at the edge of the coals. Mashed potatoes from a pouch are an honest backup.
+- **Green beans:** Canned or pre-trimmed fresh, warmed in a pan with bacon you cooked first.
+- **Cranberry sauce:** Canned. Nobody will complain.
+- **Pie:** Buy it, bring it, and warm slices in a covered pan over low heat if you like.
+
+Prep everything you can at home: chop vegetables, measure dry ingredients into bags, and pre-cook the bacon. Cold fingers make knife work slower and riskier. Cook in sequence so the meat rests while sides finish, and keep a lid on every pot because cold air steals heat fast.
+
+Bring drinking water from home or treat any water you collect at the site by filtering or boiling it before you drink it or cook with it. For a cheap way to plan the rest of the weekend's meals, see [7 Days of Budget Camping Meals — $50 Total Food Budget](/blog/camping-meal-plans-budget-50).
+
+**After dinner:** Wash up promptly and pack all food, trash, and scented items (toothpaste, lip balm, coolers) into the campground food locker or your trunk overnight. Never keep them where you sleep. Animals are still active in November, and a holiday spread smells like a holiday spread to a raccoon too.
+
+## How to Choose Thanksgiving Extras for Camp
+
+The extras below aren't survival gear. They make the long, dark evening feel like a holiday. When picking, think about:
+
+- **Wind and moisture.** Paper and stickers need weighting down or a covered spot. Clips or a few stones on the corners help.
+- **Daylight.** Activities that work under a headlamp or lantern stretch further after sunset.
+- **Cleanup.** Anything that sheds glitter or confetti is a Leave No Trace problem. Stickers and paper that pack out cleanly are better.
+- **Age range.** Mix items for small kids with something adults will play too.
+- **Seating comfort.** People sit for a long time on Thanksgiving. A chair that keeps you off the cold ground is worth thinking about.
+
+## The Picks
+
+### Family Fun Thanksgiving Activity Poster
+
+This turkey-themed paper banner is listed at 31.5 by 72 inches and doubles as a coloring sheet or a table cover. Rolled out on the picnic table, it gives kids something to do while the turkey finishes and protects the table surface from drips. Tape or clip the edges so wind doesn't lift it, and pack it out in your trash bag when the meal is done.
+
+**[Check the Family Fun Thanksgiving Activity Poster on Amazon](https://www.amazon.com/dp/B0CFKNSNVN?tag=camprally-20)**
+
+### Thanksgiving Crafts for Kids DIY Turkey Stickers
+
+This set is listed at 24 sheets of make-a-turkey stickers. Stickers suit camp better than glue and glitter: nothing spills, nothing blows away in pieces, and finished turkeys can go on paper plates as place cards. There's enough for several kids or a group trip.
+
+**[Check the Thanksgiving Crafts for Kids DIY Turkey Stickers on Amazon](https://www.amazon.com/dp/B0D8KWHPM5?tag=camprally-20)**
+
+### Gobble Gobble Mad Libs
+
+A Thanksgiving-themed Mad Libs book is small, light, and works for mixed ages, since younger kids supply words and older ones read the results aloud. It's a good fit for the stretch after dark when everyone is gathered by the fire ring and nobody wants to move. One headlamp is all you need to play.
+
+**[Check the Gobble Gobble Mad Libs on Amazon](https://www.amazon.com/dp/0843172924?tag=camprally-20)**
+
+### Make-a-Turkey Stickers Thanksgiving Party Favors
+
+A second make-a-turkey sticker option, sold as party favors. It's useful if you want a separate set for a group campsite or as small take-home favors for visiting families. The listing doesn't specify a sheet count in its title, so check the details before buying if quantity matters.
+
+**[Check the Make-a-Turkey Stickers Thanksgiving Party Favors on Amazon](https://www.amazon.com/dp/B0C85ZRJ8L?tag=camprally-20)**
+
+### Ogrmar Plush Turkey Hat
+
+This listing is a two-pack of plush turkey hats, which makes for a silly photo and a good laugh at the picnic table. Treat them as costume pieces, not warm hats. For actual warmth at night, wear a wool or synthetic beanie.
+
+**[Check the Ogrmar Plush Turkey Hat on Amazon](https://www.amazon.com/dp/B0D69WKFHJ?tag=camprally-20)**
+
+### Heated Padded Double Camping Chair
+
+This two-person padded chair is listed with a 900-pound capacity, a heated feature, and a 2-in-1 carry bag. A double seat fits couples or a parent and kid during a long evening outdoors, and padding keeps you off cold metal and fabric. Read the listing to confirm what powers the heat and what you'll need to run it, and treat the heat as a comfort feature, not a substitute for proper layers. It's a chair for camp evenings, not a sleeping setup.
+
+**[Check the Heated Padded Double Camping Chair on Amazon](https://www.amazon.com/dp/B0H8SV2MBX?tag=camprally-20)**
+
+## Verdict
+
+A good Thanksgiving camping trip comes down to sleeping warm and cooking simple. Get the cold-night basics right first: a bag chosen by its comfort rating, an insulated pad, and wool or synthetic layers instead of cotton. Then build a menu around tenderloins, boxed stuffing, foil-packet potatoes, and a store-bought pie, all cooked at the picnic table or over the fire ring. For the long evening, the activity poster and sticker sets keep kids busy, Mad Libs pulls in the adults, and the heated double chair is the comfort splurge if your group lingers outdoors after dark. Pack food into the locker or trunk before bed, and you'll wake up ready for leftovers at breakfast.
+
+*Related guides: [Budget Cast Iron for Camping — What's Worth the Weight](/blog/best-camping-cast-iron-budget) · [Best Camping Thermoses Under $30 — Hot Coffee at Dawn, Hot Soup at Dusk](/blog/best-camping-thermoses-under-30) · [Winter Camping for Beginners — What to Get Right Before You Go](/blog/winter-camping-for-beginners)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

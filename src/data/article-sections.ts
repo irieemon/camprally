@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "thanksgiving-camping-guide": [
+    {
+      type: "product-grid",
+      title: "Thanksgiving Camping — Cooking a Holiday Meal at a Campsite — Quick Comparison",
+      items: [
+        { label: "Family Fun Thanksgiving Activity Poster", category: "", icon: "🏕️", asin: "B0CFKNSNVN", link: "https://www.amazon.com/dp/B0CFKNSNVN?tag=camprally-20" },
+        { label: "Thanksgiving Crafts for Kids", category: "", icon: "🏕️", asin: "B0D8KWHPM5", link: "https://www.amazon.com/dp/B0D8KWHPM5?tag=camprally-20" },
+        { label: "Gobble Gobble Mad Libs: World's Greatest Word Game About", category: "", icon: "🏕️", asin: "0843172924", link: "https://www.amazon.com/dp/0843172924?tag=camprally-20" },
+        { label: "Make-a-Turkey Stickers Thanksgiving Party Favors Supplies", category: "", icon: "🏕️", asin: "B0C85ZRJ8L", link: "https://www.amazon.com/dp/B0C85ZRJ8L?tag=camprally-20" },
+        { label: "Ogrmar 2PCS Plush Turkey Hat Funny Turkey Headwear", category: "", icon: "🏕️", asin: "B0D69WKFHJ", link: "https://www.amazon.com/dp/B0D69WKFHJ?tag=camprally-20" },
+        { label: "Heated Padded Double Camping Chair with 2 in 1 Carry Bag", category: "", icon: "🏕️", asin: "B0H8SV2MBX", link: "https://www.amazon.com/dp/B0H8SV2MBX?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-dish-washing-setup": [
     {
       type: "product-grid",

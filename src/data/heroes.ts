@@ -141,6 +141,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-camp-shoes-slippers-budget": "/images/heroes/best-camp-shoes-slippers-budget.jpg",
   "best-camping-thermoses-under-30": "/images/heroes/best-camping-thermoses-under-30.jpg",
   "best-camping-dish-washing-setup": "/images/heroes/best-camping-dish-washing-setup.jpg",
+  "thanksgiving-camping-guide": "/images/heroes/thanksgiving-camping-guide.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
