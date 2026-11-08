@@ -291,5 +291,97 @@
     },
     "status": "pending",
     "deadline": "2026-11-10T14:00:00.579Z"
+  },
+  "B0FCFCNSZH": {
+    "detectedAt": "2026-11-08T14:00:00.509Z",
+    "label": "ZioeYiue Camping Fan Rechargeable",
+    "anchorPrice": 21.99,
+    "anchorSource": "git d1ba8c7^:src/data/catalog.json",
+    "aliases": [
+      "ZioeYiue Camping Fan Rechargeable"
+    ],
+    "attempts": 0,
+    "triedCandidates": [],
+    "candidate": {
+      "asin": "B0F43SPZCY",
+      "title": "Portable Handheld Turbo Fan - 5 Gear High Speed 4000mAh Rechargeable Mini Personal Hand Fan Blow Cold Air, Battery Operated Travel Essentials, Beach Vacation, Gifts for Women, Men (Black)",
+      "rating": 4.7,
+      "ratingsTotal": 5202,
+      "priceValue": 19.99,
+      "facts": {
+        "asin": "B0F43SPZCY",
+        "title": "Portable Handheld Turbo Fan - 5 Gear High Speed 4000mAh Rechargeable Mini Personal Hand Fan Blow Cold Air, Battery Operated Travel Essentials, Beach Vacation, Gifts for Women, Men (Black)",
+        "brand": "Bearwind",
+        "bullets": [
+          "Ultimate Cooling Experience: BEARWIND handheld turbo fan uses a 4th-gen high-speed airflow system, 7 blades turbo design, and advanced brushless motor. With speeds up to 9 m/s, 3x stronger than ordinary fans, it’s ideal for travel and instant cooling",
+          "5 Gear Adjustable Speeds: Customize your cooling with 5 airflow settings. Perfect for work, travel, beach vacations, camping, or outdoor events. Enjoy personalized comfort everywhere",
+          "Extended Battery Life: Rechargeable battery provides up to 12 hours of cooling. Low settings last an entire night, highest speed last through an entire concert. Fast USB-C charging, fully charged in just 3 hours",
+          "3-in-1 Versatile Design: 180° foldable design with adjustable lanyard. Use it as a handheld fan, a desk fan, or a neck fan. Compact (6.7 inches) and lightweight (0.42 lb), easily fits pockets or purses",
+          "Stylish & Perfect Gift: Crafted elegantly in Black & Silver or Pink & Rose Gold. Ideal summer gifts for men, women, kids, elderly, makeup, eyelash, hot flashes, Christmas, white elephant gift"
+        ],
+        "itemWeight": "6.56 ounces",
+        "isInStock": true,
+        "fetchedAt": "2026-11-08T14:00:00.509Z",
+        "source": "canopy amazonProduct"
+      }
+    },
+    "perArticle": {
+      "best-portable-camping-fans": {
+        "outcome": "pending",
+        "why": "review returned fewer than 2 passes",
+        "review": {
+          "candidate": "B0F43SPZCY",
+          "seats": [
+            {
+              "seat": "minimax/MiniMax-M3",
+              "verdict": "flag-low",
+              "severity": "low",
+              "findings": [
+                {
+                  "severity": "low",
+                  "quote": "The ZioeYiue is the budget pick.",
+                  "problem": "The edit replaced the ZioeYiue with the Portable Handheld Turbo Fan, so this unchanged sentence now refers to a discontinued product that is no longer among the guide's picks."
+                },
+                {
+                  "severity": "low",
+                  "quote": "Every fan in this guide runs on a built-in rechargeable battery rather than disposable batteries, and that's deliberate.",
+                  "problem": "The edit replaced the ZioeYiue with the Portable Handheld Turbo Fan, whose listing states that it is battery operated but does not specify a built-in rechargeable battery, so this categorical statement is no longer supported for every pick."
+                }
+              ]
+            },
+            {
+              "seat": "openrouter/meta/muse-glimmer-30b",
+              "verdict": "no-answer",
+              "severity": null,
+              "findings": [],
+              "error": "unreachable after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5465. To increase, visit"
+            },
+            {
+              "seat": "openrouter/deepseek/deepseek-v4-pro",
+              "verdict": "no-answer",
+              "severity": null,
+              "findings": [],
+              "error": "unreachable after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2522. To increase, vi"
+            }
+          ]
+        },
+        "retry": [
+          {
+            "attempt": 1,
+            "stage": "mechanical",
+            "reasons": [
+              "content#40: added a call to action the original did not have — \"**[Check the Portable Handheld Turbo Fan on Amazon](https://www.amazon.com/dp/B0F43SPZCY?tag=camprally-20)**\""
+            ]
+          },
+          {
+            "attempt": 2,
+            "stage": "defer",
+            "reasons": []
+          }
+        ]
+      }
+    },
+    "status": "pending",
+    "deadline": "2026-11-11T14:00:00.509Z"
   }
 }
