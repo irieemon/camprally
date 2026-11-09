@@ -142,6 +142,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-camping-thermoses-under-30": "/images/heroes/best-camping-thermoses-under-30.jpg",
   "best-camping-dish-washing-setup": "/images/heroes/best-camping-dish-washing-setup.jpg",
   "thanksgiving-camping-guide": "/images/heroes/thanksgiving-camping-guide.jpg",
+  "best-camping-string-lights": "/images/heroes/best-camping-string-lights.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-string-lights": [
+    {
+      type: "product-grid",
+      title: "Best Camping String Lights — Rechargeable Ambience That Lasts the Night — Quick Comparison",
+      items: [
+        { label: "Outdoor String Lights", category: "", icon: "🏕️", asin: "B09TGSQKRF", link: "https://www.amazon.com/dp/B09TGSQKRF?tag=camprally-20" },
+        { label: "2Pack Camping String Lights", category: "", icon: "🏕️", asin: "B0DRX3BQD4", link: "https://www.amazon.com/dp/B0DRX3BQD4?tag=camprally-20" },
+        { label: "2-Pack Camping String Lights 4 in 1", category: "", icon: "🏕️", asin: "B0FX11VB38", link: "https://www.amazon.com/dp/B0FX11VB38?tag=camprally-20" },
+        { label: "Camping String Lights", category: "", icon: "🏕️", asin: "B0FWZY49LW", link: "https://www.amazon.com/dp/B0FWZY49LW?tag=camprally-20" },
+        { label: "Brightech Ambience Pro USB Powered String Lights", category: "", icon: "🏕️", asin: "B07SW6Y6D3", link: "https://www.amazon.com/dp/B07SW6Y6D3?tag=camprally-20" },
+        { label: "Tenmiro 200FT Outdoor String Lights", category: "", icon: "🏕️", asin: "B0CQXP923Q", link: "https://www.amazon.com/dp/B0CQXP923Q?tag=camprally-20" },
+      ]
+    },
+  ],
   "thanksgiving-camping-guide": [
     {
       type: "product-grid",
