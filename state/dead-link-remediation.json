@@ -383,5 +383,31 @@
     },
     "status": "pending",
     "deadline": "2026-11-11T14:00:00.509Z"
+  },
+  "B0DS5CRTGK": {
+    "detectedAt": "2026-11-09T14:00:00.524Z",
+    "label": "Camping Fan with Light",
+    "anchorPrice": 25.99,
+    "anchorSource": "git 1b6dcdc^:src/data/catalog.json",
+    "aliases": [
+      "Camping Fan with Light"
+    ],
+    "attempts": 1,
+    "triedCandidates": [
+      "B0CSK7SQT3"
+    ],
+    "candidate": null,
+    "perArticle": {
+      "best-portable-camping-fans": {
+        "outcome": "pending",
+        "why": "writer: not the same kind — The TJOY Candelabra LED Bulbs are mains-powered E12 screw-in bulbs for chandeliers and sconces, not a rechargeable or ba"
+      },
+      "how-to-camp-in-hot-weather": {
+        "outcome": "pending",
+        "why": "writer: not the same kind — The TJOY Candelabra LED Bulbs are mains-powered E12 screw-in bulbs for chandeliers and sconces, not a rechargeable or ba"
+      }
+    },
+    "status": "pending",
+    "deadline": "2026-11-12T14:00:00.524Z"
   }
 }

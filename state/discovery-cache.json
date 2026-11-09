@@ -21817,5 +21817,567 @@
         "ratingsTotal": 112
       }
     ]
+  },
+  "fan light|18|34": {
+    "term": "fan light",
+    "min": 18,
+    "max": 34,
+    "fetchedAt": "2026-11-09T14:00:00.524Z",
+    "results": [
+      {
+        "asin": "B0CSK7SQT3",
+        "title": "TJOY Candelabra LED Bulbs, E12 60W Equivalent Dimmable for Chandelier Light",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.7,
+        "ratingsTotal": 759
+      },
+      {
+        "asin": "B001R1RXUG",
+        "title": "Honeywell TurboForce Air Circulator, Small Tabletop Fan, Quiet Personal Fan for Home or Office, 3 Speeds, 90 Degree Pivoting Head, Black, HT900",
+        "price": "$19.29",
+        "priceValue": 19.29,
+        "rating": 4.6,
+        "ratingsTotal": 160791
+      },
+      {
+        "asin": "B085L71L9R",
+        "title": "AMACOOL Battery Operated Stroller Fan, Portable Clip On Fan Rechargeable",
+        "price": "$23.99",
+        "priceValue": 23.99,
+        "rating": 4.6,
+        "ratingsTotal": 56428
+      },
+      {
+        "asin": "B0CQ2RMMFN",
+        "title": "Momcozy 8000mAh Portable Stroller Fan | 27H Ultra-long Battery Life",
+        "price": "$25.49",
+        "priceValue": 25.49,
+        "rating": 4.4,
+        "ratingsTotal": 5548
+      },
+      {
+        "asin": "B0G78QYZJT",
+        "title": "Ceiling Fans with Lights,36\" Low Profile Ceiling Fan （Black）",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.4,
+        "ratingsTotal": 761
+      },
+      {
+        "asin": "B0FN6VWF55",
+        "title": "42'' Black Low Profile Ceiling Fans with Lights and Remote Control",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 625
+      },
+      {
+        "asin": "B0D9SMPG98",
+        "title": "Small Ceiling Fan with Light - 26 Inch Flush Mount Ceiling Fan with Lights and Remote, Low Profile Ceiling Fans with 3 Reversible Blades, 6 Wind Speeds, Black Ceiling Fans for Bedroom",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 617
+      },
+      {
+        "asin": "B0FND4GGLC",
+        "title": "Ceiling Fans with Lights - 42 Inch Low Profile Flush Ceiling Fan with Light and Remote Control, Flush Mount, 6-Speed, 3CCT, Noiseless,Timer, Black Ceiling Fans for Bedroom Indoor/Outdoor Use",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.4,
+        "ratingsTotal": 420
+      },
+      {
+        "asin": "B0GKT4XMW1",
+        "title": "36 inch Plug-in Ceiling Fan Light with Remote Control,gazebo fan light,3 Blade, Dimmable 3CCT LED, Reversible,Portable Hook Design with16ft Cable for Bedroom Garage Tent Porch Kitchen",
+        "price": "$29.90",
+        "priceValue": 29.9,
+        "rating": 4.4,
+        "ratingsTotal": 358
+      },
+      {
+        "asin": "B0BVTHPXLB",
+        "title": "FRIZCOL 3-in-1 Camping Fan - Portable Fans Rechargeable - 24000mAh Battery Powered Fan with Light & Remote for Indoor, Outdoor, Tent, Travel, Fishing, Jobsite, Gifts for Men Dad Him - Green",
+        "price": "$33.98",
+        "priceValue": 33.98,
+        "rating": 4.3,
+        "ratingsTotal": 4300
+      },
+      {
+        "asin": "B0CWRKVL3D",
+        "title": "Socket Ceiling Fan Light,Bulb Socket Fan with Remote,Dimmable E26 Base Ceiling Fans with Lights for Bedroom,Screw in Fan and Light Combo,Mini Small Ceiling Fan with Light,Recessed Light Fan Lamp",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.3,
+        "ratingsTotal": 252
+      },
+      {
+        "asin": "B0G8F4JXJH",
+        "title": "Outdoor Gazebo Ceiling Fan with Light and Remote, 28 Inch, Black",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.3,
+        "ratingsTotal": 252
+      },
+      {
+        "asin": "B0FCLX869Z",
+        "title": "E26 Socket Fan Light, Ceiling Fan Light with Remote, LED Light 3 Colors",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.3,
+        "ratingsTotal": 143
+      },
+      {
+        "asin": "B0GY934HBM",
+        "title": "Ceiling Fan with Light for Bedroom 12 Inch, E26 Screw in Socket Fan with Remote Control, Dimmable LED Light 3000K-6500K, 4 Speed Small Flush Mount Ceiling Fan for Kitchen, Closet, Living Room",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.3,
+        "ratingsTotal": 65
+      },
+      {
+        "asin": "B0DZ6GB34M",
+        "title": "12.2in Ceiling Fans with Lights,Socket Fan Light with Remote Control,E26 Dimmable Brightness 3000K-6500K Memory,4 Fan Speeds, LED Quiet Ceiling Fans Perfect for Small Spaces, Bedroom, Home Offices",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.2,
+        "ratingsTotal": 533
+      },
+      {
+        "asin": "B0D66DG2G8",
+        "title": "HK Socket Fan Light, 20 Inch Screw Ceiling Fans with Lights, 5 Speed E26/E27 Base Small Ceiling Fan, 3 Colors 3000K-6500K Dimmable Socket Fan with Light for Garage/Bathroom/Bedroom/Kitchen",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.2,
+        "ratingsTotal": 300
+      },
+      {
+        "asin": "B0CYZ6T9Z8",
+        "title": "HK Socket Fan Light Small Ceiling Fan With Light and Remote, 20 Inch Screw-in for E26/E27 Base, 5 Speed Dimmable Mini for Bedroom Kitchen and Small Rooms, White",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.2,
+        "ratingsTotal": 300
+      },
+      {
+        "asin": "B0G8LR5D4M",
+        "title": "Obabala Outdoor Ceiling Fan No Light, 42 Inch Black Modern Ceiling Fan Without Light, Dual Finish 5 Blades,6 Speed, Reversible Quiet DC Motor for Patios, Garage, Bedroom, Porch",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.2,
+        "ratingsTotal": 139
+      },
+      {
+        "asin": "B0GZVR1KBL",
+        "title": "Socket Fan Light, Socket Celling Fan Remote Dimming 20.5\" in Room (White)",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.2,
+        "ratingsTotal": 50
+      },
+      {
+        "asin": "B0F8PPSN2N",
+        "title": "Socket Fan Light with Remote Control, Screw-in E26 Base Portable Small Ceiling Fan with Lights,3-Speed Fan,LED Dimmable & Timing Function,for Bedroom, Kitchen, Living Room,20.47 inches Diameter",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.1,
+        "ratingsTotal": 2462
+      },
+      {
+        "asin": "B0H8D8BV2J",
+        "title": "20.5\"Socket Fan Light with Remote,E26 Base 40W/3000-6000K Dimming",
+        "price": "$21.99",
+        "priceValue": 21.99,
+        "rating": 4.1,
+        "ratingsTotal": 695
+      },
+      {
+        "asin": "B0CYZGWH1P",
+        "title": "Ceiling Fans with Lights and Remote, 30 Inch Reversible Black Modern Dimmable 3CCT Flush Mount Ceiling Fans, Small Low Profile Ceiling Fan with Light for Bedroom, Kitchen, Living/Kids/Dining Room",
+        "price": "$23.99",
+        "priceValue": 23.99,
+        "rating": 4,
+        "ratingsTotal": 2005
+      },
+      {
+        "asin": "B0CYWPR5B3",
+        "title": "Ceiling Fans with Lights, Socket Fan Light with Remote Control, Dimmable Brightness 3000K-6500K Memory, Socket Modern Flush Mount Low Profile Ceiling Fan for Bedroom, Small Living Room, Kitchen Black",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4,
+        "ratingsTotal": 2005
+      },
+      {
+        "asin": "B0F7HDCKF3",
+        "title": "Adjustable Light Socket Fan with Remote and Extender, Small Light Bulb Fan",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4,
+        "ratingsTotal": 575
+      },
+      {
+        "asin": "B0DT9FR8KM",
+        "title": "20\" Socket Fan Light with Remote, 30W 2000 Lumens, 3 Colors 3000-6000K Small Ceiling Fans with Lights 6 Speed Wind Light Bulb Fan for Bedroom, Living Room, Kitchen, Laundry Room",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4,
+        "ratingsTotal": 546
+      },
+      {
+        "asin": "B0FCLH6ZQJ",
+        "title": "E26/E27 Socket Fan Light with Remote Screw in Ceiling Fan with Dimmable LED",
+        "price": "$25.99",
+        "priceValue": 25.99,
+        "rating": 4,
+        "ratingsTotal": 120
+      },
+      {
+        "asin": "B0GSCT8PXR",
+        "title": "33 Inch Low Profile Ceiling Fans with Lights, Black",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4,
+        "ratingsTotal": 96
+      },
+      {
+        "asin": "B0FNW9RGKH",
+        "title": "42 Inch Flush Mount Quiet Ceiling Fan with Light,Sleek,black",
+        "price": "$33.75",
+        "priceValue": 33.75,
+        "rating": 4,
+        "ratingsTotal": 74
+      },
+      {
+        "asin": "B0CRH7Z1N3",
+        "title": "Socket Fan Light, 20.5IN Light Bulb Fan with Remote Dimmable, Screw in Fan and Light Combo for Garage Kitchen Bedroom Balcony Living Tools Store Laundry Room",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 3.8,
+        "ratingsTotal": 555
+      },
+      {
+        "asin": "B0D31PFGYJ",
+        "title": "Socket Fan Light, Light Bulb Fan 20.5IN Dimmable, Screw in Socket Fan Ceiling Fan with Light for Garage, Kitchen, Basement (Wood Grain)",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 3.8,
+        "ratingsTotal": 555
+      },
+      {
+        "asin": "B0D31NBZBR",
+        "title": "Socket Fan Light, Light Bulbfan with Remote Dimmable, 20.5IN for Garage Kitchen Balcony Living Tools Store Laundry Room (Black)",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 3.8,
+        "ratingsTotal": 555
+      },
+      {
+        "asin": "B0H44W17HH",
+        "title": "24inch Socket Fan Light,3 Color Dimmable Ceiling Fan with Lamps and Remote,E26/E27 Screw-in Bulb Fan Light,3000K-6500K Adjustable Lighting,White Small Fan Light for Bedroom,Kitchen,Garage,Patio,Porch",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 3.4,
+        "ratingsTotal": 57
+      },
+      {
+        "asin": "B0FWFSQPYQ",
+        "title": "Ceiling Fan Light, Remote Control 3 Speeds Fan with LED Light 3 Color Temperatures 2000lm E26 E27 Socket, for Bedroom Living Room Kitchen Garage",
+        "price": "$31.79",
+        "priceValue": 31.79,
+        "rating": 3.2,
+        "ratingsTotal": 183
+      }
+    ]
+  },
+  "product:B0CSK7SQT3": {
+    "fetchedAt": "2026-11-09T14:00:00.524Z",
+    "facts": {
+      "asin": "B0CSK7SQT3",
+      "title": "TJOY Candelabra LED Bulbs, E12 60W Equivalent Dimmable for Chandelier Light 2700k Warm White 12 Pack",
+      "brand": "TJOY",
+      "bullets": [
+        "【Vintage Candle Bulbs】4.5W LED candelabra bulb is equivalent to a 60w incandescent lamp and is made of high quality glass. The retro candle shape gives your lamp a gorgeous and impressive look that is not only practical but has a strong decorative appeal. Perfect LED candelabra bulbs are widely used in your bedroom, living room, hallway or outdoor lighting fixtures with E12 base",
+        "【Bright and soft light】These LED candelabra bulbs emit 2700K warm white light, clear and soft light not only gives the needed illumination but also would not hurt your eyes. The bright bulb makes the light evenly illuminate in all directions of the room, providing you with perfect lighting",
+        "【Energy saving and durable】These 4.5w B11 LED candelabra bulbs are dimmable and compatible with most dimmers on the market. LED candelabra bulbs do not produce UV rays and the estimated annual electricity bills is $0.54. With three hours of use per day, these bulbs have an average lifespan of 13.7 years",
+        "【Wide Application】LED candelabra bulbs with E12 base is suitable for traditional halogen like chandelier, sputnik light, pendant light, wall sconces, mason jar ceiling light and other inside or outdoor decorative lamps. The base of the lamp holder comes with a safety plastic ring to prevent accidental touching. You just need to Screw Bulbs into the Empty Sockets. All you need to do is screw the bulb into the empty socket and use it",
+        "【Safety & Service】Our LED chandelier bulbs are ROHS and FC certified, if you have any questions about our b11 bulbs or if you are not satisfied with your purchase in our store, please contact us and we will respond to you within 24 hours"
+      ],
+      "itemWeight": "0.3 kg",
+      "isInStock": true,
+      "fetchedAt": "2026-11-09T14:00:00.524Z",
+      "source": "canopy amazonProduct"
+    }
+  },
+  "camping string lights|1|": {
+    "term": "camping string lights",
+    "min": 1,
+    "fetchedAt": "2026-11-09T14:05:05.471Z",
+    "results": [
+      {
+        "asin": "B09TGSQKRF",
+        "title": "Outdoor String Lights, 55(50+5)FT 25 Bulbs IP65 Waterproof Patio Lights",
+        "price": "$17.99",
+        "priceValue": 17.99,
+        "rating": 4.7,
+        "ratingsTotal": 5287
+      },
+      {
+        "asin": "B0DRX3BQD4",
+        "title": "2Pack Camping String Lights, 4 in 1 Quick Storage 32.8FT 9 Modes Portable",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.7,
+        "ratingsTotal": 401
+      },
+      {
+        "asin": "B0FX11VB38",
+        "title": "2-Pack Camping String Lights 4 in 1,32.8ft Quick Storage 8Modes",
+        "price": "$28.89",
+        "priceValue": 28.89,
+        "rating": 4.7,
+        "ratingsTotal": 65
+      },
+      {
+        "asin": "B0FWZY49LW",
+        "title": "Camping String Lights, Retractable 32.8FT Quick Storage 8Modes",
+        "price": "$15.76",
+        "priceValue": 15.76,
+        "rating": 4.7,
+        "ratingsTotal": 65
+      },
+      {
+        "asin": "B07SW6Y6D3",
+        "title": "Brightech Ambience Pro USB Powered String Lights - 24 Ft Commercial Grade Waterproof String Lights - Outdoor Shatterproof Patio Lights for Camping, Backyard, Porch, Christmas - 1W 12 Bulbs, Warm White",
+        "price": "$23.99",
+        "priceValue": 23.99,
+        "rating": 4.6,
+        "ratingsTotal": 1803
+      },
+      {
+        "asin": "B0CQXP923Q",
+        "title": "Tenmiro 200FT Outdoor String Lights, Ultra Long LED Patio Lights with Shatterproof High Brightness S11 Edison Bulbs, Outside Hanging Light Waterproof for Backyard Deck Porch Party Decor 2700K",
+        "price": "$46.99",
+        "priceValue": 46.99,
+        "rating": 4.6,
+        "ratingsTotal": 1311
+      },
+      {
+        "asin": "B07586X7GL",
+        "title": "Big Agnes mtnGLO Tent & Camp Lights, White",
+        "price": "$54.95",
+        "priceValue": 54.95,
+        "rating": 4.6,
+        "ratingsTotal": 200
+      },
+      {
+        "asin": "B0C5XB8Y5T",
+        "title": "Camping Lights String: Outdoor String Light with 5 Lighting Modes - Quick 30s Recovery Durable and Waterproof - USB Charging - Portable Camping Lights for Yard/Hiking (29.52ft)",
+        "price": "$22.99",
+        "priceValue": 22.99,
+        "rating": 4.5,
+        "ratingsTotal": 865
+      },
+      {
+        "asin": "B0F2FMJ9TX",
+        "title": "2-in-1 Solar Camping Lights String: 5 Modes IP65 Waterproof - 1200mAh Battery USB/Solar Charging for Outdoor Tents RV Hiking - Backyard Party Decor - 29.52ft",
+        "price": "$22.55",
+        "priceValue": 22.55,
+        "rating": 4.5,
+        "ratingsTotal": 865
+      },
+      {
+        "asin": "B0F3HZZNNP",
+        "title": "Camping String Lights, 32.8FT Rechargeable with Storage Reel, 8 Modes",
+        "price": "$15.19",
+        "priceValue": 15.19,
+        "rating": 4.5,
+        "ratingsTotal": 482
+      },
+      {
+        "asin": "B0F8QG6RP4",
+        "title": "Solar Camping String Lights, 4 in 1 Outdoor Camping Lantern with 8 Lighting Modes(32.8Ft), Quick 30s Recovery, Waterproof, Type-C Fast Charging, Portable Camping Lights for Camping/Yard/Hiking",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.5,
+        "ratingsTotal": 254
+      },
+      {
+        "asin": "B0DQC6CCDH",
+        "title": "2pcs Camping String Lights,2 in 1 Upgraded 32.8FT Rechargeable Tent Lights String with 19 Lighting Modes,Quick Storage camping lights，Portable LED Lamp for Bedroom Yard Decor Christmas (Black)",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.5,
+        "ratingsTotal": 82
+      },
+      {
+        "asin": "B0FYPGR48K",
+        "title": "Brightown 52FT Solar String Lights Outdoor Waterproof, Last 30+ Hrs Runtime",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.4,
+        "ratingsTotal": 2767
+      },
+      {
+        "asin": "B0DDLGF7DM",
+        "title": "Camping String Lights, 4 in 1 Portable Camping Light Rechargeable, 8 Lighting Modes, USB Charging, Quick Storage, 32.8FT Waterproof Tent Lights String for Camping, Hiking, Yard, Christmas",
+        "price": "$15.99",
+        "priceValue": 15.99,
+        "rating": 4.4,
+        "ratingsTotal": 741
+      },
+      {
+        "asin": "B0CRGNLQM9",
+        "title": "Kawaya ST38 Solar Outdoor String Lights 50FT for Patio Garden Porch Bistro",
+        "price": "$47.39",
+        "priceValue": 47.39,
+        "rating": 4.4,
+        "ratingsTotal": 516
+      },
+      {
+        "asin": "B0DPHPC1SB",
+        "title": "4 in 1 Solar Camping String Lights, 72.2Ft Ultra Long String with 220LEDs, Solar Powered and USB Rechargeable Light with Remote Control, Portable Camping Light for Hiking, Decorations",
+        "price": "$27.99",
+        "priceValue": 27.99,
+        "rating": 4.4,
+        "ratingsTotal": 430
+      },
+      {
+        "asin": "B0CK1L5XVQ",
+        "title": "LuminAID Solar String LED Lights with Phone Charger, 32 ft",
+        "price": "$68.99",
+        "priceValue": 68.99,
+        "rating": 4.4,
+        "ratingsTotal": 236
+      },
+      {
+        "asin": "B0H26RNBM8",
+        "title": "OGERY Camping String Lights with Remote, 4 in 1 Quick Storage 32.8FT 8 Mode",
+        "price": "$15.19",
+        "priceValue": 15.19,
+        "rating": 4.4,
+        "ratingsTotal": 135
+      },
+      {
+        "asin": "B0G25JJ1K3",
+        "title": "30FT Solar String Lights Outdoor Waterproof with Remote and 15+1 Shatterproof Bulbs, Patio LED Solar Powered Hanging Lightings for Outside，Camping，Backyard, Garden, Porch Decor",
+        "price": "$34.83",
+        "priceValue": 34.83,
+        "rating": 4.4,
+        "ratingsTotal": 133
+      },
+      {
+        "asin": "B0C68DRR9P",
+        "title": "addlon 52FT(48+4) Solar String Lights Outdoor, Waterproof Dimmable 16+1 LED",
+        "price": "$17.98",
+        "priceValue": 17.98,
+        "rating": 4.3,
+        "ratingsTotal": 13819
+      },
+      {
+        "asin": "B09CPPTR4V",
+        "title": "Battery Operated LED Globe String Lights, 2-Pack Total 52FT 120LEDs - Each 26FT 60LEDs 8 Mode Waterproof Christmas Fairy String Lights with Remote for Home Bedroom Garden Wedding Party Decoration",
+        "price": "$17.84",
+        "priceValue": 17.84,
+        "rating": 4.3,
+        "ratingsTotal": 3695
+      },
+      {
+        "asin": "B0CRK8537L",
+        "title": "Minetom Battery Operated String Lights, 21FT 60 LED Globe Twinkle Lights",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.3,
+        "ratingsTotal": 2957
+      },
+      {
+        "asin": "B08JGSHYWX",
+        "title": "MPOWERD Luci Color Solar String Lights + Phone Charger: Color 18' Rechargeable via Solar or USB-A, 100 Lumens LEDs and 7 Colors, Lasts Up to 15 Hours, Waterproof, Camping, Pool/Patio, and Travel",
+        "price": "$32.97",
+        "priceValue": 32.97,
+        "rating": 4.3,
+        "ratingsTotal": 757
+      },
+      {
+        "asin": "B0D797C8GQ",
+        "title": "Camping String Lights,Camping Essentials Gear 32.8FT Lamp Lights Waterproof, 4 in 1 Outdoor String Lights with 8 Modes for Awn Tent Yard Garden Hiking Travel Decoration and Holiday Christmas Gift",
+        "price": "$15.99",
+        "priceValue": 15.99,
+        "rating": 4.3,
+        "ratingsTotal": 683
+      },
+      {
+        "asin": "B0H6XRB4PS",
+        "title": "OGERY Solar Camping String Lights, 5400mAh/ 49.2FT/ 11 Modes Rechargeable",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.3,
+        "ratingsTotal": 72
+      },
+      {
+        "asin": "B07XBZ4PBJ",
+        "title": "Globe String Lights Battery Operated Fairy Light 33ft 80LED & Remote",
+        "price": "$15.97",
+        "priceValue": 15.97,
+        "rating": 4.2,
+        "ratingsTotal": 6543
+      },
+      {
+        "asin": "B0D5HTW1NB",
+        "title": "OGERY Camping String Lights 4 in 1, 32.8FT Quick Storage 8 Modes Protable",
+        "price": "$15.99",
+        "priceValue": 15.99,
+        "rating": 4.2,
+        "ratingsTotal": 2312
+      },
+      {
+        "asin": "B0H6QFZQYX",
+        "title": "OGERY 2-Pack Camping String Lights 4 in 1, 32.8FT Quick Storage 8 Modes",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.2,
+        "ratingsTotal": 2312
+      },
+      {
+        "asin": "B0D7ZGM638",
+        "title": "Solar Outdoor String Lights 24FT Vintage Rope Hemp Solar Lights with 20 Shatterproof Bulbs,8 Modes Solar Powered String Lights with Memory Function, Waterproof for Garden,Camping,Café(Multicolor)",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.2,
+        "ratingsTotal": 429
+      },
+      {
+        "asin": "B0DXQQYF7X",
+        "title": "BioLite Solar String Lights, Outdoor, Camping, Rechargeable, 44 ft, USB-C",
+        "price": "$99.95",
+        "priceValue": 99.95,
+        "rating": 4.2,
+        "ratingsTotal": 165
+      },
+      {
+        "asin": "B0DXR76NYX",
+        "title": "BioLite Solar String Lights 44 ft for Camping & Travel, Rechargeable, Color",
+        "price": "$99.95",
+        "priceValue": 99.95,
+        "rating": 4.2,
+        "ratingsTotal": 165
+      },
+      {
+        "asin": "B0DCHHBJM6",
+        "title": "Outdoor Lights String Patio Outside - 100ft 30M LED Waterproof Light ST38",
+        "price": "$22.99",
+        "priceValue": 22.99,
+        "rating": 4.1,
+        "ratingsTotal": 4446
+      },
+      {
+        "asin": "B08B3ZPBVV",
+        "title": "OMIKA 20FT Battery Powered String Lights, 40 LED 24 Colors+Warm White Battery Operated Christmas Light, USB Powered Camping Lights String for Indoor Outdoor Hanging Light for Bedroom Xmas Party Décor",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.1,
+        "ratingsTotal": 614
+      }
+    ]
   }
 }
