@@ -409,5 +409,33 @@
     },
     "status": "pending",
     "deadline": "2026-11-12T14:00:00.524Z"
+  },
+  "B0033990ZQ": {
+    "detectedAt": "2026-11-10T14:00:00.546Z",
+    "label": "Coleman Portable Camping Chair with 4-Can Cooler",
+    "anchorPrice": 39.99,
+    "anchorSource": "git 1b6dcdc^:src/data/catalog.json",
+    "aliases": [
+      "Coleman Portable Camping Chair with 4-Can Cooler",
+      "Coleman Portable Camping Chair with 4-Can",
+      "Portable Camping Chair with 4-Can"
+    ],
+    "attempts": 1,
+    "triedCandidates": [
+      "B075LXP47V"
+    ],
+    "candidate": null,
+    "perArticle": {
+      "best-camping-chairs-tailgating": {
+        "outcome": "pending",
+        "why": "writer: not the same kind — The Carhartt Camping Cooler is a soft-shell insulated lunch box, not a seat, so it cannot replace a camping chair in a g"
+      },
+      "budget-camp-chairs-that-last": {
+        "outcome": "pending",
+        "why": "writer: not the same kind — The Carhartt Camping Cooler is a soft-shell insulated lunch box, not a seat, so it cannot replace a camping chair in a g"
+      }
+    },
+    "status": "pending",
+    "deadline": "2026-11-13T14:00:00.546Z"
   }
 }

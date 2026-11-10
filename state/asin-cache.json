@@ -4901,67 +4901,67 @@
     "B0CWH57Q9F": {
       "verdict": "LIVE",
       "title": "Veken Coffee Canister with Window, Airtight Stainless Steel Container, 22OZ Black 22 oz",
-      "checkedAt": "2026-11-03T14:00:00.653Z",
+      "checkedAt": "2026-11-10T14:00:18.801Z",
       "price": "$24.98",
       "priceValue": 24.98,
       "rating": 4.8,
-      "ratingsTotal": 12510,
-      "priceCheckedAt": "2026-11-03T14:00:00.653Z",
+      "ratingsTotal": 12597,
+      "priceCheckedAt": "2026-11-10T14:00:18.801Z",
       "priceSource": "canopy"
     },
     "B0DZ2MMFMJ": {
       "verdict": "LIVE",
       "title": "Veken Coffee Canister,39OZ, 2.2lbs,Large Airtight Stainless Steel Container Gray 39 oz",
-      "checkedAt": "2026-11-03T14:00:00.653Z",
+      "checkedAt": "2026-11-10T14:00:18.801Z",
       "price": "$29.98",
       "priceValue": 29.98,
       "rating": 4.8,
-      "ratingsTotal": 8095,
-      "priceCheckedAt": "2026-11-03T14:00:00.653Z",
+      "ratingsTotal": 8127,
+      "priceCheckedAt": "2026-11-10T14:00:18.801Z",
       "priceSource": "canopy"
     },
     "B0019LSGQE": {
       "verdict": "LIVE",
       "title": "BearVault Canister for Backpacking. 4 Sizes: BV500, BV475, BV450, BV425. Bear-Resistant Food Container for Camping, Hiking, Fishing, Hunting, Bikepacking. BearVault is Bear Safe! BV500 Journey XL",
-      "checkedAt": "2026-11-03T14:00:00.653Z",
+      "checkedAt": "2026-11-10T14:00:18.801Z",
       "price": "$99.95",
       "priceValue": 99.95,
       "rating": 4.7,
-      "ratingsTotal": 2295,
-      "priceCheckedAt": "2026-11-03T14:00:00.653Z",
+      "ratingsTotal": 2297,
+      "priceCheckedAt": "2026-11-10T14:00:18.801Z",
       "priceSource": "canopy"
     },
     "B0D3XL2L98": {
       "verdict": "LIVE",
       "title": "Bear Bag Hanging Kit - 10L Waterproof Bear Proof Food Storage Bag, 2 Straps, Rock Sack & 2 Ropes with 4 Safety Clips for Hiking, Kayaking, Camping, Outdoor Adventures",
-      "checkedAt": "2026-11-03T14:00:00.653Z",
+      "checkedAt": "2026-11-10T14:00:18.801Z",
       "price": "$21.99",
       "priceValue": 21.99,
       "rating": 4.6,
       "ratingsTotal": 115,
-      "priceCheckedAt": "2026-11-03T14:00:00.653Z",
+      "priceCheckedAt": "2026-11-10T14:00:18.801Z",
       "priceSource": "canopy"
     },
     "B09ZYBFS12": {
       "verdict": "LIVE",
       "title": "Portable Aluminum Storage Jar 3-Pack,Airtight Smell Proof Container, Metal Waterproof Small Bottle Multipurpose Container for Coffee & Teas, Herb Spices Container Screw-Top Lid Lock Odor Black+Silver+Red",
-      "checkedAt": "2026-11-03T14:00:00.653Z",
+      "checkedAt": "2026-11-10T14:00:18.801Z",
       "price": "$7.99",
       "priceValue": 7.99,
       "rating": 4.6,
-      "ratingsTotal": 2133,
-      "priceCheckedAt": "2026-11-03T14:00:00.653Z",
+      "ratingsTotal": 2144,
+      "priceCheckedAt": "2026-11-10T14:00:18.801Z",
       "priceSource": "canopy"
     },
     "B0002ZB5Y8": {
       "verdict": "LIVE",
       "title": "Backpackers' Cache - Bear Proof Container",
-      "checkedAt": "2026-11-03T14:00:00.653Z",
+      "checkedAt": "2026-11-10T14:00:18.801Z",
       "price": "$89.95",
       "priceValue": 89.95,
       "rating": 4.6,
       "ratingsTotal": 534,
-      "priceCheckedAt": "2026-11-03T14:00:00.653Z",
+      "priceCheckedAt": "2026-11-10T14:00:18.801Z",
       "priceSource": "canopy"
     },
     "B00S93EQUK": {
@@ -5583,6 +5583,11 @@
       "ratingsTotal": 1311,
       "priceCheckedAt": "2026-11-09T14:05:15.307Z",
       "priceSource": "canopy-search"
+    },
+    "B075LXP47V": {
+      "verdict": "LIVE",
+      "title": "Carhartt Camping Cooler, Worksite Lunch Box, Soft Shell Lunch Bag for Construction Sites, Work and Everyday Use, Black",
+      "checkedAt": "2026-11-10T14:00:00.546Z"
     }
   }
 }

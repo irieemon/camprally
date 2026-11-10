@@ -22379,5 +22379,296 @@
         "ratingsTotal": 614
       }
     ]
+  },
+  "cooler|28|50": {
+    "term": "cooler",
+    "min": 28,
+    "max": 50,
+    "fetchedAt": "2026-11-10T14:00:00.546Z",
+    "results": [
+      {
+        "asin": "B075LXP47V",
+        "title": "Carhartt Camping Cooler, Worksite Lunch Box, Soft Shell Lunch Bag for Construction Sites, Work and Everyday Use, Black",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.8,
+        "ratingsTotal": 48709
+      },
+      {
+        "asin": "B08GVSXNPG",
+        "title": "Igloo Sports Cooler | Insulated Beverage Dispenser with Spout |Portable Handwashing Station",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.7,
+        "ratingsTotal": 4918
+      },
+      {
+        "asin": "B0GP3M7SSR",
+        "title": "Igloo Hard Cooler | Profile Series | Insulated Ice Chests",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.7,
+        "ratingsTotal": 4910
+      },
+      {
+        "asin": "B09LGY38L4",
+        "title": "Thermalright Peerless Assassin 120 SE CPU Cooler, 6 Heat Pipes AGHP Technology, Dual 120mm PWM Fans, 1550RPM Speed, for AMD:AM4 AM5/Intel LGA 1700/1150/1151/1200/1851,PC Cooler",
+        "price": "$34.90",
+        "priceValue": 34.9,
+        "rating": 4.7,
+        "ratingsTotal": 3388
+      },
+      {
+        "asin": "B0CPMBQ9WF",
+        "title": "Igloo Tag Along Too Coolers | Insulated Hard Shell Picnic Style Cooler | Rolling Ice Chest",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.7,
+        "ratingsTotal": 2298
+      },
+      {
+        "asin": "B0F17M4Q91",
+        "title": "Titan Zipperless HardBody Cooler, Keeps Ice 2 Days",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.6,
+        "ratingsTotal": 57205
+      },
+      {
+        "asin": "B09HN13FN4",
+        "title": "Coleman Chiller Cooler 9/16/30/48/60qt Options",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 16972
+      },
+      {
+        "asin": "B081LM4H92",
+        "title": "Jumbo Insulated Cooler Bag, Heavy Duty Soft Insulated Grocery Bag, Charcoal",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 7244
+      },
+      {
+        "asin": "B0CJYZYPGC",
+        "title": "Carhartt Insulated 12 Can Cooler Black",
+        "price": "$42.99",
+        "priceValue": 42.99,
+        "rating": 4.6,
+        "ratingsTotal": 2395
+      },
+      {
+        "asin": "B0BX3KDVTS",
+        "title": "Amazon Basics Insulated Cooler Backpack for Camping and Hiking, Portable Soft Sided Cooler with 30 Can Capacity, Leak-Proof, Water-Resistant, Gray",
+        "price": "$31.93",
+        "priceValue": 31.93,
+        "rating": 4.6,
+        "ratingsTotal": 950
+      },
+      {
+        "asin": "B0F29DD5T4",
+        "title": "Maelstrom 30 Can Collapsible Soft Cooler Bag with Quick Access Opening",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.6,
+        "ratingsTotal": 622
+      },
+      {
+        "asin": "B0FMY9MJRH",
+        "title": "Portable Breast Milk Cooler Bottle with Digital Temp Display",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.6,
+        "ratingsTotal": 493
+      },
+      {
+        "asin": "B0GVVTJCW8",
+        "title": "Igloo Gripper CoolBox 10 Qt Cooler, Sneaky Blue",
+        "price": "$49.97",
+        "priceValue": 49.97,
+        "rating": 4.6,
+        "ratingsTotal": 166
+      },
+      {
+        "asin": "B0HNVX7874",
+        "title": "Bestdin 4 Tier Collapsible Stainless Steel Cooling Rack, Black",
+        "price": "$29.99",
+        "priceValue": 29.99,
+        "rating": 4.6,
+        "ratingsTotal": 79
+      },
+      {
+        "asin": "B08VDBW5PW",
+        "title": "SPARTER Backpack Cooler Insulated 33/49 Can Leakproof Waterproof Bag Beach",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.5,
+        "ratingsTotal": 11366
+      },
+      {
+        "asin": "B0DDYSJVL2",
+        "title": "Igloo Classic Playmate Coolers | Insulated Hard Shell Cooler Chest",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.5,
+        "ratingsTotal": 9912
+      },
+      {
+        "asin": "B09P9TYK6Z",
+        "title": "Maelstrom 35/50Can Insulated Cooler Backpack, Leakproof Soft Lunch Ice Bag",
+        "price": "$37.99",
+        "priceValue": 37.99,
+        "rating": 4.5,
+        "ratingsTotal": 5838
+      },
+      {
+        "asin": "B0G95WPTWH",
+        "title": "SMIRLY Cooler Bags Insulated, Large Soft Collapsible Cooler, 48 Cans",
+        "price": "$42.99",
+        "priceValue": 42.99,
+        "rating": 4.5,
+        "ratingsTotal": 1793
+      },
+      {
+        "asin": "B0GSH9VNJY",
+        "title": "Igloo Hard Coolers | Profile II Series | Insulated Ice Chests | Roller Cooler with Wheels",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.5,
+        "ratingsTotal": 1601
+      },
+      {
+        "asin": "B0GRGVGC62",
+        "title": "TOURIT Puffer Insulated Cooler Bag 48 Cans/32L, Waterproof Beach Cooler",
+        "price": "$34.99",
+        "priceValue": 34.99,
+        "rating": 4.5,
+        "ratingsTotal": 1058
+      },
+      {
+        "asin": "B0BX3HVQSP",
+        "title": "Amazon Basics Insulated Cooler Bag, Soft Leak-Proof Large Travel Cooler for Beach and Picnics, Gray",
+        "price": "$30.44",
+        "priceValue": 30.44,
+        "rating": 4.5,
+        "ratingsTotal": 864
+      },
+      {
+        "asin": "B0FJXZXCVL",
+        "title": "22oz Breast Milk Cooler Bottle, 24H Ice-Free Cooling",
+        "price": "$35.95",
+        "priceValue": 35.95,
+        "rating": 4.5,
+        "ratingsTotal": 384
+      },
+      {
+        "asin": "B0DD76WTTK",
+        "title": "Maelstrom 30/40 Can Soft Cooler Bag, Leakproof Insulated Ice Chest",
+        "price": "$35.99",
+        "priceValue": 35.99,
+        "rating": 4.5,
+        "ratingsTotal": 177
+      },
+      {
+        "asin": "B09F733B2M",
+        "title": "Maelstrom Soft Cooler Bag, 35/55/75 Can Beach Cooler with Flip-top Access",
+        "price": "$36.99",
+        "priceValue": 36.99,
+        "rating": 4.4,
+        "ratingsTotal": 3105
+      },
+      {
+        "asin": "B0F17MLM5K",
+        "title": "Titan 30 Can Cooler Tote, Keeps Ice Up to 3 Days",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.4,
+        "ratingsTotal": 1195
+      },
+      {
+        "asin": "B0BJ5ZZC8D",
+        "title": "RTIC Everyday Cooler, Soft Sided Portable Insulated Cooling for Lunch, Beach, Drink, Beverage, Travel, Camping, Picnic, for Men and Women",
+        "price": "$34.97",
+        "priceValue": 34.97,
+        "rating": 4.4,
+        "ratingsTotal": 958
+      },
+      {
+        "asin": "B0DC17WHCJ",
+        "title": "RTIC 8 QT Road Trip Personal Cooler",
+        "price": "$47.20",
+        "priceValue": 47.2,
+        "rating": 4.4,
+        "ratingsTotal": 702
+      },
+      {
+        "asin": "B0BRL9S8L9",
+        "title": "Igloo Marine Ultra 25 Qt Latitude Hard Cooler, White",
+        "price": "$34.98",
+        "priceValue": 34.98,
+        "rating": 4.4,
+        "ratingsTotal": 359
+      },
+      {
+        "asin": "B09HMZBFQJ",
+        "title": "Coleman Chiller Insulated Leakproof Soft Cooler, 9/16/30-Can Options",
+        "price": "$42.99",
+        "priceValue": 42.99,
+        "rating": 4.4,
+        "ratingsTotal": 306
+      },
+      {
+        "asin": "B0GP35JPN3",
+        "title": "Igloo Latitude Cool Fusion Hard Liner Cooler Bag",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.4,
+        "ratingsTotal": 77
+      },
+      {
+        "asin": "B087WYBJ54",
+        "title": "CROWNFUL Mini Fridge, 4 Liter/6 Can Portable Cooler and Warmer Personal Fridge for Skin Care, Cosmetics, Food,Great for Bedroom, Office, Car, Dorm, ETL Listed (Black)",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.3,
+        "ratingsTotal": 13818
+      },
+      {
+        "asin": "B0CC93FQN8",
+        "title": "Large Waterproof Insulated Cooler Backpack, 30L, 48Cans",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.3,
+        "ratingsTotal": 2387
+      },
+      {
+        "asin": "B0FLXLY3DV",
+        "title": "OBTANIM 4 Pack 4 Gallon Galvanized Ice Buckets Metal Champagne Drink Cooler Ice Tub with Carry Handles for Beer Cocktails Wine Beverage Home Parties Bar Cooling Supplies (Silvery)",
+        "price": "$32.39",
+        "priceValue": 32.39,
+        "rating": 4.1,
+        "ratingsTotal": 160
+      }
+    ]
+  },
+  "product:B075LXP47V": {
+    "fetchedAt": "2026-11-10T14:00:00.546Z",
+    "facts": {
+      "asin": "B075LXP47V",
+      "title": "Carhartt Camping Cooler, Worksite Lunch Box, Soft Shell Lunch Bag for Construction Sites, Work and Everyday Use, Black Black 1 Count",
+      "brand": "Carhartt",
+      "bullets": [
+        "Built for the Outdoors: Tough and durable, the Carhartt Insulated Lunch Box is designed to withstand the rigors of the outdoors. Whether you're on a camping trip, at a work site, or in a tactical environment, this rugged lunch cooler handles it all. Built as the perfect outdoor cooler to perform in even the toughest conditions",
+        "Spacious Capacity: This large lunch box offers ample space to hold your food and drinks, keeping everything fresh for long workdays or outdoor adventures. Whether you’re packing snacks, sandwiches, or drinks, this lunchbox men has you covered",
+        "Effective Insulation: Designed to keep your food fresh, the insulated lunch bag features dual compartments that keep your containers and beverages organized and separated. This insulated lunch box for men ensures your lunch stays at the right temperature, no matter where the day takes you. perfect lunch cooler for back to school",
+        "Rugged Meets Function: A tough exterior and functional interior come together in this soft lunch box for men, offering durability without compromising on style. Perfect for work or play, this men lunch box is built for everyday use and is as dependable as the people who carry it. Size: 10\" x 9\" x 7\"",
+        "Compact & Portable: Perfect for outdoor adventures, this insulated lunch box offers convenience on the go. With sturdy handles for easy carrying, it’s a must-have addition to your camping gear or field kit. Whether you need a reliable camping cooler or an outdoor cooler for work, this cooler delivers the performance you need for your outdoor routine"
+      ],
+      "itemWeight": "11.2 ounces",
+      "isInStock": true,
+      "fetchedAt": "2026-11-10T14:00:00.546Z",
+      "source": "canopy amazonProduct"
+    }
   }
 }

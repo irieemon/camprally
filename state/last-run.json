@@ -1,8 +1,9 @@
 {
-  "startedAt": "2026-11-09T14:00:00.101Z",
-  "finishedAt": "2026-11-09T14:07:36.168Z",
-  "outcome": "published",
+  "startedAt": "2026-11-10T14:00:00.098Z",
+  "finishedAt": "2026-11-10T14:01:12.777Z",
+  "outcome": "idle",
   "priceClaims": "ok",
+  "runsSincePublish": 1,
   "deadLinks": [
     {
       "asin": "B00BPWDMOS",
@@ -24,24 +25,19 @@
       "attempts": 1,
       "deadline": "2026-11-12T14:00:00.524Z",
       "replacement": null
+    },
+    {
+      "asin": "B0033990ZQ",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-13T14:00:00.546Z",
+      "replacement": null
     }
   ],
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "best-camping-string-lights",
-  "commit": "d70f0d4",
-  "pushed": true,
-  "deployVerified": true,
-  "deploy": "not live yet (serving 04f9905, expected d70f0d4) — 600s left\nnot live yet (serving 04f9905, expected d70f0d4) — 584s left\ndeploy verified after 3 attempt(s): serving d70f0d4 · home HTTP 200",
-  "indexNow": {
-    "ok": true,
-    "status": 200,
-    "submitted": 3
-  },
-  "pinned": {
-    "ok": true,
-    "id": "1152569729675508179"
-  },
-  "remaining": 0
+  "reason": "queue-empty",
+  "queued": 76,
+  "needs": "briefs — article-queue.json has no unpublished items left"
 }
