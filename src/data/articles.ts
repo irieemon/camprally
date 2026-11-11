@@ -258,7 +258,7 @@ This is the entry point for a real camping fan. It pairs the same 20000mAh batte
 
 It keeps things simple, which is what you want from a fan that lives in a gear bin between trips. If you want a dedicated tent fan that covers the basics for the least money, this is the pick.
 
-**[Buy Camping Fan Rechargeable 20000mAh on Amazon](https://www.amazon.com/dp/B0FCFCNSZH?tag=camprally-20)**
+**Buy Camping Fan Rechargeable 20000mAh on Amazon**
 
 ## The Upgrade Pick: ATEngeus USB Desk Fan
 

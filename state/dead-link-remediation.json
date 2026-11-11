@@ -327,61 +327,12 @@
     },
     "perArticle": {
       "best-portable-camping-fans": {
-        "outcome": "pending",
-        "why": "review returned fewer than 2 passes",
-        "review": {
-          "candidate": "B0F43SPZCY",
-          "seats": [
-            {
-              "seat": "minimax/MiniMax-M3",
-              "verdict": "flag-low",
-              "severity": "low",
-              "findings": [
-                {
-                  "severity": "low",
-                  "quote": "The ZioeYiue is the budget pick.",
-                  "problem": "The edit replaced the ZioeYiue with the Portable Handheld Turbo Fan, so this unchanged sentence now refers to a discontinued product that is no longer among the guide's picks."
-                },
-                {
-                  "severity": "low",
-                  "quote": "Every fan in this guide runs on a built-in rechargeable battery rather than disposable batteries, and that's deliberate.",
-                  "problem": "The edit replaced the ZioeYiue with the Portable Handheld Turbo Fan, whose listing states that it is battery operated but does not specify a built-in rechargeable battery, so this categorical statement is no longer supported for every pick."
-                }
-              ]
-            },
-            {
-              "seat": "openrouter/meta/muse-glimmer-30b",
-              "verdict": "no-answer",
-              "severity": null,
-              "findings": [],
-              "error": "unreachable after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5465. To increase, visit"
-            },
-            {
-              "seat": "openrouter/deepseek/deepseek-v4-pro",
-              "verdict": "no-answer",
-              "severity": null,
-              "findings": [],
-              "error": "unreachable after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 2522. To increase, vi"
-            }
-          ]
-        },
-        "retry": [
-          {
-            "attempt": 1,
-            "stage": "mechanical",
-            "reasons": [
-              "content#40: added a call to action the original did not have — \"**[Check the Portable Handheld Turbo Fan on Amazon](https://www.amazon.com/dp/B0F43SPZCY?tag=camprally-20)**\""
-            ]
-          },
-          {
-            "attempt": 2,
-            "stage": "defer",
-            "reasons": []
-          }
-        ]
+        "outcome": "unlinked",
+        "why": "72h deadline passed with the swap still pending",
+        "at": "2026-11-11T14:00:00.609Z"
       }
     },
-    "status": "pending",
+    "status": "unlinked",
     "deadline": "2026-11-11T14:00:00.509Z"
   },
   "B0DS5CRTGK": {
