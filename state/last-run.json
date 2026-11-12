@@ -1,9 +1,9 @@
 {
-  "startedAt": "2026-11-11T14:00:00.129Z",
-  "finishedAt": "2026-11-11T14:01:45.333Z",
+  "startedAt": "2026-11-12T14:00:00.109Z",
+  "finishedAt": "2026-11-12T14:00:18.517Z",
   "outcome": "idle",
   "priceClaims": "ok",
-  "runsSincePublish": 2,
+  "runsSincePublish": 3,
   "deadLinks": [
     {
       "asin": "B00BPWDMOS",
@@ -34,26 +34,14 @@
       "replacement": null
     }
   ],
-  "deadLinkEvent": {
-    "reason": "dead-link-unlinked",
-    "asin": "B0FCFCNSZH",
-    "label": "ZioeYiue Camping Fan Rechargeable",
-    "replacement": null,
-    "replacementLabel": null,
-    "swapped": [],
-    "unlinked": [
-      "best-portable-camping-fans"
-    ],
-    "why": "best-portable-camping-fans: 72h deadline passed with the swap still pending",
-    "reviews": {},
-    "retries": {},
-    "commit": "b7022de",
-    "deployVerified": true
-  },
   "pull": {
     "status": "up-to-date"
   },
   "reason": "queue-empty",
   "queued": 76,
-  "needs": "briefs — article-queue.json has no unpublished items left"
+  "needs": "briefs — article-queue.json has no unpublished items left",
+  "stalledSince": "3 consecutive runs without publishing",
+  "stalledReasons": [
+    "queue-empty"
+  ]
 }

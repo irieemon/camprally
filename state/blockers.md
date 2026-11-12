@@ -399,3 +399,9 @@ best-hammock-underquilts-budget
 [llm] panel seat openrouter/deepseek/deepseek-v4-pro gave NO ANSWER after 1 try: openrouter/deepseek/deepseek-v4-pro: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 3430. To increase, vi
 [llm] panel seat openrouter/meta/muse-glimmer-30b gave NO ANSWER after 1 try: openrouter/meta/muse-glimmer-30b: HTTP 402: {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 16000 tokens, but can only afford 5470. To increase, visit
 
+
+## 2026-11-12T14:00:00.109Z — stalled: queue-empty
+
+3 consecutive runs without publishing (reasons: queue-empty)
+
+

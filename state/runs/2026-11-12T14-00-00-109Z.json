@@ -1,0 +1,47 @@
+{
+  "startedAt": "2026-11-12T14:00:00.109Z",
+  "finishedAt": "2026-11-12T14:00:18.517Z",
+  "outcome": "idle",
+  "priceClaims": "ok",
+  "runsSincePublish": 3,
+  "deadLinks": [
+    {
+      "asin": "B00BPWDMOS",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-10T14:00:00.579Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0FCFCNSZH",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-11T14:00:00.509Z",
+      "replacement": "B0F43SPZCY"
+    },
+    {
+      "asin": "B0DS5CRTGK",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-12T14:00:00.524Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0033990ZQ",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-13T14:00:00.546Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "reason": "queue-empty",
+  "queued": 76,
+  "needs": "briefs — article-queue.json has no unpublished items left",
+  "stalledSince": "3 consecutive runs without publishing",
+  "stalledReasons": [
+    "queue-empty"
+  ]
+}
