@@ -1,9 +1,9 @@
 {
-  "startedAt": "2026-11-15T14:00:00.119Z",
-  "finishedAt": "2026-11-15T14:00:19.842Z",
+  "startedAt": "2026-11-16T14:00:00.112Z",
+  "finishedAt": "2026-11-16T14:00:20.149Z",
   "outcome": "idle",
   "priceClaims": "ok",
-  "runsSincePublish": 6,
+  "runsSincePublish": 7,
   "deadLinks": [
     {
       "asin": "B00BPWDMOS",
@@ -40,7 +40,7 @@
   "reason": "queue-empty",
   "queued": 76,
   "needs": "briefs — article-queue.json has no unpublished items left",
-  "stalledSince": "6 consecutive runs without publishing",
+  "stalledSince": "7 consecutive runs without publishing",
   "stalledReasons": [
     "queue-empty"
   ]
