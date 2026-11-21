@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-21T01:07:48.584Z",
-  "finishedAt": "2026-11-21T01:11:43.638Z",
+  "startedAt": "2026-11-21T14:00:00.117Z",
+  "finishedAt": "2026-11-21T14:12:51.078Z",
   "outcome": "published",
   "priceClaims": "ok",
   "deadLinks": [
@@ -33,14 +33,25 @@
       "replacement": null
     }
   ],
+  "indexNowEdits": {
+    "changed": 1,
+    "submitted": [
+      "best-hammock-underquilts-budget"
+    ],
+    "indexNow": {
+      "ok": true,
+      "status": 200,
+      "submitted": 1
+    }
+  },
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "best-fleece-jackets-camping-under-50",
-  "commit": "75cc7f1",
+  "slug": "how-to-layer-for-cold-weather-camping",
+  "commit": "65fbb81",
   "pushed": true,
   "deployVerified": true,
-  "deploy": "not live yet (serving 5bda28d, expected 75cc7f1) — 599s left\nnot live yet (serving 5bda28d, expected 75cc7f1) — 584s left\ndeploy verified after 3 attempt(s): serving 75cc7f1 · home HTTP 200",
+  "deploy": "not live yet (serving 575da69, expected 65fbb81) — 600s left\nnot live yet (serving 575da69, expected 65fbb81) — 584s left\ndeploy verified after 3 attempt(s): serving 65fbb81 · home HTTP 200",
   "indexNow": {
     "ok": true,
     "status": 200,
@@ -48,7 +59,7 @@
   },
   "pinned": {
     "ok": true,
-    "id": "1152569729676452218"
+    "id": "1152569729676493118"
   },
-  "remaining": 30
+  "remaining": 29
 }

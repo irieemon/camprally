@@ -23094,5 +23094,252 @@
         "ratingsTotal": 76
       }
     ]
+  },
+  "base layer|1|": {
+    "term": "base layer",
+    "min": 1,
+    "fetchedAt": "2026-11-21T14:09:47.382Z",
+    "results": [
+      {
+        "asin": "B0BV8QGYDY",
+        "title": "Cuddl Duds Heavyweight 2 Piece Sets Base Layer Thermal Underwear for Women",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.7,
+        "ratingsTotal": 6795
+      },
+      {
+        "asin": "B08LNYD3PX",
+        "title": "Under Armour Men's ColdGear Fitted Mock Long Sleeve Shirt",
+        "price": "$36.60",
+        "priceValue": 36.6,
+        "rating": 4.7,
+        "ratingsTotal": 5267
+      },
+      {
+        "asin": "B0CH1BF1X9",
+        "title": "Dalavch 4/5 Pack Men's Thermal Compression Shirts Long Sleeve Fleece Lined",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.7,
+        "ratingsTotal": 1533
+      },
+      {
+        "asin": "B08BDGX8RC",
+        "title": "Smartwool Men's Classic Thermal Merino Base Layer Bottom",
+        "price": "$93.75",
+        "priceValue": 93.75,
+        "rating": 4.7,
+        "ratingsTotal": 641
+      },
+      {
+        "asin": "B0GC8TL1NY",
+        "title": "Cuddl Duds Lightweight 2 Piece Active Base Layer Matching Sets for Women",
+        "price": "$38.99",
+        "priceValue": 38.99,
+        "rating": 4.7,
+        "ratingsTotal": 422
+      },
+      {
+        "asin": "B0FMJM2WS2",
+        "title": "Mens Thermal Underwear Set Fleece Lined Long Johns Base Layer Top Bottom Cold Weather Gear for Hunting Running Skiing",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.7,
+        "ratingsTotal": 384
+      },
+      {
+        "asin": "B0FNDBQT3Q",
+        "title": "Moozava Thermal Underwear for Men Long Johns Fleece Lined Base Layer Set Hunting Gear Cold Weather Top Bottoms Shirt Pants",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.7,
+        "ratingsTotal": 123
+      },
+      {
+        "asin": "B0F6WZ6374",
+        "title": "Carhartt Men's Force Midweight Stretch Base Layer Pant",
+        "price": "$24.74",
+        "priceValue": 24.74,
+        "rating": 4.7,
+        "ratingsTotal": 65
+      },
+      {
+        "asin": "B0874WHB28",
+        "title": "Under Armour Men's HeatGear Armour Leggings",
+        "price": "$28.25",
+        "priceValue": 28.25,
+        "rating": 4.6,
+        "ratingsTotal": 25848
+      },
+      {
+        "asin": "B09HJK4C5F",
+        "title": "HEROBIKER Thermal Underwear for Men Long Johns Base Layer Fleece Lined Winter Warm",
+        "price": "$11.46",
+        "priceValue": 11.46,
+        "rating": 4.6,
+        "ratingsTotal": 15676
+      },
+      {
+        "asin": "B088K6XSJ1",
+        "title": "Thermal Underwear for Men Long Johns Set Fleece Lined Winter Cold Weather",
+        "price": "$25.49",
+        "priceValue": 25.49,
+        "rating": 4.6,
+        "ratingsTotal": 14389
+      },
+      {
+        "asin": "B08DR6GMRP",
+        "title": "Mens Thermal Underwear Long Johns Set Cold Weather Hunting Base Layer",
+        "price": "$18.99",
+        "priceValue": 18.99,
+        "rating": 4.6,
+        "ratingsTotal": 12135
+      },
+      {
+        "asin": "B07QC8WDKJ",
+        "title": "Amazon Essentials Men's Slim Fit Thermal Long Johns Underwear Set, Breathable Waffle Knit for Cold Weather Wear, Multipacks",
+        "price": "$17.20",
+        "priceValue": 17.2,
+        "rating": 4.6,
+        "ratingsTotal": 7256
+      },
+      {
+        "asin": "B0816ZY5BK",
+        "title": "Thermal Underwear for Men, Fleece Lined Long Johns Set Winter Base Layer",
+        "price": "$18.99",
+        "priceValue": 18.99,
+        "rating": 4.6,
+        "ratingsTotal": 3384
+      },
+      {
+        "asin": "B09FKZLFSB",
+        "title": "SIMIYA Thermal Underwear Set for Women Long Johns Fleece Lined Base Layer",
+        "price": "$14.24",
+        "priceValue": 14.24,
+        "rating": 4.6,
+        "ratingsTotal": 2718
+      },
+      {
+        "asin": "B0DCPCR1S7",
+        "title": "5 Pack Women's Compression Shirts Long Sleeve for Workout & Baselayer",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.6,
+        "ratingsTotal": 2144
+      },
+      {
+        "asin": "B0CC4TCLC3",
+        "title": "SIMIYA 2 Packs Thermal Underwear for Women Long Johns Set Base Layer Winter",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.6,
+        "ratingsTotal": 1805
+      },
+      {
+        "asin": "B0C9YZN8LV",
+        "title": "TELALEO 2 Set Mens Thermal Underwear Fleece Lined Long Johns Baselayer Shirts",
+        "price": "$32.99",
+        "priceValue": 32.99,
+        "rating": 4.6,
+        "ratingsTotal": 1696
+      },
+      {
+        "asin": "B0GMP6SS2G",
+        "title": "MEETYOO Thermal Underwear for Men Long Johns Top and Bottom Set Base Layer 2 Pack",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.6,
+        "ratingsTotal": 692
+      },
+      {
+        "asin": "B08BDG1KMW",
+        "title": "Smartwool Women's Classic Thermal Merino Base Layer Crew",
+        "price": "$93.75",
+        "priceValue": 93.75,
+        "rating": 4.6,
+        "ratingsTotal": 612
+      },
+      {
+        "asin": "B0DJCCPL5N",
+        "title": "Spyder Mens Thermal Underwear Set, Fleece Lined Long Johns Base Layer",
+        "price": "$24.49",
+        "priceValue": 24.49,
+        "rating": 4.6,
+        "ratingsTotal": 486
+      },
+      {
+        "asin": "B0DC14CQQ9",
+        "title": "Merino.tech 100% Merino Wool Base Layer Women - Thermal Set Top, Bottom",
+        "price": "$80.74",
+        "priceValue": 80.74,
+        "rating": 4.6,
+        "ratingsTotal": 330
+      },
+      {
+        "asin": "B0H4FN81Z6",
+        "title": "GAYHAY Thermal Underwear Set for Women Fleece Lined Winter Clothes Long Johns",
+        "price": "$14.24",
+        "priceValue": 14.24,
+        "rating": 4.6,
+        "ratingsTotal": 162
+      },
+      {
+        "asin": "B0H71FPYPT",
+        "title": "2 Pack Thermal Underwear for Men - Long Johns Fleece Lined Base Layer Pants",
+        "price": "$14.99",
+        "priceValue": 14.99,
+        "rating": 4.6,
+        "ratingsTotal": 125
+      },
+      {
+        "asin": "B0HF59TY63",
+        "title": "32 Degrees Heat Men's Lightweight Baselayer Crew Neck Shirt, Thermal Long Sleeve Top for Cold Weather",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.6,
+        "ratingsTotal": 50
+      },
+      {
+        "asin": "B088GZ6J49",
+        "title": "Thermal Underwear for Women Long Johns Set Fleece Lined Winter Cold Weather",
+        "price": "$16.99",
+        "priceValue": 16.99,
+        "rating": 4.5,
+        "ratingsTotal": 13326
+      },
+      {
+        "asin": "B0DJCCVQJ6",
+        "title": "Spyder Womens Thermal Underwear Set, Fleece Lined Long Johns Base Layer",
+        "price": "$15.29",
+        "priceValue": 15.29,
+        "rating": 4.5,
+        "ratingsTotal": 247
+      },
+      {
+        "asin": "B0BKWXML8N",
+        "title": "Smartwool Men's Classic All-Season Merino Base Layer Long Sleeve",
+        "price": "$75.00",
+        "priceValue": 75,
+        "rating": 4.5,
+        "ratingsTotal": 82
+      },
+      {
+        "asin": "B0DHXXMBX8",
+        "title": "Inno Seamless Thermal Underwear for Women Long Johns Skiing & Cold Weather",
+        "price": "$21.37",
+        "priceValue": 21.37,
+        "rating": 4.4,
+        "ratingsTotal": 82
+      },
+      {
+        "asin": "B0FRMY394D",
+        "title": "Women's Merino Wool Blend Shirt Long Sleeve Top Crew Neck Undershirt",
+        "price": "$17.09",
+        "priceValue": 17.09,
+        "rating": 4.3,
+        "ratingsTotal": 384
+      }
+    ]
   }
 }
