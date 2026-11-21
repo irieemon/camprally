@@ -253,8 +253,11 @@ const ROLES = {
    *
    * Known cost of this choice, kept on record: on the 2026-10-26 bench Claude
    * Opus 5.5 scored safety 1/3, all 1/5 (zero false positives) and Gemini 2/5,
-   * against Muse Glimmer's 5/5. The deterministic hazard rules still run first
-   * and are unchanged. Re-bench (scripts/bench-reviewers.mjs) before trusting
+   * against Muse Glimmer's 5/5. RE-BENCHED 2026-11-20 at the same fixtures
+   * (@8c77f8e): Opus 5.5 safety 3/3, all 3/5, 0 false positives, $0.21 — level
+   * with what MiniMax and DeepSeek scored, so the Oct 26 result looks like noise
+   * or a since-improved model. One run; re-bench again before reading much into
+   * it. The deterministic hazard rules still run first and are unchanged. Re-bench (scripts/bench-reviewers.mjs) before trusting
    * this panel's silence on a safety topic. The OpenRouter models stay defined
    * in MODELS so the bench can still reach them if credits are ever added. */
   reviewer: [
