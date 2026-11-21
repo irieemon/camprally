@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-layer-for-cold-weather-camping": [
+    {
+      type: "product-grid",
+      title: "How to Layer for Cold-Weather Camping — Base, Mid, Shell, Done — Quick Comparison",
+      items: [
+        { label: "Cuddl Duds Heavyweight 2 Piece Sets Base Layer Thermal", category: "", icon: "🏕️", asin: "B0BV8QGYDY", link: "https://www.amazon.com/dp/B0BV8QGYDY?tag=camprally-20" },
+        { label: "Under Armour Men's ColdGear Fitted Mock Long Sleeve Shirt", category: "", icon: "🏕️", asin: "B08LNYD3PX", link: "https://www.amazon.com/dp/B08LNYD3PX?tag=camprally-20" },
+        { label: "Dalavch 4/5 Pack Men's Thermal Compression Shirts Long", category: "", icon: "🏕️", asin: "B0CH1BF1X9", link: "https://www.amazon.com/dp/B0CH1BF1X9?tag=camprally-20" },
+        { label: "Smartwool Men's Classic Thermal Merino Base Layer Bottom", category: "", icon: "🏕️", asin: "B08BDGX8RC", link: "https://www.amazon.com/dp/B08BDGX8RC?tag=camprally-20" },
+        { label: "Cuddl Duds Lightweight 2 Piece Active Base Layer Matching", category: "", icon: "🏕️", asin: "B0GC8TL1NY", link: "https://www.amazon.com/dp/B0GC8TL1NY?tag=camprally-20" },
+        { label: "Mens Thermal Underwear Set Fleece Lined Long Johns Base", category: "", icon: "🏕️", asin: "B0FMJM2WS2", link: "https://www.amazon.com/dp/B0FMJM2WS2?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-fleece-jackets-camping-under-50": [
     {
       type: "product-grid",

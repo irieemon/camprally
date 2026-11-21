@@ -144,6 +144,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "thanksgiving-camping-guide": "/images/heroes/thanksgiving-camping-guide.jpg",
   "best-camping-string-lights": "/images/heroes/best-camping-string-lights.jpg",
   "best-fleece-jackets-camping-under-50": "/images/heroes/best-fleece-jackets-camping-under-50.jpg",
+  "how-to-layer-for-cold-weather-camping": "/images/heroes/how-to-layer-for-cold-weather-camping.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

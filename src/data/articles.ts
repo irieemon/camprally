@@ -9518,6 +9518,131 @@ Whichever you choose, remember that a fleece is one layer of a system, not the w
 *Related guides: [How to Stay Warm Camping — The Layers and the Mistakes](/blog/how-to-stay-warm-camping-cold-nights) · [Winter Camping for Beginners — What to Get Right Before You Go](/blog/winter-camping-for-beginners) · [Fall Camping Gear — What Actually Changes When the Nights Get Cold](/blog/fall-camping-gear-essentials)*
     `
   },
+
+  {
+    id: "art-099",
+    slug: "how-to-layer-for-cold-weather-camping",
+    title: "How to Layer for Cold-Weather Camping — Base, Mid, Shell, Done",
+    excerpt: "Learn how to pick and combine base, mid, and shell layers so you stay dry and warm at camp and on the move, plus which budget base layers are worth buying.",
+    category: "Clothing",
+    date: "2026-11-21",
+    author: "Camp Rally Team",
+    readTime: "8 min read",
+    content: `
+# How to Layer for Cold-Weather Camping — Base, Mid, Shell, Done
+
+Cold-weather camping isn't about owning the thickest jacket. It's about managing moisture and heat with a few thin pieces you add and remove all day. Get the system right and a modest budget kit keeps you comfortable. Get it wrong, usually by sweating into the wrong fabric, and even expensive gear feels cold.
+
+This guide covers the three layers, how to wear them differently at camp and on the move, and which budget base layers are worth a look.
+
+## Why Sweat Is the Real Enemy
+
+Your body is constantly giving off moisture, and more when you work hard. In cold weather, that moisture is the problem. Damp fabric pulls heat away from your skin much faster than dry fabric, so you can hike warm for an hour and then start shivering ten minutes after you stop.
+
+Two habits fix most of this:
+
+- **Vent before you sweat.** Unzip, pull off your hat, or drop a layer when you first start to feel warm, before you feel damp. Starting a hike slightly cool is normal. You'll warm up within a few minutes of walking.
+- **Swap to dry layers for sleep.** Don't climb into your sleeping bag in the base layer you hiked in. Keep a dedicated dry set, plus dry socks, packed away for nighttime only. Damp clothes inside a sleeping bag slowly soak its insulation.
+
+**Avoid cotton.** That means jeans, cotton hoodies, cotton t-shirts, and cotton socks. Cotton absorbs moisture, holds onto it, and loses its insulating value when wet. It has no place in a cold-weather layering system.
+
+## The Three Layers
+
+### Base Layer: Moisture Management
+
+The base layer sits against your skin. Its job is to move sweat away from you and stay comfortable when it's damp. There are two main choices:
+
+- **Merino wool** stays warm when damp, resists odor over multiple days, and feels comfortable across a wide range of activity. It generally costs more and is less durable than synthetics.
+- **Synthetic** (polyester and blends) dries fast, holds up to abrasion, and costs less. It tends to hold odor more than merino.
+
+Base layers come in weights. Lightweight versions suit active use and milder cold. Heavyweight or fleece-lined versions suit standing around camp and sleeping. For a deeper comparison, see our guide to the [best thermal base layers for camping under $50](/blog/best-thermal-base-layers-camping-under-50).
+
+### Mid Layer: Insulation
+
+The mid layer traps warm air. The usual options are:
+
+- **Fleece** breathes well, handles moisture, and is cheap and durable. It's a good choice for moving.
+- **Synthetic puffy** gives more warmth for its weight than fleece and keeps insulating reasonably well when damp.
+- **Down puffy** is the warmest for its weight and packs smallest, but it loses much of its loft when wet.
+
+Many campers carry a fleece for hiking and a puffy for camp. Our roundup of [budget puffy jackets for camping](/blog/best-budget-puffy-jackets-camping) covers that second piece.
+
+### Shell: Wind and Weather
+
+The shell blocks wind, rain, and snow. A breathable waterproof jacket is the most versatile choice. Wind alone strips heat surprisingly fast, so even on a dry day a shell earns its place. Look for pit zips or a full front zip so you can vent without taking it off.
+
+## Camp vs. Moving: Two Different Systems
+
+**While moving**, wear less than you think: a base layer, maybe a light fleece, and a shell if it's windy or wet. You generate plenty of heat, and your goal is to avoid sweating through everything.
+
+**At camp**, your activity drops and your heat output drops with it. The moment you stop, put on your puffy over everything before you cool down. Catching that heat is much easier than rebuilding it once you're chilled.
+
+**For sleep**, change into your dry base layer and dry socks. Your sleeping bag and pad do most of the work here. A good pair matters more than any jacket, so read our guide to [good camping socks](/blog/best-camping-socks) and pack a spare pair just for the bag.
+
+A note on sleeping bag ratings: a bag's **comfort rating** is the temperature where a typical sleeper should feel comfortable. The **limit rating** is closer to a survival threshold, not a comfortable night. Plan around the comfort rating, and remember that cold sleepers, an underinsulated pad, or a damp bag all shift the real-world result. Layers help, but they don't turn a summer bag into a winter one.
+
+Never run a stove, heater, lantern, or grill inside a tent or closed vehicle to stay warm. Carbon monoxide builds up quickly in enclosed spaces. For more ways to sleep warmer, see [how to stay warm camping on cold nights](/blog/how-to-stay-warm-camping-cold-nights).
+
+## How to Choose a Base Layer
+
+- **Match the weight to the use.** Go lightweight for hiking and heavyweight or fleece-lined for camp and sleep. Many campers want one of each.
+- **Fit snug, not tight.** A base layer needs skin contact to move moisture. Baggy fabric can't do that job, and an overly tight fit restricts movement and circulation.
+- **Check the fiber content on the listing.** Confirm it's merino or synthetic and contains no cotton.
+- **Consider a set vs. separates.** Matching tops and bottoms are convenient. Buying separates lets you mix weights and sizes.
+- **Think about neck coverage.** A mock neck or higher collar seals in warmth under a jacket.
+
+## The Picks
+
+### Cuddl Duds Heavyweight 2 Piece Sets Base Layer Thermal Underwear for Women
+
+This women's set pairs a top and bottom in a heavyweight thermal build. That makes it a natural fit for the camp-and-sleep role, when you're sitting by the fire or zipping into your bag in dry layers. A matching set also means one purchase covers your whole dedicated sleep layer. Check the listing for fiber content to confirm it suits your needs.
+
+**[Check the Cuddl Duds Heavyweight 2 Piece Sets Base Layer Thermal Underwear for Women on Amazon](https://www.amazon.com/dp/B0BV8QGYDY?tag=camprally-20)**
+
+### Under Armour Men's ColdGear Fitted Mock Long Sleeve Shirt
+
+ColdGear is Under Armour's cold-weather line. This top's fitted cut keeps fabric against the skin, which is what a base layer needs to manage sweat. The mock neck adds coverage under a fleece or shell. It's a sensible choice for active days when you'll be hiking, hauling firewood, or breaking camp.
+
+**[Check the Under Armour Men's ColdGear Fitted Mock Long Sleeve Shirt on Amazon](https://www.amazon.com/dp/B08LNYD3PX?tag=camprally-20)**
+
+### Dalavch 4/5 Pack Men's Thermal Compression Shirts Long Sleeve Fleece Lined
+
+This is a multi-pack of fleece-lined compression tops. Having several on hand makes the dry-layer habit easy: one for hiking, one reserved for sleep, and spares for multi-day trips. The compression fit keeps fabric in close contact with the skin. Some people find compression fits restrictive for sleeping, so check the sizing guidance on the listing.
+
+**[Check the Dalavch 4/5 Pack Men's Thermal Compression Shirts Long Sleeve Fleece Lined on Amazon](https://www.amazon.com/dp/B0CH1BF1X9?tag=camprally-20)**
+
+### Smartwool Men's Classic Thermal Merino Base Layer Bottom
+
+This is a merino bottom from a brand known for wool. It's the pick if you want merino's advantages: warmth when damp and odor resistance over several days without washing. Because it's a single bottom, you can pair it with any top. That's useful if you already own synthetic tops and want to upgrade your legs.
+
+**[Check the Smartwool Men's Classic Thermal Merino Base Layer Bottom on Amazon](https://www.amazon.com/dp/B08BDGX8RC?tag=camprally-20)**
+
+### Cuddl Duds Lightweight 2 Piece Active Base Layer Matching Sets for Women
+
+This set is the lightweight, active counterpart to the heavyweight Cuddl Duds above. Thinner layers suit hiking and moving, when you're producing heat and need to shed moisture. Pairing it with the heavyweight set gives you a moving layer and a sleeping layer from the same brand.
+
+**[Check the Cuddl Duds Lightweight 2 Piece Active Base Layer Matching Sets for Women on Amazon](https://www.amazon.com/dp/B0GC8TL1NY?tag=camprally-20)**
+
+### Mens Thermal Underwear Set Fleece Lined Long Johns Base Layer Top Bottom Cold Weather Gear for Hunting Running Skiing
+
+This men's set includes a fleece-lined top and bottom. The listing positions it for hunting, running, and skiing. As a complete matching set, it's a simple way to build a dedicated dry sleep layer without buying separates. Confirm fiber content and sizing on the listing before you buy.
+
+**[Check the Mens Thermal Underwear Set Fleece Lined Long Johns Base Layer Top Bottom Cold Weather Gear for Hunting Running Skiing on Amazon](https://www.amazon.com/dp/B0FMJM2WS2?tag=camprally-20)**
+
+## Verdict
+
+Layering comes down to three pieces and two habits: base, mid, shell, plus vent early and sleep dry. For most budget campers, the smartest approach is two base layers:
+
+- **For moving:** a lighter, fitted piece like the Under Armour ColdGear top or the Cuddl Duds Lightweight set.
+- **For camp and sleep:** a heavier or fleece-lined set like the Cuddl Duds Heavyweight or one of the men's fleece-lined options.
+
+If you want merino's odor resistance on longer trips, the Smartwool bottom is the place to start.
+
+No layer system replaces a properly rated sleeping bag and an insulated pad. Plan conservatively, pack dry spares, and keep cotton at home.
+
+*Related guides: [Best Fleece Jackets for Camping Under $50 — The Midlayer That Does the Work](/blog/best-fleece-jackets-camping-under-50) · [Affordable Rain Gear for Camping](/blog/affordable-rain-gear-camping) · [Winter Camping for Beginners — What to Get Right Before You Go](/blog/winter-camping-for-beginners)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
