@@ -257,7 +257,14 @@ const ROLES = {
    * (@8c77f8e): Opus 5.5 safety 3/3, all 3/5, 0 false positives, $0.21 — level
    * with what MiniMax and DeepSeek scored, so the Oct 26 result looks like noise
    * or a since-improved model. One run; re-bench again before reading much into
-   * it. The deterministic hazard rules still run first and are unchanged. Re-bench (scripts/bench-reviewers.mjs) before trusting
+   * it. Second run same evening: safety 2/3, all 2/5 — so call it 2-3/5.
+   *
+   * GEMINI 4 HYDROGEN AUDITIONED 2026-11-20 (free on the API tier, newer than
+   * 3.6 Flash) and NOT seated: safety 2/3, all 3/5, 2 transport errors, ~2.5
+   * min per review, against 3.6 Flash's safety 3/3, all 3/5, 2 errors, ~20s,
+   * same fixtures. No better and ~8x slower. Re-audition when Google stops
+   * calling it new. The deterministic hazard rules still run first and are
+   * unchanged. Re-bench (scripts/bench-reviewers.mjs) before trusting
    * this panel's silence on a safety topic. The OpenRouter models stay defined
    * in MODELS so the bench can still reach them if credits are ever added. */
   reviewer: [

@@ -6,6 +6,7 @@
  *   node scripts/bench-reviewers.mjs --model <openrouter-id> # audition one
  *   node scripts/bench-reviewers.mjs --model anthropic/claude-opus-5-5 --model anthropic/claude-haiku-5-5
  *                                    # several; anthropic/* goes DIRECT, billed to the Anthropic key
+ *   node scripts/bench-reviewers.mjs --model google/gemini-4-hydrogen   # google/* goes DIRECT, Gemini key
  *   node scripts/bench-reviewers.mjs --json
  *
  * Exists because "which model should review our articles" was about to be
@@ -148,6 +149,7 @@ function extractJSON(text) {
  * is worse than no benchmark, because the number looks authoritative. */
 function ask(model, slug) {
   if (model.startsWith("anthropic/")) return askAnthropic(model.slice("anthropic/".length), slug);
+  if (model.startsWith("google/")) return askGoogle(model.slice("google/".length), slug);
   if (!KEY) return { error: "no OPENROUTER_API_KEY" };
   const { title, body } = bodies[slug];
   const payload = JSON.stringify({
@@ -205,6 +207,50 @@ function askAnthropic(model, slug) {
       const text = (d.content ?? []).filter((b) => b.type === "text").map((b) => b.text).join("");
       const parsed = extractJSON(text);
       if (parsed === null) return { error: `no JSON in reply (stop_reason=${d.stop_reason})`, cost };
+      return { issues: (Array.isArray(parsed) ? parsed : parsed.issues ?? []).filter((i) => i?.quote), cost };
+    } catch (e) {
+      if (attempt === 2) return { error: `transport: ${String(e.message).slice(0, 90)}` };
+    }
+  }
+}
+
+/* Gemini DIRECT on the Gemini API key, added 2026-11-20 to audition
+ * gemini-4-hydrogen against the incumbent gemini-3.6-flash. Same prompt and
+ * scoring as ask(). Both bill thinking against maxOutputTokens, hence 16000.
+ * The key goes in the x-goog-api-key header rather than the URL so it never
+ * lands in a logged URL. Cost is the PAID-tier price; on the free tier the
+ * call costs nothing, but the figure is what the seat would cost if the key
+ * were ever moved to billing. */
+const GOOGLE_KEY = process.env.GEMINI_API_KEY ?? process.env.GOOGLE_API_KEY ?? openclawVar("GEMINI_API_KEY") ?? openclawVar("GOOGLE_API_KEY");
+const GOOGLE_PRICE = {
+  "gemini-3.6-flash": [0.75, 3.75], // through 2026-12-31; doubles 2027-01-01
+  "gemini-3.8-flash": [0.75, 3.75],
+  "gemini-4-hydrogen": [1.5, 7.5],
+};
+function askGoogle(model, slug) {
+  if (!GOOGLE_KEY) return { error: "no GEMINI_API_KEY" };
+  const { title, body } = bodies[slug];
+  const payload = JSON.stringify({
+    systemInstruction: { parts: [{ text: SYSTEM }] },
+    contents: [{ role: "user", parts: [{ text: JSON.stringify({ title, products: [], body: body.slice(0, 12000) }, null, 1) }] }],
+    generationConfig: { maxOutputTokens: 16000 },
+  });
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const raw = execFileSync("curl", [
+        "-s", "--fail-with-body", "-m", "600",
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+        "-H", `x-goog-api-key: ${GOOGLE_KEY}`, "-H", "content-type: application/json", "--data-binary", "@-",
+      ], { input: payload, maxBuffer: 64 * 1024 * 1024 }).toString();
+      const d = JSON.parse(raw);
+      if (d.error) return { error: String(d.error.message ?? d.error).slice(0, 120) };
+      const u = d.usageMetadata ?? {};
+      const [pin, pout] = GOOGLE_PRICE[model] ?? [0, 0];
+      const cost = ((u.promptTokenCount ?? 0) * pin + ((u.candidatesTokenCount ?? 0) + (u.thoughtsTokenCount ?? 0)) * pout) / 1e6;
+      const cand = d.candidates?.[0];
+      const text = (cand?.content?.parts ?? []).filter((x) => !x.thought && x.text).map((x) => x.text).join("");
+      const parsed = extractJSON(text);
+      if (parsed === null) return { error: `no JSON in reply (finishReason=${cand?.finishReason})`, cost };
       return { issues: (Array.isArray(parsed) ? parsed : parsed.issues ?? []).filter((i) => i?.quote), cost };
     } catch (e) {
       if (attempt === 2) return { error: `transport: ${String(e.message).slice(0, 90)}` };
