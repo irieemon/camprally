@@ -655,7 +655,7 @@
         "cooler with wheels under $150"
       ],
       "heroKeyword": "wheeled cooler",
-      "notes": "GSC DEMAND: cooler cluster (under $100/$150/with wheels) at pos 40-63. Distinct from best-camping-coolers-under-100 — link it. Wheel size and axle material decide whether it rolls on gravel or sand; ice retention claims are manufacturer claims and must be labelled as such. Link how-to-keep-food-cold-camping. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one."
+      "notes": "GSC DEMAND: cooler cluster (under $100/$150/with wheels) at pos 40-63. Distinct from best-camping-coolers-under-100 — link it. Wheel size and axle material decide whether it rolls on gravel or sand; ice retention claims are manufacturer claims and must be labelled as such. Link how-to-keep-food-cold-camping. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. REGEN NOTES (2 prior gate rejections, see specs/quarantine/best-camping-coolers-with-wheels-PROPOSAL.md): Do not generalize about a whole product class from one product — in particular never call zippers 'the failure point' of soft coolers; describe each product's closure only as its listing describes it. Do not claim a handle's material says anything about how well a cooler rolls. Wheel and hub durability: name load, UV and age as the usual failure causes; cold only makes stressed plastic more brittle. List only the sizes the linked listing actually offers WITH wheels — never imply a size is wheeled unless the listing says so. Buyer logic (wheel, frame, drain, seal) and the verdict structure are right; keep them. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
     },
     {
       "slug": "best-hiking-shoes-under-100",
@@ -1021,6 +1021,426 @@
       ],
       "heroKeyword": "camping string lights",
       "notes": "LED, rechargeable or solar ONLY — no fuel lighting. Only quote run-time or lumens the listing states. Link best-camping-lanterns-under-30. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-fleece-jackets-camping-under-50",
+      "title": "Best Fleece Jackets for Camping Under $50 — The Midlayer That Does the Work",
+      "category": "Clothing",
+      "priority": "high",
+      "keywords": [
+        "fleece jacket for camping",
+        "best budget fleece jacket",
+        "fleece midlayer",
+        "cheap fleece jacket"
+      ],
+      "heroKeyword": "fleece jacket",
+      "notes": "IN SEASON Nov-Feb. The midlayer between base layers and a shell or puffy — link best-thermal-base-layers-camping-under-50 and best-budget-puffy-jackets-camping. Polyester fleece only; explain fleece weights (100/200/300) only where the listing names them. Fleece breathes and dries fast but does not block wind — say so and point to a shell. HYPOTHERMIA GATE: warmth claims stay conservative — never promise a specific number of degrees, explain comfort vs limit ratings honestly, and never present a mylar/space blanket as insulation. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "how-to-layer-for-cold-weather-camping",
+      "title": "How to Layer for Cold-Weather Camping — Base, Mid, Shell, Done",
+      "category": "Clothing",
+      "priority": "high",
+      "keywords": [
+        "how to layer for cold weather camping",
+        "layering for winter camping",
+        "what to wear camping in cold weather",
+        "base layer mid layer shell"
+      ],
+      "heroKeyword": "base layer",
+      "notes": "IN SEASON Nov-Feb. Explainer, not a roundup: base (merino or synthetic), mid (fleece or synthetic/down puffy), shell. Cover sweating as the enemy (vent before you sweat, swap to dry layers for sleep), and camp-vs-moving layering. Link best-thermal-base-layers-camping-under-50, best-budget-puffy-jackets-camping, best-camping-socks, how-to-stay-warm-camping-cold-nights. Cotton appears ONLY as the thing to avoid. HYPOTHERMIA GATE: warmth claims stay conservative — never promise a specific number of degrees, explain comfort vs limit ratings honestly, and never present a mylar/space blanket as insulation. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-winter-camping-boots-budget",
+      "title": "Best Budget Winter Boots for Camping — Warm, Waterproof, Not Expensive",
+      "category": "Footwear",
+      "priority": "high",
+      "keywords": [
+        "winter camping boots",
+        "budget winter boots",
+        "insulated waterproof boots",
+        "best cheap snow boots"
+      ],
+      "heroKeyword": "insulated winter boots",
+      "notes": "IN SEASON Nov-Feb. Insulated waterproof boots for camp and snowy trails — distinct from best-hiking-boots-camping-under-100 (3-season), link it. Fit for thick socks, removable liners, and that a manufacturer's temperature rating is a marketing claim to be labelled as such. Only quote insulation grams or ratings the listing states. Link best-camping-socks. HYPOTHERMIA GATE: warmth claims stay conservative — never promise a specific number of degrees, explain comfort vs limit ratings honestly, and never present a mylar/space blanket as insulation. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-camping-gifts-under-100",
+      "title": "Best Camping Gifts Under $100 — Gear They'll Actually Use",
+      "category": "Gear",
+      "priority": "high",
+      "keywords": [
+        "camping gifts under 100",
+        "gifts for campers",
+        "best gifts for outdoorsy people",
+        "camping christmas gifts"
+      ],
+      "heroKeyword": "camping gift",
+      "notes": "TIME-SENSITIVE: should publish before mid-December. The step up from best-camping-gifts-under-50 and best-camping-stocking-stuffers-under-25 — link both and do not repeat their picks. Organise by who it's for (car camper, hiker, camp cook, beginner). Each pick needs a one-line 'why they'll use it', not a features list. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "first-day-hike-guide",
+      "title": "First Day Hikes — How to Start the New Year on a Trail",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": [
+        "first day hikes",
+        "new years day hike",
+        "first day hike state parks",
+        "january 1 hike"
+      ],
+      "heroKeyword": "hiking trail winter",
+      "notes": "TIME-SENSITIVE: should publish before Dec 31. America's State Parks runs First Day Hikes on Jan 1 in many states. Never claim a specific park hosts an event, a time, or a registration rule — tell readers to check their own state park's site. Cover winter day-hike basics: short daylight, layers, traction, water that won't freeze, telling someone your route. Link how-to-layer-for-cold-weather-camping and best-budget-hiking-backpacks-under-100. HYPOTHERMIA GATE: warmth claims stay conservative — never promise a specific number of degrees, explain comfort vs limit ratings honestly, and never present a mylar/space blanket as insulation. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "beginner-camping-checklist",
+      "title": "The Beginner Camping Checklist — Everything You Need, Nothing You Don't",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": [
+        "beginner camping checklist",
+        "camping checklist for beginners",
+        "what to bring camping first time",
+        "camping basics list"
+      ],
+      "heroKeyword": "camping checklist",
+      "notes": "BING DEMAND: 'cheapest camping basics' / 'affordable camping for beginners' rank pos 2-7 with no checklist page. A tiered checklist: must-have (shelter, sleep, light, water, food, first aid), nice-to-have, skip-it. Link cheapest-camping-setup-for-beginners as the gear companion and how-to-start-camping-no-gear for borrowing/renting. Short lines a reader can tick off. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "how-to-plan-a-camping-trip",
+      "title": "How to Plan a Camping Trip — A Step-by-Step Guide for Your First One",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": [
+        "how to plan a camping trip",
+        "planning a camping trip",
+        "first camping trip planning",
+        "camping trip planning guide"
+      ],
+      "heroKeyword": "campsite planning",
+      "notes": "BING DEMAND: beginner cluster. Steps in order: pick the trip type, pick and reserve a site, check weather and fire restrictions, plan meals, pack, tell someone your plans. Never quote specific reservation windows, fees, or park rules — say they vary and where to check. Link how-to-choose-a-campsite, national-park-camping-reservations, how-to-find-free-campsites, camping-meal-plans-budget-50, beginner-camping-checklist. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "camping-budget-breakdown",
+      "title": "Camping on a Budget — Where the Money Actually Goes",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": [
+        "how much does camping cost",
+        "camping on a budget",
+        "affordable camping for beginners",
+        "cheap camping trip"
+      ],
+      "heroKeyword": "budget camping",
+      "notes": "BING DEMAND: 'affordable camping for beginners' pos ~6, 'cheapest camping' cluster pos 2-7. Structure by cost category (site, gear, food, fuel, transport) and which ones are one-time vs per-trip. Do NOT quote campsite fees, park entrance fees, or gas prices as numbers — they vary by place and change; say where to look them up. Biggest savers: borrow/rent before buying, free dispersed sites, cooking simple. Link cheapest-camping-setup-for-beginners, how-to-find-free-campsites, rent-vs-buy-camping-gear. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "how-to-sleep-better-camping",
+      "title": "How to Sleep Better Camping — Fixes for the Five Things Keeping You Awake",
+      "category": "Sleeping Gear",
+      "priority": "high",
+      "keywords": [
+        "how to sleep better camping",
+        "can't sleep when camping",
+        "comfortable camping sleep setup",
+        "camping sleep tips"
+      ],
+      "heroKeyword": "camping sleeping setup",
+      "notes": "Evergreen. The five: cold from the ground, a pad that's too thin, a bad pillow, noise/light, and pitching on a slope. Fixes are gear and technique, linked to best-budget-sleeping-pads-under-50, best-insulated-sleeping-pads-under-100, best-camping-pillows-budget, best-car-camping-air-mattresses-under-100, how-to-choose-a-campsite. Never recommend sleep medication or alcohol as a sleep aid. HYPOTHERMIA GATE: warmth claims stay conservative — never promise a specific number of degrees, explain comfort vs limit ratings honestly, and never present a mylar/space blanket as insulation. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "rent-vs-buy-camping-gear",
+      "title": "Rent vs Buy Camping Gear — What to Borrow First and What to Own",
+      "category": "Planning",
+      "priority": "high",
+      "keywords": [
+        "rent camping gear",
+        "should i rent or buy camping gear",
+        "camping gear rental",
+        "borrow camping gear"
+      ],
+      "heroKeyword": "camping gear",
+      "notes": "Beginner demand. Rent or borrow the expensive, trip-specific gear (tent, backpacking pack) until you know you like it; buy the personal and cheap stuff (headlamp, pad, pillow, mug). Never name a rental company's prices or policies as fact. Link how-to-start-camping-no-gear and cheapest-camping-setup-for-beginners. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-microspikes-traction-cleats",
+      "title": "Best Budget Microspikes and Traction Cleats for Winter Trails",
+      "category": "Footwear",
+      "priority": "medium",
+      "keywords": [
+        "microspikes",
+        "traction cleats for hiking",
+        "ice cleats for boots",
+        "best budget microspikes"
+      ],
+      "heroKeyword": "microspikes",
+      "notes": "IN SEASON Dec-Mar. Slip-on traction for icy trails. Be clear they are NOT crampons and not for technical, steep-ice, or avalanche terrain. Fit to boot size per the listing. Link best-winter-camping-boots-budget and first-day-hike-guide. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-budget-snowshoes",
+      "title": "Best Budget Snowshoes for Beginners",
+      "category": "Gear",
+      "priority": "medium",
+      "keywords": [
+        "budget snowshoes",
+        "best snowshoes for beginners",
+        "cheap snowshoes",
+        "snowshoe kit with poles"
+      ],
+      "heroKeyword": "snowshoes",
+      "notes": "IN SEASON Dec-Mar. Size by the load limits the listing states (body weight plus pack). Flat-terrain vs rolling-terrain models, heel lifts, bindings that work with gloves. Never suggest avalanche terrain; tell beginners to stick to marked, packed trails. Link best-budget-trekking-poles and best-winter-camping-boots-budget. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-camping-beanies-neck-gaiters",
+      "title": "Best Beanies and Neck Gaiters for Cold Camping Nights",
+      "category": "Clothing",
+      "priority": "medium",
+      "keywords": [
+        "camping beanie",
+        "neck gaiter for cold",
+        "fleece neck warmer",
+        "merino beanie"
+      ],
+      "heroKeyword": "fleece beanie",
+      "notes": "IN SEASON Nov-Feb. Wool, merino, fleece or synthetic ONLY. A beanie for sleeping is a standard cold-night fix; keep warmth claims modest. Link how-to-layer-for-cold-weather-camping and best-winter-camping-gloves-budget. HYPOTHERMIA GATE: warmth claims stay conservative — never promise a specific number of degrees, explain comfort vs limit ratings honestly, and never present a mylar/space blanket as insulation. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "how-to-keep-water-from-freezing-camping",
+      "title": "How to Keep Water From Freezing When Winter Camping",
+      "category": "Skills",
+      "priority": "medium",
+      "keywords": [
+        "keep water from freezing camping",
+        "water bottle freezing winter",
+        "winter hydration camping",
+        "insulated water bottle sleeve"
+      ],
+      "heroKeyword": "insulated water bottle",
+      "notes": "IN SEASON Dec-Feb. Techniques: insulated sleeves, bottles stored upside down (ice forms at the top first), wide-mouth bottles, keeping a bottle inside the sleeping bag. If mentioning warm water in a bottle, say WARM not boiling, a bottle the listing rates for hot liquids, lid checked. Never suggest melting snow or heating water inside a tent or vehicle. Treat or boil melted snow before drinking. Link best-camping-thermoses-under-30 and affordable-water-filtration-camping. GATE PHRASING: the combustion rule reads fuel words (stove, grill, propane, charcoal, campfire) and 'in the car / tent / van / vehicle / vestibule / awning' together within a sentence or its neighbour. Keep every cooking or fuel sentence separate from any in-vehicle or in-shelter sentence, and say 'in the trunk' or 'at the picnic table' instead. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-camping-sleeping-bags-under-50",
+      "title": "Best Camping Sleeping Bags Under $50 — Cheap Bags That Aren't Junk",
+      "category": "Sleeping Gear",
+      "priority": "medium",
+      "keywords": [
+        "sleeping bag under 50",
+        "cheap sleeping bag for camping",
+        "best budget sleeping bag",
+        "summer sleeping bag"
+      ],
+      "heroKeyword": "sleeping bag",
+      "notes": "Three-season/summer bags — cold-weather bags are best-budget-sleeping-bags-cold-weather, link it and do not re-list. Explain comfort vs limit ratings and that budget bags' ratings run optimistic; label every rating as the manufacturer's. Link best-budget-sleeping-pads-under-50 — the pad matters as much as the bag. HYPOTHERMIA GATE: warmth claims stay conservative — never promise a specific number of degrees, explain comfort vs limit ratings honestly, and never present a mylar/space blanket as insulation. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-backpacking-tents-under-150",
+      "title": "Best Budget Backpacking Tents Under $150",
+      "category": "Tents",
+      "priority": "medium",
+      "keywords": [
+        "backpacking tent under 150",
+        "budget backpacking tent",
+        "cheap 2 person backpacking tent",
+        "lightweight tent budget"
+      ],
+      "heroKeyword": "backpacking tent",
+      "notes": "Lightweight 1-2 person tents — distinct from best-budget-tents-under-100 (car camping) and best-family-camping-tents-under-200. Weight, packed size, double-wall vs single-wall condensation, vestibule space. Only quote weights the listing states and say whether it's trail or packed weight. Link how-to-pack-light-camping and best-tent-footprints-budget. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-day-hiking-packs-under-50",
+      "title": "Best Day Hiking Backpacks Under $50",
+      "category": "Gear",
+      "priority": "medium",
+      "keywords": [
+        "day hiking backpack",
+        "daypack under 50",
+        "best budget daypack",
+        "hiking daypack"
+      ],
+      "heroKeyword": "hiking daypack",
+      "notes": "Daypacks (roughly 15-30L) — multi-day packs are best-budget-hiking-backpacks-under-100, link it. Fit, hip belt, hydration sleeve, rain cover. Only quote capacity the listing states. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-camping-games-family",
+      "title": "Best Camping Games for Families — Screen-Free Fun at the Campsite",
+      "category": "Family",
+      "priority": "medium",
+      "keywords": [
+        "camping games",
+        "family camping games",
+        "campsite games for kids",
+        "outdoor games for camping"
+      ],
+      "heroKeyword": "camping games",
+      "notes": "Gift-season friendly. Mix of packable (cards, dice) and campsite (cornhole, ring toss, glow games). Age suitability only as the listing states. Link camping-with-kids-first-trip and best-kids-camping-gear-budget. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-kids-camping-gear-budget",
+      "title": "Best Budget Camping Gear for Kids",
+      "category": "Family",
+      "priority": "medium",
+      "keywords": [
+        "kids camping gear",
+        "camping gear for kids",
+        "kids headlamp",
+        "kids camping chair"
+      ],
+      "heroKeyword": "kids camping gear",
+      "notes": "Gift-season friendly. Kid-sized headlamp, chair, mess kit, binoculars, sleeping pad. Age ranges only as listings state. Link best-kids-sleeping-bags-budget and camping-with-kids-first-trip. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-dog-camping-gear-budget",
+      "title": "Best Budget Camping Gear for Dogs",
+      "category": "Pets",
+      "priority": "medium",
+      "keywords": [
+        "dog camping gear",
+        "camping with dogs gear",
+        "dog sleeping pad camping",
+        "collapsible dog bowl"
+      ],
+      "heroKeyword": "dog camping gear",
+      "notes": "Product roundup that complements camping-with-dogs-checklist — link it. Collapsible bowls, tie-out lines, light-up collars, dog sleeping pads, booties. Never suggest leaving a dog in a vehicle, never recommend human medication, and defer health questions to a vet. Say to check campground pet rules. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "camping-meal-plan-family-week",
+      "title": "A Week-Long Camping Meal Plan for a Family on a Budget",
+      "category": "Cooking",
+      "priority": "medium",
+      "keywords": [
+        "camping meal plan for a week",
+        "family camping meal plan",
+        "camping meal plan 5 people 7 days budget",
+        "week of camping meals"
+      ],
+      "heroKeyword": "camping meal",
+      "notes": "BING DEMAND: 'camping meal plan 5 people 7 days budget' pos ~2 with no exact page. Seven days, simple repeatable meals, perishables eaten first, a shopping list grouped by cooler vs dry box. No dollar figures. Food safety: keep perishables cold, link how-to-keep-food-cold-camping; store food in the vehicle or a bear canister where required, never in the tent. Link camping-meal-plans-budget-50 (the weekend version). GATE PHRASING: the combustion rule reads fuel words (stove, grill, propane, charcoal, campfire) and 'in the car / tent / van / vehicle / vestibule / awning' together within a sentence or its neighbour. Keep every cooking or fuel sentence separate from any in-vehicle or in-shelter sentence, and say 'in the trunk' or 'at the picnic table' instead. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "no-cook-camping-meals",
+      "title": "No-Cook Camping Meals — Easy Food When You Don't Want a Stove",
+      "category": "Cooking",
+      "priority": "medium",
+      "keywords": [
+        "no cook camping meals",
+        "camping food no cooking",
+        "easy camping meals no stove",
+        "cold camping meals"
+      ],
+      "heroKeyword": "camping food",
+      "notes": "Meals with no stove or fire: wraps, shelf-stable proteins, overnight oats, snack plates. Food safety for perishables (keep cold, link how-to-keep-food-cold-camping). Never suggest storing food in a tent. Link camping-meal-plans-budget-50. GATE PHRASING: the combustion rule reads fuel words (stove, grill, propane, charcoal, campfire) and 'in the car / tent / van / vehicle / vestibule / awning' together within a sentence or its neighbour. Keep every cooking or fuel sentence separate from any in-vehicle or in-shelter sentence, and say 'in the trunk' or 'at the picnic table' instead. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "state-park-vs-national-park-camping",
+      "title": "State Park vs National Park Camping — Which Is Better for Beginners?",
+      "category": "Planning",
+      "priority": "medium",
+      "keywords": [
+        "state park vs national park camping",
+        "state park camping",
+        "national park camping for beginners",
+        "where to camp first time"
+      ],
+      "heroKeyword": "state park campground",
+      "notes": "Compare crowding, booking difficulty, amenities, and cost structure in general terms. Never quote specific fees, booking windows, or a park's rules as fact — they vary and change. Link national-park-camping-reservations, how-to-find-free-campsites, how-to-choose-a-campsite. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "how-to-waterproof-a-tent",
+      "title": "How to Waterproof a Tent — Seam Sealing, DWR, and Footprints",
+      "category": "Skills",
+      "priority": "low",
+      "keywords": [
+        "how to waterproof a tent",
+        "tent seam sealer",
+        "tent waterproofing spray",
+        "reproof tent"
+      ],
+      "heroKeyword": "tent seam sealer",
+      "notes": "Seam sealing, refreshing DWR on the fly, and footprints. Follow each product's own instructions; apply sprays outdoors with ventilation. Link how-to-camp-in-rain and best-tent-footprints-budget. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-camping-mugs-cups",
+      "title": "Best Camping Mugs and Cups on a Budget",
+      "category": "Cookware",
+      "priority": "low",
+      "keywords": [
+        "camping mug",
+        "insulated camping mug",
+        "enamel camping mug",
+        "stainless camping cup"
+      ],
+      "heroKeyword": "camping mug",
+      "notes": "Insulated stainless, enamel, collapsible silicone. Note that an insulated mug should not be put on a stove; only a single-wall metal mug can be, and only where the listing says so. Link best-camping-coffee-makers-under-40 and best-camping-thermoses-under-30. GATE PHRASING: the combustion rule reads fuel words (stove, grill, propane, charcoal, campfire) and 'in the car / tent / van / vehicle / vestibule / awning' together within a sentence or its neighbour. Keep every cooking or fuel sentence separate from any in-vehicle or in-shelter sentence, and say 'in the trunk' or 'at the picnic table' instead. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-mosquito-repellent-camping",
+      "title": "Best Mosquito Repellents for Camping — DEET, Picaridin, and What Works",
+      "category": "Safety",
+      "priority": "low",
+      "keywords": [
+        "best mosquito repellent camping",
+        "deet vs picaridin",
+        "bug spray for camping",
+        "permethrin clothing spray"
+      ],
+      "heroKeyword": "mosquito repellent",
+      "notes": "SPRING PREP. Follow the product label and EPA guidance; never state a concentration or age as safe for children or babies beyond what the label says. Permethrin is for clothing and gear only, never skin, and is toxic to cats when wet. Link camping-bug-tick-prevention-spring. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-pop-up-canopy-camping",
+      "title": "Best Budget Pop-Up Canopies for Camping and Tailgates",
+      "category": "Shelter",
+      "priority": "low",
+      "keywords": [
+        "pop up canopy camping",
+        "best budget canopy tent",
+        "10x10 canopy",
+        "canopy with sidewalls"
+      ],
+      "heroKeyword": "pop up canopy",
+      "notes": "SPRING PREP. Stake and weight it down — wind is what wrecks canopies; take it down in high wind. Never suggest a grill or stove under a canopy with sidewalls closed. Link best-camping-tarp-under-30 and best-camping-chairs-tailgating. GATE PHRASING: the combustion rule reads fuel words (stove, grill, propane, charcoal, campfire) and 'in the car / tent / van / vehicle / vestibule / awning' together within a sentence or its neighbour. Keep every cooking or fuel sentence separate from any in-vehicle or in-shelter sentence, and say 'in the trunk' or 'at the picnic table' instead. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-camping-food-storage-bins",
+      "title": "Best Camping Food Storage Bins — Keep Raccoons Out of Your Camp Kitchen",
+      "category": "Cooking",
+      "priority": "low",
+      "keywords": [
+        "camping food storage",
+        "camp kitchen storage bin",
+        "raccoon proof food storage",
+        "camping dry box"
+      ],
+      "heroKeyword": "camping storage bin",
+      "notes": "Latching bins and dry boxes for car camping. Be clear that ordinary bins are NOT bear-resistant; in bear country use a certified canister or the site's food locker — link best-bear-canisters-budget. Never suggest storing food in the tent. Link best-camp-kitchen-organization. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "spring-camping-gear-checklist",
+      "title": "Spring Camping Gear Checklist — Getting Ready for the Season",
+      "category": "Planning",
+      "priority": "low",
+      "keywords": [
+        "spring camping checklist",
+        "spring camping gear",
+        "camping season prep",
+        "first camping trip of the year"
+      ],
+      "heroKeyword": "camping gear",
+      "notes": "SPRING PREP. Pull gear out of storage and check it (tent seams, pad leaks, stove test outdoors, headlamp batteries), then the mud-season and cold-night essentials. Link how-to-store-camping-gear-for-winter, how-to-waterproof-a-tent, beginner-camping-checklist. GATE PHRASING: the combustion rule reads fuel words (stove, grill, propane, charcoal, campfire) and 'in the car / tent / van / vehicle / vestibule / awning' together within a sentence or its neighbour. Keep every cooking or fuel sentence separate from any in-vehicle or in-shelter sentence, and say 'in the trunk' or 'at the picnic table' instead. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
+    },
+    {
+      "slug": "best-tent-repair-kits",
+      "title": "Best Tent Repair Kits and Patches",
+      "category": "Accessories",
+      "priority": "low",
+      "keywords": [
+        "tent repair kit",
+        "tent patch",
+        "tent pole repair",
+        "tenacious tape"
+      ],
+      "heroKeyword": "tent repair kit",
+      "notes": "Pole splints, patch tape, seam sealer, zipper fixes. Field fixes vs home fixes. Link how-to-waterproof-a-tent and best-tent-stakes-budget. FACTS GATE: no invented specs, ratings, temperature figures or prices. Prices come only from the live catalog — never write a dollar figure for a product in prose. Claim only what each product's listing states; if a listing does not state a number, do not supply one. SAFETY GATE: never present cotton as a warmth layer, never suggest any combustion device (stove, heater, lantern, grill) inside a tent or closed vehicle, never suggest sleeping with a heater running, never suggest drinking untreated water, never suggest storing food in a tent."
     }
   ],
   "published": [

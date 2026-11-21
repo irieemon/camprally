@@ -243,16 +243,22 @@ const ROLES = {
    * two votes at once and leaves MiniMax voting with the bench. Accepted
    * because the bench is two more distinct lineages deep, but it is the reason
    * the fourth and fifth seats are NOT both MiniMax. */
+  /* 2026-11-20: OPENROUTER REMOVED FROM THE PANEL (Sean: "we don't need
+   * OpenRouter", "we can use Claude to check articles"). Its credits ran out
+   * ~2026-10-24; both OpenRouter seats answered HTTP 402 on every review after
+   * that, the panel fell under two answers, and review-article passed articles
+   * on the deterministic rules alone ("clean (rules only; model unreachable)")
+   * for roughly three weeks. Seats are now three distinct lineages on keys we
+   * actually pay for: MiniMax, Claude, Gemini.
+   *
+   * Known cost of this choice, kept on record: on the 2026-10-26 bench Claude
+   * Opus 5.5 scored safety 1/3, all 1/5 (zero false positives) and Gemini 2/5,
+   * against Muse Glimmer's 5/5. The deterministic hazard rules still run first
+   * and are unchanged. Re-bench (scripts/bench-reviewers.mjs) before trusting
+   * this panel's silence on a safety topic. The OpenRouter models stay defined
+   * in MODELS so the bench can still reach them if credits are ever added. */
   reviewer: [
     ["minimax", MODELS.minimaxWriter],
-    ["openrouter", MODELS.museGlimmer],
-    ["openrouter", MODELS.deepseek],
-    /* Claude Opus 5.5 benched on 2026-10-26 and does NOT earn a starting seat:
-     * safety 1/3, all 1/5, zero false positives, $0.19 for the eight cases. It
-     * read the sealed-tent drying passage and rated it LOW; it missed the
-     * hydration target and the mylar claim outright. So it leads the bench —
-     * a fourth lineage for callRole's single-answer callers — and stays out of
-     * panel() until a re-bench says otherwise. */
     ["anthropic", MODELS.claude],
     ["google", MODELS.gemini],
     ["minimax", MODELS.minimaxAlt],
@@ -314,8 +320,22 @@ export function minimaxKey() {
 }
 
 /** Which of a role's candidates could actually be tried, as {provider, model}. */
+/* REVIEWER_SEATS="provider:model,provider:model,..." replaces the reviewer
+ * seating plan without a commit, the same way the MODELS env overrides rotate a
+ * model id. Added 2026-11-20 when OpenRouter left the panel: the panel()
+ * mechanics tests (malformed/empty/junk retries) were written against the
+ * OpenRouter seats' wire format and pin that plan through this variable, so
+ * they keep testing panel() rather than whoever happens to be seated. */
+function seatsFromEnv(role) {
+  if (role !== "reviewer" || !process.env.REVIEWER_SEATS) return null;
+  return process.env.REVIEWER_SEATS.split(",").map((s) => s.trim()).filter(Boolean).map((s) => {
+    const i = s.indexOf(":");
+    return [s.slice(0, i), s.slice(i + 1)];
+  });
+}
+
 export function roleCandidates(role) {
-  return (ROLES[role] ?? []).filter(([p]) => providerAvailable(p)).map(([provider, model]) => ({ provider, model }));
+  return (seatsFromEnv(role) ?? ROLES[role] ?? []).filter(([p]) => providerAvailable(p)).map(([provider, model]) => ({ provider, model }));
 }
 
 /* ---------- wire formats ---------- */

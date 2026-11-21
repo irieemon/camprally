@@ -612,10 +612,15 @@ const mentions = (sources) => {
     check("two no-answer seats: defer, seats still recorded", r2.entry.status === "pending" && r2.entry.perArticle["budget-camping-cookware-that-works"]?.review?.seats.length === 3);
   }
 
+  /* The panel() mechanics tests below script OpenRouter-format replies, so they
+   * pin the 2026-09 seating plan rather than whoever is seated today (OpenRouter
+   * left the live panel 2026-11-20). What they test is panel() itself. */
+  const PANEL_MECHANICS_SEATS = "minimax:MiniMax-M3,openrouter:meta/muse-glimmer-30b,openrouter:deepseek/deepseek-v4-pro";
+
   // (f) the REAL panel(): malformed JSON is logged always, retried once, then counted as no answer
   {
-    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG };
-    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG;
+    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG, REVIEWER_SEATS: process.env.REVIEWER_SEATS };
+    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG; process.env.REVIEWER_SEATS = PANEL_MECHANICS_SEATS;
     const realFetch = globalThis.fetch, realErr = console.error;
     const logged = [];
     const calls = {};
@@ -673,8 +678,8 @@ const mentions = (sources) => {
 
   // (h) the REAL panel(): an EMPTY reply (reasoning ate max_tokens) is retried once
   {
-    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG };
-    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG;
+    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG, REVIEWER_SEATS: process.env.REVIEWER_SEATS };
+    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG; process.env.REVIEWER_SEATS = PANEL_MECHANICS_SEATS;
     const realFetch = globalThis.fetch, realErr = console.error;
     const logged = [], calls = {}, maxSeen = {};
     const reply = (body) => ({ ok: true, status: 200, json: async () => body, text: async () => JSON.stringify(body) });
@@ -726,8 +731,8 @@ const mentions = (sources) => {
     check("shape: an item without a quote is not", !!reviewReplyError({ issues: [{ problem: "x", severity: "high" }] }));
     check("shape: severity outside high|low is not", !!reviewReplyError({ issues: [{ quote: "q", problem: "x", severity: "critical" }] }));
 
-    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG };
-    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG;
+    const env = { MINIMAX_API_KEY: process.env.MINIMAX_API_KEY, OPENROUTER_API_KEY: process.env.OPENROUTER_API_KEY, MINIMAX_DEBUG: process.env.MINIMAX_DEBUG, REVIEWER_SEATS: process.env.REVIEWER_SEATS };
+    process.env.MINIMAX_API_KEY = "test"; process.env.OPENROUTER_API_KEY = "test"; delete process.env.MINIMAX_DEBUG; process.env.REVIEWER_SEATS = PANEL_MECHANICS_SEATS;
     const realFetch = globalThis.fetch, realErr = console.error;
     const logged = [], calls = {};
     const reply = (body) => ({ ok: true, status: 200, json: async () => body, text: async () => JSON.stringify(body) });
