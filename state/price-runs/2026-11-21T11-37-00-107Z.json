@@ -1,0 +1,12 @@
+{
+  "startedAt": "2026-11-21T11:37:00.107Z",
+  "finishedAt": "2026-11-21T11:37:07.305Z",
+  "outcome": "degraded",
+  "reason": "price-source-unavailable",
+  "products": 465,
+  "priced": 465,
+  "displayable": 464,
+  "stale": 1,
+  "expiring": 0,
+  "priceClaims": "ok"
+}
