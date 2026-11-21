@@ -22670,5 +22670,429 @@
       "fetchedAt": "2026-11-10T14:00:00.546Z",
       "source": "canopy amazonProduct"
     }
+  },
+  "fleece jacket|1|50": {
+    "term": "fleece jacket",
+    "min": 1,
+    "max": 50,
+    "fetchedAt": "2026-11-21T01:09:02.457Z",
+    "results": [
+      {
+        "asin": "B00AJ32SDU",
+        "title": "Columbia Youth Steens Mt II Fleece",
+        "price": "$25.50",
+        "priceValue": 25.5,
+        "rating": 4.8,
+        "ratingsTotal": 20154
+      },
+      {
+        "asin": "B0076R6L58",
+        "title": "Columbia Men's Steens Mountain Full Zip 2.0",
+        "price": "$37.05",
+        "priceValue": 37.05,
+        "rating": 4.7,
+        "ratingsTotal": 53460
+      },
+      {
+        "asin": "B01MZAZED4",
+        "title": "Tommy Hilfiger Men's Classic Zip Front Polar Fleece Jacket",
+        "price": "$42.23",
+        "priceValue": 42.23,
+        "rating": 4.7,
+        "ratingsTotal": 8069
+      },
+      {
+        "asin": "B0D4PHQTX4",
+        "title": "adidas Men's Terrex Multi Essentials Half-zip Fleece Hiking Jacket",
+        "price": "$25.62",
+        "priceValue": 25.62,
+        "rating": 4.7,
+        "ratingsTotal": 311
+      },
+      {
+        "asin": "B003NX8CKG",
+        "title": "Columbia Women's Benton Springs Full Zip",
+        "price": "$37.05",
+        "priceValue": 37.05,
+        "rating": 4.6,
+        "ratingsTotal": 53251
+      },
+      {
+        "asin": "B079PK1XTS",
+        "title": "Amazon Essentials Men's Sherpa-Lined Full-Zip Fleece Hoodie Sweatshirt",
+        "price": "$21.78",
+        "priceValue": 21.78,
+        "rating": 4.6,
+        "ratingsTotal": 36277
+      },
+      {
+        "asin": "B008CDT6EI",
+        "title": "Columbia Women's Fast Trek II Jacket",
+        "price": "$48.75",
+        "priceValue": 48.75,
+        "rating": 4.6,
+        "ratingsTotal": 8735
+      },
+      {
+        "asin": "B0C49C8HDR",
+        "title": "33,000ft Women's Softshell Jacket Waterproof Hooded Fleece Lined Rain Coat",
+        "price": "$45.21",
+        "priceValue": 45.21,
+        "rating": 4.6,
+        "ratingsTotal": 3802
+      },
+      {
+        "asin": "B0BK933W5K",
+        "title": "QINSEN Women's Full Zip Fleece Short Jacket Warm Winter Long Sleeve Stand Collar Sherpa Crop Coat",
+        "price": "$37.14",
+        "priceValue": 37.14,
+        "rating": 4.6,
+        "ratingsTotal": 2929
+      },
+      {
+        "asin": "B0D3TZV4PN",
+        "title": "Men's Ski Jacket Winter Coat",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.6,
+        "ratingsTotal": 2289
+      },
+      {
+        "asin": "B07Y9Y3BGD",
+        "title": "Outdoor Ventures Men's Softshell Jacket Waterproof Fleece Rain Shell Coat",
+        "price": "$45.07",
+        "priceValue": 45.07,
+        "rating": 4.6,
+        "ratingsTotal": 2035
+      },
+      {
+        "asin": "B0CGQJKXDW",
+        "title": "Lands' End Women's Fleece Full Zip Jacket",
+        "price": "$29.97",
+        "priceValue": 29.97,
+        "rating": 4.6,
+        "ratingsTotal": 1617
+      },
+      {
+        "asin": "B096YJKKGB",
+        "title": "Amazon Essentials Men's Full-Zip Polar Fleece Jacket with Zippered Pockets for Cold Outdoor Weather",
+        "price": "$24.10",
+        "priceValue": 24.1,
+        "rating": 4.6,
+        "ratingsTotal": 1193
+      },
+      {
+        "asin": "B09DCBYCNK",
+        "title": "TACVASEN Mens Fleece Jacket Full Zip Tactical Military Warm Coat Winter",
+        "price": "$38.99",
+        "priceValue": 38.99,
+        "rating": 4.6,
+        "ratingsTotal": 786
+      },
+      {
+        "asin": "B0C6G99422",
+        "title": "33,000ft Women's Waterproof Softshell Jacket Lightweight Fleece Lined Coat",
+        "price": "$39.09",
+        "priceValue": 39.09,
+        "rating": 4.6,
+        "ratingsTotal": 681
+      },
+      {
+        "asin": "B0H2D6PQJL",
+        "title": "Men's Fleece Heavyweight Full Zip Hoodie Sweatshirt Jacket Hooded for Men",
+        "price": "$31.99",
+        "priceValue": 31.99,
+        "rating": 4.6,
+        "ratingsTotal": 639
+      },
+      {
+        "asin": "B0FC2V5DCR",
+        "title": "COOFANDY Mens Polar Fleece Jacket Lightweight Full Zip Jackets Outdoor Coat",
+        "price": "$24.22",
+        "priceValue": 24.22,
+        "rating": 4.6,
+        "ratingsTotal": 254
+      },
+      {
+        "asin": "B0H7XJGRD5",
+        "title": "Gogokids Girls boys Ski Jacket Waterproof Fleece Warm Winter Coat for 4-14Y",
+        "price": "$33.99",
+        "priceValue": 33.99,
+        "rating": 4.6,
+        "ratingsTotal": 50
+      },
+      {
+        "asin": "B00JUM4DKC",
+        "title": "Hanes Men's Zip-up Hoodie, Ecosmart Fleece Full-zip Hoodie for Men, Hooded Sweatshirt",
+        "price": "$10.96",
+        "priceValue": 10.96,
+        "rating": 4.5,
+        "ratingsTotal": 91109
+      },
+      {
+        "asin": "B098D1XD2X",
+        "title": "Women's Full Zip Soft Polar Fleece Jacket Outdoor Recreation Coat",
+        "price": "$31.19",
+        "priceValue": 31.19,
+        "rating": 4.5,
+        "ratingsTotal": 6488
+      },
+      {
+        "asin": "B07WH5MBB3",
+        "title": "Flygo Mens Sherpa Hoodie Jacket Warm Fleece Lined Zip Up Sweatshirts",
+        "price": "$47.98",
+        "priceValue": 47.98,
+        "rating": 4.5,
+        "ratingsTotal": 1110
+      },
+      {
+        "asin": "B0B624GPJR",
+        "title": "Carhartt Performance Layers Women's Bonded Fleece Jacket, Stretch",
+        "price": "$30.20",
+        "priceValue": 30.2,
+        "rating": 4.5,
+        "ratingsTotal": 1109
+      },
+      {
+        "asin": "B0BFJ6MPT2",
+        "title": "TACVASEN Mens Lightweight Softshell Jacket Fleece Waterproof Windbreaker",
+        "price": "$37.04",
+        "priceValue": 37.04,
+        "rating": 4.5,
+        "ratingsTotal": 940
+      },
+      {
+        "asin": "B0DJYQ671M",
+        "title": "Columbia Women's Sequoia Grove Full Zip Fleece",
+        "price": "$36.73",
+        "priceValue": 36.73,
+        "rating": 4.5,
+        "ratingsTotal": 328
+      },
+      {
+        "asin": "B01B77W0AM",
+        "title": "Hanes Women's EcoSmart Fleece Sweatshirt for Women, Soft Midweight - Full-Zip Hoodie, Sweatshirt, or 1/4 Zip",
+        "price": "$12.51",
+        "priceValue": 12.51,
+        "rating": 4.4,
+        "ratingsTotal": 47104
+      },
+      {
+        "asin": "B0972R4TFS",
+        "title": "Amazon Essentials Women's Classic-Fit Full-Zip Polar Soft Fleece Jacket, Outerwear Coat with Cuffs",
+        "price": "$17.29",
+        "priceValue": 17.29,
+        "rating": 4.4,
+        "ratingsTotal": 23695
+      },
+      {
+        "asin": "B07P7S1ZRZ",
+        "title": "Amazon Essentials Men's Standard Full-Zip Fleece Mock Neck Midweight Sweatshirt with Pockets",
+        "price": "$13.67",
+        "priceValue": 13.67,
+        "rating": 4.4,
+        "ratingsTotal": 21151
+      },
+      {
+        "asin": "B07FB8XP7T",
+        "title": "Women’s Casual Full Zip Up Sherpa Lined Hoodie Sweatshirt Jacket Coat",
+        "price": "$33.12",
+        "priceValue": 33.12,
+        "rating": 4.4,
+        "ratingsTotal": 17319
+      },
+      {
+        "asin": "B07417DRF5",
+        "title": "TACVASEN Men's Fleece Softshell Jacket Waterproof Winter Tactical Hooded",
+        "price": "$46.99",
+        "priceValue": 46.99,
+        "rating": 4.4,
+        "ratingsTotal": 8098
+      },
+      {
+        "asin": "B0DC9QKNLN",
+        "title": "Dokotoo Winter Fleece Jacket for Women 2026 Zipper Casual Coat with Pockets",
+        "price": "$25.43",
+        "priceValue": 25.43,
+        "rating": 4.4,
+        "ratingsTotal": 1896
+      },
+      {
+        "asin": "B08FSY8SYG",
+        "title": "GEEK LIGHTING Men’s Fleece-Lined Zip Up Hoodie, Thick Hooded Jacket Winter Warm Athletic Sweatshirt",
+        "price": "$31.33",
+        "priceValue": 31.33,
+        "rating": 4.4,
+        "ratingsTotal": 1548
+      },
+      {
+        "asin": "B0CLH27LR4",
+        "title": "Panadila Womens Half Zip Fleece Pullover Sherpa Jacket",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.4,
+        "ratingsTotal": 1416
+      },
+      {
+        "asin": "B088NT77TG",
+        "title": "Outdoor Ventures Women's Lightweight Warm Polar Fleece Jacket Zip Up",
+        "price": "$30.39",
+        "priceValue": 30.39,
+        "rating": 4.4,
+        "ratingsTotal": 1044
+      },
+      {
+        "asin": "B08VF28ZNB",
+        "title": "33,000ft Women's Polar Fleece Jacket Zip Up Lightweight Hiking Sweatshirt",
+        "price": "$31.19",
+        "priceValue": 31.19,
+        "rating": 4.4,
+        "ratingsTotal": 948
+      },
+      {
+        "asin": "B0H7JC667X",
+        "title": "Toddler Boys Plaid Fleece Lined Hooded Jacket Zip Up Winter Coat",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.4,
+        "ratingsTotal": 81
+      },
+      {
+        "asin": "B09DPGCRFT",
+        "title": "Trendy Queen Womens Oversized Zip Up Hoodies Y2K Fall Sweatshirts 2026",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.3,
+        "ratingsTotal": 6962
+      },
+      {
+        "asin": "B0C73VMSHL",
+        "title": "AUTOMET Womens Fleece Jackets Zip Up Oversized Cropped Sweatshirts",
+        "price": "$26.99",
+        "priceValue": 26.99,
+        "rating": 4.3,
+        "ratingsTotal": 1950
+      },
+      {
+        "asin": "B0C8MJ8469",
+        "title": "ANRABESS Womens Fuzzy Fleece Button Down Cropped Sherpa Coat",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.3,
+        "ratingsTotal": 573
+      },
+      {
+        "asin": "B0FPB2F1QN",
+        "title": "Aimiray Women’s Quarter Zip Fleece Pullover Fuzzy Sherpa Jacket",
+        "price": "$34.19",
+        "priceValue": 34.19,
+        "rating": 4.3,
+        "ratingsTotal": 453
+      },
+      {
+        "asin": "B0FJDNN796",
+        "title": "Zeagoo Womens Flannel Jacket Fleece Lined Shacket Fall Outfits Plaid Sherpa",
+        "price": "$28.49",
+        "priceValue": 28.49,
+        "rating": 4.3,
+        "ratingsTotal": 428
+      },
+      {
+        "asin": "B0FJQKT5LT",
+        "title": "Womens Western Aztec Print Zip up Hoodies Sherpa Fleece Sweatshirt",
+        "price": "$25.60",
+        "priceValue": 25.6,
+        "rating": 4.3,
+        "ratingsTotal": 381
+      },
+      {
+        "asin": "B0CJLS31HB",
+        "title": "ZAFUL Men 1/4 Zipper Ethnic Aztec Fleece Unisex Winter Sweatshirt Tops 2026",
+        "price": "$30.59",
+        "priceValue": 30.59,
+        "rating": 4.3,
+        "ratingsTotal": 375
+      },
+      {
+        "asin": "B0FN7S1JPR",
+        "title": "Fleece Jackets Women Zipper Fuzzy Sherpa Warm Coat",
+        "price": "$34.19",
+        "priceValue": 34.19,
+        "rating": 4.3,
+        "ratingsTotal": 208
+      },
+      {
+        "asin": "B0FN3JBFPG",
+        "title": "Womens Sherpa Fleece Jacket Zip Up Sweatshirts Winter Warm Sweater",
+        "price": "$33.05",
+        "priceValue": 33.05,
+        "rating": 4.3,
+        "ratingsTotal": 122
+      },
+      {
+        "asin": "B0H6P2XW8Q",
+        "title": "Women Winter Fleece Jacket Long Sleeve Zip Up Fuzzy Sherpa Coats Womens Warm Outwear with Pockets",
+        "price": "$44.99",
+        "priceValue": 44.99,
+        "rating": 4.3,
+        "ratingsTotal": 94
+      },
+      {
+        "asin": "B0FPQKPTVR",
+        "title": "Womens Fleece Half Zip Pullover Fuzzy Sherpa Jacket with Pockets",
+        "price": "$29.59",
+        "priceValue": 29.59,
+        "rating": 4.3,
+        "ratingsTotal": 93
+      },
+      {
+        "asin": "B0D5444SB4",
+        "title": "Dokotoo Womens Winter Fleece Jackets Long Sleeve Loose Warm Teddy Coats",
+        "price": "$24.69",
+        "priceValue": 24.69,
+        "rating": 4.2,
+        "ratingsTotal": 319
+      },
+      {
+        "asin": "B0D5CD5QWG",
+        "title": "ANRABESS Womens Fleece Pullover Jacket Fuzzy Sherpa Sweatshirt with Pockets",
+        "price": "$39.99",
+        "priceValue": 39.99,
+        "rating": 4.2,
+        "ratingsTotal": 273
+      },
+      {
+        "asin": "B096RGMV7P",
+        "title": "JiangWu Womens Fashion Horn Button Fleece Thicken Coat with Hood Winter Warm Jacket",
+        "price": "$34.71",
+        "priceValue": 34.71,
+        "rating": 4.1,
+        "ratingsTotal": 7460
+      },
+      {
+        "asin": "B0FHPXPG3M",
+        "title": "Womens Fleece Jacket Button Down Sherpa Jacket Fuzzy Sweaters",
+        "price": "$49.99",
+        "priceValue": 49.99,
+        "rating": 4.1,
+        "ratingsTotal": 1025
+      },
+      {
+        "asin": "B0FFM8C69J",
+        "title": "Womens Quarter Zip Sweatshirts Fleece Pullover Warm Sherpa Jacket",
+        "price": "$34.16",
+        "priceValue": 34.16,
+        "rating": 4.1,
+        "ratingsTotal": 357
+      },
+      {
+        "asin": "B0FPQGR8Z8",
+        "title": "Fuzzy Fleece Jacket Women Full Zip Fall Winter Sherpa Warm Coats",
+        "price": "$35.14",
+        "priceValue": 35.14,
+        "rating": 4.1,
+        "ratingsTotal": 76
+      }
+    ]
   }
 }
