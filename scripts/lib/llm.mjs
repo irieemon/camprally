@@ -600,6 +600,17 @@ export async function panel(role, { system, user, maxTokens = 8000, parse = "jso
       console.error(`[llm] panel seat ${provider}/${model} returned ${r.malformed ? "malformed JSON" : "no text"} — retrying once: ${r.error.slice(0, 200)}`);
       r = await callOne({ provider, model, system, user, maxTokens, parse, image, validate });
       tries = 2;
+    } else if (r.value === undefined && r.transient) {
+      /* One retry for a TRANSIENT failure too, since 2026-11-20. Until then a
+       * dropped seat cost nothing visible; now run-cycle refuses to publish on
+       * fewer than two answers and announces a short panel, and Gemini answers
+       * HTTP 503 on a few percent of calls (5 in the cycle log by that date).
+       * One short pause and one retry absorbs that without paging anyone; a
+       * real outage still fails the second call and is reported. */
+      console.error(`[llm] panel seat ${provider}/${model} transient failure — retrying once in 5s: ${String(r.error).slice(0, 200)}`);
+      await sleep(5000);
+      r = await callOne({ provider, model, system, user, maxTokens, parse, image, validate });
+      tries = 2;
     }
     if (r.value === undefined) {
       console.error(`[llm] panel seat ${provider}/${model} gave NO ANSWER after ${tries} tr${tries === 1 ? "y" : "ies"}: ${String(r.error).slice(0, 200)}`);

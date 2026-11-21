@@ -91,8 +91,14 @@ deadLinkNote = (() => {
   return swapped + unlinked + retries;
 })();
 // ── the publishing cycle ──────────────────────────────────────────────────
+/* A publish reviewed by fewer models than asked is still a publish, but a
+ * missing seat is a key/credit problem that will not fix itself — said here so
+ * it is not discovered three weeks later in a log. */
+const reviewNote = r.reviewDegraded
+  ? ` ⚠️ Review ran short: ${r.reviewDegraded.answered}/${r.reviewDegraded.asked} model reviewers answered (${r.reviewDegraded.seats ?? "?"}). Check that seat's key/credits.`
+  : "";
 if (r.outcome === "published") {
-  say(`✅ DONE: published ${quote(r.slug)} — confirmed live on the site. ${r.remaining ?? "?"} left in the queue.`);
+  say(`✅ DONE: published ${quote(r.slug)} — confirmed live on the site. ${r.remaining ?? "?"} left in the queue.${reviewNote}`);
 }
 
 if (r.outcome === "published-unverified") {
@@ -120,6 +126,7 @@ if (r.outcome === "blocked") {
     "push-failed": `${quote(r.slug)} is committed locally (${r.commit}) but the push failed. The site will not update until it lands.`,
     "spec-generation-failed": `could not write ${quote(r.slug)}.`,
     "no-spec": "spec generation reported success but produced no file.",
+    "review-unavailable": `too few model reviewers answered for ${quote(r.slug)} — ${r.panel ?? "panel unknown"}. NOT published (needs 2 of 3). The draft is kept and the next run retries. Check the reviewer seats' API keys/credits.`,
   }[r.reason] ?? `${r.reason}.`;
   say(`⚠️ ERROR: cycle blocked — ${detail}`);
 }

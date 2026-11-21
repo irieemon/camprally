@@ -35,7 +35,11 @@ const report = [];
 for (const path of specPaths) {
   const spec = JSON.parse(readFileSync(path, "utf8"));
   const hazards = hazardFlags(spec);
-  const model = RULES_ONLY ? null : await reviewContent(spec);
+  /* Seats are captured even when reviewContent returns null (fewer than two
+   * answered), because that is exactly the case the caller needs to see. */
+  let seats = [];
+  const model = RULES_ONLY ? null : await reviewContent(spec, { onSeats: (s) => { seats = s; } });
+  const answered = seats.filter((x) => x.verdict !== "no-answer").length;
 
   const entry = {
     spec: path,
@@ -47,6 +51,7 @@ for (const path of specPaths) {
     independent: model?.independent ?? false,
     blocking: model?.blocking ?? [],
     notes: model?.notes ?? [],
+    panel: RULES_ONLY ? null : { answered, asked: seats.length, seats: seats.map((x) => ({ seat: x.seat, verdict: x.verdict, ...(x.error ? { error: x.error } : {}) })) },
   };
   report.push(entry);
 
@@ -55,6 +60,15 @@ for (const path of specPaths) {
   if (JSON_OUT) continue;
 
   const label = spec.slug ?? path;
+  /* One machine-readable line per spec. run-cycle.mjs reads it to refuse a
+   * publish the model panel never actually reviewed — added 2026-11-20 after
+   * OpenRouter's credits ran out and three weeks of articles shipped on the
+   * deterministic rules alone with nothing louder than a log line. Format is a
+   * contract with run-cycle: `review panel: <answered>/<asked> answered`. */
+  if (!RULES_ONLY) {
+    const who = seats.map((x) => `${x.seat.split("/").pop()} ${x.verdict}`).join(", ");
+    console.log(`review panel: ${answered}/${seats.length} answered${who ? ` (${who})` : ""} — ${label}`);
+  }
   if (!hazards.length && !entry.blocking.length && !entry.notes.length) {
     console.log(`✓ ${label} — clean${model === null && !RULES_ONLY ? " (rules only; model unreachable)" : ""}`);
     continue;

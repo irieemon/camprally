@@ -91,6 +91,10 @@ let priceClaims = null;
  * announce-run says it once. */
 let deadLinks = null;
 let deadLinkEvent = null;
+/* Set when the model panel reviewed this article with a seat missing, so the
+ * announcement can say so. Fewer than two answers never gets this far — see
+ * step 4b. */
+let reviewDegraded = null;
 /* Step 2g's edit announcements. Same TDZ reason; only on the receipt when the
  * step did something, so a quiet day stays a quiet receipt. */
 let indexNowEdits = null;
@@ -208,6 +212,7 @@ function finish(outcome, detail, code, { commit = true } = {}) {
     ...(stalledRuns ? { runsSincePublish: stalledRuns } : {}),
     ...(deadLinks?.length ? { deadLinks } : {}),
     ...(deadLinkEvent ? { deadLinkEvent } : {}),
+    ...(reviewDegraded ? { reviewDegraded } : {}),
     ...(indexNowEdits ? { indexNowEdits } : {}),
     ...(pull ? { pull } : {}),
     ...detail,
@@ -686,6 +691,36 @@ try {
       `Content review rejected ${next.slug} (attempt ${attempts} of ${MAX_CONTENT_ATTEMPTS}).\n` +
       `Spec quarantined to specs/quarantine/${next.slug}-${stamp}.json\n\n${reviewOut.slice(-1200)}`,
   }, EXIT.FAIL);
+}
+
+/* ── step 4b-ii: was the article actually reviewed by models? ───────────────
+ * review-article exits 0 when the panel cannot reach two models — by design,
+ * so an API outage does not by itself stop publishing. But that made "the
+ * models found nothing" and "no model was asked" the same green run, and from
+ * ~2026-10-24 to 2026-11-20 OpenRouter's exhausted credits took two of three
+ * seats and every article shipped on the deterministic rules alone, unseen.
+ *
+ * Fewer than two answers: BLOCK without quarantining (the draft is fine, the
+ * reviewers are not), exit FAIL so the cron alerts, and leave the spec in
+ * place so the next cycle publishes it once the panel is back.
+ * Two of three: publish, but say so in the announcement — a missing seat is a
+ * key or credit problem that will not fix itself. */
+{
+  const m = reviewOut.match(/^review panel: (\d+)\/(\d+) answered(?: \(([^)]*)\))?/m);
+  const answered = m ? Number(m[1]) : 0;
+  const asked = m ? Number(m[2]) : 0;
+  if (answered < 2) {
+    finish("blocked", {
+      reason: "review-unavailable",
+      slug: next.slug,
+      panel: m ? `${answered}/${asked} answered${m[3] ? ` (${m[3]})` : ""}` : "no panel line in review output",
+      message:
+        `Content review reached ${answered} of ${asked || "?"} model reviewers for ${next.slug}; at least 2 are required. ` +
+        `Not published, not quarantined — the spec stays and the next cycle retries. ` +
+        `Usually an API key, credit or quota problem on a reviewer seat (scripts/lib/llm.mjs ROLES.reviewer).\n\n${reviewOut.slice(-900)}`,
+    }, EXIT.FAIL);
+  }
+  if (answered < asked) reviewDegraded = { answered, asked, seats: m?.[3] ?? null };
 }
 
 // ── step 4c: internal-link check ──────────────────────────────────────────
