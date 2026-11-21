@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-fleece-jackets-camping-under-50": [
+    {
+      type: "product-grid",
+      title: "Best Fleece Jackets for Camping Under $50 — The Midlayer That Does the Work — Quick Comparison",
+      items: [
+        { label: "Columbia Youth Steens Mt II Fleece", category: "", icon: "🏕️", asin: "B00AJ32SDU", link: "https://www.amazon.com/dp/B00AJ32SDU?tag=camprally-20" },
+        { label: "Columbia Men's Steens Mountain Full Zip 2.0", category: "", icon: "🏕️", asin: "B0076R6L58", link: "https://www.amazon.com/dp/B0076R6L58?tag=camprally-20" },
+        { label: "Tommy Hilfiger Men's Classic Zip Front Polar Fleece Jacket", category: "", icon: "🏕️", asin: "B01MZAZED4", link: "https://www.amazon.com/dp/B01MZAZED4?tag=camprally-20" },
+        { label: "adidas Men's Terrex Multi Essentials Half-zip Fleece Hiking", category: "", icon: "🏕️", asin: "B0D4PHQTX4", link: "https://www.amazon.com/dp/B0D4PHQTX4?tag=camprally-20" },
+        { label: "Columbia Women's Benton Springs Full Zip", category: "", icon: "🏕️", asin: "B003NX8CKG", link: "https://www.amazon.com/dp/B003NX8CKG?tag=camprally-20" },
+        { label: "Amazon Essentials Men's Sherpa-Lined Full-Zip Fleece Hoodie", category: "", icon: "🏕️", asin: "B079PK1XTS", link: "https://www.amazon.com/dp/B079PK1XTS?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-string-lights": [
     {
       type: "product-grid",
