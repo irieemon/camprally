@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-winter-camping-boots-budget": [
+    {
+      type: "product-grid",
+      title: "Best Budget Winter Boots for Camping — Warm, Waterproof, Not Expensive — Quick Comparison",
+      items: [
+        { label: "MUCK Men's Mossy Oak® Break Up Country™ Woody Max Boot", category: "", icon: "🏕️", asin: "B01DPPX7E2", link: "https://www.amazon.com/dp/B01DPPX7E2?tag=camprally-20" },
+        { label: "MUCK Men's Arctic Pro Insulated Boot", category: "", icon: "🏕️", asin: "B0042ZRKGQ", link: "https://www.amazon.com/dp/B0042ZRKGQ?tag=camprally-20" },
+        { label: "DREAM PAIRS Women's Outdoor Winter Snow Boots", category: "", icon: "🏕️", asin: "B09ZLHQ3LX", link: "https://www.amazon.com/dp/B09ZLHQ3LX?tag=camprally-20" },
+        { label: "Men's Insulated Winter Snow Boots Waterproof", category: "", icon: "🏕️", asin: "B0FNR3J4FV", link: "https://www.amazon.com/dp/B0FNR3J4FV?tag=camprally-20" },
+        { label: "TIDEWE Rubber Work Boots for Men and Women", category: "", icon: "🏕️", asin: "B07Q26X9DN", link: "https://www.amazon.com/dp/B07Q26X9DN?tag=camprally-20" },
+        { label: "MUCK Women's Arctic Sport II Tall Boot", category: "", icon: "🏕️", asin: "B00TT382HW", link: "https://www.amazon.com/dp/B00TT382HW?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-layer-for-cold-weather-camping": [
     {
       type: "product-grid",
