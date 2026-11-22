@@ -1,12 +1,11 @@
 {
-  "startedAt": "2026-11-21T11:37:00.107Z",
-  "finishedAt": "2026-11-21T11:37:07.305Z",
-  "outcome": "degraded",
-  "reason": "price-source-unavailable",
-  "products": 465,
-  "priced": 465,
-  "displayable": 464,
-  "stale": 1,
+  "startedAt": "2026-11-22T11:37:00.108Z",
+  "finishedAt": "2026-11-22T11:37:50.260Z",
+  "outcome": "refreshed",
+  "products": 470,
+  "priced": 470,
+  "displayable": 470,
+  "stale": 0,
   "expiring": 0,
   "priceClaims": "ok"
 }
