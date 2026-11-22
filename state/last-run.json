@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-21T14:00:00.117Z",
-  "finishedAt": "2026-11-21T14:12:51.078Z",
+  "startedAt": "2026-11-22T14:00:00.106Z",
+  "finishedAt": "2026-11-22T14:11:56.604Z",
   "outcome": "published",
   "priceClaims": "ok",
   "deadLinks": [
@@ -33,25 +33,14 @@
       "replacement": null
     }
   ],
-  "indexNowEdits": {
-    "changed": 1,
-    "submitted": [
-      "best-hammock-underquilts-budget"
-    ],
-    "indexNow": {
-      "ok": true,
-      "status": 200,
-      "submitted": 1
-    }
-  },
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "how-to-layer-for-cold-weather-camping",
-  "commit": "65fbb81",
+  "slug": "best-winter-camping-boots-budget",
+  "commit": "0eecbea",
   "pushed": true,
   "deployVerified": true,
-  "deploy": "not live yet (serving 575da69, expected 65fbb81) — 600s left\nnot live yet (serving 575da69, expected 65fbb81) — 584s left\ndeploy verified after 3 attempt(s): serving 65fbb81 · home HTTP 200",
+  "deploy": "not live yet (serving e79ae81, expected 0eecbea) — 599s left\nnot live yet (serving e79ae81, expected 0eecbea) — 584s left\ndeploy verified after 3 attempt(s): serving 0eecbea · home HTTP 200",
   "indexNow": {
     "ok": true,
     "status": 200,
@@ -59,7 +48,7 @@
   },
   "pinned": {
     "ok": true,
-    "id": "1152569729676493118"
+    "id": "1152569729676581421"
   },
-  "remaining": 29
+  "remaining": 28
 }

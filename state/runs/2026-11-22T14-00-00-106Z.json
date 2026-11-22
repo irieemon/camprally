@@ -1,0 +1,54 @@
+{
+  "startedAt": "2026-11-22T14:00:00.106Z",
+  "finishedAt": "2026-11-22T14:11:56.604Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B00BPWDMOS",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-10T14:00:00.579Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0FCFCNSZH",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-11T14:00:00.509Z",
+      "replacement": "B0F43SPZCY"
+    },
+    {
+      "asin": "B0DS5CRTGK",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-12T14:00:00.524Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0033990ZQ",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-13T14:00:00.546Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-winter-camping-boots-budget",
+  "commit": "0eecbea",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving e79ae81, expected 0eecbea) — 599s left\nnot live yet (serving e79ae81, expected 0eecbea) — 584s left\ndeploy verified after 3 attempt(s): serving 0eecbea · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729676581421"
+  },
+  "remaining": 28
+}
