@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-22T14:00:00.106Z",
-  "finishedAt": "2026-11-22T14:11:56.604Z",
+  "startedAt": "2026-11-23T14:00:00.112Z",
+  "finishedAt": "2026-11-23T14:12:09.062Z",
   "outcome": "published",
   "priceClaims": "ok",
   "deadLinks": [
@@ -36,11 +36,11 @@
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "best-winter-camping-boots-budget",
-  "commit": "0eecbea",
+  "slug": "best-camping-gifts-under-100",
+  "commit": "6bb628a",
   "pushed": true,
   "deployVerified": true,
-  "deploy": "not live yet (serving e79ae81, expected 0eecbea) — 599s left\nnot live yet (serving e79ae81, expected 0eecbea) — 584s left\ndeploy verified after 3 attempt(s): serving 0eecbea · home HTTP 200",
+  "deploy": "not live yet (serving 76bd4a3, expected 6bb628a) — 599s left\nnot live yet (serving 76bd4a3, expected 6bb628a) — 584s left\nnot live yet (serving 76bd4a3, expected 6bb628a) — 569s left\ndeploy verified after 4 attempt(s): serving 6bb628a · home HTTP 200",
   "indexNow": {
     "ok": true,
     "status": 200,
@@ -48,7 +48,7 @@
   },
   "pinned": {
     "ok": true,
-    "id": "1152569729676581421"
+    "id": "1152569729676664853"
   },
-  "remaining": 28
+  "remaining": 27
 }

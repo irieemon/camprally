@@ -1,0 +1,54 @@
+{
+  "startedAt": "2026-11-23T14:00:00.112Z",
+  "finishedAt": "2026-11-23T14:12:09.062Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B00BPWDMOS",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-10T14:00:00.579Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0FCFCNSZH",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-11T14:00:00.509Z",
+      "replacement": "B0F43SPZCY"
+    },
+    {
+      "asin": "B0DS5CRTGK",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-12T14:00:00.524Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0033990ZQ",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-13T14:00:00.546Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "best-camping-gifts-under-100",
+  "commit": "6bb628a",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving 76bd4a3, expected 6bb628a) — 599s left\nnot live yet (serving 76bd4a3, expected 6bb628a) — 584s left\nnot live yet (serving 76bd4a3, expected 6bb628a) — 569s left\ndeploy verified after 4 attempt(s): serving 6bb628a · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729676664853"
+  },
+  "remaining": 27
+}
