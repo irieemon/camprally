@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "best-camping-gifts-under-100": [
+    {
+      type: "product-grid",
+      title: "Best Camping Gifts Under $100 — Gear They'll Actually Use — Quick Comparison",
+      items: [
+        { label: "LifeStraw Personal Water Filter for Hiking", category: "", icon: "🏕️", asin: "B006QF3TW4", link: "https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20" },
+        { label: "The Camping Logbook", category: "", icon: "🏕️", asin: "1441326499", link: "https://www.amazon.com/dp/1441326499?tag=camprally-20" },
+        { label: "Outdoors Socks Hiking Camping Gift for Nature Lovers Men", category: "", icon: "🏕️", asin: "B085R8591S", link: "https://www.amazon.com/dp/B085R8591S?tag=camprally-20" },
+        { label: "Fufendio Camping Gifts for Women", category: "", icon: "🏕️", asin: "B0GXH7SBB1", link: "https://www.amazon.com/dp/B0GXH7SBB1?tag=camprally-20" },
+        { label: "Camping Kitchen Towels 16x24 Waffle Weave", category: "", icon: "🏕️", asin: "B0FFMWD7JP", link: "https://www.amazon.com/dp/B0FFMWD7JP?tag=camprally-20" },
+        { label: "Hoyle Waterproof Clear Plastic Playing Cards 1 Deck Outdoor", category: "", icon: "🏕️", asin: "B000J3Z7TC", link: "https://www.amazon.com/dp/B000J3Z7TC?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-winter-camping-boots-budget": [
     {
       type: "product-grid",

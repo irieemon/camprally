@@ -9725,6 +9725,121 @@ If you want the most cold-oriented options here, start with the **MUCK Arctic Pr
 *Related guides: [Winter Camping for Beginners — What to Get Right Before You Go](/blog/winter-camping-for-beginners) · [How to Layer for Cold-Weather Camping — Base, Mid, Shell, Done](/blog/how-to-layer-for-cold-weather-camping) · [Best Budget Camp Shoes and Booties — What to Wear Once the Boots Come Off](/blog/best-camp-shoes-slippers-budget)*
     `
   },
+
+  {
+    id: "art-101",
+    slug: "best-camping-gifts-under-100",
+    title: "Best Camping Gifts Under $100 — Gear They'll Actually Use",
+    excerpt: "Skip the guesswork with this guide to camping gifts under $100, showing you how to match gear to a backpacker, car camper, or beginner so your pick gets used all season.",
+    category: "Gear",
+    date: "2026-11-23",
+    author: "Camp Rally Team",
+    readTime: "7 min read",
+    content: `
+# Best Camping Gifts Under $100 — Gear They'll Actually Use
+
+The hardest part of buying for a camper isn't the budget. It's that they already own the big stuff: the tent, the bag, the stove. Under $100 you're not replacing their core kit. You're filling the gaps they haven't gotten around to, or adding something that makes camp more fun.
+
+This guide steps up from our [Best Camping Gifts Under $50](/blog/best-camping-gifts-under-50) and [Best Camping Stocking Stuffers Under $25](/blog/best-camping-stocking-stuffers-under-25), with no repeated picks. Several of these items are cheap enough that the smart move at this budget is to **bundle two or three into one themed gift**: a hiker kit, a camp kitchen set, a rainy-day entertainment pack. A bundle that fits the recipient beats one pricey item they'll never take out of the box.
+
+Picks are organized by who you're buying for. If you're shipping before the holidays, order early. Mid-December delivery windows get tight.
+
+## How to Choose a Camping Gift They'll Use
+
+**Figure out what kind of camper they are.** A backpacker counts every ounce and won't carry a novelty item. A car camper has room for comfort and fun. If you're not sure, ask what their last trip looked like. "We drove to a state park" and "we hiked in eight miles" call for very different gifts.
+
+**Don't duplicate their core gear.** Skip tents, sleeping bags and stoves unless they've specifically asked. Those are personal choices, and a well-meaning gift often ends up in the garage.
+
+**Go for consumables and small upgrades.** Things that wear out (socks, towels) or things they'd never buy for themselves (a camp journal, a good mug) get used.
+
+**Check the listing, not the packaging photos.** For anything functional, especially a water filter, read what the product listing actually states it does. Don't assume it does more.
+
+**Personality counts.** A gift with a joke printed on it is a great fit for some people and a drawer item for others. You know your recipient.
+
+## For the Hiker
+
+### LifeStraw Personal Water Filter
+
+**Why they'll use it:** it's a small, light backup that lets a hiker filter water straight from a source instead of rationing what's left in the bottle.
+
+This is the most practical item on the list and a near-universal fit for anyone who spends time on trails. The LifeStraw is a personal filter you drink through directly, so there's no pumping, no batteries and nothing to assemble. It also works well tucked into a day pack or an emergency kit as a just-in-case.
+
+Two things to pass along with the gift. First, it's a filter, so check the listing for exactly what it's rated to remove before relying on it, and don't treat it as a fix for every possible contaminant. Second, it filters as you sip and doesn't store water, so it's best as a backup or a lightweight option, not a camp-wide water system. For more on treatment methods, see our guide to [affordable water filtration for camping](/blog/affordable-water-filtration-camping).
+
+**[Check the LifeStraw Personal Water Filter on Amazon](https://www.amazon.com/dp/B006QF3TW4?tag=camprally-20)**
+
+## For the Beginner
+
+### The Camping Logbook (Camping Journal)
+
+**Why they'll use it:** new campers learn fast, and a logbook gives them one place to note which sites were great, what they forgot to pack, and what to do differently next time.
+
+A first-year camper's biggest asset is the lessons from each trip, and most of those lessons get forgotten by the next one. A dedicated camping journal fixes that. It works as a trip record and as a planning tool: which campsite had shade, which loop was noisy, which meal was a hit. Years later it becomes a keepsake.
+
+It also pairs well with almost anything else on this list. Add a pen and a pair of fun socks and you have a thoughtful beginner bundle.
+
+**[Check the Camping Logbook on Amazon](https://www.amazon.com/dp/1441326499?tag=camprally-20)**
+
+### Outdoors Socks Hiking Camping Gift for Nature Lovers
+
+**Why they'll use it:** fun socks get worn around camp, at home and on the drive. They're the kind of small, cheerful gift that doesn't sit in a closet.
+
+These are a novelty gift for nature lovers, sold for both men and women, and they're a good way to make a bundle feel personal. Set expectations, though. Treat them as a fun around-camp or everyday pair, not technical hiking socks. Check the listing for the fabric. If they contain cotton, they shouldn't serve as a warmth layer on cold nights or long hikes, because cotton holds moisture and loses its insulation when damp.
+
+If your beginner needs real performance socks for the trail, our guide to [why good camping socks matter](/blog/best-camping-socks) covers what to look for. These are the fun pair that goes alongside.
+
+**[Check the Outdoors Socks Hiking Camping Gift on Amazon](https://www.amazon.com/dp/B085R8591S?tag=camprally-20)**
+
+## For the Camp Cook
+
+### Fufendio Camping Coffee Mug
+
+**Why they'll use it:** the camp cook is usually first up and last to sit down, and a mug of their own makes the morning coffee feel like theirs.
+
+The listing states a 14oz capacity, which comfortably holds a proper morning coffee or a cup of soup. It's a camper-themed design aimed at women, which makes it an easy gift for the person who runs the campsite kitchen. It's also equally at home on a desk between trips.
+
+Bundle idea: mug plus the towels below plus a bag of good coffee makes a strong camp-cook gift set.
+
+**[Check the Fufendio Camping Gifts Coffee Mug on Amazon](https://www.amazon.com/dp/B0GXH7SBB1?tag=camprally-20)**
+
+### Camping Kitchen Towels 16x24 Waffle Weave
+
+**Why they'll use it:** camp kitchens go through towels fast, drying dishes, wiping tables and handling pans, and a fresh set always gets used.
+
+The listing describes these as 16x24 waffle-weave towels with a playful "Super Sexy Camping Lady" print. Waffle weave is a sensible texture for dish drying. Towels are one of those items campers constantly need and rarely think to replace. They're equally at home in an RV, trailer or a car-camping kitchen bin.
+
+The humor is the selling point here, so make sure it fits your recipient. For anyone who runs the camp kitchen and has a sense of humor about it, they're a hit. If you're building a bigger camp-kitchen gift, our [camp kitchen organization guide](/blog/best-camp-kitchen-organization) has ideas for pairing.
+
+**[Check the Camping Kitchen Towels on Amazon](https://www.amazon.com/dp/B0FFMWD7JP?tag=camprally-20)**
+
+## For the Car Camper
+
+### Hoyle Waterproof Clear Plastic Playing Cards
+
+**Why they'll use it:** every car camper eventually gets stuck under a tarp in the rain, and a deck that survives damp picnic tables and wet hands turns that into game night.
+
+Regular paper cards warp, stick and turn soft after one humid weekend at a campsite. The listing describes this Hoyle deck as waterproof clear plastic, so it holds up to wet fingers, spilled drinks and dewy mornings. Plastic cards also wipe clean, which matters when they live in a gear bin next to the cooler.
+
+They're a small gift on their own, which makes them a perfect add-on. Pair them with the camping journal or the mug to round out a bundle for someone who camps with family or friends. For keeping the whole site dry when the weather turns, see [how to camp in the rain](/blog/how-to-camp-in-rain).
+
+**[Check the Hoyle Waterproof Playing Cards on Amazon](https://www.amazon.com/dp/B000J3Z7TC?tag=camprally-20)**
+
+## Verdict
+
+If you're buying one item for a camper you don't know well, get the **LifeStraw Personal Water Filter**. It's useful to day hikers, backpackers and anyone keeping an emergency kit, and it rarely duplicates something they already own.
+
+For everyone else, use the $100 ceiling to **bundle by personality**:
+
+- **Hiker:** LifeStraw plus the Camping Logbook.
+- **Beginner:** Camping Logbook, fun socks and the waterproof cards.
+- **Camp cook:** Fufendio mug plus the waffle-weave towels.
+- **Car camper:** waterproof cards, the mug and the logbook for trip notes.
+
+A bundle built around how they actually camp will get packed for the next trip. Order early if it needs to arrive before the holidays.
+
+*Related guides: [Best Camping Gifts Under $50: Cheap Outdoor Gifts They'll Use](/blog/best-camping-gifts-under-50) · [Best Camping Stocking Stuffers Under $25](/blog/best-camping-stocking-stuffers-under-25) · [Affordable Water Filtration for Camping](/blog/affordable-water-filtration-camping)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

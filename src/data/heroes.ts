@@ -146,6 +146,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "best-fleece-jackets-camping-under-50": "/images/heroes/best-fleece-jackets-camping-under-50.jpg",
   "how-to-layer-for-cold-weather-camping": "/images/heroes/how-to-layer-for-cold-weather-camping.jpg",
   "best-winter-camping-boots-budget": "/images/heroes/best-winter-camping-boots-budget.jpg",
+  "best-camping-gifts-under-100": "/images/heroes/best-camping-gifts-under-100.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 
