@@ -9840,6 +9840,116 @@ A bundle built around how they actually camp will get packed for the next trip. 
 *Related guides: [Best Camping Gifts Under $50: Cheap Outdoor Gifts They'll Use](/blog/best-camping-gifts-under-50) · [Best Camping Stocking Stuffers Under $25](/blog/best-camping-stocking-stuffers-under-25) · [Affordable Water Filtration for Camping](/blog/affordable-water-filtration-camping)*
     `
   },
+
+  {
+    id: "art-102",
+    slug: "first-day-hike-guide",
+    title: "First Day Hikes — How to Start the New Year on a Trail",
+    excerpt: "Find out how to locate a January 1 hike at your state park, which winter basics to pack for icy trails, and which affordable traction gear is worth buying.",
+    category: "Planning",
+    date: "2026-11-24",
+    author: "Camp Rally Team",
+    readTime: "8 min read",
+    content: `
+# First Day Hikes — How to Start the New Year on a Trail
+
+A New Year's Day hike is one of the easiest resolutions to keep. You're outside before the year has time to get complicated, and many state parks across the country make it simple through America's State Parks' First Day Hikes program, which encourages guided and self-guided walks on January 1.
+
+Whether you join an organized walk or pick your own trail, a January 1 hike is still a winter hike. Daylight is short, trails can be icy, and wet feet turn into cold feet fast. This guide covers how to find a hike, the winter basics that matter, and a short list of affordable gear for traction and warmth.
+
+## How to Find a First Day Hike Near You
+
+Participation, times, meeting points, and registration rules vary by state and by park, and they can change from year to year. We can't tell you which park near you is hosting what, and you shouldn't trust any article that claims to know. Instead:
+
+- **Check your own state park system's website** or the America's State Parks site for current First Day Hikes listings.
+- **Look for registration requirements.** Some guided hikes may cap group size or ask you to sign up ahead of time.
+- **Check for weather updates on the morning of the hike.** Winter events can be modified or canceled.
+- **Have a backup plan.** If a guided hike is full or canceled, any well-marked trail you know works for your own First Day Hike.
+
+## Winter Day-Hike Basics
+
+### Plan around short daylight
+
+Early January has some of the shortest days of the year. Look up sunset for your location, then plan to be back at the trailhead well before then. Pick a route shorter than what you'd hike in summer. Snow and ice slow everyone down. Pack a headlamp even for a midday hike, because a twisted ankle can turn a two-hour walk into a four-hour one.
+
+### Layer, and skip the cotton
+
+Cotton holds moisture against your skin and stops insulating when it's damp, so it has no place in a winter layering system. Use a wicking base layer of wool or synthetic, an insulating mid layer like fleece, and a wind- and water-resistant shell. Start the hike slightly cool, because you'll warm up within minutes. Take layers off before you sweat, then put them back on at breaks before you get chilled. Our guide on [how to layer for cold-weather camping](/blog/how-to-layer-for-cold-weather-camping) covers the system in detail, and it applies to day hikes too.
+
+Be careful with any product that promises warmth "down to" a certain temperature. A comfort rating describes the conditions where a typical person stays comfortable. A limit or extreme rating describes conditions where you may simply avoid serious harm. Wind, wet clothing, fatigue, and individual differences all shift where you actually feel cold. Treat any warmth number as a rough guide, not a guarantee, and always carry an extra insulating layer.
+
+### Traction for ice and packed snow
+
+Trails that look clear in the parking lot often hide ice on shaded sections, bridges, and north-facing slopes. Slip-on traction devices go over your hiking boots or shoes and grip where rubber soles can't. They're the single most useful upgrade for a winter day hike.
+
+### Water that won't freeze
+
+- Fill an insulated bottle or thermos with warm water before you leave.
+- Carry bottles inside your pack, close to your back, rather than in exterior side pockets.
+- Hydration hose tubes freeze easily. If you use one, blow the water back into the reservoir after each sip, or use bottles instead.
+- Store bottles upside down. Water tends to freeze from the top first, so this keeps the opening clear longer.
+- Bring enough water from home. Don't drink from streams or snowmelt unless you treat it first.
+
+A pack with room for an extra layer, water, and snacks makes all of this easier. See our [budget hiking backpacks under $100](/blog/best-budget-hiking-backpacks-under-100) if yours is too small.
+
+### Tell someone your route
+
+Before you leave, tell someone you trust which trailhead you're using, your planned route, and when you expect to be back. Cell coverage in parks can be unreliable, and cold drains phone batteries faster. Keep your phone in an inside pocket. If you carry an emergency blanket, treat it as a windbreak and signaling aid, not as insulation. Real warmth comes from the extra layers you pack.
+
+## How to Choose Your First Day Hike Gear
+
+- **Traction:** Match it to your footwear. Read the listing's size chart against your boot size, not just your shoe size.
+- **Socks:** Wool insulates even when damp. A thick sock that makes your boot tight can actually make your feet colder by restricting circulation, so test the fit at home.
+- **Hats:** Fleece is warm and fast-drying. Choose a fit that sits over your ears.
+- **Know the limits:** Slip-on traction is for icy and packed-snow trails. It is not a replacement for technical crampons on steep mountaineering terrain.
+
+## The Picks
+
+### Kahtoola MICROspikes Footwear Traction
+
+Kahtoola's MICROspikes are probably the best-known name in slip-on trail traction, and this listing positions them specifically for winter, snow, and ice trail hiking. That matches the typical First Day Hike: packed snow, icy patches on shaded stretches, and frozen footbridges. They're a reasonable choice if you expect to hike in winter more than once and want something built for trail use rather than sidewalks. Check the sizing chart carefully against the boots you'll actually wear.
+
+**[Check the Kahtoola MICROspikes Footwear Traction for Winter, Snow & Ice Trail Hiking on Amazon](https://www.amazon.com/dp/B00RXXJ0V2?tag=camprally-20)**
+
+### Hillsound Trail Crampon
+
+Hillsound's Trail Crampon is listed as an ice cleat traction system for both beginner and experienced winter trail hikers. It's a direct alternative to the MICROspikes for the same kind of terrain. If you're comparing the two, look at the current listing details for the binding style and sizing. Pick whichever fits your footwear best.
+
+**[Check the H Hillsound Hillsound Trail Crampon I Ice Cleat Traction System for Beginner & Experienced Winter Trail Hiking on Amazon](https://www.amazon.com/dp/B004BN7FDM?tag=camprally-20)**
+
+### MQELONG Merino Wool Thermal Hiking Socks
+
+These women's socks are listed as merino wool, thermal, and thick, and they're marketed for winter hiking and boot wear. Merino is a good choice for a day on the trail because it stays warmer than cotton when damp from sweat or snow. The thick knit adds cushioning, but try them on with your hiking boots before New Year's morning. If the boot feels tight, go up a half size or pick a thinner sock. Check the listing for exact fiber content.
+
+**[Check the MQELONG Merino Wool Socks for Women Hiking Thermal Winter Thick Warm Cozy Boot Socks on Amazon](https://www.amazon.com/dp/B0CJ2WPMCQ?tag=camprally-20)**
+
+### Cimkiz Ice Cleats
+
+This listing describes the Cimkiz cleats as using 19 stainless steel spikes and fitting over boots and shoes for both men and women. It's a budget-friendly option for walking, casual hiking, and getting across icy trailheads and parking lots. The listing also mentions mountaineering, but treat any slip-on cleat as trail traction, not as a substitute for real crampons on steep, technical ground. For a mellow New Year's Day loop, it's a practical, inexpensive starting point.
+
+**[Check the Cimkiz Crampons Ice Cleats Traction Snow Grips for Boots Shoes Women Men Anti Slip 19 Stainless Steel Spikes Safe Protect for Hiking Fishing Walking Climbing Mountaineering on Amazon](https://www.amazon.com/dp/B07H4H7MKR?tag=camprally-20)**
+
+### Jeasona Wool Winter Socks
+
+Jeasona's women's socks are listed as wool, thermal, and thick, and they're pitched as warm winter socks and a gift idea. They work well as a cozy pair for the drive home or a short, easy walk. The listing title doesn't specify merino or a wool percentage, so check the product details for the blend before relying on them as your main hiking sock. Bring a dry spare pair either way.
+
+**[Check the Jeasona Wool Socks for Women Warm Winter Thermal Thick Gifts for Wife Mom on Amazon](https://www.amazon.com/dp/B07G977481?tag=camprally-20)**
+
+### TrailHeads Women's Trailblazer Fleece Ponytail Hat
+
+This fleece winter hat from TrailHeads has a ponytail opening, which solves a real annoyance on the trail: a hat that rides up or presses on a hair tie. Fleece stays warm and dries quickly, so it's well suited to stop-and-go winter hiking where you heat up on climbs and cool down at overlooks. It's easy to stash in a pocket when you're working hard.
+
+**[Check the TrailHeads Women's Trailblazer Fleece Ponytail Winter Hat for Cold Weather on Amazon](https://www.amazon.com/dp/B01IAHUOBY?tag=camprally-20)**
+
+## Verdict
+
+For most First Day hikers, traction is the purchase that matters most. The Kahtoola MICROspikes and Hillsound Trail Crampon are both purpose-built for winter trails, and the Cimkiz cleats are a cheaper way to handle icy, easy ground. Add a pair of merino socks like the MQELONG and a fleece hat like the TrailHeads, then build the rest of your warmth with proper layers.
+
+Gear is only half of it. Check your state park's website for current First Day Hike details, pick a shorter route than you think you need, finish before dark, carry water that won't freeze, and tell someone where you're going. Start the year on a trail, and start it safely.
+
+*Related guides: [How to Layer for Cold-Weather Camping — Base, Mid, Shell, Done](/blog/how-to-layer-for-cold-weather-camping) · [Best Hiking Backpacks Under $100 — Fit First, Features Second](/blog/best-budget-hiking-backpacks-under-100) · [The Most Important Gear Most Campers Ignore: A Good Pair of Socks](/blog/best-camping-socks)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

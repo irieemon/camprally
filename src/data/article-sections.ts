@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "first-day-hike-guide": [
+    {
+      type: "product-grid",
+      title: "First Day Hikes — How to Start the New Year on a Trail — Quick Comparison",
+      items: [
+        { label: "Kahtoola MICROspikes Footwear Traction for Winter", category: "", icon: "🏕️", asin: "B00RXXJ0V2", link: "https://www.amazon.com/dp/B00RXXJ0V2?tag=camprally-20" },
+        { label: "H Hillsound Hillsound Trail Crampon I Ice Cleat Traction", category: "", icon: "🏕️", asin: "B004BN7FDM", link: "https://www.amazon.com/dp/B004BN7FDM?tag=camprally-20" },
+        { label: "MQELONG Merino Wool Socks for Women Hiking Thermal Winter", category: "", icon: "🏕️", asin: "B0CJ2WPMCQ", link: "https://www.amazon.com/dp/B0CJ2WPMCQ?tag=camprally-20" },
+        { label: "Cimkiz Crampons Ice Cleats Traction Snow Grips for Boots", category: "", icon: "🏕️", asin: "B07H4H7MKR", link: "https://www.amazon.com/dp/B07H4H7MKR?tag=camprally-20" },
+        { label: "Jeasona Wool Socks for Women Warm Winter Thermal Thick Gifts", category: "", icon: "🏕️", asin: "B07G977481", link: "https://www.amazon.com/dp/B07G977481?tag=camprally-20" },
+        { label: "TrailHeads Women's Trailblazer Fleece Ponytail Winter Hat", category: "", icon: "🏕️", asin: "B01IAHUOBY", link: "https://www.amazon.com/dp/B01IAHUOBY?tag=camprally-20" },
+      ]
+    },
+  ],
   "best-camping-gifts-under-100": [
     {
       type: "product-grid",
