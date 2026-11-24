@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-23T14:00:00.112Z",
-  "finishedAt": "2026-11-23T14:12:09.062Z",
+  "startedAt": "2026-11-24T14:00:00.086Z",
+  "finishedAt": "2026-11-24T14:13:51.646Z",
   "outcome": "published",
   "priceClaims": "ok",
   "deadLinks": [
@@ -36,11 +36,11 @@
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "best-camping-gifts-under-100",
-  "commit": "6bb628a",
+  "slug": "first-day-hike-guide",
+  "commit": "9b0d149",
   "pushed": true,
   "deployVerified": true,
-  "deploy": "not live yet (serving 76bd4a3, expected 6bb628a) — 599s left\nnot live yet (serving 76bd4a3, expected 6bb628a) — 584s left\nnot live yet (serving 76bd4a3, expected 6bb628a) — 569s left\ndeploy verified after 4 attempt(s): serving 6bb628a · home HTTP 200",
+  "deploy": "not live yet (serving 5e3195c, expected 9b0d149) — 599s left\nnot live yet (serving 5e3195c, expected 9b0d149) — 582s left\ndeploy verified after 3 attempt(s): serving 9b0d149 · home HTTP 200",
   "indexNow": {
     "ok": true,
     "status": 200,
@@ -48,7 +48,7 @@
   },
   "pinned": {
     "ok": true,
-    "id": "1152569729676664853"
+    "id": "1152569729676747715"
   },
-  "remaining": 27
+  "remaining": 26
 }
