@@ -1,0 +1,54 @@
+{
+  "startedAt": "2026-11-25T14:00:00.104Z",
+  "finishedAt": "2026-11-25T14:02:16.151Z",
+  "outcome": "published",
+  "priceClaims": "ok",
+  "deadLinks": [
+    {
+      "asin": "B00BPWDMOS",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-10T14:00:00.579Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0FCFCNSZH",
+      "status": "unlinked",
+      "attempts": 0,
+      "deadline": "2026-11-11T14:00:00.509Z",
+      "replacement": "B0F43SPZCY"
+    },
+    {
+      "asin": "B0DS5CRTGK",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-12T14:00:00.524Z",
+      "replacement": null
+    },
+    {
+      "asin": "B0033990ZQ",
+      "status": "pending",
+      "attempts": 1,
+      "deadline": "2026-11-13T14:00:00.546Z",
+      "replacement": null
+    }
+  ],
+  "pull": {
+    "status": "up-to-date"
+  },
+  "slug": "beginner-camping-checklist",
+  "commit": "37c4f6f",
+  "pushed": true,
+  "deployVerified": true,
+  "deploy": "not live yet (serving 12672b9, expected 37c4f6f) — 600s left\nnot live yet (serving 12672b9, expected 37c4f6f) — 584s left\ndeploy verified after 3 attempt(s): serving 37c4f6f · home HTTP 200",
+  "indexNow": {
+    "ok": true,
+    "status": 200,
+    "submitted": 3
+  },
+  "pinned": {
+    "ok": true,
+    "id": "1152569729676831765"
+  },
+  "remaining": 25
+}
