@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "beginner-camping-checklist": [
+    {
+      type: "product-grid",
+      title: "The Beginner Camping Checklist — Everything You Need, Nothing You Don't — Quick Comparison",
+      items: [
+        { label: "Packing List", category: "", icon: "🏕️", asin: "1441331913", link: "https://www.amazon.com/dp/1441331913?tag=camprally-20" },
+        { label: "Ultimate RV Equipment Checklist", category: "", icon: "🏕️", asin: "B08FBT681W", link: "https://www.amazon.com/dp/B08FBT681W?tag=camprally-20" },
+        { label: "Heveboik Camping Journal and RV Travel Log Book", category: "", icon: "🏕️", asin: "B0D57CT8NJ", link: "https://www.amazon.com/dp/B0D57CT8NJ?tag=camprally-20" },
+        { label: "Where Should We Camp Next?: A 50-State Guide to Amazing", category: "", icon: "🏕️", asin: "1728221692", link: "https://www.amazon.com/dp/1728221692?tag=camprally-20" },
+        { label: "Zonon 1 Pack Rv Checklist Board to Do List Boards Plastic", category: "", icon: "🏕️", asin: "B09DL27TRV", link: "https://www.amazon.com/dp/B09DL27TRV?tag=camprally-20" },
+        { label: "Zonon 2 Pack Rv Checklist Board to Do List Boards Plastic", category: "", icon: "🏕️", asin: "B0FG26947G", link: "https://www.amazon.com/dp/B0FG26947G?tag=camprally-20" },
+      ]
+    },
+  ],
   "first-day-hike-guide": [
     {
       type: "product-grid",

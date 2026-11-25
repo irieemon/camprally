@@ -9950,6 +9950,155 @@ Gear is only half of it. Check your state park's website for current First Day H
 *Related guides: [How to Layer for Cold-Weather Camping — Base, Mid, Shell, Done](/blog/how-to-layer-for-cold-weather-camping) · [Best Hiking Backpacks Under $100 — Fit First, Features Second](/blog/best-budget-hiking-backpacks-under-100) · [The Most Important Gear Most Campers Ignore: A Good Pair of Socks](/blog/best-camping-socks)*
     `
   },
+
+  {
+    id: "art-103",
+    slug: "beginner-camping-checklist",
+    title: "The Beginner Camping Checklist — Everything You Need, Nothing You Don't",
+    excerpt: "Learn which camping gear is must-have, nice-to-have, or skip-it, and how to adjust your packing list for your destination, weather, and water access.",
+    category: "Planning",
+    date: "2026-11-25",
+    author: "Camp Rally Team",
+    readTime: "7 min read",
+    content: `
+# The Beginner Camping Checklist — Everything You Need, Nothing You Don't
+
+Most first-time campers overpack. They buy a stack of gadgets and still forget the one thing that matters, like a light that works after dark or a way to make water safe to drink. This beginner camping checklist sorts gear into three tiers: must-have, nice-to-have, and skip-it. Each line is short so you can tick it off while you pack.
+
+If you haven't bought anything yet, pair this list with our [Cheapest Camping Setup for Beginners](/blog/cheapest-camping-setup-for-beginners), which covers the actual gear. If you'd rather not buy at all for your first trip, [How to Start Camping With No Gear](/blog/how-to-start-camping-no-gear) explains how to borrow and rent.
+
+## How to Choose What Goes on Your List
+
+A good checklist reflects where you're going, not every possible trip. Before you pack, answer four questions:
+
+- **Car camping or hiking in?** Car camping lets you bring heavier, cheaper gear. Hiking in means every item has to earn its weight.
+- **What will the overnight low be?** Check the forecast for the campground, not the nearest city. Elevation and open ground can make nights much colder.
+- **Is there water on site?** Some campgrounds have potable taps. Many don't. Plan to bring water or treat it.
+- **What are the food storage rules?** Some areas require bear boxes or approved canisters. Call ahead or check the campground page.
+
+The best checklist is also one you'll actually reuse. A printed list, a reusable board, or a notepad you keep in your gear bin all beat a note on your phone that's buried by Sunday.
+
+## Must-Have: Shelter
+
+- Tent with rainfly, stakes, and poles (count the poles at home)
+- Footprint or ground tarp cut slightly smaller than the tent floor
+- A few extra stakes
+- Mallet or a flat rock plan
+
+## Must-Have: Sleep
+
+- Sleeping bag suited to the overnight low
+- Sleeping pad (it insulates you from the ground, not just cushions you)
+- Pillow or a stuff sack filled with soft clothes
+- Dry sleep clothes in synthetic or wool, not cotton
+
+## Must-Have: Light
+
+- Headlamp for each person
+- Spare batteries or a charging cable
+- Battery-powered lantern for the table
+
+Keep all lighting inside the tent battery-powered. Never bring fuel lanterns, stoves, heaters, or grills into a tent or a closed vehicle.
+
+## Must-Have: Water
+
+- Enough water for drinking and cooking, or a confirmed potable tap
+- Water filter or purification tablets if you're using a lake, stream, or unknown source
+- Refillable bottles for each person
+
+Treat all natural water before drinking, even if it looks clear.
+
+## Must-Have: Food and Cooking
+
+- Simple meals planned by day
+- Cooler with ice, or shelf-stable food only
+- Stove and fuel, used outdoors in open air only
+- Lighter plus a backup
+- Pot, pan, utensils, and a plate per person
+- Biodegradable soap, sponge, and a basin
+- Trash bags (pack out everything)
+
+Store food, trash, and scented items in your car, a bear box, or an approved container. Never keep food in the tent.
+
+## Must-Have: First Aid and Safety
+
+- First aid kit with bandages, blister care, and pain relievers
+- Personal medications
+- Sunscreen and bug repellent
+- Map of the area, since signal often drops
+- Rain jacket
+- Warm layer: fleece, wool, or a synthetic puffy
+
+## Nice-to-Have
+
+- Camp chairs
+- Folding table if the site doesn't have one
+- Tarp for shade or rain over the eating area
+- Camp shoes or sandals
+- Small rug or mat at the tent door
+- Power bank for phones
+- Coffee setup
+- Deck of cards
+
+## Skip It (For Your First Trip)
+
+- Specialty gadgets you saw in a video
+- Multiple knives or an axe if the campground sells firewood
+- A full home kitchen
+- Big decorative extras
+- Anything bought "just in case" that you can't name a use for
+
+Your first trip shows you what you actually reach for. Buy the upgrades after that.
+
+## The Picks: Tools to Keep Your Checklist Working
+
+None of these replace the gear above. They make sure the gear above actually ends up in the car.
+
+### Packing List - Note Pad (60 sheets)
+
+A tear-off notepad is the lowest-effort way to build a habit. With 60 sheets, you can write a fresh list for each trip, stick it to the fridge during the week, and cross items off as they go into the bin. It's flexible, too. You can add a weather-specific line or a note to buy ice without crossing out a printed list. It's best for people who camp in different places and want a list tailored to each trip.
+
+**[Check the Packing List - Note Pad on Amazon](https://www.amazon.com/dp/1441331913?tag=camprally-20)**
+
+### Ultimate RV Equipment Checklist - Reusable Laminated Chart & Double Sided - Never Forget Packing Items 11 inches x 8.5 inches
+
+The listing describes this chart as laminated, double sided, and 11 by 8.5 inches, a standard letter-page size that fits in a gear bin or a glovebox. It's built for RV travel, so some items won't apply to tent campers. Still, much of an RV packing list overlaps with car camping: bedding, kitchen, lighting, and first aid. Since it's reusable, it makes sense if you camp the same way repeatedly and want a fixed reference instead of writing a new list each time.
+
+**[Check the Ultimate RV Equipment Checklist on Amazon](https://www.amazon.com/dp/B08FBT681W?tag=camprally-20)**
+
+### Heveboik Camping Journal and RV Travel Log Book - A5 Outdoor Camp & Adventure Journal for 25 Camping, Hiking Journal, Family Travel Books Camper Essentials Camping, 5.8" x 8.5", Cyan
+
+A journal solves a different problem. It doesn't help you remember what to pack. It helps you remember what you should have packed. After each trip, write down what you forgot, what you never touched, and how cold it got at night. That record becomes your personal checklist. The listing gives an A5 size (5.8 by 8.5 inches), small enough to keep with your camping gear. It's a good fit for families who want to remember which sites they liked.
+
+**[Check the Heveboik Camping Journal on Amazon](https://www.amazon.com/dp/B0D57CT8NJ?tag=camprally-20)**
+
+### Where Should We Camp Next?: A 50-State Guide to Amazing Campgrounds and Other Unique Outdoor Accommodations (RV or Camping Trip Planning Guide for a Family-Friendly Budget-Conscious Vacation)
+
+Packing depends on where you're going, and this book covers the earlier step of deciding where that is. It's a 50-state campground guide aimed at family-friendly, budget-conscious trips, which suits a beginner picking a first destination. Use it to shortlist a few campgrounds, then check each one's current rules on water, fires, and food storage before you finalize your list.
+
+**[Check Where Should We Camp Next? on Amazon](https://www.amazon.com/dp/1728221692?tag=camprally-20)**
+
+### Zonon 1 Pack Rv Checklist Board to Do List Boards Plastic Chore Chart Memo Checklist Boards with Slider Portable Daily Affairs Detachable Schedule Planner for Home Office Check Items Accessories
+
+This is a plastic checklist board with sliders you move to mark items done, and the listing describes it as portable and detachable. Sliders work well for the departure checklist, the things you do as you leave rather than pack: propane off, cooler drained, fire out cold, trash loaded. Reset the sliders and it's ready for next time. The listing positions it for home and office as well as RVs, so you can program it with your own items.
+
+**[Check the Zonon 1 Pack Checklist Board on Amazon](https://www.amazon.com/dp/B09DL27TRV?tag=camprally-20)**
+
+### Zonon 2 Pack Rv Checklist Board to Do List Boards Plastic Chore Chart Memo Checklist Boards with Slider Portable Daily Affairs Detachable Schedule Planner for Home Office Check Items Accessories
+
+This is the same slider board in a two-pack. Two boards let you split the job: one for packing at home and one for breaking down camp. Or give one to a kid so they can handle their own sleeping bag, headlamp, and water bottle. It makes the most sense for families or anyone who wants separate setup and teardown lists.
+
+**[Check the Zonon 2 Pack Checklist Board on Amazon](https://www.amazon.com/dp/B0FG26947G?tag=camprally-20)**
+
+## Verdict
+
+For most beginners, the notepad is the easiest start. Write this checklist onto it, adjust it for your trip, and cross items off as you pack. If you camp the same way often, the laminated chart or a Zonon board gives you a list that never needs rewriting, and the two-pack works well for families who want separate pack and teardown boards. Add the journal if you want each trip to improve the next one, and the 50-state guide if you haven't picked a destination yet.
+
+Whatever tool you use, cover the must-haves first: shelter, sleep, light, treated water, food stored outside the tent, and first aid. Everything else can wait until your second trip.
+
+*Related guides: [Cheapest Camping Setup for Beginners (Complete Guide)](/blog/cheapest-camping-setup-for-beginners) · [How to Start Camping With No Gear](/blog/how-to-start-camping-no-gear) · [Camping Etiquette — The Unwritten Rules Nobody Tells First-Timers](/blog/camping-etiquette-rules)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

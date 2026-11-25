@@ -3,6 +3,50 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "waterfall-gorge-camp",
+      "name": "Waterfall Gorge Camp",
+      "subtitle": "the loudest quiet place you will sleep",
+      "image": "/images/merch/waterfall-gorge-camp.jpg",
+      "imageKey": "6b05d44ca2ef957094da5e10::2026-11-24T18:16:02.065Z::Natural|Sand|Light Blue",
+      "fromCents": 2799,
+      "from": "$27.99",
+      "publishedAt": "2026-11-24T18:16:46.003Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/34992204",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        },
+        {
+          "kind": "hoodie",
+          "label": "Hoodie",
+          "url": "https://camprally.printify.me/product/34992205",
+          "priceCents": 5399,
+          "price": "$53.99",
+          "varies": true
+        },
+        {
+          "kind": "tote",
+          "label": "Tote bag",
+          "url": "https://camprally.printify.me/product/34992215",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": false
+        },
+        {
+          "kind": "phone-case",
+          "label": "Phone case",
+          "url": "https://camprally.printify.me/product/34992231",
+          "priceCents": 2799,
+          "price": "$27.99",
+          "varies": true
+        }
+      ]
+    },
+    {
       "slug": "redwood-giants-camp",
       "name": "Redwood Giants Camp",
       "subtitle": "feeling small in the best way",
