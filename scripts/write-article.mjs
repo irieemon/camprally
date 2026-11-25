@@ -23,11 +23,12 @@
  * Exit codes: 0 wrote spec · 1 failed
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from "node:fs";
 import { EXIT } from "./lib/amazon.mjs";
 import { loadCache, saveCache, classify, get } from "./lib/asin-cache.mjs";
 import { discover, priceCeiling } from "./lib/discover.mjs";
 import { generateImage, heroPrompt, lastImageError } from "./lib/minimax-image.mjs";
+import { judgeHero } from "./lib/hero-gate.mjs";
 import { callRole, lastError, lastErrorTransient, minimaxKey, roleCandidates } from "./lib/llm.mjs";
 import { canonicalCategory, knownCategories } from "./lib/taxonomy.mjs";
 import { excerptIsDegenerate, MIN_EXCERPT_CHARS } from "./lib/meta.mjs";
@@ -528,16 +529,44 @@ const user = [
  * reused rather than paid for twice. publish-article enforces the same rule. */
 const heroOut = `${ROOT}public/images/heroes/${slug}.jpg`;
 let heroPath = existsSync(heroOut) ? heroOut : null;
-for (let attempt = 1; !heroPath && attempt <= 3; attempt++) {
-  heroPath = await generateImage({
-    prompt: heroPrompt(brief.title, brief.category ?? "camping gear"),
-    outPath: heroOut,
-    // image-01 is MiniMax-native and has no Gemini equivalent wired up, so this
-    // one still asks for the MiniMax key by name rather than going through a role.
-    apiKey: minimaxKey(),
-  });
+/* Every hero, including one reused from a deferred run, is JUDGED before it is
+ * kept (lib/hero-gate.mjs). On 2026-11-24 first-day-hike-guide shipped
+ * calligraphy and a cloud on a white background: generation succeeded, so
+ * nothing looked. A rejected image is deleted and regenerated; the last try
+ * drops the title from the prompt, since the title is what steered it. */
+let rejected = null;
+for (let attempt = 1; attempt <= 3; attempt++) {
+  if (!heroPath) {
+    heroPath = await generateImage({
+      prompt: heroPrompt(attempt === 3 && rejected ? null : brief.title, brief.category ?? "camping gear"),
+      outPath: heroOut,
+      // image-01 is MiniMax-native and has no Gemini equivalent wired up, so this
+      // one still asks for the MiniMax key by name rather than going through a role.
+      apiKey: minimaxKey(),
+    });
+  }
   if (!heroPath && lastImageError()?.kind === "auth") break;
+  if (heroPath) {
+    const verdict = await judgeHero(heroOut, brief.title);
+    if (!verdict) {
+      // Unjudged is not approved. Keep the file so the next cycle judges it
+      // without paying for another image.
+      console.log("deferring: hero-unjudged");
+      console.error("no vision model judged the hero — not publishing an unchecked image");
+      process.exit(EXIT.DEFER);
+    }
+    if (verdict.ok) break;
+    rejected = verdict.reason;
+    console.error(`hero rejected (attempt ${attempt}): ${rejected}`);
+    unlinkSync(heroOut);
+    heroPath = null;
+  }
   if (!heroPath && attempt < 3) await new Promise((r) => setTimeout(r, 5000 * attempt));
+}
+if (!heroPath && rejected) {
+  console.log("deferring: hero-rejected");
+  console.error(`every hero was rejected; last: ${rejected}`);
+  process.exit(EXIT.DEFER);
 }
 if (!heroPath) {
   const why = lastImageError();

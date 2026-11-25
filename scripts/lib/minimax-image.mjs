@@ -68,10 +68,14 @@ export async function generateImage({ prompt, outPath, apiKey, aspectRatio = "16
 }
 
 /** Hero prompt for an article. Kept photographic and text-free: overlaid UI
- *  (title, category badge, gradient) supplies all the typography. */
+ *  (title, category badge, gradient) supplies all the typography.
+ *
+ *  `title` may be null. A quoted title can steer image-01 off the photo
+ *  entirely ("New Year" gave brush-script calligraphy, 2026-11-24), so the
+ *  last retry after a rejected hero leaves it out. */
 export function heroPrompt(title, category = "camping gear") {
   return (
-    `Photorealistic outdoor photography for a budget-camping article titled "${title}". ` +
+    `Photorealistic outdoor photography for a budget-camping article${title ? ` titled "${title}"` : ""}. ` +
     `Subject: ${category.toLowerCase()} in a natural campsite setting — forest clearing, ` +
     `lakeside, or mountain meadow. Golden-hour natural light, shallow depth of field, ` +
     `editorial magazine quality. No text, no watermarks, no logos, no human faces.`

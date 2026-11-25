@@ -626,7 +626,11 @@ if (!next) {
           ? "MiniMax was overloaded across three attempts. Transient — the next cycle retries."
           : reason === "hero-image"
             ? "MiniMax image generation failed three times. No article publishes without its own hero — the next cycle retries."
-            : "Canopy request quota exhausted — add pay-as-you-go or wait for the monthly reset.",
+            : reason === "hero-rejected"
+              ? "The vision check rejected all three generated heroes (off-topic, text, or not a photo). The next cycle retries."
+              : reason === "hero-unjudged"
+                ? "No vision model answered, so the hero went unjudged and was not published. The next cycle retries."
+                : "Canopy request quota exhausted — add pay-as-you-go or wait for the monthly reset.",
       }, EXIT.OK);
     }
     finish("blocked", {
