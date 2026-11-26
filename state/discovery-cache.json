@@ -24523,5 +24523,68 @@
         "ratingsTotal": 147
       }
     ]
+  },
+  "campsite planning|1|": {
+    "term": "campsite planning",
+    "min": 1,
+    "fetchedAt": "2026-11-26T14:00:28.457Z",
+    "results": [
+      {
+        "asin": "171894943X",
+        "title": "Camping Journal & RV Travel Logbook, Red Vintage Camper Adventure: Road Trip Planner, Caravan Travel Journal, Glamping Diary, Camping Memory Keepsake ... for Campers & RV Retirement Gifts Series)",
+        "price": "$12.95",
+        "priceValue": 12.95,
+        "rating": 4.8,
+        "ratingsTotal": 1230
+      },
+      {
+        "asin": "B08BDK52GH",
+        "title": "Camping Journal: Family RV Travel Logbook / Memory Book For Adventure Notes / Campground Notebook / Caravan Road Trip Diary / Summer Campsites Log Book / Camp Planner Gift Idea for Camper",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.8,
+        "ratingsTotal": 649
+      },
+      {
+        "asin": "B0CL6GQL3H",
+        "title": "Camping Journal, RV Travel Log Book, A5 Hiking Journal, Dark Green",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.8,
+        "ratingsTotal": 313
+      },
+      {
+        "asin": "B0C43L2921",
+        "title": "Clever Fox Camping Journal, RV Travel Log Book, 5.8\" x 8.3\" Cypress",
+        "price": "$19.99",
+        "priceValue": 19.99,
+        "rating": 4.7,
+        "ratingsTotal": 463
+      },
+      {
+        "asin": "B086PVR9K2",
+        "title": "And So The Adventure Begins: Camping Journal & RV Logbook, Family Campsite Adventure Keepsake, Campground Trip Log Book, Retirement Travel Gifts",
+        "price": "$9.99",
+        "priceValue": 9.99,
+        "rating": 4.7,
+        "ratingsTotal": 418
+      },
+      {
+        "asin": "B0D57CT8NJ",
+        "title": "Heveboik Camping Journal and RV Travel Log Book - A5 Outdoor Camp & Adventure Journal for 25 Camping, Hiking Journal, Family Travel Books Camper Essentials Camping, 5.8\" x 8.5\", Cyan",
+        "price": "$8.99",
+        "priceValue": 8.99,
+        "rating": 4.6,
+        "ratingsTotal": 166
+      },
+      {
+        "asin": "B0BZR6H6BX",
+        "title": "9-in-1Collapsible Cutting Board with Colander Wash Basket Camping RV Gift",
+        "price": "$18.69",
+        "priceValue": 18.69,
+        "rating": 4.4,
+        "ratingsTotal": 3110
+      }
+    ]
   }
 }
