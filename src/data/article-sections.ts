@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-plan-a-camping-trip": [
+    {
+      type: "product-grid",
+      title: "How to Plan a Camping Trip — A Step-by-Step Guide for Your First One — Quick Comparison",
+      items: [
+        { label: "Camping Journal & RV Travel Logbook", category: "", icon: "🏕️", asin: "171894943X", link: "https://www.amazon.com/dp/171894943X?tag=camprally-20" },
+        { label: "Camping Journal: Family RV Travel Logbook / Memory Book", category: "", icon: "🏕️", asin: "B08BDK52GH", link: "https://www.amazon.com/dp/B08BDK52GH?tag=camprally-20" },
+        { label: "Camping Journal", category: "", icon: "🏕️", asin: "B0CL6GQL3H", link: "https://www.amazon.com/dp/B0CL6GQL3H?tag=camprally-20" },
+        { label: "Clever Fox Camping Journal", category: "", icon: "🏕️", asin: "B0C43L2921", link: "https://www.amazon.com/dp/B0C43L2921?tag=camprally-20" },
+        { label: "And So The Adventure Begins: Camping Journal & RV Logbook", category: "", icon: "🏕️", asin: "B086PVR9K2", link: "https://www.amazon.com/dp/B086PVR9K2?tag=camprally-20" },
+        { label: "Heveboik Camping Journal and RV Travel Log Book", category: "", icon: "🏕️", asin: "B0D57CT8NJ", link: "https://www.amazon.com/dp/B0D57CT8NJ?tag=camprally-20" },
+      ]
+    },
+  ],
   "beginner-camping-checklist": [
     {
       type: "product-grid",

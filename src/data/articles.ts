@@ -10099,6 +10099,172 @@ Whatever tool you use, cover the must-haves first: shelter, sleep, light, treate
 *Related guides: [Cheapest Camping Setup for Beginners (Complete Guide)](/blog/cheapest-camping-setup-for-beginners) · [How to Start Camping With No Gear](/blog/how-to-start-camping-no-gear) · [Camping Etiquette — The Unwritten Rules Nobody Tells First-Timers](/blog/camping-etiquette-rules)*
     `
   },
+
+  {
+    id: "art-104",
+    slug: "how-to-plan-a-camping-trip",
+    title: "How to Plan a Camping Trip — A Step-by-Step Guide for Your First One",
+    excerpt: "Learn the six planning decisions to make in order, from trip type and reservations to fire rules and meals, so your first camping trip goes smoothly.",
+    category: "Planning",
+    date: "2026-11-26",
+    author: "Camp Rally Team",
+    readTime: "9 min read",
+    content: `
+# How to Plan a Camping Trip — A Step-by-Step Guide for Your First One
+
+Most first camping trips that go badly don't fail at the campsite. They fail at the kitchen table a week earlier, when nobody checked whether the site was reserved, whether fires were allowed, or what dinner would be on night two. Planning a camping trip is six decisions made in the right order. Get them right, and the trip itself is mostly just showing up.
+
+This guide covers each step. Then it looks at a few camping journals and logbooks that help you keep the plan, the packing list, and the memories in one place.
+
+## Step 1: Pick the Trip Type
+
+Decide what kind of trip this is before you look at a single campsite. Everything downstream depends on it.
+
+- **Car camping.** You park next to your site and unload. This is the right choice for a first trip because weight doesn't matter and your car is a short walk away if something goes wrong.
+- **Backpacking.** You carry everything on your back to a remote site. Save this for later. It demands lighter gear, navigation skills, and water treatment on the trail.
+- **Developed campground vs. dispersed camping.** Developed campgrounds usually have toilets, water spigots, fire rings, and neighbors. Dispersed camping on public land is often free but has no facilities.
+
+For a first trip, plan one or two nights at a developed campground within a few hours of home. A short drive means you can bail out without drama if the weather turns or a key piece of gear fails.
+
+## Step 2: Pick and Reserve a Site
+
+Once you know the trip type, choose the campground, then the specific site. Look for these features:
+
+- Flat, level ground for the tent pad
+- Distance from the restroom (close enough to walk at night, far enough to avoid the traffic)
+- Shade, water access, and whether the site fits your vehicle
+
+Our guide on [how to choose a campsite](/blog/how-to-choose-a-campsite) walks through what to look for once you're standing on the ground.
+
+Reservation rules vary widely between agencies, states, and individual parks. Booking windows, fees, cancellation policies, and stay limits all differ. Check the managing agency's official website or reservation system directly instead of relying on a forum post from three years ago.
+
+Popular parks can book up fast, so read [how to actually get a national park campsite](/blog/national-park-camping-reservations) if you're aiming for one. If you'd rather skip reservations entirely, [how to find free campsites](/blog/how-to-find-free-campsites) covers public land options. Free sites come with fewer amenities, so pack accordingly.
+
+## Step 3: Check the Weather and Fire Restrictions
+
+Check the forecast for the campground's location, not your hometown. Elevation and terrain can make conditions very different from what you see at home.
+
+**Check the forecast a few days out**, then again the day before you leave. Look at these details:
+
+- **Overnight lows.** Nights are often much colder than the daytime high suggests. Your sleeping bag and pad matter more than your jacket.
+- **Rain and wind.** Rain changes your tent setup and your meal plan. High wind changes where you pitch.
+- **Thunderstorms.** Have a plan to retreat to your car if lightning moves in.
+
+Pack warmth layers in wool or synthetics. Cotton holds moisture and loses its insulating value when damp, so don't count it as a warm layer.
+
+**Fire restrictions change frequently.** Burn bans can go into effect with little notice depending on conditions. Check with the campground host, the managing agency's website, or the local ranger station before you go. Ask whether campfires are allowed and whether you can bring firewood from outside the area, since many places restrict transporting firewood. If fires are banned, plan meals that don't depend on one.
+
+## Step 4: Plan Your Meals
+
+Write out every meal, night by night. Then build your shopping list from that plan instead of wandering the grocery aisles. For a first trip, keep it simple:
+
+- **Breakfast:** oatmeal, eggs, or pre-made breakfast burritos you reheat
+- **Lunch:** sandwiches or wraps you can make without cooking
+- **Dinner:** one-pot meals, foil packets, or something you prepped at home
+- **Snacks:** more than you think you need
+
+Cook only outdoors, in an open, ventilated area. Never run a stove, grill, heater, or fuel-burning lantern inside a tent or a closed vehicle.
+
+Plan your water too. Bring enough from home, or confirm the campground has potable water. Treat any water from streams or lakes before drinking it.
+
+Food storage depends on location. In bear country, many campgrounds require bear lockers or approved canisters. Everywhere else, food belongs in a hard-sided vehicle or a proper container at night. Food, trash, and scented items never go in your tent.
+
+For a full budget-friendly plan, see our [budget camping meal plans](/blog/camping-meal-plans-budget-50).
+
+## Step 5: Pack
+
+Build your packing list in categories:
+
+- **Shelter:** tent, footprint, and stakes
+- **Sleep:** sleeping bag, pad, and pillow
+- **Kitchen:** stove, fuel, pot, utensils, and cooler
+- **Clothing:** layers, rain jacket, and spare socks
+- **Light:** headlamp and extra batteries
+- **Safety:** first aid kit and navigation
+- **Hygiene:** toiletries and trash bags
+
+**Set up your tent at home first.** Finding a missing pole in your living room is an annoyance. Finding it at dusk at camp ruins the night.
+
+Our [beginner camping checklist](/blog/beginner-camping-checklist) has the complete list, without the gear you don't actually need.
+
+## Step 6: Tell Someone Your Plans
+
+Before you leave, write down your plan and give it to someone who isn't going. Include:
+
+- Where you're going: campground name and site number if you have one
+- When you're leaving and when you expect to be back
+- Who's going, and your vehicle description
+- What to do if they haven't heard from you by a specific time
+
+Cell coverage at campgrounds is often unreliable, so don't assume you'll be able to check in. A written trip plan costs you five minutes and is the most useful safety step on this list.
+
+## How to Choose a Camping Journal or Trip Planner
+
+A camping journal is where the six steps above come together. It holds your site details, your meal plan, your packing list, and a copy of the trip plan you leave behind. It also becomes a record you can reuse next time. Here's what to weigh:
+
+- **Size.** A5 (roughly 5.8 x 8.3 inches) fits in a glovebox or daypack. Larger formats give more writing room but travel less easily.
+- **Structure.** Some journals use guided prompts for each trip. Others lean toward free-form notes. Beginners usually benefit from prompts, because the prompts remind you what to record.
+- **Purpose.** Some are pitched as planners, others as keepsakes or family memory books. Pick the one that matches how you'll actually use it.
+- **Gifting.** Several are styled as gifts for new campers or retirees hitting the road.
+
+Read each listing for the page layout and trip count. Specifications vary, so confirm the details that matter to you before buying.
+
+## The Picks
+
+### Camping Journal & RV Travel Logbook, Red Vintage Camper Adventure
+
+This one is listed as a road trip planner and caravan travel journal, with a red vintage camper theme. It suits campers who want planning and memory-keeping in a single book. The listing positions it in a series aimed at campers and RV retirement gifts.
+
+**[Check the Camping Journal & RV Travel Logbook, Red Vintage Camper Adventure on Amazon](https://www.amazon.com/dp/171894943X?tag=camprally-20)**
+
+### Camping Journal: Family RV Travel Logbook
+
+This logbook is billed as a family RV travel logbook, campground notebook, and camp planner. That makes it a reasonable pick if the whole household is camping and you want one shared record of sites and trips.
+
+**[Check the Camping Journal: Family RV Travel Logbook on Amazon](https://www.amazon.com/dp/B08BDK52GH?tag=camprally-20)**
+
+### Camping Journal, RV Travel Log Book, A5 Hiking Journal, Dark Green
+
+This is an A5 format in dark green, listed as both a camping and hiking journal. The compact size suits campers who want something small enough to keep in a daypack or glovebox.
+
+**[Check the Camping Journal, RV Travel Log Book, A5 Hiking Journal, Dark Green on Amazon](https://www.amazon.com/dp/B0CL6GQL3H?tag=camprally-20)**
+
+### Clever Fox Camping Journal, RV Travel Log Book, Cypress
+
+The Clever Fox journal is listed at 5.8 x 8.3 inches in a Cypress colorway. Clever Fox is a known planner brand, which may appeal if you like a structured, planner-style layout. Check the listing for the specific page sections.
+
+**[Check the Clever Fox Camping Journal, RV Travel Log Book, Cypress on Amazon](https://www.amazon.com/dp/B0C43L2921?tag=camprally-20)**
+
+### And So The Adventure Begins: Camping Journal & RV Logbook
+
+This journal is positioned as a family campsite adventure keepsake and campground trip log. It's also marketed toward retirement travel gifts. It's a natural fit for someone starting their camping years, whether that's a first trip or a new RV.
+
+**[Check the And So The Adventure Begins Camping Journal & RV Logbook on Amazon](https://www.amazon.com/dp/B086PVR9K2?tag=camprally-20)**
+
+### Heveboik Camping Journal and RV Travel Log Book, Cyan
+
+The Heveboik journal is an A5 journal listed at 5.8 x 8.5 inches in cyan. Its listing states it covers 25 camping trips, which gives you a clear sense of capacity before you buy. That's useful if you're planning a full season of trips.
+
+**[Check the Heveboik Camping Journal and RV Travel Log Book, Cyan on Amazon](https://www.amazon.com/dp/B0D57CT8NJ?tag=camprally-20)**
+
+## Verdict
+
+Planning a camping trip comes down to the order of operations:
+
+1. Pick the trip type.
+2. Reserve the site.
+3. Check the weather and fire restrictions.
+4. Plan meals.
+5. Pack.
+6. Tell someone where you're going.
+
+A journal won't do the planning for you, but it keeps every decision in one place.
+
+If you want a compact, structured planner, start with the Clever Fox or the Heveboik. The Heveboik's stated trip count makes its capacity easy to judge. For families or gift-giving, the Family RV Travel Logbook or And So The Adventure Begins fit better. Whichever you choose, fill in the trip plan page and leave a copy with someone at home.
+
+*Related guides: [Cheapest Camping Setup for Beginners (Complete Guide)](/blog/cheapest-camping-setup-for-beginners) · [Camping Etiquette — The Unwritten Rules Nobody Tells First-Timers](/blog/camping-etiquette-rules) · [Car Camping vs Backpacking — Which One Are You Actually Buying For](/blog/car-camping-vs-backpacking)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {
