@@ -150,6 +150,7 @@ export const HERO_IMAGES: Record<string, string> = {
   "first-day-hike-guide": "/images/heroes/first-day-hike-guide.jpg",
   "beginner-camping-checklist": "/images/heroes/beginner-camping-checklist.jpg",
   "how-to-plan-a-camping-trip": "/images/heroes/how-to-plan-a-camping-trip.jpg",
+  "camping-budget-breakdown": "/images/heroes/camping-budget-breakdown.jpg",
   default: "https://images.unsplash.com/photo-1598507690808-57594afea85f?w=1200&q=80",
 };
 

@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "camping-budget-breakdown": [
+    {
+      type: "product-grid",
+      title: "Camping on a Budget — Where the Money Actually Goes — Quick Comparison",
+      items: [
+        { label: "Camping Journal", category: "", icon: "🏕️", asin: "B0CL6GQL3H", link: "https://www.amazon.com/dp/B0CL6GQL3H?tag=camprally-20" },
+        { label: "Collapsible Portable Ultra Bright LED Camping Lantern 1500", category: "", icon: "🏕️", asin: "B0GL1TGW1S", link: "https://www.amazon.com/dp/B0GL1TGW1S?tag=camprally-20" },
+        { label: "Kootek Camping Hammock 400lbs Capacity Outdoor Camping", category: "", icon: "🏕️", asin: "B07X5G3BKZ", link: "https://www.amazon.com/dp/B07X5G3BKZ?tag=camprally-20" },
+        { label: "SZHLUX Camping Hammock Double & Single Portable Hammocks", category: "", icon: "🏕️", asin: "B0BKLBCQ3W", link: "https://www.amazon.com/dp/B0BKLBCQ3W?tag=camprally-20" },
+        { label: "UCO Camping Mess Kit with Bowl", category: "", icon: "🏕️", asin: "B083YYS862", link: "https://www.amazon.com/dp/B083YYS862?tag=camprally-20" },
+        { label: "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit", category: "", icon: "🏕️", asin: "B09B4HCTC1", link: "https://www.amazon.com/dp/B09B4HCTC1?tag=camprally-20" },
+      ]
+    },
+  ],
   "how-to-plan-a-camping-trip": [
     {
       type: "product-grid",

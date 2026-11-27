@@ -1805,14 +1805,14 @@
     },
     "B09B4HCTC1": {
       "verdict": "LIVE",
-      "title": "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit, Stainless Steel Outdoor Cooking and Grilling Utensil Organizer Travel Set Perfect for Travel, Picnics, RVs, Camping, BBQs, Parties and More black",
-      "checkedAt": "2026-11-24T14:00:07.394Z",
+      "title": "Portable Camping Kitchen Utensil Set-27 Piece Cookware Kit, Stainless Steel Outdoor Cooking and Grilling Utensil Organizer Travel Set Perfect for Travel, Picnics, RVs, Camping, BBQs, Parties and More",
+      "checkedAt": "2026-11-27T14:00:28.461Z",
       "price": "$37.98",
       "priceValue": 37.98,
       "rating": 4.7,
-      "ratingsTotal": 1064,
-      "priceCheckedAt": "2026-11-24T14:00:07.394Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 1065,
+      "priceCheckedAt": "2026-11-27T14:00:28.461Z",
+      "priceSource": "canopy-search"
     },
     "B0FGDBK95G": {
       "verdict": "LIVE",
@@ -2833,14 +2833,14 @@
     },
     "B07X5G3BKZ": {
       "verdict": "LIVE",
-      "title": "Kootek Camping Hammock 400lbs Capacity Outdoor Camping Essentials, Single Sky Blue & Grey Medium",
-      "checkedAt": "2026-11-22T14:00:00.618Z",
-      "price": "$13.86",
-      "priceValue": 13.86,
+      "title": "Kootek Camping Hammock 400lbs Capacity Outdoor Camping Essentials, Single",
+      "checkedAt": "2026-11-27T14:00:28.461Z",
+      "price": "$11.99",
+      "priceValue": 11.99,
       "rating": 4.7,
-      "ratingsTotal": 31433,
-      "priceCheckedAt": "2026-11-22T14:00:00.618Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 31436,
+      "priceCheckedAt": "2026-11-27T14:00:28.461Z",
+      "priceSource": "canopy-search"
     },
     "B07MN8ZD21": {
       "verdict": "LIVE",
@@ -5911,12 +5911,12 @@
     "B0CL6GQL3H": {
       "verdict": "LIVE",
       "title": "Camping Journal, RV Travel Log Book, A5 Hiking Journal, Dark Green",
-      "checkedAt": "2026-11-26T14:00:33.714Z",
+      "checkedAt": "2026-11-27T14:00:28.461Z",
       "price": "$9.99",
       "priceValue": 9.99,
       "rating": 4.8,
       "ratingsTotal": 313,
-      "priceCheckedAt": "2026-11-26T14:00:33.714Z",
+      "priceCheckedAt": "2026-11-27T14:00:28.461Z",
       "priceSource": "canopy-search"
     },
     "B0C43L2921": {
@@ -5939,6 +5939,39 @@
       "rating": 4.7,
       "ratingsTotal": 418,
       "priceCheckedAt": "2026-11-26T14:00:33.714Z",
+      "priceSource": "canopy-search"
+    },
+    "B0GL1TGW1S": {
+      "verdict": "LIVE",
+      "title": "Collapsible Portable Ultra Bright LED Camping Lantern 1500 Lumens USB-C Rechargeable Tent Light 5 Modes 3 Light Sources for Power Outages Camping Hiking Emergency Work Lights",
+      "checkedAt": "2026-11-27T14:00:28.461Z",
+      "price": "$12.99",
+      "priceValue": 12.99,
+      "rating": 4.8,
+      "ratingsTotal": 189,
+      "priceCheckedAt": "2026-11-27T14:00:28.461Z",
+      "priceSource": "canopy-search"
+    },
+    "B0BKLBCQ3W": {
+      "verdict": "LIVE",
+      "title": "SZHLUX Camping Hammock Double & Single Portable Hammocks with 2 Tree Straps and Attached Carry Bag,Great for Outdoor,Indoor,Beach,Camping,Light Grey / Sky Blue",
+      "checkedAt": "2026-11-27T14:00:28.461Z",
+      "price": "$17.95",
+      "priceValue": 17.95,
+      "rating": 4.7,
+      "ratingsTotal": 4531,
+      "priceCheckedAt": "2026-11-27T14:00:28.461Z",
+      "priceSource": "canopy-search"
+    },
+    "B083YYS862": {
+      "verdict": "LIVE",
+      "title": "UCO Camping Mess Kit with Bowl, Plate, Collapsible Cup, and Switch Camping Spork",
+      "checkedAt": "2026-11-27T14:00:28.461Z",
+      "price": "$27.99",
+      "priceValue": 27.99,
+      "rating": 4.7,
+      "ratingsTotal": 3359,
+      "priceCheckedAt": "2026-11-27T14:00:28.461Z",
       "priceSource": "canopy-search"
     }
   }
