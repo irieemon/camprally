@@ -22,6 +22,20 @@ export interface CustomSection {
 }
 
 export const ARTICLE_CUSTOM_SECTIONS: Record<string, CustomSection[]> = {
+  "how-to-sleep-better-camping": [
+    {
+      type: "product-grid",
+      title: "How to Sleep Better Camping — Fixes for the Five Things Keeping You Awake — Quick Comparison",
+      items: [
+        { label: "Coleman Sundome Camping Tent with Rainfly", category: "", icon: "🏕️", asin: "B0D7QFZNS7", link: "https://www.amazon.com/dp/B0D7QFZNS7?tag=camprally-20" },
+        { label: "ONETIGRIS SUPRAGRIS Camping Cot", category: "", icon: "🏕️", asin: "B0F4WYQ22B", link: "https://www.amazon.com/dp/B0F4WYQ22B?tag=camprally-20" },
+        { label: "OGERY Self-Inflating Sleeping Pad", category: "", icon: "🏕️", asin: "B0FXX7VX7N", link: "https://www.amazon.com/dp/B0FXX7VX7N?tag=camprally-20" },
+        { label: "Double Sleeping Bags for Adults Camping with 2 Pillows Queen", category: "", icon: "🏕️", asin: "B0GRV6WZDT", link: "https://www.amazon.com/dp/B0GRV6WZDT?tag=camprally-20" },
+        { label: "MalloMe Sleeping Bags for Adults Cold Weather & Warm", category: "", icon: "🏕️", asin: "B077XQDZW4", link: "https://www.amazon.com/dp/B077XQDZW4?tag=camprally-20" },
+        { label: "MARCHWAY Ultralight Folding Camping Cot Bed", category: "", icon: "🏕️", asin: "B08215YSYD", link: "https://www.amazon.com/dp/B08215YSYD?tag=camprally-20" },
+      ]
+    },
+  ],
   "camping-budget-breakdown": [
     {
       type: "product-grid",

@@ -2003,14 +2003,14 @@
     },
     "B077XQDZW4": {
       "verdict": "LIVE",
-      "title": "MalloMe Sleeping Bags for Adults Cold Weather & Warm - Backpacking Camping Sleeping Bag for Kids 10-12, Girls, Boys - Lightweight Compact Camping Essentials Gear Accessories Hiking Sleep Must Haves Ocean Blue Everyday 3 Season 50-80° F",
-      "checkedAt": "2026-11-23T14:00:00.945Z",
+      "title": "MalloMe Sleeping Bags for Adults Cold Weather & Warm - Backpacking Camping Sleeping Bag for Kids 10-12, Girls, Boys - Lightweight Compact Camping Essentials Gear Accessories Hiking Sleep Must Haves",
+      "checkedAt": "2026-11-28T14:00:29.707Z",
       "price": "$21.99",
       "priceValue": 21.99,
       "rating": 4.5,
-      "ratingsTotal": 17777,
-      "priceCheckedAt": "2026-11-23T14:00:00.945Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 17803,
+      "priceCheckedAt": "2026-11-28T14:00:29.707Z",
+      "priceSource": "canopy-search"
     },
     "B07BHJ2YYG": {
       "verdict": "LIVE",
@@ -3988,14 +3988,14 @@
     },
     "B0FXX7VX7N": {
       "verdict": "LIVE",
-      "title": "OGERY Self-Inflating Sleeping Pad, 3\" Memory Foam Camping Mattress Green",
-      "checkedAt": "2026-11-21T14:00:02.536Z",
-      "price": "$56.09",
-      "priceValue": 56.09,
+      "title": "OGERY Self-Inflating Sleeping Pad, 3\" Memory Foam Camping Mattress",
+      "checkedAt": "2026-11-28T14:00:29.707Z",
+      "price": "$55.99",
+      "priceValue": 55.99,
       "rating": 4.6,
-      "ratingsTotal": 248,
-      "priceCheckedAt": "2026-11-21T14:00:02.536Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 250,
+      "priceCheckedAt": "2026-11-28T14:00:29.707Z",
+      "priceSource": "canopy-search"
     },
     "B0GDVNXWXY": {
       "verdict": "LIVE",
@@ -5065,14 +5065,14 @@
     },
     "B0D7QFZNS7": {
       "verdict": "LIVE",
-      "title": "Coleman Sundome Camping Tent with Rainfly, 2/3/4/6 Person Tent Sets Up in 10 Mins, Weatherproof Shelter for Camping, Festivals, Backyard, Sleepovers, & More Navy Blue 6 Person",
-      "checkedAt": "2026-11-23T14:00:00.945Z",
+      "title": "Coleman Sundome Camping Tent with Rainfly, 2/3/4/6 Person Tent Sets Up in 10 Mins, Weatherproof Shelter for Camping, Festivals, Backyard, Sleepovers, & More",
+      "checkedAt": "2026-11-28T14:00:29.707Z",
       "price": "$107.44",
       "priceValue": 107.44,
       "rating": 4.6,
-      "ratingsTotal": 23206,
-      "priceCheckedAt": "2026-11-23T14:00:00.945Z",
-      "priceSource": "canopy"
+      "ratingsTotal": 23211,
+      "priceCheckedAt": "2026-11-28T14:00:29.707Z",
+      "priceSource": "canopy-search"
     },
     "B0CMH9W2S4": {
       "verdict": "LIVE",
@@ -5972,6 +5972,39 @@
       "rating": 4.7,
       "ratingsTotal": 3359,
       "priceCheckedAt": "2026-11-27T14:00:28.461Z",
+      "priceSource": "canopy-search"
+    },
+    "B0F4WYQ22B": {
+      "verdict": "LIVE",
+      "title": "ONETIGRIS SUPRAGRIS Camping Cot, Ultralight & Compact, Support Up to 400lbs",
+      "checkedAt": "2026-11-28T14:00:29.707Z",
+      "price": "$79.98",
+      "priceValue": 79.98,
+      "rating": 4.6,
+      "ratingsTotal": 421,
+      "priceCheckedAt": "2026-11-28T14:00:29.707Z",
+      "priceSource": "canopy-search"
+    },
+    "B0GRV6WZDT": {
+      "verdict": "LIVE",
+      "title": "Double Sleeping Bags for Adults Camping with 2 Pillows Queen Size",
+      "checkedAt": "2026-11-28T14:00:29.707Z",
+      "price": "$40.37",
+      "priceValue": 40.37,
+      "rating": 4.6,
+      "ratingsTotal": 102,
+      "priceCheckedAt": "2026-11-28T14:00:29.707Z",
+      "priceSource": "canopy-search"
+    },
+    "B08215YSYD": {
+      "verdict": "LIVE",
+      "title": "MARCHWAY Ultralight Folding Camping Cot Bed, Portable, Supports 275 lbs",
+      "checkedAt": "2026-11-28T14:00:29.707Z",
+      "price": "$56.94",
+      "priceValue": 56.94,
+      "rating": 4.5,
+      "ratingsTotal": 3145,
+      "priceCheckedAt": "2026-11-28T14:00:29.707Z",
       "priceSource": "canopy-search"
     }
   }

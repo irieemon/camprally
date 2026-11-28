@@ -10401,6 +10401,116 @@ Then spend your one-time money on small items you'll use every trip: a mess kit,
 *Related guides: [How to Start Camping With No Gear](/blog/how-to-start-camping-no-gear) · [Dispersed Camping for Beginners — How to Camp Free on Public Land](/blog/dispersed-camping-beginners-guide) · [7 Days of Budget Camping Meals — $50 Total Food Budget](/blog/camping-meal-plans-budget-50)*
     `
   },
+
+  {
+    id: "art-106",
+    slug: "how-to-sleep-better-camping",
+    title: "How to Sleep Better Camping — Fixes for the Five Things Keeping You Awake",
+    excerpt: "Learn which of five common culprits, from cold ground to a sloped tent, is keeping you awake, plus the cheap gear or technique fix that solves each one.",
+    category: "Sleeping Gear",
+    date: "2026-11-28",
+    author: "Camp Rally Team",
+    readTime: "8 min read",
+    content: `
+# How to Sleep Better Camping — Fixes for the Five Things Keeping You Awake
+
+Most people who say they can't sleep when camping are dealing with one of five problems: cold coming up from the ground, a pad that's too thin, a bad pillow, noise and light, or a tent pitched on a slope. Each one has a cheap gear fix, a technique fix, or both. This guide covers all five, then lists products that address them.
+
+## The Five Things Keeping You Awake
+
+### 1. Cold From the Ground
+
+The ground pulls heat out of you all night. Your sleeping bag's insulation gets crushed flat under your body weight, so it does very little underneath you. That's why people wake at 3 a.m. with a cold back even in a decent bag. What blocks ground cold is the layer beneath the bag, which is either an insulated pad or a cot with a pad on it.
+
+Two things don't help. A mylar or space blanket is an emergency item, not insulation, and it won't replace a pad. Cotton blankets and cotton sweatshirts soak up moisture and lose their warmth, so leave them out of your warmth plan. Use synthetic or wool layers instead. For pads built for cold nights, see our guide to [insulated sleeping pads under $100](/blog/best-insulated-sleeping-pads-under-100), which explains R-value.
+
+Air mattresses have their own version of this problem. A big chamber of air under you takes on the temperature of the ground, which is why they often feel cold. Our [car camping air mattress guide](/blog/best-car-camping-air-mattresses-under-100) covers how to insulate one.
+
+### 2. A Pad That's Too Thin
+
+A thin closed-cell mat works for some people. If you sleep on your side, though, your hip and shoulder push straight through it to the dirt. Thicker self-inflating pads and foam-topped pads spread the pressure out. Some people also stack two pads: a closed-cell foam mat on the bottom and an inflatable or self-inflating pad on top. You get more comfort and more insulation, and the stack still works if one pad fails. If you're shopping on a tight budget, start with our [budget sleeping pads under $50](/blog/best-budget-sleeping-pads-under-50).
+
+### 3. A Bad Pillow
+
+A rolled-up jacket shifts around, flattens out, and leaves your neck at an awkward angle. A dedicated camping pillow is one of the cheapest sleep upgrades you can buy. If you do use a clothes pillow, put the clothes inside a stuff sack so they hold their shape. Our [budget camping pillow guide](/blog/best-camping-pillows-budget) compares inflatable, compressible foam, and hybrid styles.
+
+### 4. Noise and Light
+
+Campgrounds are loud and bright at the wrong hours. You'll hear generators, neighbors, wind on the tent fabric, and headlamps sweeping past, and then the sun comes up early. These cheap fixes help:
+
+- **Foam earplugs and an eye mask.** Pack spares.
+- **Pick a site away from the bathroom path and the road.** Those spots get foot traffic and headlights all night.
+- **Tension the tent properly.** A taut rainfly flaps far less than a loose one.
+- **Store food in your car, a bear box, or a canister. Never keep it in the tent.** Animals investigating your campsite at night will keep you awake, and food in a tent is also a safety risk.
+
+### 5. Pitching on a Slope
+
+Even a slight grade makes you slide into the tent wall all night. Before you stake anything, lie down where you plan to sleep. If you have to sleep on a slope, put your head uphill. Clear away pinecones and rocks, and avoid low spots where water collects in rain. Our guide on [how to choose a campsite](/blog/how-to-choose-a-campsite) covers the full ten-minute site check.
+
+## How to Choose a Comfortable Camping Sleep Setup
+
+Think of your sleep system in layers, from the ground up:
+
+1. **Shelter.** A tent with a full rainfly keeps out wind and dew, and the walls give you some privacy from light.
+2. **Ground layer.** Choose a pad, a cot, or both. Cots solve sloped, rocky, or wet ground, but cold air moves freely underneath them. On cool nights a cot needs a pad on top.
+3. **Sleeping bag.** Read the temperature rating carefully. Many bags list a *comfort* rating and a *limit* rating. The comfort rating is the temperature at which a typical sleeper stays comfortable. The limit rating is closer to the temperature where you can get through the night curled up and cold. Plan around the comfort rating, and add margin for wind, dampness, and your own tendency to run cold. If a bag's listing doesn't state a rating, don't assume one. Treat it as a warm-weather bag until you know otherwise. Our [cold-weather sleeping bag guide](/blog/best-budget-sleeping-bags-cold-weather) goes deeper on this.
+4. **Pillow and accessories.** Bring a pillow, earplugs, and an eye mask.
+
+Two safety rules apply to every setup. Never run a stove, heater, lantern, or grill inside a tent or closed vehicle, because carbon monoxide can kill in your sleep. And never sleep with a heater running. Get your warmth from insulation and layers. Skip alcohol and sleep medication as sleep aids too, since they don't fix any of the five problems above.
+
+## The Picks
+
+### Coleman Sundome Camping Tent
+
+The Sundome solves the shelter layer. It comes in 2, 3, 4, and 6 person sizes, and the listing says it sets up in about 10 minutes. It includes a rainfly and is described as weatherproof. A quick setup matters for sleep because it gives you time to pitch on level ground in daylight instead of settling for a bad spot in the dark. If you're sleeping two people with cots or a wide pad, consider sizing up so you aren't pressed against the walls.
+
+**[Check the Coleman Sundome Camping Tent on Amazon](https://www.amazon.com/dp/B0D7QFZNS7?tag=camprally-20)**
+
+### ONETIGRIS SUPRAGRIS Camping Cot
+
+The SUPRAGRIS is listed as ultralight and compact, with support up to 400 lbs. A cot is the most direct fix for sloped, rocky, or wet ground, because the frame does the leveling for you. It also helps people who struggle to get up off the floor. Remember that air circulates underneath, so add a pad on top when nights turn cool. Check the cot's height against your tent's interior before you buy.
+
+**[Check the ONETIGRIS SUPRAGRIS Camping Cot on Amazon](https://www.amazon.com/dp/B0F4WYQ22B?tag=camprally-20)**
+
+### OGERY Self-Inflating Sleeping Pad
+
+This pad addresses the "too thin" problem directly. It's a self-inflating pad with 3" of memory foam, which suits side sleepers whose hips bottom out on thinner mats. The listing doesn't state an R-value, so don't count on it alone for cold nights. In cooler weather, stack it on a closed-cell foam mat. It also works well as the comfort layer on top of a cot.
+
+**[Check the OGERY Self-Inflating Sleeping Pad on Amazon](https://www.amazon.com/dp/B0FXX7VX7N?tag=camprally-20)**
+
+### Double Sleeping Bags for Adults
+
+This is a queen-size double bag that comes with 2 pillows, so it covers both the bag and the pillow problem for couples. A shared bag means fewer drafts between two separate bags. Because the listing doesn't specify a temperature rating, treat it as a mild-weather bag and plan your pad insulation and clothing layers accordingly. Pair it with a pad or two pads that together are wide enough to cover the full width of the bag.
+
+**[Check the Double Sleeping Bags for Adults on Amazon](https://www.amazon.com/dp/B0GRV6WZDT?tag=camprally-20)**
+
+### MalloMe Sleeping Bag
+
+MalloMe lists this bag as lightweight and compact and markets it for both cold and warm weather. It comes in sizes for adults and for kids around 10 to 12. Before relying on it for a cold trip, check the product listing for its comfort and limit ratings, and plan around the comfort figure. It's a sensible pick for families outfitting several sleepers. On nights near the edge of its range, a liner and synthetic or wool base layers add warmth.
+
+**[Check the MalloMe Sleeping Bag on Amazon](https://www.amazon.com/dp/B077XQDZW4?tag=camprally-20)**
+
+### MARCHWAY Ultralight Folding Camping Cot
+
+The MARCHWAY is listed as ultralight, portable, and folding, with support up to 275 lbs. That's a lower weight capacity than the ONETIGRIS, so check it against the sleeper before buying. It does the same job of getting you off uneven ground in a portable package. The same rule applies here: put a pad on it in cool weather.
+
+**[Check the MARCHWAY Ultralight Folding Camping Cot on Amazon](https://www.amazon.com/dp/B08215YSYD?tag=camprally-20)**
+
+## Verdict
+
+Start with the problem that wakes you up most.
+
+- **Cold back or hips:** improve the layer under your bag first. The OGERY pad, stacked on a foam mat in cool weather, is the most direct fix.
+- **Lumpy or sloped ground:** use a cot, either the ONETIGRIS for its higher capacity or the MARCHWAY for portability, with a pad on top.
+- **Couples:** consider the double bag with its included pillows.
+- **Families:** the MalloMe offers adult and kid sizing.
+- **Pitching in the dark on bad ground:** a fast-pitching tent like the Sundome gives you time to choose a level spot.
+
+Whatever you buy, check level ground before you stake out the tent, judge sleeping bags by their comfort rating, keep food out of the tent, and keep every combustion device outside.
+
+*Related guides: [How to Stay Warm Camping — The Layers and the Mistakes](/blog/how-to-stay-warm-camping-cold-nights) · [Best Budget Camping Cots — Getting Off the Ground Without Overpaying](/blog/best-budget-camping-cots) · [Sleeping Bag Liners — The Cheapest Way to Add Warmth](/blog/best-sleeping-bag-liners-camping)*
+    `
+  },
 ];
 
 export function getArticleBySlug(slug: string): Article | undefined {

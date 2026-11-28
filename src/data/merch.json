@@ -3,6 +3,26 @@
   "storeUrl": "https://camprally.printify.me",
   "designs": [
     {
+      "slug": "lantern-picnic-table",
+      "name": "Lantern Picnic Table",
+      "subtitle": "the campground after dinner",
+      "image": "/images/merch/lantern-picnic-table.jpg",
+      "imageKey": "6b09c91bd8d113d02d8e10ca::2026-11-27T18:17:15.667Z::Natural|Sand|Light Blue",
+      "fromCents": 3699,
+      "from": "$36.99",
+      "publishedAt": "2026-11-27T18:17:15.667Z",
+      "products": [
+        {
+          "kind": "tee",
+          "label": "T-shirt",
+          "url": "https://camprally.printify.me/product/35126081",
+          "priceCents": 3699,
+          "price": "$36.99",
+          "varies": true
+        }
+      ]
+    },
+    {
       "slug": "waterfall-gorge-camp",
       "name": "Waterfall Gorge Camp",
       "subtitle": "the loudest quiet place you will sleep",
