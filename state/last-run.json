@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-11-27T14:00:00.115Z",
-  "finishedAt": "2026-11-27T14:03:50.509Z",
+  "startedAt": "2026-11-28T14:00:00.122Z",
+  "finishedAt": "2026-11-28T14:02:53.468Z",
   "outcome": "published",
   "priceClaims": "ok",
   "deadLinks": [
@@ -33,22 +33,37 @@
       "replacement": null
     }
   ],
+  "indexNowEdits": {
+    "changed": 1,
+    "submitted": [],
+    "pending": [
+      {
+        "slug": "camping-budget-breakdown",
+        "why": "indexnow fetch failed"
+      }
+    ],
+    "indexNow": {
+      "ok": false,
+      "error": "fetch failed",
+      "submitted": 0
+    }
+  },
   "pull": {
     "status": "up-to-date"
   },
-  "slug": "camping-budget-breakdown",
-  "commit": "4fdb281",
+  "slug": "how-to-sleep-better-camping",
+  "commit": "cfaea0d",
   "pushed": true,
   "deployVerified": true,
-  "deploy": "not live yet (serving 509364a, expected 4fdb281) — 599s left\nnot live yet (serving 509364a, expected 4fdb281) — 584s left\ndeploy verified after 3 attempt(s): serving 4fdb281 · home HTTP 200",
+  "deploy": "not live yet (serving 8d77a41, expected cfaea0d) — 600s left\nnot live yet (serving 8d77a41, expected cfaea0d) — 585s left\ndeploy verified after 3 attempt(s): serving cfaea0d · home HTTP 200",
   "indexNow": {
-    "ok": false,
-    "error": "fetch failed",
-    "submitted": 0
+    "ok": true,
+    "status": 200,
+    "submitted": 3
   },
   "pinned": {
     "ok": true,
-    "id": "1152569729676995385"
+    "id": "1152569729677082869"
   },
-  "remaining": 23
+  "remaining": 22
 }
